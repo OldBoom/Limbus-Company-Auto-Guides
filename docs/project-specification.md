@@ -19,7 +19,7 @@ Results MUST be displayed on a web-based dashboard where users browse by charact
 - **Game:** Limbus Company (Project Moon, 2023–present)
 - **Characters (Sinners):** 12 playable characters
 - **Identities:** 172 total; each character equips exactly one identity per team
-- **Core mechanics:** Status effects (Bleed, Burn, Tremor, Rupture, Sinking, Poise, Charge), skill coins, offense/defense levels, passives, support passives, sin affinities
+- **Core mechanics:** Status effects (Bleed, Burn, Tremor, Rupture, Sinking, Poise, Charge), skill coins, offense/defense levels, passives, support passives, sin affinities — full reference in [`docs/status-effects.md`](status-effects.md)
 - **Data source:** [limbus-company.wiki.gg](https://limbus-company.wiki.gg)
 
 ---
@@ -69,7 +69,7 @@ flowchart LR
 Three NLP tasks, mixing traditional and LLM-based techniques:
 
 **Task A: Mechanic Extraction (Traditional NLP)**
-- Named Entity Recognition or rule-based extraction to tag game mechanics in skill/passive text (e.g., "Bleed", "Corpus Ingredient", "Unbreakable Coin", "Bind")
+- Named Entity Recognition or rule-based extraction to tag game mechanics in skill/passive text (e.g., "Bleed", "Corpus Ingredient", "Unbreakable Coin", "Bind") — entity dictionary: [`docs/status-effects.md`](status-effects.md)
 - Keyword extraction (TF-IDF or RAKE) to identify the dominant mechanics per identity
 - Output: per-identity mechanic profile (primary mechanics, secondary mechanics, conditional triggers)
 
@@ -128,6 +128,7 @@ Three NLP tasks, mixing traditional and LLM-based techniques:
 2. Web dashboard (deployable locally)
 3. Evaluation report: compare generated guides against 5-10 manually written guides (BLEU/ROUGE scores or human evaluation rubric)
 4. Class presentation / demo
+5. (Optional) Streamlit Community Cloud deployment for the dashboard (shareable demo)
 
 ---
 

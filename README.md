@@ -49,6 +49,10 @@ pip install -r requirements.txt
 - [Project Specification](docs/project-specification.md)
 - [Sprint Plan](docs/sprints.md)
 
+## Deployment (Optional)
+
+This project is designed to run locally. An optional stretch goal is to deploy the web dashboard to **Streamlit Community Cloud** for easy sharing and demoing.
+
 ## License
 
 Academic project — Fontys University of Applied Sciences, NLP course 2026.

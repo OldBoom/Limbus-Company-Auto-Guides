@@ -1,0 +1,224 @@
+---
+alwaysApply: false
+description: Apply when parsing a Limbus Company wiki.gg identity page into structured markdown for docs/parsed-ids/.
+globs: docs/parsed-ids/**
+---
+
+# Wiki Identity Parsing Rule
+
+## Scope
+
+Transforms a Limbus Company wiki.gg identity page into structured markdown.
+Input: URL or fetched content from `https://limbuscompany.wiki.gg/wiki/<Identity_Page>`.
+Output: `docs/parsed-ids/<Identity_Name>.md` (underscores, no sinner name prefix from the association — use the identity's distinguishing name).
+
+Reference file: `docs/parsed-ids/Ring_Apprentice_Faust.md`.
+
+## Content Extraction (MUST)
+
+### Strip (DO NOT include)
+
+- Navigation menus, sidebars, search bars
+- Gallery / sprite / animation sections
+- Trivia section
+- Uptie details section
+- "Retrieved from" footer
+- Cookie notices
+- Repeated tooltip definition blocks (wiki duplicates tooltip text dozens of times at page bottom)
+- Resistance table (icon-only data, not available in text)
+- Damage type per skill — Slash/Pierce/Blunt (icon-only data, not available in text)
+- Sanity factors and Panic type tables (boilerplate shared across all identities)
+
+### Keep
+
+- Identity name, flavor quote, rarity, season, release date, traits
+- Base stats: HP, Speed range, Defense Level
+- Stagger Thresholds
+- All unique / identity-specific status effects and mechanics
+- All attack skills (both states if multi-state identity)
+- All defense skills (Guard, Evade, Counter)
+- All combat passives
+- Support passive
+- Referenced external mechanics not described elsewhere in the document
+
+## Output Format (MUST)
+
+Sections MUST appear in the following order. Omit conditional sections when criteria are not met.
+
+### 1. Header Block
+
+```markdown
+# <Full Identity Name>
+
+> *"<Flavor quote from the identity page>"*
+
+**Rarity:** <Rarity>  
+**Season:** <Season name>  
+**Release:** <YYYY.MM.DD>  
+**Traits:** <Comma-separated trait list>
+
+---
+```
+
+### 2. Base Stats
+
+```markdown
+## Base Stats
+
+| HP | Speed | Defense Level |
+|----|-------|---------------|
+| <HP> | <Min>–<Max> | <DefLvl> |
+
+**Stagger Thresholds:** <Pct1>% (<Abs1>) — <Pct2>% (<Abs2>) [— <Pct3>% (<Abs3>)]
+
+---
+```
+
+- Speed: use en-dash `–` between min and max (DO NOT use tilde `~`).
+- Stagger Thresholds: use em-dash `—` between entries. Include all thresholds present on the wiki page.
+
+### 3. Key Status Effects (CONDITIONAL)
+
+Include ONLY when the identity has **unique, identity-specific mechanics** (e.g., Iron Maiden, Flow State, Corpus Ingredient, Artwork: Fascia).
+
+DO NOT include standard game-wide mechanics listed in `docs/status-effects.md` (e.g., Poise, Bleed, Burn, Tremor, Rupture, Sinking, Charge, Haste, Bind, Defense Level Up/Down, Offense Level Up/Down, Damage Up/Down).
+
+```markdown
+## Key Status Effects
+
+### <Effect Name>
+- <Bullet-point description>
+- **<Trigger>:** <Effect>
+
+---
+```
+
+Source: tooltip blocks at the bottom of the wiki page. Deduplicate — each unique effect appears once.
+
+OMIT this entire section for identities with no unique mechanics.
+
+### 4. Attack Skills
+
+**Single-state identity:**
+
+```markdown
+## Skills
+```
+
+**Multi-state identity** (identity has distinct skill sets per state):
+
+```markdown
+## Skills — <State Name>
+```
+
+One section per state. Each skill within:
+
+```markdown
+### Skill <N>: <Skill Name>
+
+| Offense Level | Base Power | Coin Power | Atk Weight |
+|---------------|------------|------------|------------|
+| <OL> (<Base>+<Bonus>) | <BP> | +<CP> | x<W> |
+
+**[On Use]** <Effect description>
+
+| Coin | Effects |
+|------|---------|
+| 1 | <Coin 1 effects, semicolon-separated if multiple> |
+| 2 | <Coin 2 effects> |
+
+---
+```
+
+- Offense Level: raw value with `(<base>+<bonus>)` breakdown.
+- `[On Use]` effects: each on its own bold line. If an `[On Use]` effect has sub-bullets (e.g., list of gains), use markdown list below.
+- Coin effects: one row per coin. Coin number = sequential position of the coin-effect entry in the wiki text. Multiple effects on the same coin separated by `; `.
+- Passive/innate effects (not tagged `[On Use]`): bold line above the coin table (e.g., `**Deal +10% damage** for every...`).
+
+### 5. Defense Skills
+
+```markdown
+## Defense Skills
+```
+
+Each defense skill:
+
+```markdown
+### <Type> [(<State>)]: <Skill Name>
+
+| Offense Level | Base Power | Coin Power |
+|---------------|------------|------------|
+| <OL> (<Base>+<Bonus>) | <BP> | +<CP> |
+```
+
+- Type: Guard, Evade, or Counter.
+- State qualifier in parentheses ONLY if identity has multiple states (e.g., `Guard (Iron Maiden)`, `Counter (Flow State)`).
+- Include `**Type:** Clashable Guard` / `**Type:** Clashable Counter` line when applicable.
+- Include state/assist exclusivity lines (e.g., `**Iron Maiden exclusive Skill**`).
+- Include `**Unbreakable Coin**` note when applicable.
+- Counter coin effects use the same `| Coin | Effects |` table format as attack skills.
+
+### 6. Combat Passives
+
+```markdown
+## Combat Passives
+
+### <Passive Name>
+
+[Ownership requirement line if present, e.g., **(×4 Owned)**]
+
+<Description with bold triggers and markdown lists for sub-effects>
+
+---
+```
+
+- Passives without ownership requirements (innate): omit the ownership line.
+- Separate passives with `---`.
+
+### 7. Support Passive
+
+```markdown
+## Support Passive
+
+### <Passive Name>
+
+**(×<N1> [/ ×<N2>] Owned)**
+
+<Description>
+
+---
+```
+
+### 8. Additional Reference (CONDITIONAL)
+
+Include ONLY when skills or passives reference external mechanics not described in the Key Status Effects section or standard game knowledge.
+
+```markdown
+## Additional Reference
+
+### <Mechanic Name> (<Context note>)
+- <Bullet-point description>
+```
+
+Examples: Somatic Frisson-inspiring Melody (buff from passive interaction), Assist Defense.
+
+OMIT this entire section when no external mechanics are referenced.
+
+## Naming Convention (MUST)
+
+Output filename: strip the sinner name and common prefixes, keep the distinguishing identity name.
+
+| Wiki page title | Output filename |
+|-----------------|-----------------|
+| The House of Spiders: The Ring Apprentice Faust | `Ring_Apprentice_Faust.md` |
+| Blade Lineage Salsu Yi Sang | `Blade_Lineage_Salsu_Yi_Sang.md` |
+| The Ring Pointillist Student Yi Sang | `Ring_Pointillist_Student_Yi_Sang.md` |
+
+## Data Extraction Notes
+
+- `Base Power` and `Coin Power` on wiki: displayed as `| <BP>+ <CP> |` in a compact table cell. Split into two columns.
+- `Atk Weight`: displayed as `Atk Weight ⯀Amt. x<N>` in wiki text. Extract `<N>`.
+- `Offense Level`: displayed as `<Total> (<Base>+<Bonus>)` in wiki text. Preserve full format.
+- Coin count per skill: count the number of distinct coin-effect paragraphs in the wiki text between one skill's header and the next.
+- `[Heads Hit]` effects: treat as coin effects (same as `[On Hit]` but triggered on heads).
+- `+N% Damage on Critical Hit`: include as a passive line on the skill (bold, above coin table).

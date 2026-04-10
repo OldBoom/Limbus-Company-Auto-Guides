@@ -4,7 +4,7 @@
 
 12 weekly sprints (Mar 27 – Jul 03) aligned with course milestones. Each sprint maps academic deliverables to concrete project tasks for the Limbus Company Auto Guides NLP pipeline.
 
-**Current Sprint:** S2 (Apr 10)
+**Current Sprint:** S3 (Apr 17)
 
 ---
 
@@ -25,20 +25,22 @@
 - [x] Write project specification (`docs/project-specification.md`)
 - [x] Define architecture (Data Ingestion → NLP Pipeline → Web Dashboard)
 - [x] Document identity data format (`docs/Ring_Apprentice_Faust.md` as reference)
-- [ ] Set up GitHub repository (README, .gitignore, initial structure)
-- [ ] Create sprint plan (this document)
+- [x] Set up GitHub repository (README, .gitignore, initial structure)
+- [x] Create sprint plan (this document)
+- [x] Create Deliverable 1 prototype pitch (`docs/lecture-deliverables/deliverable-1-prototype-pitch.md`)
 
 ---
 
 ## S3 — State of the Art (Apr 17)
 
-**Focus:** Research existing approaches, benchmark tools.
+**Focus:** Research existing approaches, benchmark tools. Full PoC notebooks.
 
-- [ ] Survey game-wiki NLP extraction approaches
-- [ ] Evaluate NER frameworks (spaCy custom NER vs. rule-based)
-- [ ] Compare embedding models (sentence-transformers variants)
-- [ ] Compare LLM options (OpenAI API vs. local HuggingFace models)
-- [ ] Document SOTA findings in `docs/sota.md`
+- [x] Survey game-wiki NLP extraction approaches (BeautifulSoup, MediaWiki API, datamining, LLM-assisted)
+- [x] Cross-reference extraction conventions in `docs/301-wiki-identity-parsing.mdc`
+- [x] Evaluate NER frameworks — spaCy EntityRuler vs. rule-based PhraseMatcher + regex (`notebooks/ner_evaluation.ipynb`)
+- [x] Compare embedding models — `all-MiniLM-L6-v2` vs. `all-mpnet-base-v2` vs. `bge-small-en-v1.5` (`notebooks/embedding_evaluation.ipynb`)
+- [x] Compare LLM options — Ollama (Mistral 7B, Llama 3 8B, Phi-4) vs. HuggingFace Inference API (`notebooks/llm_evaluation.ipynb`)
+- [x] Document SOTA findings in `docs/sota.md` (hybrid format: narrative + comparison table + verdict)
 
 ---
 
@@ -83,7 +85,7 @@
 
 **Focus:** Implement Module 2 — NLP Processing (Tasks A & B).
 
-- [ ] **Task A — Mechanic Extraction:** Build NER / rule-based tagger for game mechanics (Bleed, Burn, Tremor, etc.)
+- [ ] **Task A — Mechanic Extraction:** Build NER / rule-based tagger for game mechanics using [`docs/status-effects.md`](status-effects.md) as entity dictionary
 - [ ] **Task A — Keyword Extraction:** Implement TF-IDF or RAKE for dominant mechanic identification per identity
 - [ ] **Task A — Output:** Generate per-identity mechanic profiles (primary, secondary, conditional triggers)
 - [ ] **Task B — Similarity:** Compute identity similarity via TF-IDF vectors or sentence embeddings
