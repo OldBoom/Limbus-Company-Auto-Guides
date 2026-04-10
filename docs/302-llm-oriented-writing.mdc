@@ -1,0 +1,137 @@
+---
+alwaysApply: true
+---
+
+# LLM-Oriented Writing Principles (LLM Rulebook)
+
+## Purpose
+
+Universal writing guidelines for LLM-consumed content (rules, instructions, prompts, technical specifications). Apply when authoring any text intended for LLM interpretation. DO NOT apply to human-facing documentation, user guides, or marketing content.
+
+## Core Axiom (MUST)
+
+**Clarity > Brevity > All else**
+
+Eliminate ambiguity first, then compress. LLMs parse literal meaning; omit human cognitive aids (metaphors, conversational flow, encouragement).
+
+## Compression Principles (MUST)
+
+Bad:
+
+```markdown
+When you are writing configuration files, it is important to remember that 
+you should always validate the required fields at startup, because this helps 
+catch errors early in the development process.
+```
+
+Good:
+
+```markdown
+Configuration MUST validate required fields at startup (fail-fast).
+```
+
+## Directive Keywords (MUST)
+
+Use imperative modals consistently:
+
+- **MUST** → mandatory, violation = fail.
+- **SHOULD** → recommended, deviation requires justification.
+- **MAY** → optional, context-dependent.
+- **DO NOT** → prohibited.
+
+Avoid weak directives: ~~"please"~~, ~~"consider"~~, ~~"try to"~~, ~~"it's good if"~~.
+
+## Anti-patterns (DO NOT)
+
+### Tutorial Prose
+
+```markdown
+<!-- BAD -->
+First, let's understand how repositories work. A repository is a pattern...
+Now we can see that by using this pattern, we achieve...
+
+<!-- GOOD -->
+Repository MUST inject `DatabaseConnection` via constructor.
+```
+
+### Term Definitions
+
+```markdown
+<!-- BAD -->
+A middleware is a function that intercepts HTTP requests before they reach handlers...
+
+<!-- GOOD -->
+Middleware stack order: `auth -> rate_limit -> cors -> handler`.
+```
+
+### Justifications Mid-rule
+
+```markdown
+<!-- BAD -->
+Use connection pooling because it improves performance and reduces latency.
+
+<!-- GOOD -->
+Database connections MUST use pool (min: 5, max: 20).
+```
+
+### Vague Requirements
+
+```markdown
+<!-- BAD -->
+Use appropriate timeouts for your network calls.
+
+<!-- GOOD -->
+Network clients MUST define timeouts explicitly:
+
+\`\`\`python
+DEFAULT_CONNECT_TIMEOUT = 3.0  # seconds
+DEFAULT_REQUEST_TIMEOUT = 5.0  # seconds
+\`\`\`
+```
+
+## Tone Specification (MUST)
+
+| Use | Avoid |
+|-----|-------|
+| "Load ENV at startup." | ~~"First, we'll load ENV..."~~ |
+| "Validate struct fields." | ~~"You might want to validate..."~~ |
+| "Return error on failure." | ~~"Sorry, but you need to return..."~~ |
+| "Database uses pool." | ~~"Probably use a pool for DB."~~ |
+
+## Content Omissions (MUST)
+
+DO NOT include:
+
+- Motivational language: ~~"Great job!"~~, ~~"Perfect!"~~
+- Uncertainty markers: ~~"maybe"~~, ~~"perhaps"~~, ~~"I think"~~
+- Filler words: ~~"basically"~~, ~~"essentially"~~, ~~"actually"~~
+- Apologies: ~~"sorry"~~, ~~"unfortunately"~~
+- Questions to reader: ~~"Make sense?"~~, ~~"Got it?"~~
+- Subjective assessments: ~~"elegant"~~, ~~"beautiful"~~, ~~"clean"~~
+
+## Ambiguity Resolution (MUST)
+
+Bad:
+
+```markdown
+Set reasonable timeout values.
+```
+
+Good:
+
+```markdown
+Timeouts MUST be explicit. Recommended: connect=3s, request=5s, idle=30s.
+```
+
+## Self-Check Criteria
+
+Before publishing LLM-oriented content:
+
+- [ ] Zero conversational phrases ("let's", "we'll", "you might").
+- [ ] Zero term definitions or tutorials.
+- [ ] All directives use MUST/SHOULD/DO NOT/MAY.
+- [ ] Examples are concrete, not abstract.
+- [ ] No ambiguous quantifiers ("some", "many", "appropriate").
+- [ ] No filler or reassurance language.
+- [ ] Imperative tone throughout.
+- [ ] English only.
