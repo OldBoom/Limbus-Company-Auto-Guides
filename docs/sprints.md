@@ -37,9 +37,9 @@
 
 - [x] Survey game-wiki NLP extraction approaches (BeautifulSoup, MediaWiki API, datamining, LLM-assisted)
 - [x] Cross-reference extraction conventions in `docs/301-wiki-identity-parsing.mdc`
-- [x] Evaluate NER frameworks — spaCy EntityRuler vs. rule-based PhraseMatcher + regex (`notebooks/ner_evaluation.ipynb`)
-- [x] Compare embedding models — `all-MiniLM-L6-v2` vs. `all-mpnet-base-v2` vs. `bge-small-en-v1.5` (`notebooks/embedding_evaluation.ipynb`)
-- [x] Compare LLM options — Ollama (Mistral 7B, Llama 3 8B, Phi-4) vs. HuggingFace Inference API (`notebooks/llm_evaluation.ipynb`)
+- [ ] Evaluate NER frameworks — spaCy EntityRuler vs. rule-based PhraseMatcher + regex (`notebooks/ner_evaluation.ipynb`) — code scaffolded, not yet executed
+- [ ] Compare embedding models — `all-MiniLM-L6-v2` vs. `all-mpnet-base-v2` vs. `bge-small-en-v1.5` (`notebooks/embedding_evaluation.ipynb`) — code scaffolded, not yet executed
+- [ ] Compare LLM options — Ollama (Mistral 7B, Llama 3 8B, Phi-4) vs. HuggingFace Inference API (`notebooks/llm_evaluation.ipynb`) — code scaffolded, not yet executed
 - [x] Document SOTA findings in `docs/sota.md` (hybrid format: narrative + comparison table + verdict)
 
 ---
