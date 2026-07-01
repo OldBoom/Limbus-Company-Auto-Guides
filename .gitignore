@@ -31,6 +31,7 @@ credentials.json
 
 # Data (large scraped datasets — keep schema, not bulk data)
 data/raw/
+data/logs/
 data/identities/*.json
 !data/identities/.gitkeep
 

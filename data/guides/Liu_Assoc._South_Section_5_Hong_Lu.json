@@ -1,0 +1,88 @@
+{
+  "identity_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
+  "identity_name": "Liu Assoc. South Section 5 Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Burn": 12
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 1,
+      "On Hit": 5,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Burn": 12,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "identity_slug": "Liu_Assoc._South_Section_5_Hong_Lu"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Firefist_Office_Survivor_Gregor",
+      "teammate_name": "Firefist Office Survivor Gregor",
+      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
+      "teammate_name": "Liu Assoc. South Section 4 Ishmael",
+      "reason": "Mechanic similarity score: 0.97 (embedding; verify manually).",
+      "score": 1.0445891690254212,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
+      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "score": 1.0242896747589112,
+      "source": "embedding",
+      "faction_match": true
+    }
+  ],
+  "core_idea": "Liu Assoc. South Section 5 Hong Lu is a Status Specialist applying sustained Burn, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Warm Up** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Heal 3 SP\n\n**S2 — Flowing Flame** (BP 6, CP +2, x2): rolls — low 6, high 10 (Extremely Low).\n- If target has 6+ Burn Count, Coin Power +2\n- Peak output requires both conditions: Inflict +1 Burn Count | at 30+ SP, inflict 1 more.\n\n**S3 — Crimson Blaze Fist** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average).\n- If target has 6+ Burn Count, Coin Power +1\n- Inflict 1 Burn; if target already has Burn, inflict +1 Burn Count\n\nCombat passive — **Flaring Up~**: At 30+ SP, inflict +1 Burn Count with the effects of attack skills/coins.\n\nCombat passive — **Isn’t It Warm?**: 1 ally with the most SP inflicts +1 Burn Count with the effects of their attack skills/coins.",
+  "team_suggestions": [
+    "Best placed in a Burn-focused team — teammates that apply or extend Burn increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+    "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+    "- **Firefist Office Survivor Gregor**: 'I'm the only survivor…' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

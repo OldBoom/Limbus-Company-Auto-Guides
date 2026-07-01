@@ -1,0 +1,92 @@
+{
+  "identity_slug": "Firefist_Office_Survivor_Gregor",
+  "identity_name": "Firefist Office Survivor Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Blunt DMG Up"
+    ],
+    "status_effects": {
+      "Burn": 24
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Blunt DMG Up": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 10,
+      "On Use": 2,
+      "Attack End": 1,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Burn": 24,
+      "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Blunt DMG Up": 1
+    },
+    "identity_slug": "Firefist_Office_Survivor_Gregor"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
+      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
+      "teammate_name": "Liu Assoc. South Section 4 Ishmael",
+      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Ishmael scales off Burn.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Lobotomy E.G.O::Magic Bullet Outis scales off Burn.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Firefist Office Survivor Gregor is a Damage Dealer / Status Specialist / Support — **Counter: I have to keep going for big sis** grants **District 12 Fuel** at Combat Start, making the guard slot part of the damage rotation. Scaling conditions: +1% per District 12 Fuel consumed; +3% per District 12 Fuel consumed. Support passive (**I'm the only survivor…**) applies when allies **land hits** — keep this unit on field through the opening turn so damage dealers can act.",
+  "playstyle_guide": "- **I'm the only survivor…** triggers **On Hit** — protect this slot and let allies attack each turn before expecting heals or buffs to flow.\n- **Counter: I have to keep going for big sis** grants 100 **District 12 Fuel** at Combat Start — use the defense slot to prep buffs before your attack chain.\n- Manage **District 12 Fuel** — multiple skills spend limited ammo on coin flips. Preserve **District 12 Fuel** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: +1% per District 12 Fuel consumed.\n\n**S1 — Flamethrow** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Consume 15 District 12 Fuel and inflict +1 Burn Count\n\n**S2 — I'll burn away every last drop of your filthy blood** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Inflict +1 Burn Count; [On Hit] Consume 10 District 12 Fuel and inflict +1 Burn Count against 2 enemies that have the least Burn Count\n\n**S3 — Firefist** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- If this unit consumed District 12 Fuel, inflict 1 Burn and +1 Burn Count\n\nCombat passive — **District 12 Special Workshop Fuel**: Begin Encounters with 100 District 12 Fuel.\n  - At over 50 Stack, become District 12 Fuel.\n  - At 50 or less Stack, any District 12 Fuel becomes Overheated Fuel.\n\nDefense skill — **Counter: I have to keep going for big sis**: [Clashable Counter].\n  - [Combat Start] Gain 100 District 12 Fuel.",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **Liu Assoc. South Section 4 Director Rodion**: This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

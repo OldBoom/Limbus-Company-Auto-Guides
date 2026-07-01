@@ -1,0 +1,125 @@
+{
+  "ner": {
+    "per_identity": {
+      "Blade_Lineage_Salsu_Yi_Sang": {
+        "rule_based": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "entity_ruler": {
+          "precision": 0.057,
+          "recall": 1.0,
+          "f1": 0.108
+        }
+      },
+      "Ring_Apprentice_Faust": {
+        "rule_based": {
+          "precision": 0.913,
+          "recall": 1.0,
+          "f1": 0.955
+        },
+        "entity_ruler": {
+          "precision": 0.198,
+          "recall": 1.0,
+          "f1": 0.331
+        }
+      },
+      "Ring_Pointillist_Student_Yi_Sang": {
+        "rule_based": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1": 0.947
+        },
+        "entity_ruler": {
+          "precision": 0.176,
+          "recall": 1.0,
+          "f1": 0.3
+        }
+      }
+    },
+    "avg_f1_rule_based": 0.856,
+    "avg_f1_entity_ruler": 0.246
+  },
+  "embeddings": {
+    "all-MiniLM-L6-v2": {
+      "bleed_vs_bleed": 0.6896,
+      "poise_vs_bleed": 0.6675,
+      "delta": 0.0221,
+      "passes": true,
+      "similarity_matrix": {
+        "Blade_Lineage_Salsu_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 1.0,
+          "Ring_Apprentice_Faust": 0.6675,
+          "Ring_Pointillist_Student_Yi_Sang": 0.6847
+        },
+        "Ring_Apprentice_Faust": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.6675,
+          "Ring_Apprentice_Faust": 1.0,
+          "Ring_Pointillist_Student_Yi_Sang": 0.6896
+        },
+        "Ring_Pointillist_Student_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.6847,
+          "Ring_Apprentice_Faust": 0.6896,
+          "Ring_Pointillist_Student_Yi_Sang": 1.0
+        }
+      }
+    },
+    "all-mpnet-base-v2": {
+      "bleed_vs_bleed": 0.7621,
+      "poise_vs_bleed": 0.6366,
+      "delta": 0.1255,
+      "passes": true,
+      "similarity_matrix": {
+        "Blade_Lineage_Salsu_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 1.0,
+          "Ring_Apprentice_Faust": 0.6366,
+          "Ring_Pointillist_Student_Yi_Sang": 0.5584
+        },
+        "Ring_Apprentice_Faust": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.6366,
+          "Ring_Apprentice_Faust": 1.0,
+          "Ring_Pointillist_Student_Yi_Sang": 0.7621
+        },
+        "Ring_Pointillist_Student_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.5584,
+          "Ring_Apprentice_Faust": 0.7621,
+          "Ring_Pointillist_Student_Yi_Sang": 1.0
+        }
+      }
+    },
+    "bge-small-en-v1.5": {
+      "bleed_vs_bleed": 0.9099,
+      "poise_vs_bleed": 0.8738,
+      "delta": 0.0361,
+      "passes": true,
+      "similarity_matrix": {
+        "Blade_Lineage_Salsu_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 1.0,
+          "Ring_Apprentice_Faust": 0.8738,
+          "Ring_Pointillist_Student_Yi_Sang": 0.8467
+        },
+        "Ring_Apprentice_Faust": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.8738,
+          "Ring_Apprentice_Faust": 1.0,
+          "Ring_Pointillist_Student_Yi_Sang": 0.9099
+        },
+        "Ring_Pointillist_Student_Yi_Sang": {
+          "Blade_Lineage_Salsu_Yi_Sang": 0.8467,
+          "Ring_Apprentice_Faust": 0.9099,
+          "Ring_Pointillist_Student_Yi_Sang": 1.0
+        }
+      }
+    }
+  },
+  "llm": {
+    "ollama_available": false,
+    "test_identity": "Ring_Apprentice_Faust",
+    "template_fallback": {
+      "grounding_score": 1.0,
+      "grounded_count": 8,
+      "hallucinated_count": 0,
+      "note": "Ollama not required for pipeline; src/generation uses same RAG prompt pattern"
+    }
+  }
+}

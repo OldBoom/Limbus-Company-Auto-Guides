@@ -1,0 +1,103 @@
+{
+  "identity_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+  "identity_name": "Lobotomy E.G.O::Magic Bullet Outis",
+  "sinner": "Outis",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Magic Bullet",
+      "Burn",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Dark Flame",
+      "Base Power",
+      "Atk Weight",
+      "Poise",
+      "Final Power"
+    ],
+    "status_effects": {
+      "Burn": 6,
+      "Poise": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 4,
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Dark Flame": 5,
+      "Magic Bullet": 11
+    },
+    "triggers": {
+      "Heads Hit": 1,
+      "On Hit": 4,
+      "Attack End": 1,
+      "On Use": 2,
+      "Skill End": 1
+    },
+    "all_mechanics": {
+      "Burn": 6,
+      "Poise": 1,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 4,
+      "Final Power": 1,
+      "Dark Flame": 5,
+      "Magic Bullet": 11
+    },
+    "identity_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Firefist_Office_Survivor_Gregor",
+      "teammate_name": "Firefist Office Survivor Gregor",
+      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
+      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
+      "score": 0.8869776725769043,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
+      "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
+      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "score": 0.877153217792511,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Lobotomy E.G.O::Magic Bullet Outis is a Support / Damage Dealer applying sustained Magic Bullet, Burn pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Ignition** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +3).\n- Inflict 1 Dark Flame next turn\n\n**S2 — Detonate Magic Bullet** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +3).\n- At less than 4 Magic Bullet, gain 1 Magic Bullet: then, inflict Dark Flame equal to Magic Bullet next turn\n\n**S3 — Magic Bullet Fire** (BP 15, CP +4, x1): rolls — low 15, high 19 (High / Slightly High stacked).\n- Deal +1% damage for every Burn on target (Max 30%) ; ; [Before Attack] Gain 1 Magic Bullet ; - Lose ((Magic Bullet -1)x5) SP ; - Atk Weight becomes equal to Magic Bullet value ; - At 10 or less SP, 50% chance to attack indiscriminately ; ; [Attack End] If at 7 Magic Bullet, reset to 0 (Counts as spending the last Ammo)\n\nCombat passive — **The Marksman's Smoking Pipe**: If the main target's Defense Level is currently lowered by 4 or more, gain (Burn on main target) Poise Before Attack (Max 20 per turn).\n\nDefense skill — **Counter: The Price of a Bullet**: [On Use] Gain 1 Magic Bullet (Once per turn).\n  - [On Use] Gain Final Power equal to (Magic Bullet x2).\n  - [Skill End] Lose SP equal to Magic Bullet.",
+  "team_suggestions": [
+    "Best placed in a Burn-focused team — teammates that apply or extend Burn increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **Firefist Office Survivor Gregor**: 'I'm the only survivor…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

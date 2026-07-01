@@ -1,0 +1,109 @@
+{
+  "identity_slug": "Wild_Hunt_Heathcliff",
+  "identity_name": "Wild Hunt Heathcliff",
+  "sinner": "Heathcliff",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Sinking",
+      "Dullahan",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Coffin",
+      "Base Power",
+      "Atk Weight",
+      "Impending Ruin",
+      "Wild Hunt"
+    ],
+    "status_effects": {
+      "Sinking": 22
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 6,
+      "Clash Power": 1,
+      "Offense Level Up": 1,
+      "Damage Up": 1
+    },
+    "unique_mechanics": {
+      "Coffin": 9,
+      "Dullahan": 16,
+      "Impending Ruin": 2,
+      "Wild Hunt": 2
+    },
+    "triggers": {
+      "On Use": 12,
+      "On Hit": 11,
+      "Attack End": 4,
+      "Clash Win": 2,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Sinking": 22,
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 6,
+      "Clash Power": 1,
+      "Offense Level Up": 1,
+      "Damage Up": 1,
+      "Coffin": 9,
+      "Dullahan": 16,
+      "Impending Ruin": 2,
+      "Wild Hunt": 2
+    },
+    "identity_slug": "Wild_Hunt_Heathcliff"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Edgar_Family_Butler_Ishmael",
+      "teammate_name": "Edgar Family Butler Ishmael",
+      "reason": "This identity's 'Endless Lamentation' inflicts Sinking — Edgar Family Butler Ishmael scales off Sinking.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "This identity's 'Endless Lamentation' inflicts Sinking — Lobotomy E.G.O::The Sword Sharpened with Tears Rodion scales off Sinking.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "score": 0.8614915609359741,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "score": 0.8510056138038635,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
+      "teammate_name": "R Corp. 4th Pack Rhino Meursault",
+      "reason": "Mechanic similarity score: 0.81 (embedding; verify manually).",
+      "score": 0.8107101917266846,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Wild Hunt Heathcliff is a Damage Dealer / Status Specialist / Support applying sustained Sinking, Dullahan pressure with consistent skill stats. Scaling conditions: Coin Power +1 per 3 Sinking (max +2); Coin Power +1 per 5 Sinking (max +2). Support passive (**Endless Lamentation**) buffs teammates — keep this unit on field while allies run their attack rotation.",
+  "playstyle_guide": "- **Endless Lamentation** supports allies passively — prioritise staying alive and deployed so the team benefits each turn.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Sinking (max +2).\n\n**S1 — Beheading** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Peak output requires both conditions: If target has 6+ Sinking, Clash Power +1 | [On Use] Coin Power +1 for every 3 Sinking Count on target (max 2).\n\n**S2 — Memorial Procession** (BP 5, CP +3, x3): rolls — low 5, high 14 (Low).\n- costs 10 SP on use — manage SP above 0 to stay in Blessing state\n\n**S3 — Requiem** (BP 6, CP +6, x2): rolls — low 6, high 18 (High).\n- Inflict +3 Sinking Count; [On Hit] If target has Impending Ruin, inflict +2 Sinking Count\n- Inflict 2 Sinking; [On Kill] Inflict (Sinking on killed target/3) Sinking on 2 random enemies (max 3)\n\n*↳ Alternate S3 — Lament, Mourn, and Despair* (BP 31, CP -13): rolls — low 31, high 57 (Extremely High).\n  - Lose 15 SP\n  - Scales Base Power with Sinking stacks — apply liberally before committing (cap +4).\n  - Deal more damage the further this unit's SP value is from 45 (+0.3% damage for every missing SP, max 21%)\n  - Deal +10% damage for every Coffin on self (max 100%)\n  - Deal +20% damage for every Dullahan on self (max 60%)\n\nCombat passive — **Dullahan**: Turn Start: if this unit has Dullahan, mount Dullahan.\n  - Lose 5 SP every time this unit mounts Dullahan.\n  - If 3+ allies have been defeated in this Encounter, gain Dullahan next turn. (once per Encounter).\n\nCombat passive — **Call of the Erlking**: Deal +1% damage for every 1 Sinking on the target (max 15%).\n  - When, during combat, 1 ally takes damage that would kill them, consume 2 Coffin to apply Wild Hunt to them (2 times per turn).\n  - Apply 2 Damage Up next turn to the ally that has Wild Hunt.\n\nDefense skill — **Counter: O Dullahan…!**: [Clashable Counter].\n  - [Before Use] If this unit has Dullahan, and has 15+ SP, use 'Lament, Mourn, and Despair' as Counter (once per turn).\n  - [Combat Start] If this unit does not have Dullahan, gain 1 Dullahan next turn (once per turn).\n  - [On Use] Coin Power +1 for every 3 Sinking on target (max 2).",
+  "team_suggestions": [
+    "Best placed in a Sinking-focused team — teammates that apply or extend Sinking increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Edgar Family Butler Ishmael**: This identity's 'Endless Lamentation' inflicts Sinking — Edgar Family Butler Ishmael scales off Sinking.",
+    "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: This identity's 'Endless Lamentation' inflicts Sinking — Lobotomy E.G.O::The Sword Sharpened with Tears Rodion scales off Sinking.",
+    "- **The Lord of Hongyuan Hong Lu**: Mechanic similarity score: 0.86 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

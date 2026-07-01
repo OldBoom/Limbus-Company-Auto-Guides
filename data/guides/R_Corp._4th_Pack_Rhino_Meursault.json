@@ -1,0 +1,94 @@
+{
+  "identity_slug": "R_Corp._4th_Pack_Rhino_Meursault",
+  "identity_name": "R Corp. 4th Pack Rhino Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Bleed",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Final Power"
+    ],
+    "status_effects": {
+      "Charge": 15,
+      "Bleed": 9
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 4,
+      "On Hit": 9,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Charge": 15,
+      "Bleed": 9,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "identity_slug": "R_Corp._4th_Pack_Rhino_Meursault"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "R Corp. 4th Pack Rhino Meursault is a Damage Dealer applying sustained Charge, Bleed pressure with consistent skill stats.",
+  "playstyle_guide": "- Manage **Charge Count** — S3 spends ammo on its coin flips. Preserve rounds for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Hold S3 for when At 10+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Weighty Bash** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Extremely High stacked).\n- Needs 10+ Charge Count to activate — prioritise building stacks before using.\n- Gain +2 Charge Count\n\n**S2 — Demolish** (BP 5, CP +3, x3): rolls — low 5, high 14 (Low).\n- Peak output requires both conditions: At 7+ Speed, inflict +1 Bleed Count with this skill | [On Use] Gain +4 Charge Count.\n- Gain +4 Charge Count\n- Stacks 1 Bleed — use every appearance to build up.\n\n**S3 — Rhino Ram** (BP 6, CP +3, x3): rolls — low 6, high 15 (Low).\n- Needs 10+ Charge Count to activate — prioritise building stacks before using.\n- Inflict +1 Bleed Count; [On Hit] Spend 2 Charge Count; Inflict +1 Bleed Count; [On Hit] Spend 3 Charge Count; Inflict +1 Bleed Count\n\nCombat passive — **Activate rrR-#4 Suit Pressurization**: At the end of the turn, gain +2 Max Speed per 5 Charge Count next turn. (Max 6).\n  - At the start of the turn, if at 5+ Charge Count, gain 3 Aggro to this unit's rightmost slot.\n\nCombat passive — **Maneuver Training**: At the end of the turn, 1 ally that has the highest Charge Count gains Max Speed +1 (Capped at 3) per 5 Charge Count next turn.\n\nDefense skill — **Counter: Bioelectricity Induction**: [On Use] If attacked while shielded, gain +2 Charge Count (Max 10 per turn).",
+  "team_suggestions": [
+    "Benefits when teammates apply Charge — he checks Charge thresholds more than he stacks it himself.",
+    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

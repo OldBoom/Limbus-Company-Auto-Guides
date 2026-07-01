@@ -1,0 +1,107 @@
+{
+  "identity_slug": "LCE_E.G.O_AEDD_Gregor",
+  "identity_name": "LCE E.G.O::AEDD Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Coin Power",
+      "Rupture"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Unbreakable Coin",
+      "Photoelectricity",
+      "Unique Charge"
+    ],
+    "status_effects": {
+      "Charge": 51,
+      "Rupture": 7,
+      "Unique Charge": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 7,
+      "Coin Power": 12,
+      "Atk Weight": 5,
+      "Clash Power": 1
+    },
+    "unique_mechanics": {
+      "Unbreakable Coin": 3,
+      "Photoelectricity": 3
+    },
+    "triggers": {
+      "On Use": 14,
+      "On Hit": 15,
+      "Combat Start": 2
+    },
+    "all_mechanics": {
+      "Charge": 51,
+      "Rupture": 7,
+      "Unique Charge": 1,
+      "Base Power": 7,
+      "Coin Power": 12,
+      "Atk Weight": 5,
+      "Clash Power": 1,
+      "Unbreakable Coin": 3,
+      "Photoelectricity": 3
+    },
+    "identity_slug": "LCE_E.G.O_AEDD_Gregor"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+      "teammate_name": "Lobotomy E.G.O::Red Sheet Sinclair",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "LCE E.G.O::AEDD Gregor is a Damage Dealer / Status Specialist / Support — **Counter: This E.G.O Gift's Defensive Capability is Uniquely Superior** grants **High — voltage Exoskeleton** at Combat Start, making the guard slot part of the damage rotation. Scaling conditions: Clash Power +1 per 5 Charge (max +2). Support passive (**Defibrillation**) keys off **deployment order** — set your main carry as #1 deployed before the fight.",
+  "playstyle_guide": "- **Defibrillation** watches the **#1 deployed ally** — arrange the dashboard so the intended carry is first in line.\n- **Counter: This E.G.O Gift's Defensive Capability is Uniquely Superior** grants 2 **High — voltage Exoskeleton** at Combat Start — use the defense slot to prep buffs before your attack chain.\n- Reach scaling conditions before committing S3: Clash Power +1 per 5 Charge (max +2).\n- Hold S3 for when At 3+ Charge is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Electric Release** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Gain +2 Charge Count; [On Hit] Inflict 1 Rupture\n\n**S2 — DC Inversion** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- converts coins to Unbreakable under condition\n- Gain +4 Charge Count; [On Hit] Inflict +1 Rupture Count\n- Gain +(Charge + 1) Charge Count (max 4); [On Hit] Inflict 2 Rupture\n\n**S3 — High-voltage Current Discharge** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- converts coins to Unbreakable under condition\n- Gain +1 Charge Count\n- Gain +2 Charge Count\n\n*↳ Alternate S3 — Maximum Output - Ultra High-voltage Current Discharge* (BP 5, CP +5): rolls — low 5, high 10 (Extremely Low).\n  - Unbreakable Coin\n\nCombat passive — **Undying Persistence**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - Any Charge Barrier this unit gains is converted to High — voltage Exoskeleton.\n  - At 3+ Charge on self, Min & Max Speed +1.\n\nCombat passive — **Take the Lead. I'll Provide You Support.**: Combat Start: Gain +10 Charge Count (once per Encounter).\n  - Combat End: At more than 12 Charge Count, consume excess Charge Count up to 8 and apply +(half of Charge Count consumed due to this effec….\n  - This effect prioritizes the ally that has the lowest Charge Count among allies with earlier Deployment order than this unit.\n\nDefense skill — **Counter: This E.G.O Gift's Defensive Capability is Uniquely Superior**: [Combat Start] Gain 2 High — voltage Exoskeleton (once per turn).\n  - [On Use] Gain Coin Power equal to Charge on self (max 5).\n  - [On Use] Gain +2 Charge Count (2 times per turn).\n  - [On Use] Gain +5 Aggro to this Skill Slot next turn.",
+  "team_suggestions": [
+    "Trait-dependent kit — [Limbus Company] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Limbus Company] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Lobotomy E.G.O::Magic Bullet Outis**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Lobotomy E.G.O::Red Sheet Sinclair**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

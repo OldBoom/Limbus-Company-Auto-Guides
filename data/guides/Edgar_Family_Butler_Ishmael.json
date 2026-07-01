@@ -1,0 +1,101 @@
+{
+  "identity_slug": "Edgar_Family_Butler_Ishmael",
+  "identity_name": "Edgar Family Butler Ishmael",
+  "sinner": "Ishmael",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Sinking",
+      "Coin Power",
+      "Poise"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Haste",
+      "Bind",
+      "Defense Level Down"
+    ],
+    "status_effects": {
+      "Poise": 5,
+      "Sinking": 7,
+      "Haste": 1,
+      "Bind": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Defense Level Down": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 3,
+      "On Hit": 10,
+      "Clash Win": 1,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Poise": 5,
+      "Sinking": 7,
+      "Haste": 1,
+      "Bind": 1,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Defense Level Down": 1
+    },
+    "identity_slug": "Edgar_Family_Butler_Ishmael"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Edgar_Family_Chief_Butler_Ryōshū",
+      "teammate_name": "Edgar Family Chief Butler Ryōshū",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 1.0127785873413087,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "score": 0.9335771799087524,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
+      "teammate_name": "Blade Lineage Salsu Yi Sang",
+      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
+      "score": 0.8930474519729614,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Edgar Family Butler Ishmael is a Status Specialist applying sustained Sinking, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Sweeping Redirection** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain +2 Poise Count\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain +2 Poise Count\n\n**S2 — Housekeeping** (BP 4, CP +5, x2): rolls — low 4, high 14 (Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain +2 Poise Count ; [Clash Win] Gain 2 Poise\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain +2 Poise Count; [Clash Win] Gain 2 Poise\n\n**S3 — Restraining Technique** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain 6 Poise\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain 6 Poise\n- Stacks 3 Sinking — use every appearance to build up.\n\nCombat passive — **Deep Cleaning**: If this unit Critically Hits against targets with Slower Speed than this unit's, inflict 1 additional Potency for negative effects using….\n\nCombat passive — **Loyal Supporter**: When 1 ally with the fastest Speed attacks a target that has Sinking, deal +1% damage for every 1 Sinking on target (max 20%).",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Edgar Family Chief Butler Ryōshū**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

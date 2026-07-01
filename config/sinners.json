@@ -1,0 +1,133 @@
+{
+  "_note": "Sinners and seed identity wiki slugs. Full URLs: https://limbuscompany.wiki.gg/wiki/<slug>",
+  "sinners": [
+    {
+      "id": "yi_sang",
+      "name": "Yi Sang",
+      "identities": [
+        "Blade_Lineage_Salsu_Yi_Sang",
+        "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+        "Liu_Assoc._South_Section_3_Yi_Sang",
+        "Ring_Pointillist_Student_Yi_Sang"
+      ]
+    },
+    {
+      "id": "faust",
+      "name": "Faust",
+      "identities": [
+        "Ring_Apprentice_Faust",
+        "Seven_Assoc._South_Section_4_Faust",
+        "Shi_Assoc._East_Section_3_Faust",
+        "W_Corp._L2_Cleanup_Agent_Faust"
+      ]
+    },
+    {
+      "id": "don_quixote",
+      "name": "Don Quixote",
+      "identities": [
+        "Cinq_Assoc._East_Section_3_Don_Quixote",
+        "N_Corp._Mittelhammer_Don_Quixote",
+        "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+        "The_Manager_of_La_Manchaland_Don_Quixote"
+      ]
+    },
+    {
+      "id": "ryoshu",
+      "name": "Ryōshū",
+      "identities": [
+        "District_20_Yurodivy_Ryōshū",
+        "Edgar_Family_Chief_Butler_Ryōshū",
+        "Kurokumo_Clan_Wakashu_Ryōshū",
+        "N_Corp._E.G.O_Contempt,_Awe_Ryōshū"
+      ]
+    },
+    {
+      "id": "meursault",
+      "name": "Meursault",
+      "identities": [
+        "Blade_Lineage_Mentor_Meursault",
+        "R_Corp._4th_Pack_Rhino_Meursault",
+        "The_Ring_Fauvist_Student_Meursault",
+        "The_Thumb_East_Capo_IIII_Meursault"
+      ]
+    },
+    {
+      "id": "hong_lu",
+      "name": "Hong Lu",
+      "identities": [
+        "District_20_Yurodivy_Hong_Lu",
+        "Liu_Assoc._South_Section_5_Hong_Lu",
+        "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+        "The_Lord_of_Hongyuan_Hong_Lu",
+        "Tingtang_Gang_Gangleader_Hong_Lu"
+      ]
+    },
+    {
+      "id": "heathcliff",
+      "name": "Heathcliff",
+      "identities": [
+        "Kurokumo_Clan_Wakashu_Heathcliff",
+        "Seven_Assoc._South_Section_4_Heathcliff",
+        "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+        "Wild_Hunt_Heathcliff",
+        "Öufi_Assoc._South_Section_3_Heathcliff"
+      ]
+    },
+    {
+      "id": "ishmael",
+      "name": "Ishmael",
+      "identities": [
+        "Edgar_Family_Butler_Ishmael",
+        "Kurokumo_Clan_Captain_Ishmael",
+        "Liu_Assoc._South_Section_4_Ishmael",
+        "Zwei_Assoc._West_Section_3_Ishmael"
+      ]
+    },
+    {
+      "id": "rodion",
+      "name": "Rodion",
+      "identities": [
+        "Kurokumo_Clan_Wakashu_Rodion",
+        "Liu_Assoc._South_Section_4_Director_Rodion",
+        "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+        "The_Princess_of_La_Manchaland_Rodion"
+      ]
+    },
+    {
+      "id": "sinclair",
+      "name": "Sinclair",
+      "identities": [
+        "Blade_Lineage_Salsu_Sinclair",
+        "Devyat'_Assoc._North_Section_3_Sinclair",
+        "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+        "The_Thumb_East_Soldato_II_Sinclair"
+      ]
+    },
+    {
+      "id": "outis",
+      "name": "Outis",
+      "identities": [
+        "Lobotomy_E.G.O_Magic_Bullet_Outis",
+        "Seven_Assoc._South_Section_6_Director_Outis",
+        "The_Barber_of_La_Manchaland_Outis",
+        "The_House_of_Spiders_The_Middle_Nursefather_Outis"
+      ]
+    },
+    {
+      "id": "gregor",
+      "name": "Gregor",
+      "identities": [
+        "Firefist_Office_Survivor_Gregor",
+        "Heishou_Pack_-_Si_Branch_Gregor",
+        "LCE_E.G.O_AEDD_Gregor",
+        "The_Priest_of_La_Manchaland_Gregor"
+      ]
+    }
+  ],
+  "parsed_reference_slugs": [
+    "Ring_Apprentice_Faust",
+    "Blade_Lineage_Salsu_Yi_Sang",
+    "Ring_Pointillist_Student_Yi_Sang"
+  ],
+  "wiki_base": "https://limbuscompany.wiki.gg/wiki/"
+}

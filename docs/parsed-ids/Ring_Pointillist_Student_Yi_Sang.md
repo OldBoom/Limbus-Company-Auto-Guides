@@ -5,7 +5,7 @@
 **Rarity:** World  
 **Season:** Standard Fare  
 **Release:** 2024.05.16  
-**Traits:** The Fingers, The Ring, Pointillist
+**Traits:** The Fingers, The Ring, School of Pointillism, The Ring Student|name=Student
 
 ---
 
@@ -13,9 +13,9 @@
 
 | HP | Speed | Defense Level |
 |----|-------|---------------|
-| 214 | 3–7 | 58 |
+| 214 | 3~7 | 58 |
 
-**Stagger Thresholds:** 65% (139) — 35% (74) — 15% (32)
+**Stagger Thresholds:** 65% (139) — 35% (75) — 15% (32)
 
 ---
 
@@ -25,14 +25,15 @@
 
 | Offense Level | Base Power | Coin Power | Atk Weight |
 |---------------|------------|------------|------------|
-| 63 (60+3) | 2 | +3 | x3 |
+| 63 (60+3) | 2 | +3 | x1 |
 
-**If target has 6+ Bleed,** Clash Power +1
+**If target has 6+ Bleed, Clash Power +1**  
 
 | Coin | Effects |
 |------|---------|
-| 1 | [Heads Hit] Inflict +2 Count for 1 of the following effects: Burn, Bleed, Rupture, Tremor, or Sinking (random) |
-| 2 | [On Hit] Inflict 2 Bleed |
+| 1 | — |
+| 2 | [Heads Hit] Inflict +2 Count of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking |
+| 3 | [On Hit] Inflict 2 Bleed |
 
 ---
 
@@ -40,14 +41,13 @@
 
 | Offense Level | Base Power | Coin Power | Atk Weight |
 |---------------|------------|------------|------------|
-| 63 (60+3) | 8 | +8 | x2 |
+| 63 (60+3) | 8 | +8 | x1 |
 
-**Clash Power +1** for every 3 Bleed on target (max 2)  
-**Coin Power +1** for every 3 Bleed Count on target (max 2)
+**Clash Power +1 for every 3 Bleed on target (max 2) ; Coin Power +1 for every 3 Bleed Count on target (max 2)**  
 
 | Coin | Effects |
 |------|---------|
-| 1 | [On Hit] 40% chance to Reuse Coin, +20% more chance to Reuse Coin for every type of negative effect on target (2 times max per Skill); [On Hit] Inflict +1 Bleed Count; [On Hit] Inflict +3 Count for 1 of the following effects: Burn, Bleed, Rupture, Tremor, or Sinking (random) |
+| 1 | [On Hit] 20% chance to Reuse Coin. +20% more chance to Reuse Coin for every type of negative effect on target ; [On Hit] Inflict +1 Bleed Count ; [On Hit] Inflict +3 Count of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking |
 
 ---
 
@@ -57,14 +57,14 @@
 |---------------|------------|------------|------------|
 | 63 (60+3) | 3 | +3 | x1 |
 
-**Clash Power +1** for every 3 Bleed on target (max 2)  
-**Coin Power +1** for every 3 Bleed Count on target (max 2)
+**Clash Power +1 for every 3 Bleed on target (max 2) ; Coin Power +1 for every 3 Bleed Count on target (max 2)**  
 
 | Coin | Effects |
 |------|---------|
-| 1 | [On Hit] Inflict +1 Bleed Count; if target has 3+ types of negative effects, inflict +2 additional Bleed Count; [On Hit] Inflict +3 Count for 1 of the following effects: Burn, Bleed, Rupture, Tremor, or Sinking (random) |
-| 2 | [On Hit] Inflict 1 Bleed; if target has 3+ types of negative effects, inflict 2 additional Bleed; [On Hit] Inflict 2 Potency for 1 of the following effects: Burn, Bleed, Rupture, Tremor, or Sinking (random) |
-| 3 | Deal +25% damage for every type of negative effect on target (max 125%); [Attack End] If target is Staggered or Defeated, inflict 2 Potency of 1 of the following effects on 2 enemies with the least negative effects: Burn, Bleed, Rupture, Tremor, or Sinking (random) |
+| 1 | — |
+| 2 | [On Hit] Inflict +1 Bleed Count. If target has 4+ types of negative effects, inflict +2 additional Bleed Count ; [On Hit] Inflict +3 Count of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking |
+| 3 | [On Hit] Inflict 1 Bleed. If target has 4+ types of negative effects, inflict 2 additional Bleed ; [On Hit] Inflict 2 Potency of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking |
+| 4 | Deal +15% damage for every type of negative effect on target (max 75%) ; [Attack End] If target is Staggered or Defeated, inflict 2 Potency of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking, on 1 enemy that has the fewest types of negative effects |
 
 ---
 
@@ -74,9 +74,13 @@
 
 | Offense Level | Base Power | Coin Power |
 |---------------|------------|------------|
-| 61 (60+1) | 10 | +4 |
+| 60 (60+0) | 10 | +4 |
 
-**Base Power +1** for every 1 Bleed on target (max 10)
+**Base Power +1 for every 1 Bleed on target (max 10)**  
+
+| Coin | Effects |
+|------|---------|
+| 1 | — |
 
 ---
 
@@ -84,7 +88,7 @@
 
 ### Sanguine Pointillist
 
-This Identity only counts as an 'Identity that inflicts Bleed'. This Identity's Skills that randomly inflict Burn, Bleed, Tremor, Rupture, and Sinking do not count as Skills that inflict each respective Keyword.
+This Identity only counts as an "Identity that inflicts Bleed". This Identity's Skills that randomly inflict Burn, Bleed, Tremor, Rupture, and Sinking do not count as Skills that inflict each respective Keyword
 
 ---
 
@@ -92,21 +96,14 @@ This Identity only counts as an 'Identity that inflicts Bleed'. This Identity's 
 
 **(×4 Owned)**
 
-On Hit, if the target has 4+ Bleed, heal 2 SP.
-- Heal 1 additional SP for every type of negative effect on the target (max 3).
-- If this unit's SP is at max, gain 2 Offense Level Up next turn when this unit heals SP with this effect.
-
-(This Passive activates 4 times max per turn)
+On Hit, if target has 4+ Bleed, heal 2 SP ; Heal 1 additional SP for every type of negative effect on the target (max 3) ; If this unit's SP is at max, gain 2 Offense Level Up next turn when this unit heals SP with this effect ; (This Passive activates 4 times max per turn)
 
 ---
-
-## Support Passive
 
 ### Practices on Aesthetics
 
 **(×4 Owned)**
 
-1 ally with the least SP heals 2 SP On Hit for every type of negative effect on the target (max 6).
-- If the target has Bleed, heal 3 additional SP.
+1 ally that has the lowest SP heals 2 SP On Hit for every type of negative effect on the target (max 6) ; If the target has Bleed, heal 3 additional SP ; (This Passive activates 2 times max per turn)
 
-(This Passive activates 2 times max per turn)
+---

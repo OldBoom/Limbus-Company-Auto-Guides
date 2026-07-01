@@ -1,0 +1,94 @@
+{
+  "identity_slug": "N_Corp._Mittelhammer_Don_Quixote",
+  "identity_name": "N Corp. Mittelhammer Don Quixote",
+  "sinner": "Don Quixote",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Nails",
+      "Tremor",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Atk Weight",
+      "Fanatic"
+    ],
+    "status_effects": {
+      "Tremor": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Nails": 8,
+      "Fanatic": 2
+    },
+    "triggers": {
+      "Heads Hit": 4,
+      "On Hit": 6
+    },
+    "all_mechanics": {
+      "Tremor": 6,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Nails": 8,
+      "Fanatic": 2
+    },
+    "identity_slug": "N_Corp._Mittelhammer_Don_Quixote"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "score": 0.9219276905059814,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
+      "teammate_name": "The Thumb East Capo IIII Meursault",
+      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "score": 0.9184601902961731,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "score": 0.904757559299469,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "N Corp. Mittelhammer Don Quixote is a Status Specialist applying sustained Nails, Tremor pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Rightful Purge** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Inflict 1 Nails; [On Hit] Inflict 1 Tremor\n\n**S2 — Enactment!** (BP 4, CP +12, x1): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Trigger Tremor Burst | +20% Damage to targets that have 5+ Nails.\n\n**S3 — Fanatical Judgement** (BP 5, CP +3, x3): rolls — low 5, high 14 (Low).\n- Inflict 1 Nails; [On Hit] Inflict +1 Tremor Count\n\nCombat passive — **Thou Shalt Hammer!**: If the target has Nails, inflict +1 Tremor Count.\n  - If this unit is Fanatic, inflict +1 Nails.\n\nCombat passive — **Hammer of Zealotry**: 1 Fanatic ally that has the least SP deals +10% damage.",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.92 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

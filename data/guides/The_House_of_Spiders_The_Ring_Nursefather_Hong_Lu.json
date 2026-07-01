@@ -1,0 +1,127 @@
+{
+  "identity_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+  "identity_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Corpus Ingredient",
+      "Bleed",
+      "Atk Weight"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Base Power",
+      "Final Power",
+      "Bind",
+      "Haste"
+    ],
+    "status_effects": {
+      "Bleed": 13,
+      "Bind": 3,
+      "Haste": 3,
+      "Shield": 1,
+      "Charge": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 8,
+      "Coin Power": 9,
+      "Atk Weight": 10,
+      "Final Power": 5,
+      "Defense Level Down": 1,
+      "Defense Level Up": 1,
+      "Offense Level Up": 1,
+      "Clash Power": 2,
+      "Damage Down": 1,
+      "Slash DMG Up": 2,
+      "Offense Level Down": 1
+    },
+    "unique_mechanics": {
+      "Corpus Ingredient": 20,
+      "Unbreakable Coin": 3,
+      "Assist Defense": 2
+    },
+    "triggers": {
+      "On Use": 12,
+      "On Hit": 21,
+      "Attack End": 1,
+      "Combat Start": 1,
+      "On Evade": 2
+    },
+    "all_mechanics": {
+      "Bleed": 13,
+      "Bind": 3,
+      "Haste": 3,
+      "Shield": 1,
+      "Charge": 1,
+      "Base Power": 8,
+      "Coin Power": 9,
+      "Atk Weight": 10,
+      "Final Power": 5,
+      "Defense Level Down": 1,
+      "Defense Level Up": 1,
+      "Offense Level Up": 1,
+      "Clash Power": 2,
+      "Damage Down": 1,
+      "Slash DMG Up": 2,
+      "Offense Level Down": 1,
+      "Corpus Ingredient": 20,
+      "Unbreakable Coin": 3,
+      "Assist Defense": 2
+    },
+    "identity_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
+      "teammate_name": "The House of Spiders: The Middle Nursefather Outis",
+      "reason": "Shares [The House of Spiders] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Student_Meursault",
+      "teammate_name": "The Ring Fauvist Student Meursault",
+      "reason": "Shares [The Ring] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Ring_Apprentice_Faust",
+      "teammate_name": "The House of Spiders: The Ring Apprentice Faust",
+      "reason": "This identity's 'Please, Do Stop Running and Be Seated' inflicts Bleed — The House of Spiders: The Ring Apprentice Faust scales off Bleed.",
+      "score": 0.9199999999999999,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Ring_Pointillist_Student_Yi_Sang",
+      "teammate_name": "The Ring Pointillist Student Yi Sang",
+      "reason": "This identity's 'Please, Do Stop Running and Be Seated' inflicts Bleed — The Ring Pointillist Student Yi Sang scales off Bleed.",
+      "score": 0.9199999999999999,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "The House of Spiders: The Ring Nursefather Hong Lu is a Support / Status Specialist / Damage Dealer — Corpus Ingredient-gated identity. Build stacks through skill hits until the threshold (10+), then spend via S2 for power spikes. Scaling conditions: +5% per negative effect type (max +30%); +1% per Corpus Ingredient Count consumed.",
+  "playstyle_guide": "- Build Corpus Ingredient Count with S2 — spend via S2, S3 once you hit 10+ (consumes up to 20).\n- Reach scaling conditions before committing S3: +5% per negative effect type (max +30%).\n- Ally combo — before The House of Spiders: The Ring Apprentice Faust uses S3, this identity automatically fires \"My, How We Love the Flesh and the Blood\". Slot The House of Spiders: The Ring Apprentice Faust alongside for a free extra hit every rotation.\n- Hold S3 for when At 10+ Corpus Ingredient Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Anatomize** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Extremely High stacked).\n- Each debuff type on the target adds +10% damage (up to +30%) — stack statuses broadly.\n\n*↳ Alternate S1 — My, How We Love the Flesh and the Blood* (BP 4, CP +4, Indiscriminate): rolls — low 4, high 8 (Extremely Low).\n  - Apply 6 Offense Level Up on target\n\n**S2 — Gather Ingredient - Blood-bathed Objet** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Extremely High stacked).\n- Each debuff type on the target adds +10% damage (up to +30%) — stack statuses broadly.\n- converts coins to Unbreakable under condition\n- Stacks 2 Bleed — use every appearance to build up.\n- C3 refunds +4 Corpus Ingredient Count\n\n*↳ Alternate S2 — Installation Art no. 3: Improvised Ribcage* (BP 5, CP +4): rolls — low 5, high 13 (Extremely Low / Slightly Low stacked).\n  - Consume 4 Corpus Ingredient Count\n  - Stacks 1 Bleed — use every appearance to build up.\n  - Each debuff type on the target adds +5% damage (up to +20%) — stack statuses broadly.\n\n**S3 — Tibia's Melody - Anatomization of the Unanatomized by the Anatomized** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Average stacked).\n- converts coins to Unbreakable under condition\n- Each debuff type on the target adds +5% damage (up to +30%) — stack statuses broadly.\n\n*↳ Alternate S3 — Closing Time - Installation Art no. 1: Your Flesh and Bones as the Gallery's Seats* (BP 3, CP +4): rolls — low 3, high 7 (Extremely Low).\n  - Deal +30% damage for every excess Atk Weight beyond the # of actual targets (in Focused Encounters, the Part)\n  - When attacking just 1 target, deal +100% additional damage\n  - At 10+ Corpus Ingredient Count: spend up to 20 stacks — the more you burn, the higher the damage ceiling.\n  - Final Power +2\n  - Deal +1% damage for every Corpus Ingredient Count consumed\n\nCombat passive — **Magnum Opus: Tibia**: Upon entering the Encounter for the first time, gain +(# of allies on the field x 2) Corpus Ingredient Count (max 10).\n  - Skill End: If the Skill dealt HP or Shield damage, gain +5 Corpus Ingredient Count.\n  - If target is killed, gain +3 additional Corpus Ingredient Count.\n\nCombat passive — **A Maestro's Critique**: On Hit, if the Attack Skill inflicted a negative effect, heal 4 SP at Attack End (3 times per turn).\n  - If this unit's SP is at max, gain 1 Slash DMG Up next turn when this unit heals SP with this effect (once per turn).\n\nDefense skill — **Evade: Curating the Exhibition**: [Combat Start] Gain 1 Assist Defense (once per turn).\n  - [On Evade] Inflict 1 Bind next turn against the attacker (once per turn).\n  - [On Evade] Gain 1 Haste next turn (once per turn).",
+  "team_suggestions": [
+    "Built around a two-identity combo with The House of Spiders: The Ring Apprentice Faust — slot both for the passive synergy.",
+    "- **The House of Spiders: The Middle Nursefather Outis**: Shares [The House of Spiders] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **The Ring Fauvist Student Meursault**: Shares [The Ring] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **The House of Spiders: The Ring Apprentice Faust**: This identity's 'Please, Do Stop Running and Be Seated' inflicts Bleed — The House of Spiders: The Ring Apprentice Faust scales off Bleed."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

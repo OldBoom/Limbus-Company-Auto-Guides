@@ -1,0 +1,94 @@
+{
+  "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+  "identity_name": "T Corp. Class 3 Collection Staff Don Quixote",
+  "sinner": "Don Quixote",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Clash Power",
+      "Atk Weight",
+      "Bind"
+    ],
+    "status_effects": {
+      "Tremor": 21,
+      "Bind": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 4
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 9,
+      "On Hit": 9,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Tremor": 21,
+      "Bind": 1,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 4
+    },
+    "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Zwei_Assoc._West_Section_3_Ishmael",
+      "teammate_name": "Zwei Assoc. West Section 3 Ishmael",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 0.936448335647583,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "score": 0.9000825881958008,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "score": 0.8816834688186646,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "T Corp. Class 3 Collection Staff Don Quixote is a Tank — high-HP frontliner with +3 Aggro on every skill and a once-per-encounter lethal nullify. **Counter: I Shall Summon the Time** grants **Borrowed Time at Turn End** at Combat Start; Skill 3 scales off missing HP and Bloodied Hand stacks. Scaling conditions: Clash Power +1 per 6 Tremor (max +2).",
+  "playstyle_guide": "- **Counter: I Shall Summon the Time** grants 4 **Borrowed Time at Turn End** at Combat Start — use the defense slot to prep buffs before your attack chain.\n- Reach scaling conditions before committing S3: Clash Power +1 per 6 Tremor (max +2).\n\n**S1 — Let Us Prepare to Collect** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- draws enemy aggro — intended to absorb hits\n- Gain +4 Aggro to this Skill Slot next turn\n\n**S2 — T Corp. Accelerated Amputator** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Gain +3 Tremor Count; [On Use] Clash Power +1 for every 6 Tremor on target (max 2)\n\n**S3 — I Command Thee, Halt!** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- triggers Amplitude Conversion into Tremor — Scorch\n\nCombat passive — **Golden Time - Extracting**: Turn End: If this unit's HP is between 10% ~ 20%, instantly heal 80% of this unit's max HP, and recover from Stagger. (once per Encounter).\n  - When this unit loses Borrowed Time, gain +8 Aggro to one of this unit's Skill Slots next turn.\n\nCombat passive — **T Corp. Physics Distortion Field**: When 1 ally with the slowest Speed takes damage from enemies that have Tremor, take -10% damage.\n\nDefense skill — **Counter: I Shall Summon the Time**: [Combat Start] If this unit is not in a Borrowed Time state, gain 4 Borrowed Time at Turn End (once per turn).\n  - [On Use] For this turn: when hit by an enemy, inflict 3 Tremor on target next turn (6 times per turn).",
+  "team_suggestions": [
+    "Uses unique Tremor (Tremor — Chain) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **Zwei Assoc. West Section 3 Ishmael**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

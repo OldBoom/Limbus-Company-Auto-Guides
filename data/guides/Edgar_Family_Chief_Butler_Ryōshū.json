@@ -1,0 +1,98 @@
+{
+  "identity_slug": "Edgar_Family_Chief_Butler_Ryōshū",
+  "identity_name": "Edgar Family Chief Butler Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Poise",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Clash Power",
+      "Haste",
+      "Bind"
+    ],
+    "status_effects": {
+      "Poise": 9,
+      "Bind": 1,
+      "Haste": 2
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 4,
+      "Clash Power": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 2,
+      "On Hit": 9,
+      "Combat Start": 1,
+      "On Evade": 2
+    },
+    "all_mechanics": {
+      "Poise": 9,
+      "Bind": 1,
+      "Haste": 2,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 4,
+      "Clash Power": 3
+    },
+    "identity_slug": "Edgar_Family_Chief_Butler_Ryōshū"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Edgar_Family_Butler_Ishmael",
+      "teammate_name": "Edgar Family Butler Ishmael",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 1.0127785873413087,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "score": 0.9324063062667847,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+      "teammate_name": "Heishou Pack - Wu Branch Adept Yi Sang",
+      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "score": 0.878061056137085,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Edgar Family Chief Butler Ryōshū is a Damage Dealer applying sustained Poise, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Receiving Arts 1: The Hunt** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- If this unit's Speed is faster than the target's, gain Clash Power +1 for every 2 Speed difference (max 3) ; [On Use] Gain +2 Poise Count\n- If this unit's Speed is faster than the target's, gain Clash Power +1 for every 2 Speed difference (max 3); [On Use] Gain +2 Poise Count\n- Gains 2 Poise — keeps Poise climbing each rotation.\n\n**S2 — Receiving Arts 7: Capture** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- If this unit's Speed is faster than the main target's, gain Clash Power +1 for every 2 Speed difference (max 3) ; [Combat Start] Consume 6 Poise Count on self to gain +2 Atk Weight for this Skill\n\n**S3 — Receiving Arts 2: S.Y.N.C.** (BP 4, CP +7, x2): rolls — low 4, high 18 (High / Average stacked).\n- If target has B.M., Clash Power +1 ; If this unit's Speed is faster than the target's, gain Coin Power +1 for every 2 Speed difference (max 2) ; [On Use] Gain +7 Poise Count\n- Gain 5 Poise; [On Hit] Inflict 1 Bind next turn; [On Hit] Raise Stagger Threshold by 20% of damage dealt\n- If target is Staggered, deal +20% Damage on Critical Hit; [On Hit] Inflict 2 B.M.\n\nCombat passive — **Clearing Household Chores**: On Hit against targets that have B.M., gain +1 Poise Count, and gain 1 Haste next turn (3 times per turn).\n  - On Crit against targets that have B.M., eliminate B.M. on target.\n  - then, if this unit's Speed is faster than the target's, deal +10% Damage on Critical Hit for every 1 Speed difference (max 60%).\n\nCombat passive — **Cleaning Command**: When the ally that was deployed last wins a Clash, gain +1 Poise Count (3 times per turn), and gain 1 Haste next turn (once per turn).",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Edgar Family Butler Ishmael**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

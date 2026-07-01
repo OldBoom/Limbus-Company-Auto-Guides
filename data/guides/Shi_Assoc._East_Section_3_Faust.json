@@ -1,0 +1,109 @@
+{
+  "identity_slug": "Shi_Assoc._East_Section_3_Faust",
+  "identity_name": "Shi Assoc. East Section 3 Faust",
+  "sinner": "Faust",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Poise",
+      "Bleed",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Arrow",
+      "Atk Weight",
+      "Shield",
+      "Clash Power"
+    ],
+    "status_effects": {
+      "Poise": 17,
+      "Bleed": 13,
+      "Shield": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 10,
+      "Coin Power": 11,
+      "Atk Weight": 4,
+      "Clash Power": 1,
+      "Defense Level Down": 1,
+      "Slash DMG Up": 1,
+      "Pierce DMG Up": 1
+    },
+    "unique_mechanics": {
+      "Arrow": 8
+    },
+    "triggers": {
+      "On Use": 13,
+      "On Hit": 8,
+      "Attack End": 2,
+      "Combat Start": 2,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Poise": 17,
+      "Bleed": 13,
+      "Shield": 1,
+      "Base Power": 10,
+      "Coin Power": 11,
+      "Atk Weight": 4,
+      "Clash Power": 1,
+      "Defense Level Down": 1,
+      "Slash DMG Up": 1,
+      "Pierce DMG Up": 1,
+      "Arrow": 8
+    },
+    "identity_slug": "Shi_Assoc._East_Section_3_Faust"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Shi Assoc. East Section 3 Faust is a Support / Status Specialist / Damage Dealer — snipe archer whose defense slot builds Target Aim and triggers **Bow's Glimmer** at Combat Start via Snipe - Archery.",
+  "playstyle_guide": "- Defense-first rotation — use **Evade: Unfold Bowblade ['''弓刀''']** to enter Ready to Loose and stack Target Aim without attacking; **Snipe - Archery** then fires **Bow's Glimmer** at Combat Start (up to +444% crit damage at max aim).\n- On turns you Evade without attacking, you still gain Target Aim — plan defense turns as setup, not dead actions.\n\n**S1 — Cleave** (BP 4, CP +4, x2): rolls — low 4, high 12 (High).\n- Peak output requires both conditions: At 4+ (Poise on self + Bleed on target), Coin Power +1 | [On Use] Gain 2 Poise.\n\n**S2 — Positioning Maneuver** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Stacks 1 Bleed — use every appearance to build up.\n\n**S3 — Glimmering Bow ['''弓閃''']** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- Gain 1 Poise; [On Crit] Gain +1 Poise Count\n- Inflict +1 Bleed Count; [On Crit] Inflict +1 Bleed Count\n\n*↳ Alternate S3 — Bow's Glimmer ['''閃弓''']* (BP 4, CP +4): rolls — low 4, high 8 (Extremely Low).\n  - Inflict 1 Lodged Arrow\n\nCombat passive — **Snipe - Archery**: If this unit is in Ready to Loose state, replace the leftmost Base Attack Skill equipped on the Dashboard with \"Bow's Glimmer\", then use….\n  - If, at max Target Aim Stack, this unit's Skill 3 is on neither the Dashboard nor the upcoming list of Skills when this effect activates,….\n  - Gain the following effects based on which Base Attack Skill was replaced (Sin Affinity carries over from the replaced Skill).\n\nCombat passive — **Shi-no-Yumi**: At 4 Arrow — Shi Stack: When this unit gains Poise Potency from Base Attack Skill effects, gain +1 Poise Count (3 times per Encounter.\n  - per-Encounter cap resets when Arrow — Shi drops to 3).\n  - If this unit used \"Bow's Glimmer\" Skill at 2+ Target Aim, gain 2 Slash DMG Up next turn.\n\nDefense skill — **Evade: Unfold Bowblade ['''弓刀''']**: If this unit does not have Arrow — Shi, activate \"Evade\" instead.\n  - [Combat Start] If this unit is about to use \"Bow's Glimmer\", use \"Evade\" instead.\n  - [Combat Start] If this unit has Ready to Loose, gain (60 / Target Aim Stack) Shield for the turn (once per turn).\n  - [Turn End] If this unit has Ready to Loose, and did not use an Attack Skill this turn, gain 1 Target Aim next turn (once per turn).",
+  "team_suggestions": [
+    "Best placed in a Bleed-focused team — teammates that apply or extend Bleed increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

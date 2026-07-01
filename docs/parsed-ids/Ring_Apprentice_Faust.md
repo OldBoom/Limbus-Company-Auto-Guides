@@ -1,11 +1,11 @@
 # The House of Spiders: The Ring Apprentice Faust
 
-> *"Have you woken up, Fascia? Faust has been waiting—there is a new friend Faust wants to introduce to Fascia. How is it? Such a splendid piece of corpus our new friend has, yes?"*
+> *"Have you woken up, Fascia? Faust has been waiting—there is a new friend Faust wants to introduce to Fascia. <br> How is it? Such a splendid piece of corpus our new friend has, yes?"*
 
 **Rarity:** World  
-**Season:** Season 7 — Kumo no ito • oti on akA  
+**Season:** Season 7 — World of the House of Spiders  
 **Release:** 2026.04.02  
-**Traits:** The Fingers, The House of Spiders, The Ring, Corporist, Mechanical Amalgam
+**Traits:** The Fingers, The House of Spiders, The Ring, School of Corporism, Mechanical Amalgam
 
 ---
 
@@ -13,9 +13,9 @@
 
 | HP | Speed | Defense Level |
 |----|-------|---------------|
-| 283 | 3–6 | 62 |
+| 283 | 3~6 | 62 |
 
-**Stagger Thresholds:** 50% (141) — 30% (85)
+**Stagger Thresholds:** 50% (142) — 30% (85)
 
 ---
 
@@ -45,21 +45,20 @@ Apply the following effects to this unit's Base Attack Skills and Clashable Coun
 
 ---
 
-## Skills — Iron Maiden State
+## Skills — Iron Maiden
 
-### Skill 1: Butcher — Ribs
+### Skill 1: Butcher - Ribs
 
 | Offense Level | Base Power | Coin Power | Atk Weight |
 |---------------|------------|------------|------------|
-| 61 (60+1) | 3 | +4 | x3 |
+| 61 (60+1) | 3 | +4 | x1 |
 
-**[On Use]** Clash Power +1 for every type of negative effect on target (max 2)  
-**[On Use]** Final Power +1 for every 4 Bleed on target (max 3)
+**Iron Maiden exclusive Skill ; [On Use] Clash Power +1 for every type of negative effect on target (max 2) ; [On Use] Final Power +1 for every 4 Bleed on target (max 3)**  
 
 | Coin | Effects |
 |------|---------|
 | 1 | [On Hit] Inflict +1 Bleed Count |
-| 2 | [On Hit] Inflict 2 Defense Level Down next turn (once per turn); [On Hit] Gain 2 Defense Level Up next turn (once per turn) |
+| 2 | [On Hit] Inflict 2 Defense Level Down next turn (once per turn) ; [On Hit] Gain 2 Defense Level Up next turn (once per turn) |
 
 ---
 
@@ -67,13 +66,9 @@ Apply the following effects to this unit's Base Attack Skills and Clashable Coun
 
 | Offense Level | Base Power | Coin Power | Atk Weight |
 |---------------|------------|------------|------------|
-| 62 (60+2) | 4 | +4 | x2 |
+| 62 (60+2) | 4 | +4 | x1 |
 
-**[On Use]** Clash Power +1 for every type of negative effect on target (max 2)  
-**[On Use]** Final Power +1 for every 4 Bleed on target (max 4)  
-**[On Use]** At 10+ Corpus Ingredient Count, consume 5 Corpus Ingredient Count to gain:
-- Clash Power +1
-- Convert the final Coin on this Skill to Unbreakable Coin
+**Iron Maiden exclusive Skill ; [On Use] Clash Power +1 for every type of negative effect on target (max 2) ; [On Use] Final Power +1 for every 4 Bleed on target (max 4) ; [On Use] At 10+ Corpus Ingredient Count, consume 5 Corpus Ingredient Count to gain the following effects: ; - Clash Power +1 ; - Convert the final Coin on this Skill to Unbreakable Coin**  
 
 | Coin | Effects |
 |------|---------|
@@ -89,128 +84,42 @@ Apply the following effects to this unit's Base Attack Skills and Clashable Coun
 |---------------|------------|------------|------------|
 | 63 (60+3) | 4 | +3 | x1 |
 
-**[On Use]** Final Power +1 for every 4 Bleed on target (max 3)  
-**[On Use]** At 10+ Corpus Ingredient Count, consume up to 20 Corpus Ingredient Count to gain:
-- Final Power +2
-- Deal +3% damage for every Corpus Ingredient Count consumed
+**Iron Maiden exclusive Skill ; [On Use] Final Power +1 for every 4 Bleed on target (max 3) ; [On Use] At 10+ Corpus Ingredient Count, consume up to 20 Corpus Ingredient Count to gain the following effects: ; - Final Power +2 ; - Deal +3% damage for every Corpus Ingredient Count consumed**  
 
 | Coin | Effects |
 |------|---------|
-| 1 | [On Hit] Inflict 4 Bleed |
+| 1 | [On Hit] Inflict 3 Bleed |
 | 2 | [On Hit] Inflict 1 Bind next turn (once per turn) |
 | 3 | [On Hit] Inflict 1 Damage Down next turn (once per turn) |
-| 4 | Deal +5% damage for every type of negative effect on target (max 30%); [On Hit] Inflict +1 Bleed Count |
+| 4 | Deal +5% damage for every type of negative effect on target (max 30%) ; [On Hit] Inflict +1 Bleed Count |
 
 ---
 
-## Skills — The Self Unbound (Flow State)
-
-### Skill 1: Butcher — Ribs
-
-| Offense Level | Base Power | Coin Power | Atk Weight |
-|---------------|------------|------------|------------|
-| 63 (60+3) | 3 | +4 | x0 |
-
-**Deal +10% damage** for every type of negative effect on target (max 30%)  
-**[On Use]** Final Power +1 for every 4 Bleed on target (max 3)
-
-| Coin | Effects |
-|------|---------|
-| 1 | [On Hit] Inflict +1 Bleed Count |
-| 2 | [On Hit] Inflict 2 Defense Level Down next turn (once per turn); [On Hit] Gain 2 Defense Level Up next turn (once per turn) |
-
----
-
-### Skill 2: Time for Your Meal, Fascia
-
-| Offense Level | Base Power | Coin Power | Atk Weight |
-|---------------|------------|------------|------------|
-| 64 (60+4) | 4 | +4 | x0 |
-
-**Deal +10% damage** for every type of negative effect on target (max 30%)  
-**[On Use]** Final Power +1 for every 4 Bleed on target (max 4)  
-**[On Use]** At 10+ Corpus Ingredient Count, consume 5 Corpus Ingredient Count to gain:
-- Clash Power +1
-- Convert the final Coin on this Skill to Unbreakable Coin
-
-| Coin | Effects |
-|------|---------|
-| 1 | [On Hit] Inflict +2 Bleed Count |
-| 2 | [On Hit] Inflict 1 Bind next turn (once per turn); [On Hit] Gain 1 Haste next turn (once per turn) |
-| 3 | [On Hit] Gain +4 Corpus Ingredient Count |
-
----
-
-### Skill 3: Liberation of the Repressed Flesh
-
-| Offense Level | Base Power | Coin Power | Atk Weight |
-|---------------|------------|------------|------------|
-| 65 (60+5) | 4 | +3 | x0 |
-
-**[On Use]** Deal +30% damage for every excess Atk Weight beyond the # of actual targets (in Focused Encounters, the Part)  
-**[On Use]** Final Power +1 for every 4 Bleed on the main target (max 3)  
-**[On Use]** At 10+ Corpus Ingredient Count, consume up to 20 Corpus Ingredient Count and gain:
-- Final Power +2
-- Deal +1% damage for every Corpus Ingredient Count consumed
-- At 3+/5+ Corpus Ingredient, gain +1/+2 Atk Weight
-- Convert all Coins on this Skill to Unbreakable Coins
-
-| Coin | Effects |
-|------|---------|
-| 1 | [On Hit] Inflict 4 Bleed |
-| 2 | [On Hit] Inflict 1 Bind next turn (once per turn); [On Hit] Gain 1 Haste next turn (once per turn) |
-| 3 | [On Hit] Inflict 1 Damage Down next turn (once per turn); [On Hit] Gain 1 Slash DMG Up next turn (once per turn) |
-| 4 | Deal +5% damage for every type of negative effect on target (max 30%); [On Hit] Inflict +1 Bleed Count |
-
----
+## Skills — The Self Unbound — Flow State
 
 ## Defense Skills
 
-### Guard (Iron Maiden): Exhibition Arrangements
+### Evade (The Self Unbound — Flow State): The Exhibition Begins
 
 | Offense Level | Base Power | Coin Power |
 |---------------|------------|------------|
-| 65 (60+5) | 4 | +10 |
+| 60 (60+0) | 4 | +10 |
 
-**Type:** Clashable Guard  
-**Iron Maiden exclusive Skill**
+**The Self Unbound — Flow State exclusive Skill ; [Combat Start] Gain 1 Assist Defense (once per turn) ; [On Evade] Inflict 1 Bind next turn against the attacker (once per turn) ; [On Evade] Gain 1 Haste next turn (once per turn)**  
 
-**[Clash Win]** Inflict +2 Bleed Count on the attacker (2 times per turn)  
-**[Clash Win]** Deal Pierce damage equal to (Bleed Potency on the attacker × 2) (max damage: 30)
-
-**Unbreakable Coin**
+| Coin | Effects |
+|------|---------|
+| 1 | — |
 
 ---
 
-### Evade (Flow State): The Exhibition Begins
-
-| Offense Level | Base Power | Coin Power |
-|---------------|------------|------------|
-| 62 (60+2) | 4 | +10 |
-
-**The Self Unbound — Flow State exclusive Skill**
-
-**[Combat Start]** Gain 1 Assist Defense (once per turn)  
-**[On Evade]** Inflict 1 Bind next turn against the attacker (once per turn)  
-**[On Evade]** Gain 1 Haste next turn (once per turn)
-
----
-
-### Counter (Flow State): No Acts of Vandalism Allowed.
+### Counter (The Self Unbound — Flow State): No Acts of Vandalism Allowed.
 
 | Offense Level | Base Power | Coin Power |
 |---------------|------------|------------|
 | 62 (60+2) | 4 | +4 |
 
-**Type:** Clashable Counter  
-**The Self Unbound — Flow State exclusive Skill**  
-**Assist Defense exclusive Skill**
-
-**Deal +10% damage** for every type of negative effect on target (max 30%)  
-**[On Use]** Coin Power +1 for every 6 Bleed on target (max 2)  
-**[On Use]** At 10+ Corpus Ingredient Count, consume 5 Corpus Ingredient Count to gain:
-- Clash Power +1
-- Convert the final Coin on this Skill to Unbreakable Coin
+**[Clashable Counter] ; The Self Unbound — Flow State exclusive Skill ; Assist Defense exclusive Skill ; Deal +10% damage for every type of negative effect on target (max 30%) ; [On Use] Coin Power +1 for every 6 Bleed on target (max 2) ; [On Use] At 10+ Corpus Ingredient Count, consume 5 Corpus Ingredient Count to gain the following effects: ; - Clash Power +1 ; - Convert the final Coin on this Skill to Unbreakable Coin**  
 
 | Coin | Effects |
 |------|---------|
@@ -219,19 +128,29 @@ Apply the following effects to this unit's Base Attack Skills and Clashable Coun
 
 ---
 
+## Skills — Clashable Guard
+
+## Defense Skills
+
+### Guard (Clashable Guard): Exhibition Arrangements
+
+| Offense Level | Base Power | Coin Power |
+|---------------|------------|------------|
+| 60 (60+0) | 4 | +10 |
+
+**Clashable Guard ; Iron Maiden exclusive Skill ; [Clash Win] Inflict +2 Bleed Count on the attacker (2 times per turn) ; [Clash Win] Deal Pierce damage equal to (Bleed Potency on the attacker x 2) (max damage: 30)**  
+
+| Coin | Effects |
+|------|---------|
+| 1 | Unbreakable Coin |
+
+---
+
 ## Combat Passives
 
 ### Fascia, My Precious Artwork
 
-Upon entering the Encounter for the first time, gain +(# of The Ring allies on the field × 2) Corpus Ingredient Count (max 10).
-
-**Skill End:** If the Skill dealt HP or Shield damage, gain +5 Corpus Ingredient Count.
-- If target is killed, gain +3 additional Corpus Ingredient Count.
-
-Gain 1 Corpus Ingredient every time this unit consumes 10 cumulative Corpus Ingredient Count in this Encounter.
-- If the above effect brings this unit's Corpus Ingredient Potency to 2 or higher, gain **Artwork: Fascia**.
-
-Base Attack Skills and Clashable Counter Skill count as Skills that gain Charge Count.
+Upon entering the Encounter for the first time, gain +(# of -faction allies on the field x 2) Corpus Ingredient Count (max 10) ; ; Skill End: If the Skill dealt HP or Shield damage, gain +5 Corpus Ingredient Count ; - If target is killed, gain +3 additional Corpus Ingredient Count ; ; Gain 1 Corpus Ingredient every time this unit consumes 10 cumulative Corpus Ingredient Count in this Encounter ; - If the above effect brings this unit's Corpus Ingredient Potency to 2 or higher, gain Artwork — Fascia (Faust) ; ; Base Attack Skills and Clashable Counter Skill count as Skills that gain Charge Count
 
 ---
 
@@ -248,33 +167,14 @@ Upon entering the Encounter for the first time, gain **Iron Maiden**.
 
 **(×4 Owned)**
 
-Double the amount of Speed, Clash Power, damage buff gained from **Somatic Frisson-inspiring Melody**.
-
-On Hit, if the Attack Skill inflicted a negative effect, heal 4 SP at Attack End (2 times per turn).
-- If this unit's SP is at max, gain 1 Slash DMG Up next turn when this unit heals SP with this effect (once per turn).
+Double the amount of Speed, Clash Power, damage buff gained from Somatic Frisson — inspiring Melody ; ; On Hit, if the Attack Skill inflicted a negative effect, heal 4 SP at Attack End (2 times per turn) ; - If this unit's SP is at max, gain 1 Slash DMG Up next turn when this unit heals SP with this effect (once per turn)
 
 ---
 
-## Support Passive
+### Iron Maiden - Spikes
 
-### Iron Maiden — Spikes
+**(×1)**
 
-**(×1 / ×2 Owned)**
-
-When hit, allies that equipped Defense Skill on their Slots this turn inflict 4 Bleed on the attacker (2 times per turn).
-- If the attacker already has Bleed, inflict +2 Bleed Count instead.
+When hit, allies that equipped Defense Skill on their Slots this turn inflict 4 Bleed on the attacker (2 times per turn) ; - If the attacker already has Bleed, inflict +2 Bleed Count instead
 
 ---
-
-## Additional Reference
-
-### Somatic Frisson-inspiring Melody (Buff from Passive interaction)
-- Min & Max Speed +1
-- Base Attack Skills gain Clash Power +1 and deal +10% damage
-
-### Assist Defense
-- Max Stack: 3
-- When an ally is about to take an Unopposed Attack from an enemy, consume 1 Stack to redirect the enemy's targeting to self; then, use the unique Skill that activates for Assist Defense
-- When there are multiple allies with Assist Defense Stacks, the ally with the highest Stack has the highest activation priority
-- Does not activate for allies who equipped Defense Skills
-- Expires at Turn End

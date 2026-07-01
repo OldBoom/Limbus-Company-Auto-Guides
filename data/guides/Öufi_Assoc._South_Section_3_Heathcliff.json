@@ -1,0 +1,92 @@
+{
+  "identity_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+  "identity_name": "Öufi Assoc. South Section 3 Heathcliff",
+  "sinner": "Heathcliff",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Shield",
+      "Clash Power"
+    ],
+    "status_effects": {
+      "Tremor": 18,
+      "Shield": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 6
+    },
+    "all_mechanics": {
+      "Tremor": 18,
+      "Shield": 1,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 1
+    },
+    "identity_slug": "Öufi_Assoc._South_Section_3_Heathcliff"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "score": 0.9469081163406372,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
+      "teammate_name": "The Thumb East Capo IIII Meursault",
+      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "score": 0.9308047294616699,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._Mittelhammer_Don_Quixote",
+      "teammate_name": "N Corp. Mittelhammer Don Quixote",
+      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "score": 0.9219276905059814,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Öufi Assoc. South Section 3 Heathcliff is a Status Specialist applying sustained Tremor, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Execution Advised** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- Stacks 2 Tremor — use every appearance to build up.\n\n**S2 — Final Warning** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n\n**S3 — Execution Sentencing** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- triggers Amplitude Conversion into Tremor — Scorch\n- If target has 20+ (Tremor + Tremor Count), trigger Amplitude Conversion on target, converting Tremor to Tremor — Decay\n\nCombat passive — **Grave Attendance**: Deal +10% damage for every 6 Tremor Potency on target (Max 30%).\n  - When converting Tremor to Tremor — Decay with this unit's Skill effects, trigger Tremor Burst on target.\n\nCombat passive — **Verify Obligation Fulfillment**: To 1 ally with the fastest Speed: Clash Power +1 to Skills that apply Tremor Potency or Count.\n\nDefense skill — **Counter: Do Not Obstruct**: When attacked while this unit has Shield, inflict +1 Tremor Count on the attacker (this Skill's effect does not stack with multiple uses).",
+  "team_suggestions": [
+    "Uses unique Tremor (Tremor — Decay) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.95 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

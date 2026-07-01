@@ -1,0 +1,94 @@
+{
+  "identity_slug": "District_20_Yurodivy_Ryōshū",
+  "identity_name": "District 20 Yurodivy Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Clash Power",
+      "Shield"
+    ],
+    "status_effects": {
+      "Tremor": 21,
+      "Shield": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 6,
+      "On Hit": 6,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Tremor": 21,
+      "Shield": 1,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2
+    },
+    "identity_slug": "District_20_Yurodivy_Ryōshū"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "score": 0.9521318674087524,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 0.9405219554901123,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+      "teammate_name": "T Corp. Class 3 Collection Staff Don Quixote",
+      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "score": 0.9194821715354919,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
+      "teammate_name": "The Thumb East Capo IIII Meursault",
+      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "score": 0.9169871807098389,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "District_20_Yurodivy_Hong_Lu",
+      "teammate_name": "District 20 Yurodivy Hong Lu",
+      "reason": "Mechanic similarity score: 0.91 (embedding; verify manually).",
+      "score": 0.9121265411376953,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "District 20 Yurodivy Ryōshū is a Support applying sustained Tremor, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Got a Screw Loose?** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Peak output requires both conditions: Gain +2 Tremor Count | [On Use] At 4+ Tremor Count, Clash Power +2.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S2 — Compression Wind-up Spanner** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 4+ Tremor on target — that is when the damage condition activates.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S3 — Percussive Maintenance** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 6+ Tremor on target — that is when the damage condition activates.\n\nDefense skill — **Guard: Guard**: [On Use] Gain 2 x (Tremor Count on self) as Shield HP (max 10).",
+  "team_suggestions": [
+    "Best placed in a Tremor-focused team — teammates that apply or extend Tremor increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.95 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **T Corp. Class 3 Collection Staff Don Quixote**: Mechanic similarity score: 0.92 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

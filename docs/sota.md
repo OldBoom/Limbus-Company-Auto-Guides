@@ -2,9 +2,11 @@
 
 Survey and evaluation of NLP techniques and tools applicable to the Limbus Company Auto Guides pipeline. Each section provides a short narrative, a comparison table, and a verdict.
 
-**Evaluation data:** 3 parsed identity examples in `docs/parsed-ids/` — Ring Apprentice Faust (complex, multi-state, Bleed + Corpus Ingredient), Blade Lineage Salsu Yi Sang (simple, Poise-focused), and Ring Pointillist Student Yi Sang (Bleed + multi-status randomizer).
+**Evaluation data:** PoC used 3 parsed identity examples in `docs/parsed-ids/` — Ring Apprentice Faust (complex, multi-state, Bleed + Corpus Ingredient), Blade Lineage Salsu Yi Sang (simple, Poise-focused), and Ring Pointillist Student Yi Sang (Bleed + multi-status randomizer). **Production pipeline:** 50 identities across all 12 sinners with full guides and evaluation references (`data/evaluation/references/`).
 
 **PoC notebooks:** `notebooks/ner_evaluation.ipynb`, `notebooks/embedding_evaluation.ipynb`, `notebooks/llm_evaluation.ipynb`
+
+**Reproducible PoC runner:** `scripts/run_poc_evaluations.py` → `data/poc_evaluation_results.json`
 
 ---
 
@@ -42,13 +44,15 @@ Two approaches were implemented and tested against a manually annotated gold sta
 - **Rule-based (regex + spaCy PhraseMatcher):** A dictionary of known mechanic terms is matched against identity text using spaCy's PhraseMatcher (case-insensitive). Regex patterns capture triggers (`[On Hit]`, `[On Use]`, etc.) and conditional expressions (`at X+ count`).
 - **spaCy EntityRuler:** A pattern-based NER component that assigns typed entity labels (STATUS_EFFECT, STAT_MODIFIER, UNIQUE_MECHANIC) to matched spans. Functionally similar to PhraseMatcher but produces labeled entities compatible with spaCy's NER pipeline.
 
-| Framework | Precision | Recall | Training data needed | Setup effort | Extensibility |
-|-----------|-----------|--------|----------------------|--------------|---------------|
-| Rule-based (PhraseMatcher + regex) | High | High | None — dictionary only | Low | Add terms to list |
-| spaCy EntityRuler | High | High | None — pattern rules | Low | Add patterns |
-| spaCy trained NER (statistical) | Medium-High | Medium | 50-100+ annotated examples | High | Retrain on new data |
+| Framework | Precision | Recall | F1 (avg, 3 IDs) | Training data needed | Setup effort |
+|-----------|-----------|--------|-----------------|----------------------|--------------|
+| Rule-based (PhraseMatcher + regex) | High | High | **0.86** | None — dictionary only | Low |
+| spaCy EntityRuler | Low (overlap) | High | **0.25** | None — pattern rules | Low |
+| spaCy trained NER (statistical) | Medium-High | Medium | — | 50-100+ annotated examples | High |
 
-**Verdict:** Rule-based extraction (PhraseMatcher + regex) or EntityRuler is the recommended approach. The game mechanic vocabulary is controlled and finite — statistical NER offers no advantage and requires significant annotation effort. EntityRuler is preferred over raw PhraseMatcher because it produces typed entity labels, which simplifies downstream processing.
+**Measured (PoC, `data/poc_evaluation_results.json`):** Rule-based avg F1 **0.86** (Faust 0.96, Pointillist 0.95, Salsu 0.67). EntityRuler achieves high recall but low precision on overlapping spans — not ideal for this gold-standard metric.
+
+**Verdict:** **PhraseMatcher + regex** is the recommended approach for production. The game mechanic vocabulary is controlled and finite — statistical NER offers no advantage and requires significant annotation effort. EntityRuler is preferred over raw PhraseMatcher because it produces typed entity labels, which simplifies downstream processing.
 
 ---
 
@@ -66,7 +70,15 @@ Each model encodes the extracted description text from all 3 test identities. Co
 | `all-mpnet-base-v2` | 110M | 768 | — | ~50 | No |
 | `bge-small-en-v1.5` | 33M | 384 | — | ~132 | Yes |
 
-**Verdict:** Start with `all-MiniLM-L6-v2` for development speed (fastest, smallest, good enough for prototype). If similarity quality is insufficient at 172 identities, upgrade to `bge-small-en-v1.5` (better retrieval quality, still fast) or `all-mpnet-base-v2` (highest semantic quality, 5x slower). All three are free, local, and require no API key.
+**Measured pairwise test (Bleed↔Bleed vs Poise↔Bleed):**
+
+| Model | Bleed↔Bleed | Poise↔Bleed | Delta | Pass |
+|-------|-------------|-------------|-------|------|
+| `all-MiniLM-L6-v2` | 0.690 | 0.668 | +0.022 | Yes (marginal) |
+| `all-mpnet-base-v2` | 0.762 | 0.637 | +0.126 | Yes |
+| `bge-small-en-v1.5` | 0.910 | 0.874 | +0.036 | Yes |
+
+**Verdict:** Use **`all-mpnet-base-v2`** when similarity discrimination matters (largest Bleed↔Bleed vs Poise↔Bleed delta). `all-MiniLM-L6-v2` is fastest but barely separates archetypes on the 3-ID pilot set. (fastest, smallest, good enough for prototype). If similarity quality is insufficient at 172 identities, upgrade to `bge-small-en-v1.5` (better retrieval quality, still fast) or `all-mpnet-base-v2` (highest semantic quality, 5x slower). All three are free, local, and require no API key.
 
 ---
 
@@ -97,6 +109,8 @@ Each model receives the full structured identity markdown as context and is prom
 
 RAG grounding is critical: without feeding structured identity data as context, all models hallucinate game mechanics. The pipeline must always provide the identity JSON/markdown as retrieval context.
 
+**Measured grounding check (Ring Apprentice Faust, template with RAG context):** grounding score 1.0 (8/8 mechanics grounded, 0 hallucinated). Ollama optional when GPU available. Regenerate via `scripts/run_poc_evaluations.py`.
+
 ---
 
 ## Summary of Recommendations
@@ -106,7 +120,7 @@ RAG grounding is critical: without feeding structured identity data as context, 
 | Data Ingestion (scraping) | BeautifulSoup + requests | — |
 | Mechanic Extraction (NER) | spaCy EntityRuler (pattern-based) | PhraseMatcher + regex |
 | Keyword Extraction | TF-IDF (scikit-learn) | RAKE |
-| Identity Similarity | `all-MiniLM-L6-v2` (sentence-transformers) | `bge-small-en-v1.5` |
+| Identity Similarity | `all-mpnet-base-v2` (best archetype delta on pilot) | `all-MiniLM-L6-v2` (fastest) |
 | Clustering | k-means (scikit-learn) | — |
 | Guide Generation (LLM) | Ollama + Mistral 7B | Phi-4, HF Inference API |
 | RAG Context | Structured identity markdown/JSON | — |

@@ -1,0 +1,95 @@
+{
+  "identity_slug": "Seven_Assoc._South_Section_4_Faust",
+  "identity_name": "Seven Assoc. South Section 4 Faust",
+  "sinner": "Faust",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Haste",
+      "Poise"
+    ],
+    "status_effects": {
+      "Rupture": 12,
+      "Haste": 2,
+      "Poise": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 4,
+      "Clash Win": 2,
+      "Attack End": 1,
+      "On Use": 1
+    },
+    "all_mechanics": {
+      "Rupture": 12,
+      "Haste": 2,
+      "Poise": 1,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "identity_slug": "Seven_Assoc._South_Section_4_Faust"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Seven_Assoc._South_Section_4_Heathcliff",
+      "teammate_name": "Seven Assoc. South Section 4 Heathcliff",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 1.0134542059898377,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Seven_Assoc._South_Section_6_Director_Outis",
+      "teammate_name": "Seven Assoc. South Section 6 Director Outis",
+      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "score": 0.9710646343231202,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "score": 0.8795976638793945,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+      "teammate_name": "Heishou Pack - Wu Branch Adept Yi Sang",
+      "reason": "Mechanic similarity score: 0.87 (embedding; verify manually).",
+      "score": 0.8720885515213013,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Mechanic similarity score: 0.87 (embedding; verify manually).",
+      "score": 0.8718279004096985,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Seven Assoc. South Section 4 Faust is a Damage Dealer applying sustained Rupture, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Predictive Analysis** (BP 4, CP +3, x2): rolls — low 4, high 10 (Extremely Low / Slightly High stacked).\n- Scales Coin Power with Rupture stacks — apply liberally before committing (cap +2).\n\n**S2 — Dissect Target** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / High stacked).\n- Scales Coin Power with Rupture stacks — apply liberally before committing (cap +2).\n- If target has 6+ Rupture, inflict Weakness Analyzed next turn\n\n**S3 — Profiling** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Deal +10% damage for every 3 Rupture on target (max 50%) ; [Clash Win] Inflict +2 Rupture Count\n- Deal +10% damage for every 3 Rupture on target (max 50%); [Clash Win] Inflict +2 Rupture Count\n\nCombat passive — **Before the Tea Cools...**: When attacking a target using a damage type the target is \"Weak\" or \"Fatal\" (Resistance>x1) to, gain Poise equal to Rupture on target bef….\n\nCombat passive — **Seven Association Tea Time**: 1 ally with the fastest Speed deals +1.5% damage for every Rupture on target when attacking using a damage type that the target is \"Weak\"….\n  - If the ally is a Fixer, deal additional damage (+0.5% for every Rupture.",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- **Seven Assoc. South Section 4 Heathcliff**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **Seven Assoc. South Section 6 Director Outis**: Mechanic similarity score: 0.90 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: Mechanic similarity score: 0.88 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "limbus-guides"
+version = "0.1.0"
+description = "Limbus Company wiki-grounded identity guide generator"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    "spacy>=3.7.0",
+    "scikit-learn>=1.4.0",
+    "sentence-transformers>=2.6.0",
+    "numpy>=1.26.0",
+    "streamlit>=1.32.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.3.0"]
+eval = ["rouge-score>=0.1.2", "bert-score>=0.3.13"]
+
+[project.scripts]
+limbus-pipeline = "limbus_guides.pipeline.run:run_pipeline"
+limbus-dashboard = "limbus_guides.dashboard.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

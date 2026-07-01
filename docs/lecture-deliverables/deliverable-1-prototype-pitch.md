@@ -2,7 +2,7 @@
 
 ## 1) One-sentence problem statement
 
-Limbus Company players lack consistent, quickly accessible identity guides; manually reading extreamly long wiki pages is slow and most of the time leads to missunderstanding of core mechanics and characters.
+Limbus Company players lack consistent, quickly accessible identity guides; manually reading extremely long wiki pages is slow and most of the time leads to misunderstanding of core mechanics and characters.
 
 ## 2) User description
 
@@ -11,7 +11,7 @@ Primary users are Limbus Company players who want to understand what an identity
 ## 3) Why this problem is relevant to the user
 
 - Players need identity understanding for team-building and encounter preparation.
-- Wiki pages are information-dense; important mechanics are missleading and increadibly hard to understand.
+- Wiki pages are information-dense; important mechanics are misleading and incredibly hard to understand.
 - Synergy discovery is a thing that many players want and feel curious about.
 
 ## 4) Sketch of how to solve the problem (input → NLP task → output)

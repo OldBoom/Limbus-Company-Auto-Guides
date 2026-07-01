@@ -1,0 +1,100 @@
+{
+  "identity_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+  "identity_name": "Cinq Assoc. East Section 3 Don Quixote",
+  "sinner": "Don Quixote",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Coin Power",
+      "Poise"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Haste",
+      "Atk Weight",
+      "Unique Burn",
+      "Defense Level Down"
+    ],
+    "status_effects": {
+      "Poise": 8,
+      "Burn": 12,
+      "Haste": 3,
+      "Unique Burn": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 11,
+      "Atk Weight": 3,
+      "Defense Level Down": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 1,
+      "On Hit": 9,
+      "Clash Win": 2
+    },
+    "all_mechanics": {
+      "Poise": 8,
+      "Burn": 12,
+      "Haste": 3,
+      "Unique Burn": 1,
+      "Base Power": 4,
+      "Coin Power": 11,
+      "Atk Weight": 3,
+      "Defense Level Down": 1
+    },
+    "identity_slug": "Cinq_Assoc._East_Section_3_Don_Quixote"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Firefist_Office_Survivor_Gregor",
+      "teammate_name": "Firefist Office Survivor Gregor",
+      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — helps reach 20+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — helps reach 20+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
+      "reason": "This identity's 'Featherstride Technique' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Cinq Assoc. East Section 3 Don Quixote is a Support / Status Specialist / Damage Dealer applying sustained Burn, Coin Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Fa Jin** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Average stacked).\n- If this unit's Speed is faster than the target's, gain Coin Power based on Speed difference (Coin Power +1 for every 2 Speed difference; max 2) ; [On Use] Gain +3 Poise Count\n\n**S2 — Virescent Flame Palm** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- If this unit's Speed is faster than the target's, gain Coin Power based on Speed difference (Coin Power +1 for every 2 Speed difference; max 2) ; [Clash Win] Gain 3 Poise ; - Gain additional Poise Count equal to Nerve Strike — Don Quixote on target\n- Gains 2 Poise — keeps Poise climbing each rotation.\n\n**S3 — Prithee, let this be an enlightening bout** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / High stacked).\n- Deal +15% damage for every 1 Nerve Strike — Don Quixote on target (max 45%) ; If this unit's Speed is faster than the target's, gain Coin Power based on Speed difference (Coin Power +1 for every 2 Speed difference; max 2) ; [Clash Win] Gain 5 Poise ; - If target has Nerve Strike — Don Quixote, gain 3 additional Poise\n- Deal (Poise on self + Burn on target)% damage on Critical Hit (max 30%)\n\nCombat passive — **Virescent Pyrojade**: Turn End: gain 1 Haste next turn for every 3 Poise Potency on self (max 2).\n  - Against the target(or the Part) a Base Attack Skill hit last, inflict Nerve Strike — Don Quixote next turn (once per turn).\n  - Deal +(Burn Potency on the target)% damage on Critical Hit (max 15%).",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Firefist Office Survivor Gregor**: 'I'm the only survivor…' inflicts Burn via the support passive — helps reach 20+ Burn thresholds on key skills."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

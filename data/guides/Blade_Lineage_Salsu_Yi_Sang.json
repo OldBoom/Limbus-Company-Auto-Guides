@@ -1,0 +1,89 @@
+{
+  "identity_slug": "Blade_Lineage_Salsu_Yi_Sang",
+  "identity_name": "Blade Lineage Salsu Yi Sang",
+  "sinner": "Yi Sang",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Poise",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Poise": 8
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 2,
+      "On Hit": 1,
+      "Clash Win": 1,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Poise": 8,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "identity_slug": "Blade_Lineage_Salsu_Yi_Sang"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+      "teammate_name": "W Corp. L2 Cleanup Agent Faust",
+      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "score": 0.9031156301498413,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
+      "teammate_name": "Kurokumo Clan Wakashu Rodion",
+      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "score": 0.9000946283340454,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Edgar_Family_Butler_Ishmael",
+      "teammate_name": "Edgar Family Butler Ishmael",
+      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
+      "score": 0.8930474519729614,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Blade Lineage Salsu Yi Sang is a Damage Dealer — Poise-stacking fighter. Poise Count built through skill use and clash wins converts directly to Coin Power (+1 CP per 5 Poise Count, max +3) — every successful clash raises your flip strength.",
+  "playstyle_guide": "- Prioritise clashing — every successful clash win raises your Coin Power (+1 CP per 5 Poise Count, max +3).\n\n**S1 — Striker’s Stance** (BP 6, CP +7, x1): rolls — low 6, high 13 (Extremely High).\n- Gains 2 Poise — keeps Poise climbing each rotation.\n- Primary Poise engine — clash every turn\n\n**S2 — Heel Turn** (BP 7, CP +2, x2): rolls — low 7, high 11 (Extremely Low).\n- Gains 2 Poise — keeps Poise climbing each rotation.\n\n**S3 — Flank Thrust** (BP 8, CP +2, x3): rolls — low 8, high 14 (Low / Average stacked).\n- Gains 2 Poise — keeps Poise climbing each rotation.\n- Deal +50% damage on Critical Hit\n\nCombat passive — **Poised**: On Clash Win, gain +1 Poise Count.\n  - Coin Power +1 for every 5 Poise Count (max 3).\n\nCombat passive — **Bestow**: 1 ally that has the highest SP gains +1 more Poise Count from Skills effects.\n\nThe 'Poised' passive converts Poise Count to Coin Power throughout the battle — maintain pressure and keep clashing to sustain elevated flip results. Clash wins are doubly valuable — they build Count (via skills) and the passive triggers.",
+  "team_suggestions": [
+    "Works in any aggressive composition; clash-heavy lineups let this identity build Poise Count faster and sustain elevated Coin Power. Same-faction teammates provide additional passive synergy where available.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **W Corp. L2 Cleanup Agent Faust**: Mechanic similarity score: 0.90 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

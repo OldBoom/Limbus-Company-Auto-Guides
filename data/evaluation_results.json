@@ -1,0 +1,45 @@
+{
+  "test_set_size": 50,
+  "rouge_l_mean": 0.175,
+  "rouge_l": {
+    "full": 0.175,
+    "naive": 0.109,
+    "ablation": 0.176,
+    "n": 50,
+    "note": "full = smart-template + synergy rules; ablation = smart-template, no synergy; naive = mechanic keywords only"
+  },
+  "mechanic_f1_note": "See data/poc_evaluation_results.json for extraction F1 on 3 gold identities",
+  "efficiency": {
+    "runs": 10,
+    "identities_per_run": 50,
+    "mean_ms_per_identity": 1060.5,
+    "worst_ms_per_identity": 1136.0,
+    "mean_total_pipeline_ms": 53024.7,
+    "cost_per_query_eur": 0.0,
+    "monthly_cost_100_queries_eur": 0.0,
+    "monthly_cost_1000_queries_eur": 0.0
+  },
+  "error_categories": [
+    {
+      "category": "Hallucination",
+      "count": 0,
+      "root_cause": "Mitigated by template/RAG grounding"
+    },
+    {
+      "category": "Synergy miss",
+      "count": 1,
+      "root_cause": "Small roster limits rule-based matches"
+    },
+    {
+      "category": "Formatting",
+      "count": 0,
+      "root_cause": "Structured JSON output"
+    }
+  ],
+  "sus_study": {
+    "participants": 0,
+    "sus_score": null,
+    "task_success_rate": null,
+    "note": "Recruit 3-8 players before final presentation; template in docs/evaluation.md"
+  }
+}

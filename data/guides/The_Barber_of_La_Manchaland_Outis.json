@@ -1,0 +1,98 @@
+{
+  "identity_slug": "The_Barber_of_La_Manchaland_Outis",
+  "identity_name": "The Barber of La Manchaland Outis",
+  "sinner": "Outis",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Bloodfeast",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Sewing Target",
+      "Base Power",
+      "Atk Weight",
+      "Clash Power"
+    ],
+    "status_effects": {
+      "Bleed": 23
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 8,
+      "Atk Weight": 6,
+      "Clash Power": 2
+    },
+    "unique_mechanics": {
+      "Bloodfeast": 10,
+      "Sewing Target": 7
+    },
+    "triggers": {
+      "On Use": 8,
+      "On Hit": 14,
+      "Attack End": 2
+    },
+    "all_mechanics": {
+      "Bleed": 23,
+      "Base Power": 6,
+      "Coin Power": 8,
+      "Atk Weight": 6,
+      "Clash Power": 2,
+      "Bloodfeast": 10,
+      "Sewing Target": 7
+    },
+    "identity_slug": "The_Barber_of_La_Manchaland_Outis"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
+      "teammate_name": "The Manager of La Manchaland Don Quixote",
+      "reason": "Mechanic similarity score: 0.96 (embedding; verify manually).",
+      "score": 1.0310564708709717,
+      "source": "embedding",
+      "faction_match": true
+    }
+  ],
+  "core_idea": "The Barber of La Manchaland Outis is a Support / Status Specialist / Damage Dealer applying sustained Bleed, Bloodfeast pressure with consistent skill stats.",
+  "playstyle_guide": "- Hold S3 for when At 10+ Blood — tinged Scissorblades is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sewing** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- On Hit with this Skill: heal 10% of the HP damage dealt (max 10) ; [On Use] Consume up to 40 Bloodfeast and gain 1 Blood — tinged Scissorblades for every 8 Bloodfeast this unit consumed ; - If this unit failed to consume Bloodfeast, gain +2 Bleed Count ; [On Use] Coin Power +1 for every 6 Bleed on target (max 2)\n- Inflict 1 Bleed; [On Hit] If target has Sewing Target, inflict +1 Bleed Count\n\n**S2 — Scission** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Peak output requires both conditions: On Hit with this Skill: heal 20% of the HP damage dealt (max 20) | [On Use] Consume up to 60 Bloodfeast and gain 1 Blood — tinged Scissorblades for every 6 Bloodfeast this unit consumed.\n- At 10+ Blood — tinged Scissorblades, inflict 1 Sewing Target on target next turn\n\n**S3 — I'll Make You a New Dress!** (BP 3, CP +3, x4): rolls — low 3, high 15 (Low).\n- Peak output requires both conditions: On Hit with this Skill: heal 30% of the HP damage dealt (max 20) | [Before Attack] At 10+ Blood — tinged Scissorblades, Atk Weight +1.\n- Delay until 5+ Bleed on target — that is when the damage condition activates.\n\nCombat passive — **Bloodfeast**: If this unit is on field, or is one of the units that can appear on this Stage, increase Bloodfeast value by the amount of Bleed damage c….\n  - When this unit enters the field, the sleeping blood drenching the battlefield will rise above the surface.\n\nCombat passive — **Don Quixote Hardblood Arts 8: Scissors**: 1 ally with the fastest Speed: If the enemy is killed at Attack End, heal 10 HP (2 times per turn).\n  - 1 ally with the fastest Speed: If the enemy is killed at Attack End, inflict +1 Bleed Count when inflicting Bleed Potency with Skill or C….\n\nDefense skill — **Counter: Quite Discourteous!**: [On Use] At 10+ Blood — tinged Scissorblades, Base Power +1.\n  - At 20+ Blood — tinged Scissorblades, Base Power +2 instead.\n  - [On Use] Coin Power +1 for every 5 Bleed on self (max 3).",
+  "team_suggestions": [
+    "Best placed in a Bleed-focused team — teammates that apply or extend Bleed increase this kit's damage ceiling.",
+    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

@@ -1,0 +1,112 @@
+{
+  "identity_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+  "identity_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+  "sinner": "Rodion",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Sinking",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Final Power",
+      "Clash Power",
+      "Unbreakable Coin",
+      "Charge"
+    ],
+    "status_effects": {
+      "Sinking": 18,
+      "Shield": 1,
+      "Charge": 2,
+      "Protection": 2
+    },
+    "stat_modifiers": {
+      "Base Power": 10,
+      "Coin Power": 12,
+      "Atk Weight": 6,
+      "Clash Power": 4,
+      "Final Power": 6,
+      "Damage Up": 2
+    },
+    "unique_mechanics": {
+      "Unbreakable Coin": 3
+    },
+    "triggers": {
+      "On Hit": 17,
+      "On Use": 9,
+      "Attack End": 2,
+      "Combat Start": 3
+    },
+    "all_mechanics": {
+      "Sinking": 18,
+      "Shield": 1,
+      "Charge": 2,
+      "Protection": 2,
+      "Base Power": 10,
+      "Coin Power": 12,
+      "Atk Weight": 6,
+      "Clash Power": 4,
+      "Final Power": 6,
+      "Damage Up": 2,
+      "Unbreakable Coin": 3
+    },
+    "identity_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+      "teammate_name": "Lobotomy E.G.O::Red Sheet Sinclair",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
+      "teammate_name": "Blade Lineage Salsu Yi Sang",
+      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
+      "score": 0.8866320848464966,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion is a Damage Dealer — **Minus Coin** identity that must reach **Despair** (negative SP) to unlock Faded Faith and peers. Open with defense turns to drain SP and build Tear-sharpened, then cash out Deep Tears with Despair Skill 3.",
+  "playstyle_guide": "- **Minus Coin kit** — at 0+ SP you run **Blessing** Plus Coin skills; below 0 SP you swap to **Despair** Minus Coin alternates (Faded Faith, With the Tear-sharpened Sword, …) with much higher Base Power.\n- Spend the opening turns on **Guard: The Knight's Faith / Counter: Weathered Pride** — both grant Deep Tears on use and drain SP at Turn End to build Tear-sharpened stacks, pushing you into **Despair** where the real damage lives.\n- Support passive adds Final Power to allies' Minus Coin skills at **-15 SP** (+15% damage at **-30 SP**) — plan to stay deeply negative once setup is done.\n- Hold S3 for when At 10+ Deep Tears is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — The Knight's Sanctuary** (BP 4, CP +4, x2): rolls — low 4, high 12 (High / Slightly High stacked).\n- Peak output requires both conditions: If target has 6+ Sinking, Coin Power +1 | At 3+ Protecting Sword, Clash Power +1.\n\n*↳ Alternate S1 — Faded Faith* (BP 10, CP -4): rolls — low 10, high 18 (Extremely High).\n  - Stacks 1 Sinking — use every appearance to build up.\n  - Gain 2 Deep Tears\n\n**S2 — With the Power of Justice** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: If target has 6+ Sinking, Coin Power +1 | Clash Power +1 for every 2 Protecting Sword (max 2).\n- Inflict +2 Sinking Count; [On Hit] Gain 3 Deep Tears; - Gain 1 additional Deep Tears for every 2 Protecting Sword (max 2)\n\n*↳ Alternate S2 — With the Tear-sharpened Sword* (BP 16, CP -4): rolls — low 16, high 28 (Extremely High).\n  - Stacks 2 Sinking — use every appearance to build up.\n\n**S3 — Arcana Pierce** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Peak output requires both conditions: If target has 6+ Sinking, Coin Power +1 | Clash Power +1 for every Protecting Sword (max 5).\n- Stacks 2 Sinking — use every appearance to build up.\n\n*↳ Alternate S3 — Arcana: Tear and Pierce* (BP 20, CP -5): rolls — low 20, high 35 (Extremely High).\n  - Stacks 3 Sinking — use every appearance to build up.\n\nCombat passive — **The Sword Sharpened with Tears - !ALERT: E.G.O GEAR SYNC THRESHOLD EXCEEDED!**: Turn Start: at 0 or higher SP, gain Blessing.\n  - Uses Plus Coin Skills as Base Skills.\n  - Turn Start: at less than 0 SP, gain Despair.\n\nCombat passive — **Magical Girl of Justice / Knight of Despair**: When in Blessing state….\n  - Take -(SP / 2)% HP damage from attacks (max 20%).\n  - Combat Start: at 3+ Protecting Sword, gain 1 Protection.\n\nDefense skill — **Guard: The Knight's Faith**: Clashable Guard.\n  - [Combat Start] Coin Power +1 for every 2 Protecting Sword (max 2).\n  - [Combat Start] Gain Shield equal to (SP / 3)% of this unit's max HP (once per turn).\n  - [On Use] Gain 5 Deep Tears (2 times per turn).",
+  "team_suggestions": [
+    "Best placed in a Sinking-focused team — teammates that apply or extend Sinking increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+    "- **LCE E.G.O::AEDD Gregor**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Lobotomy E.G.O::Magic Bullet Outis**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Lobotomy E.G.O::Red Sheet Sinclair**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

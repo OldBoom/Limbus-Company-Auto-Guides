@@ -19,7 +19,7 @@ Results MUST be displayed on a web-based dashboard where users browse by charact
 - **Game:** Limbus Company (Project Moon, 2023–present)
 - **Characters (Sinners):** 12 playable characters
 - **Identities:** 172 total; each character equips exactly one identity per team
-- **Core mechanics:** Status effects (Bleed, Burn, Tremor, Rupture, Sinking, Poise, Charge), skill coins, offense/defense levels, passives, support passives, sin affinities — full reference in [`docs/status-effects.md`](status-effects.md)
+- **Core mechanics:** Status effects (Bleed, Burn, Tremor, Rupture, Sinking, Poise, Charge), skill coins, offense/defense levels, passives, support passives, sin affinities — full reference in [`docs/status-effects.md`](status-effects.md). Gameplay overview: [`docs/domain-primer.md`](domain-primer.md)
 - **Data source:** [limbus-company.wiki.gg](https://limbus-company.wiki.gg)
 
 ---
@@ -85,7 +85,7 @@ Three NLP tasks, mixing traditional and LLM-based techniques:
   - **Core Idea** (~2-3 sentences): What this identity fundamentally does
   - **Playstyle Guide** (~1 short paragraph): Key decision points, skill priorities, state transitions
   - **Team Suggestions** (~3-5 bullet points): Recommended partners with one-line rationale
-- RAG approach: feed structured identity data as retrieval context to improve generation accuracy
+- RAG approach: feed structured identity data plus [`domain-primer.md`](domain-primer.md) gameplay rules (`src/limbus_guides/domain/context.py`) as retrieval context
 - Evaluate output against manually written guides for a validation subset
 
 ### Module 3 — Web Dashboard
@@ -109,7 +109,7 @@ Three NLP tasks, mixing traditional and LLM-based techniques:
 | Sentence embeddings (e.g., sentence-transformers) | Embeddings | Identity similarity computation |
 | Clustering (k-means or similar) | Traditional ML | Archetype grouping |
 | LLM prompting with structured context | LLM-based | Guide text generation |
-| RAG (Retrieval-Augmented Generation) | LLM-based | Grounding generation in wiki data |
+| RAG (Retrieval-Augmented Generation) | LLM-based | Wiki JSON + domain primer rules for grounded playstyle text |
 
 ---
 
@@ -124,11 +124,46 @@ Three NLP tasks, mixing traditional and LLM-based techniques:
 
 ## Deliverables
 
-1. Source code repository with documented pipeline
-2. Web dashboard (deployable locally)
-3. Evaluation report: compare generated guides against 5-10 manually written guides (BLEU/ROUGE scores or human evaluation rubric)
-4. Class presentation / demo
-5. (Optional) Streamlit Community Cloud deployment for the dashboard (shareable demo)
+1. Source code repository with documented pipeline (`src/limbus_guides/`, `scripts/`)
+2. Web dashboard (Streamlit — `src/limbus_guides/dashboard/app.py`)
+3. Evaluation report (`docs/evaluation.md`, `data/evaluation_results.json`)
+4. **Final presentation:** 10 minutes + 5 minutes professor discussion (Jul 3)
+5. (Optional) Streamlit Community Cloud deployment
+
+---
+
+## Final Presentation Crosswalk (D1–D10)
+
+| Rubric | Main deck (10 min) | Repo evidence |
+|--------|-------------------|---------------|
+| D1 Pitch | Hook + problem (30s) | `deliverable-1-prototype-pitch.md` |
+| D2 SOTA | Delta vs chatbots (45s) | `sota.md`, `deliverable-2-state-of-the-art.md` |
+| D3 UX | Live demo UI | `dashboard/app.py` |
+| D4 Agile | Appendix only | GitHub Projects screenshot |
+| D5 Data | Architecture slide | `ingestion/`, `data/identities/` |
+| D6 NLP | Methods + 1 I/O (1 min) | `nlp/`, `poc_evaluation_results.json` |
+| D7 E2E | Architecture + demo (3–4 min) | `pipeline/run.py` |
+| D8 Evaluation | Headline metrics (1 min) | `evaluation.md`, `evaluation_results.json` |
+| D9 Optimization | Top fix (45s) | `monitoring/logger.py` |
+| D10 Storytelling | 1 lesson (30s) | `final-presentation-outline.md` appendix |
+
+Full slide script: [final-presentation-outline.md](final-presentation-outline.md)
+
+---
+
+## Evaluation Scope (D8)
+
+- **Held-out test set:** 20–50 identity guide examples (pilot: 3 parsed IDs)
+- **Metrics:** ROUGE-L (generation), mechanic-tag F1 (extraction)
+- **Baselines:** naive template; ablation without synergy context
+- **Efficiency:** latency and cost per query at 100 / 1k / 10k scale
+- **User study:** SUS questionnaire, 3–8 participants, task success rate
+
+---
+
+## RAG Approach
+
+The pipeline uses **structured JSON/markdown context injection** — the full identity record is passed to the LLM prompt. No vector database or chunking is required at prototype scale because wiki data is already structured per identity.
 
 ---
 

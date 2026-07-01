@@ -1,0 +1,9 @@
+{
+  "audited": 47,
+  "with_issues": 0,
+  "fetch_failures": {
+    "LCE_E.G.O_AEDD_Gregor": "LCE_E.G.O_AEDD_Gregor: Wiki API error for 'LCE_E.G.O_AEDD_Gregor': {'code': 'missingtitle', 'info': \"The page you specified doesn't exist.\", '*': 'See https://limbuscompany.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes.'}",
+    "N_Corp._E.G.O_Contempt,_Awe_Ryōshū": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū: Wiki API error for 'N_Corp._E.G.O_Contempt,_Awe_Ryōshū': {'code': 'missingtitle', 'info': \"The page you specified doesn't exist.\", '*': 'See https://limbuscompany.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes.'}"
+  },
+  "issues": {}
+}

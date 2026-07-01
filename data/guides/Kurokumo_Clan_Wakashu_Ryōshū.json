@@ -1,0 +1,93 @@
+{
+  "identity_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
+  "identity_name": "Kurokumo Clan Wakashu Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Base Power",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Damage Down",
+      "Offense Level Down"
+    ],
+    "status_effects": {
+      "Bleed": 9
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Damage Down": 1,
+      "Offense Level Down": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 4,
+      "Heads Hit": 3
+    },
+    "all_mechanics": {
+      "Bleed": 9,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Damage Down": 1,
+      "Offense Level Down": 1
+    },
+    "identity_slug": "Kurokumo_Clan_Wakashu_Ryōshū"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
+      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
+      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "score": 1.0057173442840577,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Student_Meursault",
+      "teammate_name": "The Ring Fauvist Student Meursault",
+      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "score": 0.9277192950248718,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Kurokumo Clan Wakashu Ryōshū is a Status Specialist applying sustained Bleed, Base Power pressure with consistent skill stats.",
+  "playstyle_guide": "**S1 — Focus Strike** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Average stacked).\n- If target has 2+ Bleed Count, deal +20% damage\n\n**S2 — Clean Up** (BP 5, CP +5, x2): rolls — low 5, high 15 (Slightly Low / Slightly High stacked).\n- If target has 5+ Bleed Count, deal +20% damage\n- Inflict +1 Bleed Count; [Heads Hit] Inflict 2 Damage Down\n\n**S3 — Lenticular Swirl** (BP 8, CP +4, x2): rolls — low 8, high 16 (Slightly Low / Average stacked).\n- If target has 9+ Bleed Count, deal +40% damage\n- Stacks 2 Bleed — use every appearance to build up.\n- Inflict +3 Bleed Count; [On Hit] Inflict 5 Offense Level Down\n\nCombat passive — **Muscle in Charge**: 1 ally with the fastest Speed inflicts +1 Bleed.",
+  "team_suggestions": [
+    "Best placed in a Bleed-focused team — teammates that apply or extend Bleed increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills."
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

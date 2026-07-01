@@ -1,58 +1,79 @@
 # Limbus Company Auto Guides
 
-An NLP pipeline that scrapes [Limbus Company wiki.gg](https://limbus-company.wiki.gg) identity data and generates playable guide content — core concept summaries, playstyle guides, and team composition suggestions — displayed on a web dashboard.
+An NLP pipeline that scrapes [Limbus Company wiki.gg](https://limbus-company.wiki.gg) identity data and generates playable guide content — core concept summaries, playstyle guides, and team composition suggestions — displayed on a Streamlit dashboard.
 
 ## Architecture
 
 ```
-Wiki Scraper → Structured JSON → NLP Pipeline → Guide JSON → Web Dashboard
+Wiki / Parsed Markdown → Structured JSON → NLP Pipeline → Guide JSON → Streamlit Dashboard
 ```
 
-**Data Ingestion** — Scrape identity pages, extract stats/skills/passives into structured JSON.
+**Scale:** 50 identities across 12 sinners (parsed markdown, JSON, guides, and evaluation references).
 
-**NLP Pipeline** — Three stages:
-1. **Mechanic Extraction** — NER + keyword extraction (TF-IDF / RAKE) to build per-identity mechanic profiles
-2. **Synergy Analysis** — Sentence embeddings + clustering to detect team synergies
-3. **Text Generation** — LLM prompting with RAG to produce natural-language guides
+**NLP Pipeline:**
 
-**Web Dashboard** — Browse by character → identity → read generated guide.
-
-## Tech Stack
-
-- **Language:** Python
-- **Scraping:** BeautifulSoup, requests
-- **NLP:** spaCy, scikit-learn, sentence-transformers
-- **LLM:** OpenAI API / HuggingFace
-- **Web:** Streamlit / Gradio
-- **Data:** JSON
+1. **Mechanic Extraction** — spaCy EntityRuler + regex
+2. **Synergy Analysis** — sentence embeddings + support-passive rules
+3. **Text Generation** — template/Ollama with [`domain-primer.md`](docs/domain-primer.md) context via `src/limbus_guides/domain/context.py`
 
 ## Project Structure
 
 ```
-docs/               Project documentation, specs, sprint plan
-src/                Source code (scraper, NLP pipeline, dashboard)
-data/               Scraped identity data (JSON)
-tests/              Unit and integration tests
+src/limbus_guides/     Pipeline source code
+scripts/               run_pipeline.py, run_poc_evaluations.py, run_evaluation.py
+data/identities/       Structured identity JSON
+data/guides/           Pre-generated guides for dashboard
+docs/                  Specs, sprints, evaluation, presentation outline
+notebooks/             PoC evaluation notebooks
+tests/                 Unit tests
+config/sinners.json    Character roster config
 ```
 
 ## Getting Started
 
+**Quick setup (Windows):**
+
+```powershell
+.\scripts\setup.ps1
+.\.venv\Scripts\Activate.ps1
+python scripts/run_pipeline.py
+streamlit run src/limbus_guides/dashboard/app.py
+```
+
+**Manual setup:**
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate        # Windows
-# source .venv/bin/activate   # macOS/Linux
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 ```
+
+If `python` is not found, install Python 3.12:
+
+```powershell
+winget install Python.Python.3.12
+```
+
+Then open a **new terminal** (refreshes PATH) and run `setup.ps1`.
+
+Optional: set `USE_OLLAMA=1` and run [Ollama](https://ollama.com) with `mistral` for LLM-generated guides.
 
 ## Documentation
 
 - [Project Specification](docs/project-specification.md)
+- [How to Run](docs/how-to-run.md) — add/edit identities and regenerate guides
+- [Domain Primer](docs/domain-primer.md) — gameplay overview for the project team
 - [Sprint Plan](docs/sprints.md)
+- [Course Rubric](docs/course-files/deliverable-requirements.md)
+- [Final Presentation Outline](docs/final-presentation-outline.md) — 10 min + 5 min discussion
+- [Evaluation Notes](docs/evaluation.md)
+- [State of the Art](docs/sota.md)
 
-## Deployment (Optional)
+## Final Presentation (Jul 3)
 
-This project is designed to run locally. An optional stretch goal is to deploy the web dashboard to **Streamlit Community Cloud** for easy sharing and demoing.
+**10 minutes** covering D1–D10 at headline level (see [final-presentation-outline.md](docs/final-presentation-outline.md)), plus **5 minutes** discussion with the professor. Appendix slides hold agile, full eval tables, and post-mortem detail.
 
 ## License
 
-Academic project — Fontys University of Applied Sciences, NLP course 2026.
+Academic project — IBS Furtwangen University, NLP course 2026.

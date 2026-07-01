@@ -1,0 +1,92 @@
+{
+  "identity_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+  "identity_name": "Lobotomy E.G.O::Red Sheet Sinclair",
+  "sinner": "Sinclair",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Talisman",
+      "Rupture",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Rupture": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Talisman": 10
+    },
+    "triggers": {
+      "On Hit": 7,
+      "Heads Hit": 1,
+      "On Use": 1
+    },
+    "all_mechanics": {
+      "Rupture": 6,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Talisman": 10
+    },
+    "identity_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair"
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Seven_Assoc._South_Section_4_Heathcliff",
+      "teammate_name": "Seven Assoc. South Section 4 Heathcliff",
+      "reason": "Mechanic similarity score: 0.87 (embedding; verify manually).",
+      "score": 0.8739402294158936,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "score": 0.9302139353752137,
+      "source": "embedding",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
+      "teammate_name": "Kurokumo Clan Wakashu Rodion",
+      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "score": 0.8536242842674255,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
+      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
+      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "score": 0.8509650230407715,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
+      "teammate_name": "Blade Lineage Salsu Yi Sang",
+      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "score": 0.8501756191253662,
+      "source": "embedding",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Lobotomy E.G.O::Red Sheet Sinclair is a Status Specialist applying sustained Talisman, Rupture pressure with consistent skill stats.",
+  "playstyle_guide": "- Manage **Talisman on self** — S3 spends ammo on its coin flips. Preserve rounds for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n\n**S1 — Magnify Wound** (BP 5, CP +5, x1): rolls — low 5, high 10 (Extremely Low).\n- Peak output requires both conditions: Inflict 2 Rupture | [Heads Hit] If target has 5+ Rupture, gain 1 Talisman.\n\n**S2 — Proliferating Talismans** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Peak output requires both conditions: Gain 1 Talisman | [On Hit] If target has 3+ Rupture, gain 1 Talisman.\n\n**S3 — Rupturing Talisman** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average).\n- If target has Talisman, inflict +1 Rupture Count\n\nCombat passive — **Wishing Talisman**: 1 ally with the highest current HP inflicts +1 more Rupture Potency with Attack and Counter Skills.",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- **Seven Assoc. South Section 4 Heathcliff**: Mechanic similarity score: 0.87 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: Mechanic similarity score: 0.86 (embedding; verify manually). *(similarity-based — verify)*",
+    "- **Kurokumo Clan Wakashu Rodion**: Mechanic similarity score: 0.85 (embedding; verify manually). *(similarity-based — verify)*"
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

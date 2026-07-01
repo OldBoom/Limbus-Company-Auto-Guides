@@ -1,0 +1,255 @@
+{
+  "identities": {
+    "Blade_Lineage_Mentor_Meursault": {
+      "filename": "Blade_Lineage_Mentor_Meursault.png",
+      "wiki_path": "Blade_Lineage_Mentor_Meursault",
+      "source_url": "https://limbuscompany.wiki.gg/images/Blade_Lineage_Mentor_Meursault_Uptied.png"
+    },
+    "Blade_Lineage_Salsu_Sinclair": {
+      "filename": "Blade_Lineage_Salsu_Sinclair.png",
+      "wiki_path": "Blade_Lineage_Salsu_Sinclair",
+      "source_url": "https://limbuscompany.wiki.gg/images/Blade_Lineage_Salsu_Sinclair_Uptied.png"
+    },
+    "Blade_Lineage_Salsu_Yi_Sang": {
+      "filename": "Blade_Lineage_Salsu_Yi_Sang.png",
+      "wiki_path": "Blade_Lineage_Salsu_Yi_Sang",
+      "source_url": "https://limbuscompany.wiki.gg/images/Blade_Lineage_Salsu_Yi_Sang_Uptied.png"
+    },
+    "Cinq_Assoc._East_Section_3_Don_Quixote": {
+      "filename": "Cinq_Assoc._East_Section_3_Don_Quixote.png",
+      "wiki_path": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "source_url": "https://limbuscompany.wiki.gg/images/Cinq_Assoc._East_Section_3_Don_Quixote_Uptied.png"
+    },
+    "Devyat'_Assoc._North_Section_3_Sinclair": {
+      "filename": "Devyat'_Assoc._North_Section_3_Sinclair.png",
+      "wiki_path": "Devyat'_Assoc._North_Section_3_Sinclair",
+      "source_url": "https://limbuscompany.wiki.gg/images/Devyat%27_Assoc._North_Section_3_Sinclair_Uptied.png"
+    },
+    "District_20_Yurodivy_Hong_Lu": {
+      "filename": "District_20_Yurodivy_Hong_Lu.png",
+      "wiki_path": "District_20_Yurodivy_Hong_Lu",
+      "source_url": "https://limbuscompany.wiki.gg/images/District_20_Yurodivy_Hong_Lu_Uptied.png"
+    },
+    "District_20_Yurodivy_Ryōshū": {
+      "filename": "District_20_Yurodivy_Ryōshū.png",
+      "wiki_path": "District_20_Yurodivy_Ryōshū",
+      "source_url": "https://limbuscompany.wiki.gg/images/District_20_Yurodivy_Ry%C5%8Dsh%C5%AB_Uptied.png"
+    },
+    "Edgar_Family_Butler_Ishmael": {
+      "filename": "Edgar_Family_Butler_Ishmael.png",
+      "wiki_path": "Edgar_Family_Butler_Ishmael",
+      "source_url": "https://limbuscompany.wiki.gg/images/Edgar_Family_Butler_Ishmael_Uptied.png"
+    },
+    "Edgar_Family_Chief_Butler_Ryōshū": {
+      "filename": "Edgar_Family_Chief_Butler_Ryōshū.png",
+      "wiki_path": "Edgar_Family_Chief_Butler_Ryōshū",
+      "source_url": "https://limbuscompany.wiki.gg/images/Edgar_Family_Chief_Butler_Ry%C5%8Dsh%C5%AB_Uptied.png"
+    },
+    "Firefist_Office_Survivor_Gregor": {
+      "filename": "Firefist_Office_Survivor_Gregor.png",
+      "wiki_path": "Firefist_Office_Survivor_Gregor",
+      "source_url": "https://limbuscompany.wiki.gg/images/Firefist_Office_Survivor_Gregor_Uptied.png"
+    },
+    "Heishou_Pack_-_Si_Branch_Gregor": {
+      "filename": "Heishou_Pack_-_Si_Branch_Gregor.png",
+      "wiki_path": "Heishou_Pack_-_Si_Branch_Gregor",
+      "source_url": "https://limbuscompany.wiki.gg/images/Heishou_Pack_-_Si_Branch_Gregor_Uptied.png"
+    },
+    "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang": {
+      "filename": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang.png",
+      "wiki_path": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+      "source_url": "https://limbuscompany.wiki.gg/images/Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang_Uptied.png"
+    },
+    "Kurokumo_Clan_Captain_Ishmael": {
+      "filename": "Kurokumo_Clan_Captain_Ishmael.png",
+      "wiki_path": "Kurokumo_Clan_Captain_Ishmael",
+      "source_url": "https://limbuscompany.wiki.gg/images/Kurokumo_Clan_Captain_Ishmael_Uptied.png"
+    },
+    "Kurokumo_Clan_Wakashu_Heathcliff": {
+      "filename": "Kurokumo_Clan_Wakashu_Heathcliff.png",
+      "wiki_path": "Kurokumo_Clan_Wakashu_Heathcliff",
+      "source_url": "https://limbuscompany.wiki.gg/images/Kurokumo_Clan_Wakashu_Heathcliff_Uptied.png"
+    },
+    "Kurokumo_Clan_Wakashu_Rodion": {
+      "filename": "Kurokumo_Clan_Wakashu_Rodion.png",
+      "wiki_path": "Kurokumo_Clan_Wakashu_Rodion",
+      "source_url": "https://limbuscompany.wiki.gg/images/Kurokumo_Clan_Wakashu_Rodion_Uptied.png"
+    },
+    "Kurokumo_Clan_Wakashu_Ryōshū": {
+      "filename": "Kurokumo_Clan_Wakashu_Ryōshū.png",
+      "wiki_path": "Kurokumo_Clan_Wakashu_Ryōshū",
+      "source_url": "https://limbuscompany.wiki.gg/images/Kurokumo_Clan_Wakashu_Ry%C5%8Dsh%C5%AB_Uptied.png"
+    },
+    "LCE_E.G.O_AEDD_Gregor": {
+      "filename": "LCE_E.G.O_AEDD_Gregor.png",
+      "wiki_path": "LCE_E.G.O::AEDD_Gregor",
+      "source_url": "https://limbuscompany.wiki.gg/images/LCE_E.G.O_AEDD_Gregor_Uptied.png"
+    },
+    "Liu_Assoc._South_Section_3_Yi_Sang": {
+      "filename": "Liu_Assoc._South_Section_3_Yi_Sang.png",
+      "wiki_path": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "source_url": "https://limbuscompany.wiki.gg/images/Liu_Assoc._South_Section_3_Yi_Sang_Uptied.png"
+    },
+    "Liu_Assoc._South_Section_4_Director_Rodion": {
+      "filename": "Liu_Assoc._South_Section_4_Director_Rodion.png",
+      "wiki_path": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "source_url": "https://limbuscompany.wiki.gg/images/Liu_Assoc._South_Section_4_Director_Rodion_Uptied.png"
+    },
+    "Liu_Assoc._South_Section_4_Ishmael": {
+      "filename": "Liu_Assoc._South_Section_4_Ishmael.png",
+      "wiki_path": "Liu_Assoc._South_Section_4_Ishmael",
+      "source_url": "https://limbuscompany.wiki.gg/images/Liu_Assoc._South_Section_4_Ishmael_Uptied.png"
+    },
+    "Liu_Assoc._South_Section_5_Hong_Lu": {
+      "filename": "Liu_Assoc._South_Section_5_Hong_Lu.png",
+      "wiki_path": "Liu_Assoc._South_Section_5_Hong_Lu",
+      "source_url": "https://limbuscompany.wiki.gg/images/Liu_Assoc._South_Section_5_Hong_Lu_Uptied.png"
+    },
+    "Lobotomy_E.G.O_Magic_Bullet_Outis": {
+      "filename": "Lobotomy_E.G.O_Magic_Bullet_Outis.png",
+      "wiki_path": "Lobotomy_E.G.O::Magic_Bullet_Outis",
+      "source_url": "https://limbuscompany.wiki.gg/images/Lobotomy_E.G.O_Magic_Bullet_Outis_Uptied.png"
+    },
+    "Lobotomy_E.G.O_Red_Sheet_Sinclair": {
+      "filename": "Lobotomy_E.G.O_Red_Sheet_Sinclair.png",
+      "wiki_path": "Lobotomy_E.G.O::Red_Sheet_Sinclair",
+      "source_url": "https://limbuscompany.wiki.gg/images/Lobotomy_E.G.O_Red_Sheet_Sinclair_Uptied.png"
+    },
+    "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion": {
+      "filename": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion.png",
+      "wiki_path": "Lobotomy_E.G.O::The_Sword_Sharpened_with_Tears_Rodion",
+      "source_url": "https://limbuscompany.wiki.gg/images/Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion_Uptied.png"
+    },
+    "N_Corp._E.G.O_Contempt,_Awe_Ryōshū": {
+      "filename": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū.png",
+      "wiki_path": "N_Corp._E.G.O::Contempt,_Awe_Ryōshū",
+      "source_url": "https://limbuscompany.wiki.gg/images/N_Corp._E.G.O_Contempt%2C_Awe_Ry%C5%8Dsh%C5%AB_Uptied.png"
+    },
+    "N_Corp._Mittelhammer_Don_Quixote": {
+      "filename": "N_Corp._Mittelhammer_Don_Quixote.png",
+      "wiki_path": "N_Corp._Mittelhammer_Don_Quixote",
+      "source_url": "https://limbuscompany.wiki.gg/images/N_Corp._Mittelhammer_Don_Quixote_Uptied.png"
+    },
+    "R_Corp._4th_Pack_Rhino_Meursault": {
+      "filename": "R_Corp._4th_Pack_Rhino_Meursault.png",
+      "wiki_path": "R_Corp._4th_Pack_Rhino_Meursault",
+      "source_url": "https://limbuscompany.wiki.gg/images/R_Corp._4th_Pack_Rhino_Meursault_Uptied.png"
+    },
+    "Ring_Apprentice_Faust": {
+      "filename": "Ring_Apprentice_Faust.png",
+      "wiki_path": "The_House_of_Spiders:_The_Ring_Apprentice_Faust",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_House_of_Spiders_The_Ring_Apprentice_Faust_Uptied.png"
+    },
+    "Ring_Pointillist_Student_Yi_Sang": {
+      "filename": "Ring_Pointillist_Student_Yi_Sang.png",
+      "wiki_path": "The_Ring_Pointillist_Student_Yi_Sang",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Ring_Pointillist_Student_Yi_Sang_Uptied.png"
+    },
+    "Seven_Assoc._South_Section_4_Faust": {
+      "filename": "Seven_Assoc._South_Section_4_Faust.png",
+      "wiki_path": "Seven_Assoc._South_Section_4_Faust",
+      "source_url": "https://limbuscompany.wiki.gg/images/Seven_Assoc._South_Section_4_Faust_Uptied.png"
+    },
+    "Seven_Assoc._South_Section_4_Heathcliff": {
+      "filename": "Seven_Assoc._South_Section_4_Heathcliff.png",
+      "wiki_path": "Seven_Assoc._South_Section_4_Heathcliff",
+      "source_url": "https://limbuscompany.wiki.gg/images/Seven_Assoc._South_Section_4_Heathcliff_Uptied.png"
+    },
+    "Seven_Assoc._South_Section_6_Director_Outis": {
+      "filename": "Seven_Assoc._South_Section_6_Director_Outis.png",
+      "wiki_path": "Seven_Assoc._South_Section_6_Director_Outis",
+      "source_url": "https://limbuscompany.wiki.gg/images/Seven_Assoc._South_Section_6_Director_Outis_Uptied.png"
+    },
+    "Shi_Assoc._East_Section_3_Faust": {
+      "filename": "Shi_Assoc._East_Section_3_Faust.png",
+      "wiki_path": "Shi_Assoc._East_Section_3_Faust",
+      "source_url": "https://limbuscompany.wiki.gg/images/Shi_Assoc._East_Section_3_Faust_Uptied.png"
+    },
+    "T_Corp._Class_3_Collection_Staff_Don_Quixote": {
+      "filename": "T_Corp._Class_3_Collection_Staff_Don_Quixote.png",
+      "wiki_path": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+      "source_url": "https://limbuscompany.wiki.gg/images/T_Corp._Class_3_Collection_Staff_Don_Quixote_Uptied.png"
+    },
+    "The_Barber_of_La_Manchaland_Outis": {
+      "filename": "The_Barber_of_La_Manchaland_Outis.png",
+      "wiki_path": "The_Barber_of_La_Manchaland_Outis",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Barber_of_La_Manchaland_Outis_Uptied.png"
+    },
+    "The_House_of_Spiders:_The_Middle_Nursefather_Outis": {
+      "filename": "The_House_of_Spiders:_The_Middle_Nursefather_Outis.png",
+      "wiki_path": "The_House_of_Spiders:_The_Middle_Nursefather_Outis",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_House_of_Spiders_The_Middle_Nursefather_Outis_Uptied.png"
+    },
+    "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu": {
+      "filename": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu.png",
+      "wiki_path": "The_House_of_Spiders:_The_Ring_Nursefather_Hong_Lu",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu_Uptied.png"
+    },
+    "The_Manager_of_La_Manchaland_Don_Quixote": {
+      "filename": "The_Manager_of_La_Manchaland_Don_Quixote.png",
+      "wiki_path": "The_Manager_of_La_Manchaland_Don_Quixote",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Manager_of_La_Manchaland_Don_Quixote_Uptied.png"
+    },
+    "The_Priest_of_La_Manchaland_Gregor": {
+      "filename": "The_Priest_of_La_Manchaland_Gregor.png",
+      "wiki_path": "The_Priest_of_La_Manchaland_Gregor",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Priest_of_La_Manchaland_Gregor_Uptied.png"
+    },
+    "The_Princess_of_La_Manchaland_Rodion": {
+      "filename": "The_Princess_of_La_Manchaland_Rodion.png",
+      "wiki_path": "The_Princess_of_La_Manchaland_Rodion",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Princess_of_La_Manchaland_Rodion_Uptied.png"
+    },
+    "The_Ring_Fauvist_Student_Meursault": {
+      "filename": "The_Ring_Fauvist_Student_Meursault.png",
+      "wiki_path": "The_Ring_Fauvist_Student_Meursault",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Ring_Fauvist_Student_Meursault_Uptied.png"
+    },
+    "The_Thumb_East_Capo_IIII_Meursault": {
+      "filename": "The_Thumb_East_Capo_IIII_Meursault.png",
+      "wiki_path": "The_Thumb_East_Capo_IIII_Meursault",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Thumb_East_Capo_IIII_Meursault_Uptied.png"
+    },
+    "The_Thumb_East_Soldato_II_Sinclair": {
+      "filename": "The_Thumb_East_Soldato_II_Sinclair.png",
+      "wiki_path": "The_Thumb_East_Soldato_II_Sinclair",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Thumb_East_Soldato_II_Sinclair_Uptied.png"
+    },
+    "Tingtang_Gang_Gangleader_Hong_Lu": {
+      "filename": "Tingtang_Gang_Gangleader_Hong_Lu.png",
+      "wiki_path": "Tingtang_Gang_Gangleader_Hong_Lu",
+      "source_url": "https://limbuscompany.wiki.gg/images/Tingtang_Gang_Gangleader_Hong_Lu_Uptied.png"
+    },
+    "W_Corp._L2_Cleanup_Agent_Faust": {
+      "filename": "W_Corp._L2_Cleanup_Agent_Faust.png",
+      "wiki_path": "W_Corp._L2_Cleanup_Agent_Faust",
+      "source_url": "https://limbuscompany.wiki.gg/images/W_Corp._L2_Cleanup_Agent_Faust_Uptied.png"
+    },
+    "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff": {
+      "filename": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff.png",
+      "wiki_path": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "source_url": "https://limbuscompany.wiki.gg/images/W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff_Uptied.png"
+    },
+    "Zwei_Assoc._West_Section_3_Ishmael": {
+      "filename": "Zwei_Assoc._West_Section_3_Ishmael.png",
+      "wiki_path": "Zwei_Assoc._West_Section_3_Ishmael",
+      "source_url": "https://limbuscompany.wiki.gg/images/Zwei_Assoc._West_Section_3_Ishmael_Uptied.png"
+    },
+    "Öufi_Assoc._South_Section_3_Heathcliff": {
+      "filename": "Öufi_Assoc._South_Section_3_Heathcliff.png",
+      "wiki_path": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "source_url": "https://limbuscompany.wiki.gg/images/%C3%96ufi_Assoc._South_Section_3_Heathcliff_Uptied.png"
+    },
+    "The_Lord_of_Hongyuan_Hong_Lu": {
+      "filename": "The_Lord_of_Hongyuan_Hong_Lu.png",
+      "wiki_path": "The_Lord_of_Hongyuan_Hong_Lu",
+      "source_url": "https://limbuscompany.wiki.gg/images/The_Lord_of_Hongyuan_Hong_Lu_Uptied.png"
+    },
+    "Wild_Hunt_Heathcliff": {
+      "filename": "Wild_Hunt_Heathcliff.png",
+      "wiki_path": "Wild_Hunt_Heathcliff",
+      "source_url": "https://limbuscompany.wiki.gg/images/Wild_Hunt_Heathcliff_Uptied.png"
+    }
+  },
+  "missing": []
+}
