@@ -420,7 +420,6 @@ def _render_guide(
     sinner_name: str,
     *,
     slug: str,
-    show_dev: bool,
 ) -> None:
     profile = guide.get("mechanic_profile", {})
 
@@ -454,12 +453,11 @@ def _render_guide(
     with st.expander("How this guide was built"):
         _render_methodology(guide)
 
-    if show_dev:
-        with st.expander("Pipeline JSON (dev)"):
-            st.markdown("**Mechanic profile**")
-            st.json(profile)
-            st.markdown("**Synergies (raw)**")
-            st.json(guide.get("synergies", []))
+    with st.expander("Pipeline JSON (dev)"):
+        st.markdown("**Mechanic profile**")
+        st.json(profile)
+        st.markdown("**Synergies (raw)**")
+        st.json(guide.get("synergies", []))
 
 
 def main() -> None:
@@ -473,7 +471,6 @@ def main() -> None:
         st.warning("No guides found. Run: `python scripts/run_pipeline.py`")
         st.stop()
 
-    show_dev = st.sidebar.checkbox("Show pipeline JSON (dev)", value=False)
     _render_dashboard_styles()
 
     sinners = config.get("sinners", [])
@@ -502,7 +499,7 @@ def main() -> None:
             st.error("Guide not found.")
             _set_stage(STAGE_IDENTITY)
             st.rerun()
-        _render_guide(guide, sinner_name, slug=slug, show_dev=show_dev)
+        _render_guide(guide, sinner_name, slug=slug)
     else:
         _set_stage(STAGE_LANDING)
         st.rerun()
