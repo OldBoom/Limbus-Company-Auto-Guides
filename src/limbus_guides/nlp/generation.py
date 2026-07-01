@@ -862,10 +862,17 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
     return " ".join(pieces)
 
 
-def _build_team_suggestions(synergies: list[dict], gp: dict | None = None) -> list[str]:
+def _embedding_verify_note(source: str) -> str:
+    """Suffix for embedding-based teammate picks shown in team suggestions."""
+    return " *(similarity-based — verify)*" if source == "embedding" else ""
+
+
+def _build_team_suggestions(synergies: list[dict], gp: dict | None = None) -> dict:
     """
     Intro sentence describing the team role, followed by exactly 3 specific teammates.
     Prefers rule-based (passive-grounded) matches; falls back to embedding if needed.
+
+    Returns intro, structured picks (for clickable UI links), and plain markdown lines.
     """
     rule_picks = [s for s in synergies if s.get("source") == "rule"]
     lord_picks = [s for s in rule_picks if s.get("heishou_lord_synergy")]
@@ -874,25 +881,37 @@ def _build_team_suggestions(synergies: list[dict], gp: dict | None = None) -> li
     embed_picks = [s for s in synergies if s.get("source") == "embedding"]
 
     # Lord of Hongyuan first for Heishou Pack; then trait allies; then other rules
-    picks = (lord_picks + trait_picks + other_rules + embed_picks)[:3]
+    raw_picks = (lord_picks + trait_picks + other_rules + embed_picks)[:3]
 
-    lines: list[str] = []
-
+    intro: str | None = None
     if gp is not None:
         intro = _team_intro(gp, synergies)
+
+    picks: list[dict] = []
+    lines: list[str] = []
+    if intro:
         lines.append(intro)
 
-    if picks:
-        for s in picks:
-            source_note = " *(similarity-based — verify)*" if s.get("source") == "embedding" else ""
-            lines.append(f"- **{s['teammate_name']}**: {s['reason']}{source_note}")
+    if raw_picks:
+        for s in raw_picks:
+            source = s.get("source", "")
+            reason = s["reason"]
+            picks.append(
+                {
+                    "teammate_slug": s["teammate_slug"],
+                    "teammate_name": s["teammate_name"],
+                    "reason": reason,
+                    "source": source,
+                }
+            )
+            lines.append(f"- **{s['teammate_name']}**: {reason}{_embedding_verify_note(source)}")
     else:
         lines.append(
             "- Pair with identities whose support passives inflict statuses this kit stacks "
             "or scales off."
         )
 
-    return lines
+    return {"intro": intro, "picks": picks, "lines": lines}
 
 
 def _smart_guide(
@@ -903,11 +922,14 @@ def _smart_guide(
     """Skill-aware template guide — reads parsed_skills and builds specific advice."""
     gp = build_gameplan(identity)
     name = identity.get("name", identity.get("slug", ""))
+    team = _build_team_suggestions(synergies, gp)
 
     return {
         "core_idea": _build_core_idea(name, gp),
         "playstyle_guide": _build_playstyle(name, gp, normalizer),
-        "team_suggestions": _build_team_suggestions(synergies, gp),
+        "team_suggestions": team["lines"],
+        "team_suggestion_intro": team["intro"],
+        "team_suggestion_picks": team["picks"],
         "generator": "template_smart",
         "domain_context": "docs/domain-primer.md",
     }
@@ -996,7 +1018,15 @@ def generate_guide(
         llm_out = _ollama_generate(prompt)
         if llm_out:
             guide = _parse_llm_sections(llm_out)
-            guide["team_suggestions"] = guide.get("team_suggestions") or _build_team_suggestions(synergies)
+            team = _build_team_suggestions(synergies)
+            llm_teams = guide.get("team_suggestions")
+            if llm_teams:
+                # LLM bullets are not aligned with structured picks — plain markdown only.
+                guide["team_suggestions"] = llm_teams
+            else:
+                guide["team_suggestions"] = team["lines"]
+                guide["team_suggestion_intro"] = team["intro"]
+                guide["team_suggestion_picks"] = team["picks"]
             guide["domain_context"] = "docs/domain-primer.md"
             return guide
 

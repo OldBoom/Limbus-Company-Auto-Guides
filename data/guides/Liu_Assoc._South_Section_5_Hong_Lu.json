@@ -61,7 +61,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
       "teammate_name": "Liu Assoc. South Section 4 Ishmael",
-      "reason": "Mechanic similarity score: 0.97 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.97.",
       "score": 1.0445891690254212,
       "source": "embedding",
       "faction_match": true
@@ -69,7 +69,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
       "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
-      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.95.",
       "score": 1.0242896747589112,
       "source": "embedding",
       "faction_match": true
@@ -82,6 +82,27 @@
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
     "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
     "- **Firefist Office Survivor Gregor**: 'I'm the only survivor…' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Best placed in a Burn-focused team — teammates that apply or extend Burn increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Firefist_Office_Survivor_Gregor",
+      "teammate_name": "Firefist Office Survivor Gregor",
+      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

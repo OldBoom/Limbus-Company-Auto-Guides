@@ -63,7 +63,7 @@
     {
       "teammate_slug": "Edgar_Family_Butler_Ishmael",
       "teammate_name": "Edgar Family Butler Ishmael",
-      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.94.",
       "score": 1.0127785873413087,
       "source": "embedding",
       "faction_match": true
@@ -71,7 +71,7 @@
     {
       "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
       "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.93.",
       "score": 0.9324063062667847,
       "source": "embedding",
       "faction_match": false
@@ -79,7 +79,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
       "teammate_name": "Heishou Pack - Wu Branch Adept Yi Sang",
-      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.88.",
       "score": 0.878061056137085,
       "source": "embedding",
       "faction_match": false
@@ -91,7 +91,28 @@
     "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
-    "- **Edgar Family Butler Ishmael**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **Edgar Family Butler Ishmael**: Mechanic similarity score: 0.94. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Edgar_Family_Butler_Ishmael",
+      "teammate_name": "Edgar Family Butler Ishmael",
+      "reason": "Mechanic similarity score: 0.94.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

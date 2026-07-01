@@ -87,6 +87,27 @@
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
     "- **Liu Assoc. South Section 4 Director Rodion**: This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn."
   ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
+      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
+      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

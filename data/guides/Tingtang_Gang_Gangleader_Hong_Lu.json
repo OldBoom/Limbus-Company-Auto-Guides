@@ -60,7 +60,7 @@
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
       "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9029821157455444,
       "source": "embedding",
       "faction_match": false
@@ -68,19 +68,40 @@
     {
       "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
       "teammate_name": "R Corp. 4th Pack Rhino Meursault",
-      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.88.",
       "score": 0.8834807872772217,
       "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "Tingtang Gang Gangleader Hong Lu is a Support applying sustained Coin Power, Base Power pressure with consistent skill stats. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output.",
-  "playstyle_guide": "- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n\n**S1 — Throat Slit** (BP 5, CP +8, x1): rolls — low 5, high 13 (Extremely High).\n- Stacks 4 Bleed — use every appearance to build up.\n\n**S2 — Shank** (BP 3, CP +5, x2): rolls — low 3, high 19 (Extremely High).\n- Holds back until 7+ Bleed — deals +20% more at that threshold.\n- executes weakened targets — reuses coin against enemies below 25% HP\n- reuse hit: +50% damage\n\n**S3 — Mutilate** (BP 5, CP +25, x1): rolls — low 5, high 37 (Extremely High).\n- chains on kill — close out injured enemies to trigger a free second attack\n- reuse hit: +100% damage\n- Damage +7; [Reuse - Heads Hit] +100% Damage for this Coin\n\nCombat passive — **Gambit**: 1 ally with the most SP deals +20% damage with Heads Coins.",
+  "core_idea": "Tingtang Gang Gangleader Hong Lu is a Support applying sustained Coin Power, Base Power pressure with consistent skill stats. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output. Support passive (**Gaiety**) scales with **Resonance** — field matching-trait allies to reach threshold before buffs fully apply.",
+  "playstyle_guide": "- **Gaiety** keys off **Resonance** — add trait-matching teammates to raise Reson. before relying on the passive.\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n\n**S1 — Throat Slit** (BP 5, CP +8, x1): rolls — low 5, high 13 (Extremely High).\n- Stacks 4 Bleed — use every appearance to build up.\n\n**S2 — Shank** (BP 3, CP +5, x2): rolls — low 3, high 19 (Extremely High).\n- Holds back until 7+ Bleed — deals +20% more at that threshold.\n- executes weakened targets — reuses coin against enemies below 25% HP\n- reuse hit: +50% damage\n\n**S3 — Mutilate** (BP 5, CP +25, x1): rolls — low 5, high 37 (Extremely High).\n- chains on kill — close out injured enemies to trigger a free second attack\n- reuse hit: +100% damage\n- Damage +7; [Reuse - Heads Hit] +100% Damage for this Coin\n\nCombat passive — **Gambit**: 1 ally with the most SP deals +20% damage with Heads Coins.",
   "team_suggestions": [
     "Trait-dependent kit — [Tingtang Gang] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Tingtang Gang] ally on the team directly improves skill and Counter output.",
     "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
     "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [Tingtang Gang] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Tingtang Gang] ally on the team directly improves skill and Counter output.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

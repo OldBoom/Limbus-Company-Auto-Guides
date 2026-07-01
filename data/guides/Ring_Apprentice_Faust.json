@@ -106,7 +106,7 @@
     {
       "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
       "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Mechanic similarity score: 0.78 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.78.",
       "score": 0.7842220664024353,
       "source": "embedding",
       "faction_match": false
@@ -114,19 +114,40 @@
     {
       "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
       "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
-      "reason": "Mechanic similarity score: 0.78 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.78.",
       "score": 0.7827852964401245,
       "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "The House of Spiders: The Ring Apprentice Faust is a Status Specialist / Damage Dealer — Iron Maiden → The Self Unbound — Flow State identity. The gameplan is building Corpus Ingredient Count through skill hits and the combat passive, then spending stacks to power up S2 (at 10+ Count) and cash out with S3 (consumes up to 20 for escalating damage). Scaling conditions: +5% per negative effect type (max +30%).",
+  "core_idea": "The House of Spiders: The Ring Apprentice Faust is a Damage Dealer / Status Specialist — Iron Maiden → The Self Unbound — Flow State identity. The gameplan is building Corpus Ingredient Count through skill hits and the combat passive, then spending stacks to power up S2 (at 10+ Count) and cash out with S3 (consumes up to 20 for escalating damage). Scaling conditions: +5% per negative effect type (max +30%).",
   "playstyle_guide": "- Build Corpus Ingredient Count with S2 — spend via S2, S3 once you hit 10+ (consumes up to 20).\n- Reach scaling conditions before committing S3: +5% per negative effect type (max +30%).\n- The kit transitions to The Self Unbound — Flow State once (reaching Artwork: Fascia tier 2 via the combat passive). Before the transition, play normally; after, you gain access to a stronger skill set.\n- Hold S3 for when At 10+ Corpus Ingredient Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Butcher - Ribs** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Iron Maiden exclusive Skill ; [On Use] Clash Power +1 for every type of negative effect on target (max 2) ; [On Use] Final Power +1 for every 4 Bleed on target (max 3)\n- Stacks 1 Bleed — use every appearance to build up.\n\n**S2 — Fascia Hungers** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Iron Maiden exclusive Skill | [On Use] Clash Power +1 for every type of negative effect on target (max 2).\n- converts coins to Unbreakable under condition\n- Stacks 2 Bleed — use every appearance to build up.\n- Gain +4 Corpus Ingredient Count\n\n**S3 — Repressed Flesh** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Iron Maiden exclusive Skill | [On Use] Final Power +1 for every 4 Bleed on target (max 3).\n- Each debuff type on the target adds +5% damage (up to +30%) — stack statuses broadly.\n\nCombat passive — **Fascia, My Precious Artwork**: Upon entering the Encounter for the first time, gain +(# of -faction allies on the field x 2) Corpus Ingredient Count (max 10).\n  - Skill End: If the Skill dealt HP or Shield damage, gain +5 Corpus Ingredient Count.\n  - If target is killed, gain +3 additional Corpus Ingredient Count.\n\nCombat passive — **Armor of Protection and Repression**: Upon entering the Encounter for the first time, gain Iron Maiden.\n  - Turn End: If this unit has Artwork: Fascia, this unit loses Iron Maiden and gains The Self Unbound — Flow State (once per Encounter).\n  - When Staggered, recover from Stagger (excluding forced Staggers).\n\nThe transition to The Self Unbound — Flow State triggers automatically (reaching Artwork: Fascia tier 2 via the combat passive, once per Encounter). Unlocks Evade/Counter defensive skills and an upgraded attack skill set.",
   "team_suggestions": [
     "Fits into any team that can spread varied status types — each distinct debuff on the target adds to damage output. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "team_suggestion_intro": "Fits into any team that can spread varied status types — each distinct debuff on the target adds to damage output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

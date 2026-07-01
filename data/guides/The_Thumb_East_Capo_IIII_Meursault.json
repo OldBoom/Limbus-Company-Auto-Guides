@@ -91,6 +91,27 @@
     "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills."
   ],
+  "team_suggestion_intro": "Uses unique Tremor (Tremor — Scorch) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

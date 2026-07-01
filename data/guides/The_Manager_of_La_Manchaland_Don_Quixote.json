@@ -102,6 +102,27 @@
     "- **The Barber of La Manchaland Outis**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
     "- **The Priest of La Manchaland Gregor**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives."
   ],
+  "team_suggestion_intro": "La Manchaland support — pair with same-generation [Second Kindred] allies to unlock alternate Hardblood skills and strengthen Bloodfeast passives. Resonance-scaling identity — each additional [La Manchaland] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Princess_of_La_Manchaland_Rodion",
+      "teammate_name": "The Princess of La Manchaland Rodion",
+      "reason": "Shares [Second Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Barber_of_La_Manchaland_Outis",
+      "teammate_name": "The Barber of La Manchaland Outis",
+      "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Priest_of_La_Manchaland_Gregor",
+      "teammate_name": "The Priest of La Manchaland Gregor",
+      "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

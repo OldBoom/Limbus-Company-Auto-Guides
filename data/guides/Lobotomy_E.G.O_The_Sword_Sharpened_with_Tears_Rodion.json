@@ -91,11 +91,11 @@
       "trait_match": true
     },
     {
-      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
-      "teammate_name": "Blade Lineage Salsu Yi Sang",
-      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
-      "score": 0.8866320848464966,
-      "source": "embedding",
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
       "faction_match": false
     }
   ],
@@ -106,6 +106,27 @@
     "- **LCE E.G.O::AEDD Gregor**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Lobotomy E.G.O::Magic Bullet Outis**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Lobotomy E.G.O::Red Sheet Sinclair**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "team_suggestion_intro": "Best placed in a Sinking-focused team — teammates that apply or extend Sinking increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+      "teammate_name": "Lobotomy E.G.O::Red Sheet Sinclair",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

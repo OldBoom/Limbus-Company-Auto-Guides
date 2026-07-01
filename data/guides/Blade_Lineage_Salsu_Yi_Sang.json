@@ -54,7 +54,7 @@
     {
       "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
       "teammate_name": "W Corp. L2 Cleanup Agent Faust",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9031156301498413,
       "source": "embedding",
       "faction_match": false
@@ -62,7 +62,7 @@
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
       "teammate_name": "Kurokumo Clan Wakashu Rodion",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9000946283340454,
       "source": "embedding",
       "faction_match": false
@@ -70,7 +70,7 @@
     {
       "teammate_slug": "Edgar_Family_Butler_Ishmael",
       "teammate_name": "Edgar Family Butler Ishmael",
-      "reason": "Mechanic similarity score: 0.89 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.89.",
       "score": 0.8930474519729614,
       "source": "embedding",
       "faction_match": false
@@ -82,7 +82,28 @@
     "Works in any aggressive composition; clash-heavy lineups let this identity build Poise Count faster and sustain elevated Coin Power. Same-faction teammates provide additional passive synergy where available.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
-    "- **W Corp. L2 Cleanup Agent Faust**: Mechanic similarity score: 0.90 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **W Corp. L2 Cleanup Agent Faust**: Mechanic similarity score: 0.90. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Works in any aggressive composition; clash-heavy lineups let this identity build Poise Count faster and sustain elevated Coin Power. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+      "teammate_name": "W Corp. L2 Cleanup Agent Faust",
+      "reason": "Mechanic similarity score: 0.90.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

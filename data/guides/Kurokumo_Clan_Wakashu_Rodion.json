@@ -82,12 +82,33 @@
     }
   ],
   "core_idea": "Kurokumo Clan Wakashu Rodion is a Damage Dealer applying sustained Poise, Coin Power pressure with consistent skill stats.",
-  "playstyle_guide": "- Hold S3 for when At 10+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sharpened Blade** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Average stacked).\n- Needs 4+ Poise to activate — prioritise building stacks before using.\n- Gains 4 Poise — keeps Poise climbing each rotation.\n\n**S2 — Scattering Slash** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S3 — Sky-clearing Cut** (BP 7, CP +18, x1): rolls — low 7, high 25 (Extremely High).\n- Peak output requires both conditions: If target has 6+ Bleed, double the crit chance | At 10+ Poise, +100% Critical Damage.\n- doubles crit chance under condition\n\nCombat passive — **Dark Cloud Blade**: At 5+ Poise, counter skills use Skill 3.\n\nCombat passive — **Dark Cloud Swordsmanship**: 1 ally with the slowest Speed deals +10% Slash damage.",
+  "playstyle_guide": "- Hold S3 for when At 10+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sharpened Blade** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Slightly High stacked).\n- Needs 4+ Poise to activate — prioritise building stacks before using.\n- Gains 4 Poise — keeps Poise climbing each rotation.\n\n**S2 — Scattering Slash** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S3 — Sky-clearing Cut** (BP 7, CP +18, x1): rolls — low 7, high 25 (Extremely High).\n- Peak output requires both conditions: If target has 6+ Bleed, double the crit chance | At 10+ Poise, +100% Critical Damage.\n- doubles crit chance under condition\n\nCombat passive — **Dark Cloud Blade**: At 5+ Poise, counter skills use Skill 3.\n\nCombat passive — **Dark Cloud Swordsmanship**: 1 ally with the slowest Speed deals +10% Slash damage.",
   "team_suggestions": [
     "Benefits when teammates apply Poise — he checks Poise thresholds more than he stacks it himself. Same-faction teammates provide additional passive synergy where available.",
     "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Benefits when teammates apply Poise — he checks Poise thresholds more than he stacks it himself. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

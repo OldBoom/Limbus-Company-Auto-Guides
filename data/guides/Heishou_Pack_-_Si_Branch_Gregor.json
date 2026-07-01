@@ -76,7 +76,7 @@
     {
       "teammate_slug": "Seven_Assoc._South_Section_4_Faust",
       "teammate_name": "Seven Assoc. South Section 4 Faust",
-      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.86.",
       "score": 0.8577011823654175,
       "source": "embedding",
       "faction_match": false
@@ -84,7 +84,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
       "teammate_name": "Heishou Pack - Wu Branch Adept Yi Sang",
-      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.86.",
       "score": 0.8576478958129883,
       "source": "embedding",
       "faction_match": false
@@ -97,6 +97,27 @@
     "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal SP and command allies that **Return to the battlefield** to use free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal returning allies, command free Unopposed Attacks when backups **Return to the battlefield**, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal SP and command allies that **Return to the battlefield** to use free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

@@ -102,6 +102,27 @@
     "- **Lobotomy E.G.O::Red Sheet Sinclair**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
   ],
+  "team_suggestion_intro": "Trait-dependent kit — [Limbus Company] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Limbus Company] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+      "teammate_name": "Lobotomy E.G.O::Red Sheet Sinclair",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

@@ -99,7 +99,7 @@
     {
       "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
       "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.88.",
       "score": 0.8810639381408691,
       "source": "embedding",
       "faction_match": false
@@ -112,6 +112,27 @@
     "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal SP and command allies that **Return to the battlefield** to use free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
     "- **Heishou Pack - Si Branch Gregor**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal returning allies, command free Unopposed Attacks when backups **Return to the battlefield**, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal SP and command allies that **Return to the battlefield** to use free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Si_Branch_Gregor",
+      "teammate_name": "Heishou Pack - Si Branch Gregor",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

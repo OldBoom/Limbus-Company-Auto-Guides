@@ -407,7 +407,7 @@ def find_synergy_teammates(
             {
                 "teammate_slug": other_slug,
                 "teammate_name": other.get("name", other_slug),
-                "reason": f"Mechanic similarity score: {sim_score:.2f} (embedding; verify manually).",
+                "reason": f"Mechanic similarity score: {sim_score:.2f}.",
                 "score": sim_score + faction_bonus,
                 "source": "embedding",
                 "faction_match": faction_bonus > 0,

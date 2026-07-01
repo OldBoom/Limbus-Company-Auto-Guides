@@ -77,19 +77,40 @@
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
       "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
-      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.94.",
       "score": 1.0057173442840577,
       "source": "embedding",
       "faction_match": true
     }
   ],
-  "core_idea": "Kurokumo Clan Wakashu Heathcliff is a Support — damage scales with the number of debuff types on the target. Stack varied statuses before committing high-value skills. Scaling conditions: +10% per negative effect type (max +30%).",
-  "playstyle_guide": "- Reach scaling conditions before committing S3: +10% per negative effect type (max +30%).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n\n**S1 — Lenticular Rend** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n\n**S2 — Stormcloud** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Inflict 2 Bleed; [Heads Hit] Inflict 1 Slash Fragility\n- Inflict +2 Bleed Count; [On Hit] Inflict 1 Attack Power Down (once per turn)\n\n**S3 — Thundercleave** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Inflict 2 Bleed; [On Hit] The final Coin deals +10% damage\n- Inflict 1 Slash Fragility; [On Hit] The final Coin deals +10% damage\n- Each debuff type on the target adds +10% damage (up to +30%) — stack statuses broadly.\n\nCombat passive — **Battle Ready**: When a ally dies, gain 1 Slash Power Up for this Encounter.\n  - When 3+ Kurokumo Clan allies are defeated, gain Battle Ready for this Encounter.\n\nCombat passive — **Impale**: 1 ally with the fastest Speed: against enemies that used Defense Skills or were at max HP before attacking this turn: deal +10% damage.\n\nDefense skill — **Counter: Rules of the Backstreets**: [Clashable Counter].\n  - If Kurokumo Clan Captain Ishmael is on the field, activate the following:.\n  - Convert all Coins in this Skill into Unbreakable Coins.\n  - Final Power +4 to this Skill upon Clash Lose.",
+  "core_idea": "Kurokumo Clan Wakashu Heathcliff is a Support — damage scales with the number of debuff types on the target. Stack varied statuses before committing high-value skills. Scaling conditions: +10% per negative effect type (max +30%). Support passive (**Dark Cloud Blade**) buffs your **fastest Speed ally** — pair with a high-Speed attacker and keep this unit alive on field.",
+  "playstyle_guide": "- **Dark Cloud Blade** amplifies the **fastest Speed ally** — slot a quick damage dealer and avoid stagger so their hits keep the bonus.\n- Reach scaling conditions before committing S3: +10% per negative effect type (max +30%).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n\n**S1 — Lenticular Rend** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n\n**S2 — Stormcloud** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Inflict 2 Bleed; [Heads Hit] Inflict 1 Slash Fragility\n- Inflict +2 Bleed Count; [On Hit] Inflict 1 Attack Power Down (once per turn)\n\n**S3 — Thundercleave** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Inflict 2 Bleed; [On Hit] The final Coin deals +10% damage\n- Inflict 1 Slash Fragility; [On Hit] The final Coin deals +10% damage\n- Each debuff type on the target adds +10% damage (up to +30%) — stack statuses broadly.\n\nCombat passive — **Battle Ready**: When a ally dies, gain 1 Slash Power Up for this Encounter.\n  - When 3+ Kurokumo Clan allies are defeated, gain Battle Ready for this Encounter.\n\nCombat passive — **Impale**: 1 ally with the fastest Speed: against enemies that used Defense Skills or were at max HP before attacking this turn: deal +10% damage.\n\nDefense skill — **Counter: Rules of the Backstreets**: [Clashable Counter].\n  - If Kurokumo Clan Captain Ishmael is on the field, activate the following:.\n  - Convert all Coins in this Skill into Unbreakable Coins.\n  - Final Power +4 to this Skill upon Clash Lose.",
   "team_suggestions": [
     "Fits into any team that can spread varied status types — each distinct debuff on the target adds to damage output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "team_suggestion_intro": "Fits into any team that can spread varied status types — each distinct debuff on the target adds to damage output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

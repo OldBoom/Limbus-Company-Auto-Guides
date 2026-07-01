@@ -81,7 +81,7 @@
     {
       "teammate_slug": "Edgar_Family_Chief_Butler_Ryōshū",
       "teammate_name": "Edgar Family Chief Butler Ryōshū",
-      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.85.",
       "score": 0.851901650428772,
       "source": "embedding",
       "faction_match": false
@@ -89,19 +89,40 @@
     {
       "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
       "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.85.",
       "score": 0.8481431007385254,
       "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "W Corp. L4 Cleanup Agent - CCA Heathcliff is a Damage Dealer — the defense slot queues high-impact skills or major setup buffs for the following turn. Scaling conditions: Clash Power +1 per 6 Charge (max +2).",
-  "playstyle_guide": "- **Guard: CCA Overcharge** queues **Rip Space - CCA Overdrive** for the next turn when conditions are met — use the guard slot to set up a high-impact attack on the following turn.\n- That guard use also removes the first Stagger Threshold once per encounter — valuable when you need to stay on the field.\n- Reach scaling conditions before committing S3: Clash Power +1 per 6 Charge (max +2).\n- Hold S3 for when At 10+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Congestion Cleanup** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Needs 3+ Charge to activate — prioritise building stacks before using.\n- Gain +3 Charge Count\n\n**S2 — Boost: Elbow Blade** (BP 5, CP +6, x2): rolls — low 5, high 17 (Extremely High).\n- Gain +5 Charge Count; [On Hit] Inflict +1 Rupture Count\n\n**S3 — Rip Space - CCA Overdrive** (BP 3, CP +2, x4): rolls — low 3, high 11 (Extremely Low).\n- converts coins to Unbreakable under condition\n- Gain +1 Charge Count\n- Gain +2 Charge Count\n\nCombat passive — **Defence-Oriented Charge**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - Turn Start: Gain Defense Level Up equal to Charge Potency on self (max 6).\n\nCombat passive — **Congestion Cleaning Armour**: Combat Start: If this unit has less than 50% HP, gain Shield equal to (Charge Potency x 5) (max 25).\n  - Immediately before getting hit, gain Shield equal to (Charge Potency on self) (max 5, 3 times per turn).\n  - If this unit gains Charge Count past the Max Charge Count Cap by using a Skill, the Skill deals +3% damage for every Charge Count that ex….\n\nDefense skill — **Guard: CCA Overcharge**: Clashable Guard.\n  - [Combat Start] At less than 15 Charge Count, gain the following effects:.\n  - Gain Overcharge next turn (max 1 per turn).\n  - Turn End: Remove this unit's first Stagger Threshold (once per Encounter).",
+  "core_idea": "W Corp. L4 Cleanup Agent - CCA Heathcliff is a Damage Dealer / Support — the defense slot queues high-impact skills or major setup buffs for the following turn. Scaling conditions: Clash Power +1 per 6 Charge (max +2). Support passive (**One day I'll wear me Armour for Cancelled Trains**) keys off **deployment order** — set your main carry as #1 deployed before the fight.",
+  "playstyle_guide": "- **One day I'll wear me Armour for Cancelled Trains** watches the **#1 deployed ally** — arrange the dashboard so the intended carry is first in line.\n- **Guard: CCA Overcharge** queues **Rip Space - CCA Overdrive** for the next turn when conditions are met — use the guard slot to set up a high-impact attack on the following turn.\n- That guard use also removes the first Stagger Threshold once per encounter — valuable when you need to stay on the field.\n- Reach scaling conditions before committing S3: Clash Power +1 per 6 Charge (max +2).\n- Hold S3 for when At 10+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Congestion Cleanup** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Needs 3+ Charge to activate — prioritise building stacks before using.\n- Gain +3 Charge Count\n\n**S2 — Boost: Elbow Blade** (BP 5, CP +6, x2): rolls — low 5, high 17 (Extremely High).\n- Gain +5 Charge Count; [On Hit] Inflict +1 Rupture Count\n\n**S3 — Rip Space - CCA Overdrive** (BP 3, CP +2, x4): rolls — low 3, high 11 (Extremely Low).\n- converts coins to Unbreakable under condition\n- Gain +1 Charge Count\n- Gain +2 Charge Count\n\nCombat passive — **Defence-Oriented Charge**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - Turn Start: Gain Defense Level Up equal to Charge Potency on self (max 6).\n\nCombat passive — **Congestion Cleaning Armour**: Combat Start: If this unit has less than 50% HP, gain Shield equal to (Charge Potency x 5) (max 25).\n  - Immediately before getting hit, gain Shield equal to (Charge Potency on self) (max 5, 3 times per turn).\n  - If this unit gains Charge Count past the Max Charge Count Cap by using a Skill, the Skill deals +3% damage for every Charge Count that ex….\n\nDefense skill — **Guard: CCA Overcharge**: Clashable Guard.\n  - [Combat Start] At less than 15 Charge Count, gain the following effects:.\n  - Gain Overcharge next turn (max 1 per turn).\n  - Turn End: Remove this unit's first Stagger Threshold (once per Encounter).",
   "team_suggestions": [
     "Benefits when teammates apply Charge — he checks Charge thresholds more than he stacks it himself.",
     "- **LCE E.G.O::AEDD Gregor**: This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge.",
     "- **R Corp. 4th Pack Rhino Meursault**: This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — R Corp. 4th Pack Rhino Meursault scales off Charge.",
     "- **W Corp. L2 Cleanup Agent Faust**: This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — W Corp. L2 Cleanup Agent Faust scales off Charge."
+  ],
+  "team_suggestion_intro": "Benefits when teammates apply Charge — he checks Charge thresholds more than he stacks it himself.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
+      "teammate_name": "R Corp. 4th Pack Rhino Meursault",
+      "reason": "This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — R Corp. 4th Pack Rhino Meursault scales off Charge.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+      "teammate_name": "W Corp. L2 Cleanup Agent Faust",
+      "reason": "This identity's 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge — W Corp. L2 Cleanup Agent Faust scales off Charge.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

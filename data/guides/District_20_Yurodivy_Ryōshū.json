@@ -43,7 +43,7 @@
     {
       "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
       "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
-      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.95.",
       "score": 0.9521318674087524,
       "source": "embedding",
       "faction_match": false
@@ -51,7 +51,7 @@
     {
       "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
       "teammate_name": "The Thumb East Soldato II Sinclair",
-      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.94.",
       "score": 0.9405219554901123,
       "source": "embedding",
       "faction_match": false
@@ -59,7 +59,7 @@
     {
       "teammate_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
       "teammate_name": "T Corp. Class 3 Collection Staff Don Quixote",
-      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.92.",
       "score": 0.9194821715354919,
       "source": "embedding",
       "faction_match": false
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
       "teammate_name": "The Thumb East Capo IIII Meursault",
-      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.92.",
       "score": 0.9169871807098389,
       "source": "embedding",
       "faction_match": false
@@ -75,19 +75,40 @@
     {
       "teammate_slug": "District_20_Yurodivy_Hong_Lu",
       "teammate_name": "District 20 Yurodivy Hong Lu",
-      "reason": "Mechanic similarity score: 0.91 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.91.",
       "score": 0.9121265411376953,
       "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "District 20 Yurodivy Ryōshū is a Support applying sustained Tremor, Coin Power pressure with consistent skill stats.",
-  "playstyle_guide": "**S1 — Got a Screw Loose?** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Peak output requires both conditions: Gain +2 Tremor Count | [On Use] At 4+ Tremor Count, Clash Power +2.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S2 — Compression Wind-up Spanner** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 4+ Tremor on target — that is when the damage condition activates.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S3 — Percussive Maintenance** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 6+ Tremor on target — that is when the damage condition activates.\n\nDefense skill — **Guard: Guard**: [On Use] Gain 2 x (Tremor Count on self) as Shield HP (max 10).",
+  "core_idea": "District 20 Yurodivy Ryōshū is a Damage Dealer / Support applying sustained Tremor, Coin Power pressure with consistent skill stats. Support passive (**N.O.**) procs when the **#1 deployed** ally triggers Tremor Burst — stack Tremor on their target first.",
+  "playstyle_guide": "- Place your Tremor carry as **#1 deployed** so their Bursts can trigger **N.O.**'s bonus proc.\n\n**S1 — Got a Screw Loose?** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Peak output requires both conditions: Gain +2 Tremor Count | [On Use] At 4+ Tremor Count, Clash Power +2.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S2 — Compression Wind-up Spanner** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 4+ Tremor on target — that is when the damage condition activates.\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S3 — Percussive Maintenance** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Delay until 6+ Tremor on target — that is when the damage condition activates.\n\nDefense skill — **Guard: Guard**: [On Use] Gain 2 x (Tremor Count on self) as Shield HP (max 10).",
   "team_suggestions": [
     "Best placed in a Tremor-focused team — teammates that apply or extend Tremor increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.95 (embedding; verify manually). *(similarity-based — verify)*",
-    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*",
-    "- **T Corp. Class 3 Collection Staff Don Quixote**: Mechanic similarity score: 0.92 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.95. *(similarity-based — verify)*",
+    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.94. *(similarity-based — verify)*",
+    "- **T Corp. Class 3 Collection Staff Don Quixote**: Mechanic similarity score: 0.92. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Best placed in a Tremor-focused team — teammates that apply or extend Tremor increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Mechanic similarity score: 0.95.",
+      "source": "embedding"
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.94.",
+      "source": "embedding"
+    },
+    {
+      "teammate_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+      "teammate_name": "T Corp. Class 3 Collection Staff Don Quixote",
+      "reason": "Mechanic similarity score: 0.92.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

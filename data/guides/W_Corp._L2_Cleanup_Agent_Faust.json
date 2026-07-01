@@ -50,7 +50,7 @@
     {
       "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
       "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.93.",
       "score": 0.9296165108680725,
       "source": "embedding",
       "faction_match": false
@@ -58,7 +58,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
       "teammate_name": "Blade Lineage Salsu Yi Sang",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9031156301498413,
       "source": "embedding",
       "faction_match": false
@@ -66,7 +66,7 @@
     {
       "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
       "teammate_name": "R Corp. 4th Pack Rhino Meursault",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9003629684448242,
       "source": "embedding",
       "faction_match": false
@@ -74,7 +74,7 @@
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
       "teammate_name": "Kurokumo Clan Wakashu Rodion",
-      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.86.",
       "score": 0.8640086650848389,
       "source": "embedding",
       "faction_match": false
@@ -85,8 +85,29 @@
   "team_suggestions": [
     "Benefits when teammates apply Charge — he checks Charge thresholds more than he stacks it himself.",
     "- **W Corp. L4 Cleanup Agent - CCA Heathcliff**: 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
-    "- **LCE E.G.O::AEDD Gregor**: Mechanic similarity score: 0.93 (embedding; verify manually). *(similarity-based — verify)*",
-    "- **Blade Lineage Salsu Yi Sang**: Mechanic similarity score: 0.90 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **LCE E.G.O::AEDD Gregor**: Mechanic similarity score: 0.93. *(similarity-based — verify)*",
+    "- **Blade Lineage Salsu Yi Sang**: Mechanic similarity score: 0.90. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Benefits when teammates apply Charge — he checks Charge thresholds more than he stacks it himself.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Mechanic similarity score: 0.93.",
+      "source": "embedding"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
+      "teammate_name": "Blade Lineage Salsu Yi Sang",
+      "reason": "Mechanic similarity score: 0.90.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

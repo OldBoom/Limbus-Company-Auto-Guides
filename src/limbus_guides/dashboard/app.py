@@ -17,6 +17,7 @@ if str(_SRC) not in sys.path:
 import streamlit as st
 
 from limbus_guides.config_io import load_json_config
+from limbus_guides.nlp.generation import _embedding_verify_note
 from limbus_guides.paths import CONFIG_DIR, GUIDES_DIR
 
 STATIC_DIR = Path(__file__).resolve().parent / "static" / "images"
@@ -187,6 +188,43 @@ def _format_synergy_row(entry: dict) -> str:
     return f"**{name}**{score_str}{tag_str}: {reason}"
 
 
+def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
+    """Render team suggestions with clickable teammate names when picks are available."""
+    picks = guide.get("team_suggestion_picks")
+    lines = guide.get("team_suggestions", [])
+
+    if picks:
+        intro = guide.get("team_suggestion_intro")
+        if intro:
+            st.markdown(intro)
+        else:
+            # Legacy guides: infer intro from lines before teammate bullets.
+            intro_lines = lines[: len(lines) - len(picks)] if len(lines) >= len(picks) else []
+            for legacy_intro in intro_lines:
+                st.markdown(legacy_intro)
+        for pick in picks:
+            name = pick.get("teammate_name", "")
+            reason = pick.get("reason", "")
+            slug = pick.get("teammate_slug", "")
+            suffix = f"{reason}{_embedding_verify_note(pick.get('source', ''))}"
+            if slug and slug in guides:
+                href = html_lib.escape(_identity_pick_url(slug), quote=True)
+                name_esc = html_lib.escape(name)
+                suffix_esc = html_lib.escape(suffix)
+                title_esc = html_lib.escape(f"Open guide: {name}")
+                st.markdown(
+                    f'- <a href="{href}" class="lc-inline-link" title="{title_esc}">'
+                    f"<strong>{name_esc}</strong></a>: {suffix_esc}",
+                    unsafe_allow_html=True,
+                )
+            else:
+                st.markdown(f"- **{name}**: {suffix}")
+        return
+
+    for line in lines:
+        st.markdown(line)
+
+
 def _render_methodology(guide: dict) -> None:
     st.markdown(
         "Guides are generated from parsed wiki skill data and constrained by gameplay rules in "
@@ -336,6 +374,18 @@ def _render_dashboard_styles() -> None:
             border-color: rgb(255, 75, 75);
             color: rgb(255, 75, 75);
         }
+        /* Inline teammate links in Team Suggestions */
+        a.lc-inline-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        a.lc-inline-link:hover {
+            color: rgb(255, 75, 75);
+            text-decoration: underline;
+        }
+        a.lc-inline-link strong {
+            font-weight: 600;
+        }
         /* Sinner name link width inside grid cells */
         [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
         [data-testid="column"] a.lc-pick-link {
@@ -446,6 +496,7 @@ def _render_guide(
     sinner_name: str,
     *,
     slug: str,
+    guides: dict[str, dict],
 ) -> None:
     profile = guide.get("mechanic_profile", {})
 
@@ -473,8 +524,7 @@ def _render_guide(
     st.markdown(guide.get("playstyle_guide", ""))
 
     st.markdown("### Team Suggestions")
-    for line in guide.get("team_suggestions", []):
-        st.markdown(line)
+    _render_team_suggestions(guide, guides)
 
     with st.expander("How this guide was built"):
         _render_methodology(guide)
@@ -525,7 +575,7 @@ def main() -> None:
             st.error("Guide not found.")
             _set_stage(STAGE_IDENTITY)
             st.rerun()
-        _render_guide(guide, sinner_name, slug=slug)
+        _render_guide(guide, sinner_name, slug=slug, guides=guides)
     else:
         _set_stage(STAGE_LANDING)
         st.rerun()

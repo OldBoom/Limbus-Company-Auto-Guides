@@ -74,7 +74,7 @@
     {
       "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
       "teammate_name": "The Lord of Hongyuan Hong Lu",
-      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.86.",
       "score": 0.8614915609359741,
       "source": "embedding",
       "faction_match": false
@@ -82,7 +82,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
-      "reason": "Mechanic similarity score: 0.85 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.85.",
       "score": 0.8510056138038635,
       "source": "embedding",
       "faction_match": false
@@ -90,7 +90,7 @@
     {
       "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
       "teammate_name": "R Corp. 4th Pack Rhino Meursault",
-      "reason": "Mechanic similarity score: 0.81 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.81.",
       "score": 0.8107101917266846,
       "source": "embedding",
       "faction_match": false
@@ -102,7 +102,28 @@
     "Best placed in a Sinking-focused team — teammates that apply or extend Sinking increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **Edgar Family Butler Ishmael**: This identity's 'Endless Lamentation' inflicts Sinking — Edgar Family Butler Ishmael scales off Sinking.",
     "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: This identity's 'Endless Lamentation' inflicts Sinking — Lobotomy E.G.O::The Sword Sharpened with Tears Rodion scales off Sinking.",
-    "- **The Lord of Hongyuan Hong Lu**: Mechanic similarity score: 0.86 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **The Lord of Hongyuan Hong Lu**: Mechanic similarity score: 0.86. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Best placed in a Sinking-focused team — teammates that apply or extend Sinking increase this kit's damage ceiling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Edgar_Family_Butler_Ishmael",
+      "teammate_name": "Edgar Family Butler Ishmael",
+      "reason": "This identity's 'Endless Lamentation' inflicts Sinking — Edgar Family Butler Ishmael scales off Sinking.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
+      "reason": "This identity's 'Endless Lamentation' inflicts Sinking — Lobotomy E.G.O::The Sword Sharpened with Tears Rodion scales off Sinking.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "Mechanic similarity score: 0.86.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

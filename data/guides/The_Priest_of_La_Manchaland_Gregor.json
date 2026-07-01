@@ -94,6 +94,27 @@
     "- **The Manager of La Manchaland Don Quixote**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
     "- **The Princess of La Manchaland Rodion**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives."
   ],
+  "team_suggestion_intro": "La Manchaland Bloodfeast tank — slot alongside other La Manchaland identities to feed the shared pool while absorbing aggro for Hardblood spenders. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Barber_of_La_Manchaland_Outis",
+      "teammate_name": "The Barber of La Manchaland Outis",
+      "reason": "Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
+      "teammate_name": "The Manager of La Manchaland Don Quixote",
+      "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Princess_of_La_Manchaland_Rodion",
+      "teammate_name": "The Princess of La Manchaland Rodion",
+      "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

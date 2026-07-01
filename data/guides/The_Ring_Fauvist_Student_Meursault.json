@@ -80,21 +80,42 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
-      "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
-      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
-      "score": 0.9277192950248718,
-      "source": "embedding",
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
       "faction_match": false
     }
   ],
-  "core_idea": "The Ring Fauvist Student Meursault is a Status Specialist applying sustained Bleed, Sinking pressure with consistent skill stats.",
+  "core_idea": "The Ring Fauvist Student Meursault is a Damage Dealer / Status Specialist applying sustained Bleed, Sinking pressure with consistent skill stats.",
   "playstyle_guide": "- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Rough Portrayal** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Average stacked).\n- Each debuff type on the target adds +5% damage (up to +15%) — stack statuses broadly.\n- Stacks 1 Bleed — use every appearance to build up.\n\n**S2 — Visceral Strokes** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Each debuff type on the target adds +5% damage (up to +20%) — stack statuses broadly.\n- Stacks 2 Bleed — use every appearance to build up.\n\n**S3 — Le Fauvisme - Reveal Submission** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Each debuff type on the target adds +10% damage (up to +60%) — stack statuses broadly.\n- converts coins to Unbreakable under condition\n- Inflict +2 Bleed Count; [On Hit] Inflict +2 Sinking Count\n\nCombat passive — **The Ring Fauvist Student**: On Hit with a Base Skill: Inflict 1 Mauled Color — Rouge —.\n  - This counts as \"inflicting negative effects with the Skill\".\n  - Turn End: If this unit has inflicted 10+ Mauled Color — Rouge — during this Encounter, gain Le Fauvisme — Masque de Chien.\n\nCombat passive — **Welling Inspiration**: If this unit has Le Fauvisme — Masque de Chien, inflict +1 Mauled Color — Rouge —.\n  - Every time this unit inflicts 4 Mauled Color — Rouge —, heal 5 SP (2 times per turn).\n  - If this unit's SP is at max, gain 1 Blunt DMG Up next turn when this unit heals SP with this effect (once per turn).\n\nDefense skill — **Counter: Coloring Preparations**: [Clashable Counter].\n  - If this unit has Le Fauvisme — Masque de Chien, Base Power +2.\n  - [On Use] If target has 6+ (Bleed + Sinking), Coin Power +1.",
   "team_suggestions": [
     "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
+      "teammate_name": "Kurokumo Clan Captain Ishmael",
+      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

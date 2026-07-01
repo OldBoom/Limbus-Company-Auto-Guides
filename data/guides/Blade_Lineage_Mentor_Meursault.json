@@ -87,6 +87,27 @@
     "- **Blade Lineage Salsu Yi Sang**: This identity's 'Swordplay of the Homeland' inflicts Poise — Blade Lineage Salsu Yi Sang scales off Poise.",
     "- **Cinq Assoc. East Section 3 Don Quixote**: This identity's 'Swordplay of the Homeland' inflicts Poise — Cinq Assoc. East Section 3 Don Quixote scales off Poise."
   ],
+  "team_suggestion_intro": "Trait-dependent kit — [Blade Lineage] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Blade Lineage] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
+      "teammate_name": "Blade Lineage Salsu Yi Sang",
+      "reason": "This identity's 'Swordplay of the Homeland' inflicts Poise — Blade Lineage Salsu Yi Sang scales off Poise.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "This identity's 'Swordplay of the Homeland' inflicts Poise — Cinq Assoc. East Section 3 Don Quixote scales off Poise.",
+      "source": "rule"
+    }
+  ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
 }

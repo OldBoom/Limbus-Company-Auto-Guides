@@ -57,7 +57,7 @@
     {
       "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
       "teammate_name": "The Thumb East Soldato II Sinclair",
-      "reason": "Mechanic similarity score: 0.95 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.95.",
       "score": 0.9469081163406372,
       "source": "embedding",
       "faction_match": false
@@ -65,7 +65,7 @@
     {
       "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
       "teammate_name": "The Thumb East Capo IIII Meursault",
-      "reason": "Mechanic similarity score: 0.93 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.93.",
       "score": 0.9308047294616699,
       "source": "embedding",
       "faction_match": false
@@ -73,7 +73,7 @@
     {
       "teammate_slug": "N_Corp._Mittelhammer_Don_Quixote",
       "teammate_name": "N Corp. Mittelhammer Don Quixote",
-      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.92.",
       "score": 0.9219276905059814,
       "source": "embedding",
       "faction_match": false
@@ -85,7 +85,28 @@
     "Uses unique Tremor (Tremor — Decay) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.95 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.95. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Uses unique Tremor (Tremor — Decay) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Mechanic similarity score: 0.95.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

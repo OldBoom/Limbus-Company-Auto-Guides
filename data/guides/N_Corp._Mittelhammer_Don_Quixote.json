@@ -59,7 +59,7 @@
     {
       "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
       "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
-      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.92.",
       "score": 0.9219276905059814,
       "source": "embedding",
       "faction_match": false
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
       "teammate_name": "The Thumb East Capo IIII Meursault",
-      "reason": "Mechanic similarity score: 0.92 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.92.",
       "score": 0.9184601902961731,
       "source": "embedding",
       "faction_match": false
@@ -75,7 +75,7 @@
     {
       "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
       "teammate_name": "The Thumb East Soldato II Sinclair",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.904757559299469,
       "source": "embedding",
       "faction_match": false
@@ -87,7 +87,28 @@
     "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.92 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.92. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Mechanic similarity score: 0.92.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

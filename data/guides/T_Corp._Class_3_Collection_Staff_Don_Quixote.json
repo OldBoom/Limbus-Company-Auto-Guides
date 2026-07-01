@@ -59,7 +59,7 @@
     {
       "teammate_slug": "Zwei_Assoc._West_Section_3_Ishmael",
       "teammate_name": "Zwei Assoc. West Section 3 Ishmael",
-      "reason": "Mechanic similarity score: 0.94 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.94.",
       "score": 0.936448335647583,
       "source": "embedding",
       "faction_match": false
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
       "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
-      "reason": "Mechanic similarity score: 0.90 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.90.",
       "score": 0.9000825881958008,
       "source": "embedding",
       "faction_match": false
@@ -75,7 +75,7 @@
     {
       "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
       "teammate_name": "The Thumb East Soldato II Sinclair",
-      "reason": "Mechanic similarity score: 0.88 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.88.",
       "score": 0.8816834688186646,
       "source": "embedding",
       "faction_match": false
@@ -87,7 +87,28 @@
     "Uses unique Tremor (Tremor — Chain) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
-    "- **Zwei Assoc. West Section 3 Ishmael**: Mechanic similarity score: 0.94 (embedding; verify manually). *(similarity-based — verify)*"
+    "- **Zwei Assoc. West Section 3 Ishmael**: Mechanic similarity score: 0.94. *(similarity-based — verify)*"
+  ],
+  "team_suggestion_intro": "Uses unique Tremor (Tremor — Chain) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Zwei_Assoc._West_Section_3_Ishmael",
+      "teammate_name": "Zwei Assoc. West Section 3 Ishmael",
+      "reason": "Mechanic similarity score: 0.94.",
+      "source": "embedding"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"

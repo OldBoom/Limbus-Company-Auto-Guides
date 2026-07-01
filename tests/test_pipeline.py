@@ -189,8 +189,64 @@ def test_heishou_pack_synergy_prioritizes_lord_hong_lu():
         identity["mechanic_profile"] = build_mechanic_profile(identity)
         gp = build_gameplan(identity)
         team = _build_team_suggestions(synergies, gp)
-        assert "The Lord of Hongyuan Hong Lu" in team[1]
-        assert "Heishou Pack" in team[0]
+        assert "The Lord of Hongyuan Hong Lu" in team["lines"][1]
+        assert "Heishou Pack" in team["lines"][0]
+        assert team["picks"][0]["teammate_slug"] == lord_slug
+        assert team["picks"][0]["teammate_name"] == "The Lord of Hongyuan Hong Lu"
+
+
+def test_embedding_team_suggestion_note_not_duplicated():
+    from limbus_guides.nlp.generation import _build_team_suggestions, generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+    from limbus_guides.nlp.synergy import find_synergy_teammates
+
+    slug = "Blade_Lineage_Salsu_Yi_Sang"
+    roster = load_all_parsed()
+    identity = roster[slug]
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    synergies = find_synergy_teammates(identity, roster, k=8)
+    gp = build_gameplan(identity)
+    team = _build_team_suggestions(synergies, gp)
+
+    embed_pick = next(p for p in team["picks"] if p.get("source") == "embedding")
+    embed_line = next(ln for ln in team["lines"] if embed_pick["teammate_name"] in ln)
+    assert embed_pick["reason"].endswith(".")
+    assert "(embedding; verify manually)" not in embed_pick["reason"]
+    assert embed_line.count("*(similarity-based — verify)*") == 1
+    assert "(embedding; verify manually)" not in embed_line
+
+    guide = generate_guide(identity, synergies=synergies, use_ollama=False)
+    assert guide.get("team_suggestion_intro")
+    assert guide["team_suggestion_intro"] == team["intro"]
+
+
+def test_ollama_team_suggestions_skip_structured_picks(monkeypatch):
+    from limbus_guides.nlp.generation import generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.synergy import find_synergy_teammates
+
+    slug = "Blade_Lineage_Salsu_Sinclair"
+    roster = load_all_parsed()
+    identity = roster[slug]
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    synergies = find_synergy_teammates(identity, roster, k=5)
+
+    llm_text = (
+        "Core idea: test\n\n"
+        "Playstyle: rotate skills\n\n"
+        "Team suggestions:\n"
+        "- **Custom LLM Pick**: synergy from the model."
+    )
+    monkeypatch.setattr(
+        "limbus_guides.nlp.generation._ollama_generate",
+        lambda *_args, **_kwargs: llm_text,
+    )
+
+    guide = generate_guide(identity, synergies=synergies, use_ollama=True)
+    assert guide["team_suggestions"] == ["- **Custom LLM Pick**: synergy from the model."]
+    assert "team_suggestion_picks" not in guide
+    assert "team_suggestion_intro" not in guide
 
 
 def test_priest_gregor_tank_role_and_la_manchaland_teammates():
@@ -227,6 +283,9 @@ def test_priest_gregor_tank_role_and_la_manchaland_teammates():
     guide = generate_guide(identity, synergies=synergies, use_ollama=False)
     assert "Tank" in guide["core_idea"]
     team_text = "\n".join(guide["team_suggestions"])
+    picks = guide.get("team_suggestion_picks", [])
+    assert len(picks) <= 3
+    assert all(p.get("teammate_slug") and p.get("teammate_name") for p in picks)
     assert sum(1 for s in la_mancha_slugs if s.replace("_", " ").split("_")[0] in team_text or any(
         name in team_text
         for name in (

@@ -99,7 +99,7 @@
     {
       "teammate_slug": "Wild_Hunt_Heathcliff",
       "teammate_name": "Wild Hunt Heathcliff",
-      "reason": "Mechanic similarity score: 0.86 (embedding; verify manually).",
+      "reason": "Mechanic similarity score: 0.86.",
       "score": 0.8614915609359741,
       "source": "embedding",
       "faction_match": false
@@ -112,6 +112,27 @@
     "- **Heishou Pack - Si Branch Gregor**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Heishou Pack - Wu Branch Adept Yi Sang**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [Jia Family] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Jia Family] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Si_Branch_Gregor",
+      "teammate_name": "Heishou Pack - Si Branch Gregor",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+      "teammate_name": "Heishou Pack - Wu Branch Adept Yi Sang",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    }
   ],
   "generator": "template_smart",
   "domain_context": "docs/domain-primer.md"
