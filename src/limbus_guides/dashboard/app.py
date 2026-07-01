@@ -244,6 +244,17 @@ def _select_sinner(sinner_name: str) -> None:
     st.rerun()
 
 
+def _render_query_link(label: str, href: str, *, title: str = "") -> None:
+    """Same-window navigation via query params (matches portrait pickers)."""
+    label_esc = html_lib.escape(label)
+    href_esc = html_lib.escape(href, quote=True)
+    title_attr = f' title="{html_lib.escape(title)}"' if title else ""
+    st.markdown(
+        f'<a href="{href_esc}" class="lc-pick-link"{title_attr}>{label_esc}</a>',
+        unsafe_allow_html=True,
+    )
+
+
 def _render_portrait_picker(path: Path, *, sinner_name: str) -> None:
     """Clickable portrait — each cell is its own link (no shared element ids)."""
     b64 = base64.b64encode(path.read_bytes()).decode()
@@ -305,15 +316,31 @@ def _render_dashboard_styles() -> None:
                 max-width: 33.333% !important;
             }
         }
-        /* Portrait + name link share width inside each sinner cell */
+        /* Text pick links styled like Streamlit secondary buttons */
+        a.lc-pick-link {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0.35rem 0.2rem;
+            font-size: 0.72rem;
+            line-height: 1.2;
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+            border: 1px solid rgba(250, 250, 250, 0.2);
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        a.lc-pick-link:hover {
+            border-color: rgb(255, 75, 75);
+            color: rgb(255, 75, 75);
+        }
+        /* Sinner name link width inside grid cells */
         [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
-        [data-testid="column"] [data-testid="stVerticalBlock"] a[data-testid="stLinkButton"] {
+        [data-testid="column"] a.lc-pick-link {
             width: 100% !important;
             font-size: 0.72rem !important;
-            padding: 0.35rem 0.2rem !important;
-            white-space: normal !important;
-            line-height: 1.2 !important;
-            justify-content: center !important;
         }
         /* Sinner portrait on identity-picker header */
         .lc-portrait-slot [data-testid="stVerticalBlock"] .stImage img {
@@ -338,10 +365,10 @@ def _render_sinner_cell(sinner: dict) -> None:
             _render_portrait_picker(portrait, sinner_name=sinner["name"])
         else:
             st.markdown(f"**{sinner['name']}**")
-        st.link_button(
+        _render_query_link(
             sinner["name"],
-            url=pick_url,
-            use_container_width=True,
+            pick_url,
+            title=f"Select {sinner['name']}",
         )
 
 
@@ -407,11 +434,10 @@ def _render_identity_cards(sinner_name: str, guides: dict[str, dict]) -> None:
                 else:
                     st.markdown(f"**{_shorten(name)}**")
                 st.caption(mech_str)
-                st.link_button(
+                _render_query_link(
                     "Select",
-                    url=_identity_pick_url(slug),
-                    use_container_width=True,
-                    key=f"identity_link_{slug}",
+                    _identity_pick_url(slug),
+                    title=f"Open guide: {name}",
                 )
 
 
