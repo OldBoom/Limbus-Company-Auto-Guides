@@ -106,12 +106,8 @@ def _handle_identity_pick_query(guides: dict[str, dict]) -> None:
     if not slug:
         return
     st.query_params.clear()
-    guide = guides.get(slug)
-    if guide:
-        st.session_state.selected_slug = slug
-        st.session_state.selected_sinner = guide.get("sinner")
-        _set_stage(STAGE_GUIDE)
-        st.rerun()
+    if guides.get(slug):
+        _select_identity(slug, guides)
 
 
 def _sinner_pick_url(sinner_name: str) -> str:
@@ -212,10 +208,11 @@ def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
                 name_esc = html_lib.escape(name)
                 suffix_esc = html_lib.escape(suffix)
                 title_esc = html_lib.escape(f"Open guide: {name}")
-                st.markdown(
-                    f'- <a href="{href}" class="lc-inline-link" title="{title_esc}">'
-                    f"<strong>{name_esc}</strong></a>: {suffix_esc}",
-                    unsafe_allow_html=True,
+                st.html(
+                    f'<p style="margin:0.25rem 0">'
+                    f'- <a href="{href}" target="_parent" class="lc-inline-link" title="{title_esc}">'
+                    f"<strong>{name_esc}</strong></a>: {suffix_esc}</p>",
+                    width="stretch",
                 )
             else:
                 st.markdown(f"- **{name}**: {suffix}")
@@ -282,15 +279,26 @@ def _select_sinner(sinner_name: str) -> None:
     st.rerun()
 
 
-def _render_query_link(label: str, href: str, *, title: str = "") -> None:
-    """Same-window navigation via query params (matches portrait pickers)."""
-    label_esc = html_lib.escape(label)
-    href_esc = html_lib.escape(href, quote=True)
-    title_attr = f' title="{html_lib.escape(title)}"' if title else ""
-    st.markdown(
-        f'<a href="{href_esc}" class="lc-pick-link"{title_attr}>{label_esc}</a>',
-        unsafe_allow_html=True,
-    )
+def _select_identity(slug: str, guides: dict[str, dict]) -> None:
+    guide = guides.get(slug)
+    if not guide:
+        return
+    st.session_state.selected_slug = slug
+    st.session_state.selected_sinner = guide.get("sinner")
+    _set_stage(STAGE_GUIDE)
+    st.rerun()
+
+
+def _render_pick_button(label: str, *, key: str, on_pick, title: str = "") -> None:
+    """Streamlit button navigation — avoids new-tab behavior from HTML/markdown links."""
+    if st.button(
+        label,
+        key=key,
+        use_container_width=True,
+        help=title or None,
+        type="secondary",
+    ):
+        on_pick()
 
 
 def _render_portrait_picker(path: Path, *, sinner_name: str) -> None:
@@ -300,7 +308,7 @@ def _render_portrait_picker(path: Path, *, sinner_name: str) -> None:
     name_esc = html_lib.escape(sinner_name)
     st.html(
         f"""
-        <a href="{href}" style="display:block;line-height:0;text-decoration:none"
+        <a href="{href}" target="_parent" style="display:block;line-height:0;text-decoration:none"
            title="Select {name_esc}">
           <img src="data:image/png;base64,{b64}" alt="{name_esc}"
                style="width:100%;height:auto;display:block;cursor:pointer;border-radius:4px" />
@@ -317,7 +325,7 @@ def _render_identity_portrait_picker(path: Path, *, slug: str, title: str) -> No
     title_esc = html_lib.escape(title)
     st.html(
         f"""
-        <a href="{href}" style="display:block;line-height:0;text-decoration:none"
+        <a href="{href}" target="_parent" style="display:block;line-height:0;text-decoration:none"
            title="Open guide: {title_esc}">
           <img src="data:image/png;base64,{b64}" alt="{title_esc}"
                style="width:100%;height:auto;display:block;cursor:pointer;border-radius:4px" />
@@ -354,25 +362,16 @@ def _render_dashboard_styles() -> None:
                 max-width: 33.333% !important;
             }
         }
-        /* Text pick links styled like Streamlit secondary buttons */
-        a.lc-pick-link {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 0.35rem 0.2rem;
-            font-size: 0.72rem;
-            line-height: 1.2;
-            text-decoration: none;
-            color: rgb(250, 250, 250);
-            border: 1px solid rgba(250, 250, 250, 0.2);
-            border-radius: 0.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-        a.lc-pick-link:hover {
-            border-color: rgb(255, 75, 75);
-            color: rgb(255, 75, 75);
+        /* Compact pick buttons under portraits */
+        [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
+        [data-testid="column"] .stButton > button,
+        [data-testid="stVerticalBlockBorderWrapper"] .stButton > button {
+            width: 100% !important;
+            font-size: 0.72rem !important;
+            padding: 0.35rem 0.2rem !important;
+            white-space: normal !important;
+            line-height: 1.2 !important;
+            min-height: 0 !important;
         }
         /* Inline teammate links in Team Suggestions */
         a.lc-inline-link {
@@ -385,12 +384,6 @@ def _render_dashboard_styles() -> None:
         }
         a.lc-inline-link strong {
             font-weight: 600;
-        }
-        /* Sinner name link width inside grid cells */
-        [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
-        [data-testid="column"] a.lc-pick-link {
-            width: 100% !important;
-            font-size: 0.72rem !important;
         }
         /* Sinner portrait on identity-picker header */
         .lc-portrait-slot [data-testid="stVerticalBlock"] .stImage img {
@@ -409,16 +402,17 @@ def _render_sinner_cell(sinner: dict) -> None:
     """Clickable portrait and name link in a shared narrow column."""
     _, mid, _ = st.columns([1, 5, 1])
     with mid:
-        pick_url = _sinner_pick_url(sinner["name"])
         portrait = _portrait_path(sinner["name"])
         if portrait:
             _render_portrait_picker(portrait, sinner_name=sinner["name"])
         else:
             st.markdown(f"**{sinner['name']}**")
-        _render_query_link(
-            sinner["name"],
-            pick_url,
-            title=f"Select {sinner['name']}",
+        name = sinner["name"]
+        _render_pick_button(
+            name,
+            key=f"sinner_pick_{name}",
+            on_pick=lambda n=name: _select_sinner(n),
+            title=f"Select {name}",
         )
 
 
@@ -484,9 +478,10 @@ def _render_identity_cards(sinner_name: str, guides: dict[str, dict]) -> None:
                 else:
                     st.markdown(f"**{_shorten(name)}**")
                 st.caption(mech_str)
-                _render_query_link(
+                _render_pick_button(
                     "Select",
-                    _identity_pick_url(slug),
+                    key=f"identity_pick_{slug}",
+                    on_pick=lambda s=slug, g=guides: _select_identity(s, g),
                     title=f"Open guide: {name}",
                 )
 
