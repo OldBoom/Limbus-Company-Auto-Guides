@@ -46,3 +46,6 @@ models/
 
 # Misc
 *.log
+
+# Local presentation prep (not for repo)
+docs/presentation-script.md

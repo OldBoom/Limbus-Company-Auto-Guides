@@ -1,0 +1,24 @@
+flowchart LR
+    subgraph dataIngestion [Data Ingestion]
+        WikiScraper["Wiki Scraper"]
+        StructuredStore["Structured JSON Store"]
+    end
+
+    subgraph nlpPipeline [NLP Pipeline]
+        MechanicNER["Mechanic NER / Keyword Extraction"]
+        SynergyAnalysis["Synergy Analysis via TF-IDF + Embeddings"]
+        TextGen["Text Generation LLM-based"]
+    end
+
+    subgraph output [Output Layer]
+        GuidesJSON["Guides JSON"]
+        WebDashboard["Web Dashboard"]
+    end
+
+    WikiScraper --> StructuredStore
+    StructuredStore --> MechanicNER
+    MechanicNER --> SynergyAnalysis
+    MechanicNER --> TextGen
+    SynergyAnalysis --> TextGen
+    TextGen --> GuidesJSON
+    GuidesJSON --> WebDashboard

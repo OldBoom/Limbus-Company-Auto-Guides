@@ -23,7 +23,7 @@ src/limbus_guides/     Pipeline source code
 scripts/               run_pipeline.py, run_poc_evaluations.py, run_evaluation.py
 data/identities/       Structured identity JSON
 data/guides/           Pre-generated guides for dashboard
-docs/                  Specs, sprints, evaluation, presentation outline
+docs/                  Specs, evaluation, domain notes
 notebooks/             PoC evaluation notebooks
 tests/                 Unit tests
 config/sinners.json    Character roster config
@@ -75,15 +75,9 @@ Optional: set `USE_OLLAMA=1` and run [Ollama](https://ollama.com) with `mistral`
 - [How to Run](docs/how-to-run.md) — setup, add/edit identities, regenerate guides
 - [Ingestion Rulebook](docs/ingestion-rulebook.md) — slug rules, mechanics policy, protected files
 - [Domain Primer](docs/domain-primer.md) — gameplay overview for the project team
-- [Sprint Plan](docs/sprints.md)
 - [Course Rubric](docs/course-files/deliverable-requirements.md)
-- [Final Presentation Outline](docs/final-presentation-outline.md) — 10 min + 5 min discussion
 - [Evaluation Notes](docs/evaluation.md)
 - [State of the Art](docs/sota.md)
-
-## Final Presentation (Jul 3)
-
-**10 minutes** covering D1–D10 at headline level (see [final-presentation-outline.md](docs/final-presentation-outline.md)), plus **5 minutes** discussion with the professor. Appendix slides hold agile, full eval tables, and post-mortem detail.
 
 ## License
 
