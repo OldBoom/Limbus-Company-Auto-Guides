@@ -36,6 +36,23 @@ _CONSUME_AT = re.compile(
 _DEAL_PER_NEG = re.compile(
     r"Deal \+(\d+)% damage for every type of negative effect[^(]*\(max (\d+)%\)", re.I
 )
+_CONSUME_CHARGE_CP_LINE = re.compile(
+    r"^Consume (\d+) Charge Count for \+(\d+) Coin Power$", re.I
+)
+_POTENCY_CLASH_LINE = re.compile(
+    r"^Clash Power = Charge Potency \(max \+(\d+)\)$", re.I
+)
+_AT_CHARGE_CLASH_LINE = re.compile(
+    r"^At (\d+)\+ Charge, Clash Power \+(\d+)$", re.I
+)
+_CHARGE_COIN_SCALE_LINE = re.compile(
+    r"^Final coin: consume up to (\d+) Charge for matching Coin Power$", re.I
+)
+_SELF_RESOURCE_DAMAGE_LINE = re.compile(r"^\+(\d+)% damage per (.+?) \(max \+(\d+)%\)$", re.I)
+_SELF_RESOURCE_STAT_LINE = re.compile(
+    r"^(Atk Weight|Coin Power|Base Power|Clash Power) \+(\d+) per (\d+) (.+?) \(max \+(\d+)\)$",
+    re.I,
+)
 
 
 def _advise_line(text: str) -> str | None:
@@ -82,6 +99,49 @@ def _advise_line(text: str) -> str | None:
     m = _DEAL_PER_NEG.search(text)
     if m:
         return f"Each debuff type on the target adds +{m.group(1)}% damage (up to +{m.group(2)}%) — stack statuses broadly."
+
+    m = _CONSUME_CHARGE_CP_LINE.match(text)
+    if m:
+        amt, cp = m.group(1), m.group(2)
+        return (
+            f"At **{amt}+ Charge Count**: spend **{amt}** stacks for **+{cp} Coin Power** "
+            f"— save this for your dump turn."
+        )
+
+    m = _POTENCY_CLASH_LINE.match(text)
+    if m:
+        return (
+            f"**Clash Power** equals **Charge Potency** (up to **+{m.group(1)}**) "
+            f"— raise Potency before the spend flip."
+        )
+
+    m = _AT_CHARGE_CLASH_LINE.match(text)
+    if m:
+        return (
+            f"Needs **{m.group(1)}+ Charge Count** for **+{m.group(2)} Clash Power** "
+            f"— build stacks before committing."
+        )
+
+    m = _CHARGE_COIN_SCALE_LINE.match(text)
+    if m:
+        return (
+            f"Final coin consumes up to **{m.group(1)} Charge Count** for matching "
+            f"**Coin Power** — align the dump with your highest stack turn."
+        )
+
+    m = _SELF_RESOURCE_DAMAGE_LINE.match(text)
+    if m:
+        return (
+            f"Up to **+{m.group(3)}% damage** (+{m.group(1)}% per **{m.group(2)}**) — "
+            f"stack the resource before committing."
+        )
+
+    m = _SELF_RESOURCE_STAT_LINE.match(text)
+    if m:
+        return (
+            f"**{m.group(1)}** scales with **{m.group(4)}** "
+            f"(+{m.group(2)} per {m.group(3)}, max +{m.group(5)}) — build stacks first."
+        )
 
     # Compound condition lines ("6+ Bleed, double crit ; 10+ Poise, +100% crit")
     if ";" in text and re.search(r"\d+\+", text):
@@ -153,6 +213,16 @@ def _describe_skill(
                 continue
             seen_conds.add(ck)
         raw_detail.append(bonus)
+
+    for scale in skill.get("damage_scales", [])[:3]:
+        if scale in raw_detail:
+            continue
+        ck = _condition_key(scale)
+        if ck and ck in seen_conds:
+            continue
+        if ck:
+            seen_conds.add(ck)
+        raw_detail.append(scale)
 
     notable = extract_notable_effects(skill, max_results=4)
     for line in notable:
@@ -253,6 +323,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
             f"Stack varied statuses before committing high-value skills."
         )
+    elif gp.get("unique_mechanics_archetype"):
+        arch = gp["unique_mechanics_archetype"]
+        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
     elif gp.get("nails_archetype"):
         arch = gp["nails_archetype"]
         threshold = arch.get("threshold", 5)
@@ -295,6 +368,7 @@ def _build_core_idea(name: str, gp: dict) -> str:
     elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
         "nails_setup",
         "charge_scaling",
+        "unique_mechanics",
     ):
         parts.append(f"{name} is a {role_str} — {sin_arch['setup_summary']}")
     elif (extra_arch := pick_extra_archetype(gp)):
@@ -497,6 +571,10 @@ def _build_overview_tips(gp: dict) -> str:
     if retreat_arch:
         tips.extend(retreat_arch.get("tips", []))
 
+    unique_arch = gp.get("unique_mechanics_archetype")
+    if unique_arch:
+        tips.extend(unique_arch.get("tips", []))
+
     nails_arch = gp.get("nails_archetype")
     if nails_arch:
         tips.extend(nails_arch.get("tips", []))
@@ -509,10 +587,16 @@ def _build_overview_tips(gp: dict) -> str:
 
     seen_tips: set[str] = set(tips)
     for key in OVERVIEW_ARCHETYPE_KEYS:
-        if key in ("nails_archetype", "charge_archetype"):
+        if key in ("unique_mechanics_archetype", "nails_archetype", "charge_archetype"):
             continue
         arch = gp.get(key)
         if not arch:
+            continue
+        if key == "sinking_archetype" and unique_arch:
+            mechanics = unique_arch.get("mechanics", [])
+            primary = gp.get("primary_mechanics", [])
+            if any(m in primary[:2] for m in mechanics):
+                continue
             continue
         for tip in arch.get("tips", []):
             if tip not in seen_tips:
@@ -672,7 +756,7 @@ def _build_playstyle(name: str, gp: dict, normalizer: RollNormalizer | None = No
             f"{transition['effect']}"
         )
 
-    if poise:
+    if poise and not gp.get("poise_archetype"):
         clash_note = " Clash wins are doubly valuable — they build Count (via skills) and the passive triggers." if poise["clash_win"] else ""
         sections.append(
             f"The 'Poised' passive converts Poise Count to Coin Power throughout the battle — "

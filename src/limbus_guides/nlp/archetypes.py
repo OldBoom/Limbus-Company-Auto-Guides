@@ -393,7 +393,7 @@ def find_poise_archetype(
     if pm:
         tips.append(
             f"**+{pm.group(1)} Coin Power per {pm.group(2)} Poise Count** "
-            f"(max +{pm.group(3)}) while climbing."
+            f"(max +{pm.group(3)}) — scales with your current Poise Count."
         )
 
     return _build_archetype(
@@ -452,6 +452,58 @@ def find_aggro_archetype(
 
 
 _HASTE_GAIN = re.compile(r"Gain[^;]*\bHaste\b", re.I)
+_SPEED_CHECK = re.compile(r"Speed is faster than the target", re.I)
+_ON_EVADE_HASTE = re.compile(r"\[On Evade\][^;]*Gain[^;]*Haste", re.I)
+_ON_USE_HASTE = re.compile(r"\[On Use\][^;]*Gain[^;]*Haste", re.I)
+
+
+def _haste_play_tip(
+    blob: str,
+    raw_markdown: str = "",
+    defense_archetype: dict | None = None,
+) -> str:
+    if _SPEED_CHECK.search(blob):
+        return (
+            "**Haste** raises Speed for next turn — several bonuses here require "
+            "being faster than the target."
+        )
+
+    if _ON_EVADE_HASTE.search(blob):
+        return (
+            "**Haste** triggers on **Evade** — Evade when you want the Speed spike next turn."
+        )
+
+    def_arch = defense_archetype or {}
+    defense_name = def_arch.get("defense_name", "")
+    def_kind = def_arch.get("kind", "")
+
+    if def_kind == "snipe_setup" or (
+        defense_name and re.search(r"\bEvade\b", defense_name, re.I)
+    ):
+        return "**Haste** before **Evade** when you need higher Speed on the setup turn."
+
+    if defense_name and re.search(r"\bGuard\b", defense_name, re.I):
+        return (
+            "Use **Haste** on attack turns — **Guard** covers defense; "
+            "this is not an Evade rotation."
+        )
+
+    if re.search(r"^### Evade:", raw_markdown, re.MULTILINE | re.IGNORECASE):
+        return "**Haste** before **Evade** when you need higher Speed on the setup turn."
+
+    if re.search(r"^### Guard:", raw_markdown, re.MULTILINE | re.IGNORECASE):
+        return (
+            "Use **Haste** on attack turns — **Guard** covers defense; "
+            "this is not an Evade rotation."
+        )
+
+    if _ON_USE_HASTE.search(blob):
+        return (
+            "Skills grant **Haste** next turn — use them when you want to act "
+            "earlier on the following round."
+        )
+
+    return "Skills grant **Haste** — chain them when you need higher Speed next turn."
 
 
 def find_haste_archetype(
@@ -459,6 +511,8 @@ def find_haste_archetype(
     combat_text: str = "",
     raw_markdown: str = "",
     mechanic_profile: dict | None = None,
+    *,
+    defense_archetype: dict | None = None,
 ) -> _ARCHETYPE_RESULT | None:
     """Haste — +Speed for one turn; acts earlier next round."""
     blob = _kit_blob(skills, combat_text, raw_markdown)
@@ -470,12 +524,9 @@ def find_haste_archetype(
     return _build_archetype(
         kind="haste_tempo",
         status="Haste",
-        setup_summary=(
-            "**Haste** tempo — gain Speed for the next turn to act earlier and secure "
-            "clashes or support triggers."
-        ),
+        setup_summary="**Haste** tempo on key skills.",
         tips=[
-            "Chain Haste before your carry line or evade sequence.",
+            _haste_play_tip(blob, raw_markdown, defense_archetype),
         ],
     )
 
@@ -596,11 +647,13 @@ EXTRA_ARCHETYPE_KEYS: tuple[str, ...] = (
 )
 
 SPECIAL_ARCHETYPE_KEYS: tuple[str, ...] = (
+    "unique_mechanics_archetype",
     "charge_archetype",
     "nails_archetype",
 )
 
 OVERVIEW_ARCHETYPE_KEYS: tuple[str, ...] = (
+    "unique_mechanics_archetype",
     "nails_archetype",
     "charge_archetype",
     *SIN_KEYWORD_ARCHETYPE_KEYS,
@@ -615,6 +668,7 @@ def detect_status_archetypes(
     mechanic_profile: dict | None = None,
     *,
     nails_archetype: dict | None = None,
+    defense_archetype: dict | None = None,
 ) -> dict[str, _ARCHETYPE_RESULT]:
     """Run all sin-keyword and extra mechanic detectors."""
     common = {
@@ -633,7 +687,7 @@ def detect_status_archetypes(
         ("sinking_archetype", find_sinking_archetype, {}),
         ("poise_archetype", find_poise_archetype, {}),
         ("aggro_archetype", find_aggro_archetype, {}),
-        ("haste_archetype", find_haste_archetype, {}),
+        ("haste_archetype", find_haste_archetype, {"defense_archetype": defense_archetype}),
         ("paralyze_archetype", find_paralyze_archetype, {}),
         ("fragile_archetype", find_fragile_archetype, {}),
         ("discard_archetype", find_discard_archetype, {}),
@@ -647,7 +701,7 @@ def detect_status_archetypes(
 
 def pick_primary_sin_archetype(gp: dict) -> _ARCHETYPE_RESULT | None:
     """Best sin-keyword archetype for core-idea narrative (matches primary mechanic order)."""
-    for special in ("nails_archetype", "charge_archetype"):
+    for special in ("unique_mechanics_archetype", "nails_archetype", "charge_archetype"):
         if gp.get(special):
             return gp[special]
 

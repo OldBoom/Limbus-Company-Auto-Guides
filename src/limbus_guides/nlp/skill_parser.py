@@ -86,6 +86,10 @@ _AT_CHARGE_CP = re.compile(
     r"At\s+(\d+)\+\s+Charge[^;]*Coin Power\s+\+(\d+)",
     re.IGNORECASE,
 )
+_AT_CHARGE_CLASH = re.compile(
+    r"At\s+(\d+)\+\s+Charge[^;]*Clash Power\s+\+(\d+)",
+    re.IGNORECASE,
+)
 _CLASH_FROM_POTENCY = re.compile(
     r"Clash Power equal to Charge Potency[^()]*\(max\s+(\d+)\)",
     re.IGNORECASE,
@@ -102,6 +106,38 @@ _OVERFLOW_CHARGE_DMG = re.compile(
     r"Charge Count past the Max Charge Count Cap[^;]*\+(\d+)% damage[^()]*\(max (\d+)%\)",
     re.IGNORECASE,
 )
+_DAMAGE_PER_SELF_RESOURCE = re.compile(
+    r"Deal \+(\d+)% damage for every ([^;]+?) on self \(max (\d+)%\)",
+    re.IGNORECASE,
+)
+_STAT_PER_SELF_RESOURCE = re.compile(
+    r"(Atk Weight|Coin Power|Base Power|Clash Power) \+(\d+) for every (\d+) ([^;]+?) on self \(max (\d+)\)",
+    re.IGNORECASE,
+)
+_HAS_STATE_SKILL_FLIP = re.compile(
+    r"has (.+?), activate\s+'([^']+)' instead",
+    re.IGNORECASE,
+)
+_ON_USE_GAIN_RESOURCE = re.compile(
+    r"\[On Use\] Gain (\d+) (.+?)(?:\s*;|\s*$)",
+    re.IGNORECASE,
+)
+_KILL_GAIN_RESOURCE = re.compile(
+    r"kills the target, gain (\d+) (.+?)(?:\s*;|\s*$)",
+    re.IGNORECASE,
+)
+_MOUNT_STATE = re.compile(r"mount (.+?)(?:\s*;|$)", re.IGNORECASE)
+_MOUNT_SP_COST = re.compile(r"Lose (\d+) SP every time[^;]*mount", re.IGNORECASE)
+_LOSE_STATE_TURN_END = re.compile(r"\[Turn End\][^;]*Lose (.+?)(?:\s*;|$)", re.IGNORECASE)
+_GAIN_STATE_NEXT_TURN = re.compile(
+    r"\[Combat Start\][^;]*gain (\d+) (.+?) next turn",
+    re.IGNORECASE,
+)
+_UNIQUE_ARCHETYPE_EXCLUDED = frozenset({
+    "Nails", "Fanatic",
+    "Discard", "Insight", "Erudition",
+    "Overcharge", "Unbreakable Coin", "Unfocused Volley",
+})
 
 _COIN_ROW = re.compile(r"^\|\s*(\d)\s*\|(.+)\|$")
 
@@ -288,6 +324,8 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
         )
     for m in _AT_CHARGE_CP.finditer(all_eff):
         damage_scales.append(f"At {m.group(1)}+ Charge, Coin Power +{m.group(2)}")
+    for m in _AT_CHARGE_CLASH.finditer(all_eff):
+        damage_scales.append(f"At {m.group(1)}+ Charge, Clash Power +{m.group(2)}")
     cm = _CLASH_FROM_POTENCY.search(all_eff)
     if cm:
         damage_scales.append(f"Clash Power = Charge Potency (max +{cm.group(1)})")
@@ -295,6 +333,21 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
     if pm:
         damage_scales.append(
             f"+{pm.group(1)}% damage per Charge Potency on final coin (max +{pm.group(2)}%)"
+        )
+    for m in _DAMAGE_PER_SELF_RESOURCE.finditer(all_eff):
+        resource = m.group(2).strip()
+        damage_scales.append(
+            f"+{m.group(1)}% damage per {resource} (max +{m.group(3)}%)"
+        )
+    for m in _STAT_PER_SELF_RESOURCE.finditer(all_eff):
+        damage_scales.append(
+            f"{m.group(1)} +{m.group(2)} per {m.group(3)} {m.group(4).strip()} "
+            f"(max +{m.group(5)})"
+        )
+    coin_scale = _CHARGE_COIN_SCALING.search(all_eff)
+    if coin_scale:
+        damage_scales.append(
+            f"Final coin: consume up to {coin_scale.group(1)} Charge for matching Coin Power"
         )
 
     return {
@@ -744,7 +797,7 @@ _DEFENSE_NOTABLE_KWS = re.compile(
     re.IGNORECASE,
 )
 _USE_AS_COUNTER = re.compile(
-    r'use\s+"([^"]+)"(?:\s+or\s+"([^"]+)")?\s+as\s+Counter',
+    r"use\s+['\"]([^'\"]+)['\"](?:\s+or\s+['\"]([^'\"]+)['\"])?\s+as\s+Counter",
     re.IGNORECASE,
 )
 _QUEUE_SKILL = re.compile(
@@ -1255,6 +1308,7 @@ def find_charge_archetype(
     for skill in skills:
         combined += " " + " ".join(skill.get("on_use_effects", []))
         combined += " " + " ".join(skill.get("skill_bonuses", []))
+        combined += " " + " ".join(skill.get("damage_scales", []))
         combined += " " + " ".join(e.get("effect", "") for e in skill.get("coin_effects", []))
 
     if not re.search(r"Charge", combined, re.I):
@@ -1318,10 +1372,21 @@ def find_charge_archetype(
 
     if _AT_CHARGE_CP.search(combined):
         signals += 1
+
+    clash_at = _AT_CHARGE_CLASH.findall(combined)
+    if clash_at:
+        signals += 1
+        th, cp = max((int(a), int(b)) for a, b in clash_at)
+        tips.append(
+            f"At **{th}+ Charge Count**, **{s3_name}** gains **+{cp} Clash Power** — "
+            f"build stacks before the finisher."
+        )
+
     if any("charge" in c.lower() for s in skills for c in s.get("conditions", [])):
         signals += 1
 
-    if signals < 2:
+    min_signals = 1 if "Charge" in primary else 2
+    if signals < min_signals:
         return None
 
     if len(tips) == 1:
@@ -1338,6 +1403,218 @@ def find_charge_archetype(
     return {
         "kind": "charge_scaling",
         "payoff_skill": s3_name,
+        "tips": tips[:4],
+        "setup_summary": setup_summary,
+    }
+
+
+def _leading_unique_mechanics(mechanic_profile: dict | None) -> list[tuple[str, int]]:
+    """Top identity-specific resources from mechanic_profile, excluding handled archetypes."""
+    from limbus_guides.nlp.mechanics import STAT_MODIFIERS, STATUS_EFFECTS
+
+    profile = mechanic_profile or {}
+    unique = profile.get("unique_mechanics", {})
+    primary = profile.get("primary_mechanics", [])
+    excluded = _UNIQUE_ARCHETYPE_EXCLUDED | frozenset(STATUS_EFFECTS) | frozenset(STAT_MODIFIERS)
+    seen: set[str] = set()
+    candidates: list[tuple[str, int]] = []
+
+    for name in primary:
+        if name in excluded or name not in unique or unique[name] < 3:
+            continue
+        candidates.append((name, unique[name]))
+        seen.add(name)
+
+    for name, count in sorted(unique.items(), key=lambda x: -x[1]):
+        if name in seen or name in excluded or count < 4:
+            continue
+        candidates.append((name, count))
+        seen.add(name)
+
+    candidates.sort(key=lambda x: -x[1])
+    return candidates[:3]
+
+
+def _resource_matches_mechanic(resource: str, mechanic: str) -> bool:
+    res, mech = resource.strip().lower(), mechanic.lower()
+    return mech in res or res in mech
+
+
+def find_unique_mechanics_archetype(
+    md_text: str,
+    combat_text: str = "",
+    skills: list[dict] | None = None,
+    alternate_skills: list[dict] | None = None,
+    mechanic_profile: dict | None = None,
+) -> dict | None:
+    """
+    Kits whose guide narrative should lead with identity-specific resources
+    (from mechanic_profile.unique_mechanics) rather than a sin-keyword alone.
+    """
+    leading = _leading_unique_mechanics(mechanic_profile)
+    if not leading:
+        return None
+
+    mechanic_names = [name for name, _ in leading[:2]]
+    combined = f"{md_text}\n{combat_text}"
+    all_skills = list(skills or []) + list(alternate_skills or [])
+
+    signals = 0
+    stack_gains: dict[str, dict[str, tuple[int, str]]] = {}
+    damage_scales: list[tuple[int, str, int, str]] = []
+    stat_scales: list[tuple[str, int, int, str, int]] = []
+
+    for skill in all_skills:
+        skill_name = skill.get("name", "S3")
+        text = " ".join(skill.get("on_use_effects", []))
+        for m in _ON_USE_GAIN_RESOURCE.finditer(text):
+            resource = m.group(2).strip()
+            if not any(_resource_matches_mechanic(resource, n) for n in mechanic_names):
+                continue
+            key = next(n for n in mechanic_names if _resource_matches_mechanic(resource, n))
+            stack_gains.setdefault(key, {})["use"] = (int(m.group(1)), skill_name)
+            signals += 1
+        for m in _KILL_GAIN_RESOURCE.finditer(text):
+            resource = m.group(2).strip()
+            if not any(_resource_matches_mechanic(resource, n) for n in mechanic_names):
+                continue
+            key = next(n for n in mechanic_names if _resource_matches_mechanic(resource, n))
+            stack_gains.setdefault(key, {})["kill"] = (int(m.group(1)), skill_name)
+            signals += 1
+        for m in _DAMAGE_PER_SELF_RESOURCE.finditer(text):
+            resource = m.group(2).strip()
+            if any(_resource_matches_mechanic(resource, n) for n in mechanic_names):
+                damage_scales.append(
+                    (int(m.group(1)), resource, int(m.group(3)), skill_name)
+                )
+                signals += 1
+        for m in _STAT_PER_SELF_RESOURCE.finditer(text):
+            resource = m.group(4).strip()
+            if any(_resource_matches_mechanic(resource, n) for n in mechanic_names):
+                stat_scales.append(
+                    (m.group(1), int(m.group(2)), int(m.group(3)), resource, int(m.group(5)))
+                )
+                signals += 1
+
+    flip = _HAS_STATE_SKILL_FLIP.search(combined)
+    if flip and any(
+        _resource_matches_mechanic(flip.group(1).strip(), n) for n in mechanic_names
+    ):
+        signals += 2
+
+    mount = _MOUNT_STATE.search(combined)
+    if mount and any(
+        _resource_matches_mechanic(mount.group(1).strip(), n) for n in mechanic_names
+    ):
+        signals += 1
+
+    if signals < 2:
+        return None
+
+    tips: list[str] = []
+    for mech, gains in stack_gains.items():
+        parts: list[str] = []
+        if "use" in gains:
+            amt, skill_name = gains["use"]
+            parts.append(f"**+{amt} {mech}** on use (**{skill_name}**)")
+        if "kill" in gains:
+            amt, skill_name = gains["kill"]
+            parts.append(f"**+{amt}** on kill (**{skill_name}**)")
+        if parts:
+            tips.append(
+                f"**{mech} stacks** — {'; '.join(parts)}. Build stacks before the finisher."
+            )
+
+    if flip:
+        state, alt_skill = flip.group(1).strip(), flip.group(2).strip()
+        base_skill = next(
+            (
+                s["name"]
+                for s in (skills or [])
+                if flip.group(0) in " ".join(s.get("on_use_effects", []))
+            ),
+            next((s["name"] for s in (skills or []) if s.get("skill_num") == 3), "S3"),
+        )
+        tips.append(
+            f"With **{state}**, **{base_skill}** flips to **{alt_skill}** — "
+            f"acquire **{state}** first, then commit the payoff skill."
+        )
+        if _LOSE_STATE_TURN_END.search(combined):
+            tips.append(
+                f"**{state}** is lost at **Turn End** after the finisher — "
+                f"plan the next acquisition before the following turn."
+            )
+
+    if mount:
+        state = mount.group(1).strip()
+        sp_cost = _MOUNT_SP_COST.search(combined)
+        sp_note = f" (**-{sp_cost.group(1)} SP** to mount)" if sp_cost else ""
+        tips.append(
+            f"**Turn Start** mounts **{state}**{sp_note} while you hold the resource — "
+            f"skills check **{state}** during that window."
+        )
+
+    for pct, resource, cap, skill_name in damage_scales[:2]:
+        tips.append(
+            f"**{skill_name}** scales up to **+{cap}% damage** "
+            f"(+{pct}% per **{resource}**) — stack before the spend turn."
+        )
+
+    for stat, per, every, resource, cap in stat_scales[:1]:
+        tips.append(
+            f"**{stat}** rises with **{resource}** (+{per} per {every}, max +{cap}) — "
+            f"build the resource before committing."
+        )
+
+    counter_name = ""
+    counter_payoff = ""
+    counter_sp_gate = ""
+    for block in parse_all_defense_blocks(md_text):
+        if not any(n.lower() in block["text"].lower() for n in mechanic_names):
+            continue
+        cm = _USE_AS_COUNTER.search(block["text"])
+        if cm:
+            counter_name = block["name"]
+            counter_payoff = cm.group(1) or cm.group(2) or ""
+            sp_m = re.search(r"has\s+(\d+)\+\s+SP", block["text"], re.I)
+            if sp_m:
+                counter_sp_gate = sp_m.group(1)
+            break
+        gain_m = _GAIN_STATE_NEXT_TURN.search(block["text"])
+        if gain_m and any(
+            _resource_matches_mechanic(gain_m.group(2).strip(), n) for n in mechanic_names
+        ):
+            counter_name = block["name"]
+            state = gain_m.group(2).strip()
+            tips.append(
+                f"**{counter_name}** grants **{state}** next turn at Combat Start "
+                f"when missing — use the defense slot to set up the payoff."
+            )
+            break
+
+    if counter_name and counter_payoff:
+        sp_part = f" at **{counter_sp_gate}+ SP**" if counter_sp_gate else ""
+        tips.append(
+            f"**{counter_name}**{sp_part} can fire **{counter_payoff}** as Counter "
+            f"(once per turn) — a second burst line without spending your S3 slot."
+        )
+
+    label = " + ".join(f"**{n}**" for n in mechanic_names)
+    payoff_skill = flip.group(2).strip() if flip else ""
+    if flip:
+        setup_summary = (
+            f"{label} carry — stack resources, acquire **{flip.group(1).strip()}** for "
+            f"**{payoff_skill}**, then rebuild."
+        )
+    else:
+        setup_summary = (
+            f"{label} identity — build unique-resource stacks, hit payoff windows, then rebuild."
+        )
+
+    return {
+        "kind": "unique_mechanics",
+        "mechanics": mechanic_names,
+        "payoff_skill": payoff_skill,
         "tips": tips[:4],
         "setup_summary": setup_summary,
     }
@@ -1425,33 +1702,32 @@ def find_retreating_archetype(
     elif _HEISHOU_SUBSTITUTE.search(combined):
         kind = "heishou_substitute"
         setup_summary = (
-            "**Heishou backup** unit — when this copy is killed, your substitute gains "
-            "passive buffs each Combat Start; plan duplicate deployment order deliberately."
+            "**Heishou substitute** — when this identity is killed, your **backup unit** "
+            "Substitutes in and continues the rotation."
         )
         tips.append(
-            "If this copy dies, your **Substituting** Heishou backup inherits ongoing "
-            "passive value — slot a second copy in the backup row and accept early deaths "
-            "as setup for the replacement's rotation."
+            "Assign a **backup identity** for this sinner — if this unit dies, the backup "
+            "**Substitutes** in and can pick up Heishou passive value on entry."
         )
         if has_heishou_trait:
             tips.append(
                 "Pair with **Heishou Pack** teammates (and **The Lord of Hongyuan** if "
-                "available) so Return-to-field procs and faction passives stack across copies."
+                "available) so Return-to-field procs and faction passives stack across substitutions."
             )
 
     elif has_heishou_trait:
         kind = "heishou_backup"
         setup_summary = (
-            "**Heishou Pack backup** identity — bring a duplicate in the backup slot so "
-            "a fresh copy can **Return to the battlefield** when the active one falls."
+            "**Heishou Pack** — assign a **backup identity** for this sinner so a substitute "
+            "can **Return to the battlefield** when the active unit falls."
         )
         tips.append(
-            "**Backup slot** — deploy two copies of this identity (or mixed Heishou Pack "
-            "backups) so stagger/death swaps in a substitute instead of ending your rotation."
+            "**Backup unit** — slot a backup identity on this sinner (another Heishou Pack "
+            "ID is ideal) so stagger or death **Substitutes** them in with a fresh skill queue."
         )
         tips.append(
-            "Order deployment so your stronger copy acts first; the backup re-enters with "
-            "a clean Skill queue for another full rotation."
+            "Deploy this identity before its backup in the lineup when running multiple "
+            "Heishou units — the substitute re-enters ready for another rotation."
         )
 
     if not kind:
@@ -1697,6 +1973,9 @@ def build_gameplan(identity: dict) -> dict:
     )
     nails_archetype = find_nails_archetype(raw, combat_text, skills)
     charge_archetype = find_charge_archetype(skills, combat_text, profile)
+    unique_mechanics_archetype = find_unique_mechanics_archetype(
+        raw, combat_text, skills, alternate_skills, profile
+    )
 
     from limbus_guides.nlp.archetypes import detect_status_archetypes
 
@@ -1706,6 +1985,7 @@ def build_gameplan(identity: dict) -> dict:
         raw_markdown=raw,
         mechanic_profile=profile,
         nails_archetype=nails_archetype,
+        defense_archetype=defense_archetype,
     )
 
     return {
@@ -1731,6 +2011,7 @@ def build_gameplan(identity: dict) -> dict:
         "retreating_archetype": retreating_archetype,
         "nails_archetype": nails_archetype,
         "charge_archetype": charge_archetype,
+        "unique_mechanics_archetype": unique_mechanics_archetype,
         **status_archetypes,
         "resonance_dependent": detect_resonance_dependency(raw),
         "trait_conditional": detect_trait_conditional(raw),

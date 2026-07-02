@@ -469,6 +469,9 @@ def test_retreating_archetype_overview_and_core_idea():
 
         core = _build_core_idea(identity["name"], gp)
         assert arch["setup_summary"] in core
+        tips_blob = " ".join(arch.get("tips", [])).lower()
+        assert "two copies" not in tips_blob
+        assert "duplicate" not in arch["setup_summary"].lower()
 
     lord = load_parsed_identity("The_Lord_of_Hongyuan_Hong_Lu")
     lord_gp = build_gameplan({**lord, "mechanic_profile": build_mechanic_profile(lord)})
@@ -574,6 +577,73 @@ def test_charge_archetype_w_corp_heathcliff():
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert "Charge" in guide["core_idea"]
     assert "checks Charge thresholds more than he stacks" not in guide["team_suggestion_intro"]
+    playstyle = guide["playstyle_guide"]
+    assert "+4 Coin Power" in playstyle or "Coin Power" in playstyle
+    assert "10" in playstyle
+    assert "Charge Potency" in playstyle or "Clash Power" in playstyle
+
+
+def test_unique_mechanics_archetype_wild_hunt_heathcliff():
+    from limbus_guides.nlp.generation import generate_guide, _build_core_idea, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, find_unique_mechanics_archetype
+
+    slug = "Wild_Hunt_Heathcliff"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = find_unique_mechanics_archetype(
+        identity["raw_markdown"],
+        gp.get("combat_passives_text", ""),
+        gp.get("skills", []),
+        gp.get("alternate_skills", []),
+        identity["mechanic_profile"],
+    )
+    assert arch is not None
+    assert arch["kind"] == "unique_mechanics"
+    assert "Dullahan" in arch["mechanics"]
+    assert "Coffin" in arch["mechanics"]
+    assert any("Coffin" in t for t in arch["tips"])
+    assert any("Dullahan" in t for t in arch["tips"])
+
+    overview = _build_overview_tips(gp)
+    assert "Coffin" in overview
+    assert "Dullahan" in overview
+    assert "clash-support" not in overview.lower()
+
+    core = _build_core_idea(identity["name"], gp)
+    assert "Dullahan" in core
+    assert "Coffin" in core
+    assert "Sinking clash-support" not in core
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert "Lament" in guide["playstyle_guide"]
+    assert "+12% damage per Coffin" in guide["playstyle_guide"] or "Coffin" in guide["playstyle_guide"]
+
+
+def test_charge_archetype_w_corp_faust():
+    from limbus_guides.nlp.generation import generate_guide, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, find_charge_archetype
+
+    slug = "W_Corp._L2_Cleanup_Agent_Faust"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = find_charge_archetype(
+        gp.get("skills", []),
+        gp.get("combat_passives_text", ""),
+        mechanic_profile=identity["mechanic_profile"],
+    )
+    assert arch is not None
+    assert any("Clash Power" in t for t in arch["tips"])
+
+    overview = _build_overview_tips(gp)
+    assert "Charge" in overview
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert "5" in guide["playstyle_guide"]
+    assert "Clash Power" in guide["playstyle_guide"]
 
 
 def test_docent_rodion_res2_combat_and_res3_support():
@@ -656,6 +726,28 @@ def test_discard_archetype_synthetic():
     assert not any("resource loop" in t.lower() for t in arch["tips"])
 
 
+def test_haste_tip_matches_defense_style():
+    from limbus_guides.nlp.generation import generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = gp.get("haste_archetype")
+    assert arch is not None
+    tip = arch["tips"][0].lower()
+    assert "evade sequence" not in tip
+    assert "carry line" not in tip
+    assert "faster than the target" in tip
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    playstyle = guide["playstyle_guide"].lower()
+    assert "carry line" not in playstyle
+    assert "evade sequence" not in playstyle
+
+
 def test_tremor_archetype_unique_subtype_blurb():
     from limbus_guides.nlp.mechanics import build_mechanic_profile
     from limbus_guides.nlp.skill_parser import build_gameplan
@@ -699,6 +791,8 @@ def test_archetype_tips_skip_basic_mechanic_primers():
         "use every appearance to build up",
         "keeps poise climbing",
         "keeps bleed climbing",
+        "evade sequence",
+        "carry line",
     )
     for slug in (
         "Devyat'_Assoc._North_Section_3_Sinclair",
