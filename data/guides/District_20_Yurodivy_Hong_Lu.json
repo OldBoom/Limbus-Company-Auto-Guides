@@ -39,7 +39,8 @@
       "Clash Power": 2,
       "Damage Up": 1
     },
-    "identity_slug": "District_20_Yurodivy_Hong_Lu"
+    "identity_slug": "District_20_Yurodivy_Hong_Lu",
+    "key_status_effects": []
   },
   "synergies": [
     {

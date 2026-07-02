@@ -52,7 +52,8 @@
       "Pierce DMG Up": 1,
       "Arrow": 8
     },
-    "identity_slug": "Shi_Assoc._East_Section_3_Faust"
+    "identity_slug": "Shi_Assoc._East_Section_3_Faust",
+    "key_status_effects": []
   },
   "synergies": [
     {

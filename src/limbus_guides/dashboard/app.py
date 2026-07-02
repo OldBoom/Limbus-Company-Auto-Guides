@@ -166,10 +166,12 @@ def _render_identity_portrait_image(slug: str, *, sinner_name: str) -> None:
             st.markdown(f"**{sinner_name}**")
 
 
-def _shorten(text: str, max_len: int = 40) -> str:
-    if len(text) <= max_len:
-        return text
-    return text[: max_len - 1].rstrip() + "…"
+def _render_identity_name(name: str) -> None:
+    """Full identity title on picker cards — wraps on narrow viewports."""
+    st.markdown(
+        f'<p class="lc-identity-name"><strong>{html_lib.escape(name)}</strong></p>',
+        unsafe_allow_html=True,
+    )
 
 
 def _guides_for_sinner(sinner_name: str, guides: dict[str, dict]) -> dict[str, dict]:
@@ -415,6 +417,23 @@ def _render_dashboard_styles() -> None:
         a.lc-inline-link strong {
             font-weight: 600;
         }
+        /* Identity picker — show full names; wrap instead of truncating */
+        [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name,
+        [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name strong {
+            white-space: normal !important;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            line-height: 1.3;
+            text-overflow: clip !important;
+            overflow: visible !important;
+        }
+        [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name {
+            margin: 0.35rem 0 0.15rem;
+            font-size: 0.92rem;
+        }
+        [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name p {
+            margin: 0;
+        }
         /* Sinner portrait on identity-picker header */
         .lc-portrait-slot [data-testid="stVerticalBlock"] .stImage img {
             width: 100% !important;
@@ -507,9 +526,9 @@ def _render_identity_cards(sinner_name: str, guides: dict[str, dict]) -> None:
                 portrait = _identity_portrait_path(slug) or _portrait_path(sinner_name)
                 if portrait:
                     _render_identity_portrait_picker(portrait, slug=slug, title=name)
-                    st.markdown(f"**{_shorten(name)}**")
+                    _render_identity_name(name)
                 else:
-                    st.markdown(f"**{_shorten(name)}**")
+                    _render_identity_name(name)
                 st.caption(mech_str)
                 _render_pick_button(
                     "Select",

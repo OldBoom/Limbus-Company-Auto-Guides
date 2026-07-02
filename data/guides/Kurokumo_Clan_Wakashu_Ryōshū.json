@@ -36,7 +36,8 @@
       "Damage Down": 1,
       "Offense Level Down": 1
     },
-    "identity_slug": "Kurokumo_Clan_Wakashu_Ryōshū"
+    "identity_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
+    "key_status_effects": []
   },
   "synergies": [
     {

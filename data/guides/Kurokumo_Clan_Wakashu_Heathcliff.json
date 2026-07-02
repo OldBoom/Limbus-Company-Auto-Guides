@@ -39,7 +39,8 @@
       "Offense Level Down": 1,
       "Final Power": 1
     },
-    "identity_slug": "Kurokumo_Clan_Wakashu_Heathcliff"
+    "identity_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
+    "key_status_effects": []
   },
   "synergies": [
     {

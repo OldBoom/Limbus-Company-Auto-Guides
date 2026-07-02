@@ -36,13 +36,15 @@
       "Slash DMG Up": 1
     },
     "unique_mechanics": {
-      "Corpus Ingredient": 15,
-      "Iron Maiden": 6,
+      "Corpus Ingredient": 16,
+      "Iron Maiden": 9,
       "Unbreakable Coin": 3,
-      "The Self Unbound": 3,
-      "Flow State": 3,
+      "The Self Unbound — Flow State": 8,
       "Assist Defense": 2,
-      "Artwork: Fascia": 1
+      "Artwork: Fascia": 8,
+      "The Self Unbound": 7,
+      "Flow State": 7,
+      "Corpus Ingredient (Unique Charge)": 8
     },
     "triggers": {
       "On Use": 9,
@@ -71,12 +73,17 @@
       "Corpus Ingredient": 15,
       "Iron Maiden": 6,
       "Unbreakable Coin": 3,
-      "The Self Unbound": 3,
-      "Flow State": 3,
+      "The Self Unbound — Flow State": 3,
       "Assist Defense": 2,
       "Artwork: Fascia": 1
     },
-    "identity_slug": "Ring_Apprentice_Faust"
+    "identity_slug": "Ring_Apprentice_Faust",
+    "key_status_effects": [
+      "Iron Maiden",
+      "The Self Unbound — Flow State",
+      "Corpus Ingredient (Unique Charge)",
+      "Artwork: Fascia"
+    ]
   },
   "synergies": [
     {

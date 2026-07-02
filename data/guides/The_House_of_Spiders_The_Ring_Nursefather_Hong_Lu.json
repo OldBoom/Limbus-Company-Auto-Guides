@@ -36,9 +36,11 @@
       "Offense Level Down": 1
     },
     "unique_mechanics": {
-      "Corpus Ingredient": 20,
+      "Corpus Ingredient": 21,
       "Unbreakable Coin": 3,
-      "Assist Defense": 2
+      "Corpus Theater (Hong Lu)": 8,
+      "Assist Defense": 4,
+      "Artwork — Tibia (Hong Lu)": 8
     },
     "triggers": {
       "On Use": 12,
@@ -66,9 +68,16 @@
       "Offense Level Down": 1,
       "Corpus Ingredient": 20,
       "Unbreakable Coin": 3,
-      "Assist Defense": 2
+      "Corpus Theater (Hong Lu)": 1,
+      "Assist Defense": 2,
+      "Artwork — Tibia (Hong Lu)": 1
     },
-    "identity_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
+    "identity_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+    "key_status_effects": [
+      "Corpus Ingredient",
+      "Corpus Theater (Hong Lu)",
+      "Artwork — Tibia (Hong Lu)"
+    ]
   },
   "synergies": [
     {

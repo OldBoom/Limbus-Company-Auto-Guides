@@ -4,14 +4,18 @@ Operator reference for adding Limbus Company identities to this project. Use
 `scripts/add_identity.py` as the primary entry point; this document explains
 slug rules, quality checkpoints, and manual fallbacks.
 
+**Environment:** see [how-to-run.md](how-to-run.md) for venv setup. On Windows, if
+PowerShell blocks `.ps1` files, run `scripts\setup.cmd` and use
+`.venv\Scripts\python.exe` for all commands below.
+
 ## Quick start
 
-```powershell
-python scripts/add_identity.py "https://limbuscompany.wiki.gg/wiki/<Page_Title>"
+```cmd
+.venv\Scripts\python.exe scripts\add_identity.py "https://limbuscompany.wiki.gg/wiki/<Page_Title>"
 ```
 
 The script: resolves slug → fetches wiki → writes `docs/parsed-ids/<slug>.md` →
-updates `config/sinners.json` → patches unknown mechanics → generates
+updates `config/sinners.json` → registers unknown Key Status Effects → generates
 `data/guides/<slug>.json` → prompts for reference text and portrait → prints
 ROUGE-L if a reference was saved.
 
@@ -80,14 +84,20 @@ wiki_title_to_stem(filename_to_wiki_title(slug)) == slug
 
 1. Wiki `{{StatusEffect|Name}}` tags are extracted into **Key Status Effects** in parsed markdown.
 2. Non-standard effects (not in `STANDARD_EFFECTS` in `wiki_parser.py`) appear as `### Name` headings.
-3. `run_pipeline.py` and `add_identity.py` auto-register unknown Key Status Effects in
-   `config/unique_mechanics.json` (merged at runtime with `UNIQUE_MECHANICS` in
-   `src/limbus_guides/nlp/mechanics.py`).
-4. If skill text contains scaling (`per N Name`) or support (`gain N Name`), the script
-   also patches `SCALES_OFF_RE` / `SUPPORT_PASSIVE_RE` in `synergy.py`.
-5. Pass `--confirm-mechanics` to approve each term interactively.
+3. `run_pipeline.py`, `run_for_slug()`, and `add_identity.py` call
+   `sync_from_parsed_ids()` to append unknown Key Status Effects to
+   `config/unique_mechanics.json`. At runtime these merge with `UNIQUE_MECHANICS` in
+   `src/limbus_guides/nlp/mechanics.py` via `get_all_unique_mechanics()`.
+4. `build_mechanic_profile()` → `enrich_mechanic_profile()` boosts counts for Key Status
+   resources so `unique_mechanics_archetype` can lead guides (e.g. Coffin / Dullahan).
+5. If skill text contains scaling (`per N Name`) or support (`gain N Name`), `add_identity.py`
+   may also patch `SCALES_OFF_RE` / `SUPPORT_PASSIVE_RE` in `synergy.py` when patterns match.
+6. Pass `--confirm-mechanics` to approve each term interactively.
 
-After patching mechanics at runtime, `clear_mechanics_cache()` reloads the spaCy EntityRuler.
+After registry or regex changes, `clear_mechanics_cache()` reloads the spaCy EntityRuler.
+
+**Manual faction link** (name prefix does not match passive group): add slug to
+`_FACTION_SLUG_OVERRIDES` in `synergy.py` (e.g. Wild Hunt Heathcliff → Edgar Family).
 
 ---
 
@@ -101,7 +111,7 @@ After patching mechanics at runtime, `clear_mechanics_cache()` reloads the spaCy
 
 **Do not** generate references from the pipeline guide output (circular evaluation).
 `add_identity.py` prints a wiki excerpt and a suggested LLM prompt; paste the result
-at the interactive prompt (same workflow used for the existing 50 references).
+at the interactive prompt (same workflow used for the existing roster references).
 
 Flags: `--ref-file PATH`, `--skip-ref`.
 
@@ -145,8 +155,8 @@ Use `--force-protected` to overwrite.
 
 After bulk changes, compare stored markdown vs live wiki:
 
-```powershell
-python scripts/audit_wiki_parsing.py
+```cmd
+.venv\Scripts\python.exe scripts\audit_wiki_parsing.py
 ```
 
 Output: `data/wiki_audit_report.json` + stdout summary. Look for:
@@ -178,7 +188,7 @@ Output: `data/wiki_audit_report.json` + stdout summary. Look for:
 
 For many identities at once:
 
-```powershell
-python scripts/fetch_wiki_identities.py "<url1>" "<url2>" --update-config
-python scripts/run_pipeline.py
+```cmd
+.venv\Scripts\python.exe scripts\fetch_wiki_identities.py "<url1>" "<url2>" --update-config
+.venv\Scripts\python.exe scripts\run_pipeline.py
 ```

@@ -53,7 +53,8 @@
       "Damage Up": 1,
       "Unbreakable Coin": 6
     },
-    "identity_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis"
+    "identity_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
+    "key_status_effects": []
   },
   "synergies": [
     {

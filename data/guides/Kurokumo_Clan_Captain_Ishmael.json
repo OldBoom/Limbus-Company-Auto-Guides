@@ -37,7 +37,8 @@
       "Atk Weight": 3,
       "Offense Level Down": 1
     },
-    "identity_slug": "Kurokumo_Clan_Captain_Ishmael"
+    "identity_slug": "Kurokumo_Clan_Captain_Ishmael",
+    "key_status_effects": []
   },
   "synergies": [
     {

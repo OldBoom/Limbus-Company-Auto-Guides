@@ -30,7 +30,8 @@
       "Coin Power": 5,
       "Atk Weight": 3
     },
-    "identity_slug": "Tingtang_Gang_Gangleader_Hong_Lu"
+    "identity_slug": "Tingtang_Gang_Gangleader_Hong_Lu",
+    "key_status_effects": []
   },
   "synergies": [
     {

@@ -195,6 +195,30 @@ def test_heishou_pack_synergy_prioritizes_lord_hong_lu():
         assert team["picks"][0]["teammate_name"] == "The Lord of Hongyuan Hong Lu"
 
 
+def test_wild_hunt_heathcliff_edgar_family_faction_match():
+    from limbus_guides.nlp.synergy import (
+        WILD_HUNT_HEATHCLIFF_SLUG,
+        _faction_for_identity,
+        find_synergy_teammates,
+    )
+
+    roster = load_all_parsed()
+    wild_hunt = roster[WILD_HUNT_HEATHCLIFF_SLUG]
+    edgar_slug = "Edgar_Family_Butler_Ishmael"
+
+    assert _faction_for_identity(wild_hunt) == "Edgar Family"
+
+    synergies = find_synergy_teammates(wild_hunt, roster, k=8)
+    edgar_pick = next(s for s in synergies if s["teammate_slug"] == edgar_slug)
+    assert edgar_pick.get("faction_match") is True
+    assert edgar_pick["score"] >= 0.85 + 0.07
+
+    edgar = roster[edgar_slug]
+    reverse = find_synergy_teammates(edgar, roster, k=8)
+    wild_pick = next(s for s in reverse if s["teammate_slug"] == WILD_HUNT_HEATHCLIFF_SLUG)
+    assert wild_pick.get("faction_match") is True
+
+
 def test_embedding_team_suggestion_note_not_duplicated():
     from limbus_guides.nlp.generation import _build_team_suggestions, generate_guide
     from limbus_guides.nlp.mechanics import build_mechanic_profile

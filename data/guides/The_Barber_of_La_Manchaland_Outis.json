@@ -24,8 +24,9 @@
       "Clash Power": 2
     },
     "unique_mechanics": {
-      "Bloodfeast": 10,
-      "Sewing Target": 7
+      "Bloodfeast": 11,
+      "Sewing Target": 7,
+      "Hardblood": 1
     },
     "triggers": {
       "On Use": 8,
@@ -41,7 +42,8 @@
       "Bloodfeast": 10,
       "Sewing Target": 7
     },
-    "identity_slug": "The_Barber_of_La_Manchaland_Outis"
+    "identity_slug": "The_Barber_of_La_Manchaland_Outis",
+    "key_status_effects": []
   },
   "synergies": [
     {

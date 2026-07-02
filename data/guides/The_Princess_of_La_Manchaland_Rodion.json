@@ -25,9 +25,9 @@
       "Atk Weight": 4
     },
     "unique_mechanics": {
-      "Bloodfeast": 10,
+      "Bloodfeast": 11,
       "Blooming Thorn": 8,
-      "Hardblood": 1,
+      "Hardblood": 4,
       "Festive Fever": 2
     },
     "triggers": {
@@ -47,7 +47,8 @@
       "Hardblood": 1,
       "Festive Fever": 2
     },
-    "identity_slug": "The_Princess_of_La_Manchaland_Rodion"
+    "identity_slug": "The_Princess_of_La_Manchaland_Rodion",
+    "key_status_effects": []
   },
   "synergies": [
     {

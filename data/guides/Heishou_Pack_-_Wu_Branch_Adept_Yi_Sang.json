@@ -34,6 +34,8 @@
       "Deathrite": 1,
       "Concussion": 4,
       "Unbreakable Coin": 5,
+      "Exalted Command": 1,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 1,
       "Heishou Bolus Contamination": 1
     },
     "triggers": {
@@ -57,9 +59,11 @@
       "Deathrite": 1,
       "Concussion": 4,
       "Unbreakable Coin": 5,
-      "Heishou Bolus Contamination": 1
+      "Exalted Command": 1,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 1
     },
-    "identity_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang"
+    "identity_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+    "key_status_effects": []
   },
   "synergies": [
     {

@@ -64,8 +64,14 @@ _FACTION_BONUS = 0.07  # Soft bump — meaningful but won't override a better cr
 GENERIC_TRAITS = frozenset({"Fixer", "Syndicate", "The Backstreets", "The Fingers"})
 
 LORD_HONGYUAN_SLUG = "The_Lord_of_Hongyuan_Hong_Lu"
+WILD_HUNT_HEATHCLIFF_SLUG = "Wild_Hunt_Heathcliff"
 _HEISHOU_PACK_TRAIT = "Heishou Pack"
 _HEISHOU_LORD_SCORE = 0.99  # Always the primary synergy for Heishou Pack members
+
+# Identities whose name prefix does not reflect their faction passive group.
+_FACTION_SLUG_OVERRIDES: dict[str, str] = {
+    WILD_HUNT_HEATHCLIFF_SLUG: "Edgar Family",
+}
 
 _RESONANCE_RE = re.compile(r"\bReson\.", re.IGNORECASE)
 
@@ -117,6 +123,19 @@ def _extract_faction(name: str) -> str | None:
         if prefix.lower() in name.lower():
             return faction
     return None
+
+
+def _faction_for_identity(identity: dict) -> str | None:
+    """Faction label from name prefix, with slug-level overrides for edge cases."""
+    slug = identity.get("slug", "")
+    if slug in _FACTION_SLUG_OVERRIDES:
+        return _FACTION_SLUG_OVERRIDES[slug]
+    return _extract_faction(identity.get("name", ""))
+
+
+def _faction_match(identity: dict, other: dict) -> bool:
+    my_faction = _faction_for_identity(identity)
+    return my_faction is not None and my_faction == _faction_for_identity(other)
 
 
 def extract_unique_tremor_types(text: str) -> set[str]:
@@ -219,7 +238,7 @@ def find_synergy_teammates(
     if mechanic_profiles and slug in mechanic_profiles:
         my_scales.update(mechanic_profiles[slug].get("primary_mechanics", []))
 
-    my_faction = _extract_faction(identity.get("name", ""))
+    my_faction = _faction_for_identity(identity)
 
     suggestions: list[dict] = []
     seen: set[str] = set()
@@ -252,7 +271,7 @@ def find_synergy_teammates(
             reason = _build_rule_reason(passive_name, effect, my_scales, text)
             base_score = 0.9
             # Soft faction bonus — same-faction allies are slightly preferred
-            if my_faction and _extract_faction(other.get("name", "")) == my_faction:
+            if my_faction and _faction_match(identity, other):
                 base_score += _FACTION_BONUS
             suggestions.append(
                 {
@@ -261,7 +280,7 @@ def find_synergy_teammates(
                     "reason": reason,
                     "score": base_score,
                     "source": "rule",
-                    "faction_match": my_faction is not None and _extract_faction(other.get("name", "")) == my_faction,
+                    "faction_match": _faction_match(identity, other),
                 }
             )
             seen.add(other_slug)
@@ -288,7 +307,7 @@ def find_synergy_teammates(
                     f"{other.get('name', other_slug)} scales off {effect}."
                 )
                 base_score = 0.85
-                if my_faction and _extract_faction(other.get("name", "")) == my_faction:
+                if my_faction and _faction_match(identity, other):
                     base_score += _FACTION_BONUS
                 suggestions.append(
                     {
@@ -297,7 +316,7 @@ def find_synergy_teammates(
                         "reason": reason,
                         "score": base_score,
                         "source": "rule",
-                        "faction_match": my_faction is not None and _extract_faction(other.get("name", "")) == my_faction,
+                        "faction_match": _faction_match(identity, other),
                     }
                 )
                 seen.add(other_slug)
@@ -321,7 +340,7 @@ def find_synergy_teammates(
                 f"stack Tremor on one target for Amplitude Conversion and Burst setups."
             )
             base_score = _UNIQUE_TREMOR_RULE_SCORE
-            if my_faction and _extract_faction(other.get("name", "")) == my_faction:
+            if my_faction and _faction_match(identity, other):
                 base_score += _FACTION_BONUS
             suggestions.append(
                 {
@@ -330,7 +349,7 @@ def find_synergy_teammates(
                     "reason": reason,
                     "score": base_score,
                     "source": "rule",
-                    "faction_match": my_faction is not None and _extract_faction(other.get("name", "")) == my_faction,
+                    "faction_match": _faction_match(identity, other),
                     "unique_tremor_match": True,
                 }
             )
@@ -408,7 +427,7 @@ def find_synergy_teammates(
         if other_slug in seen:
             continue
         other = roster[other_slug]
-        faction_bonus = _FACTION_BONUS if (my_faction and _extract_faction(other.get("name", "")) == my_faction) else 0.0
+        faction_bonus = _FACTION_BONUS if _faction_match(identity, other) else 0.0
         embedding_entries.append(
             {
                 "teammate_slug": other_slug,

@@ -45,7 +45,8 @@
       "Deathrite": 6,
       "Unbreakable Coin": 1
     },
-    "identity_slug": "Heishou_Pack_-_Si_Branch_Gregor"
+    "identity_slug": "Heishou_Pack_-_Si_Branch_Gregor",
+    "key_status_effects": []
   },
   "synergies": [
     {

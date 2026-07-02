@@ -27,7 +27,7 @@
     },
     "unique_mechanics": {
       "Dark Flame": 5,
-      "Magic Bullet": 11
+      "Magic Bullet": 14
     },
     "triggers": {
       "Heads Hit": 1,
@@ -46,7 +46,8 @@
       "Dark Flame": 5,
       "Magic Bullet": 11
     },
-    "identity_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis"
+    "identity_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+    "key_status_effects": []
   },
   "synergies": [
     {

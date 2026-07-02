@@ -29,13 +29,13 @@
       "Defense Level Up": 2
     },
     "unique_mechanics": {
-      "Palette Vibrante": 7,
-      "Mauled Color — Rouge —": 8,
-      "Mauled Color — Bleu —": 5,
-      "Touche Hardie": 4,
-      "Unfocused Volley": 1,
+      "Palette Vibrante": 8,
+      "Mauled Color — Rouge —": 9,
+      "Mauled Color — Bleu —": 8,
+      "Touche Hardie": 8,
+      "Unfocused Volley": 8,
       "Unbreakable Coin": 1,
-      "Réflexion": 2
+      "Réflexion": 8
     },
     "triggers": {
       "On Use": 9,
@@ -60,7 +60,15 @@
       "Unbreakable Coin": 1,
       "Réflexion": 2
     },
-    "identity_slug": "The_Ring_Fauvist_Docent_Rodion"
+    "identity_slug": "The_Ring_Fauvist_Docent_Rodion",
+    "key_status_effects": [
+      "Palette Vibrante",
+      "Mauled Color — Rouge —",
+      "Mauled Color — Bleu —",
+      "Touche Hardie",
+      "Unfocused Volley",
+      "Réflexion"
+    ]
   },
   "synergies": [
     {

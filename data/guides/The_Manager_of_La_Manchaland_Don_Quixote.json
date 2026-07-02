@@ -26,8 +26,8 @@
       "Damage Up": 3
     },
     "unique_mechanics": {
-      "Bloodfeast": 23,
-      "Hardblood": 18,
+      "Bloodfeast": 24,
+      "Hardblood": 22,
       "Unbreakable Coin": 8
     },
     "triggers": {
@@ -47,7 +47,8 @@
       "Hardblood": 18,
       "Unbreakable Coin": 8
     },
-    "identity_slug": "The_Manager_of_La_Manchaland_Don_Quixote"
+    "identity_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
+    "key_status_effects": []
   },
   "synergies": [
     {

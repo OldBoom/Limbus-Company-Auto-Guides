@@ -37,7 +37,8 @@
       "Atk Weight": 3,
       "Final Power": 1
     },
-    "identity_slug": "R_Corp._4th_Pack_Rhino_Meursault"
+    "identity_slug": "R_Corp._4th_Pack_Rhino_Meursault",
+    "key_status_effects": []
   },
   "synergies": [
     {

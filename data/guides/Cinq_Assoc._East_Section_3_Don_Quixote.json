@@ -43,7 +43,8 @@
       "Atk Weight": 3,
       "Defense Level Down": 1
     },
-    "identity_slug": "Cinq_Assoc._East_Section_3_Don_Quixote"
+    "identity_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+    "key_status_effects": []
   },
   "synergies": [
     {

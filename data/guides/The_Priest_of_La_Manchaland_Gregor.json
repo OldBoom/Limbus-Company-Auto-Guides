@@ -23,7 +23,8 @@
       "Atk Weight": 3
     },
     "unique_mechanics": {
-      "Bloodfeast": 4
+      "Bloodfeast": 5,
+      "Hardblood": 1
     },
     "triggers": {
       "On Use": 11,
@@ -39,7 +40,8 @@
       "Atk Weight": 3,
       "Bloodfeast": 4
     },
-    "identity_slug": "The_Priest_of_La_Manchaland_Gregor"
+    "identity_slug": "The_Priest_of_La_Manchaland_Gregor",
+    "key_status_effects": []
   },
   "synergies": [
     {

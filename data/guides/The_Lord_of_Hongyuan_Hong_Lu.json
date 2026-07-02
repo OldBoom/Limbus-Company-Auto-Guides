@@ -33,8 +33,11 @@
       "Unbreakable Coin": 5,
       "Deathrite": 1,
       "Life from Death": 3,
-      "Heishou Bolus Contamination": 2,
-      "Tarnished Blood": 4
+      "Heishou Bolus Contamination — 黑獸丸染 —": 8,
+      "Tarnished Blood": 6,
+      "Heishou Bolus Contamination": 3,
+      "Exalted Command": 8,
+      "Unrelenting Storm": 8
     },
     "triggers": {
       "Combat Start": 3,
@@ -56,10 +59,18 @@
       "Unbreakable Coin": 5,
       "Deathrite": 1,
       "Life from Death": 3,
-      "Heishou Bolus Contamination": 2,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 2,
       "Tarnished Blood": 4
     },
-    "identity_slug": "The_Lord_of_Hongyuan_Hong_Lu"
+    "identity_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+    "key_status_effects": [
+      "Defense Power Up",
+      "Gluttony DMG Up",
+      "Unrelenting Storm",
+      "Exalted Command",
+      "Heishou Bolus Contamination — 黑獸丸染 —",
+      "Slash Resist Down"
+    ]
   },
   "synergies": [
     {

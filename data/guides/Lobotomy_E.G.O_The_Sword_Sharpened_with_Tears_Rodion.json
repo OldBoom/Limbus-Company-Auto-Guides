@@ -51,7 +51,8 @@
       "Damage Up": 2,
       "Unbreakable Coin": 3
     },
-    "identity_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion"
+    "identity_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+    "key_status_effects": []
   },
   "synergies": [
     {

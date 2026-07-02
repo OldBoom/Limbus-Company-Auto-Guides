@@ -37,7 +37,8 @@
       "Atk Weight": 3,
       "Clash Power": 4
     },
-    "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote"
+    "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+    "key_status_effects": []
   },
   "synergies": [
     {

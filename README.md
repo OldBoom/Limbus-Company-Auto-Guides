@@ -8,7 +8,7 @@ An NLP pipeline that scrapes [Limbus Company wiki.gg](https://limbus-company.wik
 Wiki / Parsed Markdown → Structured JSON → NLP Pipeline → Guide JSON → Streamlit Dashboard
 ```
 
-**Scale:** 50 identities across 12 sinners (parsed markdown, JSON, guides, and evaluation references).
+**Scale:** 51 identities across 12 sinners (parsed markdown, JSON, guides, and evaluation references).
 
 **NLP Pipeline:**
 
@@ -31,13 +31,22 @@ config/sinners.json    Character roster config
 
 ## Getting Started
 
-**Quick setup (Windows):**
+**Quick setup (Windows)** — use CMD if PowerShell blocks scripts:
+
+```cmd
+scripts\setup.cmd
+.venv\Scripts\python.exe scripts\run_pipeline.py
+.venv\Scripts\python.exe -m streamlit run src\limbus_guides\dashboard\app.py
+```
+
+See [how-to-run.md](docs/how-to-run.md) for troubleshooting (`No module named 'limbus_guides'`,
+execution policy, single-slug regen, and full script list).
+
+**PowerShell** (when `.ps1` execution is allowed):
 
 ```powershell
 .\scripts\setup.ps1
-.\.venv\Scripts\Activate.ps1
-python scripts/run_pipeline.py
-streamlit run src/limbus_guides/dashboard/app.py
+.\.venv\Scripts\python.exe scripts\run_pipeline.py
 ```
 
 **Manual setup:**
@@ -46,6 +55,7 @@ streamlit run src/limbus_guides/dashboard/app.py
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 pip install -r requirements.txt
+pip install -e .
 python -m spacy download en_core_web_sm
 ```
 
@@ -55,14 +65,15 @@ If `python` is not found, install Python 3.12:
 winget install Python.Python.3.12
 ```
 
-Then open a **new terminal** (refreshes PATH) and run `setup.ps1`.
+Then open a **new terminal** (refreshes PATH) and run `scripts\setup.cmd`.
 
 Optional: set `USE_OLLAMA=1` and run [Ollama](https://ollama.com) with `mistral` for LLM-generated guides.
 
 ## Documentation
 
 - [Project Specification](docs/project-specification.md)
-- [How to Run](docs/how-to-run.md) — add/edit identities and regenerate guides
+- [How to Run](docs/how-to-run.md) — setup, add/edit identities, regenerate guides
+- [Ingestion Rulebook](docs/ingestion-rulebook.md) — slug rules, mechanics policy, protected files
 - [Domain Primer](docs/domain-primer.md) — gameplay overview for the project team
 - [Sprint Plan](docs/sprints.md)
 - [Course Rubric](docs/course-files/deliverable-requirements.md)

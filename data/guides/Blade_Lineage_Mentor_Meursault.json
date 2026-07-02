@@ -35,7 +35,8 @@
       "Coin Power": 7,
       "Atk Weight": 4
     },
-    "identity_slug": "Blade_Lineage_Mentor_Meursault"
+    "identity_slug": "Blade_Lineage_Mentor_Meursault",
+    "key_status_effects": []
   },
   "synergies": [
     {

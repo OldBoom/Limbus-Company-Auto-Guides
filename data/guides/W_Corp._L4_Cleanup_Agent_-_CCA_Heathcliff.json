@@ -30,7 +30,7 @@
     },
     "unique_mechanics": {
       "Unbreakable Coin": 2,
-      "Overcharge": 1
+      "Overcharge": 2
     },
     "triggers": {
       "On Use": 6,
@@ -51,7 +51,8 @@
       "Unbreakable Coin": 2,
       "Overcharge": 1
     },
-    "identity_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff"
+    "identity_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+    "key_status_effects": []
   },
   "synergies": [
     {

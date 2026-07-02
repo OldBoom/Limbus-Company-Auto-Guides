@@ -32,7 +32,8 @@
       "Coin Power": 5,
       "Atk Weight": 3
     },
-    "identity_slug": "Blade_Lineage_Salsu_Yi_Sang"
+    "identity_slug": "Blade_Lineage_Salsu_Yi_Sang",
+    "key_status_effects": []
   },
   "synergies": [
     {

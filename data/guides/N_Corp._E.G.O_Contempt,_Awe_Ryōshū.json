@@ -51,7 +51,8 @@
       "Final Power": 1,
       "Unbreakable Coin": 5
     },
-    "identity_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū"
+    "identity_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+    "key_status_effects": []
   },
   "synergies": [
     {

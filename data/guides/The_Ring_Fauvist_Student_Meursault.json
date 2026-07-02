@@ -47,7 +47,8 @@
       "Defense Level Down": 1,
       "Mauled Color — Rouge —": 5
     },
-    "identity_slug": "The_Ring_Fauvist_Student_Meursault"
+    "identity_slug": "The_Ring_Fauvist_Student_Meursault",
+    "key_status_effects": []
   },
   "synergies": [
     {

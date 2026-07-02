@@ -38,7 +38,8 @@
       "Coin Power": 6,
       "Atk Weight": 3
     },
-    "identity_slug": "Seven_Assoc._South_Section_4_Faust"
+    "identity_slug": "Seven_Assoc._South_Section_4_Faust",
+    "key_status_effects": []
   },
   "synergies": [
     {

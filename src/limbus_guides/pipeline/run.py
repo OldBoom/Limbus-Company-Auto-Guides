@@ -136,3 +136,14 @@ def run_for_slug(
     }
     (dest_guides / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return output
+
+
+def main() -> int:
+    """CLI entrypoint for `python -m limbus_guides.pipeline.run` and `limbus-pipeline`."""
+    guides = run_pipeline(use_ollama=False)
+    print(f"Generated {len(guides)} guides in data/guides/")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

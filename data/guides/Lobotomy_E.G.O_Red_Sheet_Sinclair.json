@@ -21,7 +21,7 @@
       "Atk Weight": 3
     },
     "unique_mechanics": {
-      "Talisman": 10
+      "Talisman": 12
     },
     "triggers": {
       "On Hit": 7,
@@ -35,7 +35,8 @@
       "Atk Weight": 3,
       "Talisman": 10
     },
-    "identity_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair"
+    "identity_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
+    "key_status_effects": []
   },
   "synergies": [
     {

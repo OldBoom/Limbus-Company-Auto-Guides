@@ -23,7 +23,9 @@
       "Atk Weight": 3,
       "Clash Power": 1
     },
-    "unique_mechanics": {},
+    "unique_mechanics": {
+      "Overcharge": 1
+    },
     "triggers": {
       "On Use": 2,
       "On Hit": 4
@@ -36,7 +38,8 @@
       "Atk Weight": 3,
       "Clash Power": 1
     },
-    "identity_slug": "W_Corp._L2_Cleanup_Agent_Faust"
+    "identity_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+    "key_status_effects": []
   },
   "synergies": [
     {

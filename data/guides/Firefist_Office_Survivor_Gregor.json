@@ -35,7 +35,8 @@
       "Atk Weight": 3,
       "Blunt DMG Up": 1
     },
-    "identity_slug": "Firefist_Office_Survivor_Gregor"
+    "identity_slug": "Firefist_Office_Survivor_Gregor",
+    "key_status_effects": []
   },
   "synergies": [
     {

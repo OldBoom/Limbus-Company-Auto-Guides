@@ -34,7 +34,8 @@
       "Atk Weight": 3,
       "Defense Level Down": 1
     },
-    "identity_slug": "Seven_Assoc._South_Section_4_Heathcliff"
+    "identity_slug": "Seven_Assoc._South_Section_4_Heathcliff",
+    "key_status_effects": []
   },
   "synergies": [
     {
