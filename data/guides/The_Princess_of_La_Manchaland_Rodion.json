@@ -15,21 +15,6 @@
       "Atk Weight",
       "Festive Fever"
     ],
-    "status_effects": {
-      "Bleed": 23,
-      "Rupture": 9
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 4
-    },
-    "unique_mechanics": {
-      "Bloodfeast": 11,
-      "Blooming Thorn": 8,
-      "Hardblood": 4,
-      "Festive Fever": 2
-    },
     "triggers": {
       "Combat Start": 2,
       "On Hit": 20,
@@ -37,18 +22,24 @@
       "Attack End": 1
     },
     "all_mechanics": {
+      "Bloodfeast": 10,
+      "Hardblood": 1,
+      "Blooming Thorn": 8,
+      "Festive Fever": 2,
       "Bleed": 23,
       "Rupture": 9,
-      "Base Power": 5,
       "Coin Power": 7,
-      "Atk Weight": 4,
-      "Bloodfeast": 10,
-      "Blooming Thorn": 8,
-      "Hardblood": 1,
-      "Festive Fever": 2
+      "Base Power": 5,
+      "Atk Weight": 4
     },
     "identity_slug": "The_Princess_of_La_Manchaland_Rodion",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Bloodfeast": 11,
+      "Hardblood": 4,
+      "Blooming Thorn": 8,
+      "Festive Fever": 2
+    }
   },
   "synergies": [
     {

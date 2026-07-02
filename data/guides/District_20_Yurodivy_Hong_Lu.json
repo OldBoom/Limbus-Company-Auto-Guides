@@ -14,18 +14,6 @@
       "Shield",
       "Damage Up"
     ],
-    "status_effects": {
-      "Tremor": 31,
-      "Shield": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 8,
-      "Atk Weight": 3,
-      "Clash Power": 2,
-      "Damage Up": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 7,
       "On Hit": 9
@@ -33,14 +21,15 @@
     "all_mechanics": {
       "Tremor": 31,
       "Shield": 1,
-      "Base Power": 4,
-      "Coin Power": 8,
-      "Atk Weight": 3,
+      "Damage Up": 1,
       "Clash Power": 2,
-      "Damage Up": 1
+      "Coin Power": 8,
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "District_20_Yurodivy_Hong_Lu",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

@@ -10,20 +10,10 @@
     ],
     "secondary_mechanics": [
       "Atk Weight",
+      "Unbreakable Coin",
       "Offense Level Down",
       "Final Power"
     ],
-    "status_effects": {
-      "Bleed": 10
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Offense Level Down": 1,
-      "Final Power": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 4,
       "On Hit": 14,
@@ -32,15 +22,17 @@
       "Clash Win": 1
     },
     "all_mechanics": {
+      "Unbreakable Coin": 1,
       "Bleed": 10,
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
       "Offense Level Down": 1,
-      "Final Power": 1
+      "Coin Power": 7,
+      "Base Power": 4,
+      "Final Power": 1,
+      "Atk Weight": 3
     },
     "identity_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

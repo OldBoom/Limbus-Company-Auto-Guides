@@ -13,25 +13,8 @@
       "Arrow",
       "Atk Weight",
       "Shield",
-      "Clash Power"
+      "Defense Level Down"
     ],
-    "status_effects": {
-      "Poise": 17,
-      "Bleed": 13,
-      "Shield": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 10,
-      "Coin Power": 11,
-      "Atk Weight": 4,
-      "Clash Power": 1,
-      "Defense Level Down": 1,
-      "Slash DMG Up": 1,
-      "Pierce DMG Up": 1
-    },
-    "unique_mechanics": {
-      "Arrow": 8
-    },
     "triggers": {
       "On Use": 13,
       "On Hit": 8,
@@ -40,20 +23,23 @@
       "On Evade": 1
     },
     "all_mechanics": {
-      "Poise": 17,
+      "Arrow": 8,
       "Bleed": 13,
+      "Poise": 17,
       "Shield": 1,
-      "Base Power": 10,
-      "Coin Power": 11,
-      "Atk Weight": 4,
-      "Clash Power": 1,
       "Defense Level Down": 1,
       "Slash DMG Up": 1,
       "Pierce DMG Up": 1,
-      "Arrow": 8
+      "Clash Power": 1,
+      "Coin Power": 11,
+      "Base Power": 10,
+      "Atk Weight": 4
     },
     "identity_slug": "Shi_Assoc._East_Section_3_Faust",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Arrow": 8
+    }
   },
   "synergies": [
     {

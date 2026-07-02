@@ -471,7 +471,7 @@ def test_retreating_archetype_overview_and_core_idea():
     from limbus_guides.nlp.skill_parser import build_gameplan, find_retreating_archetype
 
     cases = {
-        "Devyat'_Assoc._North_Section_3_Sinclair": "strategic_rr",
+        "Devyat'_Assoc._North_Section_3_Sinclair": "devyat_courier",
         "Heishou_Pack_-_Si_Branch_Gregor": "heishou_substitute",
         "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang": "heishou_backup",
     }
@@ -492,7 +492,13 @@ def test_retreating_archetype_overview_and_core_idea():
         assert arch["tips"][0] in overview or arch["tips"][0].replace("**", "") in overview.replace("**", "")
 
         core = _build_core_idea(identity["name"], gp)
-        assert arch["setup_summary"] in core
+        if expected_kind == "devyat_courier":
+            assert "Courier Trunk" in core
+            assert "Strategic R&R" in core
+            assert "Devyat" in core
+            assert "**Rupture** focus" not in core
+        else:
+            assert arch["setup_summary"] in core
         tips_blob = " ".join(arch.get("tips", [])).lower()
         assert "two copies" not in tips_blob
         assert "duplicate" not in arch["setup_summary"].lower()
@@ -986,6 +992,31 @@ def test_thumb_soldato_sinclair_core_idea_describes_damage_kit():
     assert "Unbreakable" in core
     assert "Burn applicator" not in core
     assert core.count("resupply") == 1 or "Ammunition Tribute" in core
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert guide["core_idea"] == core
+
+
+def test_devyat_sinclair_core_idea_describes_courier_loop():
+    from limbus_guides.nlp.generation import _build_core_idea, generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "Devyat'_Assoc._North_Section_3_Sinclair"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    core = _build_core_idea(identity["name"], gp)
+    assert "Courier Trunk" in core
+    assert "Courier Trunk — Sinclair" in core
+    assert "Shield (max 20%)" not in core
+    assert "15" in core
+    assert "Strategic R&R" in core
+    assert "Upon Retreat" in core
+    assert "maintenance" in core.lower() or "W-wait" in core
+    assert "halves" in core.lower()
+    assert "Rupture focus" not in core
+    assert core.count("Devyat") >= 1
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert guide["core_idea"] == core

@@ -1667,6 +1667,35 @@ _RETREAT_TRIGGER_SKILL = re.compile(
     r"\[Turn End\]\s*Activate Strategic R&R Mode",
     re.IGNORECASE,
 )
+_COURIER_TRUNK = re.compile(r"Courier Trunk", re.IGNORECASE)
+_COURIER_TRUNK_LABEL = re.compile(
+    r"Courier Trunk\s*(?:—|-)\s*([^\n;()%+]+?)\s+on self",
+    re.IGNORECASE,
+)
+_COURIER_TRUNK_GAIN = re.compile(
+    r"Gain \d+ Courier Trunk\s*(?:—|-)\s*([^\n;()%+]+)",
+    re.IGNORECASE,
+)
+_COURIER_SPIKE_THRESHOLD = re.compile(
+    r"At\s+(\d+)\+\s+Courier Trunk|less than\s+(\d+)\+?\s+Courier Trunk",
+    re.IGNORECASE,
+)
+_DEVYAT_TRAIT = re.compile(r"Devyat", re.IGNORECASE)
+
+
+def _courier_spike_threshold(combined: str) -> int:
+    thresholds: list[int] = []
+    for match in _COURIER_SPIKE_THRESHOLD.finditer(combined):
+        thresholds.extend(int(group) for group in match.groups() if group)
+    return min(thresholds) if thresholds else 15
+
+
+def _courier_trunk_label(combined: str) -> str:
+    for pattern in (_COURIER_TRUNK_LABEL, _COURIER_TRUNK_GAIN):
+        match = pattern.search(combined)
+        if match:
+            return f"Courier Trunk — {match.group(1).strip()}"
+    return "Courier Trunk"
 
 
 def find_retreating_archetype(
@@ -1701,28 +1730,55 @@ def find_retreating_archetype(
     trigger_skill = ""
 
     if _STRATEGIC_RR.search(combined):
-        kind = "strategic_rr"
         trigger_m = _RETREAT_TRIGGER_SKILL.search(raw_markdown)
         trigger_skill = trigger_m.group(1).strip() if trigger_m else "maintenance Counter"
-        setup_summary = (
-            f"**Retreating** identity — activates **Strategic R&R Mode** after "
-            f"**{trigger_skill}**, leaving the field while **Upon Retreat** buffs "
-            f"allies; can rejoin later at a stack penalty."
+        has_courier = bool(_COURIER_TRUNK.search(combined))
+        has_devyat_trait = any("Devyat" in t for t in traits) or bool(
+            _DEVYAT_TRAIT.search(raw_markdown[:500])
         )
-        tips.append(
-            f"**Strategic R&R Mode** — **{trigger_skill}** triggers retreat at Turn End "
-            f"after your maintenance turn; build stacks on field first so "
-            f"**Upon Retreat** ally buffs are worth the tempo loss."
-        )
+
+        if has_courier or has_devyat_trait:
+            kind = "devyat_courier"
+            courier_label = _courier_trunk_label(combined)
+            spike_threshold = _courier_spike_threshold(combined)
+            setup_summary = (
+                f"**Devyat' Courier** — stack **{courier_label}** quickly below "
+                f"**{spike_threshold}**, peak clash power and Shield at "
+                f"**{spike_threshold}+**, then **{trigger_skill}** forces "
+                f"**Strategic R&R Mode**; **Upon Retreat** supports the team."
+            )
+            tips.append(
+                f"**Courier Trunk** — below **{spike_threshold}** you gain stacks faster; "
+                f"at **{spike_threshold}+** skills spike and **{trigger_skill}** can "
+                f"replace your Counter to begin the retreat sequence."
+            )
+        else:
+            kind = "strategic_rr"
+            setup_summary = (
+                f"**Retreating** identity — activates **Strategic R&R Mode** after "
+                f"**{trigger_skill}**, leaving the field while **Upon Retreat** buffs "
+                f"allies; can rejoin later at a stack penalty."
+            )
+            tips.append(
+                f"**Strategic R&R Mode** — **{trigger_skill}** triggers retreat at Turn End "
+                f"after your maintenance turn; build stacks on field first so "
+                f"**Upon Retreat** ally buffs are worth the tempo loss."
+            )
+
         if _SELF_REJOIN.search(combined):
             tips.append(
                 "Rejoining once per encounter **halves** your carried stacks — treat the "
                 "first rotation as your main value window before returning."
             )
-        elif _UPON_RETREAT.search(support_text):
+        elif _UPON_RETREAT.search(support_text) and kind != "devyat_courier":
             tips.append(
                 "**Upon Retreat** applies team Clash Power Up — retreat when allies can "
                 "carry the next turn without you on field."
+            )
+        elif _UPON_RETREAT.search(combined) and kind == "devyat_courier":
+            tips.append(
+                "**Upon Retreat** applies team **Clash Power Up** — the higher your "
+                "**Courier Trunk** stacks at retreat, the longer the buff lasts."
             )
 
     elif _HEISHOU_SUBSTITUTE.search(combined):
@@ -1762,12 +1818,16 @@ def find_retreating_archetype(
     if not kind:
         return None
 
-    return {
+    result: dict = {
         "kind": kind,
         "trigger_skill": trigger_skill or None,
         "setup_summary": setup_summary,
         "tips": tips[:3],
     }
+    if kind == "devyat_courier":
+        result["courier_label"] = courier_label
+        result["courier_spike_threshold"] = spike_threshold
+    return result
 
 
 _SUPPORT_PASSIVE_NAME = re.compile(r"^###\s+(.+)$", re.MULTILINE)

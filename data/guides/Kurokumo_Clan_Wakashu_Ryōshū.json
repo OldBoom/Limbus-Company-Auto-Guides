@@ -5,39 +5,29 @@
   "mechanic_profile": {
     "primary_mechanics": [
       "Bleed",
-      "Base Power",
-      "Coin Power"
+      "Coin Power",
+      "Base Power"
     ],
     "secondary_mechanics": [
       "Atk Weight",
-      "Damage Down",
-      "Offense Level Down"
+      "Offense Level Down",
+      "Damage Down"
     ],
-    "status_effects": {
-      "Bleed": 9
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 4,
-      "Atk Weight": 3,
-      "Damage Down": 1,
-      "Offense Level Down": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 4,
       "Heads Hit": 3
     },
     "all_mechanics": {
       "Bleed": 9,
-      "Base Power": 4,
-      "Coin Power": 4,
-      "Atk Weight": 3,
+      "Offense Level Down": 1,
       "Damage Down": 1,
-      "Offense Level Down": 1
+      "Coin Power": 4,
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

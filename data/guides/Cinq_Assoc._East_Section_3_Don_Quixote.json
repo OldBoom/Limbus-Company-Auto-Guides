@@ -12,39 +12,25 @@
       "Base Power",
       "Haste",
       "Atk Weight",
-      "Unique Burn",
       "Defense Level Down"
     ],
-    "status_effects": {
-      "Poise": 8,
-      "Burn": 12,
-      "Haste": 3,
-      "Unique Burn": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 11,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 1,
       "On Hit": 9,
       "Clash Win": 2
     },
     "all_mechanics": {
+      "Burn": 13,
       "Poise": 8,
-      "Burn": 12,
       "Haste": 3,
-      "Unique Burn": 1,
-      "Base Power": 4,
+      "Defense Level Down": 1,
       "Coin Power": 11,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

@@ -14,18 +14,6 @@
       "Haste",
       "Bind"
     ],
-    "status_effects": {
-      "Poise": 9,
-      "Bind": 1,
-      "Haste": 2
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 4,
-      "Clash Power": 3
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 2,
       "On Hit": 9,
@@ -36,13 +24,14 @@
       "Poise": 9,
       "Bind": 1,
       "Haste": 2,
-      "Base Power": 4,
+      "Clash Power": 3,
       "Coin Power": 5,
-      "Atk Weight": 4,
-      "Clash Power": 3
+      "Base Power": 4,
+      "Atk Weight": 4
     },
     "identity_slug": "Edgar_Family_Chief_Butler_Ryōshū",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

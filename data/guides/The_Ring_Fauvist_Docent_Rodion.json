@@ -13,52 +13,30 @@
       "Palette Vibrante",
       "Base Power",
       "Mauled Color — Bleu —",
-      "Atk Weight"
+      "Touche Hardie"
     ],
-    "status_effects": {
-      "Bleed": 15,
-      "Sinking": 12
-    },
-    "stat_modifiers": {
-      "Base Power": 6,
-      "Coin Power": 9,
-      "Atk Weight": 4,
-      "Clash Power": 3,
-      "Final Power": 4,
-      "Offense Level Up": 2,
-      "Defense Level Up": 2
-    },
-    "unique_mechanics": {
-      "Palette Vibrante": 8,
-      "Mauled Color — Rouge —": 9,
-      "Mauled Color — Bleu —": 8,
-      "Touche Hardie": 8,
-      "Unfocused Volley": 8,
-      "Unbreakable Coin": 1,
-      "Réflexion": 8
-    },
     "triggers": {
       "On Use": 9,
       "On Hit": 26,
       "Skill End": 1
     },
     "all_mechanics": {
-      "Bleed": 15,
-      "Sinking": 12,
-      "Base Power": 6,
-      "Coin Power": 9,
-      "Atk Weight": 4,
-      "Clash Power": 3,
-      "Final Power": 4,
-      "Offense Level Up": 2,
-      "Defense Level Up": 2,
+      "Unbreakable Coin": 1,
       "Palette Vibrante": 7,
       "Mauled Color — Rouge —": 8,
       "Mauled Color — Bleu —": 5,
       "Touche Hardie": 4,
       "Unfocused Volley": 1,
-      "Unbreakable Coin": 1,
-      "Réflexion": 2
+      "Réflexion": 2,
+      "Bleed": 15,
+      "Sinking": 12,
+      "Defense Level Up": 2,
+      "Offense Level Up": 2,
+      "Clash Power": 3,
+      "Coin Power": 9,
+      "Base Power": 6,
+      "Final Power": 4,
+      "Atk Weight": 4
     },
     "identity_slug": "The_Ring_Fauvist_Docent_Rodion",
     "key_status_effects": [
@@ -68,7 +46,16 @@
       "Touche Hardie",
       "Unfocused Volley",
       "Réflexion"
-    ]
+    ],
+    "unique_mechanics": {
+      "Unbreakable Coin": 1,
+      "Palette Vibrante": 8,
+      "Mauled Color — Rouge —": 9,
+      "Mauled Color — Bleu —": 8,
+      "Touche Hardie": 8,
+      "Unfocused Volley": 8,
+      "Réflexion": 8
+    }
   },
   "synergies": [
     {

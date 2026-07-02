@@ -12,23 +12,9 @@
       "Deathrite",
       "Base Power",
       "Atk Weight",
-      "Pierce DMG Up",
-      "Unbreakable Coin"
+      "Unbreakable Coin",
+      "Pierce DMG Up"
     ],
-    "status_effects": {
-      "Poise": 12,
-      "Rupture": 13
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 9,
-      "Atk Weight": 3,
-      "Pierce DMG Up": 1
-    },
-    "unique_mechanics": {
-      "Deathrite": 6,
-      "Unbreakable Coin": 1
-    },
     "triggers": {
       "On Use": 6,
       "On Hit": 9,
@@ -36,17 +22,21 @@
       "Combat Start": 1
     },
     "all_mechanics": {
-      "Poise": 12,
-      "Rupture": 13,
-      "Base Power": 4,
-      "Coin Power": 9,
-      "Atk Weight": 3,
-      "Pierce DMG Up": 1,
       "Deathrite": 6,
-      "Unbreakable Coin": 1
+      "Unbreakable Coin": 1,
+      "Rupture": 13,
+      "Poise": 12,
+      "Pierce DMG Up": 1,
+      "Coin Power": 9,
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Heishou_Pack_-_Si_Branch_Gregor",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Deathrite": 6,
+      "Unbreakable Coin": 1
+    }
   },
   "synergies": [
     {

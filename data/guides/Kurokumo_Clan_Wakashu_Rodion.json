@@ -13,32 +13,22 @@
       "Atk Weight",
       "Protection"
     ],
-    "status_effects": {
-      "Poise": 10,
-      "Bleed": 6,
-      "Protection": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {},
     "triggers": {
       "Heads Hit": 1,
       "On Use": 3,
       "On Hit": 4
     },
     "all_mechanics": {
-      "Poise": 10,
       "Bleed": 6,
+      "Poise": 10,
       "Protection": 1,
-      "Base Power": 5,
       "Coin Power": 7,
+      "Base Power": 5,
       "Atk Weight": 3
     },
     "identity_slug": "Kurokumo_Clan_Wakashu_Rodion",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

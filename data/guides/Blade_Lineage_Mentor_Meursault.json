@@ -12,16 +12,6 @@
       "Atk Weight",
       "Bleed"
     ],
-    "status_effects": {
-      "Poise": 19,
-      "Bleed": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 4
-    },
-    "unique_mechanics": {},
     "triggers": {
       "Combat Start": 2,
       "On Hit": 6,
@@ -29,14 +19,15 @@
       "Clash Win": 1
     },
     "all_mechanics": {
-      "Poise": 19,
       "Bleed": 1,
-      "Base Power": 5,
+      "Poise": 19,
       "Coin Power": 7,
+      "Base Power": 5,
       "Atk Weight": 4
     },
     "identity_slug": "Blade_Lineage_Mentor_Meursault",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

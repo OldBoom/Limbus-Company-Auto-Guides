@@ -11,43 +11,31 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
-      "Unbreakable Coin",
       "Photoelectricity",
-      "Unique Charge"
+      "Unbreakable Coin",
+      "Clash Power"
     ],
-    "status_effects": {
-      "Charge": 51,
-      "Rupture": 7,
-      "Unique Charge": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 7,
-      "Coin Power": 12,
-      "Atk Weight": 5,
-      "Clash Power": 1
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 3,
-      "Photoelectricity": 3
-    },
     "triggers": {
       "On Use": 14,
       "On Hit": 15,
       "Combat Start": 2
     },
     "all_mechanics": {
-      "Charge": 51,
-      "Rupture": 7,
-      "Unique Charge": 1,
-      "Base Power": 7,
-      "Coin Power": 12,
-      "Atk Weight": 5,
-      "Clash Power": 1,
+      "Photoelectricity": 3,
       "Unbreakable Coin": 3,
-      "Photoelectricity": 3
+      "Rupture": 7,
+      "Charge": 56,
+      "Clash Power": 1,
+      "Coin Power": 12,
+      "Base Power": 7,
+      "Atk Weight": 5
     },
     "identity_slug": "LCE_E.G.O_AEDD_Gregor",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Photoelectricity": 3,
+      "Unbreakable Coin": 3
+    }
   },
   "synergies": [
     {

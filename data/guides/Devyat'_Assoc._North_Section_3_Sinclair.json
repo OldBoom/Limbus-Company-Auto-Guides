@@ -11,23 +11,10 @@
     "secondary_mechanics": [
       "Haste",
       "Shield",
-      "Atk Weight",
       "Defense Level Down",
+      "Atk Weight",
       "Clash Power"
     ],
-    "status_effects": {
-      "Rupture": 26,
-      "Haste": 3,
-      "Shield": 3
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 10,
-      "Atk Weight": 3,
-      "Defense Level Down": 3,
-      "Clash Power": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 5,
       "On Hit": 8,
@@ -37,14 +24,15 @@
       "Rupture": 26,
       "Haste": 3,
       "Shield": 3,
-      "Base Power": 5,
-      "Coin Power": 10,
-      "Atk Weight": 3,
       "Defense Level Down": 3,
-      "Clash Power": 1
+      "Clash Power": 1,
+      "Coin Power": 10,
+      "Base Power": 5,
+      "Atk Weight": 3
     },
     "identity_slug": "Devyat'_Assoc._North_Section_3_Sinclair",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {
@@ -88,8 +76,8 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Devyat' Assoc. North Section 3 Sinclair is a Status Specialist — **Rupture** focus. **Retreating** identity — activates **Strategic R&R Mode** after **W-wait, I need to do some maintenance…!**, leaving the field while **Upon Retreat** buffs allies; can rejoin later at a stack penalty.",
-  "playstyle_guide": "- **Strategic R&R Mode** — **W-wait, I need to do some maintenance…!** triggers retreat at Turn End after your maintenance turn; build stacks on field first so **Upon Retreat** ally buffs are worth the tempo loss.\n- Rejoining once per encounter **halves** your carried stacks — treat the first rotation as your main value window before returning.\n- Skills check **15+ Rupture** — favour those coins when stacked.\n- Skills grant **Haste** next turn — use them when you want to act earlier on the following round.\n\n**S1 — Courier Trunk - Decay Hammer** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Gain 1 Courier Trunk — Sinclair; - If this unit has less than 15 Courier Trunk — Sinclair, gain 1 additional Courier Trunk — Sinclair\n- Peak output requires both conditions: Inflict +2 Rupture Count | - At 15+ Courier Trunk — Sinclair, inflict +1 additional Rupture Count.\n\n**S2 — Courier Trunk - Demolition Gadget** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Gain 1 Courier Trunk — Sinclair; - If this unit has less than 15 Courier Trunk — Sinclair, gain 2 additional Courier Trunk — Sinclair\n- Peak output requires both conditions: Inflict 2 Rupture | - At 15+ Courier Trunk — Sinclair, inflict +1 Rupture Count.\n\n**S3 — Poludnitsa… I trust you!** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Inflict +1 Rupture Count; - Inflict +1 additional Rupture Count for every 10 Courier Trunk — Sinclair (max 2)\n- Inflict 3 Rupture; - Inflict +1 additional Rupture for every 10 Courier Trunk — Sinclair (max 2)\n\nCombat passive — **I'll do better next time…**: <For Chain Battles> When, after Retreating using 'Strategic R&R Mode', if this unit rejoins the battle, halve the Courier Trunk — Sinclai….\n\nCombat passive — **A moment, please…**: Turn Start: At 6+ Speed, or if this unit has Haste, gain (Courier Trunk — Sinclair)% of this unit's max HP as Shield (max 20%).\n  - Upon Retreat, apply 1 Clash Power Up to 2 allies next turn (prioritizes Substituted units first, then in Deployment order).\n  - Lasts for 1 additional turn for every 15 Courier Trunk — Sinclair (2 more turns max).\n\nDefense skill — **Counter: Courier Assistance & Crisis Control System**: [Combat Start] At 15+ Courier Trunk — Sinclair, activate 'W-wait, I need to do some maintenance…!' instead (once per turn).\n  - [Combat Start] If this Skill is to be activated, gain (Courier Trunk — Sinclair)% of this unit's max HP as Shield (max 25%, once per turn).",
+  "core_idea": "Devyat' Assoc. North Section 3 Sinclair is a Status Specialist — **Devyat' Courier** who races **Courier Trunk — Sinclair** below **15** for faster gains, stacking **Rupture** on targets along the way, spikes clash power and Shield at **15+**, then **W-wait, I need to do some maintenance…!** forces **Strategic R&R** so **Upon Retreat** can buff allies. Rejoining once per fight **halves** carried stacks — front-load your best burst before returning.",
+  "playstyle_guide": "- **Courier Trunk** — below **15** you gain stacks faster; at **15+** skills spike and **W-wait, I need to do some maintenance…!** can replace your Counter to begin the retreat sequence.\n- Rejoining once per encounter **halves** your carried stacks — treat the first rotation as your main value window before returning.\n- Skills check **15+ Rupture** — favour those coins when stacked.\n- Skills grant **Haste** next turn — use them when you want to act earlier on the following round.\n\n**S1 — Courier Trunk - Decay Hammer** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Gain 1 Courier Trunk — Sinclair; - If this unit has less than 15 Courier Trunk — Sinclair, gain 1 additional Courier Trunk — Sinclair\n- Peak output requires both conditions: Inflict +2 Rupture Count | - At 15+ Courier Trunk — Sinclair, inflict +1 additional Rupture Count.\n\n**S2 — Courier Trunk - Demolition Gadget** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Gain 1 Courier Trunk — Sinclair; - If this unit has less than 15 Courier Trunk — Sinclair, gain 2 additional Courier Trunk — Sinclair\n- Peak output requires both conditions: Inflict 2 Rupture | - At 15+ Courier Trunk — Sinclair, inflict +1 Rupture Count.\n\n**S3 — Poludnitsa… I trust you!** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Inflict +1 Rupture Count; - Inflict +1 additional Rupture Count for every 10 Courier Trunk — Sinclair (max 2)\n- Inflict 3 Rupture; - Inflict +1 additional Rupture for every 10 Courier Trunk — Sinclair (max 2)\n\nCombat passive — **I'll do better next time…**: <For Chain Battles> When, after Retreating using 'Strategic R&R Mode', if this unit rejoins the battle, halve the Courier Trunk — Sinclai….\n\nCombat passive — **A moment, please…**: Turn Start: At 6+ Speed, or if this unit has Haste, gain (Courier Trunk — Sinclair)% of this unit's max HP as Shield (max 20%).\n  - Upon Retreat, apply 1 Clash Power Up to 2 allies next turn (prioritizes Substituted units first, then in Deployment order).\n  - Lasts for 1 additional turn for every 15 Courier Trunk — Sinclair (2 more turns max).\n\nDefense skill — **Counter: Courier Assistance & Crisis Control System**: [Combat Start] At 15+ Courier Trunk — Sinclair, activate 'W-wait, I need to do some maintenance…!' instead (once per turn).\n  - [Combat Start] If this Skill is to be activated, gain (Courier Trunk — Sinclair)% of this unit's max HP as Shield (max 25%, once per turn).",
   "team_suggestions": [
     "**Rupture** focus.",
     "- **Seven Assoc. South Section 4 Faust**: Mechanic similarity score: 0.81. *(similarity-based — verify)*",

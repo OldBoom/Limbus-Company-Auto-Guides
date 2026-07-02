@@ -6,26 +6,13 @@
     "primary_mechanics": [
       "Bleed",
       "Coin Power",
-      "Rupture"
+      "Bloodfeast"
     ],
     "secondary_mechanics": [
+      "Rupture",
       "Base Power",
-      "Bloodfeast",
       "Atk Weight"
     ],
-    "status_effects": {
-      "Bleed": 17,
-      "Rupture": 4
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 8,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {
-      "Bloodfeast": 5,
-      "Hardblood": 1
-    },
     "triggers": {
       "On Use": 11,
       "On Hit": 11,
@@ -33,15 +20,19 @@
       "Combat Start": 3
     },
     "all_mechanics": {
+      "Bloodfeast": 4,
       "Bleed": 17,
       "Rupture": 4,
-      "Base Power": 4,
       "Coin Power": 8,
-      "Atk Weight": 3,
-      "Bloodfeast": 4
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "The_Priest_of_La_Manchaland_Gregor",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Bloodfeast": 5,
+      "Hardblood": 1
+    }
   },
   "synergies": [
     {

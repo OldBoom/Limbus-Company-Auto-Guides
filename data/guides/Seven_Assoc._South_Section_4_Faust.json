@@ -13,17 +13,6 @@
       "Haste",
       "Poise"
     ],
-    "status_effects": {
-      "Rupture": 12,
-      "Haste": 2,
-      "Poise": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 6,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 4,
       "Clash Win": 2,
@@ -32,14 +21,15 @@
     },
     "all_mechanics": {
       "Rupture": 12,
-      "Haste": 2,
       "Poise": 1,
-      "Base Power": 4,
+      "Haste": 2,
       "Coin Power": 6,
+      "Base Power": 4,
       "Atk Weight": 3
     },
     "identity_slug": "Seven_Assoc._South_Section_4_Faust",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

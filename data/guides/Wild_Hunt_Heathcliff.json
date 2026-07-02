@@ -6,33 +6,15 @@
     "primary_mechanics": [
       "Sinking",
       "Dullahan",
-      "Coin Power"
+      "Coffin"
     ],
     "secondary_mechanics": [
-      "Coffin",
+      "Coin Power",
       "Base Power",
       "Atk Weight",
       "Impending Ruin",
       "Wild Hunt"
     ],
-    "status_effects": {
-      "Sinking": 22
-    },
-    "stat_modifiers": {
-      "Base Power": 6,
-      "Coin Power": 9,
-      "Atk Weight": 6,
-      "Clash Power": 1,
-      "Offense Level Up": 1,
-      "Damage Up": 1
-    },
-    "unique_mechanics": {
-      "Coffin": 10,
-      "Dullahan": 19,
-      "Impending Ruin": 3,
-      "Wild Hunt": 8,
-      "Unending Bereavement": 8
-    },
     "triggers": {
       "On Use": 12,
       "On Hit": 11,
@@ -41,17 +23,17 @@
       "Combat Start": 1
     },
     "all_mechanics": {
-      "Sinking": 22,
-      "Base Power": 6,
-      "Coin Power": 9,
-      "Atk Weight": 6,
-      "Clash Power": 1,
-      "Offense Level Up": 1,
-      "Damage Up": 1,
       "Coffin": 9,
       "Dullahan": 16,
       "Impending Ruin": 2,
-      "Wild Hunt": 2
+      "Wild Hunt": 2,
+      "Sinking": 22,
+      "Offense Level Up": 1,
+      "Damage Up": 1,
+      "Clash Power": 1,
+      "Coin Power": 9,
+      "Base Power": 6,
+      "Atk Weight": 6
     },
     "identity_slug": "Wild_Hunt_Heathcliff",
     "key_status_effects": [
@@ -61,7 +43,14 @@
       "Wild Hunt",
       "Attack Power Up",
       "Unending Bereavement"
-    ]
+    ],
+    "unique_mechanics": {
+      "Coffin": 10,
+      "Dullahan": 19,
+      "Impending Ruin": 3,
+      "Wild Hunt": 8,
+      "Unending Bereavement": 8
+    }
   },
   "synergies": [
     {

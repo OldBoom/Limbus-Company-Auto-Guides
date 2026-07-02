@@ -12,36 +12,9 @@
       "Coin Power",
       "Base Power",
       "Final Power",
-      "Bind",
-      "Haste"
+      "Unbreakable Coin",
+      "Bind"
     ],
-    "status_effects": {
-      "Bleed": 13,
-      "Bind": 3,
-      "Haste": 3,
-      "Shield": 1,
-      "Charge": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 8,
-      "Coin Power": 9,
-      "Atk Weight": 10,
-      "Final Power": 5,
-      "Defense Level Down": 1,
-      "Defense Level Up": 1,
-      "Offense Level Up": 1,
-      "Clash Power": 2,
-      "Damage Down": 1,
-      "Slash DMG Up": 2,
-      "Offense Level Down": 1
-    },
-    "unique_mechanics": {
-      "Corpus Ingredient": 21,
-      "Unbreakable Coin": 3,
-      "Corpus Theater (Hong Lu)": 8,
-      "Assist Defense": 4,
-      "Artwork — Tibia (Hong Lu)": 8
-    },
     "triggers": {
       "On Use": 12,
       "On Hit": 21,
@@ -50,34 +23,41 @@
       "On Evade": 2
     },
     "all_mechanics": {
+      "Corpus Ingredient": 20,
+      "Assist Defense": 2,
+      "Unbreakable Coin": 4,
+      "Artwork — Tibia (Hong Lu)": 1,
+      "Corpus Theater (Hong Lu)": 1,
       "Bleed": 13,
+      "Charge": 1,
       "Bind": 3,
       "Haste": 3,
       "Shield": 1,
-      "Charge": 1,
-      "Base Power": 8,
-      "Coin Power": 9,
-      "Atk Weight": 10,
-      "Final Power": 5,
-      "Defense Level Down": 1,
       "Defense Level Up": 1,
+      "Defense Level Down": 1,
       "Offense Level Up": 1,
-      "Clash Power": 2,
+      "Offense Level Down": 1,
       "Damage Down": 1,
       "Slash DMG Up": 2,
-      "Offense Level Down": 1,
-      "Corpus Ingredient": 20,
-      "Unbreakable Coin": 3,
-      "Corpus Theater (Hong Lu)": 1,
-      "Assist Defense": 2,
-      "Artwork — Tibia (Hong Lu)": 1
+      "Clash Power": 2,
+      "Coin Power": 9,
+      "Base Power": 8,
+      "Final Power": 5,
+      "Atk Weight": 10
     },
     "identity_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
     "key_status_effects": [
       "Corpus Ingredient",
       "Corpus Theater (Hong Lu)",
       "Artwork — Tibia (Hong Lu)"
-    ]
+    ],
+    "unique_mechanics": {
+      "Corpus Ingredient": 21,
+      "Assist Defense": 4,
+      "Unbreakable Coin": 3,
+      "Artwork — Tibia (Hong Lu)": 8,
+      "Corpus Theater (Hong Lu)": 8
+    }
   },
   "synergies": [
     {

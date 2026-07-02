@@ -15,23 +15,6 @@
       "Poise",
       "Clash Power"
     ],
-    "status_effects": {
-      "Bleed": 22,
-      "Tremor": 28,
-      "Poise": 4,
-      "Protection": 1,
-      "Bind": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 7,
-      "Coin Power": 11,
-      "Atk Weight": 6,
-      "Clash Power": 2,
-      "Final Power": 1
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 5
-    },
     "triggers": {
       "On Use": 14,
       "On Hit": 20,
@@ -39,20 +22,23 @@
       "Combat Start": 3
     },
     "all_mechanics": {
+      "Unbreakable Coin": 5,
       "Bleed": 22,
       "Tremor": 28,
       "Poise": 4,
-      "Protection": 1,
       "Bind": 1,
-      "Base Power": 7,
-      "Coin Power": 11,
-      "Atk Weight": 6,
+      "Protection": 1,
       "Clash Power": 2,
+      "Coin Power": 11,
+      "Base Power": 7,
       "Final Power": 1,
-      "Unbreakable Coin": 5
+      "Atk Weight": 6
     },
     "identity_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Unbreakable Coin": 5
+    }
   },
   "synergies": [
     {

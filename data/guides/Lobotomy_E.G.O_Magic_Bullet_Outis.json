@@ -15,20 +15,6 @@
       "Poise",
       "Final Power"
     ],
-    "status_effects": {
-      "Burn": 6,
-      "Poise": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 6,
-      "Atk Weight": 4,
-      "Final Power": 1
-    },
-    "unique_mechanics": {
-      "Dark Flame": 5,
-      "Magic Bullet": 14
-    },
     "triggers": {
       "Heads Hit": 1,
       "On Hit": 4,
@@ -37,17 +23,21 @@
       "Skill End": 1
     },
     "all_mechanics": {
+      "Dark Flame": 5,
+      "Magic Bullet": 11,
       "Burn": 6,
       "Poise": 1,
-      "Base Power": 4,
       "Coin Power": 6,
-      "Atk Weight": 4,
+      "Base Power": 4,
       "Final Power": 1,
-      "Dark Flame": 5,
-      "Magic Bullet": 11
+      "Atk Weight": 4
     },
     "identity_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Dark Flame": 5,
+      "Magic Bullet": 14
+    }
   },
   "synergies": [
     {

@@ -346,6 +346,36 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
     )
 
 
+def _devyat_courier_core_opening(name: str, role_str: str, gp: dict) -> str | None:
+    """Devyat' kits: fast Courier Trunk below spike threshold, power at 15+, forced Strategic R&R."""
+    retreat = gp.get("retreating_archetype") or {}
+    if retreat.get("kind") != "devyat_courier":
+        return None
+
+    courier_label = retreat.get("courier_label", "Courier Trunk")
+    threshold = retreat.get("courier_spike_threshold", 15)
+    trigger = retreat.get("trigger_skill") or "maintenance Counter"
+
+    rupture_note = ""
+    if gp.get("rupture_archetype") or "Rupture" in (gp.get("primary_mechanics") or []):
+        rupture_note = ", stacking **Rupture** on targets along the way"
+
+    rejoin_note = ""
+    combat = gp.get("combat_passives_text", "")
+    if re.search(r"halve.*Courier Trunk", combat, re.I):
+        rejoin_note = (
+            " Rejoining once per fight **halves** carried stacks — front-load your best "
+            "burst before returning."
+        )
+
+    return (
+        f"{name} is a {role_str} — **Devyat' Courier** who races **{courier_label}** "
+        f"below **{threshold}** for faster gains{rupture_note}, spikes clash power and "
+        f"Shield at **{threshold}+**, then **{trigger}** forces **Strategic R&R** so "
+        f"**Upon Retreat** can buff allies.{rejoin_note}"
+    )
+
+
 def _build_core_idea(name: str, gp: dict) -> str:
     from limbus_guides.domain.context import infer_roles
     from limbus_guides.nlp.archetypes import pick_extra_archetype, pick_primary_sin_archetype
@@ -448,6 +478,8 @@ def _build_core_idea(name: str, gp: dict) -> str:
             )
     elif (ammo_open := _ammo_dual_status_core_opening(name, role_str, gp)):
         parts.append(ammo_open)
+    elif (devyat_open := _devyat_courier_core_opening(name, role_str, gp)):
+        parts.append(devyat_open)
     elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
         "nails_setup",
         "charge_scaling",
@@ -537,9 +569,12 @@ def _build_core_idea(name: str, gp: dict) -> str:
             parts.append(setup)
 
     if gp.get("retreating_archetype"):
-        setup = gp["retreating_archetype"].get("setup_summary")
-        if setup:
-            parts.append(setup)
+        retreat_arch = gp["retreating_archetype"]
+        setup = retreat_arch.get("setup_summary")
+        if setup and retreat_arch.get("kind") != "devyat_courier":
+            blob = " ".join(parts)
+            if setup not in blob:
+                parts.append(setup)
 
     return " ".join(parts)
 

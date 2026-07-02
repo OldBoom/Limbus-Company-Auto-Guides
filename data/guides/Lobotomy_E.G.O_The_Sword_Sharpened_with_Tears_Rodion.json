@@ -9,29 +9,12 @@
       "Base Power"
     ],
     "secondary_mechanics": [
-      "Atk Weight",
       "Final Power",
+      "Atk Weight",
       "Clash Power",
       "Unbreakable Coin",
       "Charge"
     ],
-    "status_effects": {
-      "Sinking": 18,
-      "Shield": 1,
-      "Charge": 2,
-      "Protection": 2
-    },
-    "stat_modifiers": {
-      "Base Power": 10,
-      "Coin Power": 12,
-      "Atk Weight": 6,
-      "Clash Power": 4,
-      "Final Power": 6,
-      "Damage Up": 2
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 3
-    },
     "triggers": {
       "On Hit": 17,
       "On Use": 9,
@@ -39,20 +22,23 @@
       "Combat Start": 3
     },
     "all_mechanics": {
+      "Unbreakable Coin": 3,
       "Sinking": 18,
-      "Shield": 1,
       "Charge": 2,
       "Protection": 2,
-      "Base Power": 10,
-      "Coin Power": 12,
-      "Atk Weight": 6,
-      "Clash Power": 4,
-      "Final Power": 6,
+      "Shield": 1,
       "Damage Up": 2,
-      "Unbreakable Coin": 3
+      "Clash Power": 4,
+      "Coin Power": 12,
+      "Base Power": 10,
+      "Final Power": 6,
+      "Atk Weight": 6
     },
     "identity_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Unbreakable Coin": 3
+    }
   },
   "synergies": [
     {

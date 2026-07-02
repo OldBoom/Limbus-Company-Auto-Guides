@@ -13,18 +13,6 @@
       "Atk Weight",
       "Unbreakable Coin"
     ],
-    "status_effects": {
-      "Tremor": 22
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 6,
-      "Atk Weight": 3,
-      "Defense Level Up": 13
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 1
-    },
     "triggers": {
       "On Use": 11,
       "On Hit": 13,
@@ -32,15 +20,18 @@
       "Combat Start": 1
     },
     "all_mechanics": {
+      "Unbreakable Coin": 1,
       "Tremor": 22,
-      "Base Power": 5,
-      "Coin Power": 6,
-      "Atk Weight": 3,
       "Defense Level Up": 13,
-      "Unbreakable Coin": 1
+      "Coin Power": 6,
+      "Base Power": 5,
+      "Atk Weight": 3
     },
     "identity_slug": "Zwei_Assoc._West_Section_3_Ishmael",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Unbreakable Coin": 1
+    }
   },
   "synergies": [
     {

@@ -11,27 +11,19 @@
     "secondary_mechanics": [
       "Atk Weight"
     ],
-    "status_effects": {
-      "Bleed": 3
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {},
     "triggers": {
       "Heads Hit": 5,
       "On Evade": 1
     },
     "all_mechanics": {
       "Bleed": 3,
-      "Base Power": 4,
       "Coin Power": 5,
+      "Base Power": 4,
       "Atk Weight": 3
     },
     "identity_slug": "Tingtang_Gang_Gangleader_Hong_Lu",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

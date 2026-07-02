@@ -11,35 +11,26 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
+      "Unbreakable Coin",
       "Final Power",
       "Clash Power"
     ],
-    "status_effects": {
-      "Burn": 16,
-      "Tremor": 25
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 5,
-      "Final Power": 3,
-      "Clash Power": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 23
     },
     "all_mechanics": {
+      "Unbreakable Coin": 3,
       "Burn": 16,
       "Tremor": 25,
-      "Base Power": 5,
+      "Clash Power": 1,
       "Coin Power": 7,
-      "Atk Weight": 5,
+      "Base Power": 5,
       "Final Power": 3,
-      "Clash Power": 1
+      "Atk Weight": 5
     },
     "identity_slug": "The_Thumb_East_Capo_IIII_Meursault",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

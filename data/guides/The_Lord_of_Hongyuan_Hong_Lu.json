@@ -10,35 +10,11 @@
     ],
     "secondary_mechanics": [
       "Base Power",
-      "Atk Weight",
       "Assist Defense",
+      "Atk Weight",
       "Unbreakable Coin",
       "Tarnished Blood"
     ],
-    "status_effects": {
-      "Rupture": 13,
-      "Poise": 9
-    },
-    "stat_modifiers": {
-      "Base Power": 7,
-      "Coin Power": 11,
-      "Atk Weight": 6,
-      "Clash Power": 2,
-      "Offense Level Down": 1,
-      "Defense Level Down": 1,
-      "Damage Up": 1
-    },
-    "unique_mechanics": {
-      "Assist Defense": 5,
-      "Unbreakable Coin": 5,
-      "Deathrite": 1,
-      "Life from Death": 3,
-      "Heishou Bolus Contamination — 黑獸丸染 —": 8,
-      "Tarnished Blood": 6,
-      "Heishou Bolus Contamination": 3,
-      "Exalted Command": 8,
-      "Unrelenting Storm": 8
-    },
     "triggers": {
       "Combat Start": 3,
       "On Use": 12,
@@ -46,21 +22,22 @@
       "Attack End": 1
     },
     "all_mechanics": {
+      "Deathrite": 2,
+      "Tarnished Blood": 4,
+      "Life from Death": 3,
+      "Heishou Bolus Contamination": 2,
+      "Assist Defense": 6,
+      "Unbreakable Coin": 5,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 2,
       "Rupture": 13,
       "Poise": 9,
-      "Base Power": 7,
-      "Coin Power": 11,
-      "Atk Weight": 6,
-      "Clash Power": 2,
-      "Offense Level Down": 1,
       "Defense Level Down": 1,
+      "Offense Level Down": 1,
       "Damage Up": 1,
-      "Assist Defense": 5,
-      "Unbreakable Coin": 5,
-      "Deathrite": 1,
-      "Life from Death": 3,
-      "Heishou Bolus Contamination — 黑獸丸染 —": 2,
-      "Tarnished Blood": 4
+      "Clash Power": 2,
+      "Coin Power": 11,
+      "Base Power": 7,
+      "Atk Weight": 6
     },
     "identity_slug": "The_Lord_of_Hongyuan_Hong_Lu",
     "key_status_effects": [
@@ -70,7 +47,18 @@
       "Exalted Command",
       "Heishou Bolus Contamination — 黑獸丸染 —",
       "Slash Resist Down"
-    ]
+    ],
+    "unique_mechanics": {
+      "Deathrite": 1,
+      "Tarnished Blood": 6,
+      "Life from Death": 3,
+      "Heishou Bolus Contamination": 3,
+      "Assist Defense": 5,
+      "Unbreakable Coin": 5,
+      "Exalted Command": 8,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 8,
+      "Unrelenting Storm": 8
+    }
   },
   "synergies": [
     {

@@ -12,16 +12,6 @@
       "Atk Weight",
       "Blunt DMG Up"
     ],
-    "status_effects": {
-      "Burn": 24
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Blunt DMG Up": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 10,
       "On Use": 2,
@@ -30,13 +20,14 @@
     },
     "all_mechanics": {
       "Burn": 24,
-      "Base Power": 5,
+      "Blunt DMG Up": 1,
       "Coin Power": 7,
-      "Atk Weight": 3,
-      "Blunt DMG Up": 1
+      "Base Power": 5,
+      "Atk Weight": 3
     },
     "identity_slug": "Firefist_Office_Survivor_Gregor",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

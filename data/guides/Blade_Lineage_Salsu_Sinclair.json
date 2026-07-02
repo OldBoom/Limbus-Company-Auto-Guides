@@ -11,34 +11,26 @@
     "secondary_mechanics": [
       "Atk Weight",
       "Bleed",
-      "Damage Up"
+      "Damage Up",
+      "Final Power"
     ],
-    "status_effects": {
-      "Poise": 10,
-      "Bleed": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 3,
-      "Damage Up": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 6,
       "Clash Win": 1,
       "On Use": 2
     },
     "all_mechanics": {
-      "Poise": 10,
       "Bleed": 1,
-      "Base Power": 4,
+      "Poise": 10,
+      "Damage Up": 1,
       "Coin Power": 5,
-      "Atk Weight": 3,
-      "Damage Up": 1
+      "Base Power": 4,
+      "Final Power": 1,
+      "Atk Weight": 3
     },
     "identity_slug": "Blade_Lineage_Salsu_Sinclair",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

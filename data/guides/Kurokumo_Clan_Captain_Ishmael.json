@@ -13,17 +13,6 @@
       "Protection",
       "Offense Level Down"
     ],
-    "status_effects": {
-      "Bleed": 12,
-      "Protection": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Offense Level Down": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 9,
       "Combat Start": 3,
@@ -32,13 +21,14 @@
     "all_mechanics": {
       "Bleed": 12,
       "Protection": 1,
-      "Base Power": 4,
+      "Offense Level Down": 1,
       "Coin Power": 7,
-      "Atk Weight": 3,
-      "Offense Level Down": 1
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Kurokumo_Clan_Captain_Ishmael",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

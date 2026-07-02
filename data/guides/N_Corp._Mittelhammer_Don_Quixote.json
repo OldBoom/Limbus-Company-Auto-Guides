@@ -6,39 +6,31 @@
     "primary_mechanics": [
       "Nails",
       "Tremor",
-      "Base Power"
+      "Coin Power"
     ],
     "secondary_mechanics": [
-      "Coin Power",
+      "Base Power",
       "Atk Weight",
       "Fanatic"
     ],
-    "status_effects": {
-      "Tremor": 6
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 4,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {
-      "Nails": 8,
-      "Fanatic": 3
-    },
     "triggers": {
       "Heads Hit": 4,
       "On Hit": 6
     },
     "all_mechanics": {
-      "Tremor": 6,
-      "Base Power": 4,
-      "Coin Power": 4,
-      "Atk Weight": 3,
       "Nails": 8,
-      "Fanatic": 2
+      "Fanatic": 2,
+      "Tremor": 6,
+      "Coin Power": 4,
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "N_Corp._Mittelhammer_Don_Quixote",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Nails": 8,
+      "Fanatic": 3
+    }
   },
   "synergies": [
     {

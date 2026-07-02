@@ -13,17 +13,6 @@
       "Clash Power",
       "Shield"
     ],
-    "status_effects": {
-      "Tremor": 21,
-      "Shield": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 2
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 6,
       "On Hit": 6,
@@ -32,13 +21,14 @@
     "all_mechanics": {
       "Tremor": 21,
       "Shield": 1,
-      "Base Power": 4,
+      "Clash Power": 2,
       "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 2
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "District_20_Yurodivy_Ryōshū",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

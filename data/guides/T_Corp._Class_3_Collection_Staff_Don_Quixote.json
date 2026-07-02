@@ -6,24 +6,13 @@
     "primary_mechanics": [
       "Tremor",
       "Coin Power",
-      "Base Power"
+      "Clash Power"
     ],
     "secondary_mechanics": [
-      "Clash Power",
+      "Base Power",
       "Atk Weight",
       "Bind"
     ],
-    "status_effects": {
-      "Tremor": 21,
-      "Bind": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 3,
-      "Clash Power": 4
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 9,
       "On Hit": 9,
@@ -32,13 +21,14 @@
     "all_mechanics": {
       "Tremor": 21,
       "Bind": 1,
-      "Base Power": 4,
+      "Clash Power": 4,
       "Coin Power": 5,
-      "Atk Weight": 3,
-      "Clash Power": 4
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

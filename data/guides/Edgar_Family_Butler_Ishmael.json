@@ -11,23 +11,10 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
-      "Haste",
       "Bind",
+      "Haste",
       "Defense Level Down"
     ],
-    "status_effects": {
-      "Poise": 5,
-      "Sinking": 7,
-      "Haste": 1,
-      "Bind": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 3,
       "On Hit": 10,
@@ -35,17 +22,18 @@
       "On Evade": 1
     },
     "all_mechanics": {
-      "Poise": 5,
       "Sinking": 7,
-      "Haste": 1,
+      "Poise": 5,
       "Bind": 1,
-      "Base Power": 4,
+      "Haste": 1,
+      "Defense Level Down": 1,
       "Coin Power": 7,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Edgar_Family_Butler_Ishmael",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

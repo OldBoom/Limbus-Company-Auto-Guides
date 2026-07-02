@@ -10,34 +10,11 @@
     ],
     "secondary_mechanics": [
       "Linebreaker",
-      "Base Power",
       "Unbreakable Coin",
-      "Atk Weight",
-      "Concussion"
+      "Base Power",
+      "Concussion",
+      "Atk Weight"
     ],
-    "status_effects": {
-      "Rupture": 12,
-      "Tremor": 20,
-      "Bind": 2,
-      "Haste": 1,
-      "Shield": 3,
-      "Poise": 2
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 11,
-      "Atk Weight": 4,
-      "Final Power": 2
-    },
-    "unique_mechanics": {
-      "Linebreaker": 7,
-      "Deathrite": 1,
-      "Concussion": 4,
-      "Unbreakable Coin": 5,
-      "Exalted Command": 1,
-      "Heishou Bolus Contamination — 黑獸丸染 —": 1,
-      "Heishou Bolus Contamination": 1
-    },
     "triggers": {
       "On Use": 9,
       "Clash Win": 3,
@@ -45,25 +22,35 @@
       "Combat Start": 1
     },
     "all_mechanics": {
-      "Rupture": 12,
+      "Deathrite": 1,
+      "Concussion": 4,
+      "Linebreaker": 7,
+      "Heishou Bolus Contamination": 1,
+      "Unbreakable Coin": 6,
+      "Exalted Command": 1,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 1,
       "Tremor": 20,
+      "Rupture": 12,
+      "Poise": 2,
       "Bind": 2,
       "Haste": 1,
       "Shield": 3,
-      "Poise": 2,
-      "Base Power": 5,
       "Coin Power": 11,
-      "Atk Weight": 4,
+      "Base Power": 5,
       "Final Power": 2,
-      "Linebreaker": 7,
+      "Atk Weight": 4
+    },
+    "identity_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+    "key_status_effects": [],
+    "unique_mechanics": {
       "Deathrite": 1,
       "Concussion": 4,
+      "Linebreaker": 7,
+      "Heishou Bolus Contamination": 1,
       "Unbreakable Coin": 5,
       "Exalted Command": 1,
       "Heishou Bolus Contamination — 黑獸丸染 —": 1
-    },
-    "identity_slug": "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
-    "key_status_effects": []
+    }
   },
   "synergies": [
     {

@@ -12,16 +12,6 @@
       "Atk Weight",
       "Defense Level Down"
     ],
-    "status_effects": {
-      "Rupture": 16
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 6,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 5,
       "Clash Win": 1,
@@ -29,13 +19,14 @@
     },
     "all_mechanics": {
       "Rupture": 16,
-      "Base Power": 4,
+      "Defense Level Down": 1,
       "Coin Power": 6,
-      "Atk Weight": 3,
-      "Defense Level Down": 1
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Seven_Assoc._South_Section_4_Heathcliff",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

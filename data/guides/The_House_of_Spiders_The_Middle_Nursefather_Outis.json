@@ -5,34 +5,16 @@
   "mechanic_profile": {
     "primary_mechanics": [
       "Bleed",
-      "Burn",
-      "Coin Power"
+      "Unbreakable Coin",
+      "Burn"
     ],
     "secondary_mechanics": [
-      "Unbreakable Coin",
+      "Coin Power",
       "Base Power",
       "Atk Weight",
       "Protection",
       "Final Power"
     ],
-    "status_effects": {
-      "Burn": 8,
-      "Bleed": 19,
-      "Bind": 1,
-      "Shield": 1,
-      "Protection": 2
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 8,
-      "Atk Weight": 4,
-      "Final Power": 2,
-      "Blunt DMG Up": 1,
-      "Damage Up": 1
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 6
-    },
     "triggers": {
       "On Use": 11,
       "On Hit": 16,
@@ -40,21 +22,24 @@
       "Combat Start": 2
     },
     "all_mechanics": {
-      "Burn": 8,
+      "Unbreakable Coin": 8,
       "Bleed": 19,
+      "Burn": 8,
       "Bind": 1,
-      "Shield": 1,
       "Protection": 2,
-      "Base Power": 5,
-      "Coin Power": 8,
-      "Atk Weight": 4,
-      "Final Power": 2,
-      "Blunt DMG Up": 1,
+      "Shield": 1,
       "Damage Up": 1,
-      "Unbreakable Coin": 6
+      "Blunt DMG Up": 1,
+      "Coin Power": 8,
+      "Base Power": 5,
+      "Final Power": 2,
+      "Atk Weight": 4
     },
     "identity_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Unbreakable Coin": 6
+    }
   },
   "synergies": [
     {

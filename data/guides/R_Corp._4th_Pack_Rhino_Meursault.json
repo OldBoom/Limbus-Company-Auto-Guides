@@ -11,34 +11,26 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
+      "Shield",
       "Final Power"
     ],
-    "status_effects": {
-      "Charge": 15,
-      "Bleed": 9
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 3,
-      "Final Power": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 4,
       "On Hit": 9,
       "Heads Hit": 1
     },
     "all_mechanics": {
-      "Charge": 15,
       "Bleed": 9,
-      "Base Power": 4,
+      "Charge": 15,
+      "Shield": 1,
       "Coin Power": 5,
-      "Atk Weight": 3,
-      "Final Power": 1
+      "Base Power": 4,
+      "Final Power": 1,
+      "Atk Weight": 3
     },
     "identity_slug": "R_Corp._4th_Pack_Rhino_Meursault",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

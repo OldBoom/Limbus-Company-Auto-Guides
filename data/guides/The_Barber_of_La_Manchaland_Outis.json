@@ -14,36 +14,27 @@
       "Atk Weight",
       "Clash Power"
     ],
-    "status_effects": {
-      "Bleed": 23
-    },
-    "stat_modifiers": {
-      "Base Power": 6,
-      "Coin Power": 8,
-      "Atk Weight": 6,
-      "Clash Power": 2
-    },
-    "unique_mechanics": {
-      "Bloodfeast": 11,
-      "Sewing Target": 7,
-      "Hardblood": 1
-    },
     "triggers": {
       "On Use": 8,
       "On Hit": 14,
       "Attack End": 2
     },
     "all_mechanics": {
-      "Bleed": 23,
-      "Base Power": 6,
-      "Coin Power": 8,
-      "Atk Weight": 6,
-      "Clash Power": 2,
       "Bloodfeast": 10,
-      "Sewing Target": 7
+      "Sewing Target": 7,
+      "Bleed": 23,
+      "Clash Power": 2,
+      "Coin Power": 8,
+      "Base Power": 6,
+      "Atk Weight": 6
     },
     "identity_slug": "The_Barber_of_La_Manchaland_Outis",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Bloodfeast": 11,
+      "Hardblood": 1,
+      "Sewing Target": 7
+    }
   },
   "synergies": [
     {

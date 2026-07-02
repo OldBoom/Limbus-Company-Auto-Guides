@@ -15,21 +15,6 @@
       "Unbreakable Coin",
       "Damage Up"
     ],
-    "status_effects": {
-      "Bleed": 34
-    },
-    "stat_modifiers": {
-      "Base Power": 9,
-      "Coin Power": 14,
-      "Atk Weight": 9,
-      "Clash Power": 1,
-      "Damage Up": 3
-    },
-    "unique_mechanics": {
-      "Bloodfeast": 24,
-      "Hardblood": 22,
-      "Unbreakable Coin": 8
-    },
     "triggers": {
       "On Use": 14,
       "On Hit": 11,
@@ -37,18 +22,23 @@
       "Combat Start": 3
     },
     "all_mechanics": {
-      "Bleed": 34,
-      "Base Power": 9,
-      "Coin Power": 14,
-      "Atk Weight": 9,
-      "Clash Power": 1,
-      "Damage Up": 3,
       "Bloodfeast": 23,
       "Hardblood": 18,
-      "Unbreakable Coin": 8
+      "Unbreakable Coin": 8,
+      "Bleed": 34,
+      "Damage Up": 3,
+      "Clash Power": 1,
+      "Coin Power": 14,
+      "Base Power": 9,
+      "Atk Weight": 9
     },
     "identity_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Bloodfeast": 24,
+      "Hardblood": 22,
+      "Unbreakable Coin": 8
+    }
   },
   "synergies": [
     {

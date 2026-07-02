@@ -11,27 +11,10 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
+      "Unbreakable Coin",
       "Shield",
-      "Clash Power",
-      "Unbreakable Coin"
+      "Clash Power"
     ],
-    "status_effects": {
-      "Charge": 33,
-      "Rupture": 4,
-      "Shield": 2
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 9,
-      "Atk Weight": 3,
-      "Clash Power": 2,
-      "Final Power": 1,
-      "Defense Level Up": 1
-    },
-    "unique_mechanics": {
-      "Unbreakable Coin": 2,
-      "Overcharge": 2
-    },
     "triggers": {
       "On Use": 6,
       "On Hit": 7,
@@ -39,20 +22,24 @@
       "Heads Hit": 3
     },
     "all_mechanics": {
-      "Charge": 33,
-      "Rupture": 4,
-      "Shield": 2,
-      "Base Power": 4,
-      "Coin Power": 9,
-      "Atk Weight": 3,
-      "Clash Power": 2,
-      "Final Power": 1,
-      "Defense Level Up": 1,
+      "Overcharge": 1,
       "Unbreakable Coin": 2,
-      "Overcharge": 1
+      "Rupture": 4,
+      "Charge": 34,
+      "Shield": 2,
+      "Defense Level Up": 1,
+      "Clash Power": 2,
+      "Coin Power": 9,
+      "Base Power": 4,
+      "Final Power": 1,
+      "Atk Weight": 3
     },
     "identity_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Overcharge": 2,
+      "Unbreakable Coin": 2
+    }
   },
   "synergies": [
     {

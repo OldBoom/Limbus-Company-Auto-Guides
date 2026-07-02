@@ -6,30 +6,15 @@
     "primary_mechanics": [
       "Bleed",
       "Burn",
-      "Rupture"
+      "Tremor"
     ],
     "secondary_mechanics": [
-      "Tremor",
+      "Rupture",
       "Sinking",
       "Coin Power",
       "Base Power",
-      "Atk Weight"
+      "Clash Power"
     ],
-    "status_effects": {
-      "Bleed": 21,
-      "Burn": 6,
-      "Rupture": 6,
-      "Tremor": 6,
-      "Sinking": 6
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 6,
-      "Atk Weight": 3,
-      "Clash Power": 3,
-      "Offense Level Up": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "Heads Hit": 1,
       "On Hit": 8,
@@ -38,17 +23,18 @@
     "all_mechanics": {
       "Bleed": 21,
       "Burn": 6,
-      "Rupture": 6,
       "Tremor": 6,
+      "Rupture": 6,
       "Sinking": 6,
-      "Base Power": 5,
-      "Coin Power": 6,
-      "Atk Weight": 3,
+      "Offense Level Up": 1,
       "Clash Power": 3,
-      "Offense Level Up": 1
+      "Coin Power": 6,
+      "Base Power": 5,
+      "Atk Weight": 3
     },
     "identity_slug": "Ring_Pointillist_Student_Yi_Sang",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {
@@ -76,24 +62,24 @@
       "faction_match": false
     },
     {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
       "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "The Ring Pointillist Student Yi Sang is a Status Specialist — damage scales with the number of debuff types on the target. Stack varied statuses before committing high-value skills. Scaling conditions: Clash Power +1 per 3 Bleed (max +2); Coin Power +1 per 3 Bleed (max +2). **SP regenerator** — restores ally **SP** through passives and key skills.",
-  "playstyle_guide": "- Skills check **6+ Burn** — favour those coins when stacked.\n- Skills check **4+ Bleed** — favour those coins when stacked.\n- Skills check **6+ Rupture** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **lowest-SP allies**.\n- Reach scaling conditions before committing S3: Clash Power +1 per 3 Bleed (max +2).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n\n**S1 — Paint Over** (BP 2, CP +3, x3): rolls — low 2, high 11 (Extremely Low).\n- If target has 6+ Bleed, Clash Power +1\n- Inflict +2 Count of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking\n\n**S2 — Sanguine Pointillism** (BP 8, CP +8, x1): rolls — low 8, high 16 (Slightly Low / Average stacked).\n- Scales Clash Power with Bleed stacks — apply liberally before committing (cap +2).\n- **Clash Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- **Coin Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n\n**S3 — Hematic Coloring** (BP 3, CP +3, x4): rolls — low 3, high 15 (Low / Extremely High stacked).\n- Scales Clash Power with Bleed stacks — apply liberally before committing (cap +2).\n- **Clash Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- **Coin Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- +15% per negative effect type (max +75%)\n\nCombat passive — **Sanguine Pointillist**: This Identity only counts as an \"Identity that inflicts Bleed\". This Identity's Skills that randomly inflict Burn, Bleed, Tremor, Rupture….\n\nCombat passive — **Assignment Evaluation**: On Hit, if target has 4+ Bleed, heal 2 SP.\n  - Heal 1 additional SP for every type of negative effect on the target (max 3).\n  - If this unit's SP is at max, gain 2 Offense Level Up next turn when this unit heals SP with this effect.",
+  "playstyle_guide": "- Skills check **6+ Burn** — favour those coins when stacked.\n- Skills check **4+ Bleed** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **lowest-SP allies**.\n- Reach scaling conditions before committing S3: Clash Power +1 per 3 Bleed (max +2).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n\n**S1 — Paint Over** (BP 2, CP +3, x3): rolls — low 2, high 11 (Extremely Low).\n- If target has 6+ Bleed, Clash Power +1\n- Inflict +2 Count of a random status, chosen from Burn, Bleed, Rupture, Tremor, and Sinking\n\n**S2 — Sanguine Pointillism** (BP 8, CP +8, x1): rolls — low 8, high 16 (Slightly Low / Average stacked).\n- Scales Clash Power with Bleed stacks — apply liberally before committing (cap +2).\n- **Clash Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- **Coin Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n\n**S3 — Hematic Coloring** (BP 3, CP +3, x4): rolls — low 3, high 15 (Low / Extremely High stacked).\n- Scales Clash Power with Bleed stacks — apply liberally before committing (cap +2).\n- **Clash Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- **Coin Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- +15% per negative effect type (max +75%)\n\nCombat passive — **Sanguine Pointillist**: This Identity only counts as an \"Identity that inflicts Bleed\". This Identity's Skills that randomly inflict Burn, Bleed, Tremor, Rupture….\n\nCombat passive — **Assignment Evaluation**: On Hit, if target has 4+ Bleed, heal 2 SP.\n  - Heal 1 additional SP for every type of negative effect on the target (max 3).\n  - If this unit's SP is at max, gain 2 Offense Level Up next turn when this unit heals SP with this effect.",
   "team_suggestions": [
     "**Tremor** control — stack for early stagger breaks. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",

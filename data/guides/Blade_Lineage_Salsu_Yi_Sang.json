@@ -11,15 +11,6 @@
     "secondary_mechanics": [
       "Atk Weight"
     ],
-    "status_effects": {
-      "Poise": 8
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 5,
-      "Atk Weight": 3
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Use": 2,
       "On Hit": 1,
@@ -28,12 +19,13 @@
     },
     "all_mechanics": {
       "Poise": 8,
-      "Base Power": 4,
       "Coin Power": 5,
+      "Base Power": 4,
       "Atk Weight": 3
     },
     "identity_slug": "Blade_Lineage_Salsu_Yi_Sang",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {

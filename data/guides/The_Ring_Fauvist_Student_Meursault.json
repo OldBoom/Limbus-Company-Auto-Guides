@@ -9,46 +9,34 @@
       "Coin Power"
     ],
     "secondary_mechanics": [
-      "Base Power",
       "Mauled Color — Rouge —",
+      "Base Power",
       "Atk Weight",
-      "Clash Power",
-      "Final Power"
+      "Unbreakable Coin",
+      "Defense Level Down"
     ],
-    "status_effects": {
-      "Bleed": 14,
-      "Sinking": 8
-    },
-    "stat_modifiers": {
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 1,
-      "Final Power": 1,
-      "Blunt DMG Up": 1,
-      "Defense Level Down": 1
-    },
-    "unique_mechanics": {
-      "Mauled Color — Rouge —": 5
-    },
     "triggers": {
       "On Use": 6,
       "On Hit": 12
     },
     "all_mechanics": {
+      "Unbreakable Coin": 1,
+      "Mauled Color — Rouge —": 5,
       "Bleed": 14,
       "Sinking": 8,
-      "Base Power": 5,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 1,
-      "Final Power": 1,
-      "Blunt DMG Up": 1,
       "Defense Level Down": 1,
-      "Mauled Color — Rouge —": 5
+      "Blunt DMG Up": 1,
+      "Clash Power": 1,
+      "Coin Power": 7,
+      "Base Power": 5,
+      "Final Power": 1,
+      "Atk Weight": 3
     },
     "identity_slug": "The_Ring_Fauvist_Student_Meursault",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {
+      "Mauled Color — Rouge —": 5
+    }
   },
   "synergies": [
     {
@@ -62,7 +50,7 @@
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "score": 0.97,
       "source": "rule",
       "faction_match": true
@@ -97,7 +85,7 @@
   "team_suggestions": [
     "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
   ],
   "team_suggestion_intro": "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
@@ -111,7 +99,7 @@
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "source": "rule"
     },
     {

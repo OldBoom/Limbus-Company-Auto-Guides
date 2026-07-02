@@ -13,30 +13,20 @@
       "Shield",
       "Clash Power"
     ],
-    "status_effects": {
-      "Tremor": 18,
-      "Shield": 1
-    },
-    "stat_modifiers": {
-      "Base Power": 4,
-      "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 1
-    },
-    "unique_mechanics": {},
     "triggers": {
       "On Hit": 6
     },
     "all_mechanics": {
       "Tremor": 18,
       "Shield": 1,
-      "Base Power": 4,
+      "Clash Power": 1,
       "Coin Power": 7,
-      "Atk Weight": 3,
-      "Clash Power": 1
+      "Base Power": 4,
+      "Atk Weight": 3
     },
     "identity_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
-    "key_status_effects": []
+    "key_status_effects": [],
+    "unique_mechanics": {}
   },
   "synergies": [
     {
