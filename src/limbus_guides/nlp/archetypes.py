@@ -304,7 +304,7 @@ def find_tremor_archetype(
 
     if unique:
         label = format_unique_tremor_label(unique[0])
-        setup_summary = f"**Tremor** control ({label})."
+        setup_summary = f"**{label}** control."
     else:
         setup_summary = "**Tremor** control — stack for early stagger breaks."
 

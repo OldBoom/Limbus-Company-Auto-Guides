@@ -285,7 +285,7 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
     if tremor_arch:
         subtypes = gp.get("unique_tremor_types") or tremor_arch.get("unique_subtypes") or []
         if subtypes:
-            status_bits.append(format_unique_tremor_label(subtypes[0]))
+            status_bits.append(f"**{format_unique_tremor_label(subtypes[0])}**")
         else:
             status_bits.append("**Tremor**")
     if burn_arch:
@@ -313,14 +313,14 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
     def_arch = gp.get("defense_archetype") or {}
     if def_arch.get("kind") == "equip_unlock":
         reload_clause = (
-            "; equipping defense once reloads **Savage Tigermark Round** "
+            "Equipping defense once reloads **Savage Tigermark Round** "
             "and unlocks the upgraded S3"
         )
 
     kit_clauses: list[str] = []
     combat = gp.get("combat_passives_text", "")
     if re.search(r"gain Damage Up equal to the amount spent", combat, re.I):
-        kit_clauses.append("gains **Damage Up** next turn from ammo spent")
+        kit_clauses.append("Gains **Damage Up** next turn from ammo spent")
     if re.search(r"convert the Coins to Unbreakable", skill_text, re.I):
         kit_clauses.append("S3 turns **Unbreakable** at **3+** ammo")
 
@@ -331,19 +331,22 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
     ):
         passive = support_arch.get("passive_name") or "Support passive"
         kit_clauses.append(
-            f"**{passive}** resupplies the earliest-deployed **Ammo** ally once per fight"
+            f"Support passive (**{passive}**) resupplies the earliest-deployed "
+            f"**Ammo** ally once per fight"
         )
 
-    kit_suffix = ""
-    if kit_clauses:
-        kit_suffix = "; " + "; ".join(kit_clauses)
-
     premium = ammo["premium_skill"]
-    return (
-        f"{name} is a {role_str} — **{ammo['ammo_label']}** damage carry who applies "
-        f"{status_phrase} on hits{scale_clause}, spending ammo for burst on "
-        f"S{premium}{reload_clause}{kit_suffix}."
-    )
+    sentences = [
+        (
+            f"{name} is a {role_str} — **{ammo['ammo_label']}** damage carry who applies "
+            f"{status_phrase} on hits{scale_clause}, spending ammo for burst on "
+            f"S{premium}."
+        )
+    ]
+    if reload_clause:
+        sentences.append(f"{reload_clause}.")
+    sentences.extend(f"{clause}." for clause in kit_clauses)
+    return " ".join(sentences)
 
 
 def _devyat_courier_core_opening(name: str, role_str: str, gp: dict) -> str | None:

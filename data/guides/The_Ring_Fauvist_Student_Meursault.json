@@ -50,7 +50,7 @@
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "score": 0.97,
       "source": "rule",
       "faction_match": true
@@ -85,7 +85,7 @@
   "team_suggestions": [
     "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
   ],
   "team_suggestion_intro": "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
@@ -99,7 +99,7 @@
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "source": "rule"
     },
     {

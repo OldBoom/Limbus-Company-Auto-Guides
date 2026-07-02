@@ -966,8 +966,10 @@ def test_thumb_capo_core_idea_describes_damage_kit():
     assert "Tigermark" in core
     assert "Burn" in core
     assert "Scorch" in core
+    assert "**Tremor — Scorch**" in core
     assert "damage carry" in core.lower()
     assert "Burn applicator" not in core
+    assert "; equipping defense" not in core
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert guide["core_idea"] == core
@@ -986,11 +988,14 @@ def test_thumb_soldato_sinclair_core_idea_describes_damage_kit():
     assert "Scorch Propellant Ammo" in core
     assert "Burn" in core
     assert "Scorch" in core
+    assert "**Tremor — Scorch**" in core
     assert "damage carry" in core.lower()
     assert "Ammunition Tribute" in core
+    assert "Support passive" in core
     assert "Damage Up" in core
     assert "Unbreakable" in core
     assert "Burn applicator" not in core
+    assert "; gains **Damage Up**" not in core
     assert core.count("resupply") == 1 or "Ammunition Tribute" in core
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
@@ -1020,6 +1025,26 @@ def test_devyat_sinclair_core_idea_describes_courier_loop():
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert guide["core_idea"] == core
+
+
+def test_tremor_unique_subtype_bold_in_core_idea():
+    from limbus_guides.nlp.generation import _build_core_idea
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    cases = {
+        "District_20_Yurodivy_Hong_Lu": "Reverb",
+        "Öufi_Assoc._South_Section_3_Heathcliff": "Decay",
+        "T_Corp._Class_3_Collection_Staff_Don_Quixote": "Chain",
+        "N_Corp._E.G.O_Contempt,_Awe_Ryōshū": "Hemorrhage",
+    }
+    for slug, subtype in cases.items():
+        identity = load_parsed_identity(slug)
+        identity["mechanic_profile"] = build_mechanic_profile(identity)
+        gp = build_gameplan(identity)
+        core = _build_core_idea(identity["name"], gp)
+        assert f"**Tremor — {subtype}** control" in core
+        assert f"**Tremor** control (Tremor — {subtype})" not in core
 
 
 def test_archetype_tips_skip_basic_mechanic_primers():

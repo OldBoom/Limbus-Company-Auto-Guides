@@ -135,3 +135,27 @@ def test_format_core_idea_html_fallback():
     html = format_core_idea_html("Plain summary without the standard lead pattern.")
     assert 'class="lc-core-idea"' in html
     assert "lc-guide-line" in html
+
+
+def test_format_core_idea_html_thumb_ammo_kit():
+    """Thumb ammo openings use period-separated sentences so detail blocks render."""
+    from limbus_guides.nlp.generation import _build_core_idea
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+    from tests.test_pipeline import load_parsed_identity
+
+    slug = "The_Thumb_East_Soldato_II_Sinclair"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    text = _build_core_idea(identity["name"], gp)
+
+    assert "; gains **Damage Up**" not in text
+    assert "Gains **Damage Up**" in text
+
+    html = format_core_idea_html(text)
+    assert "lc-core-hook" in html
+    assert "lc-core-details" in html
+    assert "lc-core-detail" in html
+    assert "lc-core-support" in html
+    assert "Ammunition Tribute" in html
