@@ -43,10 +43,21 @@ _DUMMY_CORE_IDEA = (
 _DUMMY_MECHANICS = "Bleed · Poise · Charge"
 _DUMMY_PLAYSTYLE = (
     "- Build your resource with S2, then cash out with S3 once the threshold is met.\n\n"
-    "**S1 — Example Skill** (BP 4, CP +3, x2): rolls — low 4, high 10 (Average).\n"
+    "**S1 — Example Skill** (BP 4, CP +3, x2): rolls — low 4, high 10 (Slightly Low / High stacked).\n"
     "- Applies statuses to set up your finisher.\n\n"
     "**S3 — Finisher Skill** (BP 5, CP +4, x3): rolls — low 5, high 17 (High).\n"
     "- Commit when scaling conditions are active."
+)
+_DUMMY_ROLLS_NOTE = (
+    "*Roll estimates* — each attack skill shows `rolls — low N, high N`: the attack roll if "
+    "**every coin lands Tails** (low) vs **every coin lands Heads** (high), plus any flat "
+    "On Hit / Heads Hit damage bonuses. These are **raw rolls** — they ignore Defense Level "
+    "modifiers and sin resistances, so they are best for **comparing skills and identities** "
+    "to each other, not predicting exact in-fight damage.\n\n"
+    "The parenthetical label ranks that skill's high roll against the same slot (S1, S2, or S3) "
+    "across all guided identities — e.g. *(Average)* or *(High)*. When scaling conditions can "
+    "raise the ceiling, you may see **two** labels: *(Slightly Low / High stacked)* means "
+    "Slightly Low at base power and High once conditions like status stacks are fully met."
 )
 _DUMMY_TEAMS = (
     "- **Teammate Identity A**: inflicts Bleed via support passive — scales your damage.\n"
@@ -293,6 +304,7 @@ def _render_landing() -> None:
 
         st.markdown("### ③ Playstyle Guide")
         st.caption("*Rotation tips, per-skill breakdowns, roll estimates, and passive notes.*")
+        st.markdown(_DUMMY_ROLLS_NOTE)
         _render_formatted_prose(_DUMMY_PLAYSTYLE)
 
         st.markdown("### ④ Team Suggestions")
