@@ -413,7 +413,7 @@ def _build_core_idea(name: str, gp: dict) -> str:
                 )
         elif kind == "power_counter":
             parts.append(
-                f"{name} is a {role_str} — **{defense_name}** is a scaling finisher "
+                f"{name} is a {role_str} — **{defense_name}** is a high-damage counter "
                 f"with Stagger immunity, not just a defensive tool."
             )
         else:
@@ -952,7 +952,7 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         )
     elif gp.get("charge_archetype"):
         pieces.append(gp["charge_archetype"].get("setup_summary", (
-            "**Charge** cycle — build Count toward **20**, spend on empowered skills, "
+            "**Charge** cycle — build Count toward **20**, spend on highest-damage skills, "
             "then rebuild for the next window."
         )))
     elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("setup_summary"):

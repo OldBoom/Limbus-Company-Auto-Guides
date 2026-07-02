@@ -571,6 +571,64 @@ def test_nails_archetype_mittelhammer_don_quixote():
     assert "nails" in guide["playstyle_guide"].lower()
 
 
+def test_stack_ramp_trigger_and_ally_filtering():
+    from limbus_guides.nlp.archetypes import build_stack_ramp_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, parse_passives_text
+
+    aedd = load_parsed_identity("LCE_E.G.O_AEDD_Gregor")
+    aedd["mechanic_profile"] = build_mechanic_profile(aedd)
+    combat, support = parse_passives_text(aedd["raw_markdown"])
+    tips = build_stack_ramp_tips(
+        aedd["parsed_skills"],
+        combat,
+        status="Charge",
+        payoff_label="High-voltage Current Discharge",
+        support_text=support,
+    )
+    assert tips
+    blob = tips[0].lower()
+    assert "combat start" in blob
+    assert "+10" in tips[0]
+    assert "+4 charge count" not in blob or "ally" not in blob
+
+    faust = load_parsed_identity("W_Corp._L2_Cleanup_Agent_Faust")
+    faust["mechanic_profile"] = build_mechanic_profile(faust)
+    gp = build_gameplan(faust)
+    from limbus_guides.nlp.archetypes import _extract_stack_gains
+
+    faust_gains = _extract_stack_gains(
+        gp["skills"],
+        gp.get("combat_passives_text", ""),
+        status="Charge",
+        support_text=gp.get("support_passive_text", ""),
+    )
+    assert any(g.trigger == "Attack End" for g in faust_gains)
+
+    seven = load_parsed_identity("Seven_Assoc._South_Section_4_Faust")
+    seven["mechanic_profile"] = build_mechanic_profile(seven)
+    gp7 = build_gameplan(seven)
+    poise_tips = gp7.get("poise_archetype", {}).get("tips", [])
+    if poise_tips:
+        assert "rupture" in poise_tips[0].lower()
+
+
+def test_poise_archetype_kit_specific_ramp():
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "Blade_Lineage_Salsu_Yi_Sang"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = gp.get("poise_archetype")
+    assert arch is not None
+    tips_blob = " ".join(arch["tips"])
+    assert "Ramp **Poise Potency** to **20**" not in tips_blob
+    assert "S1" in tips_blob or "Striker" in tips_blob
+    assert "Poise Count" in tips_blob or "Clash Win" in tips_blob
+
+
 def test_charge_archetype_w_corp_heathcliff():
     from limbus_guides.nlp.generation import generate_guide, _build_core_idea, _build_overview_tips
     from limbus_guides.nlp.mechanics import build_mechanic_profile
@@ -588,11 +646,12 @@ def test_charge_archetype_w_corp_heathcliff():
     assert arch is not None
     assert arch["kind"] == "charge_scaling"
     assert "20" in arch["tips"][0]
+    assert "On Hit" in arch["tips"][0] or "+5" in arch["tips"][0]
     assert "rebuild" in arch["setup_summary"].lower() or "rebuild" in " ".join(arch["tips"]).lower()
 
     overview = _build_overview_tips(gp)
     assert "Charge" in overview
-    assert "caps at" in overview.lower() or "ramp back" in overview.lower()
+    assert "ramp" in overview.lower() or "toward **20**" in overview.lower()
 
     core = _build_core_idea(identity["name"], gp)
     assert "Charge" in core
@@ -909,6 +968,9 @@ def test_archetype_tips_skip_basic_mechanic_primers():
         "hits during your rotation",
         "use every appearance to build up",
         "keeps poise climbing",
+        "heavy chain",
+        "attack chain",
+        "spend turn",
         "keeps bleed climbing",
         "evade sequence",
         "carry line",

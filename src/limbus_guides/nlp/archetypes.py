@@ -7,6 +7,7 @@ Mechanic summaries reference docs/status-effects.md and docs/domain-primer.md.
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
 from typing import Any, Callable
 
 from limbus_guides.nlp.synergy import extract_unique_tremor_types, format_unique_tremor_label
@@ -360,6 +361,301 @@ _POISE_TO_COINPWR = re.compile(
 )
 _POISE_CRIT = re.compile(r"critical hit.*poise|poise.*critical", re.I)
 _GAIN_POISE = re.compile(r"Gain[^;]*Poise", re.I)
+_CLAUSE_TAG = re.compile(r"^\[([^\]]+)\]\s*")
+_CONSUME_STATUS = re.compile(r"consume[^;]*(?:poise|charge)", re.I)
+
+_GAIN_POISE_COUNT = re.compile(
+    r"Gain\s+\+?(\d+)\s+Poise\s+Count(?:\s+next turn)?",
+    re.I,
+)
+_GAIN_POISE_POTENCY = re.compile(
+    r"Gain\s+(\d+)\s+Poise(?:\s+next turn)?(?!\s+Count)",
+    re.I,
+)
+_GAIN_CHARGE_COUNT = re.compile(
+    r"Gain\s+\+?(\d+)\s+Charge\s+Count",
+    re.I,
+)
+_GAIN_POISE_VARIABLE = re.compile(
+    r"gain\s+Poise\s+equal\s+to\s+([^;(]+)",
+    re.I,
+)
+
+
+@dataclass
+class _StackGain:
+    label: str
+    trigger: str
+    amount: int
+    kind: str  # "Count" or "Potency"
+    note: str = ""
+
+
+def _gain_context_is_ally(clause: str, match: re.Match[str]) -> bool:
+    start = max(0, match.start() - 50)
+    end = min(len(clause), match.end() + 60)
+    window = clause[start:end]
+    lower = window.lower()
+    if "on self" in lower or "this unit" in lower:
+        return False
+    if not re.search(r"\ball(?:y|ies)\b", window, re.I):
+        return False
+    if re.search(r"random ally|said ally", window, re.I):
+        return True
+    return bool(
+        re.search(r"\ball(?:y|ies)\b.*\bgain\b", window, re.I)
+        or re.search(r"\bgain\b.*\ball(?:y|ies)\b", window, re.I)
+        or re.search(r"\bapply\b[^;]*\ball(?:y|ies)\b", window, re.I)
+    )
+
+
+def _trigger_at_pos(clause: str, pos: int) -> str:
+    """Best-effort trigger label around a gain effect."""
+    local = clause[:pos]
+    tags = list(_CLAUSE_TAG.finditer(local))
+    if tags:
+        return tags[-1].group(1).strip()
+    for name in (
+        "Combat Start",
+        "Turn Start",
+        "Turn End",
+        "Attack End",
+        "Skill End",
+        "On Clash Win",
+        "On Evade",
+        "Clash Win",
+        "Heads Hit",
+        "On Hit",
+        "On Use",
+    ):
+        if re.search(rf"(?:{re.escape(name)}\s*:)\s*$", local, re.I):
+            return name
+        if re.search(rf"\[{re.escape(name)}\]\s*$", local, re.I):
+            return name
+    tail = clause[pos : pos + 100]
+    for name in ("Attack End", "Turn End", "Combat Start"):
+        if re.search(rf"\bat {re.escape(name)}\b", tail, re.I):
+            return name
+    if re.search(r"\bnext turn\b", tail, re.I):
+        return "next turn"
+    return "On Use"
+
+
+def _scan_clauses_for_gains(
+    clauses: list[str],
+    *,
+    label: str,
+    status: str,
+) -> list[_StackGain]:
+    gains: list[_StackGain] = []
+    count_re = _GAIN_POISE_COUNT if status == "Poise" else _GAIN_CHARGE_COUNT
+    variable_re = _GAIN_POISE_VARIABLE if status == "Poise" else None
+    for clause in clauses:
+        clause = re.sub(r"\n+---.*$", "", clause, flags=re.S).strip()
+        if not clause:
+            continue
+        if _CONSUME_STATUS.search(clause):
+            continue
+        has_gain = count_re.search(clause) or (
+            variable_re.search(clause) if variable_re else False
+        ) or (
+            status == "Poise" and _GAIN_POISE_POTENCY.search(clause)
+        )
+        if not has_gain:
+            continue
+        for m in count_re.finditer(clause):
+            if _gain_context_is_ally(clause, m):
+                continue
+            gains.append(
+                _StackGain(label, _trigger_at_pos(clause, m.start()), int(m.group(1)), "Count")
+            )
+        if status == "Poise":
+            for m in _GAIN_POISE_POTENCY.finditer(clause):
+                if _gain_context_is_ally(clause, m):
+                    continue
+                gains.append(
+                    _StackGain(
+                        label, _trigger_at_pos(clause, m.start()), int(m.group(1)), "Potency"
+                    )
+                )
+            vm = _GAIN_POISE_VARIABLE.search(clause)
+            if vm and not _gain_context_is_ally(clause, vm):
+                source = vm.group(1).strip()
+                gains.append(
+                    _StackGain(
+                        label,
+                        _trigger_at_pos(clause, vm.start()),
+                        0,
+                        "Potency",
+                        note=f"equal to {source}",
+                    )
+                )
+    return gains
+
+
+def _extract_stack_gains(
+    skills: list[dict],
+    combat_text: str = "",
+    *,
+    status: str,
+    support_text: str = "",
+) -> list[_StackGain]:
+    """Kit-specific Poise / Charge gain lines from skills and passives."""
+    gains: list[_StackGain] = []
+
+    for skill in skills:
+        sn = skill.get("skill_num")
+        name = skill.get("name") or f"Skill {sn}"
+        label = f"**S{sn} — {name}**" if sn else f"**{name}**"
+        clauses: list[str] = []
+        for field_name in ("on_use_effects", "skill_bonuses"):
+            for line in skill.get(field_name, []):
+                clauses.extend(_split_clauses(line))
+        for coin in skill.get("coin_effects", []):
+            clauses.extend(_split_clauses(coin.get("effect", "")))
+        gains.extend(_scan_clauses_for_gains(clauses, label=label, status=status))
+
+    for passive_blob in (combat_text, support_text):
+        for part in re.split(r"###\s+", passive_blob):
+            part = part.strip()
+            if not part:
+                continue
+            lines = part.split("\n", 1)
+            passive_name = lines[0].strip().strip("#").strip()
+            body = lines[1] if len(lines) > 1 else ""
+            if not body.strip():
+                continue
+            label = f"**{passive_name}**"
+            passive_gains = _scan_clauses_for_gains(
+                _split_clauses(body), label=label, status=status
+            )
+            gains.extend(passive_gains)
+
+    return gains
+
+
+def _format_gain_fragment(gain: _StackGain, *, status: str) -> str:
+    if gain.note:
+        trig = gain.trigger
+        if trig.lower() in ("on use", "combat start", "turn end", "attack end"):
+            return f"**Poise** {gain.note} at **{trig}**"
+        return f"**Poise** {gain.note} on **{trig}**"
+    unit = "Poise Count" if gain.kind == "Count" and status == "Poise" else (
+        "Charge Count" if gain.kind == "Count" else "Poise"
+    )
+    trigger = gain.trigger
+    if trigger.lower() in ("on use", "combat start", "turn end", "attack end", "next turn"):
+        trigger = f"at **{trigger}**"
+    elif trigger.lower() == "clash win":
+        trigger = "on **Clash Win**"
+    elif trigger.lower() == "on hit":
+        trigger = "per **On Hit** coin"
+    elif trigger.lower() == "heads hit":
+        trigger = "per **Heads Hit** coin"
+    else:
+        trigger = f"on **{trigger}**"
+    return f"**+{gain.amount} {unit}** {trigger}"
+
+
+def _group_gain_fragments(gains: list[_StackGain], *, status: str) -> dict[str, list[str]]:
+    grouped: dict[str, list[str]] = {}
+    seen: set[tuple[str, str, int, str, str]] = set()
+    for gain in gains:
+        key = (gain.label, gain.trigger, gain.amount, gain.kind, gain.note)
+        if key in seen:
+            continue
+        seen.add(key)
+        grouped.setdefault(gain.label, []).append(_format_gain_fragment(gain, status=status))
+    return grouped
+
+
+def build_stack_ramp_tips(
+    skills: list[dict],
+    combat_text: str = "",
+    *,
+    status: str,
+    payoff_label: str | None = None,
+    support_text: str = "",
+) -> list[str]:
+    """
+    Rotation tips describing how this kit actually gains Poise or Charge stacks,
+    instead of generic 'ramp to 20' primers.
+    """
+    gains = _extract_stack_gains(
+        skills, combat_text, status=status, support_text=support_text
+    )
+    if not gains:
+        return []
+
+    grouped = _group_gain_fragments(gains, status=status)
+    payoff_key = None
+    if payoff_label:
+        for label in grouped:
+            if payoff_label in label:
+                payoff_key = label
+                break
+
+    ramp_labels = [
+        label
+        for label in grouped
+        if label != payoff_key or len(grouped) == 1
+    ]
+    # Prefer skills that only build (drop payoff if other ramp sources exist).
+    if payoff_key and len(ramp_labels) > 1:
+        ramp_labels = [label for label in ramp_labels if label != payoff_key]
+
+    def _total_amount(label: str) -> int:
+        return sum(
+            g.amount for g in gains if g.label == label and g.kind == "Count"
+        ) or sum(g.amount for g in gains if g.label == label)
+
+    ramp_labels.sort(key=_total_amount, reverse=True)
+    ramp_labels = ramp_labels[:2]
+
+    source_bits: list[str] = []
+    for label in ramp_labels:
+        frags = grouped[label]
+        if len(frags) == 1:
+            source_bits.append(f"{label} adds {frags[0]}")
+        else:
+            source_bits.append(f"{label} adds {frags[0]} and {frags[1]}")
+
+    if not source_bits:
+        return []
+
+    payoff_ref = ""
+    if payoff_label and payoff_key:
+        payoff_ref = f" before committing **{payoff_label}**"
+    elif payoff_label:
+        payoff_ref = f" before **{payoff_label}**"
+
+    if status == "Poise":
+        has_potency = any(g.kind == "Potency" for g in gains)
+        has_count = any(g.kind == "Count" for g in gains)
+        goal = (
+            "enough **Poise Potency** for reliable crits"
+            if has_potency
+            else "enough **Poise Count** for your scaling passives"
+        )
+        if has_potency and has_count:
+            goal = "**Poise Count** and **Potency** for crits and Coin Power scaling"
+
+        tip = (
+            f"Build {goal}{payoff_ref} — {'; '.join(source_bits)}."
+        )
+        tips = [tip]
+        if payoff_label and payoff_key and payoff_key not in ramp_labels:
+            tips.append(
+                f"**{payoff_label}** is your highest-damage skill — use the setup "
+                f"skills above first, then commit it once stacks are up."
+            )
+        return tips[:2]
+
+    # Charge
+    tip = (
+        f"Ramp **Charge Count** toward **20**{payoff_ref} — {'; '.join(source_bits)}."
+    )
+    return [tip]
 
 
 def find_poise_archetype(
@@ -367,6 +663,7 @@ def find_poise_archetype(
     combat_text: str = "",
     raw_markdown: str = "",
     mechanic_profile: dict | None = None,
+    support_text: str = "",
 ) -> _ARCHETYPE_RESULT | None:
     """Poise — self buff; crit chance from Potency; stack Count on self."""
     if _prominence(mechanic_profile, "Poise") < 6:
@@ -386,22 +683,32 @@ def find_poise_archetype(
     if signals < 2:
         return None
 
-    tips: list[str] = [
-        "Ramp **Poise Potency** to **20** before your heavy chain."
-    ]
+    payoff = _payoff_skill_name(skills)
+    tips = build_stack_ramp_tips(
+        skills,
+        combat_text,
+        status="Poise",
+        payoff_label=payoff,
+        support_text=support_text,
+    )
+    if not tips:
+        tips = [
+            "Use your setup skills and win clashes first — this kit only pays off "
+            "once **Poise** stacks are on self."
+        ]
     pm = _POISE_TO_COINPWR.search(blob)
     if pm:
         tips.append(
             f"**+{pm.group(1)} Coin Power per {pm.group(2)} Poise Count** "
-            f"(max +{pm.group(3)}) — scales with your current Poise Count."
+            f"(max +{pm.group(3)}) — the Count you built converts straight into damage."
         )
 
     return _build_archetype(
         kind="poise_stacker",
         status="Poise",
-        setup_summary="**Poise** fighter — **20 Potency** for guaranteed crits.",
+        setup_summary="**Poise** fighter — stack on self, then spend on crits and scaling.",
         tips=tips,
-        payoff_skill=_payoff_skill_name(skills),
+        payoff_skill=payoff,
     )
 
 
@@ -605,7 +912,7 @@ def find_discard_archetype(
     tips: list[str] = []
     if _ERUDITION_RE.search(blob):
         tips.append(
-            "Discard into **Erudition** for Shield spikes, then cash out the empowered line."
+            "Discard into **Erudition** for Shield spikes, then use the powered skill line."
         )
     if _INSIGHT_RE.search(blob):
         tips.append(
@@ -908,9 +1215,13 @@ def detect_status_archetypes(
         ("hp_regenerator_archetype", find_hp_regenerator_archetype, {}),
     ]
     regen_keys = {"sp_regenerator_archetype", "hp_regenerator_archetype"}
+    stack_keys = {"poise_archetype"}
     for key, fn, extra in mapping:
         base = regen_common if key in regen_keys else common
-        arch = fn(**base, **extra)
+        if key in stack_keys:
+            arch = fn(**base, support_text=support_text, **extra)
+        else:
+            arch = fn(**base, **extra)
         if arch:
             out[key] = arch
     return out

@@ -35,7 +35,7 @@ SINNER_COLS_PER_ROW = 6
 # Landing-page dummy content (not loaded from pipeline)
 _DUMMY_CORE_IDEA = (
     "Preview Identity is a Damage Dealer / Support — **Charge** cycle — build Count toward "
-    "**20**, spend on empowered skills, then rebuild for the next window. "
+    "**20**, spend on highest-damage skills, then rebuild for the next window. "
     "Scaling conditions: Clash Power +1 per 6 Charge (max +2). "
     "Support passive (**Example Passive**) buffs teammates — keep this unit on field "
     "while allies run their attack rotation."
@@ -44,7 +44,7 @@ _DUMMY_MECHANICS = "Bleed · Poise · Charge"
 _DUMMY_PLAYSTYLE = (
     "- Build your resource with S2, then cash out with S3 once the threshold is met.\n\n"
     "**S1 — Example Skill** (BP 4, CP +3, x2): rolls — low 4, high 10 (Slightly Low / High stacked).\n"
-    "- Applies statuses to set up your finisher.\n\n"
+    "- Applies statuses to set up your highest-damage skill.\n\n"
     "**S3 — Finisher Skill** (BP 5, CP +4, x3): rolls — low 5, high 17 (High).\n"
     "- Commit when scaling conditions are active."
 )

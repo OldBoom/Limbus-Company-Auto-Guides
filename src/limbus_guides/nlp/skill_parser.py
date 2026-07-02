@@ -1020,7 +1020,7 @@ def find_defense_archetype(
             payoff = buff
             tips.append(
                 f"**{defense_name}** grants {amount} **{buff}** at Combat Start — "
-                f"use the defense slot to prep buffs before your attack chain."
+                f"use the defense slot to prep buffs before your main attacks."
             )
             break
 
@@ -1038,7 +1038,7 @@ def find_defense_archetype(
             defense_name = block["name"]
             tips.append(
                 f"**{defense_name}** prevents Stagger during the clash and scales "
-                f"damage with Poise and missing HP — commit it as a finisher, not "
+                f"damage with Poise and missing HP — commit it as a payoff skill, not "
                 f"passive protection."
             )
             break
@@ -1293,6 +1293,7 @@ def find_charge_archetype(
     skills: list[dict],
     combat_text: str = "",
     mechanic_profile: dict | None = None,
+    support_text: str = "",
 ) -> dict | None:
     """
     Kits where Charge Count and Charge Potency severely buff skills
@@ -1315,11 +1316,22 @@ def find_charge_archetype(
         return None
 
     signals = 0
-    tips: list[str] = [
-        "**Charge Count** caps at **20** — build with lighter skills, dump stacks on "
-        "empowered coins, then ramp back up for the next cycle."
-    ]
     s3_name = next((s["name"] for s in skills if s.get("skill_num") == 3), "S3")
+
+    from limbus_guides.nlp.archetypes import build_stack_ramp_tips
+
+    tips: list[str] = build_stack_ramp_tips(
+        skills,
+        combat_text,
+        status="Charge",
+        payoff_label=s3_name,
+        support_text=support_text,
+    )
+    if not tips:
+        tips = [
+            "**Charge Count** caps at **20** — use lower-cost skills to add stacks, "
+            "then spend on your highest-damage skill and rebuild."
+        ]
 
     consume_matches = _CONSUME_CHARGE_CP.findall(combined)
     big_consume = max((int(amt), int(cp)) for amt, cp in consume_matches) if consume_matches else None
@@ -1335,7 +1347,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"**Charge Potency** adds up to **+{cm.group(1)} Clash Power** on "
-            f"**{s3_name}** — higher Potency tiers matter on the spend turn."
+            f"**{s3_name}** — higher Potency tiers matter when you use this skill."
         )
 
     um = _UNBREAKABLE_POTENCY.search(combined)
@@ -1367,7 +1379,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"Overflowing past the Charge Count cap adds **+{overflow.group(1)}% damage per stack** "
-            f"(max **+{overflow.group(2)}%**) — intentional overcap spikes spend turns."
+            f"(max **+{overflow.group(2)}%**) — intentional overcap spikes those attacks."
         )
 
     if _AT_CHARGE_CP.search(combined):
@@ -1379,7 +1391,7 @@ def find_charge_archetype(
         th, cp = max((int(a), int(b)) for a, b in clash_at)
         tips.append(
             f"At **{th}+ Charge Count**, **{s3_name}** gains **+{cp} Clash Power** — "
-            f"build stacks before the finisher."
+            f"build stacks before your highest-damage attacks."
         )
 
     if any("charge" in c.lower() for s in skills for c in s.get("conditions", [])):
@@ -1389,14 +1401,14 @@ def find_charge_archetype(
     if signals < min_signals:
         return None
 
-    if len(tips) == 1:
+    if len(tips) == 1 and "Ramp **Charge Count**" not in tips[0]:
         tips.append(
             "Stack **Charge Count** before offensive skills — this kit checks Charge "
             "and consumes stacks for large Coin Power and Clash Power spikes."
         )
 
     setup_summary = (
-        f"**Charge** cycle — build Count toward **20**, spend on empowered skills "
+        f"**Charge** cycle — build Count toward **20**, spend on highest-damage skills "
         f"(often **{s3_name}**), then rebuild for the next window."
     )
 
@@ -1536,7 +1548,7 @@ def find_unique_mechanics_archetype(
             parts.append(f"**+{amt}** on kill (**{skill_name}**)")
         if parts:
             tips.append(
-                f"**{mech} stacks** — {'; '.join(parts)}. Build stacks before the finisher."
+                f"**{mech} stacks** — {'; '.join(parts)}. Build stacks before your highest-damage attacks."
             )
 
     if flip:
@@ -1555,7 +1567,7 @@ def find_unique_mechanics_archetype(
         )
         if _LOSE_STATE_TURN_END.search(combined):
             tips.append(
-                f"**{state}** is lost at **Turn End** after the finisher — "
+                f"**{state}** is lost at **Turn End** after that attack — "
                 f"plan the next acquisition before the following turn."
             )
 
@@ -1571,7 +1583,7 @@ def find_unique_mechanics_archetype(
     for pct, resource, cap, skill_name in damage_scales[:2]:
         tips.append(
             f"**{skill_name}** scales up to **+{cap}% damage** "
-            f"(+{pct}% per **{resource}**) — stack before the spend turn."
+            f"(+{pct}% per **{resource}**) — stack before the payoff skill."
         )
 
     for stat, per, every, resource, cap in stat_scales[:1]:
@@ -1986,7 +1998,9 @@ def build_gameplan(identity: dict) -> dict:
         or parse_traits_list(identity.get("traits")),
     )
     nails_archetype = find_nails_archetype(raw, combat_text, skills)
-    charge_archetype = find_charge_archetype(skills, combat_text, profile)
+    charge_archetype = find_charge_archetype(
+        skills, combat_text, profile, support_text=support_text
+    )
     unique_mechanics_archetype = find_unique_mechanics_archetype(
         raw, combat_text, skills, alternate_skills, profile
     )
