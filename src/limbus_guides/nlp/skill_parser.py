@@ -1261,7 +1261,10 @@ def find_charge_archetype(
         return None
 
     signals = 0
-    tips: list[str] = []
+    tips: list[str] = [
+        "**Charge Count** caps at **20** — build with lighter skills, dump stacks on "
+        "empowered coins, then ramp back up for the next cycle."
+    ]
     s3_name = next((s["name"] for s in skills if s.get("skill_num") == 3), "S3")
 
     consume_matches = _CONSUME_CHARGE_CP.findall(combined)
@@ -1269,8 +1272,8 @@ def find_charge_archetype(
     if big_consume and big_consume[1] >= 3:
         signals += 2
         tips.append(
-            f"Build **Charge Count** with S1/S2, then spend **{big_consume[0]} stacks** on "
-            f"**{s3_name}** for **+{big_consume[1]} Coin Power** — Charge severely buffs every skill."
+            f"When ready, spend **{big_consume[0]}** stacks on **{s3_name}** for "
+            f"**+{big_consume[1]} Coin Power**, then start building again."
         )
 
     cm = _CLASH_FROM_POTENCY.search(combined)
@@ -1278,7 +1281,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"**Charge Potency** adds up to **+{cm.group(1)} Clash Power** on "
-            f"**{s3_name}** — reach higher Potency tiers before the finisher."
+            f"**{s3_name}** — higher Potency tiers matter on the spend turn."
         )
 
     um = _UNBREAKABLE_POTENCY.search(combined)
@@ -1294,7 +1297,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"The final coin deals bonus Slash damage equal to **Charge Potency × {pm.group(1)}%** "
-            f"(max **{pm.group(2)}%**) — stack Potency before the last flip."
+            f"(max **{pm.group(2)}%**) — stack Potency before the spend flip."
         )
 
     coin_scale = _CHARGE_COIN_SCALING.search(combined)
@@ -1302,7 +1305,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"**{s3_name}**'s last coin can consume up to **{coin_scale.group(1)} Charge Count** "
-            f"for matching **Coin Power** — dump stacks on the finisher coin."
+            f"for matching **Coin Power** — align the dump with your highest stack turn."
         )
 
     overflow = _OVERFLOW_CHARGE_DMG.search(combined)
@@ -1310,7 +1313,7 @@ def find_charge_archetype(
         signals += 1
         tips.append(
             f"Overflowing past the Charge Count cap adds **+{overflow.group(1)}% damage per stack** "
-            f"(max **+{overflow.group(2)}%**) — intentional overcap spikes burst turns."
+            f"(max **+{overflow.group(2)}%**) — intentional overcap spikes spend turns."
         )
 
     if _AT_CHARGE_CP.search(combined):
@@ -1321,15 +1324,15 @@ def find_charge_archetype(
     if signals < 2:
         return None
 
-    if not tips:
+    if len(tips) == 1:
         tips.append(
             "Stack **Charge Count** before offensive skills — this kit checks Charge "
-            "thresholds and consumes stacks for large Coin Power and Clash Power spikes."
+            "and consumes stacks for large Coin Power and Clash Power spikes."
         )
 
     setup_summary = (
-        f"**Charge**-scaling kit: accumulate Charge Count and Potency tiers to severely buff "
-        f"Coin Power, Clash Power, and **{s3_name}** before spending stacks on the finisher."
+        f"**Charge** cycle — build Count toward **20**, spend on empowered skills "
+        f"(often **{s3_name}**), then rebuild for the next window."
     )
 
     return {

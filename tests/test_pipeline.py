@@ -560,15 +560,16 @@ def test_charge_archetype_w_corp_heathcliff():
     )
     assert arch is not None
     assert arch["kind"] == "charge_scaling"
-    assert "severely buffs" in arch["tips"][0].lower() or "Coin Power" in arch["tips"][0]
+    assert "20" in arch["tips"][0]
+    assert "rebuild" in arch["setup_summary"].lower() or "rebuild" in " ".join(arch["tips"]).lower()
 
     overview = _build_overview_tips(gp)
     assert "Charge" in overview
-    assert "severely buffs" in overview.lower() or "+4 Coin Power" in overview
+    assert "caps at" in overview.lower() or "ramp back" in overview.lower()
 
     core = _build_core_idea(identity["name"], gp)
     assert "Charge" in core
-    assert "severely buff" in core.lower() or "Charge-scaling" in core.lower()
+    assert "20" in core or "cycle" in core.lower()
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert "Charge" in guide["core_idea"]
@@ -652,3 +653,66 @@ def test_discard_archetype_synthetic():
     arch = find_discard_archetype([], combat_text=md, raw_markdown=md)
     assert arch is not None
     assert arch["kind"] == "discard_resource"
+    assert not any("resource loop" in t.lower() for t in arch["tips"])
+
+
+def test_tremor_archetype_unique_subtype_blurb():
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "The_Thumb_East_Capo_IIII_Meursault"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = gp.get("tremor_archetype")
+    assert arch is not None
+    assert "Scorch" in arch["setup_summary"]
+    tips_blob = " ".join(arch["tips"])
+    assert "Tremor — Scorch" in tips_blob
+    assert "Wrath" in tips_blob
+
+
+def test_archetype_tips_skip_basic_mechanic_primers():
+    """Playstyle tips should be tactical, not status-effect tutorials."""
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.generation import _build_overview_tips
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    banned = (
+        "deals damage when the target is hit",
+        "each coin flip on a bleeding target",
+        "drains sp when the target is hit",
+        "turn end damage",
+        "affected coins flip at 0 power",
+        "+10% damage taken",
+        "unlock full damage",
+        "cash out with",
+        "spend window",
+        "ticks and attack procs",
+        "coin flips keep proccing",
+        "while stacks last",
+        "while stacks remain",
+        "potency and count",
+        "stagger threshold lets you",
+        "sp drain makes",
+        "hits during your rotation",
+        "use every appearance to build up",
+        "keeps poise climbing",
+        "keeps bleed climbing",
+    )
+    for slug in (
+        "Devyat'_Assoc._North_Section_3_Sinclair",
+        "Kurokumo_Clan_Captain_Ishmael",
+        "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+        "Tingtang_Gang_Gangleader_Hong_Lu",
+        "The_Thumb_East_Capo_IIII_Meursault",
+        "Wild_Hunt_Heathcliff",
+        "Blade_Lineage_Salsu_Yi_Sang",
+    ):
+        identity = load_parsed_identity(slug)
+        identity["mechanic_profile"] = build_mechanic_profile(identity)
+        gp = build_gameplan(identity)
+        tips = _build_overview_tips(gp)
+        blob = " ".join(tips).lower()
+        for phrase in banned:
+            assert phrase not in blob, f"{slug} playstyle tip still explains basics: {phrase!r}"

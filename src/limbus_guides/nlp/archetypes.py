@@ -45,11 +45,75 @@ def _payoff_skill_name(skills: list[dict]) -> str:
     return s3["name"] if s3 else "S3"
 
 
-def _threshold_values(text: str, status: str) -> list[int]:
-    return [
-        int(m.group(1))
-        for m in re.finditer(rf"(\d+)\+\s+[^;]*{re.escape(status)}", text, re.I)
-    ]
+# Unique Tremor subtype blurbs (docs/status-effects.md) — kit-specific, not generic primers.
+_UNIQUE_TREMOR_BLURBS: dict[str, str] = {
+    "Decay": (
+        "**Tremor — Decay** — Burst strips enemy **Defense Level** "
+        "(1 per 4 Tremor Potency on target)."
+    ),
+    "Fracture": (
+        "**Tremor — Fracture** — at **20+** combined Tremor Potency and Count, "
+        "raises enemy **Stagger Level**."
+    ),
+    "Reverb": (
+        "**Tremor — Reverb** — Burst deals **Sloth** damage equal to Tremor Potency."
+    ),
+    "Everlasting": (
+        "**Tremor — Everlasting** — Burst can proc **additional Bursts** "
+        "(Potency/Count % chance, each capped at 50%)."
+    ),
+    "Chain": (
+        "**Tremor — Chain** — enemy loses **Clash Power** at high Tremor Potency on target."
+    ),
+    "Scorch": (
+        "**Tremor — Scorch** — Burst deals **Wrath** damage from Tremor and Burn Potency; "
+        "consumes **Burn Count**."
+    ),
+    "Hemorrhage": (
+        "**Tremor — Hemorrhage** — Burst deals **Lust** damage from Tremor and Bleed Potency; "
+        "consumes **Bleed Count**."
+    ),
+    "Superposition": (
+        "**Tremor — Superposition** — stacks multiple Tremor types via "
+        "**Amplitude Entanglement**."
+    ),
+}
+
+
+def _sin_kit_signals(blob: str, status: str) -> int:
+    signals = 0
+    if re.search(rf"Inflict[^;]*{status}", blob, re.I):
+        signals += 2
+    if re.search(rf"Gain[^;]*{status}", blob, re.I):
+        signals += 1
+    if re.search(rf"every \d+[^;]*{status}|{status}[^;]*\(max", blob, re.I):
+        signals += 2
+    if _gate_thresholds(blob, status):
+        signals += 1
+    return signals
+
+
+def describe_unique_tremor(subtype: str) -> str | None:
+    return _UNIQUE_TREMOR_BLURBS.get(subtype.title())
+
+
+def _gate_thresholds(text: str, status: str) -> list[int]:
+    """Hard If/At N+ status checks on skills — not inflict amounts or per-stack rates."""
+    status_re = re.escape(status)
+    values: list[int] = []
+    for m in re.finditer(
+        rf"(?:if target has|at)\s+(\d+)\+\s+[^;|]*{status_re}",
+        text,
+        re.I,
+    ):
+        values.append(int(m.group(1)))
+    for m in re.finditer(
+        rf"(\d+)\+\s+{status_re}[^;]*(?:coin power|clash power|deal\s+\+|damage)",
+        text,
+        re.I,
+    ):
+        values.append(int(m.group(1)))
+    return sorted(set(values))
 
 
 def _build_archetype(
@@ -86,9 +150,9 @@ def _sin_archetype(
     raw_markdown: str,
     mechanic_profile: dict | None,
     min_prominence: int,
-    stack_tip: str,
-    payoff_tip: str,
+    maintain_tip: str | None = None,
     setup_summary: str,
+    gate_tip: str = "Skills check **{threshold}+ {status}** — favour those coins when stacked.",
     skip_if: Callable[[str], bool] | None = None,
     extra_signals: Callable[[str], int] | None = None,
     extra_tips: Callable[[str, list[dict]], list[str]] | None = None,
@@ -110,8 +174,8 @@ def _sin_archetype(
         signals += 1
     if re.search(rf"every \d+[^;]*{status}|{status}[^;]*\(max", blob, re.I):
         signals += 2
-    thresholds = _threshold_values(blob, status)
-    if thresholds:
+    gates = _gate_thresholds(blob, status)
+    if gates:
         signals += 1
     if extra_signals:
         signals += extra_signals(blob)
@@ -119,12 +183,11 @@ def _sin_archetype(
     if signals < 2:
         return None
 
-    tips = [stack_tip]
-    if thresholds:
-        th = min(thresholds)
-        tips.append(payoff_tip.format(threshold=th, payoff=_payoff_skill_name(skills)))
-    elif payoff_tip:
-        tips.append(payoff_tip.format(threshold="?", payoff=_payoff_skill_name(skills)))
+    tips: list[str] = []
+    if maintain_tip:
+        tips.append(maintain_tip)
+    if gates:
+        tips.append(gate_tip.format(threshold=min(gates), status=status))
 
     if extra_tips:
         tips.extend(extra_tips(blob, skills))
@@ -132,9 +195,9 @@ def _sin_archetype(
     return _build_archetype(
         kind=kind,
         status=status,
-        setup_summary=setup_summary.format(payoff=_payoff_skill_name(skills)),
+        setup_summary=setup_summary,
         tips=tips,
-        threshold=min(thresholds) if thresholds else None,
+        threshold=min(gates) if gates else None,
         payoff_skill=_payoff_skill_name(skills),
     )
 
@@ -159,18 +222,7 @@ def find_burn_archetype(
         raw_markdown=raw_markdown,
         mechanic_profile=mechanic_profile,
         min_prominence=6,
-        stack_tip=(
-            "**Burn** stacks on the target — each turn it deals **Turn End** damage "
-            "equal to Burn Potency before Count ticks down."
-        ),
-        payoff_tip=(
-            "Hold **{payoff}** until **{threshold}+ Burn** on the target unlocks "
-            "the skill's bonus Coin Power or damage scaling."
-        ),
-        setup_summary=(
-            "**Burn** specialist — apply Potency and Count with early skills, let ticks "
-            "soften targets, then cash out with **{payoff}** at Burn thresholds."
-        ),
+        setup_summary="**Burn** applicator.",
     )
 
 
@@ -197,18 +249,7 @@ def find_bleed_archetype(
         raw_markdown=raw_markdown,
         mechanic_profile=mechanic_profile,
         min_prominence=6,
-        stack_tip=(
-            "**Bleed** punishes aggression — each coin flip on a Bleeding target deals "
-            "Potency damage and consumes Count."
-        ),
-        payoff_tip=(
-            "Reach **{threshold}+ Bleed** before firing **{payoff}**; many skills add "
-            "Coin Power or damage per Bleed stack on target."
-        ),
-        setup_summary=(
-            "**Bleed** stacker — build Potency and Count on one target, then spike with "
-            "**{payoff}** once threshold skills unlock full damage."
-        ),
+        setup_summary="**Bleed** focus.",
     )
 
 
@@ -218,56 +259,52 @@ def find_tremor_archetype(
     raw_markdown: str = "",
     mechanic_profile: dict | None = None,
 ) -> _ARCHETYPE_RESULT | None:
-    """Tremor — raises Stagger Threshold; Tremor Burst is the burst payoff."""
+    """Tremor — raises Stagger Threshold; early stagger is the payoff."""
+    if _prominence(mechanic_profile, "Tremor") < 6:
+        return None
+
+    blob = _kit_blob(skills, combat_text, raw_markdown)
+    if not re.search(r"Tremor", blob, re.I):
+        return None
+
     unique = sorted(extract_unique_tremor_types(raw_markdown or combat_text))
+    signals = _sin_kit_signals(blob, "Tremor")
+    if re.search(r"Tremor Burst", blob, re.I):
+        signals += 2
+    if unique:
+        signals += 1
+    if re.search(r"Time Moratorium", blob, re.I):
+        signals += 1
 
-    def extra_signals(blob: str) -> int:
-        score = 0
-        if re.search(r"Tremor Burst", blob, re.I):
-            score += 2
-        if unique:
-            score += 1
-        return score
+    if signals < 2:
+        return None
 
-    def extra_tips(blob: str, _skills: list[dict]) -> list[str]:
-        tips: list[str] = []
-        if re.search(r"Tremor Burst", blob, re.I):
-            tips.append(
-                "Trigger **Tremor Burst** on stagger setups — Burst raises Stagger Threshold "
-                "by Tremor Potency before Count decays."
-            )
-        if unique:
-            label = format_unique_tremor_label(unique[0])
-            tips.append(
-                f"Kit uses **{label}** — keep the same unique Tremor subtype on one target "
-                f"for Amplitude Conversion and Burst payoffs."
-            )
-        return tips
+    tips: list[str] = []
+    for subtype in unique[:2]:
+        blurb = describe_unique_tremor(subtype)
+        if blurb:
+            tips.append(blurb)
+    if re.search(r"Time Moratorium", blob, re.I):
+        tips.append(
+            "**Time Moratorium** — time the stored-damage pop with your Tremor stacks."
+        )
+    elif re.search(r"Tremor Burst", blob, re.I) and not tips:
+        tips.append("**Burst** when you're ready to break the stagger target.")
 
-    arch = _sin_archetype(
-        "Tremor",
+    if unique:
+        label = format_unique_tremor_label(unique[0])
+        setup_summary = f"**Tremor** control ({label})."
+    else:
+        setup_summary = "**Tremor** control — stack for early stagger breaks."
+
+    arch = _build_archetype(
         kind="tremor_stacker",
-        skills=skills,
-        combat_text=combat_text,
-        raw_markdown=raw_markdown,
-        mechanic_profile=mechanic_profile,
-        min_prominence=6,
-        stack_tip=(
-            "Layer **Tremor Potency and Count** on the main target — Tremor fuels "
-            "stagger breaks and Burst triggers."
-        ),
-        payoff_tip=(
-            "At **{threshold}+ Tremor**, commit **{payoff}** or Burst coins for maximum "
-            "Stagger Threshold pressure."
-        ),
-        setup_summary=(
-            "**Tremor** control — stack on one target, then break with **{payoff}** or "
-            "**Tremor Burst** for Stagger Threshold spikes."
-        ),
-        extra_signals=extra_signals,
-        extra_tips=extra_tips,
+        status="Tremor",
+        setup_summary=setup_summary,
+        tips=tips,
+        payoff_skill=_payoff_skill_name(skills),
     )
-    if arch and unique:
+    if unique:
         arch["unique_subtypes"] = unique
     return arch
 
@@ -287,18 +324,7 @@ def find_rupture_archetype(
         raw_markdown=raw_markdown,
         mechanic_profile=mechanic_profile,
         min_prominence=6,
-        stack_tip=(
-            "**Rupture** deals damage **when the target is hit** — stack Potency and Count "
-            "before your heavy coins land."
-        ),
-        payoff_tip=(
-            "Build to **{threshold}+ Rupture**, then unload **{payoff}** for amplified "
-            "on-hit burst damage."
-        ),
-        setup_summary=(
-            "**Rupture** burst kit — stack on a focus target, then cash out with "
-            "**{payoff}** while Rupture Count is high."
-        ),
+        setup_summary="**Rupture** focus.",
     )
 
 
@@ -308,27 +334,23 @@ def find_sinking_archetype(
     raw_markdown: str = "",
     mechanic_profile: dict | None = None,
 ) -> _ARCHETYPE_RESULT | None:
-    """Sinking — SP damage on hit; stack Potency + Count on target."""
-    return _sin_archetype(
-        "Sinking",
+    """Sinking — SP drain on hit softens clashes; no separate burst window."""
+    if _prominence(mechanic_profile, "Sinking") < 6:
+        return None
+
+    blob = _kit_blob(skills, combat_text, raw_markdown)
+    if not re.search(r"Sinking", blob, re.I):
+        return None
+
+    if _sin_kit_signals(blob, "Sinking") < 2:
+        return None
+
+    return _build_archetype(
         kind="sinking_stacker",
-        skills=skills,
-        combat_text=combat_text,
-        raw_markdown=raw_markdown,
-        mechanic_profile=mechanic_profile,
-        min_prominence=6,
-        stack_tip=(
-            "**Sinking** drains SP when the target is hit — stack Potency and Count to "
-            "push enemies toward negative SP breakpoints."
-        ),
-        payoff_tip=(
-            "At **{threshold}+ Sinking**, **{payoff}** and follow-up coins deal bonus "
-            "damage or SP-pressure payoffs."
-        ),
-        setup_summary=(
-            "**Sinking** pressure — stack on one target to drain SP, then finish with "
-            "**{payoff}** at Sinking thresholds."
-        ),
+        status="Sinking",
+        setup_summary="**Sinking** clash-support.",
+        tips=[],
+        payoff_skill=_payoff_skill_name(skills),
     )
 
 
@@ -361,39 +383,24 @@ def find_poise_archetype(
         signals += 2
     if _POISE_CRIT.search(blob):
         signals += 1
-    thresholds = _threshold_values(blob, "Poise")
-    if thresholds:
-        signals += 1
-
     if signals < 2:
         return None
 
     tips: list[str] = [
-        "**Poise** on self raises crit chance per Potency — build Count with skills "
-        "and clash wins before the finisher."
+        "Ramp **Poise Potency** to **20** before your heavy chain."
     ]
     pm = _POISE_TO_COINPWR.search(blob)
     if pm:
         tips.append(
-            f"Combat or skills convert Poise to **+{pm.group(1)} Coin Power per "
-            f"{pm.group(2)} Poise Count** (max +{pm.group(3)}) — clash to stack faster."
-        )
-    if thresholds:
-        th = min(thresholds)
-        tips.append(
-            f"Reach **{th}+ Poise Count** before **{_payoff_skill_name(skills)}** — "
-            f"crit damage and Coin Power spike at the threshold."
+            f"**+{pm.group(1)} Coin Power per {pm.group(2)} Poise Count** "
+            f"(max +{pm.group(3)}) while climbing."
         )
 
     return _build_archetype(
         kind="poise_stacker",
         status="Poise",
-        setup_summary=(
-            "**Poise** fighter — stack Count on self for crits and Coin Power, then "
-            f"commit **{_payoff_skill_name(skills)}** at Poise thresholds."
-        ),
+        setup_summary="**Poise** fighter — **20 Potency** for guaranteed crits.",
         tips=tips,
-        threshold=min(thresholds) if thresholds else None,
         payoff_skill=_payoff_skill_name(skills),
     )
 
@@ -426,13 +433,11 @@ def find_aggro_archetype(
     )
 
     tips = [
-        f"Skills grant up to **+{max_aggro} Aggro** — enemies focus this slot, letting "
-        f"teammates attack safely."
+        f"Front-load **+{max_aggro} Aggro** on the slot you want enemies to target."
     ]
     if tank_signals:
         tips.append(
-            "Pair **Aggro** with Guard/Assist Defense — you're meant to be hit while "
-            "buffs and passives trigger."
+            "Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure."
         )
 
     return _build_archetype(
@@ -470,9 +475,7 @@ def find_haste_archetype(
             "clashes or support triggers."
         ),
         tips=[
-            "**Haste** adds Speed for one turn — chain skills that grant it before your "
-            "carry line or evade sequences.",
-            "Higher Speed helps win clashes and can gate bonus damage on speed-check kits.",
+            "Chain Haste before your carry line or evade sequence.",
         ],
     )
 
@@ -500,8 +503,7 @@ def find_paralyze_archetype(
             "then follow with high-impact coins while they cannot clash back."
         ),
         tips=[
-            "Land **Paralyze** before the enemy's big skill — affected coins flip at **0 Power**.",
-            "Stack Paralyze on priority targets right before your **S3** or Unbreakable coins.",
+            "Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.",
         ],
     )
 
@@ -528,9 +530,7 @@ def find_fragile_archetype(
             "deals amplified skill damage on the following turn."
         ),
         tips=[
-            "Apply **Fragile** (or Slash/Pierce/Blunt Fragility) before burst turns — "
-            "each Count adds **+10% damage taken** from skills (max 10).",
-            "Coordinate with teammates: debuff first, then heavy coins while Fragile is active.",
+            "Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.",
         ],
     )
 
@@ -551,20 +551,17 @@ def find_discard_archetype(
     if not _DISCARD_RE.search(blob):
         return None
 
-    tips = [
-        "**Discard** is a resource loop — remove skills from hand rotation to fuel "
-        "Insight, Erudition, or shield payoffs.",
-    ]
+    tips: list[str] = []
     if _ERUDITION_RE.search(blob):
         tips.append(
-            "**Erudition** stacks when you Discard — each discard can grant Shield or "
-            "other defensive spikes (max 6 Erudition)."
+            "Discard into **Erudition** for Shield spikes, then cash out the empowered line."
         )
     if _INSIGHT_RE.search(blob):
         tips.append(
-            "**Insight** pairs with Discard — plan which skills to cycle out before "
-            "committing the empowered turn."
+            "Discard to build **Insight**, then fire the powered skill set."
         )
+    if not tips:
+        tips.append("Plan which skills to Discard before the payoff turn.")
 
     return _build_archetype(
         kind="discard_resource",

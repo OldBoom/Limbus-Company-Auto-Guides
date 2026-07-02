@@ -46,11 +46,11 @@ def _advise_line(text: str) -> str | None:
 
     m = _INFLICT.match(text)
     if m:
-        return f"Stacks {m.group(1)} {m.group(2)} — use every appearance to build up."
+        return None
 
     m = _GAIN_STATUS.match(text)
-    if m and m.group(2).lower() in ("poise", "bleed", "burn", "rupture"):
-        return f"Gains {m.group(1)} {m.group(2)} — keeps {m.group(2)} climbing each rotation."
+    if m and m.group(2).lower() in ("poise", "bleed", "burn", "rupture", "sinking", "tremor"):
+        return None
 
     m = _IF_STATUS.match(text)
     if m:
@@ -190,11 +190,6 @@ def _describe_skill(
                 break
         detail.append(f"C{rg['coin']} refunds +{rg['amount']} {rg['resource']} Count{trigger}")
 
-    if sn == 1 and poise_passive:
-        on_use = skill.get("on_use_effects", [])
-        if any("Poise" in e for e in on_use) or any("Poise" in cd["effect"] for cd in skill.get("coin_effects", [])):
-            detail.append("Primary Poise engine — clash every turn")
-
     if detail:
         return f"{header}\n" + "\n".join(f"- {d}" for d in detail[:6])
     return header
@@ -243,6 +238,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"then spend via S{resource['payoff_skills'][0] if resource['payoff_skills'] else '?'} "
             f"for power spikes."
         )
+    elif gp.get("poise_archetype"):
+        arch = gp["poise_archetype"]
+        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
     elif poise:
         parts.append(
             f"{name} is a {role_str} — Poise-stacking fighter. "
@@ -250,9 +248,6 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']}) "
             f"— every successful clash raises your flip strength."
         )
-    elif gp.get("poise_archetype"):
-        arch = gp["poise_archetype"]
-        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
     elif neg_scale:
         parts.append(
             f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
@@ -581,8 +576,8 @@ def _build_overview_tips(gp: dict) -> str:
             f"Before the transition, play normally; after, you gain access to a stronger skill set."
         )
 
-    # Poise stacking
-    if poise:
+    # Poise stacking — skip when archetype already covers the kit
+    if poise and not gp.get("poise_archetype"):
         tips.append(
             f"Prioritise clashing — every successful clash win raises your Coin Power "
             f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']})."
@@ -843,12 +838,18 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         pieces.append(
             f"Trait-dependent kit — [{shared}] allies raise Resonance and unlock alternate skills."
         )
-    elif gp.get("unique_tremor_types"):
-        labels = ", ".join(format_unique_tremor_label(t) for t in gp["unique_tremor_types"])
-        pieces.append(
-            f"Uses unique Tremor ({labels}) — prioritize teammates who apply the same "
-            f"Tremor subtype so Amplitude Conversion and Burst effects stack on one target."
-        )
+    elif gp.get("unique_tremor_types") or gp.get("tremor_archetype"):
+        arch = gp.get("tremor_archetype") or {}
+        if arch.get("setup_summary"):
+            pieces.append(arch["setup_summary"])
+        else:
+            labels = ", ".join(
+                format_unique_tremor_label(t) for t in gp["unique_tremor_types"]
+            )
+            pieces.append(
+                f"Uses unique Tremor ({labels}) — prioritize teammates who apply the same "
+                f"Tremor subtype so Amplitude Conversion and Burst effects stack on one target."
+            )
     elif gp.get("nails_archetype"):
         threshold = gp["nails_archetype"].get("threshold", 5)
         pieces.append(
@@ -856,16 +857,12 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
             f"this kit self-applies both but Tremor Burst payoffs reward patient stacking."
         )
     elif gp.get("charge_archetype"):
-        pieces.append(
-            "**Charge** self-stacker — builds Charge Count and Potency with S1/S2, then "
-            "severely buffs Coin Power and Clash Power on the finisher; guard can queue bonus S3 turns."
-        )
-    elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("status"):
-        status = sin_arch["status"]
-        pieces.append(
-            f"**{status}**-focused kit — stack {status} on the right target, then cash out "
-            f"when threshold skills unlock full damage."
-        )
+        pieces.append(gp["charge_archetype"].get("setup_summary", (
+            "**Charge** cycle — build Count toward **20**, spend on empowered skills, "
+            "then rebuild for the next window."
+        )))
+    elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("setup_summary"):
+        pieces.append(sin_arch["setup_summary"])
     elif (extra_arch := pick_extra_archetype(gp)) and extra_arch.get("status") == "Aggro":
         pieces.append(
             "**Aggro** frontliner — draws enemy focus so teammates can apply statuses and burst safely."
