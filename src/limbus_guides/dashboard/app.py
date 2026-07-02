@@ -37,8 +37,7 @@ _DUMMY_CORE_IDEA = (
     "Preview Identity is a Damage Dealer / Support — **Charge** cycle — build Count toward "
     "**20**, spend on highest-damage skills, then rebuild for the next window. "
     "Scaling conditions: Clash Power +1 per 6 Charge (max +2). "
-    "Support passive (**Example Passive**) buffs teammates — keep this unit on field "
-    "while allies run their attack rotation."
+    "Support passive (**Example Passive**) buffs teammates."
 )
 _DUMMY_MECHANICS = "Bleed · Poise · Charge"
 _DUMMY_PLAYSTYLE = (

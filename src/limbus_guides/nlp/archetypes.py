@@ -1079,8 +1079,7 @@ def find_sp_regenerator_archetype(
     timing = _heal_timing_note(clauses)
     target = _heal_target_note(clauses, "SP")
     tips = [
-        f"**SP sustain** fires at **{timing}** — keep this unit deployed so "
-        f"{target} recover SP before the next clash.",
+        f"**SP sustain** fires at **{timing}** — restores **{target}**.",
     ]
     if "turn end" in " ".join(clauses).lower():
         tips.append(
@@ -1092,8 +1091,7 @@ def find_sp_regenerator_archetype(
         kind="sp_regenerator",
         status="SP Regeneration",
         setup_summary=(
-            "**SP regenerator** — restores ally **SP** through passives and key skills; "
-            "keep this unit on field so teammates stay clash-ready."
+            "**SP regenerator** — restores ally **SP** through passives and key skills."
         ),
         tips=tips,
     )
@@ -1115,26 +1113,18 @@ def find_hp_regenerator_archetype(
     timing = _heal_timing_note(clauses)
     target = _heal_target_note(clauses, "HP")
     tips = [
-        f"**HP sustain** triggers at **{timing}** — protect this slot so "
-        f"{target} keep receiving heals.",
+        f"**HP sustain** triggers at **{timing}** — restores **{target}**.",
     ]
     if "on hit" in " ".join(clauses).lower():
         tips.append(
-            "Heals flow when allies land hits — stagger this unit last so attackers "
-            "can proc the passive before it expires."
-        )
-    else:
-        tips.append(
-            "Slot durable allies who can stay on field; the passive only helps "
-            "while this unit is deployed."
+            "Heals flow when allies land hits — attackers need to connect for the passive to proc."
         )
 
     return _build_archetype(
         kind="hp_regenerator",
         status="HP Regeneration",
         setup_summary=(
-            "**HP regenerator** — tops up ally **HP** through passives and skills; "
-            "protect this unit so healing keeps flowing to teammates."
+            "**HP regenerator** — tops up ally **HP** through passives and skills."
         ),
         tips=tips,
     )

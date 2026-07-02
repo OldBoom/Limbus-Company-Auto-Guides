@@ -1860,22 +1860,20 @@ def find_support_archetype(
         kind = "on_hit_ally"
         target_note = " (lowest-HP ally hits)" if "lowest hp" in lower else ""
         setup_summary = (
-            f"Support passive (**{passive_name}**) applies when allies **land hits**{target_note} — "
-            f"keep this unit on field through the opening turn so damage dealers can act."
+            f"Support passive (**{passive_name}**) applies when allies **land hits**{target_note}."
         )
         tips.append(
-            f"**{passive_name}** triggers **On Hit** — protect this slot and let allies "
-            f"attack each turn before expecting heals or buffs to flow."
+            f"**{passive_name}** triggers **On Hit** — allies need to attack for the passive to apply."
         )
     elif re.search(r"fastest speed", combined, re.I) and re.search(r"all(?:y|ies)", combined, re.I):
         kind = "fastest_speed"
         setup_summary = (
             f"Support passive (**{passive_name}**) buffs your **fastest Speed ally** — "
-            f"pair with a high-Speed attacker and keep this unit alive on field."
+            f"pair with a high-Speed attacker."
         )
         tips.append(
             f"**{passive_name}** amplifies the **fastest Speed ally** — "
-            f"slot a quick damage dealer and avoid stagger so their hits keep the bonus."
+            f"field a high-Speed damage dealer as teammate."
         )
     elif re.search(r"combat start", combined, re.I) and re.search(r"all(?:y|ies)", combined, re.I):
         kind = "combat_start_ally"
@@ -1910,12 +1908,10 @@ def find_support_archetype(
         )
     else:
         setup_summary = (
-            f"Support passive (**{passive_name}**) buffs teammates — "
-            f"keep this unit on field while allies run their attack rotation."
+            f"Support passive (**{passive_name}**) buffs teammates."
         )
         tips.append(
-            f"**{passive_name}** supports allies passively — "
-            f"prioritise staying alive and deployed so the team benefits each turn."
+            f"**{passive_name}** — align allies' actions with the passive's trigger condition."
         )
 
     return {
