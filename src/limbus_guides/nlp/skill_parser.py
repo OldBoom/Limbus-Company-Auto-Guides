@@ -1410,20 +1410,34 @@ def find_charge_archetype(
 
 def _leading_unique_mechanics(mechanic_profile: dict | None) -> list[tuple[str, int]]:
     """Top identity-specific resources from mechanic_profile, excluding handled archetypes."""
+    from limbus_guides.ingestion.unique_mechanics_registry import _NON_RESOURCE_KEY_STATUS
     from limbus_guides.nlp.mechanics import STAT_MODIFIERS, STATUS_EFFECTS
 
     profile = mechanic_profile or {}
     unique = profile.get("unique_mechanics", {})
     primary = profile.get("primary_mechanics", [])
-    excluded = _UNIQUE_ARCHETYPE_EXCLUDED | frozenset(STATUS_EFFECTS) | frozenset(STAT_MODIFIERS)
+    key_fx = profile.get("key_status_effects", [])
+    excluded = (
+        _UNIQUE_ARCHETYPE_EXCLUDED
+        | frozenset(STATUS_EFFECTS)
+        | frozenset(STAT_MODIFIERS)
+        | _NON_RESOURCE_KEY_STATUS
+    )
     seen: set[str] = set()
     candidates: list[tuple[str, int]] = []
+
+    for name in key_fx:
+        if name in excluded or name in seen:
+            continue
+        candidates.append((name, unique.get(name, 8)))
+        seen.add(name)
 
     for name in primary:
         if name in excluded or name not in unique or unique[name] < 3:
             continue
-        candidates.append((name, unique[name]))
-        seen.add(name)
+        if name not in seen:
+            candidates.append((name, unique[name]))
+            seen.add(name)
 
     for name, count in sorted(unique.items(), key=lambda x: -x[1]):
         if name in seen or name in excluded or count < 4:

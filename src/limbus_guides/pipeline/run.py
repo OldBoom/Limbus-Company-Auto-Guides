@@ -35,6 +35,12 @@ def run_pipeline(
 
     ingest_parsed_ids_to_json(out_dir=dest_id)
 
+    from limbus_guides.ingestion.unique_mechanics_registry import sync_from_parsed_ids
+
+    mech_sync = sync_from_parsed_ids()
+    if mech_sync["added"]:
+        print(f"Registered {len(mech_sync['added'])} new unique mechanic(s): {', '.join(mech_sync['added'])}")
+
     roster = load_identities_json(dest_id)
     if not roster:
         roster = load_all_parsed()
@@ -94,6 +100,10 @@ def run_for_slug(
     roster = load_identities_json(dest_id)
     if slug not in roster:
         raise KeyError(f"Identity slug not found after ingest: {slug!r}")
+
+    from limbus_guides.ingestion.unique_mechanics_registry import sync_from_parsed_ids
+
+    sync_from_parsed_ids()
 
     profiles = {s: build_mechanic_profile(data) for s, data in roster.items()}
     keywords = extract_keywords(roster)

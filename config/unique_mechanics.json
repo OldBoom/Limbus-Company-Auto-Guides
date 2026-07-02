@@ -1,0 +1,60 @@
+{
+  "mechanics": [
+    {
+      "name": "Artwork — Tibia (Hong Lu)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Corpus Ingredient (Unique Charge)",
+      "source_slugs": [
+        "Ring_Apprentice_Faust"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Corpus Theater (Hong Lu)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Exalted Command",
+      "source_slugs": [
+        "The_Lord_of_Hongyuan_Hong_Lu"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Heishou Bolus Contamination — 黑獸丸染 —",
+      "source_slugs": [
+        "The_Lord_of_Hongyuan_Hong_Lu"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "The Self Unbound — Flow State",
+      "source_slugs": [
+        "Ring_Apprentice_Faust"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Unending Bereavement",
+      "source_slugs": [
+        "Wild_Hunt_Heathcliff"
+      ],
+      "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Unrelenting Storm",
+      "source_slugs": [
+        "The_Lord_of_Hongyuan_Hong_Lu"
+      ],
+      "discovered_at": "2026-07-02"
+    }
+  ]
+}

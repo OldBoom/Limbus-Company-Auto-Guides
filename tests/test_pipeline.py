@@ -583,6 +583,31 @@ def test_charge_archetype_w_corp_heathcliff():
     assert "Charge Potency" in playstyle or "Clash Power" in playstyle
 
 
+def test_unique_mechanics_registry_sync_and_enrich():
+    from limbus_guides.ingestion.unique_mechanics_registry import (
+        load_discovered_mechanics,
+        sync_from_parsed_ids,
+    )
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    result = sync_from_parsed_ids(write=True)
+    assert result["total"] >= 1
+    discovered = load_discovered_mechanics()
+    assert any("Unending Bereavement" == n or "Unrelenting Storm" == n for n in discovered)
+
+    identity = load_parsed_identity("Wild_Hunt_Heathcliff")
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    profile = identity["mechanic_profile"]
+    assert "Coffin" in profile["unique_mechanics"]
+    assert "Dullahan" in profile["unique_mechanics"]
+    assert "Unending Bereavement" in profile.get("key_status_effects", [])
+    assert profile["unique_mechanics"]["Unending Bereavement"] >= 8
+
+    gp = build_gameplan(identity)
+    assert gp.get("unique_mechanics_archetype") is not None
+
+
 def test_unique_mechanics_archetype_wild_hunt_heathcliff():
     from limbus_guides.nlp.generation import generate_guide, _build_core_idea, _build_overview_tips
     from limbus_guides.nlp.mechanics import build_mechanic_profile

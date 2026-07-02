@@ -17,6 +17,7 @@ if str(_SRC) not in sys.path:
 import streamlit as st
 
 from limbus_guides.config_io import load_json_config
+from limbus_guides.dashboard.text_format import format_guide_html, format_inline_guide_text, guide_format_css
 from limbus_guides.nlp.generation import _embedding_verify_note
 from limbus_guides.paths import CONFIG_DIR, GUIDES_DIR
 
@@ -184,6 +185,16 @@ def _format_synergy_row(entry: dict) -> str:
     return f"**{name}**{score_str}{tag_str}: {reason}"
 
 
+def _render_formatted_prose(text: str) -> None:
+    """Guide body with status-effect colours and teal numbers."""
+    if not text:
+        return
+    st.markdown(
+        f'<div class="lc-formatted-prose">{format_guide_html(text)}</div>',
+        unsafe_allow_html=True,
+    )
+
+
 def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
     """Render team suggestions with clickable teammate names when picks are available."""
     picks = guide.get("team_suggestion_picks")
@@ -192,34 +203,38 @@ def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
     if picks:
         intro = guide.get("team_suggestion_intro")
         if intro:
-            st.markdown(intro)
+            _render_formatted_prose(intro)
         else:
             # Legacy guides: infer intro from lines before teammate bullets.
             intro_lines = lines[: len(lines) - len(picks)] if len(lines) >= len(picks) else []
             for legacy_intro in intro_lines:
-                st.markdown(legacy_intro)
+                _render_formatted_prose(legacy_intro)
         for pick in picks:
             name = pick.get("teammate_name", "")
             reason = pick.get("reason", "")
             slug = pick.get("teammate_slug", "")
             suffix = f"{reason}{_embedding_verify_note(pick.get('source', ''))}"
+            suffix_html = format_inline_guide_text(suffix)
             if slug and slug in guides:
                 href = html_lib.escape(_identity_pick_url(slug), quote=True)
                 name_esc = html_lib.escape(name)
-                suffix_esc = html_lib.escape(suffix)
                 title_esc = html_lib.escape(f"Open guide: {name}")
                 st.html(
-                    f'<p style="margin:0.25rem 0">'
+                    f'<p class="lc-guide-line lc-guide-bullet" style="margin:0.25rem 0">'
                     f'- <a href="{href}" target="_parent" class="lc-inline-link" title="{title_esc}">'
-                    f"<strong>{name_esc}</strong></a>: {suffix_esc}</p>",
+                    f"<strong>{name_esc}</strong></a>: {suffix_html}</p>",
                     width="stretch",
                 )
             else:
-                st.markdown(f"- **{name}**: {suffix}")
+                st.markdown(
+                    f'<p class="lc-guide-line lc-guide-bullet">- <strong>{html_lib.escape(name)}</strong>: '
+                    f"{suffix_html}</p>",
+                    unsafe_allow_html=True,
+                )
         return
 
     for line in lines:
-        st.markdown(line)
+        _render_formatted_prose(line)
 
 
 def _render_methodology(guide: dict) -> None:
@@ -253,19 +268,19 @@ def _render_landing() -> None:
 
         st.markdown("### ① Core Idea")
         st.caption("*What this section tells you: the identity's role and overall gameplan in 1–2 sentences.*")
-        st.write(_DUMMY_CORE_IDEA)
+        _render_formatted_prose(_DUMMY_CORE_IDEA)
 
         st.markdown("### ② Primary Mechanics")
         st.caption("*Keywords for the main systems this kit revolves around (statuses, resources, passives).*")
-        st.write(_DUMMY_MECHANICS)
+        _render_formatted_prose(_DUMMY_MECHANICS)
 
         st.markdown("### ③ Playstyle Guide")
         st.caption("*Rotation tips, per-skill breakdowns, roll estimates, and passive notes.*")
-        st.markdown(_DUMMY_PLAYSTYLE)
+        _render_formatted_prose(_DUMMY_PLAYSTYLE)
 
         st.markdown("### ④ Team Suggestions")
         st.caption("*Recommended teammates and why they synergize — ranked by mechanic overlap.*")
-        st.markdown(_DUMMY_TEAMS)
+        _render_formatted_prose(_DUMMY_TEAMS)
 
         st.markdown("")
         if st.button("→ Pick a character", type="primary", use_container_width=True):
@@ -392,6 +407,9 @@ def _render_dashboard_styles() -> None:
             display: block !important;
             border-radius: 4px !important;
         }
+        """
+        + guide_format_css()
+        + """
         </style>
         """,
         unsafe_allow_html=True,
@@ -511,12 +529,13 @@ def _render_guide(
         st.header(guide.get("identity_name", "—"))
         st.caption(f"Character: {sinner_name}")
         st.markdown("### Core Idea")
-        st.write(guide.get("core_idea", ""))
+        _render_formatted_prose(guide.get("core_idea", ""))
         st.markdown("### Primary Mechanics")
-        st.write(", ".join(profile.get("primary_mechanics", [])) or "—")
+        mech_line = ", ".join(profile.get("primary_mechanics", [])) or "—"
+        _render_formatted_prose(mech_line)
 
     st.markdown("### Playstyle Guide")
-    st.markdown(guide.get("playstyle_guide", ""))
+    _render_formatted_prose(guide.get("playstyle_guide", ""))
 
     st.markdown("### Team Suggestions")
     _render_team_suggestions(guide, guides)

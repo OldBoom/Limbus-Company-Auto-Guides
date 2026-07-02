@@ -60,6 +60,12 @@ TRIGGER_RE = re.compile(
 )
 
 
+def _unique_mechanics_for_ruler() -> list[str]:
+    from limbus_guides.ingestion.unique_mechanics_registry import get_all_unique_mechanics
+
+    return get_all_unique_mechanics()
+
+
 def _load_status_effects_reference(path: Path | None = None) -> list[str]:
     from limbus_guides.paths import DOCS_DIR
 
@@ -88,7 +94,7 @@ def _get_nlp():
             patterns.append({"label": "STATUS_EFFECT", "pattern": effect})
         for mod in STAT_MODIFIERS:
             patterns.append({"label": "STAT_MODIFIER", "pattern": mod})
-        for mech in UNIQUE_MECHANICS:
+        for mech in _unique_mechanics_for_ruler():
             patterns.append({"label": "UNIQUE_MECHANIC", "pattern": mech})
         ruler.add_patterns(patterns)
     return nlp
@@ -135,7 +141,10 @@ def extract_mechanics_regex_only(text: str) -> dict:
     """Fallback when spaCy model is not installed."""
     found = Counter()
     lower = text.lower()
-    for mech in ALL_MECHANICS:
+    for mech in _unique_mechanics_for_ruler():
+        if mech.lower() in lower:
+            found[mech] += lower.count(mech.lower())
+    for mech in STATUS_EFFECTS + STAT_MODIFIERS:
         if mech.lower() in lower:
             found[mech] += lower.count(mech.lower())
     triggers = Counter(TRIGGER_RE.findall(text))
@@ -155,4 +164,7 @@ def build_mechanic_profile(identity: dict) -> dict:
     except Exception:
         profile = extract_mechanics_regex_only(text)
     profile["identity_slug"] = identity.get("slug")
-    return profile
+
+    from limbus_guides.ingestion.unique_mechanics_registry import enrich_mechanic_profile
+
+    return enrich_mechanic_profile(profile, identity)

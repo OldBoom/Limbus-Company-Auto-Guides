@@ -80,8 +80,9 @@ wiki_title_to_stem(filename_to_wiki_title(slug)) == slug
 
 1. Wiki `{{StatusEffect|Name}}` tags are extracted into **Key Status Effects** in parsed markdown.
 2. Non-standard effects (not in `STANDARD_EFFECTS` in `wiki_parser.py`) appear as `### Name` headings.
-3. `add_identity.py` auto-adds unknown Key Status Effects to `UNIQUE_MECHANICS` in
-   `src/limbus_guides/nlp/mechanics.py`.
+3. `run_pipeline.py` and `add_identity.py` auto-register unknown Key Status Effects in
+   `config/unique_mechanics.json` (merged at runtime with `UNIQUE_MECHANICS` in
+   `src/limbus_guides/nlp/mechanics.py`).
 4. If skill text contains scaling (`per N Name`) or support (`gain N Name`), the script
    also patches `SCALES_OFF_RE` / `SUPPORT_PASSIVE_RE` in `synergy.py`.
 5. Pass `--confirm-mechanics` to approve each term interactively.

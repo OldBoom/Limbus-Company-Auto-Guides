@@ -21,7 +21,7 @@ The script will:
 
 1. Resolve the project slug and fetch the wiki page
 2. Write `docs/parsed-ids/<slug>.md` and update `config/sinners.json`
-3. Auto-add unknown Key Status Effects to `UNIQUE_MECHANICS` (and synergy regexes when patterns match)
+3. Auto-register unknown Key Status Effects in `config/unique_mechanics.json` (and synergy regexes when patterns match)
 4. Generate `data/guides/<slug>.json`
 5. Print the guide, then prompt for:
    - **Reference text** (2–4 sentences for ROUGE-L evaluation) — wiki excerpt + LLM prompt are printed to help you draft it

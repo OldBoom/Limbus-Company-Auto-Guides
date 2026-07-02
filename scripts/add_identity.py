@@ -174,23 +174,34 @@ def process_mechanics(
     *,
     confirm: bool,
 ) -> list[str]:
-    """Auto-add unknown Key Status Effects to UNIQUE_MECHANICS + synergy regexes."""
+    """Auto-register unknown Key Status Effects for unique_mechanics_archetype."""
+    from limbus_guides.ingestion.unique_mechanics_registry import (
+        load_discovered_mechanics,
+        parse_key_status_effects,
+        sync_from_markdown,
+    )
+
     logs: list[str] = []
     corpus = build_text_corpus(md_path)
-    known = set(load_mechanics_list())
-    for term in parse_key_status_effects(md):
-        if term in known:
-            continue
-        if confirm:
-            ans = input(f'Add "{term}" to UNIQUE_MECHANICS? [y/N]: ').strip().lower()
-            if ans not in ("y", "yes"):
-                logs.append(f"[SKIP] Mechanic: {term} (not added)")
-                continue
-        if not patch_unique_mechanic(term):
-            logs.append(f"[WARN] Mechanic: could not patch {term!r}")
-            continue
-        known.add(term)
-        detail = f"{term} → added to UNIQUE_MECHANICS"
+    slug = md_path.stem
+    known = set(load_mechanics_list()) | set(load_discovered_mechanics())
+    pending = [t for t in parse_key_status_effects(md) if t not in known]
+
+    approved: set[str] | None = None
+    if confirm:
+        approved = set()
+        for term in pending:
+            ans = input(f'Register "{term}" as a unique mechanic? [y/N]: ').strip().lower()
+            if ans in ("y", "yes"):
+                approved.add(term)
+            else:
+                logs.append(f"[SKIP] Mechanic: {term} (not registered)")
+        if not approved:
+            return logs
+
+    added = sync_from_markdown(md, slug, write=True, only=approved)
+    for term in added:
+        detail = f"{term} → registered in config/unique_mechanics.json"
         extras: list[str] = []
         if scaling_pattern_matches(term, corpus):
             if patch_synergy_regex("SCALES_OFF_RE", term):
