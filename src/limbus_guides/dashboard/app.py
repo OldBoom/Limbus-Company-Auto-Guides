@@ -340,10 +340,9 @@ def _render_portrait_picker(path: Path, *, sinner_name: str) -> None:
     name_esc = html_lib.escape(sinner_name)
     st.html(
         f"""
-        <a href="{href}" target="_parent" style="display:block;line-height:0;text-decoration:none"
+        <a href="{href}" target="_parent" class="lc-portrait-zoom"
            title="Select {name_esc}">
-          <img src="data:image/png;base64,{b64}" alt="{name_esc}"
-               style="width:100%;height:auto;display:block;cursor:pointer;border-radius:4px" />
+          <img src="data:image/png;base64,{b64}" alt="{name_esc}" />
         </a>
         """,
         width="stretch",
@@ -357,10 +356,9 @@ def _render_identity_portrait_picker(path: Path, *, slug: str, title: str) -> No
     title_esc = html_lib.escape(title)
     st.html(
         f"""
-        <a href="{href}" target="_parent" style="display:block;line-height:0;text-decoration:none"
+        <a href="{href}" target="_parent" class="lc-portrait-zoom"
            title="Open guide: {title_esc}">
-          <img src="data:image/png;base64,{b64}" alt="{title_esc}"
-               style="width:100%;height:auto;display:block;cursor:pointer;border-radius:4px" />
+          <img src="data:image/png;base64,{b64}" alt="{title_esc}" />
         </a>
         """,
         width="stretch",
@@ -417,6 +415,42 @@ def _render_dashboard_styles() -> None:
         a.lc-inline-link strong {
             font-weight: 600;
         }
+        /* Portrait hover zoom — character grid + identity picker cards */
+        a.lc-portrait-zoom {
+            display: block;
+            line-height: 0;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        a.lc-portrait-zoom img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.22s ease;
+            transform-origin: center center;
+        }
+        a.lc-portrait-zoom:hover img {
+            transform: scale(1.08);
+        }
+        /* Sinner header portrait on identity-select page */
+        .lc-portrait-slot [data-testid="stImage"] {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .lc-portrait-slot [data-testid="stVerticalBlock"] .stImage img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 4px !important;
+            transition: transform 0.22s ease;
+            transform-origin: center center;
+        }
+        .lc-portrait-slot [data-testid="stImage"]:hover img {
+            transform: scale(1.08);
+        }
         /* Identity picker — show full names; wrap instead of truncating */
         [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name,
         [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name strong {
@@ -433,13 +467,6 @@ def _render_dashboard_styles() -> None:
         }
         [data-testid="stVerticalBlockBorderWrapper"] .lc-identity-name p {
             margin: 0;
-        }
-        /* Sinner portrait on identity-picker header */
-        .lc-portrait-slot [data-testid="stVerticalBlock"] .stImage img {
-            width: 100% !important;
-            height: auto !important;
-            display: block !important;
-            border-radius: 4px !important;
         }
         """
         + guide_format_css()
