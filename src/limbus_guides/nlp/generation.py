@@ -254,6 +254,16 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
             f"Stack varied statuses before committing high-value skills."
         )
+    elif gp.get("nails_archetype"):
+        arch = gp["nails_archetype"]
+        threshold = arch.get("threshold", 5)
+        payoff = arch.get("payoff_skill") or "the payoff skill"
+        burst_note = " via Tremor Burst" if arch.get("has_tremor_burst") else ""
+        parts.append(
+            f"{name} is a {role_str} — **Nails** (N Corp. Fanatic) setup fighter. "
+            f"Stack Nails toward **{threshold}+** with early skills, then cash out with "
+            f"**{payoff}**{burst_note} for burst damage and debuffs."
+        )
     elif gp.get("negative_coin_archetype"):
         arch = gp["negative_coin_archetype"]
         despair = arch.get("despair_label", "negative SP")
@@ -469,6 +479,10 @@ def _build_overview_tips(gp: dict) -> str:
     retreat_arch = gp.get("retreating_archetype")
     if retreat_arch:
         tips.extend(retreat_arch.get("tips", []))
+
+    nails_arch = gp.get("nails_archetype")
+    if nails_arch:
+        tips.extend(nails_arch.get("tips", []))
 
     defense_arch = gp.get("defense_archetype")
     if defense_arch and not neg_coin:
@@ -790,6 +804,12 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         pieces.append(
             f"Uses unique Tremor ({labels}) — prioritize teammates who apply the same "
             f"Tremor subtype so Amplitude Conversion and Burst effects stack on one target."
+        )
+    elif gp.get("nails_archetype"):
+        threshold = gp["nails_archetype"].get("threshold", 5)
+        pieces.append(
+            f"**Nails/Tremor** setup — reach **{threshold}+ Nails** before the burst skill; "
+            f"this kit self-applies both but Tremor Burst payoffs reward patient stacking."
         )
     elif neg_scale:
         pieces.append(

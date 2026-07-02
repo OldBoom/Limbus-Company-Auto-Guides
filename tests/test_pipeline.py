@@ -509,3 +509,36 @@ def test_defense_archetype_overview_tips():
 
         guide = generate_guide(identity, synergies=[], use_ollama=False)
         assert guide["playstyle_guide"].startswith("- "), slug
+
+
+def test_nails_archetype_mittelhammer_don_quixote():
+    from limbus_guides.nlp.generation import generate_guide, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, find_nails_archetype
+
+    slug = "N_Corp._Mittelhammer_Don_Quixote"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = find_nails_archetype(
+        identity["raw_markdown"],
+        gp.get("combat_passives_text", ""),
+        gp.get("skills"),
+    )
+    assert arch is not None
+    assert arch["kind"] == "nails_setup"
+    assert arch["threshold"] == 5
+    assert arch["has_tremor_burst"] is True
+    assert "Enactment" in arch["payoff_skill"]
+
+    overview = _build_overview_tips(gp)
+    assert overview.startswith("- ")
+    assert "Nails setup" in overview
+    assert "Enactment" in overview
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert "Nails" in guide["core_idea"]
+    assert "5+" in guide["core_idea"]
+    assert "Enactment" in guide["core_idea"]
+    assert guide["playstyle_guide"].startswith("- ")
+    assert "nails" in guide["playstyle_guide"].lower()

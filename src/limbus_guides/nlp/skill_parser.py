@@ -997,6 +997,131 @@ def find_negative_coin_archetype(
     }
 
 
+_NAILS_INFLICT = re.compile(r"\bInflict\s+\+?\d+\s+Nails\b", re.IGNORECASE)
+_NAILS_THRESHOLD = re.compile(
+    r"(?:have|with|at|targets?\s+that\s+have)\s+(\d+)\+\s+Nails|(\d+)\+\s+Nails",
+    re.IGNORECASE,
+)
+_NAILS_PASSIVE_TREMOR = re.compile(
+    r"target has Nails.*?(?:Tremor|inflict \+?\d+ Tremor)",
+    re.IGNORECASE | re.DOTALL,
+)
+_FANATIC_NAILS = re.compile(r"Fanatic.*?inflict \+?\d+ Nails", re.IGNORECASE)
+_TREMOR_BURST = re.compile(r"Trigger Tremor Burst", re.IGNORECASE)
+
+
+def find_nails_archetype(
+    md_text: str,
+    combat_text: str = "",
+    skills: list[dict] | None = None,
+) -> dict | None:
+    """
+    N Corp. Fanatic kits that stack Nails (unique Bleed) toward threshold payoffs,
+    often paired with Tremor Burst / debuff setup (Mittelhammer Don Quixote).
+    """
+    combined = f"{md_text}\n{combat_text}"
+    inflict_count = len(_NAILS_INFLICT.findall(combined))
+    if inflict_count == 0 and "Nails" not in combined:
+        return None
+
+    threshold = 5
+    tm = _NAILS_THRESHOLD.search(combined)
+    if tm:
+        threshold = int(next(g for g in tm.groups() if g))
+
+    has_passive_link = bool(_NAILS_PASSIVE_TREMOR.search(combined))
+    has_fanatic = bool(_FANATIC_NAILS.search(combined))
+    has_burst = bool(_TREMOR_BURST.search(combined))
+
+    if inflict_count < 2 and not (has_passive_link and has_burst):
+        return None
+
+    setup_skills: list[str] = []
+    payoff_skill = ""
+    payoff_note = ""
+    burst_skill = ""
+    damage_skill = ""
+    debuff_skill = ""
+
+    for skill in skills or []:
+        name = skill.get("name", "")
+        sn = skill.get("skill_num")
+        label = f"S{sn}" if sn else name
+        eff_text = " ".join(
+            e.get("effect", "") for e in skill.get("coin_effects", [])
+        ) + " " + " ".join(skill.get("on_use_effects", []))
+        if _NAILS_INFLICT.search(eff_text):
+            setup_skills.append(label)
+        if _TREMOR_BURST.search(eff_text):
+            burst_skill = name or label
+        if _NAILS_THRESHOLD.search(eff_text) and "+20%" in eff_text:
+            damage_skill = name or label
+        if _NAILS_THRESHOLD.search(eff_text) and (
+            "Paralyze" in eff_text or "Attack Power Down" in eff_text
+        ):
+            debuff_skill = name or label
+
+    payoff_skill = burst_skill or damage_skill or debuff_skill
+    if burst_skill and damage_skill == burst_skill:
+        payoff_note = f"+20% damage at {threshold}+ Nails"
+    elif burst_skill:
+        payoff_note = "Tremor Burst payoff"
+    elif damage_skill:
+        payoff_note = f"+20% damage at {threshold}+ Nails"
+    elif debuff_skill:
+        payoff_note = f"debuffs at {threshold}+ Nails on Heads"
+
+    tips: list[str] = []
+    setup_str = " and ".join(setup_skills[:2]) if setup_skills else "early skills"
+
+    tips.append(
+        f"**Nails setup** — use {setup_str} to stack **Nails** (unique Bleed) on the "
+        f"target before the payoff; Nails also feed Bleed damage each turn."
+    )
+
+    if payoff_skill:
+        burst_part = (
+            " triggers **Tremor Burst** and"
+            if has_burst and payoff_skill == burst_skill
+            else ""
+        )
+        bonus = f" ({payoff_note})" if payoff_note else f" at **{threshold}+ Nails**"
+        tips.append(
+            f"Cash out with **{payoff_skill}** —{burst_part} deals bonus damage{bonus}; "
+            f"do not fire it until the Nails threshold is met."
+        )
+
+    if has_passive_link:
+        passive_tip = (
+            "Combat passive adds **Tremor Count** whenever the target already has "
+            "**Nails** — each Nail-applying hit snowballs Tremor for Burst payoffs."
+        )
+        if has_fanatic:
+            passive_tip += " In **Fanatic** state she also inflicts extra Nails per hit."
+        tips.append(passive_tip)
+    elif has_fanatic:
+        tips.append(
+            "Stay in or reach **Fanatic** state for bonus Nails on hit — "
+            "pair with low-SP Fanatic allies for zealotry passives."
+        )
+
+    return {
+        "kind": "nails_setup",
+        "threshold": threshold,
+        "setup_skills": setup_skills,
+        "payoff_skill": payoff_skill,
+        "has_tremor_burst": has_burst,
+        "has_fanatic": has_fanatic,
+        "tips": tips[:3],
+        "setup_summary": (
+            f"Stack **Nails** to **{threshold}+** on the target, then burst with "
+            f"**{payoff_skill or 'the payoff skill'}**"
+            + (" and Tremor Burst" if has_burst else "")
+            + "."
+        ),
+    }
+
+
 _STRATEGIC_RR = re.compile(r"Strategic R&R Mode|Activate Strategic R&R", re.IGNORECASE)
 _SELF_REJOIN = re.compile(
     r"after Retreating using .Strategic R&R Mode.|if this unit rejoins the battle",
@@ -1349,6 +1474,7 @@ def build_gameplan(identity: dict) -> dict:
         traits_list=identity.get("traits_list")
         or parse_traits_list(identity.get("traits")),
     )
+    nails_archetype = find_nails_archetype(raw, combat_text, skills)
 
     return {
         "skills": skills,
@@ -1371,6 +1497,7 @@ def build_gameplan(identity: dict) -> dict:
         "negative_coin_archetype": negative_coin_archetype,
         "support_archetype": support_archetype,
         "retreating_archetype": retreating_archetype,
+        "nails_archetype": nails_archetype,
         "resonance_dependent": detect_resonance_dependency(raw),
         "trait_conditional": detect_trait_conditional(raw),
         "traits_list": identity.get("traits_list")
