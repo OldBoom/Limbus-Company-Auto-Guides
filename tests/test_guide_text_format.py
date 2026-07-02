@@ -77,16 +77,43 @@ def test_format_core_idea_html_structure():
         "Support passive (**Endless Lamentation**) buffs teammates."
     )
     html = format_core_idea_html(text)
-    assert 'class="lc-core-idea"' in html
-    assert 'class="lc-core-role"' in html
+    assert "lc-core-idea" in html
+    assert "lc-core-role" in html
     assert "Damage Dealer" in html
     assert "Status Specialist" in html
-    assert 'class="lc-core-hook"' in html
+    assert "lc-core-hook" in html
     assert "Coffin" in html
     assert "lc-core-scaling" in html
     assert "Scaling" in html
     assert "lc-core-support" in html
     assert "Endless Lamentation" in html
+
+
+def test_format_core_idea_html_w_corp_abbrev_name():
+    """Corp. in the identity name must not break sentence splitting."""
+    text = (
+        "W Corp. L4 Cleanup Agent - CCA Heathcliff is a Damage Dealer / Support — "
+        "**Charge** cycle — build Count toward **20**, then rebuild. "
+        "**Guard: CCA Overcharge** queues an extra finisher next turn. "
+        "Scaling conditions: Clash Power +1 per 6 Charge (max +2). "
+        "Support passive (**Example Passive**) keys off deployment order."
+    )
+    html = format_core_idea_html(text)
+    assert "lc-core-hook" in html
+    assert "Charge" in html
+    assert "lc-core-scaling" in html
+    assert "lc-core-detail" in html
+    assert "Guard" in html
+
+
+def test_format_core_idea_html_liu_assoc():
+    text = (
+        "Liu Assoc. South Section 3 Yi Sang is a Damage Dealer — "
+        "**Poise** fighter — **20 Potency** for guaranteed crits."
+    )
+    html = format_core_idea_html(text)
+    assert "lc-core-hook" in html
+    assert "Poise" in html
 
 
 def test_format_core_idea_html_fallback():

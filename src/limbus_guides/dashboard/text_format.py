@@ -305,8 +305,60 @@ def format_guide_html(text: str) -> str:
     return "\n".join(blocks)
 
 
-_CORE_LEAD_RE = re.compile(r"^(.+?) is a (.+?) — (.+)$")
-_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+_CORE_LEAD_IS_A = " is a "
+_ROLE_HOOK_DASH_RE = re.compile(r"\s[—–]\s")
+# Periods that must not end a sentence (identity name fragments).
+_ABBREV_PERIOD_RE = re.compile(r"(?:\bAssoc|\bCorp|\bE\.G\.O)\.$")
+
+
+def _split_core_idea_sentences(text: str) -> list[str]:
+    """Split core idea into sentences without breaking on Assoc. / Corp. / E.G.O."""
+    text = text.strip()
+    if not text:
+        return []
+
+    sentences: list[str] = []
+    start = 0
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        if ch in ".!?" and (i + 1 >= len(text) or text[i + 1].isspace()):
+            chunk = text[start : i + 1]
+            if ch == "." and _ABBREV_PERIOD_RE.search(chunk):
+                i += 1
+                continue
+            sentences.append(chunk.strip())
+            start = i + 1
+            while start < len(text) and text[start].isspace():
+                start += 1
+            i = start
+            continue
+        i += 1
+
+    tail = text[start:].strip()
+    if tail:
+        sentences.append(tail)
+    return sentences
+
+
+def _parse_core_lead(lead: str) -> tuple[list[str], str] | None:
+    """Parse '{name} is a {roles} — {hook}' (hook may contain further em dashes)."""
+    pos = lead.find(_CORE_LEAD_IS_A)
+    if pos < 0:
+        return None
+    after = lead[pos + len(_CORE_LEAD_IS_A) :]
+    dash = _ROLE_HOOK_DASH_RE.search(after)
+    if not dash:
+        return None
+    roles_raw = after[: dash.start()].strip()
+    hook = after[dash.end() :].strip()
+    roles = [r.strip() for r in roles_raw.split("/") if r.strip()]
+    if not roles or not hook:
+        return None
+    return roles, hook
+
+
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")  # legacy; prefer _split_core_idea_sentences
 
 
 def _classify_core_detail(sentence: str) -> tuple[str, str]:
@@ -328,20 +380,18 @@ def format_core_idea_html(text: str) -> str:
     if not text or not text.strip():
         return ""
 
-    sentences = [s.strip() for s in _SENTENCE_SPLIT_RE.split(text.strip()) if s.strip()]
+    sentences = _split_core_idea_sentences(text.strip())
     if not sentences:
         return ""
 
     lead = sentences[0]
     extras = sentences[1:]
-    match = _CORE_LEAD_RE.match(lead)
+    parsed = _parse_core_lead(lead)
 
-    if not match:
+    if not parsed:
         return f'<div class="lc-core-idea">{format_guide_html(text)}</div>'
 
-    roles_raw = match.group(2).strip()
-    hook = match.group(3).strip()
-    roles = [r.strip() for r in roles_raw.split("/") if r.strip()]
+    roles, hook = parsed
     role_html = "".join(
         f'<span class="lc-core-role">{html.escape(role)}</span>' for role in roles
     )
