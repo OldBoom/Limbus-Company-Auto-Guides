@@ -970,6 +970,9 @@ def test_thumb_capo_core_idea_describes_damage_kit():
     assert "damage carry" in core.lower()
     assert "Burn applicator" not in core
     assert "; equipping defense" not in core
+    assert "scaling coin power" not in core.lower()
+    assert "Scaling conditions:" in core
+    assert "(Burn + Tremor)" in core
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert guide["core_idea"] == core
@@ -996,6 +999,9 @@ def test_thumb_soldato_sinclair_core_idea_describes_damage_kit():
     assert "Unbreakable" in core
     assert "Burn applicator" not in core
     assert "; gains **Damage Up**" not in core
+    assert "scaling coin power" not in core.lower()
+    assert "Scaling conditions:" in core
+    assert "(Burn + Tremor)" in core
     assert core.count("resupply") == 1 or "Ammunition Tribute" in core
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
@@ -1025,6 +1031,28 @@ def test_devyat_sinclair_core_idea_describes_courier_loop():
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
     assert guide["core_idea"] == core
+
+
+def test_core_idea_scaling_inserted_automatically():
+    """Scaling block is assembled centrally — hook first, then scaling, then kit details."""
+    from limbus_guides.dashboard.text_format import _split_core_idea_sentences
+    from limbus_guides.nlp.generation import _build_core_idea
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    capo = load_parsed_identity("The_Thumb_East_Capo_IIII_Meursault")
+    capo["mechanic_profile"] = build_mechanic_profile(capo)
+    capo_core = _build_core_idea(capo["name"], build_gameplan(capo))
+    capo_sents = _split_core_idea_sentences(capo_core)
+    assert capo_sents[1].startswith("Scaling conditions:")
+    assert "Equipping defense" in capo_sents[2]
+    assert capo_core.index("Scaling conditions:") < capo_core.index("Equipping defense")
+
+    liu = load_parsed_identity("Liu_Assoc._South_Section_3_Yi_Sang")
+    liu["mechanic_profile"] = build_mechanic_profile(liu)
+    liu_core = _build_core_idea(liu["name"], build_gameplan(liu))
+    assert "Scaling conditions:" in liu_core
+    assert "scaling coin power" not in liu_core.lower()
 
 
 def test_tremor_unique_subtype_bold_in_core_idea():

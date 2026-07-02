@@ -59,6 +59,19 @@ _STAT_SCALE_COUNT = re.compile(
     re.IGNORECASE,
 )
 
+# "Coin Power +1 for every 6 (Burn + Tremor) on target (max 2)"
+_STAT_SCALE_COMBINED = re.compile(
+    r"(Clash Power|Coin Power|Final Power|Base Power)\s+\+(\d+)\s+for every\s+(\d+)\s+"
+    r"\(([^)]+)\)\s+on(?: the)?(?: main)? target[^(]*\(max\s+(\d+)\)",
+    re.IGNORECASE,
+)
+
+# "Deal +10% damage for every 4 (Burn + Tremor) on target (max 30%)"
+_PERCENT_COMBINED_STATUS = re.compile(
+    r"[Dd]eal\s+\+(\d+)%\s+damage for every\s+(\d+)\s+\(([^)]+)\)\s+on target[^(]*\(max\s+(\d+)%\)",
+    re.IGNORECASE,
+)
+
 # "Clash Power +1 for every type of negative effect on target (max 2)"
 _STAT_SCALE_NEG = re.compile(
     r"(Clash Power|Coin Power|Final Power|Base Power)\s+\+(\d+)\s+for every type of negative effect"
@@ -313,6 +326,14 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
     for m in _STAT_SCALE_COUNT.finditer(all_eff):
         damage_scales.append(
             f"{m.group(1)} +{m.group(2)} per {m.group(3)} {m.group(4)} (max +{m.group(5)})"
+        )
+    for m in _STAT_SCALE_COMBINED.finditer(all_eff):
+        damage_scales.append(
+            f"{m.group(1)} +{m.group(2)} per {m.group(3)} ({m.group(4)}) (max +{m.group(5)})"
+        )
+    for m in _PERCENT_COMBINED_STATUS.finditer(all_eff):
+        damage_scales.append(
+            f"+{m.group(1)}% damage per {m.group(2)} ({m.group(3)}) (max +{m.group(4)}%)"
         )
     for m in _PERCENT_PER_NEG.finditer(all_eff):
         damage_scales.append(f"+{m.group(1)}% per negative effect type (max +{m.group(2)}%)")

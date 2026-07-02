@@ -152,10 +152,22 @@ def test_format_core_idea_html_thumb_ammo_kit():
 
     assert "; gains **Damage Up**" not in text
     assert "Gains **Damage Up**" in text
+    assert "scaling coin power" not in text.lower()
+    assert "Scaling conditions:" in text
 
     html = format_core_idea_html(text)
     assert "lc-core-hook" in html
     assert "lc-core-details" in html
+    assert "lc-core-scaling" in html
     assert "lc-core-detail" in html
     assert "lc-core-support" in html
     assert "Ammunition Tribute" in html
+
+    capo = load_parsed_identity("The_Thumb_East_Capo_IIII_Meursault")
+    capo["mechanic_profile"] = build_mechanic_profile(capo)
+    capo_gp = build_gameplan(capo)
+    capo_text = _build_core_idea(capo["name"], capo_gp)
+    capo_html = format_core_idea_html(capo_text)
+    assert "scaling coin power" not in capo_text.lower()
+    assert "lc-core-scaling" in capo_html
+    assert "Final Power" in capo_html or "Burn + Tremor" in capo_html

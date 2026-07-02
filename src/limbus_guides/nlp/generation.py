@@ -268,8 +268,35 @@ def _describe_skill(
 _COMBINED_BURN_TREMOR = re.compile(r"Burn\s*\+\s*Tremor|\(Burn\s*\+\s*Tremor\)", re.I)
 
 
-def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | None:
-    """Damage carries that spend unique ammo while stacking Burn and/or Tremor."""
+def _skill_effect_text(gp: dict) -> str:
+    skill_parts: list[str] = []
+    for skill in gp.get("skills", []):
+        for key in ("skill_bonuses", "on_use_effects"):
+            skill_parts.extend(skill.get(key, []))
+    return " ".join(skill_parts)
+
+
+def _scaling_conditions_sentence(gp: dict) -> str | None:
+    """Standard scaling block — inserted after the hook for dashboard layout."""
+    dmg = gp.get("damage_conditions") or []
+    if dmg:
+        return f"Scaling conditions: {'; '.join(dmg[:2])}."
+
+    skill_text = _skill_effect_text(gp)
+    if (
+        _COMBINED_BURN_TREMOR.search(skill_text)
+        and gp.get("burn_archetype")
+        and gp.get("tremor_archetype")
+    ):
+        return (
+            "Scaling conditions: clash and coin power scale from combined "
+            "**Burn + Tremor** on the target."
+        )
+    return None
+
+
+def _ammo_dual_status_core_parts(name: str, role_str: str, gp: dict) -> tuple[str, list[str]] | None:
+    """Hook plus kit-detail sentences for ammo damage carries (scaling added centrally)."""
     ammo = gp.get("unique_ammo")
     if not ammo:
         return None
@@ -291,38 +318,22 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
     if burn_arch:
         status_bits.append("**Burn**")
 
-    skill_parts: list[str] = []
-    for skill in gp.get("skills", []):
-        for key in ("skill_bonuses", "on_use_effects"):
-            for item in skill.get(key, []):
-                if isinstance(item, str):
-                    skill_parts.append(item)
-    skill_text = " ".join(skill_parts)
-    scales = bool(_COMBINED_BURN_TREMOR.search(skill_text)) or any(
-        _COMBINED_BURN_TREMOR.search(c) for c in gp.get("damage_conditions", [])
-    )
-
+    skill_text = _skill_effect_text(gp)
     status_phrase = " and ".join(status_bits)
-    scale_clause = (
-        ", scaling coin power from combined **Burn + Tremor** on the target"
-        if scales and len(status_bits) > 1
-        else ""
-    )
 
-    reload_clause = ""
+    details: list[str] = []
     def_arch = gp.get("defense_archetype") or {}
     if def_arch.get("kind") == "equip_unlock":
-        reload_clause = (
+        details.append(
             "Equipping defense once reloads **Savage Tigermark Round** "
-            "and unlocks the upgraded S3"
+            "and unlocks the upgraded S3."
         )
 
-    kit_clauses: list[str] = []
     combat = gp.get("combat_passives_text", "")
     if re.search(r"gain Damage Up equal to the amount spent", combat, re.I):
-        kit_clauses.append("Gains **Damage Up** next turn from ammo spent")
+        details.append("Gains **Damage Up** next turn from ammo spent.")
     if re.search(r"convert the Coins to Unbreakable", skill_text, re.I):
-        kit_clauses.append("S3 turns **Unbreakable** at **3+** ammo")
+        details.append("S3 turns **Unbreakable** at **3+** ammo.")
 
     support_arch = gp.get("support_archetype") or {}
     if (
@@ -330,23 +341,17 @@ def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | 
         and "ammo" in (support_arch.get("setup_summary") or "").lower()
     ):
         passive = support_arch.get("passive_name") or "Support passive"
-        kit_clauses.append(
+        details.append(
             f"Support passive (**{passive}**) resupplies the earliest-deployed "
-            f"**Ammo** ally once per fight"
+            f"**Ammo** ally once per fight."
         )
 
     premium = ammo["premium_skill"]
-    sentences = [
-        (
-            f"{name} is a {role_str} — **{ammo['ammo_label']}** damage carry who applies "
-            f"{status_phrase} on hits{scale_clause}, spending ammo for burst on "
-            f"S{premium}."
-        )
-    ]
-    if reload_clause:
-        sentences.append(f"{reload_clause}.")
-    sentences.extend(f"{clause}." for clause in kit_clauses)
-    return " ".join(sentences)
+    hook = (
+        f"{name} is a {role_str} — **{ammo['ammo_label']}** damage carry who applies "
+        f"{status_phrase} on hits, spending ammo for burst on S{premium}."
+    )
+    return hook, details
 
 
 def _devyat_courier_core_opening(name: str, role_str: str, gp: dict) -> str | None:
@@ -387,7 +392,6 @@ def _build_core_idea(name: str, gp: dict) -> str:
     resource = gp["resource_loop"]
     poise = gp["poise_passive"]
     neg_scale = gp["neg_effect_scaling"]
-    dmg = gp["damage_conditions"]
     # Build a text fragment that includes the support-passive header so infer_roles can detect it
     support_text = gp.get("support_passive_text", "")
     skill_lines: list[str] = []
@@ -404,6 +408,7 @@ def _build_core_idea(name: str, gp: dict) -> str:
     role_str = " / ".join(roles)
 
     parts: list[str] = []
+    post_scaling: list[str] = []
 
     # Opening sentence: role + positioning
     if transition and resource:
@@ -457,7 +462,7 @@ def _build_core_idea(name: str, gp: dict) -> str:
         if def_arch and def_arch.get("kind") == "skill_queue":
             defense_name = def_arch.get("defense_name", "Guard")
             payoff = arch.get("payoff_skill", "S3")
-            parts.append(
+            post_scaling.append(
                 f"**{defense_name}** queues an extra **{payoff}** next turn and can "
                 f"remove a Stagger Threshold when Charge Count is low — guard sets up the burst."
             )
@@ -479,8 +484,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
                 f"below 0 SP she swaps to **{despair}** skills ({minus_preview}, …) "
                 f"with far higher Base Power than the Plus Coin set."
             )
-    elif (ammo_open := _ammo_dual_status_core_opening(name, role_str, gp)):
-        parts.append(ammo_open)
+    elif (ammo_parts := _ammo_dual_status_core_parts(name, role_str, gp)):
+        parts.append(ammo_parts[0])
+        post_scaling.extend(ammo_parts[1])
     elif (devyat_open := _devyat_courier_core_opening(name, role_str, gp)):
         parts.append(devyat_open)
     elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
@@ -544,9 +550,10 @@ def _build_core_idea(name: str, gp: dict) -> str:
         mech = ", ".join(primary[:2]) if primary else "status"
         parts.append(f"{name} is a {role_str} applying sustained {mech} pressure with consistent skill stats.")
 
-    # Damage ceiling conditions (up to 2)
-    if dmg:
-        parts.append(f"Scaling conditions: {'; '.join(dmg[:2])}.")
+    if scaling := _scaling_conditions_sentence(gp):
+        if scaling not in " ".join(parts):
+            parts.append(scaling)
+    parts.extend(post_scaling)
 
     if gp.get("heads_dependent"):
         parts.append(
