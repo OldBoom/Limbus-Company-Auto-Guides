@@ -2,6 +2,7 @@
 
 from limbus_guides.dashboard.text_format import (
     build_status_category_map,
+    format_core_idea_html,
     format_guide_html,
     format_inline_guide_text,
     guide_format_css,
@@ -66,3 +67,29 @@ def test_format_inline_highlights_registry_mechanics():
     assert 'class="lc-status-neu"' in html
     assert "Coffin" in html
     assert "Dullahan" in html
+
+
+def test_format_core_idea_html_structure():
+    text = (
+        "Wild Hunt Heathcliff is a Damage Dealer / Status Specialist — "
+        "**Dullahan** + **Coffin** carry — stack resources and cash out. "
+        "Scaling conditions: Coin Power +1 per 3 Sinking (max +2). "
+        "Support passive (**Endless Lamentation**) buffs teammates."
+    )
+    html = format_core_idea_html(text)
+    assert 'class="lc-core-idea"' in html
+    assert 'class="lc-core-role"' in html
+    assert "Damage Dealer" in html
+    assert "Status Specialist" in html
+    assert 'class="lc-core-hook"' in html
+    assert "Coffin" in html
+    assert "lc-core-scaling" in html
+    assert "Scaling" in html
+    assert "lc-core-support" in html
+    assert "Endless Lamentation" in html
+
+
+def test_format_core_idea_html_fallback():
+    html = format_core_idea_html("Plain summary without the standard lead pattern.")
+    assert 'class="lc-core-idea"' in html
+    assert "lc-guide-line" in html

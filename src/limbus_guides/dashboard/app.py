@@ -17,7 +17,12 @@ if str(_SRC) not in sys.path:
 import streamlit as st
 
 from limbus_guides.config_io import load_json_config
-from limbus_guides.dashboard.text_format import format_guide_html, format_inline_guide_text, guide_format_css
+from limbus_guides.dashboard.text_format import (
+    format_core_idea_html,
+    format_guide_html,
+    format_inline_guide_text,
+    guide_format_css,
+)
 from limbus_guides.nlp.generation import _embedding_verify_note
 from limbus_guides.paths import CONFIG_DIR, GUIDES_DIR
 
@@ -29,8 +34,11 @@ SINNER_COLS_PER_ROW = 6
 
 # Landing-page dummy content (not loaded from pipeline)
 _DUMMY_CORE_IDEA = (
-    "A one- or two-sentence summary of how this identity wants to fight — "
-    "its role, main resource loop, and win condition."
+    "Preview Identity is a Damage Dealer / Support — **Charge** cycle — build Count toward "
+    "**20**, spend on empowered skills, then rebuild for the next window. "
+    "Scaling conditions: Clash Power +1 per 6 Charge (max +2). "
+    "Support passive (**Example Passive**) buffs teammates — keep this unit on field "
+    "while allies run their attack rotation."
 )
 _DUMMY_MECHANICS = "Bleed · Poise · Charge"
 _DUMMY_PLAYSTYLE = (
@@ -195,6 +203,13 @@ def _render_formatted_prose(text: str) -> None:
     )
 
 
+def _render_core_idea(text: str) -> None:
+    """Core idea summary card with role tags and labeled detail blocks."""
+    if not text:
+        return
+    st.html(format_core_idea_html(text), width="stretch")
+
+
 def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
     """Render team suggestions with clickable teammate names when picks are available."""
     picks = guide.get("team_suggestion_picks")
@@ -268,7 +283,7 @@ def _render_landing() -> None:
 
         st.markdown("### ① Core Idea")
         st.caption("*What this section tells you: the identity's role and overall gameplan in 1–2 sentences.*")
-        _render_formatted_prose(_DUMMY_CORE_IDEA)
+        _render_core_idea(_DUMMY_CORE_IDEA)
 
         st.markdown("### ② Primary Mechanics")
         st.caption("*Keywords for the main systems this kit revolves around (statuses, resources, passives).*")
@@ -529,7 +544,7 @@ def _render_guide(
         st.header(guide.get("identity_name", "—"))
         st.caption(f"Character: {sinner_name}")
         st.markdown("### Core Idea")
-        _render_formatted_prose(guide.get("core_idea", ""))
+        _render_core_idea(guide.get("core_idea", ""))
         st.markdown("### Primary Mechanics")
         mech_line = ", ".join(profile.get("primary_mechanics", [])) or "—"
         _render_formatted_prose(mech_line)

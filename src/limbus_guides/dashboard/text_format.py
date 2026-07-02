@@ -305,6 +305,74 @@ def format_guide_html(text: str) -> str:
     return "\n".join(blocks)
 
 
+_CORE_LEAD_RE = re.compile(r"^(.+?) is a (.+?) — (.+)$")
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _classify_core_detail(sentence: str) -> tuple[str, str]:
+    """Return (block_kind, display_text)."""
+    if sentence.startswith("Scaling conditions:"):
+        return "scaling", sentence[len("Scaling conditions:") :].strip()
+    if sentence.lower().startswith("support passive"):
+        return "support", sentence
+    if "heads-flip dependent" in sentence.lower() or sentence.startswith("Key damage is Heads"):
+        return "variance", sentence
+    return "detail", sentence
+
+
+def format_core_idea_html(text: str) -> str:
+    """
+    Render core idea as a readable card: role tags, hook line, then labeled detail blocks.
+    Falls back to formatted prose when the standard lead pattern is missing.
+    """
+    if not text or not text.strip():
+        return ""
+
+    sentences = [s.strip() for s in _SENTENCE_SPLIT_RE.split(text.strip()) if s.strip()]
+    if not sentences:
+        return ""
+
+    lead = sentences[0]
+    extras = sentences[1:]
+    match = _CORE_LEAD_RE.match(lead)
+
+    if not match:
+        return f'<div class="lc-core-idea">{format_guide_html(text)}</div>'
+
+    roles_raw = match.group(2).strip()
+    hook = match.group(3).strip()
+    roles = [r.strip() for r in roles_raw.split("/") if r.strip()]
+    role_html = "".join(
+        f'<span class="lc-core-role">{html.escape(role)}</span>' for role in roles
+    )
+
+    blocks: list[str] = [
+        '<div class="lc-core-idea">',
+        f'<div class="lc-core-roles">{role_html}</div>',
+        f'<p class="lc-core-hook">{format_inline_guide_text(hook)}</p>',
+    ]
+
+    if extras:
+        blocks.append('<div class="lc-core-details">')
+        for sentence in extras:
+            kind, body = _classify_core_detail(sentence)
+            inner = format_inline_guide_text(body)
+            if kind == "detail":
+                blocks.append(f'<p class="lc-core-detail">{inner}</p>')
+            else:
+                label = {"scaling": "Scaling", "support": "Support", "variance": "Variance"}[kind]
+                blocks.append(
+                    f'<div class="lc-core-block lc-core-{kind}">'
+                    f'<span class="lc-core-label">{label}</span>'
+                    f'<p class="lc-core-block-body">{inner}</p>'
+                    f"</div>"
+                )
+        blocks.append("</div>")
+
+    blocks.append("</div>")
+    return "\n".join(blocks)
+
+
 def guide_format_css() -> str:
     """CSS for status categories and numeric highlights."""
     return """
@@ -345,5 +413,81 @@ def guide_format_css() -> str:
     .lc-formatted-prose p {
         margin: 0.35rem 0;
         line-height: 1.45;
+    }
+    .lc-core-idea {
+        margin: 0.5rem 0 0.75rem;
+        padding: 0.85rem 1rem 0.95rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+    }
+    .lc-core-roles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-bottom: 0.55rem;
+    }
+    .lc-core-role {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 0.15rem 0.45rem;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.78);
+    }
+    .lc-core-hook {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.55;
+        font-weight: 500;
+    }
+    .lc-core-details {
+        margin-top: 0.75rem;
+        padding-top: 0.65rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+    }
+    .lc-core-detail {
+        margin: 0;
+        padding-left: 0.65rem;
+        border-left: 2px solid rgba(255, 255, 255, 0.12);
+        line-height: 1.5;
+        opacity: 0.95;
+    }
+    .lc-core-block {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.45rem 0.65rem;
+        align-items: start;
+    }
+    .lc-core-label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        margin-top: 0.1rem;
+    }
+    .lc-core-scaling .lc-core-label {
+        background: rgba(45, 212, 191, 0.15);
+        color: #5eead4;
+    }
+    .lc-core-support .lc-core-label {
+        background: rgba(255, 214, 0, 0.15);
+        color: #fde68a;
+    }
+    .lc-core-variance .lc-core-label {
+        background: rgba(255, 75, 75, 0.15);
+        color: #fca5a5;
+    }
+    .lc-core-block-body {
+        margin: 0;
+        line-height: 1.5;
     }
     """
