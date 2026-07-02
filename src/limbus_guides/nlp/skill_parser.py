@@ -1998,6 +1998,7 @@ def build_gameplan(identity: dict) -> dict:
         combat_text,
         raw_markdown=raw,
         mechanic_profile=profile,
+        support_text=support_text,
         nails_archetype=nails_archetype,
         defense_archetype=defense_archetype,
     )

@@ -626,6 +626,215 @@ def find_discard_archetype(
 
 
 # ---------------------------------------------------------------------------
+# Ally SP / HP regeneration
+# ---------------------------------------------------------------------------
+
+_ALLY_HEAL_MARKER = re.compile(
+    r"(?:\d+\s+)?other\s+all(?:y|ies)|"
+    r"\d+\s+all(?:y|ies)|"
+    r"all\s+other\s+allies|"
+    r"for\s+(?:the\s+)?all(?:y|ies)|"
+    r"for\s+\d+\s+other\s+ally|"
+    r"all(?:y|ies)\s+that|"
+    r"all(?:y|ies)\s+with|"
+    r"lowest\s+SP|"
+    r"least\s+SP|"
+    r"lowest\s+HP|"
+    r"HP\s+percentage|"
+    r"highest\s+max\s+HP|"
+    r"said\s+all(?:y|ies)|"
+    r"another\s+ally",
+    re.I,
+)
+
+_SELF_HEAL_ONLY = re.compile(r"\bon self\b|\bthis unit\b", re.I)
+_LIFESTEAL_HP = re.compile(r"heal\s+\d+%\s+of\s+the\s+HP\s+damage", re.I)
+
+
+def _regen_clauses(
+    skills: list[dict],
+    combat_text: str = "",
+    support_text: str = "",
+) -> list[str]:
+    """Semicolon-sized snippets from passives and skills — avoids cross-section false joins."""
+    clauses: list[str] = []
+    for source in (combat_text, support_text):
+        if source.strip():
+            clauses.extend(_split_clauses(source))
+    for skill in skills:
+        for field in ("on_use_effects", "skill_bonuses"):
+            for line in skill.get(field, []):
+                clauses.extend(_split_clauses(line))
+        for coin in skill.get("coin_effects", []):
+            clauses.extend(_split_clauses(coin.get("effect", "")))
+    return clauses
+
+
+def _split_clauses(blob: str) -> list[str]:
+    return [part.strip() for part in re.split(r"\s*;\s*", blob) if part.strip()]
+
+
+def _clause_heals_ally_sp(clause: str) -> bool:
+    if not re.search(r"heal", clause, re.I) or not re.search(r"\bSP\b", clause):
+        return False
+    if _SELF_HEAL_ONLY.search(clause) and not _ALLY_HEAL_MARKER.search(clause):
+        return False
+    if _ALLY_HEAL_MARKER.search(clause):
+        return True
+    if re.search(r"Heal\s+\d+\s+all(?:y|ies)", clause, re.I):
+        return True
+    if re.search(
+        r"all(?:y|ies)[^;]{0,120}heal(?:s)?\s+(?:\([^)]+\)\s*)?\d+(?:~\d+)?\s*SP",
+        clause,
+        re.I,
+    ):
+        return True
+    return False
+
+
+def _clause_heals_ally_hp(clause: str) -> bool:
+    if not re.search(r"heal", clause, re.I):
+        return False
+    if _LIFESTEAL_HP.search(clause) and not _ALLY_HEAL_MARKER.search(clause):
+        return False
+    if _SELF_HEAL_ONLY.search(clause) and not _ALLY_HEAL_MARKER.search(clause):
+        return False
+    if not re.search(r"\d+\s*HP|HP\s+percentage|lowest\s+HP", clause, re.I):
+        return False
+    if _ALLY_HEAL_MARKER.search(clause):
+        return True
+    if re.search(
+        r"all(?:y|ies)[^;]{0,120}heal(?:s)?\s+(?:\([^)]+\)\s*)?\d+(?:~\d+)?\s*HP",
+        clause,
+        re.I,
+    ):
+        return True
+    if re.search(r"heal\s+\d+\s+all(?:y|ies)", clause, re.I):
+        return True
+    return False
+
+
+def _ally_heal_clauses(
+    skills: list[dict],
+    combat_text: str = "",
+    support_text: str = "",
+    resource: str = "SP",
+) -> list[str]:
+    checker = _clause_heals_ally_sp if resource == "SP" else _clause_heals_ally_hp
+    return [
+        clause
+        for clause in _regen_clauses(skills, combat_text, support_text)
+        if checker(clause)
+    ]
+
+
+def _heal_timing_note(clauses: list[str]) -> str:
+    joined = " ".join(clauses).lower()
+    if "on hit" in joined:
+        return "On Hit"
+    if "attack end" in joined:
+        return "Attack End"
+    if "turn end" in joined:
+        return "Turn End"
+    if "combat start" in joined:
+        return "Combat Start"
+    if "on kill" in joined:
+        return "On Kill"
+    return "each turn"
+
+
+def _heal_target_note(clauses: list[str], resource: str) -> str:
+    joined = " ".join(clauses).lower()
+    if f"lowest {resource.lower()}" in joined or f"least {resource.lower()}" in joined:
+        return f"lowest-{resource} allies"
+    if "lowest hp" in joined or "hp percentage" in joined:
+        return "lowest-HP allies"
+    if "highest max hp" in joined:
+        return "highest max-HP ally"
+    if "other ally" in joined or "other allies" in joined:
+        return "other allies"
+    return "teammates"
+
+
+def find_sp_regenerator_archetype(
+    skills: list[dict],
+    combat_text: str = "",
+    raw_markdown: str = "",
+    mechanic_profile: dict | None = None,
+    support_text: str = "",
+) -> _ARCHETYPE_RESULT | None:
+    """Ally-facing SP sustain — passives or skills that restore teammate SP."""
+    _ = mechanic_profile
+    clauses = _ally_heal_clauses(skills, combat_text, support_text, "SP")
+    if not clauses:
+        return None
+
+    timing = _heal_timing_note(clauses)
+    target = _heal_target_note(clauses, "SP")
+    tips = [
+        f"**SP sustain** fires at **{timing}** — keep this unit deployed so "
+        f"{target} recover SP before the next clash.",
+        "Pair with high-SP spenders; they benefit most from the passive top-ups.",
+    ]
+    if "turn end" in " ".join(clauses).lower():
+        tips.append(
+            "Low-SP allies are topped up after clashes — let them spend freely, "
+            "then rely on Turn End healing."
+        )
+
+    return _build_archetype(
+        kind="sp_regenerator",
+        status="SP Regeneration",
+        setup_summary=(
+            "**SP regenerator** — restores ally **SP** through passives and key skills; "
+            "keep this unit on field so teammates stay clash-ready."
+        ),
+        tips=tips,
+    )
+
+
+def find_hp_regenerator_archetype(
+    skills: list[dict],
+    combat_text: str = "",
+    raw_markdown: str = "",
+    mechanic_profile: dict | None = None,
+    support_text: str = "",
+) -> _ARCHETYPE_RESULT | None:
+    """Ally-facing HP sustain — passives or skills that restore teammate HP."""
+    _ = mechanic_profile
+    clauses = _ally_heal_clauses(skills, combat_text, support_text, "HP")
+    if not clauses:
+        return None
+
+    timing = _heal_timing_note(clauses)
+    target = _heal_target_note(clauses, "HP")
+    tips = [
+        f"**HP sustain** triggers at **{timing}** — protect this slot so "
+        f"{target} keep receiving heals.",
+    ]
+    if "on hit" in " ".join(clauses).lower():
+        tips.append(
+            "Heals flow when allies land hits — stagger this unit last so attackers "
+            "can proc the passive before it expires."
+        )
+    else:
+        tips.append(
+            "Slot durable allies who can stay on field; the passive only helps "
+            "while this unit is deployed."
+        )
+
+    return _build_archetype(
+        kind="hp_regenerator",
+        status="HP Regeneration",
+        setup_summary=(
+            "**HP regenerator** — tops up ally **HP** through passives and skills; "
+            "protect this unit so healing keeps flowing to teammates."
+        ),
+        tips=tips,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Registry (for generation / tests)
 # ---------------------------------------------------------------------------
 
@@ -644,6 +853,8 @@ EXTRA_ARCHETYPE_KEYS: tuple[str, ...] = (
     "paralyze_archetype",
     "fragile_archetype",
     "discard_archetype",
+    "sp_regenerator_archetype",
+    "hp_regenerator_archetype",
 )
 
 SPECIAL_ARCHETYPE_KEYS: tuple[str, ...] = (
@@ -667,6 +878,7 @@ def detect_status_archetypes(
     raw_markdown: str = "",
     mechanic_profile: dict | None = None,
     *,
+    support_text: str = "",
     nails_archetype: dict | None = None,
     defense_archetype: dict | None = None,
 ) -> dict[str, _ARCHETYPE_RESULT]:
@@ -677,6 +889,7 @@ def detect_status_archetypes(
         "raw_markdown": raw_markdown,
         "mechanic_profile": mechanic_profile,
     }
+    regen_common = {**common, "support_text": support_text}
     out: dict[str, _ARCHETYPE_RESULT] = {}
 
     mapping: list[tuple[str, Callable[..., _ARCHETYPE_RESULT | None], dict]] = [
@@ -691,9 +904,13 @@ def detect_status_archetypes(
         ("paralyze_archetype", find_paralyze_archetype, {}),
         ("fragile_archetype", find_fragile_archetype, {}),
         ("discard_archetype", find_discard_archetype, {}),
+        ("sp_regenerator_archetype", find_sp_regenerator_archetype, {}),
+        ("hp_regenerator_archetype", find_hp_regenerator_archetype, {}),
     ]
+    regen_keys = {"sp_regenerator_archetype", "hp_regenerator_archetype"}
     for key, fn, extra in mapping:
-        arch = fn(**common, **extra)
+        base = regen_common if key in regen_keys else common
+        arch = fn(**base, **extra)
         if arch:
             out[key] = arch
     return out

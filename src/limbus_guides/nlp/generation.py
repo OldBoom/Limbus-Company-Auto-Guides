@@ -441,6 +441,16 @@ def _build_core_idea(name: str, gp: dict) -> str:
         if setup:
             parts.append(setup)
 
+    if gp.get("sp_regenerator_archetype"):
+        setup = gp["sp_regenerator_archetype"].get("setup_summary")
+        if setup:
+            parts.append(setup)
+
+    if gp.get("hp_regenerator_archetype"):
+        setup = gp["hp_regenerator_archetype"].get("setup_summary")
+        if setup:
+            parts.append(setup)
+
     if gp.get("retreating_archetype"):
         setup = gp["retreating_archetype"].get("setup_summary")
         if setup:

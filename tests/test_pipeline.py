@@ -789,6 +789,62 @@ def test_discard_archetype_synthetic():
     assert not any("resource loop" in t.lower() for t in arch["tips"])
 
 
+def test_sp_regenerator_archetype_liu_yi_sang():
+    from limbus_guides.nlp.generation import _build_core_idea, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "Liu_Assoc._South_Section_3_Yi_Sang"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = gp.get("sp_regenerator_archetype")
+    assert arch is not None, slug
+    assert arch["kind"] == "sp_regenerator"
+
+    overview = _build_overview_tips(gp)
+    assert arch["tips"][0] in overview or arch["tips"][0].replace("**", "") in overview.replace("**", "")
+
+    core = _build_core_idea(identity["name"], gp)
+    assert arch["setup_summary"] in core
+
+
+def test_hp_regenerator_archetype_priest_gregor():
+    from limbus_guides.nlp.generation import _build_core_idea, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "The_Priest_of_La_Manchaland_Gregor"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    hp_arch = gp.get("hp_regenerator_archetype")
+    sp_arch = gp.get("sp_regenerator_archetype")
+    assert hp_arch is not None, slug
+    assert sp_arch is not None, slug
+    assert hp_arch["kind"] == "hp_regenerator"
+    assert sp_arch["kind"] == "sp_regenerator"
+
+    overview = _build_overview_tips(gp)
+    assert hp_arch["tips"][0] in overview or hp_arch["tips"][0].replace("**", "") in overview.replace("**", "")
+    assert sp_arch["tips"][0] in overview or sp_arch["tips"][0].replace("**", "") in overview.replace("**", "")
+
+    core = _build_core_idea(identity["name"], gp)
+    assert hp_arch["setup_summary"] in core
+    assert sp_arch["setup_summary"] in core
+
+
+def test_sp_regenerator_skips_self_only_heal():
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "Liu_Assoc._South_Section_5_Hong_Lu"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    assert gp.get("sp_regenerator_archetype") is None
+
+
 def test_haste_tip_matches_defense_style():
     from limbus_guides.nlp.generation import generate_guide
     from limbus_guides.nlp.mechanics import build_mechanic_profile

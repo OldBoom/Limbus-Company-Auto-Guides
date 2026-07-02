@@ -30,6 +30,21 @@ def test_format_inline_highlights_statuses_and_numbers():
     assert ">2<" in html
 
 
+def test_format_inline_preserves_apostrophes():
+    """Apostrophes must not be broken by number highlighting (&#x27; contains 27)."""
+    reason = (
+        "This identity's 'One day I'll wear me Armour for Cancelled Trains' "
+        "inflicts Charge — teammate scales off Charge."
+    )
+    html = format_inline_guide_text(reason)
+    assert 'lc-num">27</span>' not in html
+    assert "identity&#x27;s" in html
+    assert "I&#x27;ll" in html
+    html2 = format_inline_guide_text("At 10+ Charge with I'll.")
+    assert "I&#x27;ll" in html2
+    assert ">10<" in html2
+
+
 def test_format_inline_preserves_bold():
     html = format_inline_guide_text("**Burn** stacks at +5.")
     assert "<strong>" in html

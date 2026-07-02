@@ -228,7 +228,27 @@ def build_status_category_map() -> dict[str, str]:
 
 def _span_status(name: str, kind: str) -> str:
     cls = {"positive": "lc-status-pos", "neutral": "lc-status-neu", "negative": "lc-status-neg"}[kind]
-    return f'<span class="{cls}">{html.escape(name)}</span>'
+    return f'<span class="{cls}">{name}</span>'
+
+
+def _escape_outside_tags(fragment: str) -> str:
+    """HTML-escape text nodes only; leave markup tags and their delimiters intact."""
+    out: list[str] = []
+    i = 0
+    while i < len(fragment):
+        lt = fragment.find("<", i)
+        if lt < 0:
+            out.append(html.escape(fragment[i:]))
+            break
+        if lt > i:
+            out.append(html.escape(fragment[i:lt]))
+        gt = fragment.find(">", lt)
+        if gt < 0:
+            out.append(html.escape(fragment[lt:]))
+            break
+        out.append(fragment[lt : gt + 1])
+        i = gt + 1
+    return "".join(out)
 
 
 def _highlight_statuses(text: str, categories: dict[str, str]) -> str:
@@ -269,19 +289,24 @@ def _highlight_numbers(text: str) -> str:
     return _NUM_RE.sub(repl, text)
 
 
+def _format_plain_segment(segment: str, categories: dict[str, str]) -> str:
+    """Status + number highlights, then escape (avoids breaking apostrophes in &#x27;)."""
+    if not segment:
+        return ""
+    highlighted = _highlight_numbers(_highlight_statuses(segment, categories))
+    return _escape_outside_tags(highlighted)
+
+
 def format_inline_guide_text(text: str) -> str:
     """Escape HTML, apply bold, status colours, and number highlights."""
-    escaped = html.escape(text)
+    categories = build_status_category_map()
     parts: list[str] = []
     last = 0
-    for m in _BOLD_RE.finditer(escaped):
-        before = escaped[last : m.start()]
-        parts.append(_highlight_numbers(_highlight_statuses(before, build_status_category_map())))
-        inner = _highlight_numbers(_highlight_statuses(m.group(1), build_status_category_map()))
-        parts.append(f"<strong>{inner}</strong>")
+    for m in _BOLD_RE.finditer(text):
+        parts.append(_format_plain_segment(text[last : m.start()], categories))
+        parts.append(f"<strong>{_format_plain_segment(m.group(1), categories)}</strong>")
         last = m.end()
-    tail = escaped[last:]
-    parts.append(_highlight_numbers(_highlight_statuses(tail, build_status_category_map())))
+    parts.append(_format_plain_segment(text[last:], categories))
     return "".join(parts)
 
 
