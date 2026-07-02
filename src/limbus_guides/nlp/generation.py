@@ -265,6 +265,87 @@ def _describe_skill(
     return header
 
 
+_COMBINED_BURN_TREMOR = re.compile(r"Burn\s*\+\s*Tremor|\(Burn\s*\+\s*Tremor\)", re.I)
+
+
+def _ammo_dual_status_core_opening(name: str, role_str: str, gp: dict) -> str | None:
+    """Damage carries that spend unique ammo while stacking Burn and/or Tremor."""
+    ammo = gp.get("unique_ammo")
+    if not ammo:
+        return None
+
+    burn_arch = gp.get("burn_archetype")
+    tremor_arch = gp.get("tremor_archetype")
+    if not burn_arch and not tremor_arch:
+        return None
+
+    from limbus_guides.nlp.synergy import format_unique_tremor_label
+
+    status_bits: list[str] = []
+    if tremor_arch:
+        subtypes = gp.get("unique_tremor_types") or tremor_arch.get("unique_subtypes") or []
+        if subtypes:
+            status_bits.append(format_unique_tremor_label(subtypes[0]))
+        else:
+            status_bits.append("**Tremor**")
+    if burn_arch:
+        status_bits.append("**Burn**")
+
+    skill_parts: list[str] = []
+    for skill in gp.get("skills", []):
+        for key in ("skill_bonuses", "on_use_effects"):
+            for item in skill.get(key, []):
+                if isinstance(item, str):
+                    skill_parts.append(item)
+    skill_text = " ".join(skill_parts)
+    scales = bool(_COMBINED_BURN_TREMOR.search(skill_text)) or any(
+        _COMBINED_BURN_TREMOR.search(c) for c in gp.get("damage_conditions", [])
+    )
+
+    status_phrase = " and ".join(status_bits)
+    scale_clause = (
+        ", scaling coin power from combined **Burn + Tremor** on the target"
+        if scales and len(status_bits) > 1
+        else ""
+    )
+
+    reload_clause = ""
+    def_arch = gp.get("defense_archetype") or {}
+    if def_arch.get("kind") == "equip_unlock":
+        reload_clause = (
+            "; equipping defense once reloads **Savage Tigermark Round** "
+            "and unlocks the upgraded S3"
+        )
+
+    kit_clauses: list[str] = []
+    combat = gp.get("combat_passives_text", "")
+    if re.search(r"gain Damage Up equal to the amount spent", combat, re.I):
+        kit_clauses.append("gains **Damage Up** next turn from ammo spent")
+    if re.search(r"convert the Coins to Unbreakable", skill_text, re.I):
+        kit_clauses.append("S3 turns **Unbreakable** at **3+** ammo")
+
+    support_arch = gp.get("support_archetype") or {}
+    if (
+        support_arch.get("kind") == "deploy_order"
+        and "ammo" in (support_arch.get("setup_summary") or "").lower()
+    ):
+        passive = support_arch.get("passive_name") or "Support passive"
+        kit_clauses.append(
+            f"**{passive}** resupplies the earliest-deployed **Ammo** ally once per fight"
+        )
+
+    kit_suffix = ""
+    if kit_clauses:
+        kit_suffix = "; " + "; ".join(kit_clauses)
+
+    premium = ammo["premium_skill"]
+    return (
+        f"{name} is a {role_str} — **{ammo['ammo_label']}** damage carry who applies "
+        f"{status_phrase} on hits{scale_clause}, spending ammo for burst on "
+        f"S{premium}{reload_clause}{kit_suffix}."
+    )
+
+
 def _build_core_idea(name: str, gp: dict) -> str:
     from limbus_guides.domain.context import infer_roles
     from limbus_guides.nlp.archetypes import pick_extra_archetype, pick_primary_sin_archetype
@@ -365,6 +446,8 @@ def _build_core_idea(name: str, gp: dict) -> str:
                 f"below 0 SP she swaps to **{despair}** skills ({minus_preview}, …) "
                 f"with far higher Base Power than the Plus Coin set."
             )
+    elif (ammo_open := _ammo_dual_status_core_opening(name, role_str, gp)):
+        parts.append(ammo_open)
     elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
         "nails_setup",
         "charge_scaling",
@@ -438,7 +521,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
 
     if "Support" in role_str and gp.get("support_archetype"):
         setup = gp["support_archetype"].get("setup_summary")
-        if setup:
+        passive = gp["support_archetype"].get("passive_name", "")
+        blob = " ".join(parts)
+        if setup and passive not in blob and setup not in blob:
             parts.append(setup)
 
     if gp.get("sp_regenerator_archetype"):
@@ -909,8 +994,8 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
     elif "Heishou Pack" in meaningful_traits:
         pieces.append(
             "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; "
-            "his passives heal returning allies, command free Unopposed Attacks when backups "
-            "**Return to the battlefield**, and stack **Life from Death** and "
+            "his passives heal allies that **Substitute in** or **Return to the battlefield**, "
+            "command free Unopposed Attacks, and stack **Life from Death** and "
             "**Heishou Bolus Contamination** for the faction."
         )
     elif trait_kit and kindred_traits:

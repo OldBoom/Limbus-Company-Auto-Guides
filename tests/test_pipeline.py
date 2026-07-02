@@ -496,6 +496,11 @@ def test_retreating_archetype_overview_and_core_idea():
         tips_blob = " ".join(arch.get("tips", [])).lower()
         assert "two copies" not in tips_blob
         assert "duplicate" not in arch["setup_summary"].lower()
+        assert "stagger or death" not in tips_blob
+        assert "backup identity for this sinner" not in tips_blob
+        assert "slot a backup identity on this sinner" not in tips_blob
+        if expected_kind.startswith("heishou"):
+            assert "heishou pack identity on a backup" in tips_blob.replace("**", "")
 
     lord = load_parsed_identity("The_Lord_of_Hongyuan_Hong_Lu")
     lord_gp = build_gameplan({**lord, "mechanic_profile": build_mechanic_profile(lord)})
@@ -942,6 +947,50 @@ def test_tremor_archetype_unique_subtype_blurb():
     assert "Wrath" in tips_blob
 
 
+def test_thumb_capo_core_idea_describes_damage_kit():
+    from limbus_guides.nlp.generation import _build_core_idea, generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "The_Thumb_East_Capo_IIII_Meursault"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    core = _build_core_idea(identity["name"], gp)
+    assert "Tigermark" in core
+    assert "Burn" in core
+    assert "Scorch" in core
+    assert "damage carry" in core.lower()
+    assert "Burn applicator" not in core
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert guide["core_idea"] == core
+
+
+def test_thumb_soldato_sinclair_core_idea_describes_damage_kit():
+    from limbus_guides.nlp.generation import _build_core_idea, generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    slug = "The_Thumb_East_Soldato_II_Sinclair"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    core = _build_core_idea(identity["name"], gp)
+    assert "Scorch Propellant Ammo" in core
+    assert "Burn" in core
+    assert "Scorch" in core
+    assert "damage carry" in core.lower()
+    assert "Ammunition Tribute" in core
+    assert "Damage Up" in core
+    assert "Unbreakable" in core
+    assert "Burn applicator" not in core
+    assert core.count("resupply") == 1 or "Ammunition Tribute" in core
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert guide["core_idea"] == core
+
+
 def test_archetype_tips_skip_basic_mechanic_primers():
     """Playstyle tips should be tactical, not status-effect tutorials."""
     from limbus_guides.nlp.mechanics import build_mechanic_profile
@@ -983,6 +1032,9 @@ def test_archetype_tips_skip_basic_mechanic_primers():
         "keeps bleed climbing",
         "evade sequence",
         "carry line",
+        "stagger or death",
+        "backup identity for this sinner",
+        "slot a backup identity on this sinner",
     )
     for slug in (
         "Devyat'_Assoc._North_Section_3_Sinclair",

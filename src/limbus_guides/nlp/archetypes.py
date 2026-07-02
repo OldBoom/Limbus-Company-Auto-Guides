@@ -18,6 +18,8 @@ from limbus_guides.nlp.synergy import extract_unique_tremor_types, format_unique
 
 _ARCHETYPE_RESULT = dict[str, Any]
 
+_COMBINED_BURN_TREMOR = re.compile(r"Burn\s*\+\s*Tremor|\(Burn\s*\+\s*Tremor\)", re.I)
+
 
 def _kit_blob(
     skills: list[dict],
@@ -215,6 +217,14 @@ def find_burn_archetype(
     mechanic_profile: dict | None = None,
 ) -> _ARCHETYPE_RESULT | None:
     """Burn — Turn End Potency damage; stack Potency + Count on target."""
+    blob = _kit_blob(skills, combat_text, raw_markdown)
+    if _COMBINED_BURN_TREMOR.search(blob):
+        setup = "**Burn** and **Tremor** stacking — clash power scales off combined stacks on target."
+    elif re.search(r"every \d+[^;]*Burn|Burn[^;]*\(max", blob, re.I):
+        setup = "**Burn** stacker — damage and clash scale with Burn on target."
+    else:
+        setup = "**Burn** applicator."
+
     return _sin_archetype(
         "Burn",
         kind="burn_stacker",
@@ -223,7 +233,7 @@ def find_burn_archetype(
         raw_markdown=raw_markdown,
         mechanic_profile=mechanic_profile,
         min_prominence=6,
-        setup_summary="**Burn** applicator.",
+        setup_summary=setup,
     )
 
 
@@ -1217,26 +1227,26 @@ def detect_status_archetypes(
 
 
 def pick_primary_sin_archetype(gp: dict) -> _ARCHETYPE_RESULT | None:
-    """Best sin-keyword archetype for core-idea narrative (matches primary mechanic order)."""
+    """Best sin-keyword archetype for core-idea narrative (respects primary_mechanics order)."""
     for special in ("unique_mechanics_archetype", "nails_archetype", "charge_archetype"):
         if gp.get(special):
             return gp[special]
 
-    primary = gp.get("primary_mechanics") or []
-    ordered_keys = [
-        ("Burn", "burn_archetype"),
-        ("Bleed", "bleed_archetype"),
-        ("Tremor", "tremor_archetype"),
-        ("Rupture", "rupture_archetype"),
-        ("Sinking", "sinking_archetype"),
-        ("Poise", "poise_archetype"),
-        ("Charge", "charge_archetype"),
-    ]
-    for label, key in ordered_keys:
-        if label in primary and gp.get(key):
+    key_by_label = {
+        "Burn": "burn_archetype",
+        "Bleed": "bleed_archetype",
+        "Tremor": "tremor_archetype",
+        "Rupture": "rupture_archetype",
+        "Sinking": "sinking_archetype",
+        "Poise": "poise_archetype",
+        "Charge": "charge_archetype",
+    }
+    for label in gp.get("primary_mechanics") or []:
+        key = key_by_label.get(label)
+        if key and gp.get(key):
             return gp[key]
 
-    for _label, key in ordered_keys:
+    for label, key in key_by_label.items():
         if gp.get(key):
             return gp[key]
     return None

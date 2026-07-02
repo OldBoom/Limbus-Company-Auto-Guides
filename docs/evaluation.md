@@ -54,6 +54,15 @@ Measured over 10 runs × 50 identities (generation only, ingest excluded). Run w
 
 ## SUS user study (template)
 
+**Results (7 participants):** [`sus-user-study-results.md`](sus-user-study-results.md)
+
+| Metric | Result |
+|--------|--------|
+| Participants | 7 |
+| Task success (all 3 tasks) | **21 / 21** (100%) |
+| Mean SUS | **90.4** (range 80.0–97.5) |
+| vs target (70+) | ✅ Exceeded |
+
 **Tasks:**
 
 1. Find a guide for a specific character and identity.

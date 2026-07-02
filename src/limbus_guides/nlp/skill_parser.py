@@ -1677,7 +1677,7 @@ def find_retreating_archetype(
 ) -> dict | None:
     """
     Detect kits that leave the field and reappear — Strategic R&R (Devyat),
-    Heishou backup substitutes, or faction backup-slot identities.
+    Heishou chain-battle backup queue, or Strategic R&R retreat kits.
     """
     combined = f"{combat_text}\n{support_text}\n{raw_markdown}"
     traits = traits_list or []
@@ -1728,32 +1728,35 @@ def find_retreating_archetype(
     elif _HEISHOU_SUBSTITUTE.search(combined):
         kind = "heishou_substitute"
         setup_summary = (
-            "**Heishou substitute** — when this identity is killed, your **backup unit** "
-            "Substitutes in and continues the rotation."
+            "**Heishou substitute** — if this unit is **killed**, the backup that "
+            "**Substitutes** in gains Combat Start Poise."
         )
         tips.append(
-            "Assign a **backup identity** for this sinner — if this unit dies, the backup "
-            "**Substitutes** in and can pick up Heishou passive value on entry."
+            "Chain Battles only — each Sinner equips **one identity**; queue backup "
+            "**Sinners** in deployment order. This passive procs on **death**, not Stagger."
         )
         if has_heishou_trait:
             tips.append(
-                "Pair with **Heishou Pack** teammates (and **The Lord of Hongyuan** if "
-                "available) so Return-to-field procs and faction passives stack across substitutions."
+                "Another **Heishou Pack** identity on a backup **Sinner** is ideal — "
+                "pair with **The Lord of Hongyuan** so Substitute-in and Return-to-field "
+                "passives stack across the rotation."
             )
 
     elif has_heishou_trait:
         kind = "heishou_backup"
         setup_summary = (
-            "**Heishou Pack** — assign a **backup identity** for this sinner so a substitute "
-            "can **Return to the battlefield** when the active unit falls."
+            "**Heishou Pack** — in Chain Battles, fill backup deployment slots with "
+            "other Sinners so substitutes enter when a deployed unit **dies** or **Retreats**."
         )
         tips.append(
-            "**Backup unit** — slot a backup identity on this sinner (another Heishou Pack "
-            "ID is ideal) so stagger or death **Substitutes** them in with a fresh skill queue."
+            "Chain Battles only — each Sinner equips **one identity**; **death** or "
+            "**Retreat** Substitutes a backup Sinner in with a fresh rotation. "
+            "Stagger does not."
         )
         tips.append(
-            "Deploy this identity before its backup in the lineup when running multiple "
-            "Heishou units — the substitute re-enters ready for another rotation."
+            "Another **Heishou Pack** identity on a backup **Sinner** is ideal — "
+            "faction passives and **The Lord of Hongyuan** procs stack across the "
+            "substitute queue."
         )
 
     if not kind:

@@ -86,8 +86,8 @@ def _heishou_lord_synergy_entry(lord: dict) -> dict:
         "teammate_name": lord.get("name", LORD_HONGYUAN_SLUG),
         "reason": (
             "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — "
-            "his passives heal SP and command allies that **Return to the battlefield** "
-            "to use free Unopposed Attacks, stack **Life from Death**, and amplify "
+            "his passives heal allies that **Substitute in** or **Return to the battlefield**, "
+            "command free Unopposed Attacks, stack **Life from Death**, and amplify "
             "**Heishou Bolus Contamination** for the whole faction."
         ),
         "score": _HEISHOU_LORD_SCORE,

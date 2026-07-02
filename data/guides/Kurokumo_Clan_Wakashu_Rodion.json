@@ -85,12 +85,12 @@
   "core_idea": "Kurokumo Clan Wakashu Rodion is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling.",
   "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Sky-clearing Cut** — **S1 — Sharpened Blade** adds **+4 Poise** per **Heads Hit** coin; **S2 — Scattering Slash** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin.\n- Hold S3 for when At 10+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sharpened Blade** (BP 5, CP +6, x1): rolls — low 5, high 11 (Extremely Low / Average stacked).\n- Needs 4+ Poise to activate — prioritise building stacks before using.\n\n**S2 — Scattering Slash** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S3 — Sky-clearing Cut** (BP 7, CP +18, x1): rolls — low 7, high 25 (Extremely High).\n- Peak output requires both conditions: If target has 6+ Bleed, double the crit chance | At 10+ Poise, +100% Critical Damage.\n- doubles crit chance under condition\n\nCombat passive — **Dark Cloud Blade**: At 5+ Poise, counter skills use Skill 3.\n\nCombat passive — **Dark Cloud Swordsmanship**: 1 ally with the slowest Speed deals +10% Slash damage.",
   "team_suggestions": [
-    "**Bleed** focus.",
+    "**Poise** fighter — stack on self, then spend on crits and scaling.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
