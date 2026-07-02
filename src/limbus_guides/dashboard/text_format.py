@@ -6,6 +6,7 @@ import html
 import re
 from functools import lru_cache
 
+from limbus_guides.ingestion.unique_mechanics_registry import get_all_unique_mechanics
 from limbus_guides.nlp.mechanics import STATUS_EFFECTS
 from limbus_guides.paths import DOCS_DIR
 
@@ -179,8 +180,6 @@ def build_status_category_map() -> dict[str, str]:
             categories.setdefault(name, "positive")
         elif name in ("Bind",):
             categories.setdefault(name, "negative")
-        elif name == "Shield":
-            categories.setdefault(name, "positive")
 
     if _STATUS_EFFECTS_MD.exists():
         md = _STATUS_EFFECTS_MD.read_text(encoding="utf-8")
@@ -219,6 +218,10 @@ def build_status_category_map() -> dict[str, str]:
                 for name in _table_effect_names(body):
                     if name and not name.startswith("---"):
                         categories.setdefault(name, current_kind)
+
+    # Identity-specific resources from the auto-registry (neutral unless already classified).
+    for name in get_all_unique_mechanics():
+        categories.setdefault(name, "neutral")
 
     return categories
 

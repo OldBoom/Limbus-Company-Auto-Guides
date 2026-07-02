@@ -51,3 +51,18 @@ def test_guide_format_css_includes_colour_classes():
     assert ".lc-status-neg" in css
     assert ".lc-num" in css
     assert "#2dd4bf" in css
+
+
+def test_status_category_map_includes_registry_mechanics():
+    cats = build_status_category_map()
+    assert cats["Coffin"] == "neutral"
+    assert cats["Dullahan"] == "neutral"
+    # Standard debuff classification wins over registry neutral default.
+    assert cats["Impending Ruin"] == "negative"
+
+
+def test_format_inline_highlights_registry_mechanics():
+    html = format_inline_guide_text("Spend Coffin, then mount Dullahan for +10% damage.")
+    assert 'class="lc-status-neu"' in html
+    assert "Coffin" in html
+    assert "Dullahan" in html

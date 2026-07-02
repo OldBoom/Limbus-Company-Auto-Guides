@@ -583,8 +583,17 @@ def test_charge_archetype_w_corp_heathcliff():
     assert "Charge Potency" in playstyle or "Clash Power" in playstyle
 
 
+def test_count_mechanic_mentions_avoids_substrings():
+    from limbus_guides.ingestion.unique_mechanics_registry import count_mechanic_mentions
+
+    text = "Gain 1 Charge on hit. Do not Recharge this skill."
+    assert count_mechanic_mentions(text, "Charge") == 1
+    assert count_mechanic_mentions("Fully Recharge the battery.", "Charge") == 0
+
+
 def test_unique_mechanics_registry_sync_and_enrich():
     from limbus_guides.ingestion.unique_mechanics_registry import (
+        count_mechanic_mentions,
         load_discovered_mechanics,
         sync_from_parsed_ids,
     )
@@ -603,6 +612,11 @@ def test_unique_mechanics_registry_sync_and_enrich():
     assert "Dullahan" in profile["unique_mechanics"]
     assert "Unending Bereavement" in profile.get("key_status_effects", [])
     assert profile["unique_mechanics"]["Unending Bereavement"] >= 8
+    assert profile["unique_mechanics"]["Coffin"] > profile["unique_mechanics"].get(
+        "Impending Ruin", 0
+    )
+    md = identity["raw_markdown"]
+    assert count_mechanic_mentions(md, "Coffin") >= count_mechanic_mentions(md, "Charge")
 
     gp = build_gameplan(identity)
     assert gp.get("unique_mechanics_archetype") is not None

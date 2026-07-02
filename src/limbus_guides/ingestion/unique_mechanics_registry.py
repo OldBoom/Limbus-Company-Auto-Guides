@@ -27,6 +27,28 @@ _NON_RESOURCE_KEY_STATUS = frozenset({
     "Damage Down",
 })
 
+# Key-status headings that are standard shared effects, not identity resources.
+_KEY_STATUS_SHARED_EFFECTS = frozenset({
+    "Impending Ruin",
+})
+
+_MENTION_RE_CACHE: dict[str, re.Pattern[str]] = {}
+
+
+def count_mechanic_mentions(text: str, term: str) -> int:
+    """Count whole-phrase mentions; avoids substring hits (e.g. Charge in Recharge)."""
+    if not text or not term:
+        return 0
+    key = term.lower()
+    pat = _MENTION_RE_CACHE.get(key)
+    if pat is None:
+        pat = re.compile(
+            r"(?<![A-Za-z])" + re.escape(term) + r"(?![A-Za-z])",
+            re.IGNORECASE,
+        )
+        _MENTION_RE_CACHE[key] = pat
+    return len(pat.findall(text))
+
 
 def parse_key_status_effects(md: str) -> list[str]:
     """Return ### headings under ## Key Status Effects."""
@@ -172,18 +194,21 @@ def enrich_mechanic_profile(profile: dict, identity: dict) -> dict:
     profile["key_status_effects"] = key_fx
 
     unique = dict(profile.get("unique_mechanics", {}))
-    lower = md.lower()
 
     for term in get_all_unique_mechanics():
-        count = lower.count(term.lower())
+        count = count_mechanic_mentions(md, term)
         if count:
             unique[term] = max(unique.get(term, 0), count)
 
     for term in key_fx:
         if term in _NON_RESOURCE_KEY_STATUS:
             continue
-        body_count = lower.count(term.lower())
-        # Key Status headings are authoritative for this identity's kit.
+        body_count = count_mechanic_mentions(md, term)
+        if term in _KEY_STATUS_SHARED_EFFECTS:
+            if body_count:
+                unique[term] = max(unique.get(term, 0), body_count)
+            continue
+        # Key Status headings are authoritative for identity-specific resources.
         unique[term] = max(unique.get(term, 0), body_count, 8)
 
     profile["unique_mechanics"] = unique
