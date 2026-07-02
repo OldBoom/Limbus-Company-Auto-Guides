@@ -7,6 +7,7 @@
 
 **Live demo:** https://limbus-company-nlp-guides.streamlit.app  
 **Repository:** https://github.com/OldBoom/Limbus-Company-Auto-Guides  
+**Submission:** tag `prototype-2026-07-03`
 
 ---
 
@@ -612,13 +613,30 @@ Wiki drift will always require maintenance. The architecture supports batch refr
 
 The project started from a simple player problem — wiki pages are hard to read under time pressure — and ended as a full NLP pipeline with evaluation and user testing. The hardest part was not the dashboard, but **faithful extraction** of skill logic from semi-structured wiki text. Once that layer was stable, guide quality and usability followed.
 
----
+### 8.5 Final submission (July 2026)
+
+The submitted prototype is marked in Git with tag **`prototype-2026-07-03`**. That release includes:
+
+- this term paper (`docs/term-paper.md`), exported PDF, and figures in `docs/assets/`;
+- the NLP pipeline, **51** identity guides, evaluation references, and **84** passing tests;
+- README and operator docs; removal of internal sprint and presentation scaffolding from the public tree;
+- the hosted demo at [limbus-company-nlp-guides.streamlit.app](https://limbus-company-nlp-guides.streamlit.app), serving pre-built `data/guides/*.json`.
+
+Professors and reviewers should clone the repository and run `git checkout prototype-2026-07-03` to reproduce the submitted state.
 
 ## Appendix — Reproduction
 
 **Repository:** https://github.com/OldBoom/Limbus-Company-Auto-Guides  
 **Live demo:** https://limbus-company-nlp-guides.streamlit.app  
-**Commit / tag:** `prototype-2026-07-03` (fill after final push)
+**Tag:** `prototype-2026-07-03`
+
+To check out the submitted version:
+
+```cmd
+git clone https://github.com/OldBoom/Limbus-Company-Auto-Guides.git
+cd Limbus-Company-Auto-Guides
+git checkout prototype-2026-07-03
+```
 
 **Local setup (Windows):**
 
