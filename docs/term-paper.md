@@ -628,7 +628,8 @@ Professors and reviewers should clone the repository and run `git checkout proto
 
 **Repository:** https://github.com/OldBoom/Limbus-Company-Auto-Guides  
 **Live demo:** https://limbus-company-nlp-guides.streamlit.app  
-**Tag:** `prototype-2026-07-03`
+**Tag:** `prototype-2026-07-03`  
+**Commit:** `514982b` (`514982bd4260ace3030b5be4c96ae5ed7abaa630`)
 
 To check out the submitted version:
 
