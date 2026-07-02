@@ -146,13 +146,19 @@ def _get_support_passive_section(identity: dict) -> str:
 
 
 def _support_passive_name(support_text: str) -> str:
-    """Extract the first ### header from support passive section, or fallback."""
-    m = _PASSIVE_NAME_RE.search(support_text)
+    """Extract the primary ### header from support passive section, or fallback."""
+    from limbus_guides.nlp.skill_parser import select_primary_support_passive
+
+    primary = select_primary_support_passive(support_text)
+    m = _PASSIVE_NAME_RE.search(primary)
     return m.group(1).strip() if m else "Support passive"
 
 
 def _support_effects(support_text: str) -> set[str]:
     """Status effects inflicted by the support passive."""
+    from limbus_guides.nlp.skill_parser import select_primary_support_passive
+
+    support_text = select_primary_support_passive(support_text)
     effects: set[str] = set()
     for m in SUPPORT_PASSIVE_RE.finditer(support_text):
         effects.add(m.group(2).title())

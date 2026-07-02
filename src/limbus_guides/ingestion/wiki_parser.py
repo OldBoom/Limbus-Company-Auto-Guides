@@ -431,6 +431,11 @@ def _infer_defense_type(name: str, se: str) -> str:
     return "Counter"
 
 
+def _resonance_cost(req: str) -> int | None:
+    m = re.match(r"(\d+)\s*Res", (req or "").strip())
+    return int(m.group(1)) if m else None
+
+
 def _collect_passives(body: str) -> tuple[list[dict], list[dict]]:
     combat: list[dict] = []
     support: list[dict] = []
@@ -441,10 +446,23 @@ def _collect_passives(body: str) -> tuple[list[dict], list[dict]]:
             continue
         p = _parse_passive_template(raw)
         if re.search(r"req=\d+\s*Res", raw):
-            support.append(p)
+            # ×2 Res = combat passive buffs (resonance cost omitted in output).
+            # ×3+ Res = support passives.
+            if _resonance_cost(p.get("req", "")) == 2:
+                combat.append(p)
+            else:
+                support.append(p)
         else:
             combat.append(p)
     return combat, support
+
+
+def _passive_req_lines(req: str) -> list[str]:
+    """Emit ownership lines only — resonance activation costs are skipped."""
+    if not req or re.search(r"\d+\s*Res", req):
+        return []
+    formatted = req if req.startswith("×") else f"×{req}"
+    return ["", f"**({formatted})**", ""]
 
 
 def _parse_traits(keyword: str) -> str:
@@ -651,13 +669,7 @@ def render_markdown(page_title: str, wt: str) -> str:
         lines += ["## Combat Passives", ""]
         for p in combat_passives:
             lines.append(f"### {p['name']}")
-            lines.append("")
-            if p.get("req"):
-                req = p["req"].replace("Owned", "Owned").replace("Res", "Res")
-                if not req.startswith("×"):
-                    req = f"×{req}"
-                lines.append(f"**({req})**")
-                lines.append("")
+            lines.extend(_passive_req_lines(p.get("req", "")))
             lines.append(p["body"])
             lines.append("")
             lines.append("---")
@@ -667,13 +679,7 @@ def render_markdown(page_title: str, wt: str) -> str:
         lines += ["## Support Passive", ""]
         for p in support_passives:
             lines.append(f"### {p['name']}")
-            lines.append("")
-            if p.get("req"):
-                req = p["req"].replace("Owned", "Owned").replace("Res", "Res")
-                if not req.startswith("×"):
-                    req = f"×{req}"
-                lines.append(f"**({req})**")
-                lines.append("")
+            lines.extend(_passive_req_lines(p.get("req", "")))
             lines.append(p["body"])
             lines.append("")
             lines.append("---")

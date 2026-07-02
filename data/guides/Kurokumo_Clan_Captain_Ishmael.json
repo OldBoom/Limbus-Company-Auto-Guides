@@ -41,6 +41,15 @@
   },
   "synergies": [
     {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
+      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
+      "reason": "Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
       "teammate_name": "Kurokumo Clan Wakashu Rodion",
       "reason": "Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
@@ -59,17 +68,9 @@
       "trait_match": true
     },
     {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
-      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
-      "reason": "This identity's 'Gathering Dark Clouds' inflicts Bleed — Kurokumo Clan Wakashu Heathcliff scales off Bleed.",
-      "score": 0.9199999999999999,
-      "source": "rule",
-      "faction_match": true
-    },
-    {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -83,16 +84,22 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Kurokumo Clan Captain Ishmael is a Status Specialist / Support applying sustained Bleed, Coin Power pressure with consistent skill stats. Support passive (**Gathering Dark Clouds**) buffs your **fastest Speed ally** — pair with a high-Speed attacker and keep this unit alive on field.",
-  "playstyle_guide": "- **Gathering Dark Clouds** amplifies the **fastest Speed ally** — slot a quick damage dealer and avoid stagger so their hits keep the bonus.\n\n**S1 — Clean Up** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Extremely High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n\n**S2 — Sharpened Blade** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- Inflict 2 Bleed; [Heads Hit] Inflict 1 Slash Fragility (once per turn)\n- Inflict +2 Bleed Count; [On Hit] Gain 1 Slash Power Up next turn (once per turn)\n\n**S3 — Ink Over** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Stacks 2 Bleed — use every appearance to build up.\n\nCombat passive — **Battle Ready**: When a ally is defeated, gain 1 Slash Power Up for this Encounter.\n  - When 3+ Kurokumo Clan allies are defeated, gain Battle Ready for this Encounter.\n\nDefense skill — **Counter: Scattering Slash**: [Combat Start] Gain 1 Protection (once per turn).",
+  "core_idea": "Kurokumo Clan Captain Ishmael is a Status Specialist / Support — damage scales with the number of debuff types on the target. Stack varied statuses before committing high-value skills. Scaling conditions: Coin Power +1 per 6 Bleed (max +2); +10% per negative effect type (max +30%). Support passive (**Gathering Dark Clouds**) applies at **Combat Start** — set deployment with highest-Resonance allies in deployment order before turn one.",
+  "playstyle_guide": "- **Gathering Dark Clouds** fires at **Combat Start** — confirm roster and slot order pre-fight so the right ally receives the buff.\n- **Bleed** punishes aggression — each coin flip on a Bleeding target deals Potency damage and consumes Count.\n- Reach **3+ Bleed** before firing **Ink Over**; many skills add Coin Power or damage per Bleed stack on target.\n- Apply **Fragile** (or Slash/Pierce/Blunt Fragility) before burst turns — each Count adds **+10% damage taken** from skills (max 10).\n- Coordinate with teammates: debuff first, then heavy coins while Fragile is active.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Bleed (max +2).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n\n**S1 — Clean Up** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low / Extremely High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n\n**S2 — Sharpened Blade** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- Inflict 2 Bleed; [Heads Hit] Inflict 1 Slash Fragility (once per turn)\n- Inflict +2 Bleed Count; [On Hit] Gain 1 Slash Power Up next turn (once per turn)\n\n**S3 — Ink Over** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- Stacks 2 Bleed — use every appearance to build up.\n\nCombat passive — **Battle Ready**: When a ally is defeated, gain 1 Slash Power Up for this Encounter.\n  - When 3+ Kurokumo Clan allies are defeated, gain Battle Ready for this Encounter.\n\nDefense skill — **Counter: Scattering Slash**: [Combat Start] Gain 1 Protection (once per turn).",
   "team_suggestions": [
     "Trait-dependent kit — [Kurokumo Clan] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Kurokumo Clan] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Kurokumo Clan Wakashu Heathcliff**: Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
     "- **Kurokumo Clan Wakashu Rodion**: Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Kurokumo Clan Wakashu Ryōshū**: Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Kurokumo Clan Wakashu Heathcliff**: This identity's 'Gathering Dark Clouds' inflicts Bleed — Kurokumo Clan Wakashu Heathcliff scales off Bleed."
+    "- **Kurokumo Clan Wakashu Ryōshū**: Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Kurokumo Clan] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Kurokumo Clan] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
+      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
+      "reason": "Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
       "teammate_name": "Kurokumo Clan Wakashu Rodion",
@@ -103,12 +110,6 @@
       "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
       "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
       "reason": "Shares [Kurokumo Clan] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-      "source": "rule"
-    },
-    {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
-      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
-      "reason": "This identity's 'Gathering Dark Clouds' inflicts Bleed — Kurokumo Clan Wakashu Heathcliff scales off Bleed.",
       "source": "rule"
     }
   ],

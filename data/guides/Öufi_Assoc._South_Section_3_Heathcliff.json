@@ -49,7 +49,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -79,12 +79,12 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Öufi Assoc. South Section 3 Heathcliff is a Status Specialist applying sustained Tremor, Coin Power pressure with consistent skill stats.",
-  "playstyle_guide": "**S1 — Execution Advised** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- Stacks 2 Tremor — use every appearance to build up.\n\n**S2 — Final Warning** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n\n**S3 — Execution Sentencing** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- triggers Amplitude Conversion into Tremor — Scorch\n- If target has 20+ (Tremor + Tremor Count), trigger Amplitude Conversion on target, converting Tremor to Tremor — Decay\n\nCombat passive — **Grave Attendance**: Deal +10% damage for every 6 Tremor Potency on target (Max 30%).\n  - When converting Tremor to Tremor — Decay with this unit's Skill effects, trigger Tremor Burst on target.\n\nCombat passive — **Verify Obligation Fulfillment**: To 1 ally with the fastest Speed: Clash Power +1 to Skills that apply Tremor Potency or Count.\n\nDefense skill — **Counter: Do Not Obstruct**: When attacked while this unit has Shield, inflict +1 Tremor Count on the attacker (this Skill's effect does not stack with multiple uses).",
+  "core_idea": "Öufi Assoc. South Section 3 Heathcliff is a Status Specialist — **Tremor** control — stack on one target, then break with **Execution Sentencing** or **Tremor Burst** for Stagger Threshold spikes. Scaling conditions: Coin Power +1 per 3 Tremor (max +2); Coin Power +1 per 6 Tremor (max +2).",
+  "playstyle_guide": "- Layer **Tremor Potency and Count** on the main target — Tremor fuels stagger breaks and Burst triggers.\n- At **20+ Tremor**, commit **Execution Sentencing** or Burst coins for maximum Stagger Threshold pressure.\n- Trigger **Tremor Burst** on stagger setups — Burst raises Stagger Threshold by Tremor Potency before Count decays.\n- Kit uses **Tremor — Decay** — keep the same unique Tremor subtype on one target for Amplitude Conversion and Burst payoffs.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Tremor (max +2).\n\n**S1 — Execution Advised** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- Stacks 2 Tremor — use every appearance to build up.\n\n**S2 — Final Warning** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n\n**S3 — Execution Sentencing** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- triggers Amplitude Conversion into Tremor — Scorch\n- If target has 20+ (Tremor + Tremor Count), trigger Amplitude Conversion on target, converting Tremor to Tremor — Decay\n\nCombat passive — **Grave Attendance**: Deal +10% damage for every 6 Tremor Potency on target (Max 30%).\n  - When converting Tremor to Tremor — Decay with this unit's Skill effects, trigger Tremor Burst on target.\n\nCombat passive — **Verify Obligation Fulfillment**: To 1 ally with the fastest Speed: Clash Power +1 to Skills that apply Tremor Potency or Count.\n\nDefense skill — **Counter: Do Not Obstruct**: When attacked while this unit has Shield, inflict +1 Tremor Count on the attacker (this Skill's effect does not stack with multiple uses).",
   "team_suggestions": [
     "Uses unique Tremor (Tremor — Decay) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **The Thumb East Soldato II Sinclair**: Mechanic similarity score: 0.95. *(similarity-based — verify)*"
   ],
   "team_suggestion_intro": "Uses unique Tremor (Tremor — Decay) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target.",
@@ -98,7 +98,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {

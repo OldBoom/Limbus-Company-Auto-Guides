@@ -51,7 +51,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -82,11 +82,11 @@
     }
   ],
   "core_idea": "N Corp. Mittelhammer Don Quixote is a Status Specialist — **Nails** (N Corp. Fanatic) setup fighter. Stack Nails toward **5+** with early skills, then cash out with **Enactment!** via Tremor Burst for burst damage and debuffs.",
-  "playstyle_guide": "- **Nails setup** — use S1 and S3 to stack **Nails** (unique Bleed) on the target before the payoff; Nails also feed Bleed damage each turn.\n- Cash out with **Enactment!** — triggers **Tremor Burst** and deals bonus damage (+20% damage at 5+ Nails); do not fire it until the Nails threshold is met.\n- Combat passive adds **Tremor Count** whenever the target already has **Nails** — each Nail-applying hit snowballs Tremor for Burst payoffs. In **Fanatic** state she also inflicts extra Nails per hit.\n\n**S1 — Rightful Purge** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Inflict 1 Nails; [On Hit] Inflict 1 Tremor\n\n**S2 — Enactment!** (BP 4, CP +12, x1): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Trigger Tremor Burst | +20% Damage to targets that have 5+ Nails.\n\n**S3 — Fanatical Judgement** (BP 5, CP +3, x3): rolls — low 5, high 14 (Low).\n- Inflict 1 Nails; [On Hit] Inflict +1 Tremor Count\n\nCombat passive — **Thou Shalt Hammer!**: If the target has Nails, inflict +1 Tremor Count.\n  - If this unit is Fanatic, inflict +1 Nails.\n\nCombat passive — **Hammer of Zealotry**: 1 Fanatic ally that has the least SP deals +10% damage.",
+  "playstyle_guide": "- **Nails setup** — use S1 and S3 to stack **Nails** (unique Bleed) on the target before the payoff; Nails also feed Bleed damage each turn.\n- Cash out with **Enactment!** — triggers **Tremor Burst** and deals bonus damage (+20% damage at 5+ Nails); do not fire it until the Nails threshold is met.\n- Combat passive adds **Tremor Count** whenever the target already has **Nails** — each Nail-applying hit snowballs Tremor for Burst payoffs. In **Fanatic** state she also inflicts extra Nails per hit.\n- Layer **Tremor Potency and Count** on the main target — Tremor fuels stagger breaks and Burst triggers.\n- At **?+ Tremor**, commit **Fanatical Judgement** or Burst coins for maximum Stagger Threshold pressure.\n- Trigger **Tremor Burst** on stagger setups — Burst raises Stagger Threshold by Tremor Potency before Count decays.\n- Land **Paralyze** before the enemy's big skill — affected coins flip at **0 Power**.\n- Stack Paralyze on priority targets right before your **S3** or Unbreakable coins.\n\n**S1 — Rightful Purge** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- Inflict 1 Nails; [On Hit] Inflict 1 Tremor\n\n**S2 — Enactment!** (BP 4, CP +12, x1): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Trigger Tremor Burst | +20% Damage to targets that have 5+ Nails.\n\n**S3 — Fanatical Judgement** (BP 5, CP +3, x3): rolls — low 5, high 14 (Extremely Low).\n- Inflict 1 Nails; [On Hit] Inflict +1 Tremor Count\n\nCombat passive — **Thou Shalt Hammer!**: If the target has Nails, inflict +1 Tremor Count.\n  - If this unit is Fanatic, inflict +1 Nails.\n\nCombat passive — **Hammer of Zealotry**: 1 Fanatic ally that has the least SP deals +10% damage.",
   "team_suggestions": [
     "**Nails/Tremor** setup — reach **5+ Nails** before the burst skill; this kit self-applies both but Tremor Burst payoffs reward patient stacking.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **Öufi Assoc. South Section 3 Heathcliff**: Mechanic similarity score: 0.92. *(similarity-based — verify)*"
   ],
   "team_suggestion_intro": "**Nails/Tremor** setup — reach **5+ Nails** before the burst skill; this kit self-applies both but Tremor Burst payoffs reward patient stacking.",
@@ -100,7 +100,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {

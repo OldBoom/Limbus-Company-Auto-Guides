@@ -53,7 +53,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -83,15 +83,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Zwei Assoc. West Section 3 Ishmael is a Tank / Status Specialist — high-HP frontliner with +3 Aggro on every skill and a once-per-encounter lethal nullify. **Guard: Your Shield** grants **Defensive Stance** at Combat Start; Skill 3 scales off missing HP and Bloodied Hand stacks.",
-  "playstyle_guide": "- **Guard: Your Shield** grants 2 **Defensive Stance** at Combat Start — use the defense slot to prep buffs before your attack chain.\n\n**S1 — Zwei Knight's Greatsword Form** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- draws enemy aggro — intended to absorb hits\n- Inflict +1 Tremor Count; [On Hit] Gain 2 Defense Level Up next turn\n\n**S2 — Can't Let You Through.** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n- Peak output requires both conditions: Inflict Tremor equal to ((Tremor Count on self)/2) (max 3) | [On Hit] At 10+ Defense Level Up, inflict 1 Attack Power Down.\n\n**S3 — Ward** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- draws enemy aggro — intended to absorb hits\n\nCombat passive — **Shock-nullifying Greatsword**: At Combat Start, gain Defense Level Up equal to Tremor Count on self (max 5).\n  - If this unit is in Defensive Stance, double the amount of Defense Level Up gained from the above effect.\n\nCombat passive — **Emergency Protection**: At Combat Start, compare each Identity's current HP to their HP at the start of the previous turn. Then, apply 2 Defense Level Up to the….\n\nDefense skill — **Guard: Your Shield**: Clashable Guard.\n  - [Combat Start] Gain 2 Defensive Stance. (once per turn).\n  - [On Use] Gain +10 Tremor Count (once per turn).\n  - [Clash Win] Trigger Tremor Burst.",
+  "core_idea": "Zwei Assoc. West Section 3 Ishmael is a Tank / Status Specialist — **Tremor** control — stack on one target, then break with **Ward** or **Tremor Burst** for Stagger Threshold spikes.",
+  "playstyle_guide": "- Layer **Tremor Potency and Count** on the main target — Tremor fuels stagger breaks and Burst triggers.\n- At **10+ Tremor**, commit **Ward** or Burst coins for maximum Stagger Threshold pressure.\n- Trigger **Tremor Burst** on stagger setups — Burst raises Stagger Threshold by Tremor Potency before Count decays.\n- Skills grant up to **+10 Aggro** — enemies focus this slot, letting teammates attack safely.\n- Pair **Aggro** with Guard/Assist Defense — you're meant to be hit while buffs and passives trigger.\n- **Guard: Your Shield** grants 2 **Defensive Stance** at Combat Start — use the defense slot to prep buffs before your attack chain.\n\n**S1 — Zwei Knight's Greatsword Form** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n- Inflict +1 Tremor Count; [On Hit] Gain 2 Defense Level Up next turn\n\n**S2 — Can't Let You Through.** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n- Peak output requires both conditions: Inflict Tremor equal to ((Tremor Count on self)/2) (max 3) | [On Hit] At 10+ Defense Level Up, inflict 1 Attack Power Down.\n\n**S3 — Ward** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- draws enemy aggro — intended to absorb hits\n\nCombat passive — **Shock-nullifying Greatsword**: At Combat Start, gain Defense Level Up equal to Tremor Count on self (max 5).\n  - If this unit is in Defensive Stance, double the amount of Defense Level Up gained from the above effect.\n\nCombat passive — **Emergency Protection**: At Combat Start, compare each Identity's current HP to their HP at the start of the previous turn. Then, apply 2 Defense Level Up to the….\n\nDefense skill — **Guard: Your Shield**: Clashable Guard.\n  - [Combat Start] Gain 2 Defensive Stance. (once per turn).\n  - [On Use] Gain +10 Tremor Count (once per turn).\n  - [Clash Win] Trigger Tremor Burst.",
   "team_suggestions": [
-    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "**Tremor**-focused kit — stack Tremor on the right target, then cash out when threshold skills unlock full damage.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: '@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **T Corp. Class 3 Collection Staff Don Quixote**: Mechanic similarity score: 0.94. *(similarity-based — verify)*"
   ],
-  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+  "team_suggestion_intro": "**Tremor**-focused kit — stack Tremor on the right target, then cash out when threshold skills unlock full damage.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
@@ -102,7 +102,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {

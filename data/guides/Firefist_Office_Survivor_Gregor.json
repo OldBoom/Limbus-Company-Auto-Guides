@@ -57,37 +57,37 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
       "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
-      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn.",
-      "score": 0.85,
-      "source": "rule",
+      "reason": "Mechanic similarity score: 0.87.",
+      "score": 0.8706244230270386,
+      "source": "embedding",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
+      "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
+      "reason": "Mechanic similarity score: 0.87.",
+      "score": 0.8669484853744507,
+      "source": "embedding",
       "faction_match": false
     },
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
       "teammate_name": "Liu Assoc. South Section 4 Ishmael",
-      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Ishmael scales off Burn.",
-      "score": 0.85,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
-      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
-      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Lobotomy E.G.O::Magic Bullet Outis scales off Burn.",
-      "score": 0.85,
-      "source": "rule",
+      "reason": "Mechanic similarity score: 0.86.",
+      "score": 0.864631175994873,
+      "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "Firefist Office Survivor Gregor is a Damage Dealer / Status Specialist / Support — **Counter: I have to keep going for big sis** grants **District 12 Fuel** at Combat Start, making the guard slot part of the damage rotation. Scaling conditions: +1% per District 12 Fuel consumed; +3% per District 12 Fuel consumed. Support passive (**I'm the only survivor…**) applies when allies **land hits** — keep this unit on field through the opening turn so damage dealers can act.",
-  "playstyle_guide": "- **I'm the only survivor…** triggers **On Hit** — protect this slot and let allies attack each turn before expecting heals or buffs to flow.\n- **Counter: I have to keep going for big sis** grants 100 **District 12 Fuel** at Combat Start — use the defense slot to prep buffs before your attack chain.\n- Manage **District 12 Fuel** — multiple skills spend limited ammo on coin flips. Preserve **District 12 Fuel** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: +1% per District 12 Fuel consumed.\n\n**S1 — Flamethrow** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Consume 15 District 12 Fuel and inflict +1 Burn Count\n\n**S2 — I'll burn away every last drop of your filthy blood** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Inflict +1 Burn Count; [On Hit] Consume 10 District 12 Fuel and inflict +1 Burn Count against 2 enemies that have the least Burn Count\n\n**S3 — Firefist** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- If this unit consumed District 12 Fuel, inflict 1 Burn and +1 Burn Count\n\nCombat passive — **District 12 Special Workshop Fuel**: Begin Encounters with 100 District 12 Fuel.\n  - At over 50 Stack, become District 12 Fuel.\n  - At 50 or less Stack, any District 12 Fuel becomes Overheated Fuel.\n\nDefense skill — **Counter: I have to keep going for big sis**: [Clashable Counter].\n  - [Combat Start] Gain 100 District 12 Fuel.",
+  "core_idea": "Firefist Office Survivor Gregor is a Damage Dealer / Support — **Burn** specialist — apply Potency and Count with early skills, let ticks soften targets, then cash out with **Firefist** at Burn thresholds. Scaling conditions: Coin Power +1 per 3 Burn (max +2); Coin Power +1 per 6 Burn (max +2). Support passive (**I hope they're from our Office…**) applies when allies **land hits** — keep this unit on field through the opening turn so damage dealers can act.",
+  "playstyle_guide": "- **I hope they're from our Office…** triggers **On Hit** — protect this slot and let allies attack each turn before expecting heals or buffs to flow.\n- **Burn** stacks on the target — each turn it deals **Turn End** damage equal to Burn Potency before Count ticks down.\n- Hold **Firefist** until **1+ Burn** on the target unlocks the skill's bonus Coin Power or damage scaling.\n- **Counter: I have to keep going for big sis** grants 100 **District 12 Fuel** at Combat Start — use the defense slot to prep buffs before your attack chain.\n- Manage **District 12 Fuel** — multiple skills spend limited ammo on coin flips. Preserve **District 12 Fuel** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Burn (max +2).\n\n**S1 — Flamethrow** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Consume 15 District 12 Fuel and inflict +1 Burn Count\n\n**S2 — I'll burn away every last drop of your filthy blood** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Inflict +1 Burn Count; [On Hit] Consume 10 District 12 Fuel and inflict +1 Burn Count against 2 enemies that have the least Burn Count\n\n**S3 — Firefist** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- If this unit consumed District 12 Fuel, inflict 1 Burn and +1 Burn Count\n\nCombat passive — **District 12 Special Workshop Fuel**: Begin Encounters with 100 District 12 Fuel.\n  - At over 50 Stack, become District 12 Fuel.\n  - At 50 or less Stack, any District 12 Fuel becomes Overheated Fuel.\n\nDefense skill — **Counter: I have to keep going for big sis**: [Clashable Counter].\n  - [Combat Start] Gain 100 District 12 Fuel.",
   "team_suggestions": [
-    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "**Burn**-focused kit — stack Burn on the right target, then cash out when threshold skills unlock full damage. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **Liu Assoc. South Section 4 Director Rodion**: This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn."
+    "- **Liu Assoc. South Section 4 Director Rodion**: Mechanic similarity score: 0.87. *(similarity-based — verify)*"
   ],
-  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_intro": "**Burn**-focused kit — stack Burn on the right target, then cash out when threshold skills unlock full damage. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
@@ -104,8 +104,8 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
       "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
-      "reason": "This identity's 'I'm the only survivor…' inflicts Burn — Liu Assoc. South Section 4 Director Rodion scales off Burn.",
-      "source": "rule"
+      "reason": "Mechanic similarity score: 0.87.",
+      "source": "embedding"
     }
   ],
   "generator": "template_smart",

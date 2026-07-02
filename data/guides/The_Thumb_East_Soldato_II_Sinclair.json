@@ -73,24 +73,24 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Firefist_Office_Survivor_Gregor",
-      "teammate_name": "Firefist Office Survivor Gregor",
-      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
       "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
       "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
       "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
     }
   ],
-  "core_idea": "The Thumb East Soldato II Sinclair is a Damage Dealer / Status Specialist / Support applying sustained Tremor, Burn pressure with consistent skill stats. Support passives resupply the earliest-deployed **Ammo** ally — set deployment so your Ammo user spends first and can be refilled.",
-  "playstyle_guide": "- **Ammunition Tribute** targets the first **Ammo** ally in deployment order — deploy them ahead of this unit and let them attack before expecting resupply.\n- Manage **Scorch Propellant Ammo** — S3 spends ammo on its coin flips. Preserve **Scorch Propellant Ammo** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Hold S3 for when At 3+ Scorch Propellant Ammo is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Adherence to Propriety.** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low).\n- Coin Power +1 for every 6 (Burn + Tremor) on target (max 2); [On Use] If target has 'Unique Tremor' as Tremor, Clash Power +1\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S2 — Respect the Thumb.** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- Inflict 2 Tremor; [On Hit] Inflict +1 Tremor Count\n- Peak output requires both conditions: If target has 10+ Tremor — Scorch, inflict +1 Burn Count | [On Hit] If target has 6+ Tremor, trigger Tremor Burst.\n\n**S3 — Thruster Compression** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- converts coins to Unbreakable under condition\n- triggers Amplitude Conversion into Tremor — Scorch\n\nCombat passive — **Bayonets**: Always Active: begin Encounters with 15 Scorch Propellant Ammo.\n  - If this unit spent Scorch Propellant Ammo with Skills or Passives, gain Damage Up equal to the amount spent next turn (max 3).\n  - When flipping a Coin that consumes Scorch Propellant Ammo: while not having Scorch Propellant Ammo does not cancel this unit's attacks, t….\n\nDefense skill — **Guard: Ferrous Guard**: Inflict 2 Tremor against the Attacker when hit as long as this unit has remaining Shield (4 times per turn).",
+  "core_idea": "The Thumb East Soldato II Sinclair is a Damage Dealer / Status Specialist / Support — **Burn** specialist — apply Potency and Count with early skills, let ticks soften targets, then cash out with **Thruster Compression** at Burn thresholds. Support passives resupply the earliest-deployed **Ammo** ally — set deployment so your Ammo user spends first and can be refilled.",
+  "playstyle_guide": "- **Ammunition Tribute** targets the first **Ammo** ally in deployment order — deploy them ahead of this unit and let them attack before expecting resupply.\n- **Burn** stacks on the target — each turn it deals **Turn End** damage equal to Burn Potency before Count ticks down.\n- Hold **Thruster Compression** until **10+ Burn** on the target unlocks the skill's bonus Coin Power or damage scaling.\n- Layer **Tremor Potency and Count** on the main target — Tremor fuels stagger breaks and Burst triggers.\n- At **6+ Tremor**, commit **Thruster Compression** or Burst coins for maximum Stagger Threshold pressure.\n- Trigger **Tremor Burst** on stagger setups — Burst raises Stagger Threshold by Tremor Potency before Count decays.\n- Kit uses **Tremor — Scorch** — keep the same unique Tremor subtype on one target for Amplitude Conversion and Burst payoffs.\n- Manage **Scorch Propellant Ammo** — S3 spends ammo on its coin flips. Preserve **Scorch Propellant Ammo** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Hold S3 for when At 3+ Scorch Propellant Ammo is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Adherence to Propriety.** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- Coin Power +1 for every 6 (Burn + Tremor) on target (max 2); [On Use] If target has 'Unique Tremor' as Tremor, Clash Power +1\n- Stacks 1 Tremor — use every appearance to build up.\n\n**S2 — Respect the Thumb.** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- Inflict 2 Tremor; [On Hit] Inflict +1 Tremor Count\n- Peak output requires both conditions: If target has 10+ Tremor — Scorch, inflict +1 Burn Count | [On Hit] If target has 6+ Tremor, trigger Tremor Burst.\n\n**S3 — Thruster Compression** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- converts coins to Unbreakable under condition\n- triggers Amplitude Conversion into Tremor — Scorch\n\nCombat passive — **Bayonets**: Always Active: begin Encounters with 15 Scorch Propellant Ammo.\n  - If this unit spent Scorch Propellant Ammo with Skills or Passives, gain Damage Up equal to the amount spent next turn (max 3).\n  - When flipping a Coin that consumes Scorch Propellant Ammo: while not having Scorch Propellant Ammo does not cancel this unit's attacks, t….\n\nDefense skill — **Guard: Ferrous Guard**: Inflict 2 Tremor against the Attacker when hit as long as this unit has remaining Shield (4 times per turn).",
   "team_suggestions": [
     "Uses unique Tremor (Tremor — Scorch) — prioritize teammates who apply the same Tremor subtype so Amplitude Conversion and Burst effects stack on one target. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **The Thumb East Capo IIII Meursault**: Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",

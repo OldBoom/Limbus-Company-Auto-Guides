@@ -78,6 +78,31 @@ _PERCENT_PER_COUNT = re.compile(
     re.IGNORECASE,
 )
 
+_CONSUME_CHARGE_CP = re.compile(
+    r"[Cc]onsume\s+(\d+)\s+Charge Count[^;]*gain\s+\+(\d+)\s+Coin Power",
+    re.IGNORECASE,
+)
+_AT_CHARGE_CP = re.compile(
+    r"At\s+(\d+)\+\s+Charge[^;]*Coin Power\s+\+(\d+)",
+    re.IGNORECASE,
+)
+_CLASH_FROM_POTENCY = re.compile(
+    r"Clash Power equal to Charge Potency[^()]*\(max\s+(\d+)\)",
+    re.IGNORECASE,
+)
+_POTENCY_DAMAGE_PCT = re.compile(
+    r"Charge Potency x (\d+)%[^()]*\(max (\d+)%\)",
+    re.IGNORECASE,
+)
+_CHARGE_COIN_SCALING = re.compile(
+    r"Consume up to (\d+) Charge Count to gain Coin Power[^;]*Charge Count consumed",
+    re.IGNORECASE,
+)
+_OVERFLOW_CHARGE_DMG = re.compile(
+    r"Charge Count past the Max Charge Count Cap[^;]*\+(\d+)% damage[^()]*\(max (\d+)%\)",
+    re.IGNORECASE,
+)
+
 _COIN_ROW = re.compile(r"^\|\s*(\d)\s*\|(.+)\|$")
 
 # "loses Iron Maiden and gains **The Self Unbound — Flow State**"
@@ -237,7 +262,13 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
                         )
 
     # --- 4. Damage scale extraction from all effect text ---
-    all_eff = " ".join(on_use_effects) + " " + " ".join(e["effect"] for e in coin_effects)
+    all_eff = (
+        " ".join(on_use_effects)
+        + " "
+        + " ".join(skill_bonuses)
+        + " "
+        + " ".join(e["effect"] for e in coin_effects)
+    )
 
     for m in _STAT_SCALE_NEG.finditer(all_eff):
         damage_scales.append(
@@ -251,6 +282,20 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
         damage_scales.append(f"+{m.group(1)}% per negative effect type (max +{m.group(2)}%)")
     for m in _PERCENT_PER_COUNT.finditer(all_eff):
         damage_scales.append(f"+{m.group(1)}% per {m.group(2)} consumed")
+    for m in _CONSUME_CHARGE_CP.finditer(all_eff):
+        damage_scales.append(
+            f"Consume {m.group(1)} Charge Count for +{m.group(2)} Coin Power"
+        )
+    for m in _AT_CHARGE_CP.finditer(all_eff):
+        damage_scales.append(f"At {m.group(1)}+ Charge, Coin Power +{m.group(2)}")
+    cm = _CLASH_FROM_POTENCY.search(all_eff)
+    if cm:
+        damage_scales.append(f"Clash Power = Charge Potency (max +{cm.group(1)})")
+    pm = _POTENCY_DAMAGE_PCT.search(all_eff)
+    if pm:
+        damage_scales.append(
+            f"+{pm.group(1)}% damage per Charge Potency on final coin (max +{pm.group(2)}%)"
+        )
 
     return {
         "skill_num": skill_num,
@@ -521,6 +566,64 @@ def find_damage_conditions(skills: list[dict]) -> list[str]:
     return result
 
 
+_RES2_PASSIVE = re.compile(r"\*\*\(×2\s*Res\)\*\*")
+_RES_REQ_LINE = re.compile(r"^\*\*\(×\d+\s*Res\)\*\*\s*$")
+_ALLY_FACING_PASSIVE_RE = re.compile(
+    r"\b(?:\d+\s+)?all(?:y|ies)\b|\bother\s+\w+\s+allies|"
+    r"deployed identity|deployment order",
+    re.IGNORECASE,
+)
+
+
+def _split_passive_blocks(section_text: str) -> list[str]:
+    blocks: list[str] = []
+    current: list[str] = []
+    for line in section_text.splitlines():
+        if line.startswith("### "):
+            if current:
+                blocks.append("\n".join(current).strip())
+            current = [line]
+        elif current:
+            current.append(line)
+    if current:
+        blocks.append("\n".join(current).strip())
+    return blocks
+
+
+def _strip_res_req_markers(block: str) -> str:
+    lines = [ln for ln in block.splitlines() if not _RES_REQ_LINE.match(ln.strip())]
+    return "\n".join(lines).strip()
+
+
+def _partition_res2_passives_from_support(support_text: str) -> tuple[str, str]:
+    """×2 Res passives are combat buffs — move them out of Support Passive."""
+    combat_blocks: list[str] = []
+    support_blocks: list[str] = []
+    for block in _split_passive_blocks(support_text):
+        if _RES2_PASSIVE.search(block):
+            combat_blocks.append(_strip_res_req_markers(block))
+        else:
+            support_blocks.append(block)
+    return "\n\n".join(combat_blocks).strip(), "\n\n".join(support_blocks).strip()
+
+
+def _merge_passive_sections(*parts: str) -> str:
+    return "\n\n".join(p.strip() for p in parts if p and p.strip()).strip()
+
+
+def select_primary_support_passive(support_text: str) -> str:
+    """When multiple passives share ## Support Passive, pick the ally-facing one."""
+    blocks = _split_passive_blocks(support_text)
+    if len(blocks) <= 1:
+        return support_text.strip()
+
+    def score(block: str) -> tuple[int, int]:
+        ally = bool(_ALLY_FACING_PASSIVE_RE.search(block))
+        return ((10 if ally else 0), len(block))
+
+    return max(blocks, key=score)
+
+
 def parse_passives_text(md_text: str) -> tuple[str, str]:
     """Return (combat_passives_text, support_passive_text)."""
     sections: dict[str, str] = {}
@@ -546,7 +649,12 @@ def parse_passives_text(md_text: str) -> tuple[str, str]:
     if current and buf:
         sections[current] = "\n".join(buf)
 
-    return sections.get("combat", ""), sections.get("support", "")
+    combat_extra, support_remaining = _partition_res2_passives_from_support(
+        sections.get("support", "")
+    )
+    combat = _merge_passive_sections(sections.get("combat", ""), combat_extra)
+    support = select_primary_support_passive(support_remaining)
+    return combat, support
 
 
 _ALLY_COMBO = re.compile(
@@ -1122,6 +1230,116 @@ def find_nails_archetype(
     }
 
 
+_UNBREAKABLE_POTENCY = re.compile(
+    r"(\d+)\+\s+Charge Potency[^;]*Unbreakable Coin",
+    re.IGNORECASE,
+)
+
+
+def find_charge_archetype(
+    skills: list[dict],
+    combat_text: str = "",
+    mechanic_profile: dict | None = None,
+) -> dict | None:
+    """
+    Kits where Charge Count and Charge Potency severely buff skills
+    (W Corp. L4 Cleanup Agent Heathcliff, etc.).
+    """
+    profile = mechanic_profile or {}
+    primary = profile.get("primary_mechanics", [])
+    charge_mentions = profile.get("status_effects", {}).get("Charge", 0)
+    if "Charge" not in primary and charge_mentions < 12:
+        return None
+
+    combined = combat_text
+    for skill in skills:
+        combined += " " + " ".join(skill.get("on_use_effects", []))
+        combined += " " + " ".join(skill.get("skill_bonuses", []))
+        combined += " " + " ".join(e.get("effect", "") for e in skill.get("coin_effects", []))
+
+    if not re.search(r"Charge", combined, re.I):
+        return None
+
+    signals = 0
+    tips: list[str] = []
+    s3_name = next((s["name"] for s in skills if s.get("skill_num") == 3), "S3")
+
+    consume_matches = _CONSUME_CHARGE_CP.findall(combined)
+    big_consume = max((int(amt), int(cp)) for amt, cp in consume_matches) if consume_matches else None
+    if big_consume and big_consume[1] >= 3:
+        signals += 2
+        tips.append(
+            f"Build **Charge Count** with S1/S2, then spend **{big_consume[0]} stacks** on "
+            f"**{s3_name}** for **+{big_consume[1]} Coin Power** — Charge severely buffs every skill."
+        )
+
+    cm = _CLASH_FROM_POTENCY.search(combined)
+    if cm:
+        signals += 1
+        tips.append(
+            f"**Charge Potency** adds up to **+{cm.group(1)} Clash Power** on "
+            f"**{s3_name}** — reach higher Potency tiers before the finisher."
+        )
+
+    um = _UNBREAKABLE_POTENCY.search(combined)
+    if um:
+        signals += 1
+        tips.append(
+            f"At **{um.group(1)}+ Charge Potency** (or below 50% HP), **{s3_name}** "
+            f"converts all coins to **Unbreakable**."
+        )
+
+    pm = _POTENCY_DAMAGE_PCT.search(combined)
+    if pm:
+        signals += 1
+        tips.append(
+            f"The final coin deals bonus Slash damage equal to **Charge Potency × {pm.group(1)}%** "
+            f"(max **{pm.group(2)}%**) — stack Potency before the last flip."
+        )
+
+    coin_scale = _CHARGE_COIN_SCALING.search(combined)
+    if coin_scale:
+        signals += 1
+        tips.append(
+            f"**{s3_name}**'s last coin can consume up to **{coin_scale.group(1)} Charge Count** "
+            f"for matching **Coin Power** — dump stacks on the finisher coin."
+        )
+
+    overflow = _OVERFLOW_CHARGE_DMG.search(combined)
+    if overflow:
+        signals += 1
+        tips.append(
+            f"Overflowing past the Charge Count cap adds **+{overflow.group(1)}% damage per stack** "
+            f"(max **+{overflow.group(2)}%**) — intentional overcap spikes burst turns."
+        )
+
+    if _AT_CHARGE_CP.search(combined):
+        signals += 1
+    if any("charge" in c.lower() for s in skills for c in s.get("conditions", [])):
+        signals += 1
+
+    if signals < 2:
+        return None
+
+    if not tips:
+        tips.append(
+            "Stack **Charge Count** before offensive skills — this kit checks Charge "
+            "thresholds and consumes stacks for large Coin Power and Clash Power spikes."
+        )
+
+    setup_summary = (
+        f"**Charge**-scaling kit: accumulate Charge Count and Potency tiers to severely buff "
+        f"Coin Power, Clash Power, and **{s3_name}** before spending stacks on the finisher."
+    )
+
+    return {
+        "kind": "charge_scaling",
+        "payoff_skill": s3_name,
+        "tips": tips[:4],
+        "setup_summary": setup_summary,
+    }
+
+
 _STRATEGIC_RR = re.compile(r"Strategic R&R Mode|Activate Strategic R&R", re.IGNORECASE)
 _SELF_REJOIN = re.compile(
     r"after Retreating using .Strategic R&R Mode.|if this unit rejoins the battle",
@@ -1248,7 +1466,7 @@ _SUPPORT_PASSIVE_NAME = re.compile(r"^###\s+(.+)$", re.MULTILINE)
 
 
 def _support_passive_title(support_text: str) -> str:
-    match = _SUPPORT_PASSIVE_NAME.search(support_text)
+    match = _SUPPORT_PASSIVE_NAME.search(select_primary_support_passive(support_text))
     return match.group(1).strip() if match else "Support passive"
 
 
@@ -1475,6 +1693,17 @@ def build_gameplan(identity: dict) -> dict:
         or parse_traits_list(identity.get("traits")),
     )
     nails_archetype = find_nails_archetype(raw, combat_text, skills)
+    charge_archetype = find_charge_archetype(skills, combat_text, profile)
+
+    from limbus_guides.nlp.archetypes import detect_status_archetypes
+
+    status_archetypes = detect_status_archetypes(
+        skills,
+        combat_text,
+        raw_markdown=raw,
+        mechanic_profile=profile,
+        nails_archetype=nails_archetype,
+    )
 
     return {
         "skills": skills,
@@ -1498,6 +1727,8 @@ def build_gameplan(identity: dict) -> dict:
         "support_archetype": support_archetype,
         "retreating_archetype": retreating_archetype,
         "nails_archetype": nails_archetype,
+        "charge_archetype": charge_archetype,
+        **status_archetypes,
         "resonance_dependent": detect_resonance_dependency(raw),
         "trait_conditional": detect_trait_conditional(raw),
         "traits_list": identity.get("traits_list")

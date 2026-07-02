@@ -40,14 +40,6 @@
   },
   "synergies": [
     {
-      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
-      "teammate_name": "Kurokumo Clan Captain Ishmael",
-      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-      "score": 0.97,
-      "source": "rule",
-      "faction_match": true
-    },
-    {
       "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
       "teammate_name": "Shi Assoc. East Section 3 Faust",
       "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
@@ -59,6 +51,14 @@
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
       "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -80,22 +80,16 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Kurokumo Clan Wakashu Ryōshū is a Status Specialist applying sustained Bleed, Base Power pressure with consistent skill stats.",
-  "playstyle_guide": "**S1 — Focus Strike** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Slightly High stacked).\n- If target has 2+ Bleed Count, deal +20% damage\n\n**S2 — Clean Up** (BP 5, CP +5, x2): rolls — low 5, high 15 (Slightly Low / Slightly High stacked).\n- If target has 5+ Bleed Count, deal +20% damage\n- Inflict +1 Bleed Count; [Heads Hit] Inflict 2 Damage Down\n\n**S3 — Lenticular Swirl** (BP 8, CP +4, x2): rolls — low 8, high 16 (Slightly Low / Average stacked).\n- If target has 9+ Bleed Count, deal +40% damage\n- Stacks 2 Bleed — use every appearance to build up.\n- Inflict +3 Bleed Count; [On Hit] Inflict 5 Offense Level Down\n\nCombat passive — **Muscle in Charge**: 1 ally with the fastest Speed inflicts +1 Bleed.",
+  "core_idea": "Kurokumo Clan Wakashu Ryōshū is a Status Specialist — **Bleed** stacker — build Potency and Count on one target, then spike with **Lenticular Swirl** once threshold skills unlock full damage.",
+  "playstyle_guide": "- **Bleed** punishes aggression — each coin flip on a Bleeding target deals Potency damage and consumes Count.\n- Reach **2+ Bleed** before firing **Lenticular Swirl**; many skills add Coin Power or damage per Bleed stack on target.\n- Land **Paralyze** before the enemy's big skill — affected coins flip at **0 Power**.\n- Stack Paralyze on priority targets right before your **S3** or Unbreakable coins.\n\n**S1 — Focus Strike** (BP 5, CP +6, x1): rolls — low 5, high 11 (Extremely Low / Average stacked).\n- If target has 2+ Bleed Count, deal +20% damage\n\n**S2 — Clean Up** (BP 5, CP +5, x2): rolls — low 5, high 15 (Slightly Low / Average stacked).\n- If target has 5+ Bleed Count, deal +20% damage\n- Inflict +1 Bleed Count; [Heads Hit] Inflict 2 Damage Down\n\n**S3 — Lenticular Swirl** (BP 8, CP +4, x2): rolls — low 8, high 16 (Slightly Low / Average stacked).\n- If target has 9+ Bleed Count, deal +40% damage\n- Stacks 2 Bleed — use every appearance to build up.\n- Inflict +3 Bleed Count; [On Hit] Inflict 5 Offense Level Down\n\nCombat passive — **Muscle in Charge**: 1 ally with the fastest Speed inflicts +1 Bleed.",
   "team_suggestions": [
-    "Best placed in a Bleed-focused team — teammates that apply or extend Bleed increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
-    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+    "**Bleed**-focused kit — stack Bleed on the right target, then cash out when threshold skills unlock full damage.",
     "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills."
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills."
   ],
-  "team_suggestion_intro": "Best placed in a Bleed-focused team — teammates that apply or extend Bleed increase this kit's damage ceiling. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Bleed**-focused kit — stack Bleed on the right target, then cash out when threshold skills unlock full damage.",
   "team_suggestion_picks": [
-    {
-      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
-      "teammate_name": "Kurokumo Clan Captain Ishmael",
-      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-      "source": "rule"
-    },
     {
       "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
       "teammate_name": "Shi Assoc. East Section 3 Faust",
@@ -106,6 +100,12 @@
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
       "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
       "source": "rule"
     }
   ],

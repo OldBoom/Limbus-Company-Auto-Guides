@@ -41,14 +41,6 @@
   },
   "synergies": [
     {
-      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
-      "teammate_name": "Kurokumo Clan Captain Ishmael",
-      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
-      "score": 0.97,
-      "source": "rule",
-      "faction_match": true
-    },
-    {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
       "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
@@ -67,7 +59,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'@#$'s Hand I Let Slip' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -79,24 +71,26 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
     }
   ],
-  "core_idea": "Kurokumo Clan Wakashu Rodion is a Damage Dealer applying sustained Poise, Coin Power pressure with consistent skill stats.",
-  "playstyle_guide": "- Hold S3 for when At 10+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sharpened Blade** (BP 5, CP +6, x1): rolls — low 5, high 11 (Low / Slightly High stacked).\n- Needs 4+ Poise to activate — prioritise building stacks before using.\n- Gains 4 Poise — keeps Poise climbing each rotation.\n\n**S2 — Scattering Slash** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S3 — Sky-clearing Cut** (BP 7, CP +18, x1): rolls — low 7, high 25 (Extremely High).\n- Peak output requires both conditions: If target has 6+ Bleed, double the crit chance | At 10+ Poise, +100% Critical Damage.\n- doubles crit chance under condition\n\nCombat passive — **Dark Cloud Blade**: At 5+ Poise, counter skills use Skill 3.\n\nCombat passive — **Dark Cloud Swordsmanship**: 1 ally with the slowest Speed deals +10% Slash damage.",
+  "core_idea": "Kurokumo Clan Wakashu Rodion is a Damage Dealer — **Poise** fighter — stack Count on self for crits and Coin Power, then commit **Sky-clearing Cut** at Poise thresholds.",
+  "playstyle_guide": "- **Bleed** punishes aggression — each coin flip on a Bleeding target deals Potency damage and consumes Count.\n- Reach **6+ Bleed** before firing **Sky-clearing Cut**; many skills add Coin Power or damage per Bleed stack on target.\n- **Poise** on self raises crit chance per Potency — build Count with skills and clash wins before the finisher.\n- Reach **5+ Poise Count** before **Sky-clearing Cut** — crit damage and Coin Power spike at the threshold.\n- Hold S3 for when At 10+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Sharpened Blade** (BP 5, CP +6, x1): rolls — low 5, high 11 (Extremely Low / Average stacked).\n- Needs 4+ Poise to activate — prioritise building stacks before using.\n- Gains 4 Poise — keeps Poise climbing each rotation.\n\n**S2 — Scattering Slash** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S3 — Sky-clearing Cut** (BP 7, CP +18, x1): rolls — low 7, high 25 (Extremely High).\n- Peak output requires both conditions: If target has 6+ Bleed, double the crit chance | At 10+ Poise, +100% Critical Damage.\n- doubles crit chance under condition\n\nCombat passive — **Dark Cloud Blade**: At 5+ Poise, counter skills use Skill 3.\n\nCombat passive — **Dark Cloud Swordsmanship**: 1 ally with the slowest Speed deals +10% Slash damage.",
   "team_suggestions": [
-    "Benefits when teammates apply Poise — he checks Poise thresholds more than he stacks it himself. Same-faction teammates provide additional passive synergy where available.",
-    "- **Kurokumo Clan Captain Ishmael**: 'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+    "**Bleed**-focused kit — stack Bleed on the right target, then cash out when threshold skills unlock full damage.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
-    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills."
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
   ],
-  "team_suggestion_intro": "Benefits when teammates apply Poise — he checks Poise thresholds more than he stacks it himself. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Bleed**-focused kit — stack Bleed on the right target, then cash out when threshold skills unlock full damage.",
   "team_suggestion_picks": [
-    {
-      "teammate_slug": "Kurokumo_Clan_Captain_Ishmael",
-      "teammate_name": "Kurokumo Clan Captain Ishmael",
-      "reason": "'Gathering Dark Clouds' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
-      "source": "rule"
-    },
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
@@ -107,6 +101,12 @@
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
       "reason": "'Slayer' inflicts Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
       "source": "rule"
     }
   ],

@@ -542,3 +542,113 @@ def test_nails_archetype_mittelhammer_don_quixote():
     assert "Enactment" in guide["core_idea"]
     assert guide["playstyle_guide"].startswith("- ")
     assert "nails" in guide["playstyle_guide"].lower()
+
+
+def test_charge_archetype_w_corp_heathcliff():
+    from limbus_guides.nlp.generation import generate_guide, _build_core_idea, _build_overview_tips
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, find_charge_archetype
+
+    slug = "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = find_charge_archetype(
+        gp.get("skills", []),
+        gp.get("combat_passives_text", ""),
+        mechanic_profile=identity["mechanic_profile"],
+    )
+    assert arch is not None
+    assert arch["kind"] == "charge_scaling"
+    assert "severely buffs" in arch["tips"][0].lower() or "Coin Power" in arch["tips"][0]
+
+    overview = _build_overview_tips(gp)
+    assert "Charge" in overview
+    assert "severely buffs" in overview.lower() or "+4 Coin Power" in overview
+
+    core = _build_core_idea(identity["name"], gp)
+    assert "Charge" in core
+    assert "severely buff" in core.lower() or "Charge-scaling" in core.lower()
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert "Charge" in guide["core_idea"]
+    assert "checks Charge thresholds more than he stacks" not in guide["team_suggestion_intro"]
+
+
+def test_docent_rodion_res2_combat_and_res3_support():
+    from limbus_guides.nlp.generation import generate_guide
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan, find_support_archetype
+
+    slug = "The_Ring_Fauvist_Docent_Rodion"
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = find_support_archetype(
+        gp.get("support_passive_text", ""),
+        gp.get("combat_passives_text", ""),
+        raw_markdown=identity["raw_markdown"],
+        mechanic_profile=identity["mechanic_profile"],
+    )
+    assert arch is not None
+    assert arch["kind"] == "deploy_order"
+    assert "Nice and Slow" in gp["support_passive_text"]
+    assert "Needs a Rougher Touch" not in gp["support_passive_text"]
+    assert "Needs a Rougher Touch" in gp["combat_passives_text"]
+    assert "Mauled Color" in gp["combat_passives_text"]
+
+    guide = generate_guide(identity, synergies=[], use_ollama=False)
+    assert "Nice and Slow" in guide["core_idea"]
+    assert "Needs a Rougher Touch" not in guide["core_idea"]
+    assert "Needs a Rougher Touch" in guide["playstyle_guide"]
+    assert "Mauled Color" in guide["playstyle_guide"]
+
+
+def test_res2_passive_classified_as_combat():
+    from limbus_guides.nlp.skill_parser import parse_passives_text
+
+    slug = "Blade_Lineage_Salsu_Sinclair"
+    identity = load_parsed_identity(slug)
+    combat, support = parse_passives_text(identity["raw_markdown"])
+    assert "Bloodied Hands" in support
+    assert "Slayer" not in support
+    assert "Slayer" in combat
+
+
+@pytest.mark.parametrize(
+    "slug,key,kind",
+    [
+        ("Firefist_Office_Survivor_Gregor", "burn_archetype", "burn_stacker"),
+        ("Kurokumo_Clan_Captain_Ishmael", "bleed_archetype", "bleed_stacker"),
+        ("T_Corp._Class_3_Collection_Staff_Don_Quixote", "tremor_archetype", "tremor_stacker"),
+        ("Devyat'_Assoc._North_Section_3_Sinclair", "rupture_archetype", "rupture_stacker"),
+        ("Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion", "sinking_archetype", "sinking_stacker"),
+        ("Blade_Lineage_Salsu_Yi_Sang", "poise_archetype", "poise_stacker"),
+        ("Zwei_Assoc._West_Section_3_Ishmael", "aggro_archetype", "aggro_tank"),
+        ("Seven_Assoc._South_Section_4_Faust", "haste_archetype", "haste_tempo"),
+        ("Blade_Lineage_Mentor_Meursault", "paralyze_archetype", "paralyze_control"),
+        ("Kurokumo_Clan_Captain_Ishmael", "fragile_archetype", "fragile_setup"),
+    ],
+)
+def test_status_archetypes_detected(slug, key, kind):
+    from limbus_guides.nlp.mechanics import build_mechanic_profile
+    from limbus_guides.nlp.skill_parser import build_gameplan
+
+    identity = load_parsed_identity(slug)
+    identity["mechanic_profile"] = build_mechanic_profile(identity)
+    gp = build_gameplan(identity)
+    arch = gp.get(key)
+    assert arch is not None, f"{slug} missing {key}"
+    assert arch["kind"] == kind
+
+
+def test_discard_archetype_synthetic():
+    from limbus_guides.nlp.archetypes import find_discard_archetype
+
+    md = (
+        "## Skills\n### Skill 1: Test\n"
+        "**[On Use] Discard 1 Skill to gain 1 Insight ; Erudition: Discard grants Shield**\n"
+    )
+    arch = find_discard_archetype([], combat_text=md, raw_markdown=md)
+    assert arch is not None
+    assert arch["kind"] == "discard_resource"

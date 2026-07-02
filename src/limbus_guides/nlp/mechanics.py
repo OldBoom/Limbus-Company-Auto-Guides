@@ -46,6 +46,12 @@ UNIQUE_MECHANICS = [
     "Talisman",
     # Universal utility
     "Assist Defense", "Somatic Frisson-inspiring Melody", "Unbreakable Coin",
+    "Palette Vibrante",
+    "Mauled Color — Rouge —",
+    "Mauled Color — Bleu —",
+    "Touche Hardie",
+    "Unfocused Volley",
+    "Réflexion",
 ]
 ALL_MECHANICS = STATUS_EFFECTS + STAT_MODIFIERS + UNIQUE_MECHANICS
 

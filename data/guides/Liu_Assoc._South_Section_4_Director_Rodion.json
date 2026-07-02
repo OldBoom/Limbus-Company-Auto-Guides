@@ -68,16 +68,16 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Firefist_Office_Survivor_Gregor",
-      "teammate_name": "Firefist Office Survivor Gregor",
-      "reason": "'I'm the only survivor…' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
+      "teammate_slug": "Lobotomy_E.G.O_Magic_Bullet_Outis",
+      "teammate_name": "Lobotomy E.G.O::Magic Bullet Outis",
+      "reason": "Mechanic similarity score: 0.89.",
+      "score": 0.8869776725769043,
+      "source": "embedding",
       "faction_match": false
     }
   ],
-  "core_idea": "Liu Assoc. South Section 4 Director Rodion is a Status Specialist / Support applying sustained Burn, Coin Power pressure with consistent skill stats. Support passive (**Burning Passion**) applies when allies **land hits** — keep this unit on field through the opening turn so damage dealers can act.",
-  "playstyle_guide": "- **Burning Passion** triggers **On Hit** — protect this slot and let allies attack each turn before expecting heals or buffs to flow.\n\n**S1 — Flaming Fists** (BP 3, CP +4, x2): rolls — low 3, high 11 (Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n\n**S2 — Fiery Knifehand-Combust** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Stacks 1 Burn — use every appearance to build up.\n- Peak output requires both conditions: Inflict +1 Burn Count | [On Hit] If target has 6+ Burn Count, apply 3 Burn to 2 targets that have no Burn or have the least Burn Count.\n\n**S3 — Pinpoint Blitz** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Average stacked).\n- Peak output requires both conditions: If target has 6+ Burn, Coin Power +1 | If target has 6+ Burn and Burn Count, deal +30% damage.\n\nCombat passive — **Passionate Cheer**: 1 ally with the least SP deals +5% Pierce damage for every 6 Burn Potency on target On Hit (Max 15%).",
+  "core_idea": "Liu Assoc. South Section 4 Director Rodion is a Status Specialist / Support — **Burn** specialist — apply Potency and Count with early skills, let ticks soften targets, then cash out with **Pinpoint Blitz** at Burn thresholds. Scaling conditions: Coin Power +1 per 3 Burn (max +2); Coin Power +1 per 6 Burn (max +2). Support passive (**Burning Passion**) applies when allies **land hits** — keep this unit on field through the opening turn so damage dealers can act.",
+  "playstyle_guide": "- **Burning Passion** triggers **On Hit** — protect this slot and let allies attack each turn before expecting heals or buffs to flow.\n- **Burn** stacks on the target — each turn it deals **Turn End** damage equal to Burn Potency before Count ticks down.\n- Hold **Pinpoint Blitz** until **6+ Burn** on the target unlocks the skill's bonus Coin Power or damage scaling.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Burn (max +2).\n\n**S1 — Flaming Fists** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n\n**S2 — Fiery Knifehand-Combust** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- Stacks 1 Burn — use every appearance to build up.\n- Peak output requires both conditions: Inflict +1 Burn Count | [On Hit] If target has 6+ Burn Count, apply 3 Burn to 2 targets that have no Burn or have the least Burn Count.\n\n**S3 — Pinpoint Blitz** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- Peak output requires both conditions: If target has 6+ Burn, Coin Power +1 | If target has 6+ Burn and Burn Count, deal +30% damage.\n\nCombat passive — **Passionate Cheer**: 1 ally with the least SP deals +5% Pierce damage for every 6 Burn Potency on target On Hit (Max 15%).",
   "team_suggestions": [
     "Trait-dependent kit — [Liu Association] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Liu Association] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **Liu Assoc. South Section 4 Ishmael**: Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",

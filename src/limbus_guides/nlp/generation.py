@@ -202,6 +202,7 @@ def _describe_skill(
 
 def _build_core_idea(name: str, gp: dict) -> str:
     from limbus_guides.domain.context import infer_roles
+    from limbus_guides.nlp.archetypes import pick_extra_archetype, pick_primary_sin_archetype
 
     transition = gp["state_transition"]
     resource = gp["resource_loop"]
@@ -249,6 +250,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']}) "
             f"— every successful clash raises your flip strength."
         )
+    elif gp.get("poise_archetype"):
+        arch = gp["poise_archetype"]
+        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
     elif neg_scale:
         parts.append(
             f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
@@ -264,6 +268,17 @@ def _build_core_idea(name: str, gp: dict) -> str:
             f"Stack Nails toward **{threshold}+** with early skills, then cash out with "
             f"**{payoff}**{burst_note} for burst damage and debuffs."
         )
+    elif gp.get("charge_archetype"):
+        arch = gp["charge_archetype"]
+        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
+        def_arch = gp.get("defense_archetype")
+        if def_arch and def_arch.get("kind") == "skill_queue":
+            defense_name = def_arch.get("defense_name", "Guard")
+            payoff = arch.get("payoff_skill", "S3")
+            parts.append(
+                f"**{defense_name}** queues an extra **{payoff}** next turn and can "
+                f"remove a Stagger Threshold when Charge Count is low — guard sets up the burst."
+            )
     elif gp.get("negative_coin_archetype"):
         arch = gp["negative_coin_archetype"]
         despair = arch.get("despair_label", "negative SP")
@@ -282,6 +297,13 @@ def _build_core_idea(name: str, gp: dict) -> str:
                 f"below 0 SP she swaps to **{despair}** skills ({minus_preview}, …) "
                 f"with far higher Base Power than the Plus Coin set."
             )
+    elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
+        "nails_setup",
+        "charge_scaling",
+    ):
+        parts.append(f"{name} is a {role_str} — {sin_arch['setup_summary']}")
+    elif (extra_arch := pick_extra_archetype(gp)):
+        parts.append(f"{name} is a {role_str} — {extra_arch['setup_summary']}")
     elif gp.get("defense_archetype"):
         arch = gp["defense_archetype"]
         payoff = arch.get("payoff") or "a powered-up attack"
@@ -484,9 +506,29 @@ def _build_overview_tips(gp: dict) -> str:
     if nails_arch:
         tips.extend(nails_arch.get("tips", []))
 
+    charge_arch = gp.get("charge_archetype")
+    if charge_arch:
+        tips.extend(charge_arch.get("tips", []))
+
+    from limbus_guides.nlp.archetypes import OVERVIEW_ARCHETYPE_KEYS
+
+    seen_tips: set[str] = set(tips)
+    for key in OVERVIEW_ARCHETYPE_KEYS:
+        if key in ("nails_archetype", "charge_archetype"):
+            continue
+        arch = gp.get(key)
+        if not arch:
+            continue
+        for tip in arch.get("tips", []):
+            if tip not in seen_tips:
+                tips.append(tip)
+                seen_tips.add(tip)
+
     defense_arch = gp.get("defense_archetype")
-    if defense_arch and not neg_coin:
+    if defense_arch and not neg_coin and not charge_arch:
         tips.extend(defense_arch.get("tips", []))
+    elif defense_arch and not neg_coin and charge_arch:
+        tips.extend(defense_arch.get("tips", [])[:1])
 
     # Unique ammo spent on coin flips — preserve for premium skills
     unique_ammo = gp.get("unique_ammo")
@@ -707,7 +749,7 @@ def _is_status_consumer(gp: dict, status: str) -> bool:
         blob = " ".join(skill.get("skill_bonuses", []))
         for coin in skill.get("coin_effects", []):
             blob += " " + coin.get("effect", "")
-        for m in re.finditer(rf"Inflict\s+\+?(\d+)\s+{status}", blob, re.I):
+        for m in re.finditer(rf"(?:Inflict|Gain)\s+\+?(\d+)\s+{status}\b", blob, re.I):
             inflicted += int(m.group(1))
     return inflicted < 6
 
@@ -747,6 +789,8 @@ def _detect_key_status(gp: dict, synergies: list[dict] | None = None) -> str | N
 
 def _team_intro(gp: dict, synergies: list[dict]) -> str:
     """One or two sentences describing what team compositions this identity fits into."""
+    from limbus_guides.nlp.archetypes import pick_extra_archetype, pick_primary_sin_archetype
+
     resource = gp.get("resource_loop")
     neg_scale = gp.get("neg_effect_scaling")
     ally_combo = gp.get("ally_combo")
@@ -810,6 +854,21 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         pieces.append(
             f"**Nails/Tremor** setup — reach **{threshold}+ Nails** before the burst skill; "
             f"this kit self-applies both but Tremor Burst payoffs reward patient stacking."
+        )
+    elif gp.get("charge_archetype"):
+        pieces.append(
+            "**Charge** self-stacker — builds Charge Count and Potency with S1/S2, then "
+            "severely buffs Coin Power and Clash Power on the finisher; guard can queue bonus S3 turns."
+        )
+    elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("status"):
+        status = sin_arch["status"]
+        pieces.append(
+            f"**{status}**-focused kit — stack {status} on the right target, then cash out "
+            f"when threshold skills unlock full damage."
+        )
+    elif (extra_arch := pick_extra_archetype(gp)) and extra_arch.get("status") == "Aggro":
+        pieces.append(
+            "**Aggro** frontliner — draws enemy focus so teammates can apply statuses and burst safely."
         )
     elif neg_scale:
         pieces.append(
