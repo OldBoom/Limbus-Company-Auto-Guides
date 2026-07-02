@@ -971,6 +971,8 @@ def test_archetype_tips_skip_basic_mechanic_primers():
         "heavy chain",
         "attack chain",
         "spend turn",
+        "high-sp spenders",
+        "passive top-ups",
         "keeps bleed climbing",
         "evade sequence",
         "carry line",

@@ -1081,7 +1081,6 @@ def find_sp_regenerator_archetype(
     tips = [
         f"**SP sustain** fires at **{timing}** — keep this unit deployed so "
         f"{target} recover SP before the next clash.",
-        "Pair with high-SP spenders; they benefit most from the passive top-ups.",
     ]
     if "turn end" in " ".join(clauses).lower():
         tips.append(
