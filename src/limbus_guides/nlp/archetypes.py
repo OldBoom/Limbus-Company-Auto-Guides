@@ -122,6 +122,82 @@ def _gate_thresholds(text: str, status: str) -> list[int]:
     return sorted(set(values))
 
 
+_STATUS_WORD = r"[A-Z][A-Za-z]+"
+
+
+def _combined_partner(blob: str, status: str) -> str | None:
+    """The other status in a combined ``(Bleed + Sinking)`` scaling expression."""
+    status_re = re.escape(status)
+    for pattern in (
+        rf"\(\s*{status_re}\s*\+\s*({_STATUS_WORD})\s*\)",
+        rf"\(\s*({_STATUS_WORD})\s*\+\s*{status_re}\s*\)",
+    ):
+        m = re.search(pattern, blob)
+        if m and m.group(1).lower() != status.lower():
+            return m.group(1)
+    return None
+
+
+def _scaling_stat(blob: str, status: str) -> str | None:
+    """The stat that scales with this status, when exactly one does.
+
+    Kits often scale several stats off the same count ("Clash Power +1 and Final
+    Power +1 for every 4 ..."), so naming just the first match would read as though
+    it were the only one. Returns None when it is ambiguous, letting the caller use
+    a generic phrase; the "Scaling conditions" sentence that follows carries the
+    exact numbers either way.
+    """
+    stats = {
+        m.group(1).title()
+        for m in re.finditer(
+            rf"(Clash|Coin|Final|Base)\s+Power[^.;]*?(?:per|every)[^.;]*?{re.escape(status)}",
+            blob,
+            re.I,
+        )
+    }
+    return f"{stats.pop()} Power" if len(stats) == 1 else None
+
+
+def derive_status_summary(status: str, blob: str, gates: list[int]) -> str | None:
+    """Kit-derived opening line for a status archetype.
+
+    Returns None when the kit shows nothing beyond "this status appears", leaving
+    the caller's own wording in place. Without this, statuses whose finder passes a
+    fixed string (Bleed, Rupture, Sinking) opened every guide with the same stub —
+    "**Bleed** focus." covered 28 identities on the full roster.
+    """
+    scales = bool(
+        re.search(
+            rf"every \d+[^;]*{re.escape(status)}|{re.escape(status)}[^;]*\(max",
+            blob,
+            re.I,
+        )
+    )
+    stat = _scaling_stat(blob, status)
+    # Subject/verb agree: a named stat is singular, the generic fallback is plural.
+    subject, verb = (stat, "scales") if stat else ("damage and clash power", "scale")
+
+    partner = _combined_partner(blob, status)
+    if partner:
+        return (
+            f"**{status}** and **{partner}** stacking — {subject} {verb} off the "
+            f"combined count on the target."
+        )
+    if scales and gates:
+        return (
+            f"**{status}** stacker — payoff coins check **{min(gates)}+ {status}**, "
+            f"so build the count before committing them."
+        )
+    if scales:
+        return f"**{status}** stacker — {subject} {verb} with {status} on the target."
+    if gates:
+        return (
+            f"**{status}** gate — key coins need **{min(gates)}+ {status}** on the "
+            f"target to reach full power."
+        )
+    return None
+
+
 def _build_archetype(
     *,
     kind: str,
@@ -158,6 +234,7 @@ def _sin_archetype(
     min_prominence: int,
     maintain_tip: str | None = None,
     setup_summary: str,
+    derive_summary: bool = False,
     gate_tip: str = "Skills check **{threshold}+ {status}** — favour those coins when stacked.",
     skip_if: Callable[[str], bool] | None = None,
     extra_signals: Callable[[str], int] | None = None,
@@ -198,10 +275,14 @@ def _sin_archetype(
     if extra_tips:
         tips.extend(extra_tips(blob, skills))
 
+    summary = setup_summary
+    if derive_summary:
+        summary = derive_status_summary(status, blob, gates) or setup_summary
+
     return _build_archetype(
         kind=kind,
         status=status,
-        setup_summary=setup_summary,
+        setup_summary=summary,
         tips=tips,
         threshold=min(gates) if gates else None,
         payoff_skill=_payoff_skill_name(skills),
@@ -264,6 +345,7 @@ def find_bleed_archetype(
         mechanic_profile=mechanic_profile,
         min_prominence=6,
         setup_summary="**Bleed** focus.",
+        derive_summary=True,
     )
 
 
@@ -339,6 +421,7 @@ def find_rupture_archetype(
         mechanic_profile=mechanic_profile,
         min_prominence=6,
         setup_summary="**Rupture** focus.",
+        derive_summary=True,
     )
 
 
@@ -359,11 +442,15 @@ def find_sinking_archetype(
     if _sin_kit_signals(blob, "Sinking") < 2:
         return None
 
+    gates = _gate_thresholds(blob, "Sinking")
     return _build_archetype(
         kind="sinking_stacker",
         status="Sinking",
-        setup_summary="**Sinking** clash-support.",
+        setup_summary=(
+            derive_status_summary("Sinking", blob, gates) or "**Sinking** clash-support."
+        ),
         tips=[],
+        threshold=min(gates) if gates else None,
         payoff_skill=_payoff_skill_name(skills),
     )
 

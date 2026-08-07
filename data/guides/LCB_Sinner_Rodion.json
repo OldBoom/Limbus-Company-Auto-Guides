@@ -67,15 +67,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "LCB Sinner Rodion is a Status Specialist — **Bleed** focus.",
+  "core_idea": "LCB Sinner Rodion is a Status Specialist — **Bleed** gate — key coins need **6+ Bleed** on the target to reach full power.",
   "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n\n**S1 — Strike Down** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Axe Combo** (BP 4, CP +4, x2): rolls — low 4, high 12 (Extremely Low).\n\n**S3 — Slay** (BP 4, CP +2, x4): rolls — low 4, high 12 (Extremely Low / Low stacked).\n- Skill Power +1 when below 0 SP\n- Delay until 6+ Bleed on target — that is when the damage condition activates.\n\nCombat passive — **Split Evil**: On hit, inflict 1 Bleed at a 50% chance.\n\nCombat passive — **Gambler**: 1 ally with the most HP deals +20% damage with Heads Coins.",
   "team_suggestions": [
-    "**Bleed** focus.",
+    "**Bleed** gate — key coins need **6+ Bleed** on the target to reach full power.",
     "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
     "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_intro": "**Bleed** gate — key coins need **6+ Bleed** on the target to reach full power.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
