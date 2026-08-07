@@ -31,6 +31,10 @@ IDENTITY_PORTRAIT_DIR = STATIC_DIR / "identities"
 IDENTITY_PORTRAIT_COLS = [1.5, 7, 1.5]
 
 SINNER_COLS_PER_ROW = 6
+IDENTITY_COLS_PER_ROW = 6
+# Below this a card cannot hold an identity name or its mechanic list legibly, so the
+# row wraps instead of shrinking further.
+IDENTITY_CARD_MIN_WIDTH_PX = 160
 
 # Landing-page dummy content (not loaded from pipeline)
 _DUMMY_CORE_IDEA = (
@@ -389,23 +393,31 @@ def _render_portrait_image(sinner_name: str) -> None:
 
 def _render_dashboard_styles() -> None:
     """Shared CSS for sinner grid and portrait slots."""
-    st.markdown(
+    css = (
         """
         <style>
-        /* Six-column sinner rows: wrap to 3 per row on phones */
-        @media (max-width: 640px) {
-            [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7))) {
-                flex-wrap: wrap !important;
-            }
-            [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
-            > [data-testid="column"] {
-                flex: 0 0 33.333% !important;
-                max-width: 33.333% !important;
-            }
+        /* Six-column rows — the sinner grid and the identity picker, both capped at
+           six per row in Python. Streamlit gives each column
+           `flex: 1 1 calc(16.6667% - 16px)` and already sets flex-wrap:wrap on the
+           row, so a min-width is all that is needed: below LC_CARD_MIN a card can no
+           longer hold an identity name or its mechanic list on a sane number of
+           lines, so the row wraps instead of shrinking further.
+
+           The column test id is "stColumn" (Streamlit 1.61). This file previously
+           said "column", which matched nothing — the rules here were dead, which is
+           why 16 identities rendered squeezed into one row. */
+        [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"]:nth-child(6)):not(:has(> [data-testid="stColumn"]:nth-child(7)))
+        > [data-testid="stColumn"] {
+            min-width: LC_CARD_MINpx !important;
+            /* Without this the leftover cards on a wrapped row grow to fill it, so a
+               trailing row of two renders at double the width of the row above. */
+            flex-grow: 0 !important;
+        }
+        [data-testid="stHorizontalBlock"] {
+            row-gap: 0.75rem;
         }
         /* Compact pick buttons under portraits */
-        [data-testid="stHorizontalBlock"]:has(> [data-testid="column"]:nth-child(6)):not(:has(:nth-child(7)))
-        [data-testid="column"] .stButton > button,
+        [data-testid="stColumn"] .stButton > button,
         [data-testid="stVerticalBlockBorderWrapper"] .stButton > button {
             width: 100% !important;
             font-size: 0.72rem !important;
@@ -483,9 +495,9 @@ def _render_dashboard_styles() -> None:
         + guide_format_css()
         + """
         </style>
-        """,
-        unsafe_allow_html=True,
-    )
+        """
+    ).replace("LC_CARD_MIN", str(IDENTITY_CARD_MIN_WIDTH_PX))
+    st.markdown(css, unsafe_allow_html=True)
 
 
 def _render_sinner_cell(sinner: dict) -> None:
@@ -551,29 +563,34 @@ def _render_identity_cards(sinner_name: str, guides: dict[str, dict]) -> None:
         st.caption("Choose an identity to open its guide.")
 
     slugs = sorted(sinner_guides.keys(), key=lambda s: sinner_guides[s].get("identity_name", s))
-    cols = st.columns(len(slugs))
-    for col, slug in zip(cols, slugs):
-        guide = sinner_guides[slug]
-        name = guide.get("identity_name", slug.replace("_", " "))
-        profile = guide.get("mechanic_profile", {})
-        mechanics = profile.get("primary_mechanics", [])
-        mech_str = " · ".join(mechanics[:4]) if mechanics else "—"
 
-        with col:
-            with st.container(border=True):
-                portrait = _identity_portrait_path(slug) or _portrait_path(sinner_name)
-                if portrait:
-                    _render_identity_portrait_picker(portrait, slug=slug, title=name)
+    # Wrap into rows of at most IDENTITY_COLS_PER_ROW. Sinners now carry 14-16
+    # identities, and one column each squeezed the cards past readability.
+    for row_start in range(0, len(slugs), IDENTITY_COLS_PER_ROW):
+        row = slugs[row_start : row_start + IDENTITY_COLS_PER_ROW]
+        # Always allocate a full row of columns so a short final row keeps the same
+        # card width as the rows above it instead of stretching to fill.
+        cols = st.columns(IDENTITY_COLS_PER_ROW)
+        for col, slug in zip(cols, row):
+            guide = sinner_guides[slug]
+            name = guide.get("identity_name", slug.replace("_", " "))
+            profile = guide.get("mechanic_profile", {})
+            mechanics = profile.get("primary_mechanics", [])
+            mech_str = " · ".join(mechanics[:4]) if mechanics else "—"
+
+            with col:
+                with st.container(border=True):
+                    portrait = _identity_portrait_path(slug) or _portrait_path(sinner_name)
+                    if portrait:
+                        _render_identity_portrait_picker(portrait, slug=slug, title=name)
                     _render_identity_name(name)
-                else:
-                    _render_identity_name(name)
-                st.caption(mech_str)
-                _render_pick_button(
-                    "Select",
-                    key=f"identity_pick_{slug}",
-                    on_pick=lambda s=slug, g=guides: _select_identity(s, g),
-                    title=f"Open guide: {name}",
-                )
+                    st.caption(mech_str)
+                    _render_pick_button(
+                        "Select",
+                        key=f"identity_pick_{slug}",
+                        on_pick=lambda s=slug, g=guides: _select_identity(s, g),
+                        title=f"Open guide: {name}",
+                    )
 
 
 def _render_guide(
