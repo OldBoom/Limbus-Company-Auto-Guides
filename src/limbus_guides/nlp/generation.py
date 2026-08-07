@@ -468,6 +468,12 @@ def _opening_transition_resource(name: str, role_str: str, gp: dict) -> _CoreOpe
     )
 
 
+def _opening_resonance(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    """Kits built on Sin Resonance — the payoff is what you queue, not a status count."""
+    arch = gp.get("resonance_archetype")
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", []) if arch else None
+
+
 def _opening_unique_mechanics(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
     arch = gp.get("unique_mechanics_archetype")
     return (f"{name} is a {role_str} — {arch['setup_summary']}", []) if arch else None
@@ -621,7 +627,9 @@ _CORE_OPENING_BUILDERS = (
     ("nails", _opening_nails),
     # Two structural signals (a state change *and* a resource loop).
     ("transition_resource", _opening_transition_resource),
-    # Named mechanic archetypes.
+    # Named mechanic archetypes. Resonance leads: for these kits the payoff is the
+    # Sin you queue, and the statuses they stack are downstream of it.
+    ("resonance", _opening_resonance),
     ("unique_mechanics", _opening_unique_mechanics),
     ("charge", _opening_charge),
     ("poise_archetype", _opening_poise_archetype),
@@ -1177,7 +1185,7 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
     elif trait_kit:
         shared = meaningful_traits[0]
         pieces.append(
-            f"Trait-dependent kit — [{shared}] allies raise Resonance and unlock alternate skills."
+            f"Trait-dependent kit — [{shared}] allies unlock its alternate skills."
         )
     elif gp.get("unique_tremor_types") or gp.get("tremor_archetype"):
         arch = gp.get("tremor_archetype") or {}
@@ -1254,13 +1262,20 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
             "provide relevant statuses or SP recovery maximises uptime."
         )
 
-    if gp.get("resonance_dependent") and gp.get("traits_list"):
-        key_trait = next((t for t in gp["traits_list"] if t not in GENERIC_TRAITS), None)
-        if key_trait:
-            pieces.append(
-                f"Resonance-scaling identity — each additional [{key_trait}] ally "
-                f"on the team directly improves skill and Counter output."
-            )
+    # Resonance comes from the Sin affinities of the skills queued in a turn, not from
+    # how many allies share a trait — so the advice is about the Sin, not the roster.
+    reson_arch = gp.get("resonance_archetype")
+    if reson_arch:
+        sin = reson_arch.get("sin", "matching-Sin")
+        pieces.append(
+            f"Resonance-scaling identity — pick teammates with **{sin}** skills so you "
+            f"can queue a same-Sin turn and keep {sin} Resonance high."
+        )
+    elif gp.get("resonance_dependent"):
+        pieces.append(
+            "Resonance-scaling identity — its output rises when the turn's queued skills "
+            "share a Sin affinity, so favour teammates that can match its Sins."
+        )
 
     # Note if a faction team is naturally recommended
     rule_matches = [s for s in synergies if s.get("source") == "rule"]

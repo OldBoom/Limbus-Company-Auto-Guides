@@ -82,12 +82,12 @@
   "core_idea": "Los Mariachis Jefe Sinclair is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output.",
   "playstyle_guide": "- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Pañata Party** — **S2 — Danza de Pasión** adds **+2 Poise** per **On Hit** coin and **+1 Poise Count** per **Heads Hit** coin.\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n\n**S1 — Baile y Rola** (BP 4, CP +2, x2): rolls — low 4, high 8 (Extremely Low).\n- If target has 4+ Sinking, Coin Power +1\n\n**S2 — Danza de Pasión** (BP 5, CP +1, x3): rolls — low 5, high 8 (Extremely Low).\n- If target has 6+ Sinking, Coin Power +2\n- Gain 2 Poise; [Heads Hit] Gain +1 Poise Count\n- Inflict 2 Sinking; [Heads Hit] Inflict +1 Sinking Count\n\n**S3 — Pañata Party** (BP 8, CP +11, x1): rolls — low 8, high 19 (High).\n- Peak output requires both conditions: If target's SP is below 0, boost crit chance proportional to target's SP | If user has 5+ Poise Count, +30% Critical Damage.\n- Lower user’s Stagger Threshold by 50% of damage dealt\n\nCombat passive — **Jugar con Enemigos**: 1 ally with the most SP deals +10% damage to enemies with lower SP.",
   "team_suggestions": [
-    "Trait-dependent kit — [Los Mariachis] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Los Mariachis] ally on the team directly improves skill and Counter output.",
+    "Trait-dependent kit — [Los Mariachis] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **The Pequod Captain Ishmael**: 'Captain of the Pequod' inflicts Poise via the support passive — helps reach 5+ Poise thresholds on key skills."
   ],
-  "team_suggestion_intro": "Trait-dependent kit — [Los Mariachis] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Los Mariachis] ally on the team directly improves skill and Counter output.",
+  "team_suggestion_intro": "Trait-dependent kit — [Los Mariachis] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",

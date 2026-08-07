@@ -740,7 +740,12 @@ _TRAIT_COND_RE = re.compile(r"<>")
 
 
 def detect_resonance_dependency(text: str) -> bool:
-    """True when kit text scales off team Resonance (same-trait ally count)."""
+    """True when kit text scales off Resonance.
+
+    Resonance counts skills sharing a Sin affinity among those queued in a turn
+    (Absolute Resonance = the whole queue matches). It is not a same-trait ally
+    count, which is what this docstring used to claim.
+    """
     return bool(_RESONANCE_RE.search(text))
 
 

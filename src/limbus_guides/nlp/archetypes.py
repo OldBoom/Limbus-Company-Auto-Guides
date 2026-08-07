@@ -198,6 +198,132 @@ def derive_status_summary(status: str, blob: str, gates: list[int]) -> str | Non
     return None
 
 
+# ---------------------------------------------------------------------------
+# Resonance
+#
+# Resonance counts skills of the same Sin affinity queued in a single turn;
+# Absolute Resonance ("A-Reson.") requires the whole queue to share one Sin. It is
+# a property of what you slot each turn, NOT of how many allies share a trait.
+# ---------------------------------------------------------------------------
+
+_SINS = ("Wrath", "Lust", "Sloth", "Gluttony", "Gloom", "Pride", "Envy")
+_SIN_ALT = "|".join(_SINS)
+
+_RESON_ANY_RE = re.compile(r"\bReson\.", re.I)
+_RESON_SIN_RE = re.compile(rf"\b({_SIN_ALT})\s+(A-)?Reson\.", re.I)
+_RESON_GATE_RE = re.compile(
+    rf"\bAt\s+(\d+)\+\s+(?:sum of\s+)?(?:({_SIN_ALT})\s+)?(A-)?Reson\.",
+    re.I,
+)
+# Both orders occur: "gains Offense Level by (highest Reson. / 2)" and the far more
+# common "At 4+ Envy Reson., Coin Power +1".
+_STAT_ALT = r"(?:Coin|Final|Clash|Base)\s+Power"
+_RESON_OFFENSE_RE = re.compile(
+    r"Offense Level[^;]{0,80}Reson\.|Reson\.[^;]{0,80}Offense Level", re.I
+)
+_RESON_POWER_RE = re.compile(
+    rf"{_STAT_ALT}[^;]{{0,80}}Reson\.|Reson\.[^;]{{0,80}}{_STAT_ALT}", re.I
+)
+_RESON_BONUS_DMG_RE = re.compile(r"Reson\.\s*x\s*\d+", re.I)
+# Clause form: use "A" as Counter  /  use "A" or "B" as Counter. Bounded to a single
+# clause so an unrelated Counter elsewhere in the kit cannot be picked up, and the
+# quoted names are pulled out individually rather than as one span across the `or`.
+_COUNTER_CLAUSE_RE = re.compile(
+    r"use\s+([\"'“][^;]{0,180}?)\s*(?:Skill\s*)?as\s+(?:a\s+)?Counter", re.I
+)
+_QUOTED_NAME_RE = re.compile(r"[\"'“]([^\"'“”]+)[\"'”]")
+
+
+def _counter_skill_names(blob: str) -> list[str]:
+    m = _COUNTER_CLAUSE_RE.search(blob)
+    if not m:
+        return []
+    return [n.strip() for n in _QUOTED_NAME_RE.findall(m.group(1)) if n.strip()]
+
+
+def find_resonance_archetype(
+    skills: list[dict],
+    combat_text: str = "",
+    raw_markdown: str = "",
+    mechanic_profile: dict | None = None,
+) -> _ARCHETYPE_RESULT | None:
+    """Kits whose payoff is team Resonance — matching Sin affinities across a turn."""
+    blob = _kit_blob(skills, combat_text, raw_markdown)
+    if len(_RESON_ANY_RE.findall(blob)) < 3:
+        return None
+
+    counts: dict[str, int] = {}
+    for sin, _abs in _RESON_SIN_RE.findall(blob):
+        counts[sin.title()] = counts.get(sin.title(), 0) + 1
+    if not counts:
+        return None
+    sin = max(counts, key=lambda s: (counts[s], s))
+
+    abs_gates: list[int] = []
+    plain_gates: list[int] = []
+    for m in _RESON_GATE_RE.finditer(blob):
+        (abs_gates if m.group(3) else plain_gates).append(int(m.group(1)))
+
+    names = _counter_skill_names(blob)
+    counter_name = " or ".join(names[:2]) if names else None
+    scales_offense = bool(_RESON_OFFENSE_RE.search(blob))
+    scales_power = bool(_RESON_POWER_RE.search(blob)) or bool(_RESON_BONUS_DMG_RE.search(blob))
+
+    # Resonance has to drive something central — a Counter unlock, or power/Offense
+    # scaling. A bare threshold is often a rider on an unrelated effect (an ally heal
+    # at "4+ Wrath Reson."), and leading the core idea with Resonance there overstates
+    # it. Counting mentions does not separate these: the kit blob repeats skill text
+    # that also appears in raw_markdown, so the totals are inflated unevenly.
+    if not (counter_name or scales_offense or scales_power):
+        return None
+
+    lead = f"**{sin} Resonance** kit — queue {sin}-affinity skills across the team"
+    if abs_gates:
+        threshold = min(abs_gates)
+        if counter_name:
+            summary = (
+                f"{lead}; at **{threshold}+ {sin} Absolute Resonance** a Combat Start "
+                f"Counter (**{counter_name}**) fires for free."
+            )
+        else:
+            summary = (
+                f"{lead}; **{threshold}+ {sin} Absolute Resonance** unlocks the kit's "
+                f"strongest effects."
+            )
+    elif plain_gates:
+        summary = f"{lead}; skills check **{min(plain_gates)}+ {sin} Resonance**."
+    else:
+        summary = f"{lead} — coin power and bonus damage scale with {sin} Resonance."
+
+    if scales_offense:
+        summary += " Offense Level also scales with the highest Resonance that turn."
+
+    tips: list[str] = [
+        f"Build an **{sin}**-heavy lineup: Resonance counts same-Sin skills queued in a "
+        f"turn, and **Absolute** Resonance needs every queued skill to share the Sin.",
+    ]
+    if abs_gates and counter_name:
+        tips.append(
+            f"Hitting **{min(abs_gates)}+ {sin} A-Reson.** at Combat Start fires "
+            f"**{counter_name}** as a free Counter — worth building the turn around."
+        )
+    if scales_offense:
+        tips.append(
+            "Offense Level scales with the highest Resonance, so a clean same-Sin turn "
+            "raises every clash, not just the payoff skill."
+        )
+
+    return _build_archetype(
+        kind="resonance_payoff",
+        status=f"{sin} Resonance",
+        setup_summary=summary,
+        tips=tips,
+        threshold=min(abs_gates) if abs_gates else (min(plain_gates) if plain_gates else None),
+        payoff_skill=_payoff_skill_name(skills),
+        extra={"sin": sin, "counter_name": counter_name},
+    )
+
+
 def _build_archetype(
     *,
     kind: str,
@@ -1300,6 +1426,7 @@ def detect_status_archetypes(
         ("paralyze_archetype", find_paralyze_archetype, {}),
         ("fragile_archetype", find_fragile_archetype, {}),
         ("discard_archetype", find_discard_archetype, {}),
+        ("resonance_archetype", find_resonance_archetype, {}),
         ("sp_regenerator_archetype", find_sp_regenerator_archetype, {}),
         ("hp_regenerator_archetype", find_hp_regenerator_archetype, {}),
     ]
