@@ -1,0 +1,66 @@
+{
+  "identity_slug": "LCB_Sinner_Sinclair",
+  "identity_name": "LCB Sinner Sinclair",
+  "sinner": "Sinclair",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Base Power",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Rupture": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 1,
+      "Clash Win": 2,
+      "Heads Hit": 3
+    },
+    "all_mechanics": {
+      "Rupture": 4,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "identity_slug": "LCB_Sinner_Sinclair",
+    "key_status_effects": [
+      "Attack Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "LCB Sinner Sinclair is a Damage Dealer — **Rupture** focus.",
+  "playstyle_guide": "**S1 — Downward Swing** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Halberd Combo** (BP 4, CP +2, x3): rolls — low 4, high 10 (Extremely Low).\n- +30% damage\n\n**S3 — Ravaging Cut** (BP 5, CP +3, x3): rolls — low 5, high 14 (Slightly Low).\n\nCombat passive — **Pluckiness**: When an ally is defeated, gain 1 Attack Power Up next turn.\n\nCombat passive — **Grudge**: 1 ally with the least SP gains 1 Attack Power Up the turn after an ally is defeated.",
+  "team_suggestions": [
+    "**Rupture** focus.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Rupture** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

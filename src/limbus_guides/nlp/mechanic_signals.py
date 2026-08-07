@@ -195,3 +195,22 @@ def top_fallback_coin_line(skill: dict) -> str | None:
         if cleaned and _is_notable_fallback(raw):
             return cleaned
     return None
+
+
+# ---------------------------------------------------------------------------
+# Unique Tremor subtypes (e.g. "Tremor — Scorch", "Tremor - Decay")
+#
+# Kept here rather than in synergy.py so that skill parsing and archetype
+# detection stay free of the embedding/ML import chain.
+# ---------------------------------------------------------------------------
+
+_UNIQUE_TREMOR_SUBTYPE_RE = re.compile(r"Tremor\s*[-—]\s*([A-Za-z]+)", re.IGNORECASE)
+
+
+def extract_unique_tremor_types(text: str) -> set[str]:
+    """Return named unique Tremor subtypes (e.g. Scorch, Decay) present in kit text."""
+    return {m.group(1).title() for m in _UNIQUE_TREMOR_SUBTYPE_RE.finditer(text)}
+
+
+def format_unique_tremor_label(subtype: str) -> str:
+    return f"Tremor — {subtype}"

@@ -35,6 +35,45 @@ STANDARD_EFFECTS = {
 # ---------------------------------------------------------------------------
 
 
+IDENTITY_TEMPLATE = "Template:IDPage"
+
+
+def fetch_identity_roster(template: str = IDENTITY_TEMPLATE) -> list[str]:
+    """Live identity roster — every mainspace page transcluding the identity template.
+
+    Transclusion is a tighter signal than ``Category:Identities``: the category is a
+    superset that also lists event allies (the Sinnerling kits), which are built on
+    ``ENPage`` rather than ``IDPage`` and are not equippable identities. Translated
+    subpages (``Foo/es``, ``Foo/pt-br``) are excluded.
+
+    Returns wiki page titles in API form (spaces, not underscores).
+    """
+    titles: list[str] = []
+    params: dict[str, str] = {
+        "action": "query",
+        "list": "embeddedin",
+        "eititle": template,
+        "einamespace": "0",
+        "eilimit": "500",
+        "format": "json",
+    }
+    while True:
+        resp = requests.get(
+            API_URL, params=params, headers={"User-Agent": USER_AGENT}, timeout=45
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        if "error" in data:
+            raise ValueError(f"Wiki API error listing {template!r}: {data['error']}")
+        titles.extend(page["title"] for page in data.get("query", {}).get("embeddedin", []))
+        cont = data.get("continue")
+        if not cont:
+            break
+        params.update(cont)
+        time.sleep(0.5)
+    return sorted(t for t in titles if "/" not in t)
+
+
 def fetch_wikitext(page_title: str) -> str:
     resp = requests.get(
         API_URL,
@@ -371,8 +410,12 @@ def _parse_skill_params(params: dict[str, str]) -> dict:
         "skill_bonuses": skill_bonuses,
         "coins": coins,
         "state": state or "",
-        "is_defense": params.get("name", "").lower() in ("guard", "evade", "counter")
-        or "defense" in params.get("icon", "").lower(),
+        # The template key (defenseN vs skillN) is authoritative; this exact-name match
+        # is only a fallback for defense skills declared in an attack slot. Do NOT match
+        # on the icon: icons are named after the skill, so attack skills like
+        # "Focused Defense" or "See Through Defenses" get misfiled and vanish from the
+        # rotation entirely.
+        "is_defense": params.get("name", "").lower() in ("guard", "evade", "counter"),
     }
 
 
@@ -723,10 +766,14 @@ def filename_to_wiki_title(stem: str) -> str:
 
 
 def wiki_title_to_stem(page_title: str) -> str:
-    """Map wiki page title to parsed-ids filename stem (respects project slug overrides)."""
-    title = unquote(page_title)
+    """Map wiki page title to parsed-ids filename stem (respects project slug overrides).
+
+    Accepts either URL form (``Foo_Bar``) or API/display form (``Foo Bar``) — the API
+    returns titles with spaces, while SLUG_TO_WIKI_OVERRIDES is written in URL form.
+    """
+    title = unquote(page_title).replace(" ", "_")
     for stem, wiki_title in SLUG_TO_WIKI_OVERRIDES.items():
-        if wiki_title == title:
+        if wiki_title.replace(" ", "_") == title:
             return stem
     return page_title_to_filename(title)
 

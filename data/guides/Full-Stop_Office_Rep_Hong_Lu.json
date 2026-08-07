@@ -1,0 +1,141 @@
+{
+  "identity_slug": "Full-Stop_Office_Rep_Hong_Lu",
+  "identity_name": "Full-Stop Office Rep Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Ammo",
+      "Poise",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Atk Weight",
+      "Bind",
+      "Final Power",
+      "Target Spotted"
+    ],
+    "status_effects": {
+      "Poise": 20,
+      "Bind": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 12,
+      "Coin Power": 8,
+      "Atk Weight": 6,
+      "Final Power": 2
+    },
+    "unique_mechanics": {
+      "Ammo": 26,
+      "Target Spotted": 8,
+      "Unbreakable Coin": 2,
+      "Reload": 8,
+      "Overwatch Assignment": 8,
+      "Melee Support": 1,
+      "Attack Power Down": 8,
+      "Pierce Fragility": 8
+    },
+    "triggers": {
+      "On Use": 9,
+      "On Hit": 20,
+      "Clash Win": 2,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Poise": 20,
+      "Bind": 4,
+      "Base Power": 12,
+      "Coin Power": 8,
+      "Atk Weight": 6,
+      "Final Power": 2,
+      "Ammo": 25,
+      "Target Spotted": 2,
+      "Unbreakable Coin": 2,
+      "Reload": 1,
+      "Overwatch Assignment": 1
+    },
+    "identity_slug": "Full-Stop_Office_Rep_Hong_Lu",
+    "key_status_effects": [
+      "Ammo",
+      "Target Spotted",
+      "Attack Power Down",
+      "Pierce Fragility",
+      "Reload",
+      "Overwatch Assignment"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Full-Stop_Office_Fixer_Heathcliff",
+      "teammate_name": "Full-Stop Office Fixer Heathcliff",
+      "reason": "Shares [Full-Stop Office] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Pequod_Captain_Ishmael",
+      "teammate_name": "The Pequod Captain Ishmael",
+      "reason": "'Captain of the Pequod' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Full-Stop Office Rep Hong Lu is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling.",
+  "playstyle_guide": "- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Full-Stop to Life** — **S1 — Take the Shot** adds **+3 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin; **S2 — Target Marked** adds **+3 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin.\n- **Full-Stop to Life** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Manage **Ammo** — multiple skills spend limited ammo on coin flips. Preserve **Ammo** for S1; when reserves are low, skip or pass on weaker S3 so your strongest skill keeps fully empowered coins.\n\n**S1 — Take the Shot** (BP 3, CP +3, x3): rolls — low 3, high 12 (High).\n\n*↳ Alternate S1 — Melee Support* (BP 5, CP +4): rolls — low 5, high 13 (Extremely High).\n\n**S2 — Target Marked** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Base Power +1 for every Ammo about to be spent by this Skill ; [On Use] If Full-Stop Office Fixer Heathcliff is on the field, every Reson. of the highest Reson. adds 25% chance that this unit activates Target Spotted ; [On Use] Gain +3 Poise Count\n- Spend up to 3 Ammo; Deal +(Ammo spent x 10)% damage\n\n*↳ Alternate S2 — Combo: Target Marked* (BP 4, CP +4): rolls — low 4, high 20 (Extremely High).\n  - Spend up to 3 Ammo\n\n**S3 — Full-Stop to Life** (BP 7, CP +4, x3): rolls — low 7, high 19 (High / Slightly High stacked).\n- Base Power +1 for every Ammo about to be spent by this Skill ; [On Use] If Full-Stop Office Fixer Heathcliff is on the field, activate Target Spotted ; [On Use] Gain 5 Poise ; [Clash Win] Gain +2 Poise Count\n- Spend 1 Ammo; Deal +(Ammo spent x 10)% damage; [On Hit] Raise the target's Stagger Threshold by 10% of damage dealt\n- Spend up to 2 Ammo; Deal +(Ammo spent x 10)% damage; [On Hit] Raise the target's Stagger Threshold by 10% of damage dealt\n- If target is Staggered, +30% Damage on Critical Hit; [On Hit] Inflict 1 Bind next turn; [On Hit] Inflict 1 Pierce Fragility\n\n*↳ Alternate S3 — Combo: Full-Stop to Life* (BP 7, CP +4): rolls — low 7, high 23 (Extremely High).\n  - Spend 1 Ammo\n  - Spend up to 2 Ammo\n\nCombat passive — **Concentration**: When flipping a Coin that consumes Ammo: even when this unit is out of Ammo, the attack does not get canceled.\n  - However, the affected Coins' On Hit effects do not activate in such cases.\n\nCombat passive — **Tactical Fire Support**: If the Full-Stop Office Fixer Heathcliff is in Overwatch Assignment state, or has been Deployed as a Backup unit, empower Full-Stop Offic….\n  - Combat Start: at 20+ Poise Potency, gain +1 Poise Count.\n\nDefense skill — **Counter: Beyond the Shadow**: [Clashable Counter].\n  - [On Use] Gain +2 Poise Count.\n  - [Turn End] Reload (once per Encounter).",
+  "team_suggestions": [
+    "Trait-dependent kit — [Full-Stop Office] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Full-Stop Office] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+    "- **Full-Stop Office Fixer Heathcliff**: Shares [Full-Stop Office] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [Full-Stop Office] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Full-Stop Office] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Full-Stop_Office_Fixer_Heathcliff",
+      "teammate_name": "Full-Stop Office Fixer Heathcliff",
+      "reason": "Shares [Full-Stop Office] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 20+ Poise thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

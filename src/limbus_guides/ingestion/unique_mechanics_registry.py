@@ -25,7 +25,30 @@ _NON_RESOURCE_KEY_STATUS = frozenset({
     "Gluttony DMG Up",
     "Damage Up",
     "Damage Down",
+    "Aggro",
 })
+
+# Game-wide status families that follow a naming convention. Enumerating them by hand
+# does not scale: every sin type crosses with every suffix (Envy Fragility, Pierce Power
+# Up, Gloom DMG Up, ...), which is ~20 standard statuses across the full roster that
+# would otherwise be registered as identity-unique resources and pollute every mechanic
+# profile. Matched on the heading, so an identity resource that merely *mentions* one of
+# these is unaffected.
+_STANDARD_STATUS_SUFFIX_RE = re.compile(
+    r"\b(?:"
+    r"(?:Attack|Defense|Clash|Coin|Base|Final|Crit(?:ical)?)?\s*Power\s+(?:Up|Down)"
+    r"|(?:Offense|Defense)\s+Level\s+(?:Up|Down)"
+    r"|Fragility"
+    r"|(?:DMG|Damage)\s+(?:Up|Down)"
+    r"|Resist\s+(?:Up|Down)"
+    r")$",
+    re.IGNORECASE,
+)
+
+
+def is_standard_status_name(term: str) -> bool:
+    """True for game-wide status names (``Envy Fragility``, ``Pierce Power Up``, ...)."""
+    return bool(_STANDARD_STATUS_SUFFIX_RE.search(term.strip()))
 
 # Key-status headings that are standard shared effects, not identity resources.
 _KEY_STATUS_SHARED_EFFECTS = frozenset({
@@ -89,6 +112,8 @@ def _is_registerable(term: str) -> bool:
     if term in STATUS_EFFECTS or term in STAT_MODIFIERS:
         return False
     if term in UNIQUE_MECHANICS:
+        return False
+    if is_standard_status_name(term):
         return False
     return True
 

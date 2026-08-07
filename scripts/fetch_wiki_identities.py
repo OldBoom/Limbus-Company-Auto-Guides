@@ -1,11 +1,23 @@
 #!/usr/bin/env python3
-"""Fetch wiki.gg identity pages and write docs/parsed-ids/*.md files."""
+"""Sync docs/parsed-ids/*.md against the live wiki identity roster.
+
+The roster is discovered from the wiki itself (pages transcluding Template:IDPage),
+so new identities are picked up without editing this file. With no arguments the
+script fetches every roster page that has no local markdown yet.
+
+  python scripts/fetch_wiki_identities.py --dry-run     # report drift, fetch nothing
+  python scripts/fetch_wiki_identities.py               # fetch what is missing
+  python scripts/fetch_wiki_identities.py --limit 20    # fetch missing, 20 at a time
+  python scripts/fetch_wiki_identities.py --all --force # re-fetch the whole roster
+  python scripts/fetch_wiki_identities.py --rebuild-config
+"""
 
 from __future__ import annotations
 
 import argparse
 import json
 import sys
+from collections import defaultdict
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
@@ -20,51 +32,19 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 from limbus_guides.config_io import load_json_config
+from limbus_guides.ingestion.markdown_loader import _infer_sinner
 from limbus_guides.ingestion.wiki_parser import (
     fetch_and_save,
-    fetch_wikitext,
-    filename_to_wiki_title,
+    fetch_identity_roster,
     wiki_title_to_stem,
 )
 from limbus_guides.paths import CONFIG_DIR, PARSED_IDS_DIR
 
-# Default batch from user selection (wiki page titles)
-DEFAULT_PAGES = [
-    "Liu_Assoc._South_Section_3_Yi_Sang",
-    "Seven_Assoc._South_Section_4_Faust",
-    "Cinq_Assoc._East_Section_3_Don_Quixote",
-    "The_Manager_of_La_Manchaland_Don_Quixote",
-    "Edgar_Family_Chief_Butler_Ry%C5%8Dsh%C5%AB",
-    "Kurokumo_Clan_Wakashu_Ry%C5%8Dsh%C5%AB",
-    "Blade_Lineage_Mentor_Meursault",
-    "The_Ring_Fauvist_Student_Meursault",
-    "The_Thumb_East_Capo_IIII_Meursault",
-    "Liu_Assoc._South_Section_5_Hong_Lu",
-    "Tingtang_Gang_Gangleader_Hong_Lu",
-    "The_House_of_Spiders:_The_Ring_Nursefather_Hong_Lu",
-    "Seven_Assoc._South_Section_4_Heathcliff",
-    "Kurokumo_Clan_Wakashu_Heathcliff",
-    "Kurokumo_Clan_Captain_Ishmael",
-    "Edgar_Family_Butler_Ishmael",
-    "Liu_Assoc._South_Section_4_Ishmael",
-    "Kurokumo_Clan_Wakashu_Rodion",
-    "Lobotomy_E.G.O::The_Sword_Sharpened_with_Tears_Rodion",
-    "Liu_Assoc._South_Section_4_Director_Rodion",
-    "The_Thumb_East_Soldato_II_Sinclair",
-    "Devyat'_Assoc._North_Section_3_Sinclair",
-    "The_House_of_Spiders:_The_Middle_Nursefather_Outis",
-    "Lobotomy_E.G.O::Magic_Bullet_Outis",
-    "The_Barber_of_La_Manchaland_Outis",
-    "The_Priest_of_La_Manchaland_Gregor",
-    "Firefist_Office_Survivor_Gregor",
-]
-
-# Hand-curated reference files — do not overwrite unless --force
+# Hand-curated parses — do not overwrite unless --force
 PROTECTED_STEMS = {
     "Ring_Apprentice_Faust",
     "Blade_Lineage_Salsu_Yi_Sang",
     "Ring_Pointillist_Student_Yi_Sang",
-    "The_House_of_Spiders_The_Ring_Apprentice_Faust",
 }
 
 
@@ -74,82 +54,143 @@ def url_to_page_title(url: str) -> str:
     return unquote(title)
 
 
-def collect_all_parsed_slugs() -> list[str]:
-    return sorted(p.stem for p in PARSED_IDS_DIR.glob("*.md"))
+def local_stems() -> set[str]:
+    return {p.stem for p in PARSED_IDS_DIR.glob("*.md")}
 
 
-def update_sinners_config(new_entries: dict[str, list[str]]) -> None:
-    """Merge identity slugs into config/sinners.json by sinner name."""
+def identity_title(md_path: Path) -> str:
+    """Display title from the markdown's H1, falling back to the filename stem."""
+    with md_path.open(encoding="utf-8") as fh:
+        first = fh.readline().strip()
+    return first[2:].strip() if first.startswith("# ") else md_path.stem.replace("_", " ")
+
+
+def rebuild_sinners_config() -> dict[str, list[str]]:
+    """Regenerate config/sinners.json from local parsed markdown.
+
+    The roster is derived output, not hand-curated input — sinner ids already in the
+    file are preserved so existing references stay stable.
+    """
     config_path = CONFIG_DIR / "sinners.json"
-    config = load_json_config(config_path)
-    sinner_map = {s["name"]: s for s in config.get("sinners", [])}
+    existing = load_json_config(config_path) if config_path.exists() else {}
+    known_ids = {s["name"]: s.get("id") for s in existing.get("sinners", [])}
 
-    for sinner_name, slugs in new_entries.items():
-        if sinner_name not in sinner_map:
-            continue
-        existing = set(sinner_map[sinner_name].get("identities", []))
-        for slug in slugs:
-            existing.add(slug)
-        sinner_map[sinner_name]["identities"] = sorted(existing)
+    by_sinner: dict[str, list[str]] = defaultdict(list)
+    for path in sorted(PARSED_IDS_DIR.glob("*.md")):
+        by_sinner[_infer_sinner(identity_title(path))].append(path.stem)
 
-    config_path.write_text(json.dumps(config, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    def slugify(name: str) -> str:
+        return (
+            name.lower()
+            .replace(" ", "_")
+            .replace("ō", "o")
+            .replace("ū", "u")
+            .replace("ö", "o")
+        )
+
+    config = {
+        "_note": existing.get(
+            "_note",
+            "Sinners and identity wiki slugs. Full URLs: "
+            "https://limbuscompany.wiki.gg/wiki/<slug>",
+        ),
+        "sinners": [
+            {
+                "id": known_ids.get(name) or slugify(name),
+                "name": name,
+                "identities": sorted(slugs),
+            }
+            for name, slugs in sorted(by_sinner.items())
+            if name != "Unknown"
+        ],
+    }
+    config_path.write_text(
+        json.dumps(config, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    return {name: sorted(slugs) for name, slugs in by_sinner.items()}
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Fetch wiki identities into docs/parsed-ids/")
-    parser.add_argument("urls", nargs="*", help="Wiki URLs or page titles (optional)")
-    parser.add_argument("--force", action="store_true", help="Overwrite protected reference files")
+    parser = argparse.ArgumentParser(description="Sync parsed-ids against the live wiki roster")
+    parser.add_argument("urls", nargs="*", help="Explicit wiki URLs or page titles")
+    parser.add_argument("--all", action="store_true", help="Re-fetch every roster page")
+    parser.add_argument("--force", action="store_true", help="Overwrite protected stems")
+    parser.add_argument("--limit", type=int, help="Stop after N successful fetches")
+    parser.add_argument("--dry-run", action="store_true", help="Report drift, fetch nothing")
     parser.add_argument(
-        "--all",
+        "--rebuild-config",
         action="store_true",
-        help="Fetch every slug that already has a docs/parsed-ids/*.md file",
+        help="Regenerate config/sinners.json from local parsed files and exit",
     )
-    parser.add_argument("--update-config", action="store_true", help="Update config/sinners.json")
     args = parser.parse_args()
 
-    if args.all:
-        slug_pages = [(stem, filename_to_wiki_title(stem)) for stem in collect_all_parsed_slugs()]
-    elif args.urls:
-        slug_pages = [
-            (wiki_title_to_stem(url_to_page_title(u) if u.startswith("http") else u), unquote(u))
+    if args.rebuild_config:
+        by_sinner = rebuild_sinners_config()
+        total = sum(len(v) for v in by_sinner.values())
+        for name, slugs in sorted(by_sinner.items()):
+            print(f"  {len(slugs):3d}  {name}")
+        print(f"Rebuilt config/sinners.json — {total} identities across {len(by_sinner)} sinners")
+        return 0
+
+    if args.urls:
+        targets = [
+            (wiki_title_to_stem(url_to_page_title(u) if u.startswith("http") else u),
+             unquote(u))
             for u in args.urls
         ]
     else:
-        pages = [unquote(p) for p in DEFAULT_PAGES]
-        slug_pages = [(wiki_title_to_stem(p), p) for p in pages]
+        roster = fetch_identity_roster()
+        have = local_stems()
+        by_stem = {wiki_title_to_stem(t): t for t in roster}
+        orphans = sorted(have - set(by_stem))
+        missing = sorted(s for s in by_stem if s not in have)
 
-    sinner_additions: dict[str, list[str]] = {}
-    ok, fail = 0, 0
+        print(f"Live roster: {len(roster)} identities")
+        print(f"Local parsed: {len(have)}  |  missing: {len(missing)}  |  orphaned: {len(orphans)}")
+        if orphans:
+            print("  Orphaned (local file not on the wiki roster — renamed or removed):")
+            for stem in orphans:
+                print(f"    {stem}")
 
-    for stem, page in slug_pages:
+        selected = sorted(by_stem) if args.all else missing
+        targets = [(stem, by_stem[stem]) for stem in selected]
+
+    if args.dry_run:
+        for stem, page in targets:
+            print(f"WOULD FETCH: {stem}  <-  {page}")
+        print(f"\nDry run: {len(targets)} page(s) would be fetched")
+        return 0
+
+    if not targets:
+        print("\nNothing to fetch — local parses match the live roster.")
+        return 0
+
+    print(f"\nFetching {len(targets)} page(s)...")
+    ok, skipped = 0, 0
+    failures: list[tuple[str, str]] = []
+
+    for stem, page in targets:
+        if args.limit is not None and ok >= args.limit:
+            print(f"Reached --limit {args.limit}; {len(targets) - ok - skipped} still pending")
+            break
         if stem in PROTECTED_STEMS and not args.force:
             print(f"SKIP (protected): {stem}")
-            continue
-        out_path = PARSED_IDS_DIR / f"{stem}.md"
-        if out_path.exists() and not args.force:
-            print(f"SKIP (exists): {stem}")
+            skipped += 1
             continue
         try:
-            path = fetch_and_save(page, stem=stem)
-            print(f"OK: {path.name}")
+            fetch_and_save(page, stem=stem)
             ok += 1
-            if args.update_config:
-                from limbus_guides.ingestion.wiki_parser import _extract_idpage, _line_value
-
-                wt = fetch_wikitext(page)
-                body = _extract_idpage(wt)
-                sinner = _line_value(body, "sinner") or "Unknown"
-                sinner_additions.setdefault(sinner, []).append(stem)
+            print(f"OK   [{ok}/{len(targets)}] {stem}")
         except Exception as exc:
-            print(f"FAIL: {page} — {exc}")
-            fail += 1
+            failures.append((page, str(exc)))
+            print(f"FAIL {page} — {exc}")
 
-    if args.update_config and sinner_additions:
-        update_sinners_config(sinner_additions)
-        print("Updated config/sinners.json")
-
-    print(f"\nDone: {ok} saved, {fail} failed")
-    return 1 if fail else 0
+    print(f"\nDone: {ok} saved, {skipped} skipped, {len(failures)} failed")
+    if failures:
+        print("\nFailures:")
+        for page, err in failures:
+            print(f"  {page}: {err}")
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

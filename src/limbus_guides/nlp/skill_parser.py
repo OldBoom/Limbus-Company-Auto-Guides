@@ -4,9 +4,8 @@ from __future__ import annotations
 
 import re
 
-from limbus_guides.nlp.mechanic_signals import clean_effect_text
 from limbus_guides.ingestion.markdown_loader import parse_traits_list
-from limbus_guides.nlp.synergy import extract_unique_tremor_types
+from limbus_guides.nlp.mechanic_signals import clean_effect_text, extract_unique_tremor_types
 
 # ---------------------------------------------------------------------------
 # Compile-once regexes

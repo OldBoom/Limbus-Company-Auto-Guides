@@ -1,0 +1,131 @@
+{
+  "identity_slug": "Dawn_Office_Fixer_Sinclair",
+  "identity_name": "Dawn Office Fixer Sinclair",
+  "sinner": "Sinclair",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Clash Power",
+      "Volatile Passion"
+    ],
+    "status_effects": {
+      "Burn": 17
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 6,
+      "Clash Power": 1
+    },
+    "unique_mechanics": {
+      "Volatile Passion": 8,
+      "Blazing Sunset": 8,
+      "Dawn Office": 8,
+      "From Dawnbreak to Sunset": 8,
+      "High Noon": 8,
+      "Loneliness at High Noon": 8
+    },
+    "triggers": {
+      "On Hit": 8,
+      "Heads Hit": 1,
+      "On Use": 1,
+      "Attack End": 2,
+      "Clash Win": 2
+    },
+    "all_mechanics": {
+      "Burn": 17,
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 6,
+      "Clash Power": 1,
+      "Volatile Passion": 1
+    },
+    "identity_slug": "Dawn_Office_Fixer_Sinclair",
+    "key_status_effects": [
+      "Volatile Passion",
+      "High Noon",
+      "Loneliness at High Noon",
+      "Dawn Office",
+      "From Dawnbreak to Sunset",
+      "Blazing Sunset"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Dawn Office Fixer Sinclair is a Damage Dealer / Status Specialist / Support — **Burn** stacker — damage and clash scale with Burn on target. Scaling conditions: Coin Power +1 per 7 Burn (max +2).",
+  "playstyle_guide": "- Skills check **0+ Burn** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: Coin Power +1 per 7 Burn (max +2).\n\n**S1 — Fierce Charge** (BP 3, CP +7, x1): rolls — low 3, high 10 (Extremely Low).\n- Inflict 2 Burn; [Heads Hit] When in a Volatile E.G.O state, Reuse Coin (once per Skill)\n\n**S2 — Sunset Blade** (BP 5, CP +3, x3): rolls — low 5, high 14 (Slightly Low).\n- Peak output requires both conditions: If target has 4+ Burn, Clash Power +1 | [On Use] When in a Volatile E.G.O state, consume 5 SP.\n\n**S3 — Stigmatize** (BP 4, CP +7, x2): rolls — low 4, high 18 (Slightly High).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 7, max +2) — build stacks first.\n\n*↳ Alternate S3 — Blazing Strike* (BP 13, CP +15): rolls — low 13, high 28 (Extremely High).\n  - Deal +2.5% damage for every 1 Burn on target (max 100%)\n\nCombat passive — **Unstable Shell of Ego**: Turn Start: At 40+ SP, consume 20 SP to enter the Volatile E.G.O::Waxen Pinion state. (this 'Turn Start' effect does not activate repeate….\n  - If 2+ allies are defeated in a single turn, and if this unit's SP isn't at -45 at Turn End, reset SP to 20.\n  - then, enter the Volatile E.G.O::Waxen Pinion state.\n\nCombat passive — **Stigma Workshop Weaponry / Passion**: This unit inflicts +1 more Burn Potency and Count with its Skills (Activates 6 times per turn).\n  - When in a Volatile E.G.O state, and at 0+ SP, gain Coin Power +(SP/20). At 45 SP, gain Coin Power +3 instead.",
+  "team_suggestions": [
+    "Trait-dependent kit — [Dawn Office] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Dawn Office] ally on the team directly improves skill and Counter output.",
+    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [Dawn Office] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [Dawn Office] ally on the team directly improves skill and Counter output.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "'Featherstride Technique' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

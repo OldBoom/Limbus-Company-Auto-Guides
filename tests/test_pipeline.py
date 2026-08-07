@@ -220,6 +220,10 @@ def test_wild_hunt_heathcliff_edgar_family_faction_match():
 
 
 def test_embedding_team_suggestion_note_not_duplicated():
+    # Embedding picks are the only source of the "(similarity-based — verify)" note,
+    # so this test needs the optional `embeddings` extra installed.
+    pytest.importorskip("sentence_transformers")
+
     from limbus_guides.nlp.generation import _build_team_suggestions, generate_guide
     from limbus_guides.nlp.mechanics import build_mechanic_profile
     from limbus_guides.nlp.skill_parser import build_gameplan
@@ -694,7 +698,8 @@ def test_unique_mechanics_registry_sync_and_enrich():
     from limbus_guides.nlp.mechanics import build_mechanic_profile
     from limbus_guides.nlp.skill_parser import build_gameplan
 
-    result = sync_from_parsed_ids(write=True)
+    # write=False: running the suite must not mutate the tracked registry.
+    result = sync_from_parsed_ids(write=False)
     assert result["total"] >= 1
     discovered = load_discovered_mechanics()
     assert any("Unending Bereavement" == n or "Unrelenting Storm" == n for n in discovered)

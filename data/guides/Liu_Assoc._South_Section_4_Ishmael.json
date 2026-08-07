@@ -9,21 +9,33 @@
       "Base Power"
     ],
     "secondary_mechanics": [
-      "Atk Weight"
+      "Atk Weight",
+      "Plus Coin Boost"
     ],
+    "status_effects": {
+      "Burn": 16
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Plus Coin Boost": 1
+    },
     "triggers": {
       "On Hit": 9,
       "Attack End": 1
     },
     "all_mechanics": {
       "Burn": 16,
-      "Coin Power": 6,
       "Base Power": 4,
-      "Atk Weight": 3
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Plus Coin Boost": 1
     },
     "identity_slug": "Liu_Assoc._South_Section_4_Ishmael",
-    "key_status_effects": [],
-    "unique_mechanics": {}
+    "key_status_effects": []
   },
   "synergies": [
     {
@@ -43,37 +55,37 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
-      "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
-      "reason": "Mechanic similarity score: 0.97.",
-      "score": 1.0445891690254212,
-      "source": "embedding",
-      "faction_match": true
+      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
+      "teammate_name": "Dawn Office Fixer Sinclair",
+      "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
     },
     {
-      "teammate_slug": "Liu_Assoc._South_Section_4_Director_Rodion",
-      "teammate_name": "Liu Assoc. South Section 4 Director Rodion",
-      "reason": "Mechanic similarity score: 0.95.",
-      "score": 1.0248754692077637,
-      "source": "embedding",
-      "faction_match": true
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
     },
     {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
-      "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
-      "reason": "Mechanic similarity score: 0.90.",
-      "score": 0.9014293551445007,
-      "source": "embedding",
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
       "faction_match": false
     }
   ],
   "core_idea": "Liu Assoc. South Section 4 Ishmael is a Damage Dealer — **Burn** stacker — damage and clash scale with Burn on target. Scaling conditions: Coin Power +1 per 3 Burn (max +2); Coin Power +1 per 6 Burn (max +2).",
-  "playstyle_guide": "- Skills check **6+ Burn** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Burn (max +2).\n\n**S1 — Red Kick** (BP 4, CP +3, x2): rolls — low 4, high 10 (Extremely Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 3, max +2) — build stacks first.\n\n**S2 — Frontal Assault** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 6, max +2) — build stacks first.\n- If target has 6+ Burn, inflict 2 Burn Count\n\n**S3 — Inner Gate Elbow Strike** (BP 3, CP +3, x4): rolls — low 3, high 15 (Low / Average stacked).\n- If target has 6+ Burn and Burn Count, deal +50% damage\n\nCombat passive — **Intense Blaze**: 1 ally with the slowest Speed deals +5% Blunt damage for every 3 Burn Count on target. (Max 15%).",
+  "playstyle_guide": "- Skills check **6+ Burn** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Burn (max +2).\n\n**S1 — Red Kick** (BP 4, CP +3, x2): rolls — low 4, high 10 (Extremely Low / High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 3, max +2) — build stacks first.\n\n**S2 — Frontal Assault** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 6, max +2) — build stacks first.\n- If target has 6+ Burn, inflict 2 Burn Count\n\n**S3 — Inner Gate Elbow Strike** (BP 3, CP +3, x4): rolls — low 3, high 15 (Slightly Low / Slightly High stacked).\n- If target has 6+ Burn and Burn Count, deal +50% damage\n\nCombat passive — **Intense Blaze**: 1 ally with the slowest Speed deals +5% Blunt damage for every 3 Burn Count on target. (Max 15%).",
   "team_suggestions": [
     "**Burn** stacker — damage and clash scale with Burn on target. Same-faction teammates provide additional passive synergy where available.",
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
     "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
-    "- **Liu Assoc. South Section 5 Hong Lu**: Mechanic similarity score: 0.97. *(similarity-based — verify)*"
+    "- **Dawn Office Fixer Sinclair**: 'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
   ],
   "team_suggestion_intro": "**Burn** stacker — damage and clash scale with Burn on target. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -90,10 +102,10 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
-      "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
-      "reason": "Mechanic similarity score: 0.97.",
-      "source": "embedding"
+      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
+      "teammate_name": "Dawn Office Fixer Sinclair",
+      "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "source": "rule"
     }
   ],
   "generator": "template_smart",

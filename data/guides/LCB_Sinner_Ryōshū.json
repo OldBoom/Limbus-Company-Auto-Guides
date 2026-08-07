@@ -1,0 +1,50 @@
+{
+  "identity_slug": "LCB_Sinner_Ryōshū",
+  "identity_name": "LCB Sinner Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Base Power",
+      "Coin Power",
+      "Atk Weight"
+    ],
+    "secondary_mechanics": [
+      "Poise",
+      "Slash DMG Up"
+    ],
+    "status_effects": {
+      "Poise": 2
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Slash DMG Up": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 2,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Poise": 2,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Slash DMG Up": 1
+    },
+    "identity_slug": "LCB_Sinner_Ryōshū",
+    "key_status_effects": []
+  },
+  "synergies": [],
+  "core_idea": "LCB Sinner Ryōshū is a Support applying sustained Base Power, Coin Power pressure with consistent skill stats. Support passive (**Hustle**) buffs teammates.",
+  "playstyle_guide": "- **Hustle** — align allies' actions with the passive's trigger condition.\n\n**S1 — Paint** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Splatter** (BP 4, CP +5, x2): rolls — low 4, high 14 (Slightly Low / High stacked).\n- If target previously took damage this turn, deal +30% damage\n\n**S3 — Brushstroke** (BP 5, CP +3, x3): rolls — low 5, high 14 (Slightly Low).",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- Pair with identities whose support passives inflict statuses this kit stacks or scales off."
+  ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

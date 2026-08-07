@@ -11,19 +11,27 @@
     "secondary_mechanics": [
       "Atk Weight"
     ],
+    "status_effects": {
+      "Bleed": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
     "triggers": {
       "Heads Hit": 5,
       "On Evade": 1
     },
     "all_mechanics": {
       "Bleed": 3,
-      "Coin Power": 5,
       "Base Power": 4,
+      "Coin Power": 5,
       "Atk Weight": 3
     },
     "identity_slug": "Tingtang_Gang_Gangleader_Hong_Lu",
-    "key_status_effects": [],
-    "unique_mechanics": {}
+    "key_status_effects": []
   },
   "synergies": [
     {
@@ -48,22 +56,6 @@
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Ryōshū",
-      "teammate_name": "Kurokumo Clan Wakashu Ryōshū",
-      "reason": "Mechanic similarity score: 0.90.",
-      "score": 0.9029821157455444,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "R_Corp._4th_Pack_Rhino_Meursault",
-      "teammate_name": "R Corp. 4th Pack Rhino Meursault",
-      "reason": "Mechanic similarity score: 0.88.",
-      "score": 0.8834807872772217,
-      "source": "embedding",
       "faction_match": false
     }
   ],

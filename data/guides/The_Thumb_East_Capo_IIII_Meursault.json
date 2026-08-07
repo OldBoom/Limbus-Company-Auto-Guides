@@ -11,26 +11,46 @@
     "secondary_mechanics": [
       "Base Power",
       "Atk Weight",
-      "Unbreakable Coin",
+      "Ammo",
       "Final Power",
-      "Clash Power"
+      "Tremor Burst"
     ],
+    "status_effects": {
+      "Burn": 16,
+      "Tremor": 20
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 5,
+      "Final Power": 3,
+      "Clash Power": 1
+    },
+    "unique_mechanics": {
+      "Tremor Burst": 3,
+      "Amplitude Conversion": 2,
+      "Tremor — Scorch": 2,
+      "Ammo": 5,
+      "Reload": 1
+    },
     "triggers": {
       "On Hit": 23
     },
     "all_mechanics": {
-      "Unbreakable Coin": 3,
       "Burn": 16,
-      "Tremor": 25,
-      "Clash Power": 1,
-      "Coin Power": 7,
+      "Tremor": 20,
       "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 5,
       "Final Power": 3,
-      "Atk Weight": 5
+      "Clash Power": 1,
+      "Tremor Burst": 3,
+      "Amplitude Conversion": 2,
+      "Tremor — Scorch": 2,
+      "Ammo": 5
     },
     "identity_slug": "The_Thumb_East_Capo_IIII_Meursault",
-    "key_status_effects": [],
-    "unique_mechanics": {}
+    "key_status_effects": []
   },
   "synergies": [
     {
@@ -43,45 +63,49 @@
       "unique_tremor_match": true
     },
     {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "score": 0.9,
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 1.0699999999999998,
       "source": "rule",
-      "faction_match": false
+      "faction_match": false,
+      "unique_tremor_match": true
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
-      "score": 0.9,
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 1.0699999999999998,
       "source": "rule",
-      "faction_match": false
+      "faction_match": false,
+      "unique_tremor_match": true
     },
     {
-      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
-      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
-      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "score": 0.9,
+      "teammate_slug": "Dawn_Office_Fixer_Faust",
+      "teammate_name": "Dawn Office Fixer Faust",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
       "source": "rule",
-      "faction_match": false
+      "faction_match": false,
+      "unique_tremor_match": true
     },
     {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
-      "score": 0.9,
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
+      "teammate_name": "The House of Spiders: The Thumb Nursefather Rodion",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
       "source": "rule",
-      "faction_match": false
+      "faction_match": false,
+      "unique_tremor_match": true
     }
   ],
   "core_idea": "The Thumb East Capo IIII Meursault is a Damage Dealer / Status Specialist — **Tigermark Rounds** damage carry who applies **Tremor — Scorch** and **Burn** on hits, spending ammo for burst on S3. Scaling conditions: Final Power +1 per 4 (Burn + Tremor) (max +3); Final Power +1 per 4 (Burn + Tremor) (max +4). Equipping defense once reloads **Savage Tigermark Round** and unlocks the upgraded S3.",
-  "playstyle_guide": "- **Tremor — Scorch** — Burst deals **Wrath** damage from Tremor and Burn Potency; consumes **Burn Count**.\n- Equipping a defense skill for the first time this encounter reloads Savage Tigermark Round and unlocks the upgraded skill set — plan when you switch to defense to trigger the reload.\n- Manage **Tigermark Rounds** — multiple skills spend limited ammo on coin flips. Preserve **Tigermark Rounds** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: Final Power +1 per 4 (Burn + Tremor) (max +3).\n\n**S1 — Double Slash - Blast ['''爆''']** (BP 4, CP +4, x2): rolls — low 4, high 12 (High).\n- Final Power +1 for every 4 (Burn + Tremor) on the main target (max 3)\n- Final Power +1 per 4 (Burn + Tremor) (max +3)\n\n**S2 — Triple Slash - Blast ['''爆''']** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- Final Power +1 for every 4 (Burn + Tremor) on the main target (max 4)\n- Final Power +1 per 4 (Burn + Tremor) (max +4)\n\n**S3 — Tanglecleaver ['''快刀亂麻''']** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly Low stacked).\n- If this unit has Savage Tigermark Round, activate 'Savage Tigerslayer's Perfected Flurry of Blades' instead ; - [Before Use] If this unit does not have Savage Tigermark Round, cancel activation ; Coin Power +1 for every 8 (Burn + Tremor) on the main target, (max 2)\n- **Coin Power** scales with **(Burn + Tremor)** (+1 per 8, max +2) — build stacks first.\n- triggers Amplitude Conversion into Tremor — Scorch\n- Spend 1 Tigermark Round; [On Hit] Inflict +2 Tremor Count; [On Hit] Inflict +2 Burn Count\n\n*↳ Alternate S3 — Savage Tigerslayer's Perfected Flurry of Blades ['''超絕猛虎殺擊亂斬''']* (BP 3, CP +3): rolls — low 3, high 18 (High).\n\nCombat passive — **Chachihu ['''揷翅虎''']**: Always Active: begin Encounters with 12 Tigermark Round.\n  - When flipping a Coin that consumes Tigermark Round or Savage Tigermark Round: while not having those 'Unique Ammo' does not cancel this u….\n  - If this unit equipped Defense Skills for the first time in this Encounter, or if this unit spent all of his Tigermark Round, or if this u….\n\nCombat passive — **Tiantui Star's Blade ['''天退星刀''']**: When this unit has Tigermark Round:.\n  - At 1+ Tigermark Round, convert all Coins of 'Tanglecleaver' into Unbreakable Coins.\n  - Skill Coins that spend Tigermark Round gain +1 Power and deal +10% damage (activates only as long as the Coin has Rounds left to spend).\n\nDefense skill — **Counter: I'm Burning Up.**: [Clashable Counter].\n  - Final Power +1 for every 4 (Burn + Tremor) on the main target (max 2).\n  - If Tigermark Round (or Savage Tigermark Round) is at 0, Clash Power +2.",
+  "playstyle_guide": "- **Tremor — Scorch** — Burst deals **Wrath** damage from Tremor and Burn Potency; consumes **Burn Count**.\n- Equipping a defense skill for the first time this encounter reloads Savage Tigermark Round and unlocks the upgraded skill set — plan when you switch to defense to trigger the reload.\n- Manage **Tigermark Rounds** — multiple skills spend limited ammo on coin flips. Preserve **Tigermark Rounds** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: Final Power +1 per 4 (Burn + Tremor) (max +3).\n\n**S1 — Double Slash - Blast ['''爆''']** (BP 4, CP +4, x2): rolls — low 4, high 12 (High).\n- Final Power +1 for every 4 (Burn + Tremor) on the main target (max 3)\n- Final Power +1 per 4 (Burn + Tremor) (max +3)\n\n**S2 — Triple Slash - Blast ['''爆''']** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Final Power +1 for every 4 (Burn + Tremor) on the main target (max 4)\n- Final Power +1 per 4 (Burn + Tremor) (max +4)\n\n**S3 — Tanglecleaver ['''快刀亂麻''']** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- If this unit has Savage Tigermark Round, activate 'Savage Tigerslayer's Perfected Flurry of Blades' instead ; - [Before Use] If this unit does not have Savage Tigermark Round, cancel activation ; Coin Power +1 for every 8 (Burn + Tremor) on the main target, (max 2)\n- **Coin Power** scales with **(Burn + Tremor)** (+1 per 8, max +2) — build stacks first.\n- triggers Amplitude Conversion into Tremor — Scorch\n- Spend 1 Tigermark Round; [On Hit] Inflict +2 Tremor Count; [On Hit] Inflict +2 Burn Count\n\n*↳ Alternate S3 — Savage Tigerslayer's Perfected Flurry of Blades ['''超絕猛虎殺擊亂斬''']* (BP 3, CP +3): rolls — low 3, high 18 (Slightly High).\n\nCombat passive — **Chachihu ['''揷翅虎''']**: Always Active: begin Encounters with 12 Tigermark Round.\n  - When flipping a Coin that consumes Tigermark Round or Savage Tigermark Round: while not having those 'Unique Ammo' does not cancel this u….\n  - If this unit equipped Defense Skills for the first time in this Encounter, or if this unit spent all of his Tigermark Round, or if this u….\n\nCombat passive — **Tiantui Star's Blade ['''天退星刀''']**: When this unit has Tigermark Round:.\n  - At 1+ Tigermark Round, convert all Coins of 'Tanglecleaver' into Unbreakable Coins.\n  - Skill Coins that spend Tigermark Round gain +1 Power and deal +10% damage (activates only as long as the Coin has Rounds left to spend).\n\nDefense skill — **Counter: I'm Burning Up.**: [Clashable Counter].\n  - Final Power +1 for every 4 (Burn + Tremor) on the main target (max 2).\n  - If Tigermark Round (or Savage Tigermark Round) is at 0, Clash Power +2.",
   "team_suggestions": [
     "**Tremor — Scorch** control. Same-faction teammates provide additional passive synergy where available.",
     "- **The Thumb East Soldato II Sinclair**: Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
-    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target."
   ],
   "team_suggestion_intro": "**Tremor — Scorch** control. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -92,15 +116,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "source": "rule"
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "source": "rule"
     }
   ],

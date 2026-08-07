@@ -6,99 +6,61 @@
     "primary_mechanics": [
       "Talisman",
       "Rupture",
-      "Coin Power"
+      "Base Power"
     ],
     "secondary_mechanics": [
-      "Base Power",
+      "Coin Power",
       "Atk Weight"
     ],
+    "status_effects": {
+      "Rupture": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Talisman": 12
+    },
     "triggers": {
       "On Hit": 7,
       "Heads Hit": 1,
       "On Use": 1
     },
     "all_mechanics": {
-      "Talisman": 10,
       "Rupture": 6,
-      "Coin Power": 4,
       "Base Power": 4,
-      "Atk Weight": 3
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Talisman": 10
     },
     "identity_slug": "Lobotomy_E.G.O_Red_Sheet_Sinclair",
-    "key_status_effects": [],
-    "unique_mechanics": {
-      "Talisman": 12
-    }
+    "key_status_effects": []
   },
   "synergies": [
     {
-      "teammate_slug": "Seven_Assoc._South_Section_4_Heathcliff",
-      "teammate_name": "Seven Assoc. South Section 4 Heathcliff",
-      "reason": "Mechanic similarity score: 0.87.",
-      "score": 0.8739402294158936,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
-      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
-      "reason": "Mechanic similarity score: 0.86.",
-      "score": 0.9302139353752137,
-      "source": "embedding",
-      "faction_match": true
-    },
-    {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
-      "teammate_name": "Kurokumo Clan Wakashu Rodion",
-      "reason": "Mechanic similarity score: 0.85.",
-      "score": 0.8536242842674255,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Heathcliff",
-      "teammate_name": "Kurokumo Clan Wakashu Heathcliff",
-      "reason": "Mechanic similarity score: 0.85.",
-      "score": 0.8509650230407715,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
-      "teammate_name": "Blade Lineage Salsu Yi Sang",
-      "reason": "Mechanic similarity score: 0.85.",
-      "score": 0.8501756191253662,
-      "source": "embedding",
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
       "faction_match": false
     }
   ],
   "core_idea": "Lobotomy E.G.O::Red Sheet Sinclair is a Status Specialist — **Rupture** focus.",
-  "playstyle_guide": "- Skills check **3+ Rupture** — favour those coins when stacked.\n\n**S1 — Magnify Wound** (BP 5, CP +5, x1): rolls — low 5, high 10 (Extremely Low).\n- Peak output requires both conditions: Inflict 2 Rupture | [Heads Hit] If target has 5+ Rupture, gain 1 Talisman.\n\n**S2 — Proliferating Talismans** (BP 4, CP +3, x3): rolls — low 4, high 13 (Extremely Low).\n- Peak output requires both conditions: Gain 1 Talisman | [On Hit] If target has 3+ Rupture, gain 1 Talisman.\n\n**S3 — Rupturing Talisman** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average).\n- If target has Talisman, inflict +1 Rupture Count\n\nCombat passive — **Wishing Talisman**: 1 ally with the highest current HP inflicts +1 more Rupture Potency with Attack and Counter Skills.",
+  "playstyle_guide": "- Skills check **3+ Rupture** — favour those coins when stacked.\n\n**S1 — Magnify Wound** (BP 5, CP +5, x1): rolls — low 5, high 10 (Extremely Low).\n- Peak output requires both conditions: Inflict 2 Rupture | [Heads Hit] If target has 5+ Rupture, gain 1 Talisman.\n\n**S2 — Proliferating Talismans** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low).\n- Peak output requires both conditions: Gain 1 Talisman | [On Hit] If target has 3+ Rupture, gain 1 Talisman.\n\n**S3 — Rupturing Talisman** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average).\n- If target has Talisman, inflict +1 Rupture Count\n\nCombat passive — **Wishing Talisman**: 1 ally with the highest current HP inflicts +1 more Rupture Potency with Attack and Counter Skills.",
   "team_suggestions": [
     "**Rupture** focus.",
-    "- **Seven Assoc. South Section 4 Heathcliff**: Mechanic similarity score: 0.87. *(similarity-based — verify)*",
-    "- **Lobotomy E.G.O::The Sword Sharpened with Tears Rodion**: Mechanic similarity score: 0.86. *(similarity-based — verify)*",
-    "- **Kurokumo Clan Wakashu Rodion**: Mechanic similarity score: 0.85. *(similarity-based — verify)*"
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills."
   ],
   "team_suggestion_intro": "**Rupture** focus.",
   "team_suggestion_picks": [
     {
-      "teammate_slug": "Seven_Assoc._South_Section_4_Heathcliff",
-      "teammate_name": "Seven Assoc. South Section 4 Heathcliff",
-      "reason": "Mechanic similarity score: 0.87.",
-      "source": "embedding"
-    },
-    {
-      "teammate_slug": "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
-      "teammate_name": "Lobotomy E.G.O::The Sword Sharpened with Tears Rodion",
-      "reason": "Mechanic similarity score: 0.86.",
-      "source": "embedding"
-    },
-    {
-      "teammate_slug": "Kurokumo_Clan_Wakashu_Rodion",
-      "teammate_name": "Kurokumo Clan Wakashu Rodion",
-      "reason": "Mechanic similarity score: 0.85.",
-      "source": "embedding"
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills.",
+      "source": "rule"
     }
   ],
   "generator": "template_smart",

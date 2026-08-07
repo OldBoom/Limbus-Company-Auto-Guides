@@ -101,19 +101,13 @@ After registry or regex changes, `clear_mechanics_cache()` reloads the spaCy Ent
 
 ---
 
-## Reference files (evaluation)
+## Reference files (retired)
 
-- Path: `data/evaluation/references/<slug>.txt`
-- Format: 2–4 sentences of plain prose
-- Sentence 1: identity name + role + primary mechanic
-- Sentences 2–3: resource loop / state transition
-- Sentence 4 (optional): passive or synergy note
-
-**Do not** generate references from the pipeline guide output (circular evaluation).
-`add_identity.py` prints a wiki excerpt and a suggested LLM prompt; paste the result
-at the interactive prompt (same workflow used for the existing roster references).
-
-Flags: `--ref-file PATH`, `--skip-ref`.
+`data/evaluation/references/<slug>.txt` holds 51 hand-written 2–4 sentence summaries from
+the graded submission's ROUGE-L set. The evaluation tooling has been removed and
+`add_identity.py` no longer prompts for a reference, so new identities do not need one.
+The existing files are kept as human-written ground truth — useful as few-shot examples
+if guide generation ever moves to an LLM.
 
 ---
 
@@ -175,8 +169,6 @@ Output: `data/wiki_audit_report.json` + stdout summary. Look for:
 | `--force-protected` | Allow overwriting protected stems |
 | `--portrait PATH` | Copy portrait PNG |
 | `--skip-portrait` | Skip portrait step |
-| `--skip-ref` | Skip reference prompt |
-| `--ref-file PATH` | Use pre-written reference |
 | `--add-sinner NAME` | Override sinner inference |
 | `--confirm-mechanics` | Prompt before each mechanic patch |
 | `--ollama` | LLM guide generation (requires Ollama) |

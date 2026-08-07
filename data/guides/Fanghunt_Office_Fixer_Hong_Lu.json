@@ -1,0 +1,115 @@
+{
+  "identity_slug": "Fanghunt_Office_Fixer_Hong_Lu",
+  "identity_name": "Fanghunt Office Fixer Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Coin Power",
+      "Bleed"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Defense Level Down",
+      "HP Healing Down"
+    ],
+    "status_effects": {
+      "Rupture": 21,
+      "Bleed": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 9,
+      "Atk Weight": 3,
+      "Defense Level Down": 1
+    },
+    "unique_mechanics": {
+      "HP Healing Down": 8
+    },
+    "triggers": {
+      "On Hit": 6,
+      "On Use": 2,
+      "Heads Hit": 2,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Rupture": 21,
+      "Bleed": 6,
+      "Base Power": 4,
+      "Coin Power": 9,
+      "Atk Weight": 3,
+      "Defense Level Down": 1,
+      "HP Healing Down": 1
+    },
+    "identity_slug": "Fanghunt_Office_Fixer_Hong_Lu",
+    "key_status_effects": [
+      "HP Healing Down"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 6+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Fanghunt Office Fixer Hong Lu is a Status Specialist — **Rupture** focus.",
+  "playstyle_guide": "- Skills check **6+ Rupture** — favour those coins when stacked.\n\n**S1 — Slam** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- If target has 6+ Rupture, Coin Power +1\n\n**S2 — Bonecrusher** (BP 4, CP +5, x2): rolls — low 4, high 14 (Slightly Low).\n\n**S3 — A Cheerful Hunt's End** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low).\n- executes weakened targets — reuses coin against enemies below 30% HP\n- If target has 15+ Rupture, or has less than 30% HP, Reuse this Coin (once per Skill)\n\nCombat passive — **How to Hunt Cheerfully**: If the target is a <>, <>, or if the target has 10+ Rupture, deal +10% damage.\n  - On Skill Use, if this unit has Bleed, inflict 3 Rupture On Hit (2 times per turn).\n\nCombat passive — **Bloodfiend Hunting Manual - Styptics**: Combat Start: 1 ally that has the highest sum of Bleed Potency and Count loses 2 Bleed Count.\n  - When 1 ally with the fastest Speed hits an enemy that has Rupture, inflict 1 Defense Level Down (2 times per turn).\n\nDefense skill — **Counter: Emergency Styptics**: [Combat Start] Lose 2 Bleed Potency on self (3 times per turn. If Bleed Potency drops to 0 or less, the Bleed effect expires).",
+  "team_suggestions": [
+    "**Rupture** focus.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 6+ Rupture thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Rupture** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 6+ Rupture thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

@@ -6,35 +6,83 @@
     "primary_mechanics": [
       "Tremor",
       "Coin Power",
-      "Clash Power"
+      "Base Power"
     ],
     "secondary_mechanics": [
-      "Base Power",
+      "Clash Power",
+      "Borrowed Time",
       "Atk Weight",
-      "Bind"
+      "Bind",
+      "Tremor Burst"
     ],
+    "status_effects": {
+      "Tremor": 19,
+      "Bind": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 4
+    },
+    "unique_mechanics": {
+      "Tremor Burst": 1,
+      "Time Moratorium": 1,
+      "Borrowed Time": 4,
+      "Amplitude Conversion": 1,
+      "Tremor — Chain": 1
+    },
     "triggers": {
       "On Use": 9,
       "On Hit": 9,
       "Combat Start": 1
     },
     "all_mechanics": {
-      "Tremor": 21,
+      "Tremor": 19,
       "Bind": 1,
-      "Clash Power": 4,
-      "Coin Power": 5,
       "Base Power": 4,
-      "Atk Weight": 3
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 4,
+      "Tremor Burst": 1,
+      "Time Moratorium": 1,
+      "Borrowed Time": 4,
+      "Amplitude Conversion": 1,
+      "Tremor — Chain": 1
     },
     "identity_slug": "T_Corp._Class_3_Collection_Staff_Don_Quixote",
-    "key_status_effects": [],
-    "unique_mechanics": {}
+    "key_status_effects": []
   },
   "synergies": [
+    {
+      "teammate_slug": "T_Corp._Class_3_VDCU_Staff_Outis",
+      "teammate_name": "T Corp. Class 3 VDCU Staff Outis",
+      "reason": "Shares the same unique Tremor type (Tremor — Chain) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
     {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -45,43 +93,25 @@
       "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Zwei_Assoc._West_Section_3_Ishmael",
-      "teammate_name": "Zwei Assoc. West Section 3 Ishmael",
-      "reason": "Mechanic similarity score: 0.94.",
-      "score": 0.936448335647583,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
-      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
-      "reason": "Mechanic similarity score: 0.90.",
-      "score": 0.9000825881958008,
-      "source": "embedding",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
-      "teammate_name": "The Thumb East Soldato II Sinclair",
-      "reason": "Mechanic similarity score: 0.88.",
-      "score": 0.8816834688186646,
-      "source": "embedding",
       "faction_match": false
     }
   ],
   "core_idea": "T Corp. Class 3 Collection Staff Don Quixote is a Tank — **Tremor — Chain** control. Scaling conditions: Clash Power +1 per 6 Tremor (max +2).",
-  "playstyle_guide": "- **Tremor — Chain** — enemy loses **Clash Power** at high Tremor Potency on target.\n- **Time Moratorium** — time the stored-damage pop with your Tremor stacks.\n- Front-load **+8 Aggro** on the slot you want enemies to target.\n- **Counter: I Shall Summon the Time** grants 4 **Borrowed Time at Turn End** at Combat Start — use the defense slot to prep buffs before your main attacks.\n- Reach scaling conditions before committing S3: Clash Power +1 per 6 Tremor (max +2).\n\n**S1 — Let Us Prepare to Collect** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n- Gain +4 Aggro to this Skill Slot next turn\n\n**S2 — T Corp. Accelerated Amputator** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- Gain +3 Tremor Count; [On Use] Clash Power +1 for every 6 Tremor on target (max 2)\n\n**S3 — I Command Thee, Halt!** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- triggers Amplitude Conversion into Tremor — Scorch\n\nCombat passive — **Golden Time - Extracting**: Turn End: If this unit's HP is between 10% ~ 20%, instantly heal 80% of this unit's max HP, and recover from Stagger. (once per Encounter).\n  - When this unit loses Borrowed Time, gain +8 Aggro to one of this unit's Skill Slots next turn.\n\nCombat passive — **T Corp. Physics Distortion Field**: When 1 ally with the slowest Speed takes damage from enemies that have Tremor, take -10% damage.\n\nDefense skill — **Counter: I Shall Summon the Time**: [Combat Start] If this unit is not in a Borrowed Time state, gain 4 Borrowed Time at Turn End (once per turn).\n  - [On Use] For this turn: when hit by an enemy, inflict 3 Tremor on target next turn (6 times per turn).",
+  "playstyle_guide": "- **Tremor — Chain** — enemy loses **Clash Power** at high Tremor Potency on target.\n- **Time Moratorium** — time the stored-damage pop with your Tremor stacks.\n- Front-load **+8 Aggro** on the slot you want enemies to target.\n- **Counter: I Shall Summon the Time** grants 4 **Borrowed Time at Turn End** at Combat Start — use the defense slot to prep buffs before your main attacks.\n- Reach scaling conditions before committing S3: Clash Power +1 per 6 Tremor (max +2).\n\n**S1 — Let Us Prepare to Collect** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n- Gain +4 Aggro to this Skill Slot next turn\n\n**S2 — T Corp. Accelerated Amputator** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- Gain +3 Tremor Count; [On Use] Clash Power +1 for every 6 Tremor on target (max 2)\n\n**S3 — I Command Thee, Halt!** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- **Clash Power** scales with **Tremor** (+1 per 6, max +2) — build stacks first.\n- triggers Amplitude Conversion into Tremor — Scorch\n\nCombat passive — **Golden Time - Extracting**: Turn End: If this unit's HP is between 10% ~ 20%, instantly heal 80% of this unit's max HP, and recover from Stagger. (once per Encounter).\n  - When this unit loses Borrowed Time, gain +8 Aggro to one of this unit's Skill Slots next turn.\n\nCombat passive — **T Corp. Physics Distortion Field**: When 1 ally with the slowest Speed takes damage from enemies that have Tremor, take -10% damage.\n\nDefense skill — **Counter: I Shall Summon the Time**: [Combat Start] If this unit is not in a Borrowed Time state, gain 4 Borrowed Time at Turn End (once per turn).\n  - [On Use] For this turn: when hit by an enemy, inflict 3 Tremor on target next turn (6 times per turn).",
   "team_suggestions": [
     "**Tremor — Chain** control.",
+    "- **T Corp. Class 3 VDCU Staff Outis**: Shares the same unique Tremor type (Tremor — Chain) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
-    "- **Zwei Assoc. West Section 3 Ishmael**: Mechanic similarity score: 0.94. *(similarity-based — verify)*"
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills."
   ],
   "team_suggestion_intro": "**Tremor — Chain** control.",
   "team_suggestion_picks": [
+    {
+      "teammate_slug": "T_Corp._Class_3_VDCU_Staff_Outis",
+      "teammate_name": "T Corp. Class 3 VDCU Staff Outis",
+      "reason": "Shares the same unique Tremor type (Tremor — Chain) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "source": "rule"
+    },
     {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
@@ -89,16 +119,10 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "source": "rule"
-    },
-    {
-      "teammate_slug": "Zwei_Assoc._West_Section_3_Ishmael",
-      "teammate_name": "Zwei Assoc. West Section 3 Ishmael",
-      "reason": "Mechanic similarity score: 0.94.",
-      "source": "embedding"
     }
   ],
   "generator": "template_smart",

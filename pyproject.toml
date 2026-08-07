@@ -13,17 +13,18 @@ dependencies = [
     "requests>=2.31.0",
     "spacy>=3.7.0",
     "scikit-learn>=1.4.0",
-    "sentence-transformers>=2.6.0",
     "numpy>=1.26.0",
     "streamlit>=1.32.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.3.0"]
-eval = ["rouge-score>=0.1.2", "bert-score>=0.3.13"]
+# Embedding-similarity teammates are a ranked-last fallback behind the synergy rules.
+# They pull in torch (~2GB); the pipeline runs without them via `--no-embeddings`.
+embeddings = ["sentence-transformers>=2.6.0"]
 
 [project.scripts]
-limbus-pipeline = "limbus_guides.pipeline.run:run_pipeline"
+limbus-pipeline = "limbus_guides.pipeline.run:main"
 limbus-dashboard = "limbus_guides.dashboard.app:main"
 
 [tool.setuptools.packages.find]

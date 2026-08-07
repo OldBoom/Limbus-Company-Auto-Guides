@@ -2,10 +2,56 @@
 
 from __future__ import annotations
 
+import os
 import re
+import warnings
 
-from limbus_guides.nlp.mechanics import build_mechanic_profile
-from limbus_guides.nlp.similarity import top_similar
+from limbus_guides.nlp.mechanic_signals import (
+    extract_unique_tremor_types,
+    format_unique_tremor_label,
+)
+
+# Re-exported for callers that historically imported them from this module.
+__all__ = [
+    "GENERIC_TRAITS",
+    "extract_unique_tremor_types",
+    "find_synergy_teammates",
+    "format_unique_tremor_label",
+]
+
+_EMBEDDINGS_DISABLED_ENV = "LIMBUS_NO_EMBEDDINGS"
+_embedding_warning_shown = False
+
+
+def embeddings_enabled(override: bool | None = None) -> bool:
+    """Whether to compute embedding-similarity teammates.
+
+    Embeddings rank below every rule and only surface when fewer than three rules
+    fire, so they are optional — skipping them avoids the sentence-transformers
+    (and torch) dependency entirely. Set ``LIMBUS_NO_EMBEDDINGS=1`` to turn them off.
+    """
+    if override is not None:
+        return override
+    return os.environ.get(_EMBEDDINGS_DISABLED_ENV, "").lower() not in ("1", "true", "yes")
+
+
+def _similar_pairs(slug: str, roster: dict[str, dict], k: int) -> list[tuple[str, float]]:
+    """Embedding neighbours, or [] when sentence-transformers is unavailable."""
+    global _embedding_warning_shown
+    try:
+        from limbus_guides.nlp.similarity import top_similar
+
+        return top_similar(slug, roster, k=k)
+    except ImportError as exc:  # sentence-transformers / torch not installed
+        if not _embedding_warning_shown:
+            _embedding_warning_shown = True
+            warnings.warn(
+                f"Embedding similarity unavailable ({exc}); using rule-based synergies only. "
+                f"Install sentence-transformers or set {_EMBEDDINGS_DISABLED_ENV}=1 to silence.",
+                RuntimeWarning,
+                stacklevel=2,
+            )
+        return []
 
 SUPPORT_PASSIVE_RE = re.compile(
     r"(inflict|apply|gain|grant).{0,60}"
@@ -22,16 +68,6 @@ SCALES_OFF_RE = re.compile(
 )
 SCALES_NEG_EFFECT_RE = re.compile(
     r"for every type of negative effect",
-    re.IGNORECASE,
-)
-
-# Named unique Tremor subtypes (e.g. Tremor — Scorch, Tremor - Decay)
-_UNIQUE_TREMOR_SUBTYPE_RE = re.compile(
-    r"Tremor\s*[-—]\s*([A-Za-z]+)",
-    re.IGNORECASE,
-)
-_UNIQUE_TREMOR_GENERIC_RE = re.compile(
-    r"['\"]Unique Tremor['\"]|Unique Tremor",
     re.IGNORECASE,
 )
 
@@ -138,15 +174,6 @@ def _faction_match(identity: dict, other: dict) -> bool:
     return my_faction is not None and my_faction == _faction_for_identity(other)
 
 
-def extract_unique_tremor_types(text: str) -> set[str]:
-    """Return named unique Tremor subtypes (e.g. Scorch, Decay) present in kit text."""
-    return {m.group(1).title() for m in _UNIQUE_TREMOR_SUBTYPE_RE.finditer(text)}
-
-
-def format_unique_tremor_label(subtype: str) -> str:
-    return f"Tremor — {subtype}"
-
-
 def _unique_tremor_overlap(text_a: str, text_b: str) -> set[str]:
     return extract_unique_tremor_types(text_a) & extract_unique_tremor_types(text_b)
 
@@ -231,6 +258,7 @@ def find_synergy_teammates(
     roster: dict[str, dict],
     mechanic_profiles: dict[str, dict] | None = None,
     k: int = 5,
+    use_embeddings: bool | None = None,
 ) -> list[dict]:
     slug = identity["slug"]
     text = identity.get("raw_markdown", "")
@@ -419,11 +447,12 @@ def find_synergy_teammates(
                 entry["score"] = max(entry["score"], _UNIQUE_TREMOR_RULE_SCORE) + _UNIQUE_TREMOR_MATCH_BONUS
                 entry["unique_tremor_match"] = True
 
-    # Embedding-based entries are NOT included in team_suggestions
-    # (cosine similarity is noise with a small roster).
-    # They are kept in the synergy JSON for evaluation/debug purposes only.
+    # Embedding entries rank below every rule, so they only reach the guide text as a
+    # fallback when fewer than three rules fire — cosine similarity is close to noise on
+    # a small roster. `generation.embedding_verify_note` tags those picks as unverified.
     embedding_entries: list[dict] = []
-    for other_slug, sim_score in top_similar(slug, roster, k=k * 2):
+    pairs = _similar_pairs(slug, roster, k * 2) if embeddings_enabled(use_embeddings) else []
+    for other_slug, sim_score in pairs:
         if other_slug in seen:
             continue
         other = roster[other_slug]

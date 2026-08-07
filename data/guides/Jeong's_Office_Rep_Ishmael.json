@@ -1,0 +1,139 @@
+{
+  "identity_slug": "Jeong's_Office_Rep_Ishmael",
+  "identity_name": "Jeong's Office Rep Ishmael",
+  "sinner": "Ishmael",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bright — 光 —",
+      "Tremor",
+      "Sinking"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Base Power",
+      "Atk Weight",
+      "Discard",
+      "Amplitude Conversion"
+    ],
+    "status_effects": {
+      "Tremor": 14,
+      "Sinking": 12
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 4
+    },
+    "unique_mechanics": {
+      "Discard": 8,
+      "Bright — 光 —": 17,
+      "Amplitude Conversion": 8,
+      "Tremor — Decay": 8,
+      "Tremor Burst": 2,
+      "Amplitude Entanglement": 8,
+      "Entanglement": 1
+    },
+    "triggers": {
+      "On Use": 9,
+      "On Hit": 14,
+      "Heads Hit": 6,
+      "Skill End": 3,
+      "Combat Start": 3
+    },
+    "all_mechanics": {
+      "Tremor": 14,
+      "Sinking": 12,
+      "Base Power": 6,
+      "Coin Power": 9,
+      "Atk Weight": 4,
+      "Discard": 4,
+      "Bright — 光 —": 16,
+      "Amplitude Conversion": 2,
+      "Tremor — Decay": 1,
+      "Tremor Burst": 2
+    },
+    "identity_slug": "Jeong's_Office_Rep_Ishmael",
+    "key_status_effects": [
+      "Discard",
+      "Bright — 光 —",
+      "Amplitude Conversion",
+      "Amplitude Entanglement",
+      "Tremor — Decay",
+      "Attack Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Shares the same unique Tremor type (Tremor — Decay) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
+      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
+      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Jeong's Office Rep Ishmael is a Damage Dealer — **Tremor — Decay** control. Scaling conditions: Coin Power +1 per 6 (Tremor + Sinking) (max +2). Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output. **SP regenerator** — restores ally **SP** through passives and key skills.",
+  "playstyle_guide": "- **Tremor — Decay** — Burst strips enemy **Defense Level** (1 per 4 Tremor Potency on target).\n- Plan which skills to Discard before the payoff turn.\n- **SP sustain** fires at **Combat Start** — restores **lowest-SP allies**.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 (Tremor + Sinking) (max +2).\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n\n**S1 — Tsuru-giri ['''鶴斬り''']** (BP 4, CP +4, x2): rolls — low 4, high 12 (High).\n- **Coin Power** scales with **(Tremor + Sinking)** (+1 per 6, max +2) — build stacks first.\n- If the other Skill in the same Skill Slot is a different Skill, Discard that Skill; [On Use] Coin Power +1 for every 6 (Tremor + Sinking) on target (max 2)\n- Inflict +1 Sinking Count; [Heads Hit] Inflict +1 Sinking Count\n- Inflict +1 Tremor Count; [Heads Hit] Inflict +1 Tremor Count\n\n**S2 — Susuki Misdirection** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- **Coin Power** scales with **(Tremor + Sinking)** (+1 per 6, max +2) — build stacks first.\n- If the other Skill in the same Skill Slot is a different Skill, Discard that Skill; [On Use] Coin Power +1 for every 6 (Tremor + Sinking) on target (max 2)\n- Inflict 2 Sinking; [Heads Hit] Inflict 1 Sinking\n- Inflict 2 Tremor; [Heads Hit] Inflict 1 Tremor\n\n**S3 — Sakura-sen ['''桜閃''']** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Deal +10% damage for every Bright — 光 — Potency on self ; [On Use] If the other Skill in the same Skill Slot is a different Skill, Discard that Skill ; [On Use] Coin Power +1 for every 6 (Tremor + Sinking), on target (max 3)\n- triggers Amplitude Conversion into Tremor — Scorch\n- Inflict +2 Tremor Count; [On Hit] Inflict +2 Sinking Count; [Heads Hit] Inflict +1 Sinking Count\n- Inflict 3 Tremor; [On Hit] Inflict 3 Sinking; [Heads Hit] Inflict +1 Tremor Count\n\n*↳ Alternate S3 — Kōzan ['''光斬''']* (BP 4, CP +5): rolls — low 4, high 9 (Extremely Low).\n  - At less than 3 Bright — 光 — Potency, cancel the Skill and gain 2 Attack Power Up next turn\n  - At 3+ Bright — 光 — Potency, gain the following effects based on Potency:\n  - Per 1 Potency: this Skill deals +10% damage\n  - At 4+ Potency: Base Power +1\n  - At 5 Potency: On Hit with the final Reuse Coin, trigger Tremor Burst 2 times\n\nCombat passive — **Koi-Koi ['''こいこい''']**: Turn Start: if this unit does not have Bright — 光 —, gain 0 Bright — 光 — Potency and +3 Bright — 光 — Count.\n  - Turn Start: if this unit does not have a Suit in Hand, gain a random Suit(Hand — Pine Crane Suit, Hand — Susuki Grass Suit, or Hand — Blu….\n  - Combat Start: when this unit uses a Base Attack Skill or an E.G.O Skill equipped on its leftmost Skill Slot, activate the following (once….\n\nCombat passive — **Stacking the Deck**: On Tails Hit, heal 5 SP (once per turn).\n  - Deal +10% damage against targets in either Low Morale or Panic states.\n\nDefense skill — **Counter: Shuffle Hands - Floral Deck**: [Clashable Counter].\n  - [Combat Start] Discard 2 Skills of the lowest rank in all of this unit's Skill Slots (once per turn).\n  - [Combat Start] If this Skill was equipped on this unit's leftmost Skill Slot, convert the Suit in this unit's Hand to a random Suit that correspond….\n  - [Combat Start] 50% chance to gain 1 Bright — 光 — Potency (once per turn).",
+  "team_suggestions": [
+    "**Tremor — Decay** control.",
+    "- **Öufi Assoc. South Section 3 Heathcliff**: Shares the same unique Tremor type (Tremor — Decay) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Tremor — Decay** control.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Öufi_Assoc._South_Section_3_Heathcliff",
+      "teammate_name": "Öufi Assoc. South Section 3 Heathcliff",
+      "reason": "Shares the same unique Tremor type (Tremor — Decay) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

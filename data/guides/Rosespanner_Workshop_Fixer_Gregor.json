@@ -1,0 +1,121 @@
+{
+  "identity_slug": "Rosespanner_Workshop_Fixer_Gregor",
+  "identity_name": "Rosespanner Workshop Fixer Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Tremor",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Charge",
+      "Base Power",
+      "Atk Weight",
+      "Tremor Burst"
+    ],
+    "status_effects": {
+      "Charge": 4,
+      "Rupture": 7,
+      "Tremor": 5
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Tremor Burst": 8
+    },
+    "triggers": {
+      "On Use": 2,
+      "On Hit": 8
+    },
+    "all_mechanics": {
+      "Charge": 4,
+      "Rupture": 7,
+      "Tremor": 5,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Tremor Burst": 1
+    },
+    "identity_slug": "Rosespanner_Workshop_Fixer_Gregor",
+    "key_status_effects": [
+      "Tremor Burst"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Rosespanner Workshop Fixer Gregor is a Status Specialist — **Rupture** focus.",
+  "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Skills check **5+ Rupture** — favour those coins when stacked.\n\n**S1 — Rev Up** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Gain +2 Charge Count\n\n**S2 — Grease Chains** (BP 4, CP +12, x1): rolls — low 4, high 16 (Average).\n- Gain +3 Charge Count\n- Inflict +2 Tremor Count; [On Hit] Inflict +1 Rupture Count\n\n**S3 — Let's Grind 'Em** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low / Slightly Low stacked).\n- If target has 5+ Tremor Count, Coin Power +1\n- Inflict 1 Rupture; [On Hit] If target is Staggered, deal +10% damage\n\nCombat passive — **Sawblade Fired Up**: Inflict +1 Rupture to targets that have Tremor.\n\nCombat passive — **Sawblade Maintenance**: 1 ally with the slowest Speed inflicts +1 Rupture to targets that have Tremor.",
+  "team_suggestions": [
+    "**Tremor** control — stack for early stagger breaks.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Tremor** control — stack for early stagger breaks.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

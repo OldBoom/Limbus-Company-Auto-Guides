@@ -136,4 +136,4 @@ Aggregated `status_effects` counts across all 50 guide mechanic profiles.
 
 ---
 
-*Regenerate all pipeline outputs with `python scripts/run_pipeline.py`. Regenerate evaluation stats with `python scripts/run_evaluation.py`.*
+*Regenerate all pipeline outputs with `python scripts/run_pipeline.py`.*

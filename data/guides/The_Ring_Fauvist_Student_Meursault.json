@@ -9,34 +9,46 @@
       "Coin Power"
     ],
     "secondary_mechanics": [
-      "Mauled Color — Rouge —",
       "Base Power",
+      "Mauled Color — Rouge —",
       "Atk Weight",
-      "Unbreakable Coin",
-      "Defense Level Down"
+      "Clash Power",
+      "Final Power"
     ],
+    "status_effects": {
+      "Bleed": 14,
+      "Sinking": 8
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 1,
+      "Final Power": 1,
+      "Blunt DMG Up": 1,
+      "Defense Level Down": 1
+    },
+    "unique_mechanics": {
+      "Mauled Color — Rouge —": 5
+    },
     "triggers": {
       "On Use": 6,
       "On Hit": 12
     },
     "all_mechanics": {
-      "Unbreakable Coin": 1,
-      "Mauled Color — Rouge —": 5,
       "Bleed": 14,
       "Sinking": 8,
-      "Defense Level Down": 1,
-      "Blunt DMG Up": 1,
-      "Clash Power": 1,
-      "Coin Power": 7,
       "Base Power": 5,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 1,
       "Final Power": 1,
-      "Atk Weight": 3
+      "Blunt DMG Up": 1,
+      "Defense Level Down": 1,
+      "Mauled Color — Rouge —": 5
     },
     "identity_slug": "The_Ring_Fauvist_Student_Meursault",
-    "key_status_effects": [],
-    "unique_mechanics": {
-      "Mauled Color — Rouge —": 5
-    }
+    "key_status_effects": []
   },
   "synergies": [
     {
@@ -56,6 +68,14 @@
       "faction_match": true
     },
     {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
       "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
@@ -70,23 +90,15 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "Wild_Hunt_Heathcliff",
-      "teammate_name": "Wild Hunt Heathcliff",
-      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
-  "core_idea": "The Ring Fauvist Student Meursault is a Damage Dealer / Status Specialist — damage scales with the number of debuff types on the target. Stack varied statuses before committing high-value skills. Scaling conditions: +5% per negative effect type (max +15%); +5% per negative effect type (max +20%). **SP regenerator** — restores ally **SP** through passives and key skills.",
-  "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **teammates**.\n- Reach scaling conditions before committing S3: +5% per negative effect type (max +15%).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Rough Portrayal** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low / Average stacked).\n- Each debuff type on the target adds +5% damage (up to +15%) — stack statuses broadly.\n- +5% per negative effect type (max +15%)\n\n**S2 — Visceral Strokes** (BP 4, CP +4, x3): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Each debuff type on the target adds +5% damage (up to +20%) — stack statuses broadly.\n- +5% per negative effect type (max +20%)\n\n**S3 — Le Fauvisme - Reveal Submission** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Each debuff type on the target adds +10% damage (up to +60%) — stack statuses broadly.\n- +10% per negative effect type (max +60%)\n- converts coins to Unbreakable under condition\n- Inflict +2 Bleed Count; [On Hit] Inflict +2 Sinking Count\n\nCombat passive — **The Ring Fauvist Student**: On Hit with a Base Skill: Inflict 1 Mauled Color — Rouge —.\n  - This counts as \"inflicting negative effects with the Skill\".\n  - Turn End: If this unit has inflicted 10+ Mauled Color — Rouge — during this Encounter, gain Le Fauvisme — Masque de Chien.\n\nCombat passive — **Welling Inspiration**: If this unit has Le Fauvisme — Masque de Chien, inflict +1 Mauled Color — Rouge —.\n  - Every time this unit inflicts 4 Mauled Color — Rouge —, heal 5 SP (2 times per turn).\n  - If this unit's SP is at max, gain 1 Blunt DMG Up next turn when this unit heals SP with this effect (once per turn).\n\nDefense skill — **Counter: Coloring Preparations**: [Clashable Counter].\n  - If this unit has Le Fauvisme — Masque de Chien, Base Power +2.\n  - [On Use] If target has 6+ (Bleed + Sinking), Coin Power +1.",
+  "core_idea": "The Ring Fauvist Student Meursault is a Damage Dealer / Status Specialist — **Bleed** focus. Scaling conditions: Coin Power +1 per 6 (Bleed + Sinking) (max +2); +5% per negative effect type (max +15%). **SP regenerator** — restores ally **SP** through passives and key skills.",
+  "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **teammates**.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 (Bleed + Sinking) (max +2).\n- Stack several distinct status types on the target before using high-power skills — each debuff type adds to damage.\n- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Rough Portrayal** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low / Slightly High stacked).\n- Each debuff type on the target adds +5% damage (up to +15%) — stack statuses broadly.\n- **Coin Power** scales with **(Bleed + Sinking)** (+1 per 6, max +2) — build stacks first.\n- +5% per negative effect type (max +15%)\n\n**S2 — Visceral Strokes** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Each debuff type on the target adds +5% damage (up to +20%) — stack statuses broadly.\n- **Coin Power** scales with **(Bleed + Sinking)** (+1 per 6, max +2) — build stacks first.\n- +5% per negative effect type (max +20%)\n\n**S3 — Le Fauvisme - Reveal Submission** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Each debuff type on the target adds +10% damage (up to +60%) — stack statuses broadly.\n- Final Power +1 per 4 (Bleed + Sinking) (max +4)\n- +10% per negative effect type (max +60%)\n- converts coins to Unbreakable under condition\n- Inflict +2 Bleed Count; [On Hit] Inflict +2 Sinking Count\n\nCombat passive — **The Ring Fauvist Student**: On Hit with a Base Skill: Inflict 1 Mauled Color — Rouge —.\n  - This counts as \"inflicting negative effects with the Skill\".\n  - Turn End: If this unit has inflicted 10+ Mauled Color — Rouge — during this Encounter, gain Le Fauvisme — Masque de Chien.\n\nCombat passive — **Welling Inspiration**: If this unit has Le Fauvisme — Masque de Chien, inflict +1 Mauled Color — Rouge —.\n  - Every time this unit inflicts 4 Mauled Color — Rouge —, heal 5 SP (2 times per turn).\n  - If this unit's SP is at max, gain 1 Blunt DMG Up next turn when this unit heals SP with this effect (once per turn).\n\nDefense skill — **Counter: Coloring Preparations**: [Clashable Counter].\n  - If this unit has Le Fauvisme — Masque de Chien, Base Power +2.\n  - [On Use] If target has 6+ (Bleed + Sinking), Coin Power +1.",
   "team_suggestions": [
     "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
   ],
   "team_suggestion_intro": "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -103,9 +115,9 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "source": "rule"
     }
   ],

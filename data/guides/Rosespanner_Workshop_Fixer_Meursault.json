@@ -1,0 +1,126 @@
+{
+  "identity_slug": "Rosespanner_Workshop_Fixer_Meursault",
+  "identity_name": "Rosespanner Workshop Fixer Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Charge"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Clash Power",
+      "Tremor Burst",
+      "Final Power"
+    ],
+    "status_effects": {
+      "Tremor": 14,
+      "Charge": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Final Power": 1,
+      "Clash Power": 2
+    },
+    "unique_mechanics": {
+      "Tremor Burst": 8,
+      "Attack Power Down": 8
+    },
+    "triggers": {
+      "Heads Hit": 5,
+      "On Hit": 7
+    },
+    "all_mechanics": {
+      "Tremor": 14,
+      "Charge": 4,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Final Power": 1,
+      "Clash Power": 2,
+      "Tremor Burst": 2
+    },
+    "identity_slug": "Rosespanner_Workshop_Fixer_Meursault",
+    "key_status_effects": [
+      "Attack Power Down",
+      "Tremor Burst"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — scales off Charge count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Rosespanner Workshop Fixer Meursault is a Damage Dealer / Support — **Tremor** control — stack for early stagger breaks. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output. Support passive (**Leave by Suggestion**) buffs your **fastest Speed ally** — pair with a high-Speed attacker.",
+  "playstyle_guide": "- **Leave by Suggestion** amplifies the **fastest Speed ally** — field a high-Speed damage dealer as teammate.\n- **Burst** when you're ready to break the stagger target.\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n\n**S1 — Saddled Tasks** (BP 4, CP +6, x1): rolls — low 4, high 10 (Extremely Low).\n- If target has 5+ Tremor Count, Coin Power +2\n- Inflict 2 Tremor; [On Hit] Inflict 2 Tremor\n\n**S2 — Forced Break** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low).\n- If target has 7+ Tremor Count, Final Power +1\n- Inflict 2 Tremor; [On Hit] Inflict 3 Tremor\n- If target has 5+ Tremor, inflict 1 Attack Power Down next turn\n\n**S3 — Finishing Runup** (BP 4, CP +2, x4): rolls — low 4, high 12 (Extremely Low).\n- If target has 10+ Tremor Count, Coin Power +1\n- Gain +1 Charge Count; [On Hit] Inflict 1 Tremor\n- Gain +2 Charge Count; [On Hit] Inflict 2 Tremor\n- Gain +2 Charge Count; [On Hit] Inflict 3 Tremor\n\nCombat passive — **Chronic Fatigue**: In a clash, the opponent has -1 Clash Power if they have 5+ Tremor.\n  - When recovering from Stagger, heal 5% of Max HP.",
+  "team_suggestions": [
+    "**Tremor** control — stack for early stagger breaks. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Tremor** control — stack for early stagger breaks. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

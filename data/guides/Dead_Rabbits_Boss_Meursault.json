@@ -1,0 +1,70 @@
+{
+  "identity_slug": "Dead_Rabbits_Boss_Meursault",
+  "identity_name": "Dead Rabbits Boss Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Offense Level Down",
+      "Atk Weight",
+      "Clash Power"
+    ],
+    "status_effects": {
+      "Rupture": 14
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Offense Level Down": 4,
+      "Clash Power": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 6,
+      "On Use": 3,
+      "Clash Win": 2
+    },
+    "all_mechanics": {
+      "Rupture": 14,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Offense Level Down": 4,
+      "Clash Power": 3
+    },
+    "identity_slug": "Dead_Rabbits_Boss_Meursault",
+    "key_status_effects": []
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Dead Rabbits Boss Meursault is a Status Specialist / Support — **Rupture** focus. Support passive (**My Responsibility**) buffs your **fastest Speed ally** — pair with a high-Speed attacker.",
+  "playstyle_guide": "- **My Responsibility** amplifies the **fastest Speed ally** — field a high-Speed damage dealer as teammate.\n- Skills check **3+ Rupture** — favour those coins when stacked.\n\n**S1 — Bat Strike** (BP 5, CP +6, x1): rolls — low 5, high 11 (Slightly Low).\n- If target has 5+ Rupture, Coin Power +2\n\n**S2 — Smackdown** (BP 4, CP +5, x2): rolls — low 4, high 14 (Slightly Low).\n- Delay until 6+ Rupture on target — that is when the damage condition activates.\n\n**S3 — Relentless** (BP 4, CP +2, x4): rolls — low 4, high 12 (Extremely Low).\n- Delay until 6+ Rupture on target — that is when the damage condition activates.",
+  "team_suggestions": [
+    "**Rupture** focus. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Rupture** focus. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

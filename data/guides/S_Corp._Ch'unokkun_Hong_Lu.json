@@ -1,0 +1,141 @@
+{
+  "identity_slug": "S_Corp._Ch'unokkun_Hong_Lu",
+  "identity_name": "S Corp. Ch'unokkun Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Trussed — Hong Lu —",
+      "Poise"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Base Power",
+      "Avulsion Wound",
+      "Bind",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Poise": 12,
+      "Bleed": 14,
+      "Bind": 3,
+      "Haste": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 3,
+      "Clash Power": 1
+    },
+    "unique_mechanics": {
+      "Trussed — Hong Lu —": 14,
+      "Avulsion Wound": 8,
+      "Unbreakable Coin": 1,
+      "Prisoner Transport Arrangements (Hong Lu)": 8,
+      "Attack Power Down": 8,
+      "Pride Fragility": 8
+    },
+    "triggers": {
+      "On Use": 13,
+      "On Hit": 15,
+      "Clash Win": 1
+    },
+    "all_mechanics": {
+      "Poise": 12,
+      "Bleed": 14,
+      "Bind": 3,
+      "Haste": 1,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 3,
+      "Clash Power": 1,
+      "Trussed — Hong Lu —": 13,
+      "Avulsion Wound": 4,
+      "Unbreakable Coin": 1,
+      "Prisoner Transport Arrangements (Hong Lu)": 1
+    },
+    "identity_slug": "S_Corp._Ch'unokkun_Hong_Lu",
+    "key_status_effects": [
+      "Trussed — Hong Lu —",
+      "Avulsion Wound",
+      "Attack Power Down",
+      "Pride Fragility",
+      "Prisoner Transport Arrangements (Hong Lu)"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "S Corp. Ch'unokkun Hong Lu is a Damage Dealer / Status Specialist / Support — **Poise** fighter — stack on self, then spend on crits and scaling. Support passive (**Scouring Hunterband [<b>推刷巾</b>]**) keys off **deployment order** — set your main carry as #1 deployed before the fight.",
+  "playstyle_guide": "- **Scouring Hunterband [<b>推刷巾</b>]** watches the **#1 deployed ally** — arrange the dashboard so the intended carry is first in line.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Hunter's Scouring** — **S1 — Constricting Ohra Bonds** adds **+3 Poise Count** at **On Use** and **+4 Poise** per **On Hit** coin; **S2 — Avulsion Slash** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin.\n- **Hunter's Scouring** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Constricting Ohra Bonds** (BP 2, CP +3, x3): rolls — low 2, high 11 (Slightly Low).\n- Coin Power +1 for every 6 (Poise on self + Bleed on target) (max 2); [On Use] If target has Trussed — Hong Lu —, Final Power +1; [On Use] Gain +3 Poise Count\n- Gain 4 Poise; [On Hit] Inflict +2 Bleed Count\n\n**S2 — Avulsion Slash** (BP 4, CP +6, x1): rolls — low 4, high 10 (Extremely Low).\n- Coin Power +1 for every 6 (Poise on self + Bleed on target) (max 2); [On Use] If target has Trussed — Hong Lu —, Final Power +1; [On Use] Gain +2 Poise Count\n\n**S3 — Hunter's Scouring** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- converts coins to Unbreakable under condition\n\nCombat passive — **Ch'unokkun**: If a target has Trussed — Hong Lu —, gain Prisoner Transport Arrangements (Hong Lu).\n  - When chaining Skills, if there is an enemy this unit has inflicted Trussed — Hong Lu — on, then this unit can redirect that enemy's Attac….\n\nCombat passive — **Spiteful Pursuit**: When 1 ally with the earliest Deployment order attacks an enemy that has Bind, deal +10% damage.\n\nDefense skill — **Counter: Throwing the Ohra Bond**: [Clashable Counter].\n  - [On Use] At 6+ (Poise on self + Bleed on target), Clash Power +2.\n  - [On Use] Gain 5 Poise.\n  - [Clash Win] Gain +3 Poise Count.",
+  "team_suggestions": [
+    "**Bleed** focus. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Bleed** focus. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

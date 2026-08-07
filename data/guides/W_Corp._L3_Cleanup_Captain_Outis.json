@@ -1,0 +1,137 @@
+{
+  "identity_slug": "W_Corp._L3_Cleanup_Captain_Outis",
+  "identity_name": "W Corp. L3 Cleanup Captain Outis",
+  "sinner": "Outis",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Rupture",
+      "Atk Weight",
+      "Bind",
+      "Clash Power",
+      "Charge Barrier"
+    ],
+    "status_effects": {
+      "Charge": 28,
+      "Bind": 2,
+      "Rupture": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2
+    },
+    "unique_mechanics": {
+      "Charge Barrier": 8,
+      "Load": 8,
+      "Overcharge": 1,
+      "Clash Power Up": 8
+    },
+    "triggers": {
+      "On Use": 9,
+      "On Hit": 9,
+      "Heads Hit": 1,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Charge": 28,
+      "Bind": 2,
+      "Rupture": 4,
+      "Base Power": 6,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Charge Barrier": 2,
+      "Load": 1
+    },
+    "identity_slug": "W_Corp._L3_Cleanup_Captain_Outis",
+    "key_status_effects": [
+      "Charge Barrier",
+      "Load",
+      "Clash Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+      "teammate_name": "W Corp. L2 Cleanup Agent Faust",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Hong_Lu",
+      "teammate_name": "W Corp. L2 Cleanup Agent Hong Lu",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Meursault",
+      "teammate_name": "W Corp. L2 Cleanup Agent Meursault",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L3_Cleanup_Agent_Don_Quixote",
+      "teammate_name": "W Corp. L3 Cleanup Agent Don Quixote",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "W_Corp._L3_Cleanup_Agent_Ryōshū",
+      "teammate_name": "W Corp. L3 Cleanup Agent Ryōshū",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    }
+  ],
+  "core_idea": "W Corp. L3 Cleanup Captain Outis is a Damage Dealer / Status Specialist / Support — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Rip Dimension**), then rebuild for the next window. Scaling conditions: Clash Power +1 per 5 Charge (max +2); Clash Power +1 per 5 Charge Count (max +2). Support passive (**Refraction**) buffs teammates.",
+  "playstyle_guide": "- **Refraction** — align allies' actions with the passive's trigger condition.\n- Ramp **Charge Count** toward **20** before **Rip Dimension** — **S2 — Charged Leap** adds **+2 Charge Count** at **On Use** and **+1 Charge Count** per **On Hit** coin; **S1 — Ripple** adds **+2 Charge Count** at **On Use** and **+1 Charge Count** per **On Hit** coin.\n- Reach scaling conditions before committing S3: Clash Power +1 per 5 Charge (max +2).\n- Hold S3 for when At 2+ Charge is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Ripple** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Clash Power** scales with **Charge** (+1 per 5, max +2) — build stacks first.\n- **Clash Power** scales with **Charge Count** (+1 per 5, max +2) — build stacks first.\n- Needs 4+ Charge Count to activate — prioritise building stacks before using.\n- Gain +1 Charge Count\n\n**S2 — Charged Leap** (BP 5, CP +6, x2): rolls — low 5, high 17 (Extremely High).\n- Gain +1 Charge Count\n- Gain +2 Charge Count; [On Hit] Inflict 1 Bind next turn; [Heads Hit] If this Skill consumed Charge Count on use, inflict 2 Bind next turn\n\n**S3 — Rip Dimension** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Needs 2+ Charge to activate — prioritise building stacks before using.\n\nCombat passive — **Overcharge / Cleanup Order**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - Turn End: Apply 1 Clash Power Up next turn to (Charge) employees, including this unit, in reverse Deployment order (max: 5 allies).",
+  "team_suggestions": [
+    "Trait-dependent kit — [W Corp.] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [W Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **W Corp. L2 Cleanup Agent Faust**: Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **W Corp. L2 Cleanup Agent Hong Lu**: Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **W Corp. L2 Cleanup Agent Meursault**: Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [W Corp.] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [W Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Faust",
+      "teammate_name": "W Corp. L2 Cleanup Agent Faust",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Hong_Lu",
+      "teammate_name": "W Corp. L2 Cleanup Agent Hong Lu",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L2_Cleanup_Agent_Meursault",
+      "teammate_name": "W Corp. L2 Cleanup Agent Meursault",
+      "reason": "Shares [W Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

@@ -4,15 +4,18 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from textwrap import dedent
 
-import re
-
 from limbus_guides.domain.context import get_guide_writing_context, playstyle_hints_from_text
-from limbus_guides.nlp.mechanic_signals import extract_notable_effects, top_fallback_coin_line
+from limbus_guides.nlp.mechanic_signals import (
+    extract_notable_effects,
+    format_unique_tremor_label,
+    top_fallback_coin_line,
+)
 from limbus_guides.nlp.skill_parser import build_gameplan
 from limbus_guides.nlp.skill_rolls import RollNormalizer, compute_coin_count, format_skill_rolls
-from limbus_guides.nlp.synergy import GENERIC_TRAITS, format_unique_tremor_label
+from limbus_guides.nlp.synergy import GENERIC_TRAITS
 
 # ---------------------------------------------------------------------------
 # Advice transformer — converts descriptive tooltip text to player instructions
@@ -306,8 +309,6 @@ def _ammo_dual_status_core_parts(name: str, role_str: str, gp: dict) -> tuple[st
     if not burn_arch and not tremor_arch:
         return None
 
-    from limbus_guides.nlp.synergy import format_unique_tremor_label
-
     status_bits: list[str] = []
     if tremor_arch:
         subtypes = gp.get("unique_tremor_types") or tremor_arch.get("unique_subtypes") or []
@@ -384,14 +385,270 @@ def _devyat_courier_core_opening(name: str, role_str: str, gp: dict) -> str | No
     )
 
 
+# ---------------------------------------------------------------------------
+# Core-idea openings
+#
+# Each builder returns (opening sentence, follow-up sentences) or None. They are
+# tried in _CORE_OPENING_BUILDERS order and the first match wins, so the list is
+# ordered MOST SPECIFIC FIRST.
+#
+# Ordering is the whole design here. It used to be an if/elif chain in which the
+# generic `resource_loop` branch sat second, so every newly registered unique
+# mechanic (Ammo, Gaze, ...) pulled another identity out of its bespoke or
+# archetype description and into "X-gated identity. Build stacks through skill
+# hits...". Specificity now outranks position: hand-written multi-signal kits,
+# then named mechanic archetypes, then status archetypes (unique Tremor, Fragile,
+# Paralyze — all strong gameplay signals), then the generic structural branches.
+# ---------------------------------------------------------------------------
+
+_CoreOpening = tuple[str, list[str]]
+
+
+def _opening_ammo_dual_status(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    parts = _ammo_dual_status_core_parts(name, role_str, gp)
+    return (parts[0], list(parts[1])) if parts else None
+
+
+def _opening_devyat_courier(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    opening = _devyat_courier_core_opening(name, role_str, gp)
+    return (opening, []) if opening else None
+
+
+def _opening_negative_coin(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("negative_coin_archetype")
+    if not arch:
+        return None
+    despair = arch.get("despair_label", "negative SP")
+    minus = arch.get("minus_skills", [])
+    minus_preview = minus[0] if minus else "Minus Coin alternates"
+    if arch.get("defense_drains_sp"):
+        return (
+            f"{name} is a {role_str} — **Minus Coin** identity that must reach "
+            f"**{despair}** (negative SP) to unlock {minus_preview} and peers. "
+            f"Open with defense turns to drain SP and build Tear-sharpened, then "
+            f"cash out Deep Tears with Despair Skill 3.",
+            [],
+        )
+    return (
+        f"{name} is a {role_str} — **Minus Coin** identity gated by SP: "
+        f"below 0 SP she swaps to **{despair}** skills ({minus_preview}, …) "
+        f"with far higher Base Power than the Plus Coin set.",
+        [],
+    )
+
+
+def _opening_nails(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("nails_archetype")
+    if not arch:
+        return None
+    threshold = arch.get("threshold", 5)
+    payoff = arch.get("payoff_skill") or "the payoff skill"
+    burst_note = " via Tremor Burst" if arch.get("has_tremor_burst") else ""
+    return (
+        f"{name} is a {role_str} — **Nails** (N Corp. Fanatic) setup fighter. "
+        f"Stack Nails toward **{threshold}+** with early skills, then cash out with "
+        f"**{payoff}**{burst_note} for burst damage and debuffs.",
+        [],
+    )
+
+
+def _opening_transition_resource(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    transition, resource = gp["state_transition"], gp["resource_loop"]
+    if not (transition and resource):
+        return None
+    payoffs = resource["payoff_skills"]
+    return (
+        f"{name} is a {role_str} — {transition['from_state']} → {transition['to_state']} identity. "
+        f"The gameplan is building {resource['resource']} Count through skill hits and "
+        f"the combat passive, then spending stacks to power up S{payoffs[0] if payoffs else '2'} "
+        f"(at {resource['threshold']}+ Count) and cash out with "
+        f"S{payoffs[-1] if payoffs else '3'} "
+        f"(consumes up to {resource['max'] or '?'} for escalating damage).",
+        [],
+    )
+
+
+def _opening_unique_mechanics(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("unique_mechanics_archetype")
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", []) if arch else None
+
+
+def _opening_charge(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("charge_archetype")
+    if not arch:
+        return None
+    extras: list[str] = []
+    def_arch = gp.get("defense_archetype")
+    if def_arch and def_arch.get("kind") == "skill_queue":
+        defense_name = def_arch.get("defense_name", "Guard")
+        payoff = arch.get("payoff_skill", "S3")
+        extras.append(
+            f"**{defense_name}** queues an extra **{payoff}** next turn and can "
+            f"remove a Stagger Threshold when Charge Count is low — guard sets up the burst."
+        )
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", extras)
+
+
+def _opening_poise_archetype(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("poise_archetype")
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", []) if arch else None
+
+
+def _opening_sin_archetype(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    """Status archetypes including unique Tremor subtypes (Scorch, Reverb, Hemorrhage…)."""
+    from limbus_guides.nlp.archetypes import pick_primary_sin_archetype
+
+    arch = pick_primary_sin_archetype(gp)
+    if not arch or arch.get("kind") in ("nails_setup", "charge_scaling", "unique_mechanics"):
+        return None
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", [])
+
+
+def _opening_extra_archetype(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    """Fragile / Paralyze / Aggro / Haste / SP-HP regeneration kits."""
+    from limbus_guides.nlp.archetypes import pick_extra_archetype
+
+    arch = pick_extra_archetype(gp)
+    return (f"{name} is a {role_str} — {arch['setup_summary']}", []) if arch else None
+
+
+def _opening_resource_loop(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    resource = gp["resource_loop"]
+    if not resource:
+        return None
+    payoffs = resource["payoff_skills"]
+    return (
+        f"{name} is a {role_str} — {resource['resource']}-gated identity. "
+        f"Build stacks through skill hits until the threshold ({resource['threshold']}+), "
+        f"then spend via S{payoffs[0] if payoffs else '?'} "
+        f"for power spikes.",
+        [],
+    )
+
+
+def _opening_poise_passive(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    poise = gp["poise_passive"]
+    if not poise:
+        return None
+    return (
+        f"{name} is a {role_str} — Poise-stacking fighter. "
+        f"Poise Count built through skill use and clash wins converts directly to Coin Power "
+        f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']}) "
+        f"— every successful clash raises your flip strength.",
+        [],
+    )
+
+
+def _opening_neg_effect_scaling(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    if not gp["neg_effect_scaling"]:
+        return None
+    return (
+        f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
+        f"Stack varied statuses before committing high-value skills.",
+        [],
+    )
+
+
+def _opening_defense(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
+    arch = gp.get("defense_archetype")
+    if not arch:
+        return None
+    payoff = arch.get("payoff") or "a powered-up attack"
+    defense_name = arch.get("defense_name", "the defense skill")
+    kind = arch.get("kind", "")
+    if kind == "snipe_setup":
+        text = (
+            f"{name} is a {role_str} — snipe archer whose defense slot builds Target Aim "
+            f"and triggers **{payoff}** at Combat Start via Snipe - Archery."
+        )
+    elif kind == "counter_skill":
+        text = (
+            f"{name} is a {role_str} — **{defense_name}** can fire **{payoff}** as a "
+            f"Counter for burst damage when conditions are met."
+        )
+    elif kind == "skill_queue":
+        text = (
+            f"{name} is a {role_str} — the defense slot queues high-impact skills or "
+            f"major setup buffs for the following turn."
+        )
+    elif kind == "equip_unlock":
+        text = (
+            f"{name} is a {role_str} — equipping defense for the first time unlocks "
+            f"an upgraded ammo/skill set for the rest of the encounter."
+        )
+    elif kind == "guard_buff":
+        if "Tank" in role_str:
+            text = (
+                f"{name} is a {role_str} — high-HP frontliner with +3 Aggro on every skill "
+                f"and a once-per-encounter lethal nullify. "
+                f"**{defense_name}** grants **{payoff}** at Combat Start; "
+                f"Skill 3 scales off missing HP and Bloodied Hand stacks."
+            )
+        else:
+            text = (
+                f"{name} is a {role_str} — **{defense_name}** grants **{payoff}** at "
+                f"Combat Start, making the guard slot part of the damage rotation."
+            )
+    elif kind == "power_counter":
+        text = (
+            f"{name} is a {role_str} — **{defense_name}** is a high-damage counter "
+            f"with Stagger immunity, not just a defensive tool."
+        )
+    else:
+        text = (
+            f"{name} is a {role_str} — the defense slot unlocks major buffs or "
+            f"alternate skills; plan defense turns deliberately."
+        )
+    return (text, [])
+
+
+def _opening_generic(name: str, role_str: str, gp: dict) -> _CoreOpening:
+    """Last resort — some kits genuinely have no dominant archetype."""
+    primary = gp["primary_mechanics"]
+    mech = ", ".join(primary[:2]) if primary else "status"
+    return (
+        f"{name} is a {role_str} applying sustained {mech} pressure with consistent skill stats.",
+        [],
+    )
+
+
+# Most specific first. Insert new archetypes by specificity, not at the end.
+_CORE_OPENING_BUILDERS = (
+    # Bespoke kits — several signals combined into hand-written prose.
+    ("ammo_dual_status", _opening_ammo_dual_status),
+    ("devyat_courier", _opening_devyat_courier),
+    ("negative_coin", _opening_negative_coin),
+    ("nails", _opening_nails),
+    # Two structural signals (a state change *and* a resource loop).
+    ("transition_resource", _opening_transition_resource),
+    # Named mechanic archetypes.
+    ("unique_mechanics", _opening_unique_mechanics),
+    ("charge", _opening_charge),
+    ("poise_archetype", _opening_poise_archetype),
+    # Status archetypes — unique Tremor subtypes, Fragile, Paralyze, Aggro, Haste.
+    ("sin_archetype", _opening_sin_archetype),
+    ("extra_archetype", _opening_extra_archetype),
+    # Generic structural descriptions.
+    ("resource_loop", _opening_resource_loop),
+    ("poise_passive", _opening_poise_passive),
+    ("neg_effect_scaling", _opening_neg_effect_scaling),
+    ("defense", _opening_defense),
+)
+
+
+def select_core_opening(name: str, role_str: str, gp: dict) -> tuple[str, str, list[str]]:
+    """Return (builder_name, opening sentence, follow-up sentences)."""
+    for label, builder in _CORE_OPENING_BUILDERS:
+        result = builder(name, role_str, gp)
+        if result:
+            return label, result[0], result[1]
+    opening, extras = _opening_generic(name, role_str, gp)
+    return "generic_fallback", opening, extras
+
+
 def _build_core_idea(name: str, gp: dict) -> str:
     from limbus_guides.domain.context import infer_roles
-    from limbus_guides.nlp.archetypes import pick_extra_archetype, pick_primary_sin_archetype
 
-    transition = gp["state_transition"]
-    resource = gp["resource_loop"]
-    poise = gp["poise_passive"]
-    neg_scale = gp["neg_effect_scaling"]
     # Build a text fragment that includes the support-passive header so infer_roles can detect it
     support_text = gp.get("support_passive_text", "")
     skill_lines: list[str] = []
@@ -407,148 +664,8 @@ def _build_core_idea(name: str, gp: dict) -> str:
     roles = infer_roles(raw_text)
     role_str = " / ".join(roles)
 
-    parts: list[str] = []
-    post_scaling: list[str] = []
-
-    # Opening sentence: role + positioning
-    if transition and resource:
-        parts.append(
-            f"{name} is a {role_str} — {transition['from_state']} → {transition['to_state']} identity. "
-            f"The gameplan is building {resource['resource']} Count through skill hits and "
-            f"the combat passive, then spending stacks to power up S{resource['payoff_skills'][0] if resource['payoff_skills'] else '2'} "
-            f"(at {resource['threshold']}+ Count) and cash out with "
-            f"S{resource['payoff_skills'][-1] if resource['payoff_skills'] else '3'} "
-            f"(consumes up to {resource['max'] or '?'} for escalating damage)."
-        )
-    elif resource:
-        parts.append(
-            f"{name} is a {role_str} — {resource['resource']}-gated identity. "
-            f"Build stacks through skill hits until the threshold ({resource['threshold']}+), "
-            f"then spend via S{resource['payoff_skills'][0] if resource['payoff_skills'] else '?'} "
-            f"for power spikes."
-        )
-    elif gp.get("poise_archetype"):
-        arch = gp["poise_archetype"]
-        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
-    elif poise:
-        parts.append(
-            f"{name} is a {role_str} — Poise-stacking fighter. "
-            f"Poise Count built through skill use and clash wins converts directly to Coin Power "
-            f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']}) "
-            f"— every successful clash raises your flip strength."
-        )
-    elif neg_scale:
-        parts.append(
-            f"{name} is a {role_str} — damage scales with the number of debuff types on the target. "
-            f"Stack varied statuses before committing high-value skills."
-        )
-    elif gp.get("unique_mechanics_archetype"):
-        arch = gp["unique_mechanics_archetype"]
-        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
-    elif gp.get("nails_archetype"):
-        arch = gp["nails_archetype"]
-        threshold = arch.get("threshold", 5)
-        payoff = arch.get("payoff_skill") or "the payoff skill"
-        burst_note = " via Tremor Burst" if arch.get("has_tremor_burst") else ""
-        parts.append(
-            f"{name} is a {role_str} — **Nails** (N Corp. Fanatic) setup fighter. "
-            f"Stack Nails toward **{threshold}+** with early skills, then cash out with "
-            f"**{payoff}**{burst_note} for burst damage and debuffs."
-        )
-    elif gp.get("charge_archetype"):
-        arch = gp["charge_archetype"]
-        parts.append(f"{name} is a {role_str} — {arch['setup_summary']}")
-        def_arch = gp.get("defense_archetype")
-        if def_arch and def_arch.get("kind") == "skill_queue":
-            defense_name = def_arch.get("defense_name", "Guard")
-            payoff = arch.get("payoff_skill", "S3")
-            post_scaling.append(
-                f"**{defense_name}** queues an extra **{payoff}** next turn and can "
-                f"remove a Stagger Threshold when Charge Count is low — guard sets up the burst."
-            )
-    elif gp.get("negative_coin_archetype"):
-        arch = gp["negative_coin_archetype"]
-        despair = arch.get("despair_label", "negative SP")
-        minus = arch.get("minus_skills", [])
-        minus_preview = minus[0] if minus else "Minus Coin alternates"
-        if arch.get("defense_drains_sp"):
-            parts.append(
-                f"{name} is a {role_str} — **Minus Coin** identity that must reach "
-                f"**{despair}** (negative SP) to unlock {minus_preview} and peers. "
-                f"Open with defense turns to drain SP and build Tear-sharpened, then "
-                f"cash out Deep Tears with Despair Skill 3."
-            )
-        else:
-            parts.append(
-                f"{name} is a {role_str} — **Minus Coin** identity gated by SP: "
-                f"below 0 SP she swaps to **{despair}** skills ({minus_preview}, …) "
-                f"with far higher Base Power than the Plus Coin set."
-            )
-    elif (ammo_parts := _ammo_dual_status_core_parts(name, role_str, gp)):
-        parts.append(ammo_parts[0])
-        post_scaling.extend(ammo_parts[1])
-    elif (devyat_open := _devyat_courier_core_opening(name, role_str, gp)):
-        parts.append(devyat_open)
-    elif (sin_arch := pick_primary_sin_archetype(gp)) and sin_arch.get("kind") not in (
-        "nails_setup",
-        "charge_scaling",
-        "unique_mechanics",
-    ):
-        parts.append(f"{name} is a {role_str} — {sin_arch['setup_summary']}")
-    elif (extra_arch := pick_extra_archetype(gp)):
-        parts.append(f"{name} is a {role_str} — {extra_arch['setup_summary']}")
-    elif gp.get("defense_archetype"):
-        arch = gp["defense_archetype"]
-        payoff = arch.get("payoff") or "a powered-up attack"
-        defense_name = arch.get("defense_name", "the defense skill")
-        kind = arch.get("kind", "")
-        if kind == "snipe_setup":
-            parts.append(
-                f"{name} is a {role_str} — snipe archer whose defense slot builds Target Aim "
-                f"and triggers **{payoff}** at Combat Start via Snipe - Archery."
-            )
-        elif kind == "counter_skill":
-            parts.append(
-                f"{name} is a {role_str} — **{defense_name}** can fire **{payoff}** as a "
-                f"Counter for burst damage when conditions are met."
-            )
-        elif kind == "skill_queue":
-            parts.append(
-                f"{name} is a {role_str} — the defense slot queues high-impact skills or "
-                f"major setup buffs for the following turn."
-            )
-        elif kind == "equip_unlock":
-            parts.append(
-                f"{name} is a {role_str} — equipping defense for the first time unlocks "
-                f"an upgraded ammo/skill set for the rest of the encounter."
-            )
-        elif kind == "guard_buff":
-            if "Tank" in role_str:
-                parts.append(
-                    f"{name} is a {role_str} — high-HP frontliner with +3 Aggro on every skill "
-                    f"and a once-per-encounter lethal nullify. "
-                    f"**{defense_name}** grants **{payoff}** at Combat Start; "
-                    f"Skill 3 scales off missing HP and Bloodied Hand stacks."
-                )
-            else:
-                parts.append(
-                    f"{name} is a {role_str} — **{defense_name}** grants **{payoff}** at "
-                    f"Combat Start, making the guard slot part of the damage rotation."
-                )
-        elif kind == "power_counter":
-            parts.append(
-                f"{name} is a {role_str} — **{defense_name}** is a high-damage counter "
-                f"with Stagger immunity, not just a defensive tool."
-            )
-        else:
-            parts.append(
-                f"{name} is a {role_str} — the defense slot unlocks major buffs or "
-                f"alternate skills; plan defense turns deliberately."
-            )
-    else:
-        primary = gp["primary_mechanics"]
-        mech = ", ".join(primary[:2]) if primary else "status"
-        parts.append(f"{name} is a {role_str} applying sustained {mech} pressure with consistent skill stats.")
+    _label, opening, post_scaling = select_core_opening(name, role_str, gp)
+    parts: list[str] = [opening]
 
     if scaling := _scaling_conditions_sentence(gp):
         if scaling not in " ".join(parts):
@@ -732,11 +849,8 @@ def _build_overview_tips(gp: dict) -> str:
         arch = gp.get(key)
         if not arch:
             continue
+        # A unique-mechanics archetype already describes the kit's Sinking loop.
         if key == "sinking_archetype" and unique_arch:
-            mechanics = unique_arch.get("mechanics", [])
-            primary = gp.get("primary_mechanics", [])
-            if any(m in primary[:2] for m in mechanics):
-                continue
             continue
         for tip in arch.get("tips", []):
             if tip not in seen_tips:
@@ -811,8 +925,11 @@ def _build_overview_tips(gp: dict) -> str:
     if heads:
         tips.append("High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.")
 
-    import re as _re
-    faction_m = _re.search(r"(The Ring|The Fingers|Kurokumo|Liu Assoc|Blade Lineage|Tingtang)\s+allies", support_text, _re.I)
+    faction_m = re.search(
+        r"(The Ring|The Fingers|Kurokumo|Liu Assoc|Blade Lineage|Tingtang)\s+allies",
+        support_text,
+        re.I,
+    )
     if faction_m:
         tips.append(f"Support passive scales with {faction_m.group(1)} allies on the field — prioritise faction team compositions.")
 
@@ -973,7 +1090,7 @@ def _is_status_consumer(gp: dict, status: str) -> bool:
     return inflicted < 6
 
 
-def _detect_key_status(gp: dict, synergies: list[dict] | None = None) -> str | None:
+def _detect_key_status(gp: dict) -> str | None:
     """Infer a scaling status from kit data — not from synergy picks alone."""
     _STATUS_NAMES = ("Bleed", "Burn", "Rupture", "Poise", "Sinking", "Tremor", "Charge")
 
@@ -1019,7 +1136,7 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
     skills = gp.get("skills", [])
     max_cp = _max_skill_coin_power(skills)
     primary = gp.get("primary_mechanics", [])
-    key_status = _detect_key_status(gp, synergies)
+    key_status = _detect_key_status(gp)
 
     pieces: list[str] = []
 
@@ -1152,8 +1269,7 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         pieces.append("Same-faction teammates provide additional passive synergy where available.")
 
     # Note if the support passive makes this identity a support pick
-    import re as _re
-    if _re.search(r"ally|allies|team", support_text, _re.I):
+    if re.search(r"ally|allies|team", support_text, re.I):
         pieces.append(
             "The support passive also benefits teammates directly — "
             "consider this identity even in compositions where it is not the primary damage dealer."
@@ -1162,7 +1278,7 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
     return " ".join(pieces)
 
 
-def _embedding_verify_note(source: str) -> str:
+def embedding_verify_note(source: str) -> str:
     """Suffix for embedding-based teammate picks shown in team suggestions."""
     return " *(similarity-based — verify)*" if source == "embedding" else ""
 
@@ -1204,7 +1320,7 @@ def _build_team_suggestions(synergies: list[dict], gp: dict | None = None) -> di
                     "source": source,
                 }
             )
-            lines.append(f"- **{s['teammate_name']}**: {reason}{_embedding_verify_note(source)}")
+            lines.append(f"- **{s['teammate_name']}**: {reason}{embedding_verify_note(source)}")
     else:
         lines.append(
             "- Pair with identities whose support passives inflict statuses this kit stacks "

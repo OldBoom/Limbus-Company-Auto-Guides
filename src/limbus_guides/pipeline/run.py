@@ -6,11 +6,12 @@ import json
 import time
 from pathlib import Path
 
-from limbus_guides.ingestion.markdown_loader import ingest_parsed_ids_to_json, load_all_parsed
+from limbus_guides.ingestion.markdown_loader import ingest_parsed_ids_to_json
+from limbus_guides.ingestion.unique_mechanics_registry import sync_from_parsed_ids
 from limbus_guides.nlp.generation import generate_guide
 from limbus_guides.nlp.keywords import extract_keywords
 from limbus_guides.nlp.mechanics import build_mechanic_profile
-from limbus_guides.nlp.skill_rolls import build_roll_normalizer
+from limbus_guides.nlp.skill_rolls import RollNormalizer, build_roll_normalizer
 from limbus_guides.nlp.synergy import find_synergy_teammates
 from limbus_guides.paths import GUIDES_DIR, IDENTITIES_DIR
 
@@ -23,10 +24,46 @@ def load_identities_json(identities_dir: Path | None = None) -> dict[str, dict]:
     return roster
 
 
+def _build_guide(
+    slug: str,
+    roster: dict[str, dict],
+    profiles: dict[str, dict],
+    keywords: dict[str, list[str]],
+    normalizer: RollNormalizer | None,
+    *,
+    use_ollama: bool,
+    use_embeddings: bool | None = None,
+) -> dict:
+    """Mechanic profile + synergies + generated text for one identity."""
+    identity = dict(roster[slug])
+    identity["mechanic_profile"] = profiles[slug]
+    identity["keywords"] = keywords.get(slug, [])
+    synergies = find_synergy_teammates(
+        identity, roster, profiles, use_embeddings=use_embeddings
+    )
+    guide = generate_guide(identity, synergies, use_ollama=use_ollama, normalizer=normalizer)
+    return {
+        "identity_slug": slug,
+        "identity_name": identity.get("name"),
+        "sinner": identity.get("sinner"),
+        "mechanic_profile": profiles[slug],
+        "synergies": synergies,
+        **guide,
+    }
+
+
+def _write_guide(guide: dict, dest_guides: Path) -> None:
+    dest_guides.mkdir(parents=True, exist_ok=True)
+    (dest_guides / f"{guide['identity_slug']}.json").write_text(
+        json.dumps(guide, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
 def run_pipeline(
     identities_dir: Path | None = None,
     guides_dir: Path | None = None,
     use_ollama: bool = False,
+    use_embeddings: bool | None = None,
 ) -> dict[str, dict]:
     """Ingest parsed IDs → mechanic profiles → synergies → guides."""
     t0 = time.perf_counter()
@@ -35,20 +72,11 @@ def run_pipeline(
 
     ingest_parsed_ids_to_json(out_dir=dest_id)
 
-    from limbus_guides.ingestion.unique_mechanics_registry import sync_from_parsed_ids
-
     mech_sync = sync_from_parsed_ids()
     if mech_sync["added"]:
         print(f"Registered {len(mech_sync['added'])} new unique mechanic(s): {', '.join(mech_sync['added'])}")
 
     roster = load_identities_json(dest_id)
-    if not roster:
-        roster = load_all_parsed()
-        for slug, data in roster.items():
-            (dest_id / f"{slug}.json").write_text(
-                json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
-            )
-
     profiles = {slug: build_mechanic_profile(data) for slug, data in roster.items()}
     keywords = extract_keywords(roster)
     roll_normalizer = build_roll_normalizer(roster)
@@ -56,24 +84,18 @@ def run_pipeline(
     guides: dict[str, dict] = {}
     dest_guides.mkdir(parents=True, exist_ok=True)
 
-    for slug, identity in roster.items():
-        identity = dict(identity)
-        identity["mechanic_profile"] = profiles[slug]
-        identity["keywords"] = keywords.get(slug, [])
-        synergies = find_synergy_teammates(identity, roster, profiles)
-        guide = generate_guide(identity, synergies, use_ollama=use_ollama, normalizer=roll_normalizer)
-        output = {
-            "identity_slug": slug,
-            "identity_name": identity.get("name"),
-            "sinner": identity.get("sinner"),
-            "mechanic_profile": profiles[slug],
-            "synergies": synergies,
-            **guide,
-        }
-        guides[slug] = output
-        (dest_guides / f"{slug}.json").write_text(
-            json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8"
+    for slug in roster:
+        output = _build_guide(
+            slug,
+            roster,
+            profiles,
+            keywords,
+            roll_normalizer,
+            use_ollama=use_ollama,
+            use_embeddings=use_embeddings,
         )
+        guides[slug] = output
+        _write_guide(output, dest_guides)
 
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
     manifest = {
@@ -91,6 +113,7 @@ def run_for_slug(
     identities_dir: Path | None = None,
     guides_dir: Path | None = None,
     use_ollama: bool = False,
+    use_embeddings: bool | None = None,
 ) -> dict:
     """Re-ingest roster and regenerate guide JSON for a single identity."""
     dest_id = identities_dir or IDENTITIES_DIR
@@ -101,32 +124,22 @@ def run_for_slug(
     if slug not in roster:
         raise KeyError(f"Identity slug not found after ingest: {slug!r}")
 
-    from limbus_guides.ingestion.unique_mechanics_registry import sync_from_parsed_ids
-
     sync_from_parsed_ids()
 
     profiles = {s: build_mechanic_profile(data) for s, data in roster.items()}
     keywords = extract_keywords(roster)
     roll_normalizer = build_roll_normalizer(roster)
 
-    identity = dict(roster[slug])
-    identity["mechanic_profile"] = profiles[slug]
-    identity["keywords"] = keywords.get(slug, [])
-    synergies = find_synergy_teammates(identity, roster, profiles)
-    guide = generate_guide(identity, synergies, use_ollama=use_ollama, normalizer=roll_normalizer)
-    output = {
-        "identity_slug": slug,
-        "identity_name": identity.get("name"),
-        "sinner": identity.get("sinner"),
-        "mechanic_profile": profiles[slug],
-        "synergies": synergies,
-        **guide,
-    }
-
-    dest_guides.mkdir(parents=True, exist_ok=True)
-    (dest_guides / f"{slug}.json").write_text(
-        json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8"
+    output = _build_guide(
+        slug,
+        roster,
+        profiles,
+        keywords,
+        roll_normalizer,
+        use_ollama=use_ollama,
+        use_embeddings=use_embeddings,
     )
+    _write_guide(output, dest_guides)
 
     guide_files = [p for p in dest_guides.glob("*.json") if p.name != "manifest.json"]
     manifest = {
@@ -138,9 +151,23 @@ def run_for_slug(
     return output
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     """CLI entrypoint for `python -m limbus_guides.pipeline.run` and `limbus-pipeline`."""
-    guides = run_pipeline(use_ollama=False)
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate guides for the parsed roster.")
+    parser.add_argument("--ollama", action="store_true", help="Use Ollama for guide prose")
+    parser.add_argument(
+        "--no-embeddings",
+        action="store_true",
+        help="Skip embedding similarity (rule-based synergies only; no torch needed)",
+    )
+    args = parser.parse_args(argv)
+
+    guides = run_pipeline(
+        use_ollama=args.ollama,
+        use_embeddings=False if args.no_embeddings else None,
+    )
     print(f"Generated {len(guides)} guides in data/guides/")
     return 0
 

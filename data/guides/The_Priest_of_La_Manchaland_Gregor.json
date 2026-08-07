@@ -6,13 +6,26 @@
     "primary_mechanics": [
       "Bleed",
       "Coin Power",
-      "Bloodfeast"
+      "Rupture"
     ],
     "secondary_mechanics": [
-      "Rupture",
       "Base Power",
+      "Bloodfeast",
       "Atk Weight"
     ],
+    "status_effects": {
+      "Bleed": 17,
+      "Rupture": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 8,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Bloodfeast": 5,
+      "Hardblood": 1
+    },
     "triggers": {
       "On Use": 11,
       "On Hit": 11,
@@ -20,24 +33,29 @@
       "Combat Start": 3
     },
     "all_mechanics": {
-      "Bloodfeast": 4,
       "Bleed": 17,
       "Rupture": 4,
-      "Coin Power": 8,
       "Base Power": 4,
-      "Atk Weight": 3
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Bloodfeast": 4
     },
     "identity_slug": "The_Priest_of_La_Manchaland_Gregor",
-    "key_status_effects": [],
-    "unique_mechanics": {
-      "Bloodfeast": 5,
-      "Hardblood": 1
-    }
+    "key_status_effects": []
   },
   "synergies": [
     {
       "teammate_slug": "The_Barber_of_La_Manchaland_Outis",
       "teammate_name": "The Barber of La Manchaland Outis",
+      "reason": "Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_Prince_of_La_Manchaland_Meursault",
+      "teammate_name": "The Prince of La Manchaland Meursault",
       "reason": "Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
       "score": 0.97,
       "source": "rule",
@@ -63,29 +81,21 @@
       "trait_match": true
     },
     {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
     }
   ],
   "core_idea": "The Priest of La Manchaland Gregor is a Tank / Support — **Bleed** focus. Scaling conditions: Coin Power +1 per 6 Bleed (max +2). Support passive (**Don Quixote Hardblood Arts 6: Whip**) applies when allies **land hits** (lowest-HP ally hits). **SP regenerator** — restores ally **SP** through passives and key skills. **HP regenerator** — tops up ally **HP** through passives and skills.",
-  "playstyle_guide": "- **Don Quixote Hardblood Arts 6: Whip** triggers **On Hit** — allies need to attack for the passive to apply.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- Front-load **+3 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- **SP sustain** fires at **Turn End** — restores **lowest-SP allies**.\n- Low-SP allies are topped up after clashes — let them spend freely, then rely on Turn End healing.\n- **HP sustain** triggers at **On Hit** — restores **lowest-HP allies**.\n- Heals flow when allies land hits — attackers need to connect for the passive to proc.\n- **Counter: Faded Patience** grants 5 **Bleed and activate Bleed up to 3 times on self** at Combat Start — use the defense slot to prep buffs before your main attacks.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Bleed (max +2).\n\n**S1 — Sacrifice for the Family** (BP 3, CP +4, x2): rolls — low 3, high 11 (Extremely Low).\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Suffocating Guilt** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n\n**S3 — The Unforgivable Sin** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Peak output requires both conditions: On Hit with this Skill: heal 50% of the HP damage dealt (max 100 per Skill) | [On Use] Deal +1.5% damage for every 1% missing HP on self (max 90%).\n- Inflict +1 Bleed Count; [On Hit] Inflict +1 Rupture Count\n\nCombat passive — **Bloodfeast**: If this unit is on field, or is one of the units that can appear on this Stage, increase Bloodfeast value by the amount of Bleed damage c….\n  - When this unit enters the field, the sleeping blood drenching the battlefield will surface.\n\nCombat passive — **Self-destructive Dedication**: Turn End: heal (10 - Ailing Heart) SP for the ally with the least SP (excluding: self or allies that are Panicked or Corroded).\n  - In this Encounter, when this unit takes damage that brings their HP down to 0, nullify that damage.\n  - then, this unit's HP cannot drop below 1 for the turn. (once per Encounter).\n\nDefense skill — **Counter: Faded Patience**: [Combat Start] At 40%+ HP, gain 5 Bleed and activate Bleed up to 3 times on self (once per turn.\n  - [Combat Start] At less than 40% HP, consume up to 20 Bloodfeast and heal the same value as HP (once per turn).\n  - [Combat Start] Gain 3 Ailing Heart (once per turn).",
+  "playstyle_guide": "- **Don Quixote Hardblood Arts 6: Whip** triggers **On Hit** — allies need to attack for the passive to apply.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- Front-load **+3 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- **SP sustain** fires at **Turn End** — restores **lowest-SP allies**.\n- Low-SP allies are topped up after clashes — let them spend freely, then rely on Turn End healing.\n- **HP sustain** triggers at **On Hit** — restores **lowest-HP allies**.\n- Heals flow when allies land hits — attackers need to connect for the passive to proc.\n- **Counter: Faded Patience** grants 5 **Bleed and activate Bleed up to 3 times on self** at Combat Start — use the defense slot to prep buffs before your main attacks.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Bleed (max +2).\n\n**S1 — Sacrifice for the Family** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Suffocating Guilt** (BP 4, CP +6, x2): rolls — low 4, high 16 (Average).\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- draws enemy aggro — intended to absorb hits\n\n**S3 — The Unforgivable Sin** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Peak output requires both conditions: On Hit with this Skill: heal 50% of the HP damage dealt (max 100 per Skill) | [On Use] Deal +1.5% damage for every 1% missing HP on self (max 90%).\n- Inflict +1 Bleed Count; [On Hit] Inflict +1 Rupture Count\n\nCombat passive — **Bloodfeast**: If this unit is on field, or is one of the units that can appear on this Stage, increase Bloodfeast value by the amount of Bleed damage c….\n  - When this unit enters the field, the sleeping blood drenching the battlefield will surface.\n\nCombat passive — **Self-destructive Dedication**: Turn End: heal (10 - Ailing Heart) SP for the ally with the least SP (excluding: self or allies that are Panicked or Corroded).\n  - In this Encounter, when this unit takes damage that brings their HP down to 0, nullify that damage.\n  - then, this unit's HP cannot drop below 1 for the turn. (once per Encounter).\n\nDefense skill — **Counter: Faded Patience**: [Combat Start] At 40%+ HP, gain 5 Bleed and activate Bleed up to 3 times on self (once per turn.\n  - [Combat Start] At less than 40% HP, consume up to 20 Bloodfeast and heal the same value as HP (once per turn).\n  - [Combat Start] Gain 3 Ailing Heart (once per turn).",
   "team_suggestions": [
     "La Manchaland Bloodfeast tank — slot alongside other La Manchaland identities to feed the shared pool while absorbing aggro for Hardblood spenders. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **The Barber of La Manchaland Outis**: Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
-    "- **The Manager of La Manchaland Don Quixote**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
-    "- **The Princess of La Manchaland Rodion**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives."
+    "- **The Prince of La Manchaland Meursault**: Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
+    "- **The Manager of La Manchaland Don Quixote**: Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives."
   ],
   "team_suggestion_intro": "La Manchaland Bloodfeast tank — slot alongside other La Manchaland identities to feed the shared pool while absorbing aggro for Hardblood spenders. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
@@ -96,14 +106,14 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
-      "teammate_name": "The Manager of La Manchaland Don Quixote",
-      "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
+      "teammate_slug": "The_Prince_of_La_Manchaland_Meursault",
+      "teammate_name": "The Prince of La Manchaland Meursault",
+      "reason": "Shares [Third Kindred] trait — same-generation ally activates this identity's trait-conditional passive and alternate skills.",
       "source": "rule"
     },
     {
-      "teammate_slug": "The_Princess_of_La_Manchaland_Rodion",
-      "teammate_name": "The Princess of La Manchaland Rodion",
+      "teammate_slug": "The_Manager_of_La_Manchaland_Don_Quixote",
+      "teammate_name": "The Manager of La Manchaland Don Quixote",
       "reason": "Shares [La Manchaland] — feeds the shared Bloodfeast pool and strengthens allied Hardblood / Bloodfeast passives.",
       "source": "rule"
     }

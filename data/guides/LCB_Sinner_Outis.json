@@ -1,0 +1,63 @@
+{
+  "identity_slug": "LCB_Sinner_Outis",
+  "identity_name": "LCB Sinner Outis",
+  "sinner": "Outis",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Base Power",
+      "Coin Power",
+      "Rupture"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Rupture": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 2,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Rupture": 3,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 3
+    },
+    "identity_slug": "LCB_Sinner_Outis",
+    "key_status_effects": []
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "LCB Sinner Outis is a Damage Dealer — **Rupture** focus.",
+  "playstyle_guide": "**S1 — Pulled Blade** (BP 3, CP +2, x3): rolls — low 3, high 9 (Extremely Low).\n\n**S2 — Backslash** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low / Slightly High stacked).\n- If user’s speed is faster than target’s, +20% Damage\n\n**S3 — Piercing Thrust** (BP 7, CP +14, x1): rolls — low 7, high 21 (High / Slightly High stacked).\n- If target’s HP is above 50%, deal +20% damage\n\nCombat passive — **Executor**: If target’s SP is below 0, deal +10% damage.\n\nCombat passive — **Military Mindset**: 1 ally with the most HP deals +30% damage to enemies below 0 SP.",
+  "team_suggestions": [
+    "**Rupture** focus.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Rupture** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

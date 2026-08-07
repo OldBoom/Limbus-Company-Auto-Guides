@@ -1,0 +1,129 @@
+{
+  "identity_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+  "identity_name": "R Corp. 4th Pack Rabbit Heathcliff",
+  "sinner": "Heathcliff",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Ammo",
+      "Coin Power",
+      "Charge"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Bleed",
+      "Rupture",
+      "Atk Weight",
+      "Fragile"
+    ],
+    "status_effects": {
+      "Charge": 4,
+      "Bleed": 3,
+      "Rupture": 3,
+      "Haste": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Ammo": 9,
+      "Fragile": 8
+    },
+    "triggers": {
+      "On Hit": 9,
+      "On Use": 1
+    },
+    "all_mechanics": {
+      "Charge": 4,
+      "Bleed": 3,
+      "Rupture": 3,
+      "Haste": 1,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Ammo": 8,
+      "Fragile": 2
+    },
+    "identity_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+    "key_status_effects": [
+      "Ammo",
+      "Fragile",
+      "Attack Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Reindeer_Ishmael",
+      "teammate_name": "R Corp. 4th Pack Reindeer Ishmael",
+      "reason": "Shares [R Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "This identity's 'Raring to Graze' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
+      "teammate_name": "LCE E.G.O::Dimension Shredder Yi Sang",
+      "reason": "This identity's 'Raring to Graze' inflicts Charge — LCE E.G.O::Dimension Shredder Yi Sang scales off Charge.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "MultiCrack_Office_Rep_Faust",
+      "teammate_name": "MultiCrack Office Rep Faust",
+      "reason": "This identity's 'Raring to Graze' inflicts Charge — MultiCrack Office Rep Faust scales off Charge.",
+      "score": 0.85,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "R Corp. 4th Pack Rabbit Heathcliff is a Support — **Haste** tempo on key skills.",
+  "playstyle_guide": "- **Haste** before **Evade** when you need higher Speed on the setup turn.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Manage **Ammo** — multiple skills spend limited ammo on coin flips. Preserve **Ammo** for S2; when reserves are low, skip or pass on weaker S1, S3 so your strongest skill keeps fully empowered coins.\n\n**S1 — Graze the Grass** (BP 4, CP +2, x3): rolls — low 4, high 10 (Extremely Low).\n- Gain +3 Charge Count\n\n**S2 — Concentrated Fire** (BP 4, CP +2, x4): rolls — low 4, high 12 (Extremely Low).\n- Coin Power +1 at 6+ Speed\n\n**S3 — Quick Suppression** (BP 3, CP +2, x5): rolls — low 3, high 13 (Low).\n- Coin Power +2 at 6+ Speed\n\nCombat passive — **Doggedness**: 1 ally with the fastest Speed deals +10% Pierce damage.",
+  "team_suggestions": [
+    "Trait-dependent kit — [R Corp.] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [R Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+    "- **R Corp. 4th Pack Reindeer Ishmael**: Shares [R Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+    "- **LCE E.G.O::AEDD Gregor**: This identity's 'Raring to Graze' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [R Corp.] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [R Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Reindeer_Ishmael",
+      "teammate_name": "R Corp. 4th Pack Reindeer Ishmael",
+      "reason": "Shares [R Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "This identity's 'Raring to Graze' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

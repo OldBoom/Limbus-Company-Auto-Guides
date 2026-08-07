@@ -1,0 +1,81 @@
+{
+  "identity_slug": "LCE_E.G.O_Lantern_Yi_Sang",
+  "identity_name": "LCE E.G.O::Lantern Yi Sang",
+  "sinner": "Yi Sang",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Base Power",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Unbreakable Coin",
+      "Fairy Lure",
+      "Final Power",
+      "Bind"
+    ],
+    "status_effects": {
+      "Rupture": 27,
+      "Bind": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 7,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Final Power": 2
+    },
+    "unique_mechanics": {
+      "Unbreakable Coin": 3,
+      "Fairy Lure": 8
+    },
+    "triggers": {
+      "Combat Start": 4,
+      "On Use": 9,
+      "On Hit": 8,
+      "Attack End": 1
+    },
+    "all_mechanics": {
+      "Rupture": 27,
+      "Bind": 1,
+      "Base Power": 7,
+      "Coin Power": 4,
+      "Atk Weight": 3,
+      "Final Power": 2,
+      "Unbreakable Coin": 3,
+      "Fairy Lure": 3
+    },
+    "identity_slug": "LCE_E.G.O_Lantern_Yi_Sang",
+    "key_status_effects": [
+      "Aggro",
+      "Fairy Lure"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "LCE E.G.O::Lantern Yi Sang is a Tank / Status Specialist — **Rupture** focus.",
+  "playstyle_guide": "- Skills check **15+ Rupture** — favour those coins when stacked.\n- Front-load **+8 Aggro** on the slot you want enemies to target.\n- **Counter: Yet, the degree to which that attunement and synchronization are achieved may resultantly allow the user to be devoured** grants 3 **Fairy Lure** at Combat Start — use the defense slot to prep buffs before your main attacks.\n\n**S1 — Though it must be prefaced that E.G.O gears are standardized equipment,** (BP 4, CP +3, x2): rolls — low 4, high 10 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n- converts coins to Unbreakable under condition\n\n**S2 — when juxtaposed with E.G.O gear from L Corp., <br> depending on the degree of attunement to the Abnormality,** (BP 8, CP +6, x1): rolls — low 8, high 14 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n- converts coins to Unbreakable under condition\n\n**S3 — the idiosyncrasies of the source may be utilized with greater flexibility** (BP 16, CP -5, x3): rolls — low 16, high 31 (Extremely High).\n- Peak output requires both conditions: Deal +0.8% damage for every 1% missing HP on self | [Combat Start] Base Power +1 for every Skill that targets this unit (max 3).\n- draws enemy aggro — intended to absorb hits\n- Inflict +2 Rupture Count; [On Hit] Inflict 1 Bind next turn\n\nCombat passive — **This is reflected in their appearance, more closely resembling the source Abnormality than E.G.O of the former L Corp. do**: On death, inflict 5 Rupture and +3 Rupture Count against the target that attacked this unit last.\n  - then, gain 2 E.G.O resources for 4 least-owned Affinities.\n  - If no one attacked this unit, or if an ally killed this unit, inflict 5 Rupture and +3 Rupture Count against the enemy that has the least….\n\nCombat passive — **E.G.O disintegration is not unlike decomposition of compost**: When 1 ally that has the lowest current HP is killed, gain 2 E.G.O resources for 2 least-owned Affinities.\n\nDefense skill — **Counter: Yet, the degree to which that attunement and synchronization are achieved may resultantly allow the user to be devoured**: [Combat Start] Gain 3 Fairy Lure (once per turn).\n  - [On Use] Gain +8 Aggro next turn.\n  - [On Use] If target has 15+ Rupture and 3+ Rupture Count, this Skill does not inflict Rupture Count with its effects.",
+  "team_suggestions": [
+    "**Rupture** focus.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Rupture** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

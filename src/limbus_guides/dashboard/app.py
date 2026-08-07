@@ -23,7 +23,7 @@ from limbus_guides.dashboard.text_format import (
     format_inline_guide_text,
     guide_format_css,
 )
-from limbus_guides.nlp.generation import _embedding_verify_note
+from limbus_guides.nlp.generation import embedding_verify_note
 from limbus_guides.paths import CONFIG_DIR, GUIDES_DIR
 
 STATIC_DIR = Path(__file__).resolve().parent / "static" / "images"
@@ -240,7 +240,7 @@ def _render_team_suggestions(guide: dict, guides: dict[str, dict]) -> None:
             name = pick.get("teammate_name", "")
             reason = pick.get("reason", "")
             slug = pick.get("teammate_slug", "")
-            suffix = f"{reason}{_embedding_verify_note(pick.get('source', ''))}"
+            suffix = f"{reason}{embedding_verify_note(pick.get('source', ''))}"
             suffix_html = format_inline_guide_text(suffix)
             if slug and slug in guides:
                 href = html_lib.escape(_identity_pick_url(slug), quote=True)

@@ -1,0 +1,159 @@
+{
+  "identity_slug": "Dawn_Office_Fixer_Faust",
+  "identity_name": "Dawn Office Fixer Faust",
+  "sinner": "Faust",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Tremor",
+      "Fire Butterfly Coffin"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Base Power",
+      "Clash Power",
+      "Unbreakable Coin",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Burn": 29,
+      "Tremor": 20
+    },
+    "stat_modifiers": {
+      "Base Power": 7,
+      "Coin Power": 11,
+      "Atk Weight": 5,
+      "Final Power": 3,
+      "Clash Power": 7,
+      "Offense Level Up": 1,
+      "Defense Level Up": 1
+    },
+    "unique_mechanics": {
+      "Fire Butterfly Coffin": 16,
+      "Tremor Burst": 8,
+      "High Noon": 4,
+      "Amplitude Conversion": 8,
+      "Tremor — Scorch": 8,
+      "Unfocused Volley": 8,
+      "Coffin": 18,
+      "Unbreakable Coin": 6,
+      "Dawn Office": 7,
+      "Butterfly": 17,
+      "Power Down": 8
+    },
+    "triggers": {
+      "On Use": 15,
+      "On Hit": 13,
+      "Attack End": 2,
+      "Combat Start": 1,
+      "Clash Win": 1
+    },
+    "all_mechanics": {
+      "Burn": 29,
+      "Tremor": 20,
+      "Base Power": 7,
+      "Coin Power": 11,
+      "Atk Weight": 5,
+      "Final Power": 3,
+      "Clash Power": 7,
+      "Offense Level Up": 1,
+      "Defense Level Up": 1,
+      "Fire Butterfly Coffin": 15,
+      "Tremor Burst": 4,
+      "High Noon": 2,
+      "Amplitude Conversion": 3,
+      "Tremor — Scorch": 5,
+      "Unfocused Volley": 2,
+      "Coffin": 2,
+      "Unbreakable Coin": 6,
+      "Dawn Office": 5
+    },
+    "identity_slug": "Dawn_Office_Fixer_Faust",
+    "key_status_effects": [
+      "Fire Butterfly Coffin",
+      "Tremor Burst",
+      "Amplitude Conversion",
+      "Tremor — Scorch",
+      "Unfocused Volley",
+      "Power Down"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
+      "teammate_name": "The House of Spiders: The Thumb Nursefather Rodion",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Capo_IIII_Meursault",
+      "teammate_name": "The Thumb East Capo IIII Meursault",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    },
+    {
+      "teammate_slug": "The_Thumb_East_Soldato_II_Sinclair",
+      "teammate_name": "The Thumb East Soldato II Sinclair",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "score": 1.0699999999999998,
+      "source": "rule",
+      "faction_match": false,
+      "unique_tremor_match": true
+    }
+  ],
+  "core_idea": "Dawn Office Fixer Faust is a Damage Dealer / Status Specialist — **Coffin** + **Butterfly** identity — build unique-resource stacks, hit payoff windows, then rebuild. Scaling conditions: Final Power +1 per 4 (Burn + Tremor) (max +3); Coin Power +1 per 6 (Burn + Tremor) (max +2).",
+  "playstyle_guide": "- **Coffin stacks** — **+8 Coffin** on use (**Eject**). Build stacks before your highest-damage attacks.\n- Skills check **20+ Burn** — favour those coins when stacked.\n- **Tremor — Scorch** — Burst deals **Wrath** damage from Tremor and Burn Potency; consumes **Burn Count**.\n- **Counter: Stigmatize** grants 6 **Fire Butterfly Coffin** at Combat Start — use the defense slot to prep buffs before your main attacks.\n- Build Butterfly Count — spend via S1 once you hit 20+.\n- Reach scaling conditions before committing S3: Final Power +1 per 4 (Burn + Tremor) (max +3).\n\n**S1 — Flash of Sunup** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Final Power +1 per 4 (Burn + Tremor) (max +3)\n\n*↳ Alternate S1 — Seconded Offensive* (BP 4, CP +3): rolls — low 4, high 10 (Extremely Low).\n  - Gain the following effects based on Fire Butterfly Coffin Stack:\n  - Deal +2% damage for every Stack (max 60%)\n  - Scales Final Power with Stacks stacks — apply liberally before committing (cap +3).\n  - Inflict +1 Tremor Count (2 times per turn)\n  - Inflict +1 Burn Count (2 times per turn)\n\n**S2 — Butterfly Slash** (BP 4, CP +6, x1): rolls — low 4, high 10 (Extremely Low).\n- Final Power +1 per 4 (Burn + Tremor) (max +3)\n- Peak output requires both conditions: At 10+ Fire Butterfly Coffin, gain the following effects: | - Inflict +1 Burn Count.\n- Inflict 1 Tremor; [Reuse - On Hit] Inflict 1 Burn; [Reuse - On Hit] Trigger Tremor Burst; then, reduce target's Tremor Count by 1 (once per Skill)\n\n**S3 — Eject** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low).\n- **Coin Power** scales with **(Burn + Tremor)** (+1 per 6, max +2) — build stacks first.\n- triggers Amplitude Conversion into Tremor — Scorch\n- Trigger Tremor Burst; then, reduce target's Tremor Count by 1 (2 times per Skill); [Reuse - On Hit] Inflict 1 Burn\n\n*↳ Alternate S3 — Eject - High Noon* (BP 5, CP +4): rolls — low 5, high 17 (Average).\n  - Unbreakable Coin\n\nCombat passive — **Heatproof Coat**: Upon entering the Encounter for the first time, gain 0 Fire Butterfly Coffin.\n  - Cannot be Staggered or fall below 1 HP due to Burn damage.\n  - Take -50% damage from Burn effects (rounded down).\n\nCombat passive — **Feuerfalter [Stigma Workshop]**: Combat Start: When this unit has Battle Instinct, gain (Stack x 3) Fire Butterfly Coffin.\n  - When other Identities meet the following conditions, Dawn Office Fixer Faust uses the \"Seconded Offensive\" Skill against the targeted ene….\n  - At Base Skill Attack End: If the enemy that was hit is Staggered, use \"Seconded Offensive\" against said enemy.\n\nDefense skill — **Counter: Stigmatize**: [Clashable Counter].\n  - [Combat Start] Gain 6 Fire Butterfly Coffin (once per Encounter).\n  - [Before Use] At 30 Fire Butterfly Coffin, activate as \"Dismemberment at High Noon\" instead (once per turn).\n  - If this unit has Overheated Coffin, the effect above does not activate.",
+  "team_suggestions": [
+    "**Tremor — Scorch** control.",
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **The House of Spiders: The Thumb Nursefather Rodion**: Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups."
+  ],
+  "team_suggestion_intro": "**Tremor — Scorch** control.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
+      "teammate_name": "The House of Spiders: The Thumb Nursefather Rodion",
+      "reason": "Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

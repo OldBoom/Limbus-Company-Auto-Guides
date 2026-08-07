@@ -1,0 +1,129 @@
+{
+  "identity_slug": "Twinhook_Pirates_First_Mate_Gregor",
+  "identity_name": "Twinhook Pirates First Mate Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Poise",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Unjust Enrichment",
+      "Base Power",
+      "Ammo",
+      "Atk Weight",
+      "Pierce DMG Up"
+    ],
+    "status_effects": {
+      "Poise": 8,
+      "Bleed": 10
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Pierce DMG Up": 1
+    },
+    "unique_mechanics": {
+      "Ammo": 8,
+      "Unjust Enrichment": 8,
+      "Plus Coin Boost": 8
+    },
+    "triggers": {
+      "On Use": 3,
+      "On Hit": 2,
+      "Heads Hit": 1,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Poise": 8,
+      "Bleed": 10,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Pierce DMG Up": 1,
+      "Ammo": 4,
+      "Unjust Enrichment": 5
+    },
+    "identity_slug": "Twinhook_Pirates_First_Mate_Gregor",
+    "key_status_effects": [
+      "Ammo",
+      "Plus Coin Boost",
+      "Unjust Enrichment"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Twinhook Pirates First Mate Gregor is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling. Scaling conditions: Coin Power +1 per 7 Bleed (max +2).",
+  "playstyle_guide": "- Skills check **7+ Bleed** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Foregone Conclusion** — **S2 — Unilateral Business** adds **+3 Poise Count** at **On Use** and **+4 Poise** per **Heads Hit** coin; **S1 — Negotiation Start** adds **+3 Poise** at **On Use** and **+1 Poise Count** per **On Hit** coin.\n- **Foregone Conclusion** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- Manage **Ammo** — S3 spends ammo on its coin flips. Preserve **Ammo** for S3; when reserves are low, skip or pass on weaker S1, S2 so your strongest skill keeps fully empowered coins.\n- Reach scaling conditions before committing S3: Coin Power +1 per 7 Bleed (max +2).\n\n**S1 — Negotiation Start** (BP 4, CP +3, x2): rolls — low 4, high 10 (Extremely Low).\n- Delay until 7+ Bleed on target — that is when the damage condition activates.\n- Gain +1 Poise Count; [On Crit] Inflict 2 Bleed\n\n**S2 — Unilateral Business** (BP 4, CP +6, x2): rolls — low 4, high 16 (Average / Extremely High stacked).\n- Scales Coin Power with Bleed stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Bleed** (+1 per 7, max +2) — build stacks first.\n- Gain 4 Poise; [On Crit] Inflict 2 Bleed\n- Inflict 3 Bleed; [On Crit] Inflict 2 Bleed; +30% Damage on Critical Hit\n\n**S3 — Foregone Conclusion** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average / Slightly High stacked).\n- Gain 1 Poise for every 3 Bleed on target (Max 10); Gain Coin Power +1 for every 7 Poise on self (Max +3)\n- Spend 1 Ammo; +50% Damage on Critical Hit\n\nCombat passive — **Bullets are Pricey**: Always Active : Begin encounters with 7 Ammo.\n  - On Heads Hit against targets that have Bleed, gain Unjust Enrichment. (Max 4).\n  - If a Coin that uses Ammo Hits, consume all Unjust Enrichment and deal additional (25 x Unjust Enrichment consumed)% of damage dealt as bo….\n\nCombat passive — **New Breathing Hole**: If 1 ally that has the most Poise defeats an enemy, gain 1 Pierce DMG Up next turn. (Once per turn).",
+  "team_suggestions": [
+    "**Bleed** focus.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

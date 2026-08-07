@@ -1,0 +1,105 @@
+{
+  "identity_slug": "Dieci_Assoc._South_Section_4_Director_Meursault",
+  "identity_name": "Dieci Assoc. South Section 4 Director Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Insight",
+      "Sinking",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Erudition",
+      "Base Power",
+      "Discard",
+      "Shield",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Shield": 3,
+      "Sinking": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Clash Power": 1,
+      "Pierce DMG Up": 1,
+      "Blunt DMG Up": 1
+    },
+    "unique_mechanics": {
+      "Insight": 11,
+      "Discard": 8,
+      "Erudition": 8
+    },
+    "triggers": {
+      "On Use": 7,
+      "Clash Win": 1,
+      "On Hit": 3,
+      "Combat Start": 1,
+      "Attack End": 1
+    },
+    "all_mechanics": {
+      "Shield": 3,
+      "Sinking": 6,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Clash Power": 1,
+      "Pierce DMG Up": 1,
+      "Blunt DMG Up": 1,
+      "Insight": 10,
+      "Discard": 4,
+      "Erudition": 5
+    },
+    "identity_slug": "Dieci_Assoc._South_Section_4_Director_Meursault",
+    "key_status_effects": [
+      "Insight",
+      "Discard",
+      "Erudition",
+      "Aggro"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Dieci Assoc. South Section 4 Director Meursault is a Damage Dealer / Status Specialist — **Sinking** clash-support. Scaling conditions: Coin Power +1 per 6 Sinking (max +2); +5% damage per Insight (max +15%).",
+  "playstyle_guide": "- Front-load **+6 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- Discard into **Erudition** for Shield spikes, then use the powered skill line.\n- Discard to build **Insight**, then fire the powered skill set.\n- Build Insight Count — spend via S3 once you hit 4+.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Sinking (max +2).\n- Hold S3 for when At 4+ Insight is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Studious Dedication** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Gain (Insight x 5% of Max HP) Shield if this Skill is Discarded ; [On Use] Discard 1 Skill of the lowest rank in all of this unit's Skill Slots ; [On Use] Gain (Insight - 1) Clash Power (max 2) ; [Clash Win] Gain 2 Erudition (once per turn)\n\n**S2 — Moment of Erudition** (BP 4, CP +6, x2): rolls — low 4, high 16 (Average / Extremely High stacked).\n- Deal +5% damage for every Insight on self (max 15%) ; [Combat Start] Apply Erudition equal to Insight on self to 2 random allies and on self (prioritizes allies with Discard that has the least Erudition) ; [On Use] Discard 2 of this unit's Skills in ascending order of ranks from all of its Skill Slots ; [On Use] Coin Power +1 for every 6 Sinking on target (max 2)\n- **Coin Power** scales with **Sinking** (+1 per 6, max +2) — build stacks first.\n- Up to **+15% damage** (+5% per **Insight**) — stack the resource before committing.\n\n**S3 — Scorch Knowledge** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Peak output requires both conditions: Deal +5% damage for every Insight (max 45%) | [On Use] Coin Power +1 for every 6 Sinking on target (max 2).\n- **Coin Power** scales with **Sinking** (+1 per 6, max +2) — build stacks first.\n\nCombat passive — **Study Hall**: Every time another ally Discards a Skill, apply 1 Erudition to the ally and self (once per Skill, 3 times per turn).\n  - Turn End: next turn, gain Pierce DMG Up and Blunt DMG Up equal to the number of other allies that Discarded Skills (max 3).\n\nCombat passive — **Diligent Learning**: When 1 ally with the highest max HP Discards a Skill, gain (5 x Discarded Skill rank)% of the max HP as Shield (once per turn).\n  - If the ally has Insight, multiply the above Shield value by 1.5.",
+  "team_suggestions": [
+    "**Sinking** clash-support.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+    "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Sinking** clash-support.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

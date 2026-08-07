@@ -1,0 +1,88 @@
+{
+  "identity_slug": "Devyat'_Assoc._North_Section_3_Rodion",
+  "identity_name": "Devyat' Assoc. North Section 3 Rodion",
+  "sinner": "Rodion",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Courier Trunk — Rodion",
+      "Rupture",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Haste",
+      "Shield",
+      "Atk Weight",
+      "Clash Power"
+    ],
+    "status_effects": {
+      "Rupture": 17,
+      "Haste": 3,
+      "Shield": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Defense Level Down": 1,
+      "Clash Power": 2
+    },
+    "unique_mechanics": {
+      "Courier Trunk — Rodion": 23,
+      "Strategic R&R Mode": 8,
+      "Clash Power Up": 8
+    },
+    "triggers": {
+      "On Use": 4,
+      "On Hit": 6,
+      "Heads Hit": 1,
+      "Attack End": 1,
+      "Combat Start": 3
+    },
+    "all_mechanics": {
+      "Rupture": 17,
+      "Haste": 3,
+      "Shield": 3,
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Defense Level Down": 1,
+      "Clash Power": 2,
+      "Courier Trunk — Rodion": 19,
+      "Strategic R&R Mode": 2
+    },
+    "identity_slug": "Devyat'_Assoc._North_Section_3_Rodion",
+    "key_status_effects": [
+      "Courier Trunk — Rodion",
+      "Strategic R&R Mode",
+      "Clash Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Devyat' Assoc. North Section 3 Rodion is a Damage Dealer / Status Specialist — **Devyat' Courier** who races **Courier Trunk — Rodion** below **15** for faster gains, stacking **Rupture** on targets along the way, spikes clash power and Shield at **15+**, then **Just… a Strategic Time Off!** forces **Strategic R&R** so **Upon Retreat** can buff allies. Rejoining once per fight **halves** carried stacks — front-load your best burst before returning. Scaling conditions: +2% damage per Courier Trunk — Rodion (max +40%).",
+  "playstyle_guide": "- **Courier Trunk** — below **15** you gain stacks faster; at **15+** skills spike and **Just… a Strategic Time Off!** can replace your Counter to begin the retreat sequence.\n- Rejoining once per encounter **halves** your carried stacks — treat the first rotation as your main value window before returning.\n- Skills check **15+ Rupture** — favour those coins when stacked.\n- Skills grant **Haste** — chain them when you need higher Speed next turn.\n- Reach scaling conditions before committing S3: +2% damage per Courier Trunk — Rodion (max +40%).\n\n**S1 — Courier Trunk - Decay Knife** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Scales Coin Power with Courier stacks — apply liberally before committing (cap +2).\n- Gain 1 Courier Trunk — Rodion; - If this unit has less than 15 Courier Trunk — Rodion, gain 1 additional Courier Trunk — Rodion\n\n**S2 — Courier Trunk - Gadget Reveal** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / High stacked).\n- Peak output requires both conditions: Deal +2% damage for every Courier Trunk — Rodion on self (max 40%) | Coin Power +1 for every 10 Courier Trunk — Rodion or for every 6 Rupture on target (max 2).\n- Up to **+40% damage** (+2% per **Courier Trunk — Rodion**) — stack the resource before committing.\n- Gain 1 Courier Trunk — Rodion; - If this unit has less than 15 Courier Trunk — Rodion, gain 1 additional Courier Trunk — Rodion\n- Gain 1 Haste next turn (once per turn)\n\n**S3 — I Trust Ya, Polu!** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Peak output requires both conditions: Deal +4% damage for every Courier Trunk — Rodion (max 80%) | Coin Power +1 for every 10 Courier Trunk — Rodion on self or for every 6 Rupture on target (max 2).\n- Inflict +3 Rupture Count (once per turn)\n- Peak output requires both conditions: At 15+ Courier Trunk — Rodion, deal +15% damage | [Attack End] If target is Staggered or defeated, gain 1 Haste next turn (once per turn).\n\nCombat passive — **Lemme go and I swear I'll make it in time!**: <For Chain Battles> When, after Retreating with 'Strategic R&R Mode', if this unit rejoins the battle, halve the Courier Trunk — Rodion v….\n\nCombat passive — **Speedy Delivery**: Turn Start: At 6+ Speed, or if this unit has Haste, gain (Courier Trunk — Rodion)% of this unit's max HP as Shield (max 20%).\n  - Upon Retreat, apply 1 Clash Power Up to 2 allies next turn (prioritizes Substituted units first, then in Deployment order).\n  - Lasts for 1 additional turn for every 15 Courier Trunk — Rodion on self (2 more turns max).\n\nDefense skill — **Counter: Courier Support & Control Sequence**: [Combat Start] At 15+ Courier Trunk — Rodion, activate 'Just… a Strategic Time Off!' instead (once per turn).\n  - [Combat Start] If this Skill is to be activated, gain (Courier Trunk — Rodion)% of this unit's max HP as Shield (max 25%, once per turn).\n  - [On Use] Gain 2 Courier Trunk — Rodion (once per turn).\n  - At less than 15 Courier Trunk — Rodion, gain 1 additional Courier Trunk — Rodion.",
+  "team_suggestions": [
+    "**Rupture** focus.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Rupture** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 15+ Rupture thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

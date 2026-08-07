@@ -1,0 +1,117 @@
+{
+  "identity_slug": "R.B._Sous-chef_Gregor",
+  "identity_name": "R.B. Sous-chef Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Paralyze",
+      "Atk Weight",
+      "Bind"
+    ],
+    "status_effects": {
+      "Bind": 2,
+      "Bleed": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Paralyze": 8
+    },
+    "triggers": {
+      "On Hit": 7
+    },
+    "all_mechanics": {
+      "Bind": 2,
+      "Bleed": 6,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Paralyze": 4
+    },
+    "identity_slug": "R.B._Sous-chef_Gregor",
+    "key_status_effects": [
+      "Paralyze"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "R.B. Sous-chef Gregor is a Damage Dealer — **Bleed** focus. **HP regenerator** — tops up ally **HP** through passives and skills.",
+  "playstyle_guide": "- Skills check **10+ Bleed** — favour those coins when stacked.\n- Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.\n- **HP sustain** triggers at **each turn** — restores **lowest-HP allies**.\n\n**S1 — Keep It Fresh** (BP 4, CP +2, x2): rolls — low 4, high 8 (Extremely Low).\n- Holds back until 4+ Bind — deals +30% more at that threshold.\n\n**S2 — You Fresh Enough?** (BP 6, CP +8, x1): rolls — low 6, high 14 (Slightly Low).\n- If user's Speed is faster than target's by 3+, Coin Power +3\n- Inflict +2 Bleed Count; Inflict 2 Bind next turn\n\n**S3 — Butcher Viand** (BP 5, CP +1, x4): rolls — low 5, high 9 (Extremely Low).\n- If target has 10+ Bleed Count, Coin Power +1\n- Heal HP based on target’s Bleed (Max 20%)\n\nCombat passive — **Packed Pies**: Heal 8 HP at the start of the combat phase.\n\nCombat passive — **Culinary Aid**: At the start of the combat phase, the ally with the least HP heals 5 HP.\n  - Boost the healing of R.B. Chef de Cuisine Ryōshū’s Passive ‘Rustle Up’ by 5.",
+  "team_suggestions": [
+    "**Bleed** focus.",
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 10+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

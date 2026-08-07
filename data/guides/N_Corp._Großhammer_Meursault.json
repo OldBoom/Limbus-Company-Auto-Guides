@@ -1,0 +1,68 @@
+{
+  "identity_slug": "N_Corp._Großhammer_Meursault",
+  "identity_name": "N Corp. Großhammer Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Coin Power",
+      "Base Power",
+      "Protection"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Nails",
+      "Bind",
+      "Fanatic",
+      "Final Power"
+    ],
+    "status_effects": {
+      "Bind": 2,
+      "Protection": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Nails": 8,
+      "Fanatic": 8,
+      "Attack Power Down": 8
+    },
+    "triggers": {
+      "On Use": 3,
+      "On Hit": 7,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Bind": 2,
+      "Protection": 3,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Final Power": 1,
+      "Nails": 3,
+      "Fanatic": 2
+    },
+    "identity_slug": "N_Corp._Großhammer_Meursault",
+    "key_status_effects": [
+      "Aggro",
+      "Nails",
+      "Attack Power Down",
+      "Fanatic",
+      "Attack Power Up"
+    ]
+  },
+  "synergies": [],
+  "core_idea": "N Corp. Großhammer Meursault is a Tank / Status Specialist / Support — **Nails** (N Corp. Fanatic) setup fighter. Stack Nails toward **5+** with early skills, then cash out with **You Are Cleansed of Sin** for burst damage and debuffs. Support passive (**Highest Honor**) buffs teammates.",
+  "playstyle_guide": "- **Highest Honor** — align allies' actions with the passive's trigger condition.\n- **Nails setup** — use S2 and S3 to stack **Nails** (unique Bleed) on the target before the payoff; Nails also feed Bleed damage each turn.\n- Cash out with **You Are Cleansed of Sin** — deals bonus damage (debuffs at 5+ Nails on Heads); do not fire it until the Nails threshold is met.\n- Front-load **+6 Aggro** on the slot you want enemies to target.\n\n**S1 — Drive** (BP 5, CP +1, x2): rolls — low 5, high 7 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n- Lower user’s Stagger Threshold by 60% of damage dealt\n\n**S2 — You Are Cleansed of Sin** (BP 6, CP +3, x2): rolls — low 6, high 12 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n- Peak output requires both conditions: Inflict 3 Bind next turn | [On Hit] If target has 5+ Nails, inflict 2 Bind and 1 Attack Power Down next turn.\n\n**S3 — Annihilate Heretics** (BP 8, CP +3, x2): rolls — low 8, high 14 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n- Heal 50% of damage dealt\n\nDefense skill — **Counter: Foolishness...!**: [Combat Start] Gain 1 Protection.\n  - At less than 50% HP, Final Power +2.",
+  "team_suggestions": [
+    "**Nails/Tremor** setup — reach **5+ Nails** before the burst skill; this kit self-applies both but Tremor Burst payoffs reward patient stacking. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- Pair with identities whose support passives inflict statuses this kit stacks or scales off."
+  ],
+  "team_suggestion_intro": "**Nails/Tremor** setup — reach **5+ Nails** before the burst skill; this kit self-applies both but Tremor Burst payoffs reward patient stacking. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

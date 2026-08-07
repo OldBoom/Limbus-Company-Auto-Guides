@@ -1,0 +1,117 @@
+{
+  "identity_slug": "W_Corp._L2_Cleanup_Agent_Meursault",
+  "identity_name": "W Corp. L2 Cleanup Agent Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Coin Power",
+      "Rupture"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Defense Level Down",
+      "Atk Weight",
+      "Slash Protection"
+    ],
+    "status_effects": {
+      "Charge": 12,
+      "Rupture": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Defense Level Down": 4
+    },
+    "unique_mechanics": {
+      "Slash Protection": 8,
+      "Slash Fragility": 8
+    },
+    "triggers": {
+      "On Use": 1,
+      "On Hit": 7,
+      "Heads Hit": 2,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Charge": 12,
+      "Rupture": 4,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Defense Level Down": 4,
+      "Slash Protection": 1
+    },
+    "identity_slug": "W_Corp._L2_Cleanup_Agent_Meursault",
+    "key_status_effects": [
+      "Slash Protection",
+      "Slash Fragility"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "W Corp. L2 Cleanup Agent Meursault is a Status Specialist — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Energy Current**), then rebuild for the next window. Scaling conditions: At 5+ Charge, Coin Power +1.",
+  "playstyle_guide": "- Ramp **Charge Count** toward **20** before **Energy Current** — **S1 — Rip** adds **+3 Charge Count** at **On Use** and **+3 Charge Count** per **On Hit** coin; **Enduring Spirit** adds **+1 Charge Count** at **On Use**.\n- Skills check **5+ Rupture** — favour those coins when stacked.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Hold S3 for when At 5+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Rip** (BP 5, CP +6, x1): rolls — low 5, high 11 (Slightly Low).\n- Gain 2 Slash Protection; Gain +3 Charge Count\n- Gain +3 Charge Count\n\n**S2 — Energy Cycle** (BP 5, CP +2, x3): rolls — low 5, high 11 (Extremely Low / Low stacked).\n- If at 5+ Charge Count, Coin Power +1\n\n**S3 — Energy Current** (BP 5, CP +2, x4): rolls — low 5, high 13 (Low / Slightly Low stacked).\n- If at 5+ Charge Count, Coin Power +1\n\nCombat passive — **Enduring Spirit**: When attacked, gain +1 Charge Count.\n  - (Up to 6 times).\n  - After losing a clash, gain +1 Charge Count. (Up to 6 times, counted independently of hits taken).\n\nCombat passive — **Taciturn**: 1 ally with the slowest Speed inflicts +1 Rupture.\n\nDefense skill — **Guard: Guard**: [Combat Start] Gain +2 Charge Count.",
+  "team_suggestions": [
+    "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Energy Current**), then rebuild for the next window.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Energy Current**), then rebuild for the next window.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

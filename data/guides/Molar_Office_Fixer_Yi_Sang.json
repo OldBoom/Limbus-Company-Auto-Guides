@@ -1,0 +1,123 @@
+{
+  "identity_slug": "Molar_Office_Fixer_Yi_Sang",
+  "identity_name": "Molar Office Fixer Yi Sang",
+  "sinner": "Yi Sang",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Defense Level Down"
+    ],
+    "secondary_mechanics": [
+      "Tremor Burst",
+      "Base Power",
+      "Atk Weight",
+      "Discard"
+    ],
+    "status_effects": {
+      "Tremor": 12
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Defense Level Down": 5
+    },
+    "unique_mechanics": {
+      "Discard": 8,
+      "Tremor Burst": 8
+    },
+    "triggers": {
+      "On Use": 5,
+      "On Hit": 4,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Tremor": 12,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Defense Level Down": 5,
+      "Discard": 3,
+      "Tremor Burst": 5
+    },
+    "identity_slug": "Molar_Office_Fixer_Yi_Sang",
+    "key_status_effects": [
+      "Discard",
+      "Tremor Burst"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
+      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
+      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Molar Office Fixer Yi Sang is a Damage Dealer / Status Specialist — **Tremor** control — stack for early stagger breaks.",
+  "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Plan which skills to Discard before the payoff turn.\n\n**S1 — Stay Calm** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If this Skill is Discarded, gain +4 Tremor Count | [On Use] Gain +2 Tremor Count.\n\n**S2 — Gamble** (BP 4, CP +12, x1): rolls — low 4, high 16 (Average).\n- If this Skill is Discarded, gain +4 Tremor Count ; [On Use] Discard 1 Skill of the lowest rank in all of this unit's Skill Slots\n- If this Skill is Discarded, gain +4 Tremor Count; [On Use] Discard 1 Skill of the lowest rank in all of this unit's Skill Slots\n- Peak output requires both conditions: Inflict +2 Tremor Count | [On Hit] At 5+ Tremor Count, trigger Tremor Burst.\n\n**S3 — Grinding the Molars** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low).\n- Discard 1 Skill of the lowest rank in all of this unit's Skill Slots; [On Use] Consume 10 Tremor Count on self to gain Coin Power +2\n- Inflict 2 Defense Level Down; If the Skill consumed Tremor Count, trigger Tremor Burst\n\nCombat passive — **In Times Like These...**: Upon triggering Tremor Burst on an enemy, inflict 1 Defense Level Down for every 4 Stagger Threshold raised (max 5 Defense Level Down per….\n\nCombat passive — **Cleaning Up the Mess**: 1 ally that has the lowest max HP: For every 4 Stagger Threshold raised by triggering Tremor Burst on an enemy, inflict 1 Defense Level D….",
+  "team_suggestions": [
+    "**Tremor** control — stack for early stagger breaks.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Tremor** control — stack for early stagger breaks.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

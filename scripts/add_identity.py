@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add one identity from a wiki URL — parse, patch mechanics, guide, reference, eval."""
+"""Add one identity from a wiki URL — parse, patch mechanics, generate guide."""
 
 from __future__ import annotations
 
@@ -24,7 +24,6 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 from limbus_guides.config_io import load_json_config
-from limbus_guides.eval.metrics import evaluate_single
 from limbus_guides.ingestion.markdown_loader import _infer_sinner
 from limbus_guides.ingestion.wiki_parser import (
     SLUG_TO_WIKI_OVERRIDES,
@@ -41,7 +40,6 @@ from limbus_guides.paths import CONFIG_DIR, DATA_DIR, PARSED_IDS_DIR
 from limbus_guides.pipeline.run import run_for_slug
 
 PORTRAIT_DIR = ROOT / "src" / "limbus_guides" / "dashboard" / "static" / "images" / "identities"
-REF_DIR = DATA_DIR / "evaluation" / "references"
 MECHANICS_PATH = ROOT / "src" / "limbus_guides" / "nlp" / "mechanics.py"
 SYNERGY_PATH = ROOT / "src" / "limbus_guides" / "nlp" / "synergy.py"
 
@@ -271,39 +269,6 @@ def copy_portrait(src: Path, slug: str) -> Path:
     return dest
 
 
-def wiki_excerpt(md_path: Path, lines: int = 40) -> str:
-    return "\n".join(md_path.read_text(encoding="utf-8").splitlines()[:lines])
-
-
-def prompt_reference(identity_name: str, slug: str, md_path: Path, ref_file: Path | None) -> str | None:
-    if ref_file:
-        return ref_file.read_text(encoding="utf-8").strip()
-
-    print("\n── Wiki source excerpt (paste into your LLM) ──")
-    print(wiki_excerpt(md_path))
-    print("\n── Suggested reference prompt ──")
-    print(
-        f"Write 2-4 sentences for an evaluation reference for {identity_name}.\n"
-        "Sentence 1: role + primary mechanic. Sentences 2-3: resource loop / state transition.\n"
-        "Ground only in the wiki excerpt above, not in any generated guide.\n"
-    )
-    print(f"Enter reference text for: {slug}")
-    print("(Blank line to finish, Ctrl+C to skip.)")
-    lines: list[str] = []
-    try:
-        while True:
-            line = input("> " if not lines else "> ")
-            if not line.strip() and lines:
-                break
-            if not line.strip() and not lines:
-                continue
-            lines.append(line)
-    except (KeyboardInterrupt, EOFError):
-        return None
-    text = " ".join(lines).strip()
-    return text or None
-
-
 def prompt_portrait_path(cli_path: Path | None) -> Path | None:
     if cli_path:
         return cli_path if cli_path.exists() else None
@@ -340,8 +305,6 @@ def main() -> int:
     parser.add_argument("--force-protected", action="store_true", help="Allow overwriting protected stems")
     parser.add_argument("--portrait", type=Path, help="Portrait image path")
     parser.add_argument("--skip-portrait", action="store_true")
-    parser.add_argument("--skip-ref", action="store_true")
-    parser.add_argument("--ref-file", type=Path, help="Pre-written reference .txt")
     parser.add_argument("--add-sinner", help="Override inferred sinner name")
     parser.add_argument("--confirm-mechanics", action="store_true", help="Prompt before adding mechanics")
     parser.add_argument("--ollama", action="store_true", help="Use Ollama for guide generation")
@@ -428,29 +391,6 @@ def main() -> int:
     play = guide.get("playstyle_guide", "")
     print(f"  Playstyle: {play[:300]}{'...' if len(play) > 300 else ''}")
     print("─" * 66)
-
-    ref_text: str | None = None
-    if not args.skip_ref:
-        ref_text = prompt_reference(
-            guide.get("identity_name", slug),
-            slug,
-            md_path,
-            args.ref_file,
-        )
-        if ref_text:
-            REF_DIR.mkdir(parents=True, exist_ok=True)
-            ref_path = REF_DIR / f"{slug}.txt"
-            ref_path.write_text(ref_text + "\n", encoding="utf-8")
-            report.append(f"[OK]   Reference: saved ({len(ref_text.split())} words)")
-            scores = evaluate_single(slug)
-            if scores.get("has_reference"):
-                r = scores["rouge_l"]
-                report.append(
-                    f"[OK]   ROUGE-L:  {r['full']} (full) vs {r['naive']} (naive) vs {r['ablation']} (ablation)"
-                )
-        else:
-            report.append("[SKIP] Ref:  skipped")
-            report.append(f"       Add later: {REF_DIR / (slug + '.txt')}")
 
     if not args.skip_portrait:
         portrait_src = prompt_portrait_path(args.portrait)

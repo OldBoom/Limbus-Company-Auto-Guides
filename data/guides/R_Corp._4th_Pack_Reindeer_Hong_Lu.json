@@ -1,0 +1,121 @@
+{
+  "identity_slug": "R_Corp._4th_Pack_Reindeer_Hong_Lu",
+  "identity_name": "R Corp. 4th Pack Reindeer Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Sinking",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Final Power",
+      "Unfocused Volley"
+    ],
+    "status_effects": {
+      "Charge": 27,
+      "Sinking": 11
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 9,
+      "Atk Weight": 4,
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Unfocused Volley": 8
+    },
+    "triggers": {
+      "On Use": 6,
+      "On Hit": 12
+    },
+    "all_mechanics": {
+      "Charge": 27,
+      "Sinking": 11,
+      "Base Power": 5,
+      "Coin Power": 9,
+      "Atk Weight": 4,
+      "Final Power": 1,
+      "Unfocused Volley": 1
+    },
+    "identity_slug": "R_Corp._4th_Pack_Reindeer_Hong_Lu",
+    "key_status_effects": [
+      "Unfocused Volley"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "R Corp. 4th Pack Reindeer Hong Lu is a Damage Dealer / Status Specialist — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Concentration**), then rebuild for the next window. Scaling conditions: At 2+ Charge, Coin Power +1; At 5+ Charge, Coin Power +1.",
+  "playstyle_guide": "- Ramp **Charge Count** toward **20** before committing **Concentration** — **S1 — Energy Strike** adds **+2 Charge Count** at **On Use**.\n- Hold S3 for when At 10+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Energy Strike** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low / High stacked).\n- Peak output requires both conditions: Deal +3% damage for every Charge (max 15%) | At 2+ Charge, Coin Power +1.\n- Needs 5+ Charge to activate — prioritise building stacks before using.\n- Gain +(Charge + 1) Charge Count (max 3)\n\n**S2 — Mind Whip** (BP 2, CP +3, x4): rolls — low 2, high 14 (Slightly Low / High stacked).\n- Peak output requires both conditions: Deal +4% damage for every Charge (max 20%) | [On Use] At 5~9 Charge Count:.\n- Inflict 1 Sinking; [On Hit] Raise Stagger Threshold by 5% of damage dealt\n- Inflict +2 Sinking Count; [On Hit] Raise Stagger Threshold by 10% of damage dealt\n\n**S3 — Concentration** (BP 8, CP +10, x1): rolls — low 8, high 18 (Slightly High).\n- Peak output requires both conditions: Base Power +1 and Coin Power +1 for every Charge (max 5 each) | At 10+ Charge Count, Final Power +4.\n- Deal +(this Skill's Power x 5)% damage (max 100%); [On Hit] Gain +(Charge + 1) Charge Count (max 6); [On Hit] Inflict 4 Sinking and +2 Sinking Count\n\nCombat passive — **Brainwave Charge-focusing Antlers**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - At 2+ Charge:.\n  - Inflict +1 more Sinking using Base Attack Skills for every 2 Charge (max 2, does not activate when inflicting only Sinking Count or when….\n\nCombat passive — **Charged Pulverization Support**: 1 ally that has the most Charge: When using a Base Attack Skill that gains Charge Count, deal +15% damage using the final Coin.",
+  "team_suggestions": [
+    "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Concentration**), then rebuild for the next window.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Concentration**), then rebuild for the next window.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

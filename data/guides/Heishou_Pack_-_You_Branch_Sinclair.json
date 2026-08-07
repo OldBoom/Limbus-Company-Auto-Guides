@@ -1,0 +1,146 @@
+{
+  "identity_slug": "Heishou_Pack_-_You_Branch_Sinclair",
+  "identity_name": "Heishou Pack - You Branch Sinclair",
+  "sinner": "Sinclair",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Rupture",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Bloodflame — 血炎 —",
+      "Base Power",
+      "Atk Weight",
+      "Clash Power",
+      "Offense Level Up"
+    ],
+    "status_effects": {
+      "Burn": 18,
+      "Rupture": 14
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Clash Power": 1,
+      "Offense Level Up": 1,
+      "Defense Level Up": 1
+    },
+    "unique_mechanics": {
+      "Bloodflame — 血炎 —": 8,
+      "Unfocused Volley": 8,
+      "Exalted Command": 8,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 8,
+      "Heishou Bolus Contamination": 2,
+      "Wrath DMG Up": 8
+    },
+    "triggers": {
+      "On Use": 9,
+      "On Hit": 12,
+      "Heads Hit": 1,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Burn": 18,
+      "Rupture": 14,
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Clash Power": 1,
+      "Offense Level Up": 1,
+      "Defense Level Up": 1,
+      "Bloodflame — 血炎 —": 7,
+      "Unfocused Volley": 1,
+      "Exalted Command": 1,
+      "Heishou Bolus Contamination — 黑獸丸染 —": 1
+    },
+    "identity_slug": "Heishou_Pack_-_You_Branch_Sinclair",
+    "key_status_effects": [
+      "Bloodflame — 血炎 —",
+      "Unfocused Volley",
+      "Exalted Command",
+      "Heishou Bolus Contamination — 黑獸丸染 —",
+      "Wrath DMG Up",
+      "Gluttony DMG Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "score": 0.99,
+      "source": "rule",
+      "faction_match": true,
+      "heishou_lord_synergy": true
+    },
+    {
+      "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
+      "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Family_Hierarch_Candidate_Ishmael",
+      "teammate_name": "Family Hierarch Candidate Ishmael",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Outis",
+      "teammate_name": "Heishou Pack - Mao Branch Outis",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
+      "teammate_name": "Heishou Pack - Mao Branch Ryōshū",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    }
+  ],
+  "core_idea": "Heishou Pack - You Branch Sinclair is a Status Specialist — **Burn** stacker — damage and clash scale with Burn on target. Scaling conditions: Coin Power +1 per 6 (Burn + Rupture) (max +2). **Heishou Pack** — in Chain Battles, fill backup deployment slots with other Sinners so substitutes enter when a deployed unit **dies** or **Retreats**.",
+  "playstyle_guide": "- Chain Battles only — each Sinner equips **one identity**; **death** or **Retreat** Substitutes a backup Sinner in with a fresh rotation. Stagger does not.\n- Another **Heishou Pack** identity on a backup **Sinner** is ideal — faction passives and **The Lord of Hongyuan** procs stack across the substitute queue.\n- Skills check **6+ Burn** — favour those coins when stacked.\n- Skills check **6+ Rupture** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 (Burn + Rupture) (max +2).\n- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Oh, Let the Smell of Burning Blood…** (BP 2, CP +3, x3): rolls — low 2, high 11 (Slightly Low).\n- If target has 6+ (Burn + Rupture), Coin Power +1\n\n**S2 — … Fuel My Rampage.** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- executes weakened targets — reuses coin against enemies below 50% HP\n- If target has 6+ (Burn + Rupture), Coin Power +1\n- If this unit has Bloodflame — 血炎 —, or if this unit has less than 50% HP, Reuse this Coin (once per Skill)\n\n**S3 — Bloodflame Massacre ['''血炎亂舞''']** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- Unfocused Volley ; Deal +1% damage for every 2% (missing HP percentage on target + missing HP percentage on self) (max 50%) ; [Combat Start] If this unit has Bloodflame — 血炎 —, or if this unit has less than 50% HP, convert all Coins to Unbreakable Coins ; [On Use] Gain 1 Bloodflame — 血炎 — ; [On Use] Coin Power +1 for every 6 (Burn + Rupture) on target (max 2) ; [On Use] Clash Power +1 for every 20% missing HP on self (max 2) ; [Clash Lose] Apply 2 Burn to target and self\n- **Coin Power** scales with **(Burn + Rupture)** (+1 per 6, max +2) — build stacks first.\n- converts coins to Unbreakable under condition\n- Inflict +1 Burn Count; [On Hit] Inflict +1 Rupture Count\n\nCombat passive — **Gamefowl**: When activating Exalted Command, The Lord of Hongyuan Hong Lu gains the following effect as the Heishou Bolus Contamination — 黑獸丸染 — effect:.\n  - When using a Skill to inflict Rupture Potency or Count, inflict 1 Burn (3 times per turn).\n  - Cannot be Staggered or fall below 1 HP due to Burn damage.\n\nCombat passive — **Let's Get Battle-drunk**: On Hit against targets that have 7+ Rupture, (highest Reson. x 15)% chance to inflict 1 Burn (4 times per turn).\n  - Combat End: If this unit has Burn, gain 1 Bloodflame — 血炎 —, 1 Wrath DMG Up, and 1 Gluttony DMG Up at the next Turn Start.\n  - Combat Start: Gain 1 Offense Level Up and Defense Level Up for every 20% missing HP on self (max 3).\n\nDefense skill — **Counter: Rooster's Deathstrike ['''鷄窮則殺''']**: [Clashable Counter].\n  - [On Use] Gain 3 Bloodflame — 血炎 — next turn.\n  - [On Use] If target has 10+ (Burn + Rupture), Base Power +1.\n  - [On Use] If this unit has Bloodflame — 血炎 —, Coin Power +1.",
+  "team_suggestions": [
+    "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Resonance-scaling identity — each additional [H Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+    "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+    "- **Drifting Blade of Hongyuan Ryōshū**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **Family Hierarch Candidate Ishmael**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Resonance-scaling identity — each additional [H Corp.] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
+      "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Family_Hierarch_Candidate_Ishmael",
+      "teammate_name": "Family Hierarch Candidate Ishmael",
+      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

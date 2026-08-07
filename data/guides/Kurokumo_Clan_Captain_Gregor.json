@@ -1,0 +1,125 @@
+{
+  "identity_slug": "Kurokumo_Clan_Captain_Gregor",
+  "identity_name": "Kurokumo Clan Captain Gregor",
+  "sinner": "Gregor",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Offense Level Down",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Clash Power",
+      "Plus Coin Drop"
+    ],
+    "status_effects": {
+      "Bleed": 13
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 3,
+      "Offense Level Down": 6
+    },
+    "unique_mechanics": {
+      "Plus Coin Drop": 8,
+      "Attack Power Down": 8
+    },
+    "triggers": {
+      "On Use": 4,
+      "Clash Win": 1,
+      "On Hit": 8,
+      "Heads Hit": 1
+    },
+    "all_mechanics": {
+      "Bleed": 13,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3,
+      "Clash Power": 3,
+      "Offense Level Down": 6,
+      "Plus Coin Drop": 1
+    },
+    "identity_slug": "Kurokumo_Clan_Captain_Gregor",
+    "key_status_effects": [
+      "Attack Power Down",
+      "Plus Coin Drop"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Kurokumo Clan Captain Gregor is a Status Specialist — **Bleed** focus.",
+  "playstyle_guide": "- Skills check **7+ Bleed** — favour those coins when stacked.\n\n**S1 — Lenticular Rend** (BP 5, CP +5, x1): rolls — low 5, high 10 (Extremely Low).\n- Peak output requires both conditions: If target has 7+ Bleed, Clash Power +2 | [Clash Win] Inflict 1 Bleed.\n\n**S2 — Shadow Cloud** (BP 5, CP +5, x2): rolls — low 5, high 15 (Slightly Low).\n- If target has 7+ Bleed, Clash Power +2\n- Peak output requires both conditions: Inflict 1 Offense Level Down | [On Hit] If target has 10+ Bleed, inflict 1 Attack Power Down next turn.\n\n**S3 — Shadowcloud Shattercleave** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low).\n- Delay until 10+ Bleed on target — that is when the damage condition activates.\n- Peak output requires both conditions: Inflict 1 Offense Level Down | [On Hit] If target has 7+ Bleed, inflict 1 Offense Level Down next turn.\n\nCombat passive — **Dark Cloud Blade**: Clash Win: inflict 1 Bleed (3 times per turn).\n\nCombat passive — **Dark Cloud Style**: When 1 ally with the slowest Speed hits an enemy that has 7+ Bleed, inflict 1 Offense Level Down next turn (3 times per turn).",
+  "team_suggestions": [
+    "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

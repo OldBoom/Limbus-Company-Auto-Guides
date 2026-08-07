@@ -2,75 +2,110 @@
   "_note": "Sinners and seed identity wiki slugs. Full URLs: https://limbuscompany.wiki.gg/wiki/<slug>",
   "sinners": [
     {
-      "id": "yi_sang",
-      "name": "Yi Sang",
+      "id": "don_quixote",
+      "name": "Don Quixote",
       "identities": [
-        "Blade_Lineage_Salsu_Yi_Sang",
-        "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
-        "Liu_Assoc._South_Section_3_Yi_Sang",
-        "Ring_Pointillist_Student_Yi_Sang"
+        "Blade_Lineage_Salsu_Don_Quixote",
+        "Cinq_Assoc._East_Section_3_Don_Quixote",
+        "Cinq_Assoc._South_Section_5_Director_Don_Quixote",
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote",
+        "LCB_Sinner_Don_Quixote",
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+        "Lobotomy_E.G.O_Lantern_Don_Quixote",
+        "N_Corp._Mittelhammer_Don_Quixote",
+        "Shi_Assoc._South_Section_5_Director_Don_Quixote",
+        "T_Corp._Class_3_Collection_Staff_Don_Quixote",
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote",
+        "The_Manager_of_La_Manchaland_Don_Quixote",
+        "The_Middle_Little_Sister_Don_Quixote",
+        "W_Corp._L3_Cleanup_Agent_Don_Quixote"
       ]
     },
     {
       "id": "faust",
       "name": "Faust",
       "identities": [
+        "Blade_Lineage_Salsu_Faust",
+        "Dawn_Office_Fixer_Faust",
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+        "LCB_Sinner_Faust",
+        "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+        "Lobotomy_Corp._Remnant_Faust",
+        "Lobotomy_E.G.O_Regret_Faust",
+        "MultiCrack_Office_Rep_Faust",
         "Ring_Apprentice_Faust",
         "Seven_Assoc._South_Section_4_Faust",
         "Shi_Assoc._East_Section_3_Faust",
-        "W_Corp._L2_Cleanup_Agent_Faust"
+        "The_Index_Proselyte_【Paper_Slip】Faust",
+        "The_One_Who_Grips_Faust",
+        "W_Corp._L2_Cleanup_Agent_Faust",
+        "Wuthering_Heights_Butler_Faust",
+        "Zwei_Assoc._South_Section_4_Faust"
       ]
     },
     {
-      "id": "don_quixote",
-      "name": "Don Quixote",
+      "id": "gregor",
+      "name": "Gregor",
       "identities": [
-        "Cinq_Assoc._East_Section_3_Don_Quixote",
-        "N_Corp._Mittelhammer_Don_Quixote",
-        "T_Corp._Class_3_Collection_Staff_Don_Quixote",
-        "The_Manager_of_La_Manchaland_Don_Quixote"
-      ]
-    },
-    {
-      "id": "ryoshu",
-      "name": "Ryōshū",
-      "identities": [
-        "District_20_Yurodivy_Ryōshū",
-        "Edgar_Family_Chief_Butler_Ryōshū",
-        "Kurokumo_Clan_Wakashu_Ryōshū",
-        "N_Corp._E.G.O_Contempt,_Awe_Ryōshū"
-      ]
-    },
-    {
-      "id": "meursault",
-      "name": "Meursault",
-      "identities": [
-        "Blade_Lineage_Mentor_Meursault",
-        "R_Corp._4th_Pack_Rhino_Meursault",
-        "The_Ring_Fauvist_Student_Meursault",
-        "The_Thumb_East_Capo_IIII_Meursault"
-      ]
-    },
-    {
-      "id": "hong_lu",
-      "name": "Hong Lu",
-      "identities": [
-        "District_20_Yurodivy_Hong_Lu",
-        "Liu_Assoc._South_Section_5_Hong_Lu",
-        "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
-        "The_Lord_of_Hongyuan_Hong_Lu",
-        "Tingtang_Gang_Gangleader_Hong_Lu"
+        "Dawn_Office_Rep_Gregor",
+        "Edgar_Family_Heir_Gregor",
+        "Firefist_Office_Survivor_Gregor",
+        "G_Corp._Manager_Corporal_Gregor",
+        "Heishou_Pack_-_Si_Branch_Gregor",
+        "Kurokumo_Clan_Captain_Gregor",
+        "LCB_Sinner_Gregor",
+        "LCE_E.G.O_AEDD_Gregor",
+        "Liu_Assoc._South_Section_6_Gregor",
+        "Lobotomy_E.G.O_Lamp_Gregor",
+        "Night_Awls_Capitano_Gregor",
+        "R.B._Sous-chef_Gregor",
+        "Rosespanner_Workshop_Fixer_Gregor",
+        "The_Priest_of_La_Manchaland_Gregor",
+        "Twinhook_Pirates_First_Mate_Gregor",
+        "Zwei_Assoc._South_Section_4_Gregor"
       ]
     },
     {
       "id": "heathcliff",
       "name": "Heathcliff",
       "identities": [
+        "Full-Stop_Office_Fixer_Heathcliff",
+        "Heishou_Pack_-_You_Branch_Adept_Heathcliff",
         "Kurokumo_Clan_Wakashu_Heathcliff",
+        "LCB_Sinner_Heathcliff",
+        "Lobotomy_E.G.O_Sunshower_Heathcliff",
+        "MultiCrack_Office_Fixer_Heathcliff",
+        "N_Corp._Kleinhammer_Heathcliff",
+        "R_Corp._4th_Pack_Rabbit_Heathcliff",
         "Seven_Assoc._South_Section_4_Heathcliff",
+        "Shi_Assoc._South_Section_5_Heathcliff",
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+        "The_Middle_Big_Brother_Heathcliff",
+        "The_Pequod_Harpooneer_Heathcliff",
         "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
         "Wild_Hunt_Heathcliff",
         "Öufi_Assoc._South_Section_3_Heathcliff"
+      ]
+    },
+    {
+      "id": "hong_lu",
+      "name": "Hong Lu",
+      "identities": [
+        "Dieci_Assoc._South_Section_4_Hong_Lu",
+        "District_20_Yurodivy_Hong_Lu",
+        "Fanghunt_Office_Fixer_Hong_Lu",
+        "Full-Stop_Office_Rep_Hong_Lu",
+        "Hook_Office_Fixer_Hong_Lu",
+        "K_Corp._Class_3_Excision_Staff_Hong_Lu",
+        "Kurokumo_Clan_Wakashu_Hong_Lu",
+        "LCB_Sinner_Hong_Lu",
+        "Liu_Assoc._South_Section_5_Hong_Lu",
+        "R_Corp._4th_Pack_Reindeer_Hong_Lu",
+        "S_Corp._Ch'unokkun_Hong_Lu",
+        "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+        "The_Lord_of_Hongyuan_Hong_Lu",
+        "Tingtang_Gang_Gangleader_Hong_Lu",
+        "W_Corp._L2_Cleanup_Agent_Hong_Lu"
       ]
     },
     {
@@ -78,20 +113,105 @@
       "name": "Ishmael",
       "identities": [
         "Edgar_Family_Butler_Ishmael",
+        "Family_Hierarch_Candidate_Ishmael",
+        "Jeong's_Office_Rep_Ishmael",
         "Kurokumo_Clan_Captain_Ishmael",
+        "LCB_Sinner_Ishmael",
+        "LCCB_Assistant_Manager_Ishmael",
+        "LCD_OSIR_Team_Ishmael",
         "Liu_Assoc._South_Section_4_Ishmael",
+        "Lobotomy_E.G.O_Sloshing_Ishmael",
+        "Molar_Boatworks_Fixer_Ishmael",
+        "R_Corp._4th_Pack_Reindeer_Ishmael",
+        "Shi_Assoc._South_Section_5_Ishmael",
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
+        "The_Pequod_Captain_Ishmael",
         "Zwei_Assoc._West_Section_3_Ishmael"
+      ]
+    },
+    {
+      "id": "meursault",
+      "name": "Meursault",
+      "identities": [
+        "Blade_Lineage_Mentor_Meursault",
+        "Cinq_Assoc._West_Section_3_Meursault",
+        "Dead_Rabbits_Boss_Meursault",
+        "Dieci_Assoc._South_Section_4_Director_Meursault",
+        "LCB_Sinner_Meursault",
+        "Liu_Assoc._South_Section_6_Meursault",
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault",
+        "N_Corp._Großhammer_Meursault",
+        "R_Corp._4th_Pack_Rhino_Meursault",
+        "Rosespanner_Workshop_Fixer_Meursault",
+        "The_Middle_Little_Brother_Meursault",
+        "The_Prince_of_La_Manchaland_Meursault",
+        "The_Ring_Fauvist_Student_Meursault",
+        "The_Thumb_East_Capo_IIII_Meursault",
+        "W_Corp._L2_Cleanup_Agent_Meursault"
+      ]
+    },
+    {
+      "id": "outis",
+      "name": "Outis",
+      "identities": [
+        "Blade_Lineage_Salsu_Outis",
+        "Cinq_Assoc._South_Section_4_Outis",
+        "G_Corp._Head_Manager_Outis",
+        "Heishou_Pack_-_Mao_Branch_Outis",
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
+        "LCB_Sinner_Outis",
+        "Lobotomy_E.G.O_Magic_Bullet_Outis",
+        "Molar_Office_Fixer_Outis",
+        "Seven_Assoc._South_Section_6_Director_Outis",
+        "T_Corp._Class_3_VDCU_Staff_Outis",
+        "The_Barber_of_La_Manchaland_Outis",
+        "The_House_of_Spiders_The_Middle_Nursefather_Outis",
+        "The_Ring_Pointillist_Student_Outis",
+        "W_Corp._L3_Cleanup_Captain_Outis",
+        "Wuthering_Heights_Chief_Butler_Outis"
       ]
     },
     {
       "id": "rodion",
       "name": "Rodion",
       "identities": [
+        "Devyat'_Assoc._North_Section_3_Rodion",
+        "Dieci_Assoc._South_Section_4_Rodion",
+        "Heishou_Pack_-_Si_Branch_Rodion",
         "Kurokumo_Clan_Wakashu_Rodion",
+        "LCB_Sinner_Rodion",
+        "LCCB_Assistant_Manager_Rodion",
         "Liu_Assoc._South_Section_4_Director_Rodion",
         "Lobotomy_E.G.O_The_Sword_Sharpened_with_Tears_Rodion",
+        "N_Corp._Mittelhammer_Rodion",
+        "R_Corp._4th_Pack_Reindeer_Rodion",
+        "Rosespanner_Workshop_Rep_Rodion",
+        "T_Corp._Class_2_Collection_Staff_Rodion",
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
         "The_Princess_of_La_Manchaland_Rodion",
-        "The_Ring_Fauvist_Docent_Rodion"
+        "The_Ring_Fauvist_Docent_Rodion",
+        "Zwei_Assoc._South_Section_5_Rodion"
+      ]
+    },
+    {
+      "id": "ryoshu",
+      "name": "Ryōshū",
+      "identities": [
+        "Blade_of_the_House_of_Spiders_Ryōshū",
+        "District_20_Yurodivy_Ryōshū",
+        "Drifting_Blade_of_Hongyuan_Ryōshū",
+        "Edgar_Family_Chief_Butler_Ryōshū",
+        "Heishou_Pack_-_Mao_Branch_Ryōshū",
+        "Kurokumo_Clan_Wakashu_Ryōshū",
+        "LCB_Sinner_Ryōshū",
+        "LCCB_Assistant_Manager_Ryōshū",
+        "Liu_Assoc._South_Section_4_Ryōshū",
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū",
+        "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+        "R.B._Chef_de_Cuisine_Ryōshū",
+        "Seven_Assoc._South_Section_6_Ryōshū",
+        "W_Corp._L3_Cleanup_Agent_Ryōshū"
       ]
     },
     {
@@ -99,36 +219,43 @@
       "name": "Sinclair",
       "identities": [
         "Blade_Lineage_Salsu_Sinclair",
+        "Cinq_Assoc._South_Section_4_Director_Sinclair",
+        "Dawn_Office_Fixer_Sinclair",
         "Devyat'_Assoc._North_Section_3_Sinclair",
+        "Heishou_Pack_-_You_Branch_Sinclair",
+        "LCB_Sinner_Sinclair",
         "Lobotomy_E.G.O_Red_Sheet_Sinclair",
-        "The_Thumb_East_Soldato_II_Sinclair"
+        "Los_Mariachis_Jefe_Sinclair",
+        "Molar_Boatworks_Fixer_Sinclair",
+        "The_House_of_Spiders_The_Pinky_Apprentice_Sinclair",
+        "The_Middle_Little_Brother_Sinclair",
+        "The_One_Who_Shall_Grip_Sinclair",
+        "The_Thumb_East_Soldato_II_Sinclair",
+        "Zwei_Assoc._South_Section_6_Sinclair",
+        "Zwei_Assoc._West_Section_3_Sinclair"
       ]
     },
     {
-      "id": "outis",
-      "name": "Outis",
+      "id": "yi_sang",
+      "name": "Yi Sang",
       "identities": [
-        "Lobotomy_E.G.O_Magic_Bullet_Outis",
-        "Seven_Assoc._South_Section_6_Director_Outis",
-        "The_Barber_of_La_Manchaland_Outis",
-        "The_House_of_Spiders_The_Middle_Nursefather_Outis"
-      ]
-    },
-    {
-      "id": "gregor",
-      "name": "Gregor",
-      "identities": [
-        "Firefist_Office_Survivor_Gregor",
-        "Heishou_Pack_-_Si_Branch_Gregor",
-        "LCE_E.G.O_AEDD_Gregor",
-        "The_Priest_of_La_Manchaland_Gregor"
+        "Blade_Lineage_Salsu_Yi_Sang",
+        "Dieci_Assoc._South_Section_4_Yi_Sang",
+        "Effloresced_E.G.O_Spicebush_Yi_Sang",
+        "Heishou_Pack_-_Wu_Branch_Adept_Yi_Sang",
+        "LCB_Sinner_Yi_Sang",
+        "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
+        "LCE_E.G.O_Lantern_Yi_Sang",
+        "Liu_Assoc._South_Section_3_Yi_Sang",
+        "Lobotomy_E.G.O_Solemn_Lament_Yi_Sang",
+        "Molar_Office_Fixer_Yi_Sang",
+        "N_Corp._E.G.O_Fell_Bullet_Yi_Sang",
+        "Ring_Pointillist_Student_Yi_Sang",
+        "Seven_Assoc._South_Section_6_Yi_Sang",
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
+        "The_Pequod_First_Mate_Yi_Sang",
+        "W_Corp._L3_Cleanup_Agent_Yi_Sang"
       ]
     }
-  ],
-  "parsed_reference_slugs": [
-    "Ring_Apprentice_Faust",
-    "Blade_Lineage_Salsu_Yi_Sang",
-    "Ring_Pointillist_Student_Yi_Sang"
-  ],
-  "wiki_base": "https://limbuscompany.wiki.gg/wiki/"
+  ]
 }

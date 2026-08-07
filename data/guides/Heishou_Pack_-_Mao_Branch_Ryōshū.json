@@ -1,0 +1,94 @@
+{
+  "identity_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
+  "identity_name": "Heishou Pack - Mao Branch Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Rupture",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Strider — Mao —",
+      "Haste",
+      "Deathrite — Haste —"
+    ],
+    "status_effects": {
+      "Rupture": 16,
+      "Haste": 2
+    },
+    "stat_modifiers": {
+      "Base Power": 6,
+      "Coin Power": 11,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Strider — Mao —": 8,
+      "Deathrite — Haste —": 8,
+      "Deathrite": 3
+    },
+    "triggers": {
+      "On Use": 7,
+      "Clash Win": 3,
+      "On Hit": 11
+    },
+    "all_mechanics": {
+      "Rupture": 16,
+      "Haste": 2,
+      "Base Power": 6,
+      "Coin Power": 11,
+      "Atk Weight": 3,
+      "Strider — Mao —": 3,
+      "Deathrite — Haste —": 2
+    },
+    "identity_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
+    "key_status_effects": [
+      "Strider — Mao —",
+      "Deathrite — Haste —"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "score": 0.99,
+      "source": "rule",
+      "faction_match": true,
+      "heishou_lord_synergy": true
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 4+ Rupture thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Heishou Pack - Mao Branch Ryōshū is a Status Specialist — **Rupture** focus. **Heishou Pack** — in Chain Battles, fill backup deployment slots with other Sinners so substitutes enter when a deployed unit **dies** or **Retreats**.",
+  "playstyle_guide": "- Chain Battles only — each Sinner equips **one identity**; **death** or **Retreat** Substitutes a backup Sinner in with a fresh rotation. Stagger does not.\n- Another **Heishou Pack** identity on a backup **Sinner** is ideal — faction passives and **The Lord of Hongyuan** procs stack across the substitute queue.\n- Skills check **4+ Rupture** — favour those coins when stacked.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n\n**S1 — Blinkstep** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If this unit's Speed is faster than the target's by 3 or more, Coin Power +1 | [On Use] If target has 4+ Rupture, Coin Power +1.\n- Peak output requires both conditions: Inflict +1 Rupture Count | [On Hit] At 10+ Speed, Reuse Coin once (once per Skill).\n\n**S2 — As Written** (BP 4, CP +6, x2): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Peak output requires both conditions: If this unit's Speed is faster than the target's, deal +(Speed difference x Rupture Potency on target)% damage (max 50%) | If this unit's Speed is faster than the target's by 3 or more, Coin Power +1.\n- Peak output requires both conditions: Inflict 1 Rupture | [On Hit] At 10+ Speed, inflict +1 Rupture Count.\n\n**S3 — I'll gut you with a curse-engraved blade** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Peak output requires both conditions: If this unit's Speed is faster than the target's, deal +(Speed difference x Rupture Potency on target)% damage (max 50%) | If this unit's Speed is faster than the target's, gain Coin Power based on Speed difference (Coin Power +1 for every 2 Speed difference.\n- Inflict +1 Rupture Count; [On Hit] Inflict Deathrite — Haste —\n- Peak output requires both conditions: At 10+ Speed, deal +30% damage | [On Hit] Inflict 3 Rupture.\n\nCombat passive — **Heishou Mutation [Mao]**: If this unit has Strider — Mao —, deal +5% damage.\n  - If the target has Deathrite — Haste —, deal +5% damage.\n\nCombat passive — **Partial Heishou Mutation Training**: Turn End: 1 ally with the fastest Speed gains 2 Haste next turn.\n\nDefense skill — **Counter: Strider. Unleashed. Heh**: [Clashable Counter].\n  - [On Use] Gain 3 Strider — Mao —.\n  - [On Use] If this unit's Speed is faster than the target's, gain Base Power based on Speed difference (Base Power +1 for every 2 Speed difference.",
+  "team_suggestions": [
+    "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
+    "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 4+ Rupture thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_Lord_of_Hongyuan_Hong_Lu",
+      "teammate_name": "The Lord of Hongyuan Hong Lu",
+      "reason": "**The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — helps reach 4+ Rupture thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

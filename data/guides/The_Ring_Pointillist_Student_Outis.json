@@ -1,0 +1,132 @@
+{
+  "identity_slug": "The_Ring_Pointillist_Student_Outis",
+  "identity_name": "The Ring Pointillist Student Outis",
+  "sinner": "Outis",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Burn",
+      "Rupture",
+      "Tremor",
+      "Sinking",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Bleed": 15,
+      "Haste": 1,
+      "Burn": 3,
+      "Rupture": 3,
+      "Tremor": 3,
+      "Sinking": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Pierce DMG Up": 1
+    },
+    "unique_mechanics": {
+      "Pierce Power Up": 8
+    },
+    "triggers": {
+      "On Hit": 6,
+      "On Use": 2,
+      "Attack End": 1
+    },
+    "all_mechanics": {
+      "Bleed": 15,
+      "Haste": 1,
+      "Burn": 3,
+      "Rupture": 3,
+      "Tremor": 3,
+      "Sinking": 3,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Pierce DMG Up": 1
+    },
+    "identity_slug": "The_Ring_Pointillist_Student_Outis",
+    "key_status_effects": [
+      "Pierce Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.97,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "The Ring Pointillist Student Outis is a Status Specialist — **Bleed** focus. **SP regenerator** — restores ally **SP** through passives and key skills.",
+  "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- Use **Haste** on attack turns — **Guard** covers defense; this is not an Evade rotation.\n- **SP sustain** fires at **each turn** — restores **lowest-SP allies**.\n\n**S1 — Dotting** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If target has 6+ Bleed, Clash Power +1 | If target has 10+ Bleed, Coin Power +1.\n- Delay until 10+ Bleed on target — that is when the damage condition activates.\n\n**S2 — Sanguine Painting** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low).\n- If target has 6+ Bleed, Clash Power +2\n\n**S3 — Artwork Inspection** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low).\n- Peak output requires both conditions: If target has 6+ Bleed, Coin Power +1 | Deal +12.5% damage for every type of negative effect on target (max 50%).\n\nCombat passive — **Sanguine Pointillist**: This Identity only counts as an \"Identity that inflicts Bleed\". This Identity's Skills that randomly inflict Burn, Bleed, Tremor, Rupture….\n\nCombat passive — **Multitude of Dots**: Combat Start: Inflict 2 Potency of 1 of the following effects on 2 enemies that have the least types of negative effects: Burn, Bleed, Ru….\n  - (In Focused Encounters, Parts).",
+  "team_suggestions": [
+    "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

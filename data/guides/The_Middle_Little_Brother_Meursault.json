@@ -1,0 +1,134 @@
+{
+  "identity_slug": "The_Middle_Little_Brother_Meursault",
+  "identity_name": "The Middle Little Brother Meursault",
+  "sinner": "Meursault",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Coin Power",
+      "Bleed",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Vengeance Mark",
+      "Atk Weight",
+      "Final Power",
+      "Plus Coin Drop"
+    ],
+    "status_effects": {
+      "Bleed": 6
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Vengeance Mark": 8,
+      "Plus Coin Drop": 8,
+      "Envy DMG Up": 8,
+      "Envy Power Up": 8,
+      "Envy Fragility": 8
+    },
+    "triggers": {
+      "On Hit": 6,
+      "Combat Start": 1,
+      "Heads Hit": 2
+    },
+    "all_mechanics": {
+      "Bleed": 6,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 1,
+      "Vengeance Mark": 4,
+      "Plus Coin Drop": 1
+    },
+    "identity_slug": "The_Middle_Little_Brother_Meursault",
+    "key_status_effects": [
+      "Envy DMG Up",
+      "Envy Power Up",
+      "Vengeance Mark",
+      "Plus Coin Drop",
+      "Envy Fragility"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
+      "teammate_name": "The House of Spiders: The Middle Apprentice Ishmael",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
+      "teammate_name": "The House of Spiders: The Middle Nursefather Outis",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_Middle_Big_Brother_Heathcliff",
+      "teammate_name": "The Middle Big Brother Heathcliff",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_Middle_Little_Brother_Sinclair",
+      "teammate_name": "The Middle Little Brother Sinclair",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "The_Middle_Little_Sister_Don_Quixote",
+      "teammate_name": "The Middle Little Sister Don Quixote",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    }
+  ],
+  "core_idea": "The Middle Little Brother Meursault is a Damage Dealer / Status Specialist — **Bleed** focus. **SP regenerator** — restores ally **SP** through passives and key skills.",
+  "playstyle_guide": "- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- **SP sustain** fires at **Turn End** — restores **lowest-SP allies**.\n- Low-SP allies are topped up after clashes — let them spend freely, then rely on Turn End healing.\n- Hold S3 for when At 4+ Envy Reson. is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — We Remember** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n\n**S2 — Chains of Loyalty** (BP 4, CP +5, x2): rolls — low 4, high 14 (Slightly Low).\n\n**S3 — Recording** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low / Slightly Low stacked).\n- Peak output requires both conditions: At 4+ Envy Reson., Coin Power +1 | At 6+ Envy A-Reson., Coin Power +1.\n\nCombat passive — **Loyalty**: Apply Vengeance Mark to the unit that dealt the most Skill damage to an ally.\n  - If the main target has Vengeance Mark, Final Power +1.\n  - If there is another surviving ally from other than this unit, this unit and the surviving ally from the Middle with the least SP both hea….\n\nCombat passive — **One Family**: The 1 ally with the least SP heals 10 SP at Turn End if there is another ally from the same Faction.",
+  "team_suggestions": [
+    "Trait-dependent kit — [The Middle] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [The Middle] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+    "- **The House of Spiders: The Middle Apprentice Ishmael**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **The House of Spiders: The Middle Nursefather Outis**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **The Middle Big Brother Heathcliff**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [The Middle] allies raise Resonance and unlock alternate skills. Resonance-scaling identity — each additional [The Middle] ally on the team directly improves skill and Counter output. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
+      "teammate_name": "The House of Spiders: The Middle Apprentice Ishmael",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
+      "teammate_name": "The House of Spiders: The Middle Nursefather Outis",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Middle_Big_Brother_Heathcliff",
+      "teammate_name": "The Middle Big Brother Heathcliff",
+      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

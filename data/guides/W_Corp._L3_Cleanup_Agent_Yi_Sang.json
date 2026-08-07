@@ -1,0 +1,121 @@
+{
+  "identity_slug": "W_Corp._L3_Cleanup_Agent_Yi_Sang",
+  "identity_name": "W Corp. L3 Cleanup Agent Yi Sang",
+  "sinner": "Yi Sang",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Rupture",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Charge Barrier",
+      "Bind",
+      "Haste"
+    ],
+    "status_effects": {
+      "Charge": 16,
+      "Rupture": 12,
+      "Bind": 1,
+      "Haste": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Dimensional Rift": 8,
+      "Charge Barrier": 8
+    },
+    "triggers": {
+      "On Use": 4,
+      "On Hit": 6,
+      "Heads Hit": 3,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Charge": 16,
+      "Rupture": 12,
+      "Bind": 1,
+      "Haste": 1,
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Dimensional Rift": 1,
+      "Charge Barrier": 2
+    },
+    "identity_slug": "W_Corp._L3_Cleanup_Agent_Yi_Sang",
+    "key_status_effects": [
+      "Dimensional Rift",
+      "Charge Barrier"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "W Corp. L3 Cleanup Agent Yi Sang is a Damage Dealer / Status Specialist — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Dimensional Rift**), then rebuild for the next window. Scaling conditions: At 10+ Charge, Coin Power +2; At 10+ Charge, Coin Power +1.",
+  "playstyle_guide": "- Ramp **Charge Count** toward **20** before **Dimensional Rift** — **S2 — Energy Cycle** adds **+7 Charge Count** at **On Use**; **S1 — Dimensional Slit** adds **+2 Charge Count** at **On Use** and **+2 Charge Count** per **On Hit** coin.\n- Skills check **10+ Rupture** — favour those coins when stacked.\n- **Haste** triggers on **Evade** — Evade when you want the Speed spike next turn.\n\n**S1 — Dimensional Slit** (BP 5, CP +6, x1): rolls — low 5, high 11 (Slightly Low / Slightly High stacked).\n- Needs 10+ Charge to activate — prioritise building stacks before using.\n- Gain +2 Charge Count; [Heads Hit] Inflict 2 Rupture\n\n**S2 — Energy Cycle** (BP 5, CP +5, x2): rolls — low 5, high 15 (Slightly Low / Slightly High stacked).\n- Needs 10+ Charge to activate — prioritise building stacks before using.\n\n**S3 — Dimensional Rift** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n\nCombat passive — **Emptied Thought**: Turn End: Gain 1 Haste next turn for every 5 Charge Count on self (max 3).\n  - If this unit's Skill consumed Charge Count, apply 3 Charge Barrier on 1 ally that has the lowest current HP percentage.\n\nCombat passive — **Cleanup Demonstration**: 1 ally that has the highest Charge Count deals more damage against targets that have Rupture based on Rupture on target (+1.5% per Ruptur….",
+  "team_suggestions": [
+    "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Dimensional Rift**), then rebuild for the next window.",
+    "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Dimensional Rift**), then rebuild for the next window.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

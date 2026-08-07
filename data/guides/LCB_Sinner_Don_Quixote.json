@@ -1,0 +1,118 @@
+{
+  "identity_slug": "LCB_Sinner_Don_Quixote",
+  "identity_name": "LCB Sinner Don Quixote",
+  "sinner": "Don Quixote",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Coin Power",
+      "Bleed",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Haste"
+    ],
+    "status_effects": {
+      "Haste": 1,
+      "Bleed": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Honorable Duel (Don)": 8
+    },
+    "triggers": {
+      "Clash Win": 2,
+      "Heads Hit": 3,
+      "On Hit": 1
+    },
+    "all_mechanics": {
+      "Haste": 1,
+      "Bleed": 4,
+      "Base Power": 4,
+      "Coin Power": 5,
+      "Atk Weight": 3
+    },
+    "identity_slug": "LCB_Sinner_Don_Quixote",
+    "key_status_effects": [
+      "Attack Power Up",
+      "Honorable Duel (Don)"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "LCB Sinner Don Quixote is a Support — **Bleed** focus. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output.",
+  "playstyle_guide": "- Skills check **10+ Bleed** — favour those coins when stacked.\n- **Haste** before **Evade** when you need higher Speed on the setup turn.\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n- Hold S3 for when At 10+ Speed is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Joust** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Galloping Tilt** (BP 4, CP +12, x1): rolls — low 4, high 16 (Average).\n\n**S3 — For Justice!** (BP 3, CP +3, x3): rolls — low 3, high 12 (Extremely Low / Average stacked).\n- Needs 10+ Speed to activate — prioritise building stacks before using.\n\nCombat passive — **Support**: 1 ally with the most SP deals +10% Pierce damage.",
+  "team_suggestions": [
+    "**Bleed** focus.",
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

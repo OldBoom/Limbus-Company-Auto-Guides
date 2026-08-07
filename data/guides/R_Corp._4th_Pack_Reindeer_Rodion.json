@@ -1,0 +1,118 @@
+{
+  "identity_slug": "R_Corp._4th_Pack_Reindeer_Rodion",
+  "identity_name": "R Corp. 4th Pack Reindeer Rodion",
+  "sinner": "Rodion",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Sinking",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Base Power",
+      "Atk Weight",
+      "Unique Charge",
+      "Final Power",
+      "Unfocused Volley"
+    ],
+    "status_effects": {
+      "Charge": 24,
+      "Sinking": 15,
+      "Unique Charge": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 4,
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Unfocused Volley": 8,
+      "Blunt Fragility": 8
+    },
+    "triggers": {
+      "On Hit": 15,
+      "On Use": 4
+    },
+    "all_mechanics": {
+      "Charge": 24,
+      "Sinking": 15,
+      "Unique Charge": 1,
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 4,
+      "Final Power": 1,
+      "Unfocused Volley": 1
+    },
+    "identity_slug": "R_Corp._4th_Pack_Reindeer_Rodion",
+    "key_status_effects": [
+      "Blunt Fragility",
+      "Unfocused Volley"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "R Corp. 4th Pack Reindeer Rodion is a Damage Dealer / Status Specialist — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Mind Whip - 'Ahaha… Look, Everyone! We're the Fireworks this Christmas!'**), then rebuild for the next window. Scaling conditions: At 2+ Charge, Coin Power +1; At 5+ Charge, Coin Power +1.",
+  "playstyle_guide": "- Ramp **Charge Count** toward **20** before **Mind Whip - 'Ahaha… Look, Everyone! We're the Fireworks this Christmas!'** — **S1 — Energy Strike - 'That's What You Get for Giving Us Holiday Shifts!'** adds **+2 Charge Count** per **On Hit** coin; **S2 — Concentration - 'Burst and Pop with Christmas Colors!'** adds **+3 Charge Count** per **On Hit** coin.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Reach scaling conditions before committing S3: Coin Power +1 per 5 Charge (max +2).\n- Hold S3 for when At 3+ Charge is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Energy Strike - 'That's What You Get for Giving Us Holiday Shifts!'** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Deal +12.5% damage for every Charge on self (max 50%) | At 2+ Charge, Coin Power +1.\n- Needs 5+ Charge to activate — prioritise building stacks before using.\n- Inflict 1 Sinking; [On Hit] Gain +2 Charge Count\n\n**S2 — Concentration - 'Burst and Pop with Christmas Colors!'** (BP 4, CP +6, x2): rolls — low 4, high 16 (Average / Extremely High stacked).\n- Deal +15% damage for every Charge on self (max 60%); Coin Power +1 for every 5 Charge Count (max 2); [Clash Lose] Gain 5 Sinking and +5 Charge Count\n- **Coin Power** scales with **Charge** (+1 per 5, max +2) — build stacks first.\n- Up to **+60% damage** (+15% per **Charge**) — stack the resource before committing.\n- Inflict 2 Sinking and +2 Sinking Count; [On Hit] Gain +3 Charge Count\n- At less than 8 Charge Count, gain 5 Sinking and +4 Charge Count (once per turn)\n\n**S3 — Mind Whip - 'Ahaha… Look, Everyone! We're the Fireworks this Christmas!'** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Slightly High stacked).\n- Peak output requires both conditions: Deal +10% damage for every Charge (max 40%) | [On Use] At 5~9 Charge Count:.\n- +12% per 1 excess Charge Count consumed\n- Inflict +3 Sinking Count; [On Hit] Raise Stagger Threshold by 10% of damage dealt\n- Inflict 1 Sinking; [On Hit] Raise Stagger Threshold by 10% of damage dealt\n- Inflict 1Sinking; [On Hit] Raise Stagger Threshold by 10% of damage dealt\n- Inflict 1Sinking; [On Hit] Raise Stagger Threshold by 5% of damage dealt\n\nCombat passive — **sin=Gloom**: Jolly Antlers Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - When using a Base Attack Skill that inflicts Sinking Potency, if the main target does not have Sinking, this unit gains 5 Sinking and dou….\n  - in Focused Encounters, the Part).\n\nCombat passive — **sin=Gloom**: Carol of Dying Comrades 1 ally with the lowest SP: Skills that consume Charge or Unique Charge and have effects that inflict Sinking agai….",
+  "team_suggestions": [
+    "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Mind Whip - 'Ahaha… Look, Everyone! We're the Fireworks this Christmas!'**), then rebuild for the next window.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+    "- **W Corp. L4 Cleanup Agent - CCA Heathcliff**: 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Mind Whip - 'Ahaha… Look, Everyone! We're the Fireworks this Christmas!'**), then rebuild for the next window.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 2+ Charge thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

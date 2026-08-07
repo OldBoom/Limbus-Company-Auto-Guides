@@ -1,0 +1,120 @@
+{
+  "identity_slug": "Molar_Boatworks_Fixer_Sinclair",
+  "identity_name": "Molar Boatworks Fixer Sinclair",
+  "sinner": "Sinclair",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Tremor",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Tremor Burst",
+      "Rupture Protection"
+    ],
+    "status_effects": {
+      "Tremor": 17
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Tremor Burst": 8,
+      "Rupture Protection": 8
+    },
+    "triggers": {
+      "On Hit": 5,
+      "Heads Hit": 2,
+      "On Use": 2
+    },
+    "all_mechanics": {
+      "Tremor": 17,
+      "Base Power": 4,
+      "Coin Power": 6,
+      "Atk Weight": 3,
+      "Tremor Burst": 2,
+      "Rupture Protection": 1
+    },
+    "identity_slug": "Molar_Boatworks_Fixer_Sinclair",
+    "key_status_effects": [
+      "Tremor Burst",
+      "Rupture Protection"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
+      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
+      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Molar Boatworks Fixer Sinclair is a Status Specialist — **Tremor** control — stack for early stagger breaks. Scaling conditions: Coin Power +1 per 10 Tremor (max +2); Coin Power +1 per 10 Tremor Count (max +2).",
+  "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Reach scaling conditions before committing S3: Coin Power +1 per 10 Tremor (max +2).\n\n**S1 — Fierce Assault** (BP 2, CP +1, x4): rolls — low 2, high 6 (Extremely Low).\n- Needs 10+ Tremor Count to activate — prioritise building stacks before using.\n- Gain +2 Tremor Count; [Heads Hit] Inflict +1 Tremor Count\n\n**S2 — Steady...** (BP 4, CP +12, x1): rolls — low 4, high 16 (Average).\n\n**S3 — Gamble** (BP 4, CP +6, x2): rolls — low 4, high 16 (Slightly Low / Average stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Tremor** (+1 per 10, max +2) — build stacks first.\n- **Coin Power** scales with **Tremor Count** (+1 per 10, max +2) — build stacks first.\n\nCombat passive — **Unstable Power Output**: On hit with Heads Coins at 10+ Tremor Count of self, Inflict +1 Tremor and Tremor Count with Coin effects.\n\nCombat passive — **Modified Power Output**: 1 ally that has the most Max HP inflicts +1 Tremor with the effects of their Attack Skills/Coins.",
+  "team_suggestions": [
+    "**Tremor** control — stack for early stagger breaks.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Tremor** control — stack for early stagger breaks.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

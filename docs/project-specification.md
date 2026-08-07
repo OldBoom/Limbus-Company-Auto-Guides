@@ -124,6 +124,11 @@ Three NLP tasks, mixing traditional and LLM-based techniques:
 
 ## Deliverables
 
+> **Historical.** This section and the two that follow (presentation crosswalk, evaluation
+> scope) describe the graded coursework and are kept for provenance. The evaluation tooling
+> and its result JSONs have since been removed; the paths referenced below no longer exist.
+> Sections above this point are still the live design spec.
+
 1. Source code repository with documented pipeline (`src/limbus_guides/`, `scripts/`)
 2. Web dashboard (Streamlit — `src/limbus_guides/dashboard/app.py`)
 3. Evaluation report (`docs/evaluation.md`, `data/evaluation_results.json`)

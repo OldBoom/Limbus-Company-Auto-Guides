@@ -121,8 +121,6 @@ The script will:
 | `--dry-run` | Preview slug/wiki mapping only |
 | `--force` | Re-fetch existing parsed markdown |
 | `--force-protected` | Overwrite hand-curated protected stems |
-| `--ref-file path\to\ref.txt` | Skip reference prompt |
-| `--skip-ref` | No reference / no ROUGE-L |
 | `--portrait path\to\image.png` | Skip portrait prompt |
 | `--skip-portrait` | No portrait copy |
 | `--confirm-mechanics` | Prompt before each mechanic / regex patch |
@@ -152,7 +150,6 @@ Pass multiple URLs as separate arguments. Use `--update-config` to append slugs 
 | Tune mechanic blurbs | Edit `MECHANIC_SIGNALS` in `src/limbus_guides/nlp/mechanic_signals.py`, re-run pipeline |
 | New identity resource keyword | Usually auto via Key Status Effects → `unique_mechanics.json`; see rulebook |
 | Faction synergy exception | `src/limbus_guides/nlp/synergy.py` → `_FACTION_SLUG_OVERRIDES` |
-| Update eval reference | Edit `data/evaluation/references/<slug>.txt`, then `run_evaluation.py` |
 | Bulk portrait download | `scripts\fetch_identity_portraits.py` (wiki list page → `dashboard/static/images/identities/`) |
 
 ---
@@ -172,12 +169,10 @@ Pass multiple URLs as separate arguments. Use `--update-config` to append slugs 
 |------------------|---------|
 | `scripts/setup.cmd` | **Windows CMD:** venv + deps + spaCy model (no PowerShell policy) |
 | `scripts/setup.ps1` | Same as setup.cmd for PowerShell |
-| `scripts/add_identity.py` | **Primary:** wiki URL → parsed MD → guide → reference → eval |
+| `scripts/add_identity.py` | **Primary:** wiki URL → parsed MD → mechanics → guide |
 | `scripts/fetch_wiki_identities.py` | Batch wiki → `docs/parsed-ids/*.md` |
 | `scripts/run_pipeline.py` | All parsed markdown → identities + guides + manifest |
 | `python -m limbus_guides.pipeline.run` | Same as run_pipeline (requires `pip install -e .`) |
-| `scripts/run_evaluation.py` | Full-roster ROUGE-L and baselines |
-| `scripts/run_poc_evaluations.py` | Early PoC metric scripts |
 | `scripts/audit_wiki_parsing.py` | Compare stored parses vs live wiki |
 | `scripts/fetch_identity_portraits.py` | Download identity portraits from wiki |
 | `streamlit run src/limbus_guides/dashboard/app.py` | Interactive guide browser (use venv Python) |
@@ -193,4 +188,3 @@ Pass multiple URLs as separate arguments. Use `--update-config` to append slugs 
 | `data/guides/<slug>.json` | Dashboard guide (`core_idea`, `playstyle_guide`, `team_suggestion_picks`, …) |
 | `config/unique_mechanics.json` | Auto-discovered identity resources |
 | `config/sinners.json` | Sinner roster and identity slug lists |
-| `data/evaluation/references/<slug>.txt` | Human reference prose for ROUGE-L |

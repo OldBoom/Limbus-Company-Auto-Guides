@@ -7,13 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from limbus_guides.pipeline.run import run_pipeline  # noqa: E402
-
-
-def main() -> int:
-    guides = run_pipeline(use_ollama=False)
-    print(f"Generated {len(guides)} guides in data/guides/")
-    return 0
+from limbus_guides.pipeline.run import main  # noqa: E402
 
 
 if __name__ == "__main__":

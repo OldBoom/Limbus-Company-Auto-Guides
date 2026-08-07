@@ -1,11 +1,228 @@
 {
   "mechanics": [
     {
+      "name": "Acceleration Round",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Ammo",
+      "source_slugs": [
+        "Full-Stop_Office_Fixer_Heathcliff",
+        "Full-Stop_Office_Rep_Hong_Lu",
+        "LCCB_Assistant_Manager_Ishmael",
+        "LCCB_Assistant_Manager_Ryōshū",
+        "R_Corp._4th_Pack_Rabbit_Heathcliff",
+        "Twinhook_Pirates_First_Mate_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Ammo — Atelier Logic",
+      "source_slugs": [
+        "Full-Stop_Office_Fixer_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Amplitude Conversion",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Faust",
+        "Dawn_Office_Rep_Gregor",
+        "Jeong's_Office_Rep_Ishmael",
+        "Night_Awls_Capitano_Gregor",
+        "T_Corp._Class_3_VDCU_Staff_Outis",
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Amplitude Entanglement",
+      "source_slugs": [
+        "Jeong's_Office_Rep_Ishmael",
+        "T_Corp._Class_3_VDCU_Staff_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Appetite",
+      "source_slugs": [
+        "R.B._Chef_de_Cuisine_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
       "name": "Artwork — Tibia (Hong Lu)",
       "source_slugs": [
         "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
       ],
       "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Assist Attack (Ishmael)",
+      "source_slugs": [
+        "The_Pequod_Captain_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Assist — 援 —",
+      "source_slugs": [
+        "Family_Hierarch_Candidate_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Avulsion Wound",
+      "source_slugs": [
+        "S_Corp._Ch'unokkun_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Battleblood Instinct",
+      "source_slugs": [
+        "Heishou_Pack_-_You_Branch_Adept_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Battlefield Retreat",
+      "source_slugs": [
+        "Family_Hierarch_Candidate_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Bearing of a Salsu",
+      "source_slugs": [
+        "LCD_OSIR_Team_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Bladetrail — Afterimage —",
+      "source_slugs": [
+        "Blade_of_the_House_of_Spiders_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Blazing Sunset",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Bloodflame — 血炎 —",
+      "source_slugs": [
+        "Heishou_Pack_-_You_Branch_Adept_Heathcliff",
+        "Heishou_Pack_-_You_Branch_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Blue Sand",
+      "source_slugs": [
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Book of Vengeance — Heathcliff —",
+      "source_slugs": [
+        "The_Middle_Big_Brother_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Book of Vengeance — Sinclair —",
+      "source_slugs": [
+        "The_Middle_Little_Brother_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Borrowed Time",
+      "source_slugs": [
+        "T_Corp._Class_2_Collection_Staff_Rodion",
+        "T_Corp._Class_3_VDCU_Staff_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Bright — 光 —",
+      "source_slugs": [
+        "Jeong's_Office_Rep_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Bullet — Solitude",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Burgeoning of Horns — 發角 —",
+      "source_slugs": [
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Butterfly",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Solemn_Lament_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Charge Barrier",
+      "source_slugs": [
+        "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
+        "W_Corp._L2_Cleanup_Agent_Hong_Lu",
+        "W_Corp._L3_Cleanup_Agent_Ryōshū",
+        "W_Corp._L3_Cleanup_Agent_Yi_Sang",
+        "W_Corp._L3_Cleanup_Captain_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Clashable Guard",
+      "source_slugs": [
+        "Drifting_Blade_of_Hongyuan_Ryōshū",
+        "Full-Stop_Office_Fixer_Heathcliff",
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+        "Heishou_Pack_-_Si_Branch_Rodion",
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote",
+        "LCD_OSIR_Team_Ishmael",
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+        "Lobotomy_E.G.O_Lamp_Gregor",
+        "The_House_of_Spiders_The_Pinky_Apprentice_Sinclair",
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+        "Zwei_Assoc._West_Section_3_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Concentration — Sniper —",
+      "source_slugs": [
+        "Full-Stop_Office_Fixer_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Contempt of the Gaze",
+      "source_slugs": [
+        "N_Corp._E.G.O_Fell_Bullet_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
     },
     {
       "name": "Corpus Ingredient (Unique Charge)",
@@ -22,18 +239,789 @@
       "discovered_at": "2026-07-02"
     },
     {
+      "name": "Courier Trunk — Rodion",
+      "source_slugs": [
+        "Devyat'_Assoc._North_Section_3_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dawn Office",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair",
+        "Dawn_Office_Rep_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dawnherald",
+      "source_slugs": [
+        "Dawn_Office_Rep_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dazzle",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Lamp_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Deathrite — Fissure —",
+      "source_slugs": [
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Deathrite — Haste —",
+      "source_slugs": [
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+        "Heishou_Pack_-_Mao_Branch_Outis",
+        "Heishou_Pack_-_Mao_Branch_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Deathrite — Venom —",
+      "source_slugs": [
+        "Heishou_Pack_-_Si_Branch_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Declared Duel — Don Quixote",
+      "source_slugs": [
+        "Cinq_Assoc._South_Section_5_Director_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Declared Duel — Outis",
+      "source_slugs": [
+        "Cinq_Assoc._South_Section_4_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Declared Duel — Sinclair",
+      "source_slugs": [
+        "Cinq_Assoc._South_Section_4_Director_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Deep Wound",
+      "source_slugs": [
+        "Night_Awls_Capitano_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dimensional Castaway",
+      "source_slugs": [
+        "LCE_E.G.O_Dimension_Shredder_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dimensional Rift",
+      "source_slugs": [
+        "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
+        "W_Corp._L3_Cleanup_Agent_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Dokkaebi Arms",
+      "source_slugs": [
+        "LCD_OSIR_Team_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Echoes of the Manor",
+      "source_slugs": [
+        "Wuthering_Heights_Butler_Faust",
+        "Wuthering_Heights_Chief_Butler_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Entangled Life — 羅生 —",
+      "source_slugs": [
+        "Blade_of_the_House_of_Spiders_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Entanglement",
+      "source_slugs": [
+        "Blade_of_the_House_of_Spiders_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
       "name": "Exalted Command",
       "source_slugs": [
-        "The_Lord_of_Hongyuan_Hong_Lu"
+        "The_Lord_of_Hongyuan_Hong_Lu",
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote",
+        "Heishou_Pack_-_You_Branch_Adept_Heathcliff",
+        "Heishou_Pack_-_You_Branch_Sinclair"
       ],
       "discovered_at": "2026-07-02"
     },
     {
+      "name": "Eye of Precognition (Rodion)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Eye of Precognition — Overheat (Rodion)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Faint Aroma",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Fairy Lure",
+      "source_slugs": [
+        "LCE_E.G.O_Lantern_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Fatal Wound",
+      "source_slugs": [
+        "Night_Awls_Capitano_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Fell Bullet",
+      "source_slugs": [
+        "N_Corp._E.G.O_Fell_Bullet_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Fire Butterfly Coffin",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Focused Attack — Meursault",
+      "source_slugs": [
+        "Cinq_Assoc._West_Section_3_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Focused Performance",
+      "source_slugs": [
+        "The_Prince_of_La_Manchaland_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Fragile",
+      "source_slugs": [
+        "Cinq_Assoc._South_Section_4_Director_Sinclair",
+        "Edgar_Family_Heir_Gregor",
+        "K_Corp._Class_3_Excision_Staff_Hong_Lu",
+        "LCB_Sinner_Yi_Sang",
+        "LCCB_Assistant_Manager_Ishmael",
+        "Lobotomy_E.G.O_Sunshower_Heathcliff",
+        "Molar_Boatworks_Fixer_Ishmael",
+        "R_Corp._4th_Pack_Rabbit_Heathcliff",
+        "Seven_Assoc._South_Section_6_Yi_Sang",
+        "W_Corp._L3_Cleanup_Agent_Don_Quixote",
+        "Zwei_Assoc._South_Section_5_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "From Dawnbreak to Sunset",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Gaze",
+      "source_slugs": [
+        "The_One_Who_Grips_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Grace of the Prescript",
+      "source_slugs": [
+        "The_Index_Proselyte_【Paper_Slip】Faust",
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Guardians of the Forest",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Lamp_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Hardblood Armor",
+      "source_slugs": [
+        "The_Prince_of_La_Manchaland_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Heated Gas Harpoon",
+      "source_slugs": [
+        "The_Pequod_Captain_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
       "name": "Heishou Bolus Contamination — 黑獸丸染 —",
       "source_slugs": [
-        "The_Lord_of_Hongyuan_Hong_Lu"
+        "The_Lord_of_Hongyuan_Hong_Lu",
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote",
+        "Heishou_Pack_-_You_Branch_Adept_Heathcliff",
+        "Heishou_Pack_-_You_Branch_Sinclair"
       ],
       "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Here Comes Magical Girl!",
+      "source_slugs": [
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "High Noon",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Honorable Duel (Don)",
+      "source_slugs": [
+        "LCB_Sinner_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "HP Healing Down",
+      "source_slugs": [
+        "Fanghunt_Office_Fixer_Hong_Lu",
+        "MultiCrack_Office_Fixer_Heathcliff",
+        "R.B._Chef_de_Cuisine_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Hysteria",
+      "source_slugs": [
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "K Corp Ampule",
+      "source_slugs": [
+        "K_Corp._Class_3_Excision_Staff_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Karmic Consequence",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
+        "The_Index_Proselyte_【Paper_Slip】Faust",
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "La Mancha Parade",
+      "source_slugs": [
+        "The_Prince_of_La_Manchaland_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Lamp",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Lamp_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Launcher — 始 —",
+      "source_slugs": [
+        "Family_Hierarch_Candidate_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "LCA Fracture Round",
+      "source_slugs": [
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Light of Daybreak",
+      "source_slugs": [
+        "Dawn_Office_Rep_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Load",
+      "source_slugs": [
+        "W_Corp._L3_Cleanup_Captain_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Loneliness at High Noon",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Love — Hate",
+      "source_slugs": [
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Loyalty Pheromone",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Magical Arcana",
+      "source_slugs": [
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Mark of Decay",
+      "source_slugs": [
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Mark of the Prescript",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
+        "The_Index_Proselyte_【Paper_Slip】Faust",
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Mark of Villainy",
+      "source_slugs": [
+        "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Maturing Textbook",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Melee Support",
+      "source_slugs": [
+        "Full-Stop_Office_Fixer_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Mook Workshop — Ye — 銳 — Type II Bladedraw / Thrust Force — Dokkaebi Fire",
+      "source_slugs": [
+        "LCD_OSIR_Team_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Moonlit Azure Blade",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Pinky_Apprentice_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Only Ashes Remain",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Open Wound",
+      "source_slugs": [
+        "Night_Awls_Capitano_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Overheated Gas Harpoon",
+      "source_slugs": [
+        "The_Pequod_Captain_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Overwatch Assignment",
+      "source_slugs": [
+        "Full-Stop_Office_Rep_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Paralyze",
+      "source_slugs": [
+        "Kurokumo_Clan_Wakashu_Hong_Lu",
+        "LCB_Sinner_Faust",
+        "LCCB_Assistant_Manager_Ishmael",
+        "LCCB_Assistant_Manager_Rodion",
+        "LCD_OSIR_Team_Ishmael",
+        "Lobotomy_E.G.O_Sunshower_Heathcliff",
+        "N_Corp._Mittelhammer_Rodion",
+        "R.B._Chef_de_Cuisine_Ryōshū",
+        "R.B._Sous-chef_Gregor",
+        "Seven_Assoc._South_Section_6_Yi_Sang",
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
+        "The_Middle_Big_Brother_Heathcliff",
+        "The_One_Who_Grips_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Penitence",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Petals",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Phantom Trace",
+      "source_slugs": [
+        "Blade_of_the_House_of_Spiders_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Plus Coin Boost",
+      "source_slugs": [
+        "Edgar_Family_Heir_Gregor",
+        "Lobotomy_E.G.O_Lamp_Gregor",
+        "Twinhook_Pirates_First_Mate_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Plus Coin Drop",
+      "source_slugs": [
+        "Kurokumo_Clan_Captain_Gregor",
+        "Lobotomy_E.G.O_Regret_Faust",
+        "N_Corp._Kleinhammer_Heathcliff",
+        "The_Middle_Little_Brother_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Prescript: — Device — I",
+      "source_slugs": [
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Prescript: — Paper Slip — I",
+      "source_slugs": [
+        "The_Index_Proselyte_【Paper_Slip】Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Prescript: — Paper Slip — II",
+      "source_slugs": [
+        "The_Index_Proselyte_【Paper_Slip】Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Prescript: — Paper Slip — III",
+      "source_slugs": [
+        "The_Index_Proselyte_【Paper_Slip】Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Prisoner Transport Arrangements (Hong Lu)",
+      "source_slugs": [
+        "S_Corp._Ch'unokkun_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Procuration — Hermes —",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Protector's Stance",
+      "source_slugs": [
+        "Drifting_Blade_of_Hongyuan_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Quadricolor Dimensions",
+      "source_slugs": [
+        "LCE_E.G.O_Dimension_Shredder_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Ready — 待 —",
+      "source_slugs": [
+        "Family_Hierarch_Candidate_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Red Eyes",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Red Eyes — Alert",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Red Eyes — Devouring",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Red_Eyes_&_Penitence_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Red Plum Blossom",
+      "source_slugs": [
+        "Blade_Lineage_Salsu_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Reload",
+      "source_slugs": [
+        "Full-Stop_Office_Rep_Hong_Lu",
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Reload (Solemn Lament)",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Solemn_Lament_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Reload — Germination —",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Rupture Protection",
+      "source_slugs": [
+        "Molar_Boatworks_Fixer_Ishmael",
+        "Molar_Boatworks_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Serpent Arm",
+      "source_slugs": [
+        "Heishou_Pack_-_Si_Branch_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Shattermark",
+      "source_slugs": [
+        "Heishou_Pack_-_Wei_Branch_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Sheut Fracture",
+      "source_slugs": [
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Sibling Vengeance Mark",
+      "source_slugs": [
+        "The_Middle_Little_Brother_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Single Combat",
+      "source_slugs": [
+        "Cinq_Assoc._South_Section_4_Director_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Sinking Deluge",
+      "source_slugs": [
+        "Effloresced_E.G.O_Spicebush_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Slash Protection",
+      "source_slugs": [
+        "W_Corp._L2_Cleanup_Agent_Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Solitude",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Spore",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Spore Round — Base —",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Spore Round — Buckshot —",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Hornet【Alteration】Meursault"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Strategic R&R Mode",
+      "source_slugs": [
+        "Devyat'_Assoc._North_Section_3_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Strider — Mao —",
+      "source_slugs": [
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+        "Heishou_Pack_-_Mao_Branch_Outis",
+        "Heishou_Pack_-_Mao_Branch_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "String Severance — 絕緣 —",
+      "source_slugs": [
+        "Blade_of_the_House_of_Spiders_Ryōshū"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Target Spotted",
+      "source_slugs": [
+        "Full-Stop_Office_Rep_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "The Duel Escalates (Heathcliff)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "The Living & The Departed",
+      "source_slugs": [
+        "Lobotomy_E.G.O_Solemn_Lament_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "The Middle Styled Augmentation Tattoos (Ishmael)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "The Middle — Grudge (Ishmael)",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
     },
     {
       "name": "The Self Unbound — Flow State",
@@ -43,6 +1031,111 @@
       "discovered_at": "2026-07-02"
     },
     {
+      "name": "The Udjat — Vanguard —",
+      "source_slugs": [
+        "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Thermal Blades",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tianjiu Star's Blade",
+      "source_slugs": [
+        "Heishou_Pack_-_Mao_Branch_Adept_Faust"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Time Moratorium",
+      "source_slugs": [
+        "T_Corp._Class_2_Collection_Staff_Rodion",
+        "T_Corp._Class_3_VDCU_Staff_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Torn Memory",
+      "source_slugs": [
+        "N_Corp._E.G.O_Fell_Bullet_Yi_Sang"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tremor Burst",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Faust",
+        "Dawn_Office_Rep_Gregor",
+        "LCB_Sinner_Heathcliff",
+        "LCB_Sinner_Ishmael",
+        "LCB_Sinner_Meursault",
+        "LCCB_Assistant_Manager_Ishmael",
+        "LCCB_Assistant_Manager_Ryōshū",
+        "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+        "Lobotomy_E.G.O_Regret_Faust",
+        "Lobotomy_E.G.O_Sloshing_Ishmael",
+        "Lobotomy_E.G.O_Sunshower_Heathcliff",
+        "Molar_Boatworks_Fixer_Sinclair",
+        "Molar_Office_Fixer_Outis",
+        "Molar_Office_Fixer_Yi_Sang",
+        "Night_Awls_Capitano_Gregor",
+        "Rosespanner_Workshop_Fixer_Gregor",
+        "Rosespanner_Workshop_Fixer_Meursault",
+        "Rosespanner_Workshop_Rep_Rodion",
+        "T_Corp._Class_2_Collection_Staff_Rodion",
+        "T_Corp._Class_3_VDCU_Staff_Outis",
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
+        "The_Middle_Big_Brother_Heathcliff",
+        "Zwei_Assoc._South_Section_6_Sinclair",
+        "Zwei_Assoc._West_Section_3_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tremor — Chain",
+      "source_slugs": [
+        "T_Corp._Class_3_VDCU_Staff_Outis"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tremor — Decay",
+      "source_slugs": [
+        "Jeong's_Office_Rep_Ishmael"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tremor — Hemorrhage",
+      "source_slugs": [
+        "Night_Awls_Capitano_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Tremor — Scorch",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Faust",
+        "Dawn_Office_Rep_Gregor",
+        "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+        "The_House_of_Spiders_The_Thumb_Nursefather_Rodion"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Trussed — Hong Lu —",
+      "source_slugs": [
+        "S_Corp._Ch'unokkun_Hong_Lu"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
       "name": "Unending Bereavement",
       "source_slugs": [
         "Wild_Hunt_Heathcliff"
@@ -50,11 +1143,65 @@
       "discovered_at": "2026-07-02"
     },
     {
+      "name": "Unjust Enrichment",
+      "source_slugs": [
+        "Twinhook_Pirates_First_Mate_Gregor"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Unlock",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Unlock — I",
+      "source_slugs": [
+        "The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
       "name": "Unrelenting Storm",
       "source_slugs": [
         "The_Lord_of_Hongyuan_Hong_Lu"
       ],
       "discovered_at": "2026-07-02"
+    },
+    {
+      "name": "Vendetta Mark",
+      "source_slugs": [
+        "The_Middle_Little_Brother_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Vengeance Mark",
+      "source_slugs": [
+        "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
+        "The_Middle_Big_Brother_Heathcliff",
+        "The_Middle_Little_Brother_Meursault",
+        "The_Middle_Little_Brother_Sinclair",
+        "The_Middle_Little_Sister_Don_Quixote"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Vengeance Tattoo",
+      "source_slugs": [
+        "The_Middle_Big_Brother_Heathcliff"
+      ],
+      "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Volatile Passion",
+      "source_slugs": [
+        "Dawn_Office_Fixer_Sinclair"
+      ],
+      "discovered_at": "2026-08-07"
     }
   ]
 }

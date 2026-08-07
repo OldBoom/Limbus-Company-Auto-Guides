@@ -10,7 +10,10 @@ import re
 from dataclasses import dataclass
 from typing import Any, Callable
 
-from limbus_guides.nlp.synergy import extract_unique_tremor_types, format_unique_tremor_label
+from limbus_guides.nlp.mechanic_signals import (
+    extract_unique_tremor_types,
+    format_unique_tremor_label,
+)
 
 # ---------------------------------------------------------------------------
 # Shared helpers

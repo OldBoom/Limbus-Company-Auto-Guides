@@ -1,6 +1,15 @@
 # Evaluation — Working Notes (D8)
 
-Results for the final presentation appendix. Regenerate with `python scripts/run_evaluation.py` after pipeline runs.
+> **Frozen record.** These are the numbers as submitted for the graded coursework
+> (commit `5843dd0`, July 2026). The evaluation tooling that produced them —
+> `src/limbus_guides/eval/`, `scripts/run_evaluation.py`, `scripts/run_poc_evaluations.py`
+> and the result JSONs — has since been removed, so the commands below no longer run.
+> Kept for provenance; do not treat as current.
+>
+> Two caveats worth recording, found when the code was reviewed afterwards:
+> the ROUGE-L comparison was length-confounded (generated guides averaged 416 words
+> against 154-word references, capping attainable F1 near 0.54), and the error-category
+> counts in §Error categories were hardcoded constants in `metrics.py`, not measurements.
 
 ## Test set
 

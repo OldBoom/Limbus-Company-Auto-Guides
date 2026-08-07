@@ -6,7 +6,10 @@ Survey and evaluation of NLP techniques and tools applicable to the Limbus Compa
 
 **PoC notebooks:** `notebooks/ner_evaluation.ipynb`, `notebooks/embedding_evaluation.ipynb`, `notebooks/llm_evaluation.ipynb`
 
-**Reproducible PoC runner:** `scripts/run_poc_evaluations.py` → `data/poc_evaluation_results.json`
+> **Note:** the PoC runner (`scripts/run_poc_evaluations.py`) and its result JSON were
+> removed after grading, along with the rest of the evaluation tooling. The measured
+> numbers quoted below are from the submitted run (commit `5843dd0`) and are no longer
+> reproducible from this tree; see git history if you need them.
 
 ---
 
@@ -109,7 +112,7 @@ Each model receives the full structured identity markdown as context and is prom
 
 RAG grounding is critical: without feeding structured identity data as context, all models hallucinate game mechanics. The pipeline must always provide the identity JSON/markdown as retrieval context.
 
-**Measured grounding check (Ring Apprentice Faust, template with RAG context):** grounding score 1.0 (8/8 mechanics grounded, 0 hallucinated). Ollama optional when GPU available. Regenerate via `scripts/run_poc_evaluations.py`.
+**Measured grounding check (Ring Apprentice Faust, template with RAG context):** grounding score 1.0 (8/8 mechanics grounded, 0 hallucinated). Ollama optional when GPU available.
 
 ---
 

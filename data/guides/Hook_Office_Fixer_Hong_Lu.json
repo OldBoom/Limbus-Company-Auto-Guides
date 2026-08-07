@@ -1,0 +1,103 @@
+{
+  "identity_slug": "Hook_Office_Fixer_Hong_Lu",
+  "identity_name": "Hook Office Fixer Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Bleed",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Haste",
+      "Atk Weight",
+      "Final Power"
+    ],
+    "status_effects": {
+      "Haste": 3,
+      "Bleed": 10
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Hit": 2,
+      "Heads Hit": 6,
+      "On Use": 1,
+      "On Evade": 1
+    },
+    "all_mechanics": {
+      "Haste": 3,
+      "Bleed": 10,
+      "Base Power": 4,
+      "Coin Power": 7,
+      "Atk Weight": 3,
+      "Final Power": 1
+    },
+    "identity_slug": "Hook_Office_Fixer_Hong_Lu",
+    "key_status_effects": [
+      "Attack Power Up"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Hook Office Fixer Hong Lu is a Damage Dealer — **Bleed** focus. Key damage is Heads-flip dependent — high-variance kit; pair with SP-rich allies or Gambit-style passives to maximise Heads output.",
+  "playstyle_guide": "- Skills check **2+ Bleed** — favour those coins when stacked.\n- **Haste** triggers on **Evade** — Evade when you want the Speed spike next turn.\n- High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.\n- Hold S3 for when At 6+ Speed is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Track** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low / Slightly High stacked).\n- Needs 2+ Haste to activate — prioritise building stacks before using.\n- Inflict 1 Bleed; [Heads Hit] Inflict +1 Bleed Count\n\n**S2 — Goin' First** (BP 4, CP +3, x3): rolls — low 4, high 13 (Low / Slightly Low stacked).\n- Needs 6+ Speed to activate — prioritise building stacks before using.\n\n**S3 — Rampage** (BP 4, CP +2, x4): rolls — low 4, high 12 (Extremely Low / Slightly Low stacked).\n- Needs 6+ Speed to activate — prioritise building stacks before using.\n- Heal 1 SP per Bleed on target (Max 5)\n\nCombat passive — **Hook**: Upon defeating an enemy, gain 1 Attack Power Up next turn (Once per turn).\n\nCombat passive — **Mass-produced Bionic Gear**: When 1 ally with the fastest Speed defeats an enemy that has Bleed, gain 1 Attack Power Up next turn (Once per turn).",
+  "team_suggestions": [
+    "**Bleed** focus.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Bleed** focus.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
+      "teammate_name": "Shi Assoc. East Section 3 Faust",
+      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

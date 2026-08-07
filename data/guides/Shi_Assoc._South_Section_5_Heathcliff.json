@@ -1,0 +1,108 @@
+{
+  "identity_slug": "Shi_Assoc._South_Section_5_Heathcliff",
+  "identity_name": "Shi Assoc. South Section 5 Heathcliff",
+  "sinner": "Heathcliff",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Poise",
+      "Base Power",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Poise": 4
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 4
+    },
+    "unique_mechanics": {},
+    "triggers": {
+      "On Use": 3
+    },
+    "all_mechanics": {
+      "Poise": 4,
+      "Base Power": 4,
+      "Coin Power": 4,
+      "Atk Weight": 4
+    },
+    "identity_slug": "Shi_Assoc._South_Section_5_Heathcliff",
+    "key_status_effects": []
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_Pequod_Captain_Ishmael",
+      "teammate_name": "The Pequod Captain Ishmael",
+      "reason": "'Captain of the Pequod' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Zwei_Assoc._South_Section_5_Rodion",
+      "teammate_name": "Zwei Assoc. South Section 5 Rodion",
+      "reason": "'Designated Protection' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Shi Assoc. South Section 5 Heathcliff is a Damage Dealer / Support — **Poise** fighter — stack on self, then spend on crits and scaling. Support passive (**Self-neglect**) buffs teammates.",
+  "playstyle_guide": "- **Self-neglect** — align allies' actions with the passive's trigger condition.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Flashing Strike** — **S1 — Extreme Edge** adds **+3 Poise Count** at **On Use**; **S2 — Flying Sword** adds **+3 Poise** at **On Use**.\n- Hold S3 for when At 10+ Poise Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Extreme Edge** (BP 4, CP +6, x1): rolls — low 4, high 10 (Extremely Low).\n- At less than 50% HP, Skill Power +2 ; [On Use] Gain +3 Poise Count\n- At less than 50% HP, Skill Power +2; [On Use] Gain +3 Poise Count\n\n**S2 — Flying Sword** (BP 5, CP +10, x1): rolls — low 5, high 15 (Slightly Low).\n- At less than 50% HP, +2 Skill Power ; [On Use] Gain 3 Poise\n- At less than 50% HP, +2 Skill Power; [On Use] Gain 3 Poise\n\n**S3 — Flashing Strike** (BP 5, CP +6, x2): rolls — low 5, high 17 (Average).\n- Peak output requires both conditions: At 10+ Poise Count, Skill Power +2 | At less than 50% HP, Atk Weight +1.\n- Lose 5 HP; +50% Skill Damage for this Coin",
+  "team_suggestions": [
+    "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 10+ Poise thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

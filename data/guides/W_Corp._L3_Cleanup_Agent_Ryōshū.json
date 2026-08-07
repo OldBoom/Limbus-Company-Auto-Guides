@@ -1,0 +1,105 @@
+{
+  "identity_slug": "W_Corp._L3_Cleanup_Agent_Ryōshū",
+  "identity_name": "W Corp. L3 Cleanup Agent Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Charge",
+      "Coin Power",
+      "Base Power"
+    ],
+    "secondary_mechanics": [
+      "Atk Weight",
+      "Haste",
+      "Charge Barrier"
+    ],
+    "status_effects": {
+      "Charge": 16,
+      "Haste": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3
+    },
+    "unique_mechanics": {
+      "Charge Barrier": 8,
+      "Slash Fragility": 8
+    },
+    "triggers": {
+      "On Hit": 4,
+      "On Use": 3,
+      "Heads Hit": 3
+    },
+    "all_mechanics": {
+      "Charge": 16,
+      "Haste": 1,
+      "Base Power": 5,
+      "Coin Power": 8,
+      "Atk Weight": 3,
+      "Charge Barrier": 1
+    },
+    "identity_slug": "W_Corp._L3_Cleanup_Agent_Ryōshū",
+    "key_status_effects": [
+      "Slash Fragility",
+      "Charge Barrier"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "W Corp. L3 Cleanup Agent Ryōshū is a Damage Dealer — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **D.D.E.D.R.**), then rebuild for the next window. Scaling conditions: Consume 15 Charge Count for +5 Coin Power.",
+  "playstyle_guide": "- Ramp **Charge Count** toward **20** before **D.D.E.D.R.** — **S2 — Leap** adds **+7 Charge Count** at **On Use**; **S1 — E.C.** adds **+2 Charge Count** per **On Hit** coin.\n- When ready, spend **15** stacks on **D.D.E.D.R.** for **+5 Coin Power**, then start building again.\n- **Haste** before **Evade** when you need higher Speed on the setup turn.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n\n**S1 — E.C.** (BP 3, CP +2, x3): rolls — low 3, high 9 (Extremely Low).\n- Peak output requires both conditions: At 10+ Charge Count, deal +10% damage | At 15+ Charge Count, deal additional +10% damage.\n- Gain +2 Charge Count\n\n**S2 — Leap** (BP 2, CP +5, x3): rolls — low 2, high 17 (Extremely High / High stacked).\n- Peak output requires both conditions: Gain +7 Charge Count | At 10+ Charge Count, gain +1 Coin Power.\n- If target’s HP is below 30%, deal +20% damage; [On Kill] Gain 1 Haste next turn\n\n**S3 — D.D.E.D.R.** (BP 3, CP +2, x4): rolls — low 3, high 11 (Extremely Low).\n- At **15+ Charge Count**: spend **15** stacks for **+5 Coin Power** — save this for your dump turn.\n- The final Coin deals +5% damage\n- If the skill consumed 15 Charge Count upon use, apply 5 Charge Barrier to self and 1 other ally\n\nCombat passive — **Dimensional Demon Edge**: Upon defeating an enemy, gain +3 Charge Count (3 times per turn).\n\nCombat passive — **Dimensional Refraction Edge - Type: Blade Mk7**: When an ally with the lowest Max HP defeats an enemy, they gain +3 Charge Count (Once per turn).",
+  "team_suggestions": [
+    "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **D.D.E.D.R.**), then rebuild for the next window.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+    "- **W Corp. L4 Cleanup Agent - CCA Heathcliff**: 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills."
+  ],
+  "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **D.D.E.D.R.**), then rebuild for the next window.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
+      "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
+      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
+      "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 10+ Charge thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}
