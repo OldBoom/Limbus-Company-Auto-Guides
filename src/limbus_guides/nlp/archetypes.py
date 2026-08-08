@@ -212,8 +212,13 @@ _SIN_ALT = "|".join(_SINS)
 _RESON_ANY_RE = re.compile(r"\bReson\.", re.I)
 _RESON_SIN_RE = re.compile(rf"\b({_SIN_ALT})\s+(A-)?Reson\.", re.I)
 _RESON_GATE_RE = re.compile(
-    rf"\bAt\s+(\d+)\+\s+(?:sum of\s+)?(?:({_SIN_ALT})\s+)?(A-)?Reson\.",
+    rf"\bAt\s+(\d+)\+\s+(?:(?:sum of|highest)\s+)*(?:({_SIN_ALT})\s+)?(A-)?Reson\.",
     re.I,
+)
+_RESON_ABSOLUTE_RE = re.compile(r"\bA-Reson\.", re.I)
+# Resonance turning on team buffs rather than this unit's own numbers.
+_RESON_ALLY_RE = re.compile(
+    r"Reson\.[^;]{0,90}(?:all(?:y|ies)|Damage Up|Protection|Aggro|heal|Poise)", re.I
 )
 # Both orders occur: "gains Offense Level by (highest Reson. / 2)" and the far more
 # common "At 4+ Envy Reson., Coin Power +1".
@@ -269,12 +274,20 @@ def find_resonance_archetype(
     scales_offense = bool(_RESON_OFFENSE_RE.search(blob))
     scales_power = bool(_RESON_POWER_RE.search(blob)) or bool(_RESON_BONUS_DMG_RE.search(blob))
 
-    # Resonance has to drive something central — a Counter unlock, or power/Offense
-    # scaling. A bare threshold is often a rider on an unrelated effect (an ally heal
-    # at "4+ Wrath Reson."), and leading the core idea with Resonance there overstates
-    # it. Counting mentions does not separate these: the kit blob repeats skill text
-    # that also appears in raw_markdown, so the totals are inflated unevenly.
-    if not (counter_name or scales_offense or scales_power):
+    buffs_allies = bool(_RESON_ALLY_RE.search(blob))
+    # Absolute Resonance needs the whole queued turn to share one Sin, so a kit that
+    # keys off it is built around Resonance even when the payoff is team buffs rather
+    # than its own numbers.
+    uses_absolute = bool(_RESON_ABSOLUTE_RE.search(blob))
+
+    # Resonance has to drive something central — a Counter unlock, power/Offense
+    # scaling, or an Absolute Resonance threshold. A bare plain-Resonance threshold is
+    # often a rider on an unrelated effect (Liu Assoc. South Section 3 Yi Sang heals
+    # one extra ally at "4+ Wrath Reson." and never mentions A-Reson.), and leading a
+    # core idea with Resonance there overstates it. Counting mentions does not separate
+    # these: the kit blob repeats skill text that also appears in raw_markdown, so the
+    # totals are inflated unevenly.
+    if not (counter_name or scales_offense or scales_power or uses_absolute):
         return None
 
     lead = f"**{sin} Resonance** kit — queue {sin}-affinity skills across the team"
@@ -284,6 +297,11 @@ def find_resonance_archetype(
             summary = (
                 f"{lead}; at **{threshold}+ {sin} Absolute Resonance** a Combat Start "
                 f"Counter (**{counter_name}**) fires for free."
+            )
+        elif buffs_allies and not scales_power:
+            summary = (
+                f"{lead}; at **{threshold}+ {sin} Absolute Resonance** it switches on "
+                f"its team buffs."
             )
         else:
             summary = (

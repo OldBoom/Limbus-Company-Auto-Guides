@@ -279,6 +279,106 @@ def _skill_effect_text(gp: dict) -> str:
     return " ".join(skill_parts)
 
 
+# ---------------------------------------------------------------------------
+# Tank survivability
+#
+# "Tank" in the role line said nothing about *how* the identity stays alive.
+# Aggro is how it takes the hits; the mitigation and recovery tools are what let
+# it survive them, and those are the part a player actually needs to plan around.
+# ---------------------------------------------------------------------------
+
+_TANK_DRAW: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("**Aggro**", re.compile(r"\bAggro\b", re.I)),
+    ("**Assist Defense**", re.compile(r"Assist Defense", re.I)),
+)
+_TANK_MITIGATE: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("**Shield**", re.compile(r"\bShield\b", re.I)),
+    ("**Protection**", re.compile(r"\bProtection\b", re.I)),
+    ("**Defense Level Up**", re.compile(r"Defense Level Up", re.I)),
+)
+_TANK_RECOVER: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "a lethal-damage nullify",
+        re.compile(r"cannot drop below 1|nullify that damage", re.I),
+    ),
+    ("self-healing", re.compile(r"(?:Heal|Recover)[^;]{0,25}\bHP\b", re.I)),
+)
+
+
+def _tank_kit_text(gp: dict) -> str:
+    """Kit text broad enough to catch defensive tools wherever they are declared."""
+    parts: list[str] = [gp.get("combat_passives_text", ""), gp.get("support_passive_text", "")]
+    for skill in gp.get("skills", []) + gp.get("alternate_skills", []):
+        parts.extend(skill.get("skill_bonuses", []))
+        parts.extend(skill.get("on_use_effects", []))
+        parts.extend(coin.get("effect", "") for coin in skill.get("coin_effects", []))
+    for note in gp.get("defense_skill_notes", []):
+        parts.append(note.get("note", ""))
+        parts.extend(note.get("mechanic_lines", []))
+    return " ".join(p for p in parts if p)
+
+
+def _join_terms(terms: list[str]) -> str:
+    if len(terms) == 1:
+        return terms[0]
+    return f"{', '.join(terms[:-1])} and {terms[-1]}"
+
+
+def _tank_survivability_sentence(gp: dict, role_str: str, existing: str) -> str | None:
+    """How a Tank actually stays alive — omitted when the opening already covers it."""
+    if "Tank" not in role_str:
+        return None
+
+    blob = _tank_kit_text(gp)
+
+    def detect(pairs: tuple[tuple[str, re.Pattern[str]], ...]) -> tuple[list[str], list[str]]:
+        """(present in kit, of those not already named in the opening).
+
+        Presence decides what may be claimed; the second list only decides what to
+        spell out. Deciding from the deduplicated list alone would let an opening
+        that already mentions Shield turn into "has no mitigation of its own".
+        """
+        found = [label for label, rx in pairs if rx.search(blob)]
+        fresh = [x for x in found if x.strip("*").lower() not in existing.lower()]
+        return found, fresh
+
+    draw_all, draw = detect(_TANK_DRAW)
+    mitigate_all, mitigate = detect(_TANK_MITIGATE)
+    recover_all, recover = detect(_TANK_RECOVER)
+
+    if not (draw_all or mitigate_all or recover_all):
+        return None
+    if not (draw or mitigate or recover):
+        return None  # the opening already covers every defensive tool
+
+    if mitigate:
+        sentence = (
+            f"Survives by pulling hits with {_join_terms(draw)} and absorbing them "
+            f"with {_join_terms(mitigate)}"
+            if draw
+            else f"Survivability comes from {_join_terms(mitigate)}"
+        )
+    elif mitigate_all:
+        if not draw:
+            return None
+        sentence = f"Holds the front with {_join_terms(draw)}"
+    elif recover:
+        lead = f"Survives on {_join_terms(recover)}"
+        sentence = f"{lead}, pulling hits with {_join_terms(draw)}" if draw else lead
+        recover = []  # already stated
+    elif draw:
+        return (
+            f"Holds the front with {_join_terms(draw)} but has no mitigation of its "
+            f"own — pair it with healing or Protection support."
+        )
+    else:
+        return None
+
+    if recover:
+        sentence += f", backed by {_join_terms(recover)}"
+    return sentence + "."
+
+
 def _scaling_conditions_sentence(gp: dict) -> str | None:
     """Standard scaling block — inserted after the hook for dashboard layout."""
     dmg = gp.get("damage_conditions") or []
@@ -679,6 +779,9 @@ def _build_core_idea(name: str, gp: dict) -> str:
         if scaling not in " ".join(parts):
             parts.append(scaling)
     parts.extend(post_scaling)
+
+    if survivability := _tank_survivability_sentence(gp, role_str, " ".join(parts)):
+        parts.append(survivability)
 
     if gp.get("heads_dependent"):
         parts.append(
