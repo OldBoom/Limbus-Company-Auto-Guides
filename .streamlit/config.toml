@@ -1,0 +1,16 @@
+# Pin the dark theme.
+#
+# The dashboard was always dark, but the theme was never committed, so it fell back
+# to whatever the runtime defaulted to — recent Streamlit follows the viewer's
+# prefers-color-scheme, which turns the app white on a light-mode machine.
+#
+# This is not cosmetic. guide_format_css() in dashboard/text_format.py builds the
+# guide surfaces from white overlays (rgba(255,255,255,0.03) and 0.08) and pairs them
+# with light text; on a white background those panels vanish and the text loses
+# contrast. The status-effect highlight colours are picked against a dark base too.
+[theme]
+base = "dark"
+primaryColor = "#FF4B4B"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#FAFAFA"
