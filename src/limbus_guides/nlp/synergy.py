@@ -222,6 +222,13 @@ def _scales_off(text: str) -> set[str]:
     return effects
 
 
+# Statuses an ally GAINS on itself. SUPPORT_PASSIVE_RE also matches the verb "gain",
+# so without this the reason text said things like "'Swordplay of the Homeland' inflicts
+# Poise ... on the target" — Poise and Charge sit on your own unit, and nobody inflicts
+# them on an enemy. This affected roughly 48 identities.
+_SELF_GAINED_STATUSES = frozenset({"Poise", "Charge", "Haste", "Protection", "Shield"})
+
+
 def _build_rule_reason(
     passive_name: str,
     inflicted_effect: str,
@@ -231,6 +238,9 @@ def _build_rule_reason(
     """
     Build a human-readable synergy reason that explains the actual mechanic link.
     """
+    grants_to_self = inflicted_effect in _SELF_GAINED_STATUSES
+    verb = "grants" if grants_to_self else "inflicts"
+
     # Threshold checks (e.g. 7+ Bleed) vs per-stack scaling
     threshold_m = re.search(
         rf"(\d+)\+\s+{re.escape(inflicted_effect)}",
@@ -239,18 +249,17 @@ def _build_rule_reason(
     )
     if threshold_m:
         return (
-            f"'{passive_name}' inflicts {inflicted_effect} via the support passive — "
+            f"'{passive_name}' {verb} {inflicted_effect} via the support passive — "
             f"helps reach {threshold_m.group(1)}+ {inflicted_effect} thresholds on key skills."
         )
 
     scale_note = ""
     if inflicted_effect in subject_scales:
-        scale_note = f" — scales off {inflicted_effect} count/potency on the target"
+        where = "on your own unit" if grants_to_self else "on the target"
+        scale_note = f" — scales off {inflicted_effect} count/potency {where}"
     elif "_neg_effects" in subject_scales:
         scale_note = " — damage scales with how many negative effect types are on the target"
-    return (
-        f"'{passive_name}' inflicts {inflicted_effect} via the support passive{scale_note}."
-    )
+    return f"'{passive_name}' {verb} {inflicted_effect} via the support passive{scale_note}."
 
 
 def find_synergy_teammates(
@@ -406,9 +415,13 @@ def find_synergy_teammates(
             kindred_overlap = {t for t in overlap if "Kindred" in t}
             if kindred_overlap:
                 shared = sorted(kindred_overlap)[0]
+                # Same-generation Kindreds do not unlock alternate skills. The only
+                # mechanical use in the wiki data is Bloodfeast precedence — Manager of
+                # La Manchaland "takes precedence" over same-generation Kindreds when
+                # consuming, and Prince of La Manchaland excludes "higher Kindreds".
                 reason = (
-                    f"Shares [{shared}] trait — same-generation ally activates "
-                    f"this identity's trait-conditional passive and alternate skills."
+                    f"Shares [{shared}] — same-generation Kindreds compete for the shared "
+                    f"**Bloodfeast** pool, and precedence between them is fixed by kit."
                 )
                 base_score = 0.97
             elif "La Manchaland" in overlap and has_bloodfeast_kit:

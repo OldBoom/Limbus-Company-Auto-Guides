@@ -57,7 +57,7 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -65,7 +65,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Slayer' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -73,7 +73,7 @@
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -81,7 +81,7 @@
     {
       "teammate_slug": "The_Pequod_Captain_Ishmael",
       "teammate_name": "The Pequod Captain Ishmael",
-      "reason": "'Captain of the Pequod' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Captain of the Pequod' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -89,7 +89,7 @@
     {
       "teammate_slug": "Zwei_Assoc._South_Section_5_Rodion",
       "teammate_name": "Zwei Assoc. South Section 5 Rodion",
-      "reason": "'Designated Protection' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Designated Protection' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -99,28 +99,28 @@
   "playstyle_guide": "- **Mentor's Counsel** — align allies' actions with the passive's trigger condition.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Balestra Fente** — **S1 — Marche** adds **+1 Poise Count** per **On Hit** coin; **S2 — Punition** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Hold S3 for when At 7+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Marche** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Gain 2 Haste next turn; [On Use] This slot gains 3 Aggro next turn\n\n**S2 — Punition** (BP 4, CP +5, x2): rolls — low 4, high 14 (Slightly Low).\n- If this unit's Speed is faster than the target's, Coin Power +2 ; [On Use] Gain +2 Poise Count ; [On Use] This Skill Slot gains 4 Aggro next turn\n- If this unit's Speed is faster than the target's, Coin Power +2; [On Use] Gain +2 Poise Count; [On Use] This Skill Slot gains 4 Aggro next turn\n\n**S3 — Balestra Fente** (BP 8, CP +14, x1): rolls — low 8, high 22 (Extremely High).\n- Needs 7+ Poise to activate — prioritise building stacks before using.\n- Inflict Declared Duel — Outis; [On Hit] Apply 1 Haste next turn to 2 allies with the slowest Speed; [On Crit] +50% Damage on Critical Hit\n\nCombat passive — **Redirect**: On Evade, gain 1 Haste next turn.\n  - lower this unit's Stagger Threshold by 5 (Max 3).",
   "team_suggestions": [
     "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
-    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
-    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills."
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills."
   ],
   "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'Slayer' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 7+ Poise thresholds on key skills.",
       "source": "rule"
     }
   ],

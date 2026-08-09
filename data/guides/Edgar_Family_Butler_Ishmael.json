@@ -59,7 +59,7 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -75,7 +75,7 @@
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -94,8 +94,8 @@
   "team_suggestions": [
     "**Sinking** stacker — Base Power scales with Sinking on the target. Same-faction teammates provide additional passive synergy where available.",
     "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
-    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
-    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target."
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit."
   ],
   "team_suggestion_intro": "**Sinking** stacker — Base Power scales with Sinking on the target. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -108,13 +108,13 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "source": "rule"
     }
   ],

@@ -77,7 +77,7 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -85,7 +85,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "reason": "'Slayer' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -93,7 +93,7 @@
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -108,12 +108,12 @@
     }
   ],
   "core_idea": "Heishou Pack - Si Branch Rodion is a Damage Dealer / Status Specialist — **Poise** fighter — stack on self, then spend on crits and scaling. **Heishou Pack** — in Chain Battles, fill backup deployment slots with other Sinners so substitutes enter when a deployed unit **dies** or **Retreats**.",
-  "playstyle_guide": "- Chain Battles only — each Sinner equips **one identity**; **death** or **Retreat** Substitutes a backup Sinner in with a fresh rotation. Stagger does not.\n- Another **Heishou Pack** identity on a backup **Sinner** is ideal — faction passives and **The Lord of Hongyuan** procs stack across the substitute queue.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Serpent's Mortal Flurry** — **S1 — Serpent Glint** adds **+2 Poise Count** at **On Use**; **S2 — Snake Fang** adds **+2 Poise Count** on **Clash Win**.\n- **Serpent's Mortal Flurry** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- **Guard: Reversal Kick** grants 3 **Serpent Arm** at Combat Start — use the defense slot to prep buffs before your main attacks.\n\n**S1 — Serpent Glint** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Coin Power +1 for every 10 (Poise on self + Rupture on target) (max 2); [On Use] Gain +2 Poise Count\n\n**S2 — Snake Fang** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Coin Power +1 for every 10 (Poise on self + Rupture on target) (max 2); [Clash Win] Inflict +2 Rupture Count; [Clash Win] Gain +2 Poise Count\n- Peak output requires both conditions: At 30+ Poise, consume 10 Poise on self to Reuse Coin once (1 time max) | [On Hit] Inflict Deathrite — Venom —.\n\n**S3 — Serpent's Mortal Flurry** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Unfocused Volley ; [On Use] Coin Power +1 for every 10 (Poise on self + Rupture on the main target) (max 2) ; [On Use] Gain Clash Power equal to Serpent Arm on self ; [On Use] Gain 3 Serpent Arm ; [Clash Win] Inflict +1 Rupture Count on all targets\n- Inflict +1 Rupture Count; [On Crit] Reduce Deathrite — Venom — on target by 1; [On Crit] Reuse this Coin once (2 times per Skill)\n\nCombat passive — **Heishou Mutation [Si]**: If this unit has Serpent Arm, deal +5% damage.\n  - If target has Deathrite — Venom —, deal +5% damage.\n\nCombat passive — **Intravascular Venom**: When 1 ally with the fastest Speed inflicts Rupture damage to an enemy, inflict 1 Offense Level Down and 1 Defense Level Down next turn (….\n\nDefense skill — **Guard: Reversal Kick**: Clashable Guard.\n  - [Combat Start] Gain 3 Serpent Arm next turn.\n  - [On Use] At 10+ Poise Count, Coin Power +1.",
+  "playstyle_guide": "- Chain Battles only — each Sinner equips **one identity**; **death** or **Retreat** Substitutes a backup Sinner in with a fresh rotation. Stagger does not.\n- Another **Heishou Pack** identity on a backup **Sinner** is ideal — faction passives and **The Lord of Hongyuan** procs stack across the substitute queue.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Serpent's Mortal Flurry** — **S1 — Serpent Glint** adds **+2 Poise Count** at **On Use**; **S2 — Snake Fang** adds **+2 Poise Count** on **Clash Win**.\n- **Serpent's Mortal Flurry** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- **Guard: Reversal Kick** grants 3 **Serpent Arm** automatically at Combat Start — you already have it on turn one; no defense turn required.\n\n**S1 — Serpent Glint** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Coin Power +1 for every 10 (Poise on self + Rupture on target) (max 2); [On Use] Gain +2 Poise Count\n\n**S2 — Snake Fang** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Coin Power +1 for every 10 (Poise on self + Rupture on target) (max 2); [Clash Win] Inflict +2 Rupture Count; [Clash Win] Gain +2 Poise Count\n- Peak output requires both conditions: At 30+ Poise, consume 10 Poise on self to Reuse Coin once (1 time max) | [On Hit] Inflict Deathrite — Venom —.\n\n**S3 — Serpent's Mortal Flurry** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Unfocused Volley ; [On Use] Coin Power +1 for every 10 (Poise on self + Rupture on the main target) (max 2) ; [On Use] Gain Clash Power equal to Serpent Arm on self ; [On Use] Gain 3 Serpent Arm ; [Clash Win] Inflict +1 Rupture Count on all targets\n- Inflict +1 Rupture Count; [On Crit] Reduce Deathrite — Venom — on target by 1; [On Crit] Reuse this Coin once (2 times per Skill)\n\nCombat passive — **Heishou Mutation [Si]**: If this unit has Serpent Arm, deal +5% damage.\n  - If target has Deathrite — Venom —, deal +5% damage.\n\nCombat passive — **Intravascular Venom**: When 1 ally with the fastest Speed inflicts Rupture damage to an enemy, inflict 1 Offense Level Down and 1 Defense Level Down next turn (….\n\nDefense skill — **Guard: Reversal Kick**: Clashable Guard.\n  - [Combat Start] Gain 3 Serpent Arm next turn.\n  - [On Use] At 10+ Poise Count, Coin Power +1.",
   "team_suggestions": [
     "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
     "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
-    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
-    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills."
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills."
   ],
   "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -126,13 +126,13 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
+      "reason": "'Slayer' grants Poise via the support passive — helps reach 30+ Poise thresholds on key skills.",
       "source": "rule"
     }
   ],

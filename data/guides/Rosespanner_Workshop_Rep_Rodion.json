@@ -78,7 +78,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false

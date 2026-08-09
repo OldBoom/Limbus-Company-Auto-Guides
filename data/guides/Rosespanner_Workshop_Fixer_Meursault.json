@@ -78,7 +78,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — scales off Charge count/potency on the target.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — scales off Charge count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false

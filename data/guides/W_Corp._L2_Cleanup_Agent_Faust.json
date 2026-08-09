@@ -48,7 +48,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -56,7 +56,7 @@
     {
       "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
       "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
-      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Raring to Graze' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -64,7 +64,7 @@
     {
       "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
       "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
-      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -74,28 +74,28 @@
   "playstyle_guide": "- Ramp **Charge Count** toward **20** before **Overcharge** — **S2 — Leap** adds **+3 Charge Count** at **On Use** and **+3 Charge Count** per **On Hit** coin; **S1 — Energy Cycle** adds **+2 Charge Count** at **On Use** and **+2 Charge Count** per **On Hit** coin.\n- At **5+ Charge Count**, **Overcharge** gains **+2 Clash Power** — build stacks before your highest-damage attacks.\n- Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.\n- Hold S3 for when At 5+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Energy Cycle** (BP 4, CP +8, x1): rolls — low 4, high 12 (High).\n- Gain +2 Charge Count\n\n**S2 — Leap** (BP 6, CP +4, x2): rolls — low 6, high 14 (Slightly Low).\n- Gain +3 Charge Count\n\n**S3 — Overcharge** (BP 6, CP +3, x3): rolls — low 6, high 15 (Slightly Low / Slightly High stacked).\n- Needs 5+ Charge Count to activate — prioritise building stacks before using.\n\nCombat passive — **Self-charging**: Gain +1 Charge Count at Attack End.\n  - A random ally gains +1 Charge Count at Attack End.\n\nCombat passive — **Radio Comms**: 1 ally that has the lowest max HP gains +1 Charge Count.",
   "team_suggestions": [
     "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Overcharge**), then rebuild for the next window.",
-    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
-    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
-    "- **W Corp. L4 Cleanup Agent - CCA Heathcliff**: 'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills."
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+    "- **R Corp. 4th Pack Rabbit Heathcliff**: 'Raring to Graze' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+    "- **W Corp. L4 Cleanup Agent - CCA Heathcliff**: 'One day I'll wear me Armour for Cancelled Trains' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills."
   ],
   "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Overcharge**), then rebuild for the next window.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
       "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
-      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Raring to Graze' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
       "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
-      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "source": "rule"
     }
   ],

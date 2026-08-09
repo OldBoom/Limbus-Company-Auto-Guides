@@ -54,8 +54,10 @@ def _payoff_skill_name(skills: list[dict]) -> str:
 # Unique Tremor subtype blurbs (docs/status-effects.md) — kit-specific, not generic primers.
 _UNIQUE_TREMOR_BLURBS: dict[str, str] = {
     "Decay": (
-        "**Tremor — Decay** — Burst strips enemy **Defense Level** "
-        "(1 per 4 Tremor Potency on target)."
+        # Not a Burst effect: the Defense Level drain applies continuously while the
+        # target's Tremor is converted.
+        "**Tremor — Decay** — while converted, the target continuously loses "
+        "**Defense Level** (1 per 4 Tremor Potency); no Burst needed."
     ),
     "Fracture": (
         "**Tremor — Fracture** — at **20+** combined Tremor Potency and Count, "
@@ -1037,8 +1039,10 @@ def find_aggro_archetype(
         f"Front-load **+{max_aggro} Aggro** on the slot you want enemies to target."
     ]
     if tank_signals:
+        # Assist Defense is granted by specific passives, not a slot every unit can pick.
         tips.append(
-            "Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure."
+            "Pair high-Aggro turns with this kit's own defensive tools so its "
+            "under-pressure passives actually trigger."
         )
 
     return _build_archetype(

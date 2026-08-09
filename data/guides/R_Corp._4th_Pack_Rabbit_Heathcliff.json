@@ -65,7 +65,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -100,7 +100,7 @@
   "team_suggestions": [
     "Trait-dependent kit — [R Corp.] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
     "- **R Corp. 4th Pack Reindeer Ishmael**: Shares [R Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
     "- **LCE E.G.O::AEDD Gregor**: This identity's 'Raring to Graze' inflicts Charge — LCE E.G.O::AEDD Gregor scales off Charge."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [R Corp.] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
@@ -114,7 +114,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 5+ Charge thresholds on key skills.",
       "source": "rule"
     },
     {

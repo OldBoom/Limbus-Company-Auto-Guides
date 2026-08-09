@@ -80,7 +80,7 @@
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.97,
       "source": "rule",
       "faction_match": true

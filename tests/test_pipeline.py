@@ -338,7 +338,13 @@ def test_manager_don_quixote_playstyle_notes_trait_allies():
     assert gp.get("resonance_dependent")
 
     guide = generate_guide(identity, synergies=[], use_ollama=False)
-    assert "alternate skills activate" in guide["playstyle_guide"].lower()
+    playstyle = guide["playstyle_guide"].lower()
+    # The kit is flagged trait-conditional off the <> wiki placeholder, which here marks
+    # a Bloodfeast consumption-precedence rule and a support-passive bonus — neither
+    # unlocks an alternate skill. The guide must note the ally condition without
+    # inventing that mechanic.
+    assert "conditional on [la manchaland" in playstyle
+    assert "alternate skills activate" not in playstyle
 
 
 def test_unique_ammo_tip_in_thumb_guides():

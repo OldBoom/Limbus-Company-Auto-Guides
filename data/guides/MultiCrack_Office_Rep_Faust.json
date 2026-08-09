@@ -59,7 +59,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "R_Corp._4th_Pack_Rabbit_Heathcliff",
       "teammate_name": "R Corp. 4th Pack Rabbit Heathcliff",
-      "reason": "'Raring to Graze' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "reason": "'Raring to Graze' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -75,7 +75,7 @@
     {
       "teammate_slug": "W_Corp._L4_Cleanup_Agent_-_CCA_Heathcliff",
       "teammate_name": "W Corp. L4 Cleanup Agent - CCA Heathcliff",
-      "reason": "'One day I'll wear me Armour for Cancelled Trains' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "reason": "'One day I'll wear me Armour for Cancelled Trains' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -87,7 +87,7 @@
     "Trait-dependent kit — [MultiCrack Office] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
     "- **MultiCrack Office Fixer Heathcliff**: Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
     "- **The House of Spiders: The Ring Nursefather Hong Lu**: Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills."
+    "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [MultiCrack Office] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -106,7 +106,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
       "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
       "source": "rule"
     }
   ],

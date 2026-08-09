@@ -1058,9 +1058,11 @@ def find_defense_archetype(
             kind = "guard_buff"
             defense_name = block["name"]
             payoff = buff
+            # [Combat Start] fires automatically at the start of the encounter — the
+            # buff is not something you spend a defense turn to "prep".
             tips.append(
-                f"**{defense_name}** grants {amount} **{buff}** at Combat Start — "
-                f"use the defense slot to prep buffs before your main attacks."
+                f"**{defense_name}** grants {amount} **{buff}** automatically at Combat "
+                f"Start — you already have it on turn one; no defense turn required."
             )
             break
 
@@ -1981,7 +1983,9 @@ def find_support_archetype(
         if "least hp" in lower:
             target = "your lowest-HP ally"
         elif "reson" in lower:
-            target = "highest-Resonance allies in deployment order"
+            # "(highest Reson.) allies" is a COUNT — the number of allies affected
+            # equals the turn's highest Resonance, not a property of those allies.
+            target = "a number of allies equal to the turn's highest Resonance"
         elif any(
             faction in lower
             for faction in ("blade lineage", "kurokumo", "la manchaland", "liu assoc")

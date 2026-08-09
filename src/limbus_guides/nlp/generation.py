@@ -1053,9 +1053,13 @@ def _build_overview_tips(gp: dict) -> str:
         ally = ally_combo["ally"]
         trig = ally_combo["trigger_skill"]
         fired = ally_combo["fired_skill"]
+        # The fired skill does not land a hit of its own — it is cast onto the ally and
+        # powers up their S3. Trigger is that ally using S3, once per turn, not a
+        # guaranteed extra attack every rotation.
         tips.append(
-            f"Ally combo — before {ally} uses S{trig}, this identity automatically fires {fired}. "
-            f"Slot {ally} alongside for a free extra hit every rotation."
+            f"Ally combo — before {ally} uses S{trig}, this identity automatically casts "
+            f"{fired} on them (once per turn). It deals no damage itself; the payoff is "
+            f"the empowered S{trig}, so build the turn around {ally} committing it."
         )
 
     s3 = next((s for s in skills if s["skill_num"] == 3), None)
@@ -1158,8 +1162,12 @@ def _build_playstyle(name: str, gp: dict, normalizer: RollNormalizer | None = No
     if gp.get("alternate_skills") and gp.get("trait_conditional"):
         traits = [t for t in gp.get("traits_list", []) if t not in GENERIC_TRAITS]
         if traits:
+            # detect_trait_conditional only tests for the stripped <> wiki category
+            # placeholder, which marks *some* ally condition — not necessarily an
+            # alternate-skill unlock. Say what is actually known.
             sections.append(
-                f"*Alternate skills activate when [{', '.join(traits[:2])}] allies are on the team.*"
+                f"*This kit has passives conditional on [{', '.join(traits[:2])}] allies — "
+                f"check the passive text for the exact condition.*"
             )
 
     return "\n\n".join(sections)
@@ -1276,8 +1284,8 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         )
     elif trait_kit and kindred_traits:
         pieces.append(
-            f"La Manchaland support — pair with same-generation [{kindred_traits[0]}] allies "
-            f"to unlock alternate Hardblood skills and strengthen Bloodfeast passives."
+            f"La Manchaland Bloodfeast kit — [{kindred_traits[0]}] allies draw on the same "
+            f"shared **Bloodfeast** pool, and generation decides who consumes first."
         )
     elif (
         "bloodfeast" in gp.get("combat_passives_text", "").lower()

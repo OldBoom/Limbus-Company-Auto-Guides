@@ -48,7 +48,7 @@
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -56,7 +56,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -64,7 +64,7 @@
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -72,7 +72,7 @@
     {
       "teammate_slug": "The_Pequod_Captain_Ishmael",
       "teammate_name": "The Pequod Captain Ishmael",
-      "reason": "'Captain of the Pequod' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Captain of the Pequod' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -87,31 +87,31 @@
     }
   ],
   "core_idea": "Zwei Assoc. South Section 5 Rodion is a Tank / Support — **Poise** fighter — stack on self, then spend on crits and scaling. Survives by pulling hits with **Aggro** and absorbing them with **Shield** and **Protection**. Support passive (**Designated Protection**) buffs teammates.",
-  "playstyle_guide": "- **Designated Protection** — align allies' actions with the passive's trigger condition.\n- Build enough **Poise Count** for your scaling passives before **Subdue Threat** — **S2 — Focused Defense** adds **+2 Poise Count** at **On Use** and **+2 Poise Count** per **On Hit** coin; **S1 — Careful Obstruction** adds **+2 Poise Count** on **Clash Lose** and **+1 Poise Count** per **Heads Hit** coin.\n- Front-load **+5 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Hold S3 for when At 15+ Shield is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Careful Obstruction** (BP 4, CP +2, x2): rolls — low 4, high 8 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Focused Defense** (BP 6, CP +4, x2): rolls — low 6, high 14 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n\n**S3 — Subdue Threat** (BP 5, CP +2, x3): rolls — low 5, high 11 (Extremely Low / Slightly Low stacked).\n- Needs 15+ Shield to activate — prioritise building stacks before using.\n\nCombat passive — **Defensive Breathing**: At the start of the combat phase, gain 2 Shield per 1 Poise Count. (Max 20).",
+  "playstyle_guide": "- **Designated Protection** — align allies' actions with the passive's trigger condition.\n- Build enough **Poise Count** for your scaling passives before **Subdue Threat** — **S2 — Focused Defense** adds **+2 Poise Count** at **On Use** and **+2 Poise Count** per **On Hit** coin; **S1 — Careful Obstruction** adds **+2 Poise Count** on **Clash Lose** and **+1 Poise Count** per **Heads Hit** coin.\n- Front-load **+5 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with this kit's own defensive tools so its under-pressure passives actually trigger.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Hold S3 for when At 15+ Shield is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Careful Obstruction** (BP 4, CP +2, x2): rolls — low 4, high 8 (Extremely Low).\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Focused Defense** (BP 6, CP +4, x2): rolls — low 6, high 14 (Slightly Low).\n- draws enemy aggro — intended to absorb hits\n\n**S3 — Subdue Threat** (BP 5, CP +2, x3): rolls — low 5, high 11 (Extremely Low / Slightly Low stacked).\n- Needs 15+ Shield to activate — prioritise building stacks before using.\n\nCombat passive — **Defensive Breathing**: At the start of the combat phase, gain 2 Shield per 1 Poise Count. (Max 20).",
   "team_suggestions": [
     "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
-    "- **Blade Lineage Salsu Sinclair**: 'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
-    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target."
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+    "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit."
   ],
   "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
       "teammate_name": "Blade Lineage Mentor Meursault",
-      "reason": "'Swordplay of the Homeland' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
       "teammate_name": "Blade Lineage Salsu Sinclair",
-      "reason": "'Slayer' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
       "teammate_name": "Blade of the House of Spiders Ryōshū",
-      "reason": "'The Master's Tutelage [<b>師事</b>]' inflicts Poise via the support passive — scales off Poise count/potency on the target.",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "source": "rule"
     }
   ],
