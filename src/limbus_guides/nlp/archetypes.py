@@ -54,15 +54,29 @@ def _payoff_skill_name(skills: list[dict]) -> str:
 # What plain Tremor does. Tremor.wiki: "When attacked by skills that Burst Tremor, raise
 # the Stagger Threshold by the effect's Potency. At the end of the turn, reduce the Count
 # by 1." Stacks are inert until something Bursts them, which is the part players need.
+#
+# Two versions, because Burst is not universal: a kit with no Tremor Burst of its own has
+# to borrow one, and telling its player to "Burst inside the same window" describes a
+# button they do not have.
 _TREMOR_BASE_SUMMARY = (
     "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the "
     "target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, "
     "so build Potency and Burst inside the same window."
 )
+_TREMOR_BASE_SUMMARY_NO_BURST = (
+    "**Tremor** applicator — it stacks Tremor but has no **Tremor Burst** of its own, and "
+    "Tremor does nothing until something Bursts it. Pair it with a teammate that can, and "
+    "note Count drops by 1 each Turn End."
+)
 
 # One blurb per Tremor subtype, each taken from the Core Effects table on Tremor.wiki.
 # Every subtype also keeps base Tremor's behaviour (Burst raises the Stagger Threshold,
 # Count decays at Turn End); these lines describe only what the subtype adds.
+# Subtypes whose payoff only happens on a Tremor Burst. The rest (Decay, Chain,
+# Fracture, Distribution, Clockwinding, Superposition) apply continuously or on a
+# timer, so they still work in a kit that cannot Burst.
+_BURST_DEPENDENT_SUBTYPES = frozenset({"Reverb", "Scorch", "Hemorrhage", "Everlasting"})
+
 _UNIQUE_TREMOR_BLURBS: dict[str, str] = {
     "Decay": (
         # "Lose 1 Defense Level for every 4 Tremor Potency on self" — continuous, no Burst.
@@ -656,21 +670,30 @@ def find_tremor_archetype(
     elif re.search(r"Tremor Burst", blob, re.I) and not tips:
         tips.append("**Burst** when you're ready to break the stagger target.")
 
+    has_burst = bool(re.search(r"Tremor Burst", blob, re.I))
+
     if unique:
         # Lead with what the subtype actually does rather than "**Tremor — X** control.",
-        # which named the subtype without saying anything about it. Every subtype keeps
-        # base Tremor's Burst behaviour, so mention that once alongside it.
+        # which named the subtype without saying anything about it.
         label = format_unique_tremor_label(unique[0])
         blurb = describe_unique_tremor(unique[0])
         if blurb:
-            setup_summary = (
-                f"{blurb} Like all Tremor, a **Tremor Burst** also raises the target's "
-                f"**Stagger Threshold** by its Potency."
-            )
+            setup_summary = blurb
+            if has_burst:
+                # Only worth adding for a kit that can actually Burst.
+                setup_summary += (
+                    " Like all Tremor, its **Tremor Burst** also raises the target's "
+                    "**Stagger Threshold** by its Potency."
+                )
+            elif unique[0] in _BURST_DEPENDENT_SUBTYPES:
+                setup_summary += (
+                    " This kit has no **Tremor Burst** of its own, so a teammate has to "
+                    "supply one before that payoff happens."
+                )
         else:
             setup_summary = f"**{label}** control."
     else:
-        setup_summary = _TREMOR_BASE_SUMMARY
+        setup_summary = _TREMOR_BASE_SUMMARY if has_burst else _TREMOR_BASE_SUMMARY_NO_BURST
 
     arch = _build_archetype(
         kind="tremor_stacker",

@@ -70,7 +70,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -92,15 +92,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Molar Boatworks Fixer Ishmael is a Status Specialist — **Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Scaling conditions: Coin Power +1 per 5 Tremor (max +2); Coin Power +1 per 5 Tremor Count (max +2).",
+  "core_idea": "Molar Boatworks Fixer Ishmael is a Status Specialist — **Tremor** applicator — it stacks Tremor but has no **Tremor Burst** of its own, and Tremor does nothing until something Bursts it. Pair it with a teammate that can, and note Count drops by 1 each Turn End. Scaling conditions: Coin Power +1 per 5 Tremor (max +2); Coin Power +1 per 5 Tremor Count (max +2).",
   "playstyle_guide": "- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Reach scaling conditions before committing S3: Coin Power +1 per 5 Tremor (max +2).\n\n**S1 — Ready to Crush** (BP 4, CP +3, 2 coins): rolls — low 4, high 10 (Extremely Low).\n\n**S2 — Explosive Blast** (BP 5, CP +5, 2 coins): rolls — low 5, high 15 (Slightly Low / Slightly High stacked).\n- Needs 5+ Tremor Count to activate — prioritise building stacks before using.\n- Inflict +3 Tremor Count; [On Hit] Gain +2 Tremor Count\n\n**S3 — Risky Judgement** (BP 3, CP +5, 3 coins): rolls — low 3, high 18 (Slightly High / High stacked).\n- Scales Coin Power with Tremor stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Tremor** (+1 per 5, max +2) — build stacks first.\n- **Coin Power** scales with **Tremor Count** (+1 per 5, max +2) — build stacks first.\n\nCombat passive — **Crushin' Crabs**: On Hit against a target that has Tremor, inflict +1 Sinking Count.\n\nCombat passive — **Crab Driver**: When an ally that has the lowest Max HP hit with Heads Coins, they inflict +1 Sinking Count when inflicting Tremor Count on their target….",
   "team_suggestions": [
-    "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
+    "**Tremor** applicator — it stacks Tremor but has no **Tremor Burst** of its own, and Tremor does nothing until something Bursts it. Pair it with a teammate that can, and note Count drops by 1 each Turn End.",
     "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
-    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills."
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
+  "team_suggestion_intro": "**Tremor** applicator — it stacks Tremor but has no **Tremor Burst** of its own, and Tremor does nothing until something Bursts it. Pair it with a teammate that can, and note Count drops by 1 each Turn End.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Dawn_Office_Rep_Gregor",
@@ -117,7 +117,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
       "source": "rule"
     }
   ],
