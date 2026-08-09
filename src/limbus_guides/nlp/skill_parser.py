@@ -1295,7 +1295,7 @@ def find_nails_archetype(
     if has_passive_link:
         passive_tip = (
             "Combat passive adds **Tremor Count** whenever the target already has "
-            "**Nails** — each Nail-applying hit snowballs Tremor for Burst payoffs."
+            "**Nails** — a rider specific to this kit, not something Nails does itself."
         )
         if has_fanatic:
             passive_tip += " In **Fanatic** state she also inflicts extra Nails per hit."

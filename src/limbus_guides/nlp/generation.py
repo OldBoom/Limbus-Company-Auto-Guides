@@ -543,12 +543,25 @@ def _opening_nails(name: str, role_str: str, gp: dict) -> _CoreOpening | None:
         return None
     threshold = arch.get("threshold", 5)
     payoff = arch.get("payoff_skill") or "the payoff skill"
-    burst_note = " via Tremor Burst" if arch.get("has_tremor_burst") else ""
+    extras: list[str] = []
+    if arch.get("has_fanatic"):
+        extras.append(
+            "In **Fanatic** state it applies extra Nails, and Fanatic adds Final Power "
+            "against targets that already carry them."
+        )
+    # Only one N Corp. kit ties Tremor to Nails; it is that kit's rider, not a
+    # property of Nails, so it is mentioned only where the passive actually exists.
+    if arch.get("has_tremor_burst"):
+        extras.append(
+            "Its combat passive also adds **Tremor Count** when the target already "
+            "has Nails."
+        )
     return (
         f"{name} is a {role_str} — **Nails** (N Corp. Fanatic) setup fighter. "
-        f"Stack Nails toward **{threshold}+** with early skills, then cash out with "
-        f"**{payoff}**{burst_note} for burst damage and debuffs.",
-        [],
+        f"Nails is a **Bleed** mechanic: each Turn Start it applies Bleed and raises "
+        f"its Count. Stack toward **{threshold}+** with early skills, then cash out "
+        f"with **{payoff}**.",
+        extras,
     )
 
 
@@ -1314,10 +1327,20 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
                 f"Tremor subtype so Amplitude Conversion and Burst effects stack on one target."
             )
     elif gp.get("nails_archetype"):
-        threshold = gp["nails_archetype"].get("threshold", 5)
+        nails_arch = gp["nails_archetype"]
+        threshold = nails_arch.get("threshold", 5)
+        # Nails is Bleed (docs/status-effects.md): "Turn Start: apply 1 Bleed, increase
+        # Bleed Count by this effect's Count". Only N Corp. Mittelhammer Don Quixote
+        # links it to Tremor, so the Tremor clause is gated on that kit's passive.
+        tremor_note = (
+            " It also adds Tremor once the target carries Nails."
+            if nails_arch.get("has_tremor_burst")
+            else ""
+        )
         pieces.append(
-            f"**Nails/Tremor** setup — reach **{threshold}+ Nails** before the burst skill; "
-            f"this kit self-applies both but Tremor Burst payoffs reward patient stacking."
+            f"**Nails** setup — Nails is a **Bleed** mechanic, re-applying Bleed and "
+            f"growing its Count each Turn Start, so it slots into Bleed teams. Reach "
+            f"**{threshold}+ Nails** before the payoff skill.{tremor_note}"
         )
     elif gp.get("charge_archetype"):
         pieces.append(gp["charge_archetype"].get("setup_summary", (

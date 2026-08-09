@@ -77,7 +77,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "score": 1.0699999999999998,
       "source": "rule",
       "faction_match": false,
@@ -120,7 +120,7 @@
   "playstyle_guide": "- **Aim for the Gap** — align allies' actions with the passive's trigger condition.\n- **Tremor — Hemorrhage** — Burst deals **Lust** damage from Tremor and Bleed Potency; consumes **Bleed Count**.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 (Bleed + Tremor) (max +2).\n\n**S1 — Gap Attack** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Coin Power** scales with **(Bleed + Tremor)** (+1 per 6, max +2) — build stacks first.\n- Gain 1 Haste next turn (once per turn); [On Use] Coin Power +1 for every 6 (Bleed + Tremor) on target (max 2)\n\n*↳ Alternate S1 — Mercé* (BP 4, CP +6): rolls — low 4, high 10 (Extremely Low).\n  - Coin Power +1 for every 20% missing HP on the enemy(Core) (max 4)\n  - Deal +1% damage for every 1% missing HP on the enemy(Core)\n  - If the enemy(Core) has 20%- HP, deal +120% damage instead\n  - Gain 1 Haste next turn (once per turn)\n  - Inflict 1 Open Wound\n\n**S2 — Stiletto Doppio** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- **Coin Power** scales with **(Bleed + Tremor)** (+1 per 6, max +2) — build stacks first.\n- Coin Power +1 for every 6 (Bleed + Tremor) on target (max 2); [Clash Win] Inflict 1 Tremor and trigger Tremor Burst; then, reduce target's Tremor Count by 1\n- Inflict +1 Tremor Count; [On Hit] Inflict +1 Bleed Count\n- If the enemy(Core) has 20%- HP, use 'Mercé'\n\n**S3 — Execution** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low).\n- **Coin Power** scales with **(Bleed + Tremor)** (+1 per 6, max +2) — build stacks first.\n- triggers Amplitude Conversion, converting the target's Tremor to this kit's subtype\n\n*↳ Alternate S3 — The Night's Awl* (BP 4, CP +3): rolls — low 4, high 16 (Slightly Low / Extremely High stacked).\n  - Unbreakable Coin\n\nCombat passive — **Painless Mercy**: Unless Reused via external effects, Night Awls Capitano Gregor's Skill 'Mercé' can be used up to 2 times per turn.\n\nCombat passive — **Purge Enforcer of the Famiglie**: When this unit kills an enemy or breaks a Part, gain 2 Pierce Power Up next turn (once per turn).\n  - When using a Base Attack Skill, if this unit's Speed is faster than the target's, inflict Defense Power Down on the target for every 2 Sp….\n  - After ally Attack using Base Attack Skills, if the enemy(Core) has 20%- HP, use 'Mercé' on the target (once per turn).\n\nDefense skill — **Guard: Dire Straits**: Clashable Guard.\n  - [Combat Start] For this turn, increase the number of times 'Mercé' can be used when triggered by the effect of 'Purge Enforcer of the Famiglie' to….\n  - [Combat Start] Gain 1 Haste next turn (once per turn).\n  - [On Use] Coin Power +1 for every 6 (Bleed + Tremor) on target (max 2).",
   "team_suggestions": [
     "**Tremor — Hemorrhage** control. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+    "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
     "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
   ],
@@ -129,7 +129,7 @@
     {
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {
