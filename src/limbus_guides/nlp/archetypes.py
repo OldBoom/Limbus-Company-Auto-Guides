@@ -236,14 +236,47 @@ _RESON_BONUS_DMG_RE = re.compile(r"Reson\.\s*x\s*\d+", re.I)
 _COUNTER_CLAUSE_RE = re.compile(
     r"use\s+([\"'“][^;]{0,180}?)\s*(?:Skill\s*)?as\s+(?:a\s+)?Counter", re.I
 )
-_QUOTED_NAME_RE = re.compile(r"[\"'“]([^\"'“”]+)[\"'”]")
 
 
 def _counter_skill_names(blob: str) -> list[str]:
     m = _COUNTER_CLAUSE_RE.search(blob)
-    if not m:
-        return []
-    return [n.strip() for n in _QUOTED_NAME_RE.findall(m.group(1)) if n.strip()]
+    return _clean_counter_names(m.group(1)) if m else []
+
+
+# Threshold paired with the Counter it unlocks. Kits ladder these — Middle Little
+# Brother Sinclair fires "Payback with Interest" at 4+ and the stronger "Write 'em
+# all down" at 6+ — so reporting only the lowest rung hides the real payoff.
+_RESON_COUNTER_TIER_RE = re.compile(
+    rf"At\s+(\d+)\+\s+(?:(?:sum of|highest)\s+)*(?:(?:{_SIN_ALT})\s+)?(?:A-)?Reson\.[,:]?\s*"
+    rf"use\s+([\"'“][^;]{{0,180}}?)\s*(?:Skill\s*)?as\s+(?:a\s+)?Counter",
+    re.I,
+)
+_NAME_SPLIT_RE = re.compile(r"[\"'”]\s+or\s+[\"'“]", re.I)
+
+
+def _clean_counter_names(span: str) -> list[str]:
+    """Skill names out of a quoted span.
+
+    Splits on the `" or "` that joins alternatives, then trims the outer quotes.
+    Scanning for quoted substrings instead would truncate names containing an
+    apostrophe — "Write 'em all down" came back as just "Write ".
+    """
+    names = []
+    for part in _NAME_SPLIT_RE.split(span):
+        cleaned = part.strip().strip("\"'“”").strip()
+        if cleaned:
+            names.append(cleaned)
+    return names
+
+
+def _counter_tiers(blob: str) -> list[tuple[int, str]]:
+    """Ascending (threshold, counter skill name) pairs, de-duplicated by threshold."""
+    by_threshold: dict[int, str] = {}
+    for m in _RESON_COUNTER_TIER_RE.finditer(blob):
+        names = _clean_counter_names(m.group(2))
+        if names:
+            by_threshold.setdefault(int(m.group(1)), " or ".join(names[:2]))
+    return sorted(by_threshold.items())
 
 
 def find_resonance_archetype(
@@ -269,8 +302,9 @@ def find_resonance_archetype(
     for m in _RESON_GATE_RE.finditer(blob):
         (abs_gates if m.group(3) else plain_gates).append(int(m.group(1)))
 
+    tiers = _counter_tiers(blob)
     names = _counter_skill_names(blob)
-    counter_name = " or ".join(names[:2]) if names else None
+    counter_name = tiers[0][1] if tiers else (" or ".join(names[:2]) if names else None)
     scales_offense = bool(_RESON_OFFENSE_RE.search(blob))
     scales_power = bool(_RESON_POWER_RE.search(blob)) or bool(_RESON_BONUS_DMG_RE.search(blob))
 
@@ -293,7 +327,15 @@ def find_resonance_archetype(
     lead = f"**{sin} Resonance** kit — queue {sin}-affinity skills across the team"
     if abs_gates:
         threshold = min(abs_gates)
-        if counter_name:
+        if len(tiers) > 1:
+            low_n, low_name = tiers[0]
+            high_n, high_name = tiers[-1]
+            summary = (
+                f"{lead}; at **{low_n}+ {sin} Absolute Resonance** a Combat Start Counter "
+                f"(**{low_name}**) fires for free, upgrading to **{high_name}** at "
+                f"**{high_n}+**."
+            )
+        elif counter_name:
             summary = (
                 f"{lead}; at **{threshold}+ {sin} Absolute Resonance** a Combat Start "
                 f"Counter (**{counter_name}**) fires for free."
@@ -312,6 +354,14 @@ def find_resonance_archetype(
         summary = f"{lead}; skills check **{min(plain_gates)}+ {sin} Resonance**."
     else:
         summary = f"{lead} — coin power and bonus damage scale with {sin} Resonance."
+
+    # Kits pay out below the Absolute threshold too (Pequod Harpooneer gains Clash
+    # Power at 3+ and Coin Power at 4+ before the 6+ A-Reson. spike). Naming only the
+    # top rung reads as though nothing happens until then.
+    if abs_gates and plain_gates and min(plain_gates) < min(abs_gates):
+        summary += (
+            f" Plain **{sin} Resonance** already pays out from **{min(plain_gates)}+**."
+        )
 
     if scales_offense:
         summary += " Offense Level also scales with the highest Resonance that turn."
