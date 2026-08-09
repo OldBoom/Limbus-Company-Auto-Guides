@@ -89,15 +89,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Edgar Family Butler Ishmael is a Damage Dealer / Status Specialist — **Poise** fighter — stack on self, then spend on crits and scaling.",
+  "core_idea": "Edgar Family Butler Ishmael is a Damage Dealer / Status Specialist — **Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
   "playstyle_guide": "- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Restraining Technique** — **S1 — Sweeping Redirection** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin; **S2 — Housekeeping** adds **+2 Poise Count** at **On Use** and **+2 Poise** on **Clash Win**.\n- **Restraining Technique** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n\n**S1 — Sweeping Redirection** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain +2 Poise Count\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain +2 Poise Count\n\n**S2 — Housekeeping** (BP 4, CP +5, 2 coins): rolls — low 4, high 14 (Slightly Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain +2 Poise Count ; [Clash Win] Gain 2 Poise\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain +2 Poise Count; [Clash Win] Gain 2 Poise\n\n**S3 — Restraining Technique** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low).\n- If this unit's Speed is faster than the target's, Coin Power +1 ; [On Use] Gain 6 Poise\n- If this unit's Speed is faster than the target's, Coin Power +1; [On Use] Gain 6 Poise\n\nCombat passive — **Deep Cleaning**: If this unit Critically Hits against targets with Slower Speed than this unit's, inflict 1 additional Potency for negative effects using….\n\nCombat passive — **Loyal Supporter**: When 1 ally with the fastest Speed attacks a target that has Sinking, deal +1% damage for every 1 Sinking on target (max 20%).",
   "team_suggestions": [
-    "**Sinking** stacker — Base Power scales with Sinking on the target. Same-faction teammates provide additional passive synergy where available.",
+    "**Sinking** stacker — Base Power scales with Sinking on the target. Sinking drains SP when the afflicted unit is hit. Same-faction teammates provide additional passive synergy where available.",
     "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit."
   ],
-  "team_suggestion_intro": "**Sinking** stacker — Base Power scales with Sinking on the target. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Sinking** stacker — Base Power scales with Sinking on the target. Sinking drains SP when the afflicted unit is hit. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Wild_Hunt_Heathcliff",

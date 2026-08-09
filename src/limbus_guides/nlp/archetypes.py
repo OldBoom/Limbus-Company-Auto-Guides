@@ -201,6 +201,25 @@ def _scaling_stat(blob: str, status: str) -> str | None:
     return f"{stats.pop()} Power" if len(stats) == 1 else None
 
 
+# When each status actually pays out, from its own wiki page. This is the part players
+# need in one clause — Bleed fires when the afflicted unit attacks, Rupture when it is
+# hit, Burn on a timer — and it is what decides whether stacking it before or after your
+# damage turn is correct.
+_STATUS_TICK: dict[str, str] = {
+    "Bleed": "Bleed ticks when the afflicted unit tosses an attack Coin",
+    "Rupture": "Rupture ticks when the afflicted unit is hit",
+    "Sinking": "Sinking drains SP when the afflicted unit is hit",
+    "Burn": "Burn ticks at the end of every turn regardless of what either side does",
+    "Poise": "Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage",
+    "Charge": "Charge Count is spent to power skills and decays by 1 each Turn End",
+}
+
+
+def _status_tick_note(status: str) -> str:
+    note = _STATUS_TICK.get(status)
+    return f" {note}." if note else ""
+
+
 def derive_status_summary(status: str, blob: str, gates: list[int]) -> str | None:
     """Kit-derived opening line for a status archetype.
 
@@ -224,19 +243,22 @@ def derive_status_summary(status: str, blob: str, gates: list[int]) -> str | Non
     if partner:
         return (
             f"**{status}** and **{partner}** stacking — {subject} {verb} off the "
-            f"combined count on the target."
+            f"combined count on the target.{_status_tick_note(status)}"
         )
     if scales and gates:
         return (
             f"**{status}** stacker — payoff coins check **{min(gates)}+ {status}**, "
-            f"so build the count before committing them."
+            f"so build the count before committing them.{_status_tick_note(status)}"
         )
     if scales:
-        return f"**{status}** stacker — {subject} {verb} with {status} on the target."
+        return (
+            f"**{status}** stacker — {subject} {verb} with {status} on the target."
+            f"{_status_tick_note(status)}"
+        )
     if gates:
         return (
             f"**{status}** gate — key coins need **{min(gates)}+ {status}** on the "
-            f"target to reach full power."
+            f"target to reach full power.{_status_tick_note(status)}"
         )
     return None
 
@@ -542,11 +564,17 @@ def find_burn_archetype(
     """Burn — Turn End Potency damage; stack Potency + Count on target."""
     blob = _kit_blob(skills, combat_text, raw_markdown)
     if _COMBINED_BURN_TREMOR.search(blob):
-        setup = "**Burn** and **Tremor** stacking — clash power scales off combined stacks on target."
+        setup = (
+            "**Burn** and **Tremor** stacking — clash power scales off combined stacks "
+            "on target." + _status_tick_note("Burn")
+        )
     elif re.search(r"every \d+[^;]*Burn|Burn[^;]*\(max", blob, re.I):
-        setup = "**Burn** stacker — damage and clash scale with Burn on target."
+        setup = (
+            "**Burn** stacker — damage and clash scale with Burn on target."
+            + _status_tick_note("Burn")
+        )
     else:
-        setup = "**Burn** applicator."
+        setup = "**Burn** applicator." + _status_tick_note("Burn")
 
     return _sin_archetype(
         "Burn",
@@ -1057,7 +1085,10 @@ def find_poise_archetype(
     return _build_archetype(
         kind="poise_stacker",
         status="Poise",
-        setup_summary="**Poise** fighter — stack on self, then spend on crits and scaling.",
+        setup_summary=(
+            "**Poise** fighter — stack on self, then spend on crits and scaling."
+            + _status_tick_note("Poise")
+        ),
         tips=tips,
         payoff_skill=payoff,
     )

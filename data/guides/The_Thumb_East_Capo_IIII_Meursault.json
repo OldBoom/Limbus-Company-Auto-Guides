@@ -74,7 +74,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
       "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
-      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "reason": "'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
       "score": 1.0699999999999998,
       "source": "rule",
       "faction_match": false,
@@ -105,7 +105,7 @@
     "**Tremor — Scorch** — on Tremor Burst the target takes **Wrath** damage equal to **(Burn Potency + Tremor Potency) / 2**, so it needs a Burn stacker alongside it. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Same-faction teammates provide additional passive synergy where available.",
     "- **The Thumb East Soldato II Sinclair**: Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
     "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target."
+    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills."
   ],
   "team_suggestion_intro": "**Tremor — Scorch** — on Tremor Burst the target takes **Wrath** damage equal to **(Burn Potency + Tremor Potency) / 2**, so it needs a Burn stacker alongside it. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -124,7 +124,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
       "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
-      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "reason": "'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 3+ Tremor thresholds on key skills.",
       "source": "rule"
     }
   ],

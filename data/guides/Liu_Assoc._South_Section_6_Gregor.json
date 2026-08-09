@@ -77,15 +77,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Liu Assoc. South Section 6 Gregor is a Status Specialist — **Burn** applicator.",
+  "core_idea": "Liu Assoc. South Section 6 Gregor is a Status Specialist — **Burn** applicator. Burn ticks at the end of every turn regardless of what either side does.",
   "playstyle_guide": "- Skills check **6+ Burn** — favour those coins when stacked.\n\n**S1 — Single-point Stab** (BP 4, CP +2, 2 coins): rolls — low 4, high 8 (Extremely Low).\n- If target has 6+ Burn, Coin Power +1\n\n**S2 — Rush Down** (BP 5, CP +2, 3 coins): rolls — low 5, high 11 (Extremely Low).\n- If target has 6+ Burn, Coin Power +1\n\n**S3 — Perfected Palm Strike** (BP 4, CP +2, 4 coins): rolls — low 4, high 12 (Extremely Low).\n- Holds back until 6+ Burn — deals +10% more at that threshold.\n\nCombat passive — **Ignition**: The 3rd and subsequent Coins of a skill inflict 1 Burn on hit.\n\nCombat passive — **Rushing Heart**: 1 ally with the slowest Speed deals +30% damage with their 4th and subsequent Coins.",
   "team_suggestions": [
-    "**Burn** applicator. Same-faction teammates provide additional passive synergy where available.",
+    "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available.",
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
     "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
     "- **Dawn Office Fixer Sinclair**: 'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Burn** applicator. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",

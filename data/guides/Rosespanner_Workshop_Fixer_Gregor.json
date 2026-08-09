@@ -87,7 +87,7 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Rosespanner Workshop Fixer Gregor is a Status Specialist — **Rupture** gate — key coins need **5+ Rupture** on the target to reach full power.",
+  "core_idea": "Rosespanner Workshop Fixer Gregor is a Status Specialist — **Rupture** gate — key coins need **5+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
   "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Skills check **5+ Rupture** — favour those coins when stacked.\n\n**S1 — Rev Up** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- Gain +2 Charge Count\n\n**S2 — Grease Chains** (BP 4, CP +12, 1 coin): rolls — low 4, high 16 (Average).\n- Gain +3 Charge Count\n- Inflict +2 Tremor Count; [On Hit] Inflict +1 Rupture Count\n\n**S3 — Let's Grind 'Em** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low / Slightly Low stacked).\n- If target has 5+ Tremor Count, Coin Power +1\n- Inflict 1 Rupture; [On Hit] If target is Staggered, deal +10% damage\n\nCombat passive — **Sawblade Fired Up**: Inflict +1 Rupture to targets that have Tremor.\n\nCombat passive — **Sawblade Maintenance**: 1 ally with the slowest Speed inflicts +1 Rupture to targets that have Tremor.",
   "team_suggestions": [
     "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",

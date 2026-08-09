@@ -55,13 +55,13 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Lobotomy E.G.O::Lantern Don Quixote is a Tank / Status Specialist — **Rupture** gate — key coins need **6+ Rupture** on the target to reach full power. Survives by pulling hits with **Aggro** and absorbing them with **Shield**, backed by self-healing. **HP regenerator** — tops up ally **HP** through passives and skills.",
+  "core_idea": "Lobotomy E.G.O::Lantern Don Quixote is a Tank / Status Specialist — **Rupture** gate — key coins need **6+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit. Survives by pulling hits with **Aggro** and absorbing them with **Shield**, backed by self-healing. **HP regenerator** — tops up ally **HP** through passives and skills.",
   "playstyle_guide": "- Skills check **6+ Rupture** — favour those coins when stacked.\n- Front-load **+5 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with this kit's own defensive tools so its under-pressure passives actually trigger.\n- **HP sustain** triggers at **each turn** — restores **teammates**.\n\n**S1 — I Shall Nibble Thee!** (BP 5, CP +7, 1 coin): rolls — low 5, high 12 (High).\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Flashing Lure** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low).\n- Wait for 6+ Rupture before this damage condition activates.\n- draws enemy aggro — intended to absorb hits\n- Inflict 2 Rupture; [On Hit] If target has 2 or less Rupture Count, inflict +2 Rupture Count\n\n**S3 — Whirlwind Om-Nom-Nom!** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low).\n- Wait for 6+ Rupture before this damage condition activates.\n- draws enemy aggro — intended to absorb hits\n- Heal 10 HP.; [On Hit] Heal additional HP based on Rupture on target (1 HP healed per 1 Rupture. Max 20); At 50%- HP, reuse Coin once\n\nCombat passive — **Om Nom Nom**: If this unit's Skill Slot has Aggro, Clash Power +1.\n  - Heal 6 HP every time this unit hits enemies that targeted this unit with an Attack Skill in the Chaining Phase (For Abnormalities, each P….\n\nCombat passive — **Illumilantern**: The ally with the highest Aggro Skill Slot heals 4 HP every time they hit an enemy that targets this unit (Does not apply to units withou….\n\nDefense skill — **Counter: Chattering Teeth**: [On Use] If target has 6+ Rupture, Final Power +3.\n  - [Skill End] Heal HP equal to remaining Shield HP (Once per turn. Max Heal amount: 10% of Max HP).",
   "team_suggestions": [
-    "**Rupture** gate — key coins need **6+ Rupture** on the target to reach full power.",
+    "**Rupture** gate — key coins need **6+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
     "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 6+ Rupture thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Rupture** gate — key coins need **6+ Rupture** on the target to reach full power.",
+  "team_suggestion_intro": "**Rupture** gate — key coins need **6+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",

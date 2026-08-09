@@ -48,13 +48,13 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Lobotomy E.G.O::Red Sheet Sinclair is a Status Specialist — **Rupture** gate — key coins need **3+ Rupture** on the target to reach full power.",
+  "core_idea": "Lobotomy E.G.O::Red Sheet Sinclair is a Status Specialist — **Rupture** gate — key coins need **3+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
   "playstyle_guide": "- Skills check **3+ Rupture** — favour those coins when stacked.\n\n**S1 — Magnify Wound** (BP 5, CP +5, 1 coin): rolls — low 5, high 10 (Extremely Low).\n- Peak output requires both conditions: Inflict 2 Rupture | [Heads Hit] If target has 5+ Rupture, gain 1 Talisman.\n\n**S2 — Proliferating Talismans** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low).\n- Peak output requires both conditions: Gain 1 Talisman | [On Hit] If target has 3+ Rupture, gain 1 Talisman.\n\n**S3 — Rupturing Talisman** (BP 5, CP +6, 2 coins): rolls — low 5, high 17 (Average).\n- If target has Talisman, inflict +1 Rupture Count\n\nCombat passive — **Wishing Talisman**: 1 ally with the highest current HP inflicts +1 more Rupture Potency with Attack and Counter Skills.",
   "team_suggestions": [
-    "**Rupture** gate — key coins need **3+ Rupture** on the target to reach full power.",
+    "**Rupture** gate — key coins need **3+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
     "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 5+ Rupture thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Rupture** gate — key coins need **3+ Rupture** on the target to reach full power.",
+  "team_suggestion_intro": "**Rupture** gate — key coins need **3+ Rupture** on the target to reach full power. Rupture ticks when the afflicted unit is hit.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",

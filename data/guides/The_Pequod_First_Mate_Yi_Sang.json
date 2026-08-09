@@ -85,15 +85,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "The Pequod First Mate Yi Sang is a Damage Dealer / Status Specialist — **Poise** fighter — stack on self, then spend on crits and scaling.",
+  "core_idea": "The Pequod First Mate Yi Sang is a Damage Dealer / Status Specialist — **Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
   "playstyle_guide": "- Skills check **5+ Bleed** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Ambush** — **S1 — Impale** adds **+2 Poise Count** at **On Use**; **S2 — Relentless Stabbing** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **Heads Hit** coin.\n- **Ambush** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- Hold S3 for when At 7+ Poise is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Impale** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- Inflict 1 Bind next turn; [On Hit] Inflict 2 Bleed\n\n**S2 — Relentless Stabbing** (BP 4, CP +4, 2 coins): rolls — low 4, high 12 (Extremely Low).\n- Peak output requires both conditions: Gain +2 Poise Count | At 5+ Poise, Clash Power +3.\n\n**S3 — Ambush** (BP 4, CP +6, 2 coins): rolls — low 4, high 16 (Slightly Low).\n- Wait for 7+ Poise before this damage condition activates.\n- Inflict 4 Bleed; [On Crit] Inflict +4 Bleed Count\n\nCombat passive — **The First Mate's Harpoon**: On Crit, this unit inflicts +2 more Bleed Potency using its Skills (6 times per turn).\n\nCombat passive — **The First Mate's Acumen**: On Crit, 1 ally that has the highest Poise inflicts +2 more Bleed Potency using its Skills (6 times per turn).",
   "team_suggestions": [
-    "**Poise** fighter — stack on self, then spend on crits and scaling.",
+    "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling.",
+  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",

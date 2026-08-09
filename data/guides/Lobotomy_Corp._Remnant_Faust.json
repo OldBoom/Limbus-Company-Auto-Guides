@@ -85,15 +85,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Lobotomy Corp. Remnant Faust is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling.",
+  "core_idea": "Lobotomy Corp. Remnant Faust is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
   "playstyle_guide": "- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Opportunistic Slash** — **S1 — Sole Strike** adds **+2 Poise Count** at **On Use**; **S2 — Deep Cuts** adds **+1 Poise** per **On Hit** coin.\n- **Haste** before **Evade** when you need higher Speed on the setup turn.\n\n**S1 — Sole Strike** (BP 3, CP +8, 1 coin): rolls — low 3, high 11 (Slightly Low).\n\n**S2 — Deep Cuts** (BP 5, CP +3, 3 coins): rolls — low 5, high 14 (Slightly Low).\n\n**S3 — Opportunistic Slash** (BP 4, CP +8, 2 coins): rolls — low 4, high 20 (High).\n- If this unit took no damage last turn, Coin Power +3\n\nCombat passive — **Resolution**: At the next Turn Start, at 4+ Poise Count, gain 2 Haste.\n\nCombat passive — **Backing**: 1 ally that has the lowest max HP gains Final Power +2 for its Defense Skills.",
   "team_suggestions": [
-    "**Poise** fighter — stack on self, then spend on crits and scaling.",
+    "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — helps reach 4+ Poise thresholds on key skills.",
     "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 4+ Poise thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling.",
+  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
