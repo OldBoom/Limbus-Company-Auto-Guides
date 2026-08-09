@@ -66,18 +66,18 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
     },
     {
-      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
-      "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-      "score": 0.9,
+      "teammate_slug": "LCD_OSIR_Team_Ishmael",
+      "teammate_name": "LCD OSIR Team Ishmael",
+      "reason": "This identity's 'Hēiyúndào' inflicts Bleed — LCD OSIR Team Ishmael scales off Bleed.",
+      "score": 0.85,
       "source": "rule",
       "faction_match": false
     }

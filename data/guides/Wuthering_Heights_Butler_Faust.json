@@ -44,6 +44,14 @@
   },
   "synergies": [
     {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
@@ -64,11 +72,18 @@
   "playstyle_guide": "- **SP sustain** fires at **On Hit** — restores **lowest-SP allies**.\n\n**S1 — Confiscation** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- Wait for 6+ Sinking before this damage condition activates.\n\n**S2 — Interloper Reception** (BP 4, CP +5, 2 coins): rolls — low 4, high 14 (Slightly Low).\n- Wait for 3+ Sinking before this damage condition activates.\n\n**S3 — Reception Arts 4: Heartseal** (BP 4, CP +2, 4 coins): rolls — low 4, high 12 (Extremely Low).\n- Wait for 5+ Sinking before this damage condition activates.\n- Inflict 2 Echoes of the Manor next turn; [On Hit] If target has Echoes of the Manor, inflict +3 Sinking Count\n\nCombat passive — **Butler Style Response**: Clash Win: Inflict 1 Sinking on target (3 times per turn).\n  - If the target has Echoes of the Manor, inflict 3 Sinking instead.\n\nCombat passive — **Anticipatory Training**: When 1 ally that has the lowest SP hits an enemy that has 5+ Sinking, the ally heals 3 SP On Hit (4 times per turn).",
   "team_suggestions": [
     "**Sinking** gate — key coins need **3+ Sinking** on the target to reach full power. Sinking drains SP when the afflicted unit is hit.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
     "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
     "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills."
   ],
   "team_suggestion_intro": "**Sinking** gate — key coins need **3+ Sinking** on the target to reach full power. Sinking drains SP when the afflicted unit is hit.",
   "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "source": "rule"
+    },
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",

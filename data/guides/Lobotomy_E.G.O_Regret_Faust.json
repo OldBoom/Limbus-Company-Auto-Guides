@@ -67,6 +67,14 @@
       "faction_match": true
     },
     {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
@@ -89,14 +97,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
-      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
-      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Lobotomy E.G.O::Regret Faust is a Damage Dealer — **Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Scaling conditions: +6% per negative effect type (max +30%).",
@@ -104,8 +104,8 @@
   "team_suggestions": [
     "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Same-faction teammates provide additional passive synergy where available.",
     "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
   ],
   "team_suggestion_intro": "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -116,15 +116,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
-      "teammate_name": "LCCB Assistant Manager Ishmael",
-      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     }
   ],

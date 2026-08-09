@@ -92,17 +92,17 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "The_Pequod_Captain_Ishmael",
-      "teammate_name": "The Pequod Captain Ishmael",
-      "reason": "'Captain of the Pequod' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
     },
     {
-      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
-      "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "teammate_slug": "The_Pequod_Captain_Ishmael",
+      "teammate_name": "The Pequod Captain Ishmael",
+      "reason": "'Captain of the Pequod' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false

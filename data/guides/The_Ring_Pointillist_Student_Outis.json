@@ -88,14 +88,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "The Ring Pointillist Student Outis is a Status Specialist — **Bleed** gate — key coins need **6+ Bleed** on the target to reach full power. Bleed ticks when the afflicted unit tosses an attack Coin. **SP regenerator** — restores ally **SP** through passives and key skills.",

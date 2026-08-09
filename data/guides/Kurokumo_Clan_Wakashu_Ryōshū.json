@@ -53,14 +53,6 @@
       "faction_match": true
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
       "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
@@ -82,8 +74,8 @@
   "team_suggestions": [
     "**Bleed** gate — key coins need **2+ Bleed** on the target to reach full power. Bleed ticks when the afflicted unit tosses an attack Coin. Same-faction teammates provide additional passive synergy where available.",
     "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills."
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills."
   ],
   "team_suggestion_intro": "**Bleed** gate — key coins need **2+ Bleed** on the target to reach full power. Bleed ticks when the afflicted unit tosses an attack Coin. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -94,15 +86,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
-      "source": "rule"
-    },
-    {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
       "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 2+ Bleed thresholds on key skills.",
       "source": "rule"
     }
   ],

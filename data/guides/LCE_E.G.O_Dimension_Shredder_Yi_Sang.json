@@ -63,77 +63,75 @@
   },
   "synergies": [
     {
-      "teammate_slug": "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
-      "teammate_name": "LCA Udjat Vanguard Team 3 Leader Outis",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
       "trait_match": true
     },
     {
-      "teammate_slug": "LCB_Sinner_Don_Quixote",
-      "teammate_name": "LCB Sinner Don Quixote",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
       "trait_match": true
     },
     {
-      "teammate_slug": "LCB_Sinner_Faust",
-      "teammate_name": "LCB Sinner Faust",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "Lobotomy_E.G.O_Lamp_Gregor",
+      "teammate_name": "Lobotomy E.G.O::Lamp Gregor",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
       "trait_match": true
     },
     {
-      "teammate_slug": "LCB_Sinner_Gregor",
-      "teammate_name": "LCB Sinner Gregor",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
+      "score": 0.9,
       "source": "rule",
-      "faction_match": true,
-      "trait_match": true
+      "faction_match": false
     },
     {
-      "teammate_slug": "LCB_Sinner_Heathcliff",
-      "teammate_name": "LCB Sinner Heathcliff",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
+      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
+      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
+      "reason": "'Magical Power Charging Support' grants Charge via the support passive — helps reach 3+ Charge thresholds on key skills.",
+      "score": 0.9,
       "source": "rule",
-      "faction_match": true,
-      "trait_match": true
+      "faction_match": false
     }
   ],
   "core_idea": "LCE E.G.O::Dimension Shredder Yi Sang is a Damage Dealer — **Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Rip Space**), then rebuild for the next window. Scaling conditions: Final Power +1 per 6 (Rupture + Dimensional Rift) (max +3); At 3+ Charge Potency, Coin Power +1.",
   "playstyle_guide": "- Ramp **Charge Count** toward **20** before committing **Rip Space** — **S1 — Dimensional Slice** adds **+6 Charge Count** per **On Hit** coin; **S2 — Consecutive Dimensional Slice** adds **+6 Charge Count** per **On Hit** coin.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Reach scaling conditions before committing S3: Final Power +1 per 6 (Rupture + Dimensional Rift) (max +3).\n- Hold S3 for when At 15+ Charge Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Dimensional Slice** (BP 6, CP +7, 1 coin): rolls — low 6, high 13 (Extremely High).\n- Final Power +1 for every 6 (Charge Count on self + Rupture and Dimensional Rift on target) (max 3); [On Use] Consume 2 Charge Count to gain Coin Power +1\n- Gain +6 Charge Count (once per Skill); [On Hit] Inflict 2 Rupture; [On Hit] Consume 1 Dimensional Castaway to Reuse this Coin (once per Skill)\n\n**S2 — Consecutive Dimensional Slice** (BP 4, CP +6, 2 coins): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Final Power +1 per 6 (Rupture + Dimensional Rift) (max +3)\n- Needs 3+ Charge Potency to activate — prioritise building stacks before using.\n- Gain +6 Charge Count; [On Hit] Inflict 1 Rupture\n- Inflict 2 Rupture; [On Hit] Inflict 1 Dimensional Rift; [On Hit] Deal Slash damage equal to (Charge Potency on self x 4)% of this Coin's final damage (max 20%)\n\n**S3 — Rip Space** (BP 5, CP +4, 3 coins): rolls — low 5, high 17 (Average).\n- **Coin Power** scales with **Charge** (+1 per 7, max +2) — build stacks first.\n- Final Power +1 per 6 (Rupture + Dimensional Rift) (max +4)\n- Gain +1 Charge Count; [On Hit] Inflict 1 Rupture\n- Inflict 1 Rupture; [On Hit] Inflict 2 Dimensional Rift; [On Hit] Deal Slash damage equal to (Charge Potency on self x 4)% of this Coin's final damage (max 20%)\n\n*↳ Alternate S3 — Four-dimensional Refraction Time Series Severance* (BP 5, CP +3): rolls — low 5, high 17 (Average).\n  - Gain 1 Quadricolor Dimensions\n\nCombat passive — **Open Alley**: Gain 1 Charge Potency every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - When another ally's Skill hits an enemy: At Attack End, consume 1 Dimensional Castaway to activate \"Dimensional Slice\" against the said t….\n  - then, gain 1 Quadricolor Dimensions.\n\nCombat passive — **VelocityAndCoordinatesAndVelocity**: If this unit's Speed is faster than the target's, deal +(Speed difference x Charge Potency on self)% damage (max 20%).\n  - Turn End: Gain (Charge Potency on self / 2) Haste next turn (max 2.\n  - rounded down).\n\nDefense skill — **Counter: Sidestep**: [Combat Start] Gain Charge Barrier equal to Charge Potency on self (once per turn.\n  - [Combat Start] Gain 1 Dimensional Castaway and 1 Quadricolor Dimensions (once per turn).\n  - At 3+ Charge Potency, gain 1 additional Stack of the above effects.\n  - [Combat Start] At fewer than 7 Charge Count, consume (7 - Charge Count on self)% HP to gain up to 7 Charge Count (this unit's HP cannot drop to 0 d….",
   "team_suggestions": [
     "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Rip Space**), then rebuild for the next window. Same-faction teammates provide additional passive synergy where available.",
-    "- **LCA Udjat Vanguard Team 3 Leader Outis**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **LCB Sinner Don Quixote**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **LCB Sinner Faust**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
+    "- **LCE E.G.O::AEDD Gregor**: Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **LCE E.G.O::Ardor Blossom Star Faust**: Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Lobotomy E.G.O::Lamp Gregor**: Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "**Charge** cycle — build Count toward **20**, spend on highest-damage skills (often **Rip Space**), then rebuild for the next window. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
-      "teammate_slug": "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
-      "teammate_name": "LCA Udjat Vanguard Team 3 Leader Outis",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
+      "teammate_name": "LCE E.G.O::AEDD Gregor",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCB_Sinner_Don_Quixote",
-      "teammate_name": "LCB Sinner Don Quixote",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCB_Sinner_Faust",
-      "teammate_name": "LCB Sinner Faust",
-      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "teammate_slug": "Lobotomy_E.G.O_Lamp_Gregor",
+      "teammate_name": "Lobotomy E.G.O::Lamp Gregor",
+      "reason": "Shares [LCE] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

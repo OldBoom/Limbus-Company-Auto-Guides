@@ -55,7 +55,14 @@ def _similar_pairs(slug: str, roster: dict[str, dict], k: int) -> list[tuple[str
         return []
 
 SUPPORT_PASSIVE_RE = re.compile(
-    r"(inflict|apply|gain|grant).{0,60}"
+    # Word boundaries matter: without them "gain" matches inside "aGAINst", so
+    # "On Clash Win against enemies with Burn" was read as the passive granting Burn.
+    # That alone put 10 unrelated identities into each other's team suggestions.
+    # Group 1 stays the verb and group 2 the status, as callers expect.
+    # "give" is how the wiki words ally-granting clauses ("Give 1 Poise Potency and
+    # +1 Poise Count to 2 other allies"), so it belongs with the other verbs.
+    r"(\b(?:inflict|gain|grant)(?:s|ing)?\b|\bappl(?:y|ies|ying)\b|\bgiv(?:e|es|ing)\b)"
+    r".{0,60}?"
     r"(Bleed|Burn|Tremor|Rupture|Sinking|Poise|Charge"
     r"|Dark Flame|Nails|Bloodfeast|Deathrite)",
     re.IGNORECASE,
@@ -98,7 +105,19 @@ _FACTION_PREFIXES: list[tuple[str, str]] = [
 _FACTION_BONUS = 0.07  # Soft bump — meaningful but won't override a better cross-faction fit
 
 # Too common to drive meaningful trait-based synergy matching
-GENERIC_TRAITS = frozenset({"Fixer", "Syndicate", "The Backstreets", "The Fingers"})
+# Category labels rather than synergy groups. Sharing one says nothing about whether
+# two identities help each other, and each was generating teammate picks:
+# E.G.O Gear appears on 19 identities, Limbus Company on 22, LCB on 12.
+GENERIC_TRAITS = frozenset({
+    "Fixer",
+    "Syndicate",
+    "The Backstreets",
+    "The Fingers",
+    "E.G.O Gear",
+    "Limbus Company",
+    "LCB",
+    "Lobotomy Corp. Headquarters",
+})
 
 LORD_HONGYUAN_SLUG = "The_Lord_of_Hongyuan_Hong_Lu"
 WILD_HUNT_HEATHCLIFF_SLUG = "Wild_Hunt_Heathcliff"
@@ -201,15 +220,65 @@ def _support_passive_name(support_text: str) -> str:
     return m.group(1).strip() if m else "Support passive"
 
 
+# A status named inside a trigger is not one the passive applies. Two shapes occur:
+#   "On Clash Win against enemies with Burn ..."      -> Burn is what it looks for
+#   "If the said allies have Skills that inflict Burn, heal 5~10 SP" -> effect is the heal
+# Reporting either as "inflicts Burn via the support passive" is simply false, and it is
+# what put unrelated identities in each other's team suggestions.
+_TRIGGER_LEAD_RE = re.compile(
+    r"(?:against|targets?\s+(?:that|with)|enem(?:y|ies)\s+(?:that|with)|"
+    r"all(?:y|ies)\s+(?:that|who|with)|that\s+(?:have|has|inflicts?)|with)\s*$",
+    re.I,
+)
+_CONDITION_PREFIX_RE = re.compile(r"^\s*(?:When|If|Whenever|Upon)\b[^,]{0,120},", re.I)
+
+
+def _match_is_trigger(clause: str, match: re.Match[str]) -> bool:
+    """True when the status sits in the passive's condition rather than its effect."""
+    before = clause[: match.start()]
+    if _TRIGGER_LEAD_RE.search(before[-40:]):
+        return True
+    cond = _CONDITION_PREFIX_RE.match(clause)
+    # Inside a leading "When ...," / "If ...," segment, the status is the trigger; the
+    # effect is whatever follows the comma.
+    return bool(cond and match.start() < cond.end())
+
+
+def _split_clauses(text: str) -> list[tuple[int, str]]:
+    """(offset, clause) pairs split on the wiki's ';' separator."""
+    out: list[tuple[int, str]] = []
+    pos = 0
+    for part in text.split(";"):
+        out.append((pos, part))
+        pos += len(part) + 1
+    return out
+
+
 def _support_effects(support_text: str) -> set[str]:
-    """Status effects inflicted by the support passive."""
+    """Status effects the support passive actually applies (triggers excluded)."""
     from limbus_guides.nlp.skill_parser import select_primary_support_passive
 
     support_text = select_primary_support_passive(support_text)
     effects: set[str] = set()
-    for m in SUPPORT_PASSIVE_RE.finditer(support_text):
-        effects.add(m.group(2).title())
+    for _, clause in _split_clauses(support_text):
+        for m in SUPPORT_PASSIVE_RE.finditer(clause):
+            if _match_is_trigger(clause, m):
+                continue
+            effects.add(m.group(2).title())
     return effects
+
+
+def _support_triggers(support_text: str) -> set[str]:
+    """Statuses the support passive keys off but does not apply itself."""
+    from limbus_guides.nlp.skill_parser import select_primary_support_passive
+
+    support_text = select_primary_support_passive(support_text)
+    triggers: set[str] = set()
+    for _, clause in _split_clauses(support_text):
+        for m in SUPPORT_PASSIVE_RE.finditer(clause):
+            if _match_is_trigger(clause, m):
+                triggers.add(m.group(2).title())
+    return triggers - _support_effects(support_text)
 
 
 def _scales_off(text: str) -> set[str]:
@@ -293,6 +362,7 @@ def find_synergy_teammates(
             seen.add(LORD_HONGYUAN_SLUG)
 
     # --- Rule-based: support passive of teammate inflicts what this identity scales off ---
+    trigger_matches: list[tuple[str, dict, str, str]] = []
     for other_slug, other in roster.items():
         if other_slug == slug:
             continue
@@ -302,6 +372,16 @@ def find_synergy_teammates(
         support_text = _get_support_passive_section(other)
         support_fx = _support_effects(support_text)
         overlap = my_scales & support_fx
+
+        # A passive that only *keys off* the status still pairs well, but for the
+        # opposite reason — this identity feeds it. Kept separate so the wording is
+        # truthful and so it never outranks a passive that actually applies it.
+        if not overlap:
+            trig = my_scales & _support_triggers(support_text)
+            if trig:
+                trigger_matches.append(
+                    (other_slug, other, next(iter(trig)), _support_passive_name(support_text))
+                )
 
         if overlap:
             effect = next(iter(overlap))
@@ -462,6 +542,28 @@ def find_synergy_teammates(
             if shared:
                 entry["score"] = max(entry["score"], _UNIQUE_TREMOR_RULE_SCORE) + _UNIQUE_TREMOR_MATCH_BONUS
                 entry["unique_tremor_match"] = True
+
+    # --- Rule-based: teammate's support passive keys off a status this identity applies ---
+    # Scored below every "applies the status" rule: the payoff is real but indirect, and
+    # the wording has to say which direction the help runs.
+    for other_slug, other, effect, passive_name in trigger_matches:
+        if other_slug in seen:
+            continue
+        suggestions.append(
+            {
+                "teammate_slug": other_slug,
+                "teammate_name": other.get("name", other_slug),
+                "reason": (
+                    f"'{passive_name}' does not apply {effect} itself — it rewards allies "
+                    f"who do, so this kit's {effect} turns it on."
+                ),
+                "score": 0.80,
+                "source": "rule",
+                "faction_match": _faction_match(identity, other),
+                "trigger_match": True,
+            }
+        )
+        seen.add(other_slug)
 
     # Embedding entries rank below every rule, so they only reach the guide text as a
     # fallback when fewer than three rules fire — cosine similarity is close to noise on

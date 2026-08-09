@@ -69,7 +69,7 @@
     {
       "teammate_slug": "Dawn_Office_Rep_Gregor",
       "teammate_name": "Dawn Office Rep Gregor",
-      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "score": 1.0699999999999998,
       "source": "rule",
       "faction_match": false,
@@ -78,7 +78,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
       "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
-      "reason": "'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "score": 1.0699999999999998,
       "source": "rule",
       "faction_match": false,
@@ -108,8 +108,8 @@
   "team_suggestions": [
     "**Tremor — Scorch** — on Tremor Burst the target takes **Wrath** damage equal to **(Burn Potency + Tremor Potency) / 2**, so it needs a Burn stacker alongside it. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
     "- **The Thumb East Capo IIII Meursault**: Shares the same unique Tremor type (Tremor — Scorch) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
-    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target."
   ],
   "team_suggestion_intro": "**Tremor — Scorch** — on Tremor Burst the target takes **Wrath** damage equal to **(Burn Potency + Tremor Potency) / 2**, so it needs a Burn stacker alongside it. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
@@ -122,13 +122,13 @@
     {
       "teammate_slug": "Dawn_Office_Rep_Gregor",
       "teammate_name": "Dawn Office Rep Gregor",
-      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "source": "rule"
     },
     {
       "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
       "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
-      "reason": "'In One-on-one Duels…' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "source": "rule"
     }
   ],

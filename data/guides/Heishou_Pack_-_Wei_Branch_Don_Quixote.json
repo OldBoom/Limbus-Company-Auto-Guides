@@ -85,6 +85,14 @@
       "faction_match": false
     },
     {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
@@ -107,7 +115,7 @@
     "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
     "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
     "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — helps reach 2+ Rupture thresholds on key skills.",
-    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
   ],
   "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -124,9 +132,9 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
-      "teammate_name": "The Ring Fauvist Docent Rodion",
-      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "source": "rule"
     }
   ],

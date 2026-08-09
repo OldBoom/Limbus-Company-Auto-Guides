@@ -58,6 +58,14 @@
       "unique_tremor_match": true
     },
     {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
@@ -80,14 +88,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Öufi Assoc. South Section 3 Heathcliff is a Status Specialist — **Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Scaling conditions: Coin Power +1 per 3 Tremor (max +2); Coin Power +1 per 6 Tremor (max +2).",
@@ -95,8 +95,8 @@
   "team_suggestions": [
     "**Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
     "- **Jeong's Office Rep Ishmael**: Shares the same unique Tremor type (Tremor — Decay) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
-    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
   ],
   "team_suggestion_intro": "**Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
   "team_suggestion_picks": [
@@ -107,15 +107,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
-      "teammate_name": "LCCB Assistant Manager Ishmael",
-      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     }
   ],

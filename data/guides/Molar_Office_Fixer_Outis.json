@@ -52,6 +52,14 @@
   },
   "synergies": [
     {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
@@ -82,26 +90,24 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
-      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
-      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Molar Office Fixer Outis is a Damage Dealer / Status Specialist — **Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
   "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Plan which skills to Discard before the payoff turn.\n\n**S1 — Wait Up!** (BP 4, CP +7, 1 coin): rolls — low 4, high 11 (Slightly Low).\n- Peak output requires both conditions: If this Skill is Discarded, gain +4 Tremor Count | [On Use] Gain +2 Tremor Count.\n\n**S2 — Slice** (BP 3, CP +5, 3 coins): rolls — low 3, high 18 (Extremely High).\n- If this Skill is Discarded, gain 1 Offense Level Up ; [On Use] Discard the Skill of lowest rank in all of this unit's Skill Slots\n- If this Skill is Discarded, gain 1 Offense Level Up; [On Use] Discard the Skill of lowest rank in all of this unit's Skill Slots\n- At 6+ Tremor Count, trigger Tremor Burst. Reduce target's Tremor Count by 1\n\n**S3 — Daring Decision** (BP 4, CP +3, 4 coins): rolls — low 4, high 16 (Slightly Low).\n- Discard this unit's Skills in descending order of ranks from all its Skill Slots; Spend 10 Tremor Count to gain Coin Power +2\n- Inflict 4 Tremor; [On Hit] If the Skill spent Tremor Count, inflict +3 Tremor Count\n- Trigger Tremor Burst; after Tremor Burst, reduce target's Tremor Count by 1\n\nCombat passive — **Drinking Boast**: Upon triggering Tremor Burst on an enemy, inflict 30% of Raised Stagger Threshold as Sloth damage (Max 20.\n  - rounded down).\n\nCombat passive — **Carrot & Stick**: 1 ally that has the most Tremor Count gains +1 more Tremor Count from Skill effects.",
   "team_suggestions": [
     "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
-    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
-    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills."
+    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills."
   ],
   "team_suggestion_intro": "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
   "team_suggestion_picks": [
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
+      "source": "rule"
+    },
     {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
@@ -112,12 +118,6 @@
       "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
       "teammate_name": "LCCB Assistant Manager Ishmael",
       "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
-      "source": "rule"
-    },
-    {
-      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
-      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 6+ Tremor thresholds on key skills.",
       "source": "rule"
     }
   ],

@@ -99,9 +99,9 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "teammate_slug": "The_Pequod_Captain_Ishmael",
+      "teammate_name": "The Pequod Captain Ishmael",
+      "reason": "'Captain of the Pequod' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false

@@ -64,6 +64,14 @@
       "unique_tremor_match": true
     },
     {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
@@ -86,14 +94,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
-      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
-      "reason": "'It flows and cries' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "T Corp. Class 3 Collection Staff Don Quixote is a Tank — **Tremor — Chain** — the afflicted unit loses **1 Clash Power per 10 Tremor Potency** (max **3**), so it is a clash-denial tool rather than a damage one. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Scaling conditions: Clash Power +1 per 6 Tremor (max +2). Survives on self-healing, pulling hits with **Aggro**.",
@@ -101,8 +101,8 @@
   "team_suggestions": [
     "**Tremor — Chain** — the afflicted unit loses **1 Clash Power per 10 Tremor Potency** (max **3**), so it is a clash-denial tool rather than a damage one. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
     "- **T Corp. Class 3 VDCU Staff Outis**: Shares the same unique Tremor type (Tremor — Chain) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
-    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
-    "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills."
   ],
   "team_suggestion_intro": "**Tremor — Chain** — the afflicted unit loses **1 Clash Power per 10 Tremor Potency** (max **3**), so it is a clash-denial tool rather than a damage one. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
   "team_suggestion_picks": [
@@ -113,15 +113,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
-      "teammate_name": "LCCB Assistant Manager Ishmael",
-      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — helps reach 10+ Tremor thresholds on key skills.",
       "source": "rule"
     }
   ],

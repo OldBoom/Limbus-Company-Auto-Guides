@@ -47,22 +47,6 @@
   },
   "synergies": [
     {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
-      "teammate_slug": "Dawn_Office_Rep_Gregor",
-      "teammate_name": "Dawn Office Rep Gregor",
-      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
       "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
       "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
       "reason": "'Residual Heat' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
@@ -91,28 +75,28 @@
   "playstyle_guide": "- Skills check **5+ Burn** — favour those coins when stacked.\n\n**S1 — Coerced Judgement** (BP 8, CP -2, 2 coins): rolls — low 8, high 12 (High).\n- costs 7 SP on use — budget it against the Heads rate you need later\n\n**S2 — Amoral Enactment** (BP 16, CP -4, 4 coins): rolls — low 16, high 32 (Extremely High).\n- costs 10 SP on use — budget it against the Heads rate you need later\n- Inflict +1 Burn Count; [On Hit] Inflict 2 Bleed\n\n**S3 — Self-destructive Purge** (BP 30, CP -12, 3 coins): rolls — low 30, high 66 (Extremely High).\n- costs 15 SP on use — budget it against the Heads rate you need later\n- Raise Stagger Threshold by 50% of damage dealt\n- Peak output requires both conditions: If target has 5+ Bleed, inflict 5 Burn | [On Kill] Gain 1 Blunt Power Up next turn.\n\nCombat passive — **Mad Flame**: Heal 50% less SP from winning a clash or defeating an enemy.\n  - If 5 or more surviving units, including this unit, are , they deal +10% damage.\n\nCombat passive — **Cornering**: 1 ally with the least SP deals +10% Blunt damage.\n  - If said ally is below 0 SP, further boost their Blunt damage the lower their SP is. (Max 10%).\n\nDefense skill — **Counter: Enough…**: [Combat Start] Heal 5~10 SP.",
   "team_suggestions": [
     "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does.",
-    "- **Cinq Assoc. East Section 3 Don Quixote**: 'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — scales off Burn count/potency on the target."
+    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+    "- **The House of Spiders: The Thumb Apprentice Heathcliff**: 'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target."
   ],
   "team_suggestion_intro": "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does.",
   "team_suggestion_picks": [
     {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "source": "rule"
-    },
-    {
-      "teammate_slug": "Dawn_Office_Rep_Gregor",
-      "teammate_name": "Dawn Office Rep Gregor",
-      "reason": "'Stigma Workshop Prosthesis' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
-      "source": "rule"
-    },
-    {
       "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
       "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
       "reason": "'Residual Heat' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
+      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
+      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
+      "teammate_name": "The House of Spiders: The Thumb Apprentice Heathcliff",
+      "reason": "'In One-on-one Duels…' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "source": "rule"
     }
   ],

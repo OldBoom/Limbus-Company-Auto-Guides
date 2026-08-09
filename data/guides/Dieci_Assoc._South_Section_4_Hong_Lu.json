@@ -53,6 +53,14 @@
   },
   "synergies": [
     {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
@@ -73,11 +81,18 @@
   "playstyle_guide": "- **Peering Through a Key** — align allies' actions with the passive's trigger condition.\n- Discard to build **Insight**, then fire the powered skill set.\n- **SP sustain** fires at **Attack End** — restores **lowest-SP allies**.\n- Build Insight Count — spend via S3 once you hit 2+.\n- Hold S3 for when At 2+ Insight is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Expend Knowledge** (BP 5, CP +5, 1 coin): rolls — low 5, high 10 (Extremely Low).\n- Discard 1 Skill of the highest rank in all of this unit's Skill Slots; [On Use] Clash Power +(Insight - 1)\n- Peak output requires both conditions: Inflict +1 Sinking Count | [On Hit] At 3+ Insight, reuse Coin once.\n\n**S2 — Unveil** (BP 4, CP +4, 3 coins): rolls — low 4, high 16 (Average).\n- Randomly Discard 2 of this unit's Skills in ascending order of ranks from all of its Skill Slots; [On Use] Coin Power +(Insight - 1)\n\n**S3 — Cyclical Knowledge** (BP 5, CP +3, 3 coins): rolls — low 5, high 14 (Slightly Low).\n- Peak output requires both conditions: At 2+ Insight, gain Coin Power equal to Insight | Deal +3% damage per Sinking on target (Max 30%).\n- Inflict +3 Sinking Count; [Attack End] If the target is Staggered or defeated, heal 10 SP\n\nCombat passive — **Enlightenment**: Attack End: If the target is in a staggered or defeated state by an attack from 1 ally with the least SP, the ally heals 7 SP.",
   "team_suggestions": [
     "**Sinking** stacker — damage and clash power scale with Sinking on the target. Sinking drains SP when the afflicted unit is hit. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
     "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
     "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
   ],
   "team_suggestion_intro": "**Sinking** stacker — damage and clash power scale with Sinking on the target. Sinking drains SP when the afflicted unit is hit. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    },
     {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",

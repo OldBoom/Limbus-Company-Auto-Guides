@@ -60,14 +60,6 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
       "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
@@ -90,7 +82,7 @@
     "**Bleed** gate — key coins need **10+ Bleed** on the target to reach full power. Bleed ticks when the afflicted unit tosses an attack Coin.",
     "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
-    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: 'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target."
   ],
   "team_suggestion_intro": "**Bleed** gate — key coins need **10+ Bleed** on the target to reach full power. Bleed ticks when the afflicted unit tosses an attack Coin.",
   "team_suggestion_picks": [
@@ -107,9 +99,9 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — scales off Bleed count/potency on the target.",
       "source": "rule"
     }
   ],

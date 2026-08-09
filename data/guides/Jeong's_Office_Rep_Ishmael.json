@@ -73,6 +73,14 @@
       "unique_tremor_match": true
     },
     {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
       "teammate_name": "District 20 Yurodivy Ryōshū",
       "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
@@ -83,7 +91,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -95,14 +103,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "T_Corp._Class_2_Collection_Staff_Rodion",
-      "teammate_name": "T Corp. Class 2 Collection Staff Rodion",
-      "reason": "'T Corp. Martial Arts' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Jeong's Office Rep Ishmael is a Damage Dealer — **Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency. Scaling conditions: Coin Power +1 per 6 (Tremor + Sinking) (max +2). **SP regenerator** — restores ally **SP** through passives and key skills.",
@@ -110,8 +110,8 @@
   "team_suggestions": [
     "**Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
     "- **Öufi Assoc. South Section 3 Heathcliff**: Shares the same unique Tremor type (Tremor — Decay) — stack Tremor on one target for Amplitude Conversion and Burst setups.",
-    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
-    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+    "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
   ],
   "team_suggestion_intro": "**Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor Potency** it carries, continuously and without needing a Burst. Like all Tremor, a **Tremor Burst** also raises the target's **Stagger Threshold** by its Potency.",
   "team_suggestion_picks": [
@@ -122,15 +122,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "District_20_Yurodivy_Ryōshū",
-      "teammate_name": "District 20 Yurodivy Ryōshū",
-      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     },
     {
-      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
-      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "teammate_slug": "District_20_Yurodivy_Ryōshū",
+      "teammate_name": "District 20 Yurodivy Ryōshū",
+      "reason": "'N.O.' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
       "source": "rule"
     }
   ],

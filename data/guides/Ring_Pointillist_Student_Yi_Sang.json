@@ -76,17 +76,17 @@
       "faction_match": true
     },
     {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "'Featherstride Technique' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
+      "teammate_name": "Dawn Office Fixer Sinclair",
+      "reason": "'Flaring Brand' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
     },
     {
-      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
-      "teammate_name": "Dawn Office Fixer Sinclair",
-      "reason": "'Flaring Brand' inflicts Burn via the support passive — scales off Burn count/potency on the target.",
+      "teammate_slug": "Heishou_Pack_-_Mao_Branch_Adept_Faust",
+      "teammate_name": "Heishou Pack - Mao Branch Adept Faust",
+      "reason": "'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false

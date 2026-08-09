@@ -53,14 +53,6 @@
       "faction_match": false
     },
     {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
-    },
-    {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
@@ -74,7 +66,6 @@
   "team_suggestions": [
     "**Bleed** stacker — payoff coins check **2+ Bleed**, so build the count before committing them. Bleed ticks when the afflicted unit tosses an attack Coin.",
     "- **N Corp. E.G.O::Contempt, Awe Ryōshū**: 'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
-    "- **Shi Assoc. East Section 3 Faust**: 'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
     "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills."
   ],
   "team_suggestion_intro": "**Bleed** stacker — payoff coins check **2+ Bleed**, so build the count before committing them. Bleed ticks when the afflicted unit tosses an attack Coin.",
@@ -83,12 +74,6 @@
       "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
       "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
       "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
-      "source": "rule"
-    },
-    {
-      "teammate_slug": "Shi_Assoc._East_Section_3_Faust",
-      "teammate_name": "Shi Assoc. East Section 3 Faust",
-      "reason": "'Aiming for the Bullseye' inflicts Bleed via the support passive — helps reach 7+ Bleed thresholds on key skills.",
       "source": "rule"
     },
     {

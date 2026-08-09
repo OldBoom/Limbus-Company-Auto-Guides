@@ -63,77 +63,56 @@
   },
   "synergies": [
     {
-      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
-      "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
-      "source": "rule",
-      "faction_match": true,
-      "trait_match": true
-    },
-    {
-      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
-      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
-      "source": "rule",
-      "faction_match": true,
-      "trait_match": true
-    },
-    {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.97,
       "source": "rule",
-      "faction_match": true,
-      "trait_match": true
+      "faction_match": true
     },
     {
-      "teammate_slug": "Lobotomy_E.G.O_Hornet【Alteration】Meursault",
-      "teammate_name": "Lobotomy E.G.O::Hornet【Alteration】 Meursault",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
       "source": "rule",
-      "faction_match": true,
-      "trait_match": true
+      "faction_match": false
     },
     {
-      "teammate_slug": "Lobotomy_E.G.O_In_the_Name_of_Love_and_Hate_Don_Quixote",
-      "teammate_name": "Lobotomy E.G.O::In the Name of Love and Hate Don Quixote",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "score": 0.93,
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "score": 0.9,
       "source": "rule",
-      "faction_match": true,
-      "trait_match": true
+      "faction_match": false
     }
   ],
   "core_idea": "Lobotomy E.G.O::Solemn Lament Yi Sang is a Damage Dealer / Status Specialist / Support — **Sinking** stacker — Coin Power scales with Sinking on the target. Sinking drains SP when the afflicted unit is hit.",
   "playstyle_guide": "- Skills grant **Haste** — chain them when you need higher Speed next turn.\n- Plan which skills to Discard before the payoff turn.\n- Build The Living & The Departed Count — spend via S1, S2 once you hit 10+.\n\n**S1 — Celebration for the Departed** (BP 4, CP +4, 2 coins): rolls — low 4, high 12 (High).\n- Peak output requires both conditions: At 10+ The Living & The Departed, Clash Power +1 | If the sum of the target's Sinking and both Butterfly is 6 or higher, Coin Power +1.\n\n**S2 — Solemn Lament for the Living** (BP 4, CP +6, 2 coins): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Peak output requires both conditions: At 10+ The Living & The Departed, Clash Power +1 | Coin Power +1 for every 6 value of the sum of the target's Sinking and both Butterfly (max 2).\n\n**S3 — Goodbye Now, a Sorrow in You** (BP 4, CP +3, 4 coins): rolls — low 4, high 16 (Slightly Low).\n- Scales Base Power with value stacks — apply liberally before committing (cap +4).\n- Spend all of The Living & The Departed on self; [On Hit] Inflict Butterfly equal to The Living & The Departed spent; [On Hit] Deal +2% damage for every value of The Living & The Departed spent by this Skill\n\nCombat passive — **ISeeTheDyingButterfly.**: Begin encounters with 10 of each of The Living & The Departed.\n  - When spending The Living & The Departed, select randomly between The Living(Potency) and The Departed(Count) for each The Living & The De….\n  - When inflicting Butterfly, inflict the same amount of The Living and The Departed as they were consumed. Example below:.\n\nCombat passive — **Hand of Salvation**: When an ally hits with a Skill, consume 2 Sinking on the target to inflict them with 1 Butterfly (3 times per turn).\n\nDefense skill — **Counter: FromTheCoffinAButterflyTakesFlight**: [Combat Start] Reload (Solemn Lament) (once per turn).\n  - [Combat Start] Gain Shield equal to (the sum of both Butterfly on the selected target)% HP (max 20% per turn).",
   "team_suggestions": [
-    "Trait-dependent kit — [Lobotomy Corp. Headquarters] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
-    "- **LCE E.G.O::AEDD Gregor**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **LCE E.G.O::Ardor Blossom Star Faust**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
+    "**Sinking** stacker — Coin Power scales with Sinking on the target. Sinking drains SP when the afflicted unit is hit. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+    "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+    "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target."
   ],
-  "team_suggestion_intro": "Trait-dependent kit — [Lobotomy Corp. Headquarters] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Sinking** stacker — Coin Power scales with Sinking on the target. Sinking drains SP when the afflicted unit is hit. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
-    {
-      "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
-      "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "source": "rule"
-    },
-    {
-      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
-      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-      "source": "rule"
-    },
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
+      "teammate_name": "The Ring Fauvist Docent Rodion",
+      "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Wild_Hunt_Heathcliff",
+      "teammate_name": "Wild Hunt Heathcliff",
+      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — scales off Sinking count/potency on the target.",
       "source": "rule"
     }
   ],

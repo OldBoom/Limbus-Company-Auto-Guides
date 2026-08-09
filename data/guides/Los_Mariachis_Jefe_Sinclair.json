@@ -55,6 +55,14 @@
       "faction_match": false
     },
     {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 4+ Sinking thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "The_Pequod_Captain_Ishmael",
       "teammate_name": "The Pequod Captain Ishmael",
       "reason": "'Captain of the Pequod' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
@@ -69,14 +77,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "Wild_Hunt_Heathcliff",
-      "teammate_name": "Wild Hunt Heathcliff",
-      "reason": "'Endless Lamentation' inflicts Sinking via the support passive — helps reach 4+ Sinking thresholds on key skills.",
-      "score": 0.9,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Los Mariachis Jefe Sinclair is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
@@ -85,7 +85,7 @@
     "Trait-dependent kit — [Los Mariachis] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
-    "- **The Pequod Captain Ishmael**: 'Captain of the Pequod' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills."
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — helps reach 4+ Sinking thresholds on key skills."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Los Mariachis] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins.",
   "team_suggestion_picks": [
@@ -102,9 +102,9 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "The_Pequod_Captain_Ishmael",
-      "teammate_name": "The Pequod Captain Ishmael",
-      "reason": "'Captain of the Pequod' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 4+ Sinking thresholds on key skills.",
       "source": "rule"
     }
   ],

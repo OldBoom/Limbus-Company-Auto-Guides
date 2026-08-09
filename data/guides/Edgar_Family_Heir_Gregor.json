@@ -65,6 +65,14 @@
       "faction_match": true
     },
     {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "The_Ring_Fauvist_Docent_Rodion",
       "teammate_name": "The Ring Fauvist Docent Rodion",
       "reason": "'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
@@ -78,6 +86,7 @@
   "team_suggestions": [
     "**Sinking** stacker — payoff coins check **5+ Sinking**, so build the count before committing them. Sinking drains SP when the afflicted unit is hit. Same-faction teammates provide additional passive synergy where available.",
     "- **Wild Hunt Heathcliff**: 'Endless Lamentation' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
     "- **The Ring Fauvist Docent Rodion**: 'Nice and Slow, Don't Let It Break…' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills."
   ],
   "team_suggestion_intro": "**Sinking** stacker — payoff coins check **5+ Sinking**, so build the count before committing them. Sinking drains SP when the afflicted unit is hit. Same-faction teammates provide additional passive synergy where available.",
@@ -86,6 +95,12 @@
       "teammate_slug": "Wild_Hunt_Heathcliff",
       "teammate_name": "Wild Hunt Heathcliff",
       "reason": "'Endless Lamentation' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
+      "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
+      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
       "source": "rule"
     },
     {
