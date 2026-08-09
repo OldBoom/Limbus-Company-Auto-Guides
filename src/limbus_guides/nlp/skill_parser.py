@@ -1126,7 +1126,6 @@ def find_negative_coin_archetype(
         {int(m.group(1)) for m in _SP_THRESHOLD_BONUS.finditer(full_passive_text)}
     )
 
-    blessing_label = "Blessing" if "Blessing" in combat_text else "positive SP"
     despair_label = "Despair" if "Despair" in combat_text else "negative SP"
     minus_names = [s["name"] for s in minus_skills]
     tips: list[str] = []
@@ -1135,10 +1134,10 @@ def find_negative_coin_archetype(
     if len(minus_names) > 2:
         alt_preview += ", …"
 
+    # The 0+ SP half is the default state and not worth stating; the alternates are.
     tips.append(
-        f"**Minus Coin kit** — at 0+ SP you run **{blessing_label}** Plus Coin skills; "
-        f"below 0 SP you swap to **{despair_label}** Minus Coin alternates "
-        f"({alt_preview}) with much higher Base Power."
+        f"**Minus Coin kit** — below 0 SP you swap to **{despair_label}** Minus Coin "
+        f"alternates ({alt_preview}) with much higher Base Power."
     )
 
     if defense_drains_sp and blocks:
@@ -1174,7 +1173,6 @@ def find_negative_coin_archetype(
 
     return {
         "kind": "negative_coin",
-        "blessing_label": blessing_label,
         "despair_label": despair_label,
         "minus_skills": minus_names,
         "sp_thresholds": sp_thresholds,
@@ -1905,8 +1903,8 @@ def find_support_archetype(
         kind = "deploy_order"
         if "ammo" in lower:
             setup_summary = (
-                f"Support passives resupply the earliest-deployed **Ammo** ally — "
-                f"set deployment so your Ammo user spends first and can be refilled."
+                "Support passives resupply the earliest-deployed **Ammo** ally — "
+                "set deployment so your Ammo user spends first and can be refilled."
             )
             tips.append(
                 f"**{passive_name}** targets the first **Ammo** ally in deployment order — "
@@ -2010,16 +2008,48 @@ def find_support_archetype(
     }
 
 
-def _compute_heads_dependent(skills: list[dict]) -> bool:
-    heads_gated = 0
-    total = 0
+_HEADS_TAG_RE = re.compile(r"\[Heads[^\]]*\]", re.I)
+# "If target has 5+ Nails, inflict ..." — the condition hides the verb that follows.
+_HEADS_CONDITION_PREFIX_RE = re.compile(r"^(?:If|At)\b[^,]{0,60},\s*", re.I)
+# Applying or gaining a status is a rider on the flip, not a gate on this unit's damage.
+_HEADS_STATUS_RIDER_RE = re.compile(r"^(?:Inflict|Gain|Apply|Trigger|Consume)\b", re.I)
+# Payoffs that actually change this unit's output. Deliberately narrow: matching a bare
+# "power" also catches "inflict 1 Attack Power Down", which is a debuff on the enemy.
+_HEADS_PAYOFF_RE = re.compile(
+    r"deals?\s*\+?\d+%?\s*(?:more\s+)?damage"
+    r"|\+\d+\s*(?:Coin|Base|Clash|Final)?\s*Power\b"
+    r"|(?:Coin|Base|Clash|Final)\s+Power\s*\+"
+    r"|Critical|Unbreakable",
+    re.I,
+)
+
+
+def heads_gated_skills(skills: list[dict]) -> list[int]:
+    """Skill numbers whose Heads flips gate damage or power, not a status rider."""
+    gated: set[int] = set()
     for skill in skills:
         for coin in skill.get("coin_effects", []):
             eff = coin.get("effect", "")
-            total += 1
-            if "[Heads Hit]" in eff or "[Heads:" in eff:
-                heads_gated += 1
-    return total > 0 and (heads_gated / total) > 0.5
+            for clause in eff.split(";"):
+                if not _HEADS_TAG_RE.search(clause):
+                    continue
+                body = _HEADS_TAG_RE.sub("", clause).strip(" ;-")
+                body = _HEADS_CONDITION_PREFIX_RE.sub("", body)
+                if _HEADS_STATUS_RIDER_RE.match(body):
+                    continue
+                if _HEADS_PAYOFF_RE.search(body) and skill.get("skill_num"):
+                    gated.add(int(skill["skill_num"]))
+    return sorted(gated)
+
+
+def _compute_heads_dependent(skills: list[dict]) -> bool:
+    """True when Heads flips gate the kit's damage, not merely status application.
+
+    The previous rule counted every [Heads Hit] coin, so LCB Sinner Meursault — whose
+    Heads effects are four "Inflict 1 Tremor" riders out of seven coins — was labelled
+    a high-variance Heads kit even though his damage lands on Tails just the same.
+    """
+    return bool(heads_gated_skills(skills))
 
 
 def build_gameplan(identity: dict) -> dict:
@@ -2114,6 +2144,7 @@ def build_gameplan(identity: dict) -> dict:
         "defense_skill_notes": defense_skill_notes,
         "support_passive_text": support_text,
         "heads_dependent": _compute_heads_dependent(skills),
+        "heads_gated_skills": heads_gated_skills(skills),
         "primary_mechanics": profile.get("primary_mechanics", []),
         "ally_combo": ally_combo,
         "unique_tremor_types": unique_tremor_types,

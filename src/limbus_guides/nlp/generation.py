@@ -783,10 +783,10 @@ def _build_core_idea(name: str, gp: dict) -> str:
     if survivability := _tank_survivability_sentence(gp, role_str, " ".join(parts)):
         parts.append(survivability)
 
-    if gp.get("heads_dependent"):
+    if gated := gp.get("heads_gated_skills"):
+        slots = ", ".join(f"S{n}" for n in gated)
         parts.append(
-            "Key damage is Heads-flip dependent — high-variance kit; "
-            "pair with SP-rich allies or Gambit-style passives to maximise Heads output."
+            f"High-variance kit — {slots} only reach full damage on Heads flips."
         )
 
     if "Support" in role_str and gp.get("support_archetype"):
@@ -921,7 +921,6 @@ def _build_overview_tips(gp: dict) -> str:
     poise = gp["poise_passive"]
     neg_scale = gp["neg_effect_scaling"]
     dmg = gp["damage_conditions"]
-    heads = gp.get("heads_dependent", False)
     support_text = gp.get("support_passive_text", "")
     skills = gp["skills"]
 
@@ -1032,9 +1031,13 @@ def _build_overview_tips(gp: dict) -> str:
             f"(+{poise['coin_power_per']} CP per {poise['poise_per']} Poise Count, max +{poise['max']})."
         )
 
-    # Heads-dependent kit
-    if heads:
-        tips.append("High-variance kit — key damage requires Heads flips. Bring SP-positive allies to maintain Gambit/blessing states.")
+    # Heads-gated damage — name the slots rather than restating how Sanity works.
+    if gated_slots := gp.get("heads_gated_skills"):
+        slots = ", ".join(f"S{n}" for n in gated_slots)
+        tips.append(
+            f"{slots} lose most of their output on Tails — commit them on turns you "
+            f"already expect to win the clash, and lead with the other slots otherwise."
+        )
 
     faction_m = re.search(
         r"(The Ring|The Fingers|Kurokumo|Liu Assoc|Blade Lineage|Tingtang)\s+allies",
@@ -1341,8 +1344,8 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         )
     elif heads and (max_cp >= 15 or (primary and primary[0].lower() == "coin power")):
         pieces.append(
-            "High Coin Power damage dealer — pair with SP-positive allies to fuel Gambit "
-            "and maximise Heads output."
+            "High Coin Power damage dealer — its ceiling is swingy, so slot it with "
+            "teammates that can finish what a bad flip leaves standing."
         )
         if key_status and _is_status_consumer(gp, key_status):
             pieces.append(
