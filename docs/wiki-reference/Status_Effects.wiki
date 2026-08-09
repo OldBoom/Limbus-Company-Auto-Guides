@@ -1,0 +1,1150 @@
+{{TabbedHeader|tab1=Status Effects|tab2=Enemy-Exclusive Effects|tab2name=Enemy-Exclusive Status Effects}}
+'''Status Effects''' are conditions that can be applied to units on either side of a battle through the use of Passives, Skills, E.G.O Gifts and even other status effects.
+
+__TOC__
+
+== Overview ==
+
+A status effect can use up to two values to function, which will be called 'modes' here for clarity:
+* Zero-value mode, where the value is always fixed at 1 and has no inherent effect on the status effect's strength.
+* Single-value mode, where the value is typically called '''Count''', '''Stack''' or simply '''Value'''.
+* Double-value mode, where one value is called '''Potency''' and the other '''Count'''. Generally, Potency determines the strength of the effect, while Count determines its duration.
+
+In single-value or double-value modes, if one or more of the values reach 0, the status effect is removed from the unit. Additionally, the values of a status effect are always consumed before they are gained or inflicted.
+
+If the status effect uses both values, the Potency will be displayed on the bottom left, with the Count on the bottom right. Otherwise, the value is always displayed on the bottom left.
+
+Status effects also come with a few attributes:
+* '''Base Value''', the initial value of the status effect upon infliction if no value is specified.
+* '''Max Value''', the maximum value of the status effect. The default Max Value is 99.
+
+Status effects are also separated into three categories:
+* Positive status effects, which are highlighted in <font color="#fac400"><u>yellow</u></font>.
+* Neutral status effects, which are highlighted in <font color="#9f6a3a"><u>brown</u></font>.
+* Negative status effects, which are highlighted in <font color="#e20000"><u>red</u></font>.
+Note that a status being classified as positive or negative does not necessarily mean its effects are fully beneficial or detrimental. From the gameplay perspective, this classification primarily matters for the purposes of effects such as "Deal +10% damage for every negative status effect on this unit".
+
+<!--To those adding new Status Effects to the page: faction/abnormality exclusive effects have to show signs of really belonging to that faction for it to count. For example, although Rupture Protection is currently exclusive to Molar Boatworks identities, there is no evidence that it will stay like that in the future. On the other hand, Charge Barrier really has W Corp.'s style to it, and therefore would likely stay exclusive to W Corp. identities in the future, so it is listed as such.-->
+==Keyword Status Effects==
+{{Keyword Statuses}}
+
+== Buffs ==
+Positive Status Effects (or Buffs) provide beneficial effects to the receiver.
+
+====Damage Type DMG Up====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name''' 
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type DMG Up'''</center>
+|-
+|{{StatusEffect|Slash DMG Up|b}}||Deal 10% more damage with {{Icons|Slash}}Slash skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pierce DMG Up|b}}||Deal 10% more damage with {{Icons|Pierce}}Pierce skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Blunt DMG Up|b}}||Deal 10% more damage with {{Icons|Blunt}}Blunt skills based on the effect's Count for one turn. (Max 10)
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Type DMG Up'''</center>
+|-
+|{{StatusEffect|Wrath DMG Up|b}}||Deal 10% more damage with {{Icons|Wrath}}Wrath skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Lust DMG Up|b}}||Deal 10% more damage with {{Icons|Lust}}Lust skills per Count for one turn. (Max 10) 
+|-
+|{{StatusEffect|Sloth DMG Up|b}}||Deal 10% more damage with {{Icons|Sloth}}Sloth skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gluttony DMG Up|b}}||Deal 10% more damage with {{Icons|Gluttony}}Gluttony skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gloom DMG Up|b}}||Deal 10% more damage with {{Icons|Gloom}}Gloom skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pride DMG Up|b}}||Deal 10% more damage with {{Icons|Pride}}Pride skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Envy DMG Up|b}}||Deal 10% more damage with {{Icons|Envy}}Envy skills per Count for one turn. (Max 10)
+|-
+|}
+
+====Damage Type Power Up====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type Power Up'''</center>
+|-
+|{{StatusEffect|Slash Power Up|b}}||{{Icons|Slash}}Slash skills gain final Power by the effect's Count for one turn
+|-
+|{{StatusEffect|Pierce Power Up|b}}||{{Icons|Pierce}}Pierce skills gain final Power by the effect's Count for one turn
+|-
+|{{StatusEffect|Blunt Power Up|b}}||{{Icons|Blunt}}Blunt skills gain final Power by the effect's Count for one turn.
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Type Power Up'''</center>
+|-
+|{{StatusEffect|Wrath Power Up|b}}||{{Icons|Wrath}}Wrath skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Lust Power Up|b}}||{{Icons|Lust}}Lust skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Sloth Power Up|b}}||{{Icons|Sloth}}Sloth skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Gluttony Power Up|b}}||{{Icons|Gluttony}}Gluttony skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Gloom Power Up|b}}||{{Icons|Gloom}}Gloom skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Pride Power Up|b}}||{{Icons|Pride}}Pride skills gain final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Envy Power Up|b}}||{{Icons|Envy}}Envy skills gain final Power by the effect's Count for one turn.
+|-
+|}
+
+====Damage Type Protection====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type Protection'''</center>
+|-
+|{{StatusEffect|Slash Protection|b}}||Take 10% less damage from {{Icons|Slash}}Slash skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pierce Protection|b}}||Take 10% less damage from {{Icons|Pierce}}Pierce skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Blunt Protection|b}}||Take 10% less damage from {{Icons|Blunt}}Blunt skills per Count for one turn. (Max 10)
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Type Protection'''</center>
+|-
+|{{StatusEffect|Wrath Protection|b}}||Take 10% less damage from {{Icons|Wrath}}Wrath skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Lust Protection|b}}||Take 10% less damage from {{Icons|Lust}}Lust skills per Count for one turn. (Max 10) 
+|-
+|{{StatusEffect|Sloth Protection|b}}||Take 10% less damage from {{Icons|Sloth}}Sloth skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gluttony Protection|b}}||Take 10% less damage from {{Icons|Gluttony}}Gluttony skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gloom Protection|b}}||Take 10% less damage from {{Icons|Gloom}}Gloom skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pride Protection|b}}||Take 10% less damage from {{Icons|Pride}}Pride skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Envy Protection|b}}||Take 10% less damage from {{Icons|Envy}}Envy skills per Count for one turn. (Max 10)
+|-
+|}
+
+====Other Buffs====
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+! style="background:#810000;" width="20%" |'''Source (If Exclusive)'''
+|-
+|{{StatusEffect|Power Up|b}}||All skills gain Final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Attack Power Up|b}}||Attack skills gain Final Power by the effect’s Count for one turn.
+|-
+|{{StatusEffect|Defense Power Up|b}}||Defense skills gain Final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Clash Power Up|b}}||Gain Clash Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Base Power Up|b}}||Raise the Base Power of Skills by the effect's Count. || {{GiftTT|Spicebush Branch|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Offense Level Up|b}}||Offense level increases based on the effect's Potency for one turn.
+|-
+|{{StatusEffect|Defense Level Up|b}}||Defense Level increases based on the effect's Potency for one turn. 
+|-
+|{{StatusEffect|Damage Up|b}}||Deal 10% more damage with skills based on the effect's Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Haste|b}}||Speed increases by the effect’s Count for one turn.
+|-
+|{{StatusEffect|Protection|b}}||Take 10% less damage per Count from attacks for one turn. (Max 10)
+|-
+|{{StatusEffect|Plus Coin Boost|b}}||Raise the Power of Plus Coins by the effect's Count for one turn.
+|-
+|{{StatusEffect|Minus Coin Drop|b}}||Reduce the Power of Minus Coins by the effect's Count for one turn.
+|-
+|{{StatusEffect|Weak-resist DMG Boost|b}}||Boost the damage of attacks against Weak resistances by 1% per Count for one turn. ||[[Crow's Eye View Yi Sang]] E.G.O
+|-
+|{{StatusEffect|HP Healing Boost|b}}||Increases HP healing provided by Passive abilities, Skills, and Coin effects by 10% per Count. (Max 5)
+|-
+|{{StatusEffect|E.G.O Resource Amp|b}}||Increases the amount of E.G.O resources earned from skills by the effect's Count for one turn. ||  [[Lifetime Stew Sinclair]] E.G.O<br> [[Soda Ryōshū]] E.G.O
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keyword-Related Buffs'''</center>
+<!-- These are buffs that quote a keyword status effect (or mention Critical Hits, in the case of Poise effects). If a buff would fall under one or more keyword, make a judgement call about which one is more relevant. -->
+|-
+|{{StatusEffect|Bloodflame -血炎-|b}}|| - Max Stack: 3 <br> - This unit inflicts +1 more {{StatusEffect|Burn|d}} and {{StatusEffect|Rupture|d}} potency with its Base Skills <br> - While this unit has this effect, heal 3 SP upon Staggering or killing an enemy (3 times per turn) <br> · If this unit's SP is at max when the above effect activates, gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Haste|b}} next turn <br> - Lose 1 Stack at Turn End || [[List of Identities/World#hcorp|Heishou Pack - You Branch Identities]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Fanatic|b}}||Raise Skill Final Power by the effect's Count against targets that have {{StatusEffect|Nails|d}} for the turn. (Applies to clashes as well)||  [[List of Identities/World#ncorpfanatics|World of N Corp. Fanatics Identities]]
+|-
+|{{StatusEffect|Blooming Thorn (Ally)|b}}||- Max Value: 10 <br> - Stage 1 Blooming Thorn <br> - Gain 1 Defense Level for every 2 Stack (max 5) <br> - When hit, inflict 1 {{StatusEffect|Bleed|d}} against the attacker and lose 1 Stack <br> - [The Princess of La Manchaland Rodion Only] <br> · At max Stack, convert to the next Stage of this effect. <br> &nbsp;· (10+ Stack: {{StatusEffect|Blooming Thorn II|b}}) <br> &nbsp;· (20+ Stack: {{StatusEffect|Blooming Thorn III|b}}) <br> · Inflict +(Stage - 1) more {{StatusEffect|Bleed|d}} and {{StatusEffect|Rupture|d}} Potency using this unit's Base Attack Skill Coin effects. <br> · Reverts to previous Stage when the Stack drops below the requirements.||[[The Princess of La Manchaland Rodion]]
+|-
+|{{StatusEffect|Festive Fever (Ally)|b}}||- Max Value: 10 <br> Expires at Turn End <br> - Against targets that have {{StatusEffect|Bleed|d}}: deal +1.5% more damage for every Stack <br> - Skills that consume or gain {{StatusEffect|Bloodfeast|r}} deal +3% more damage for every Stack instead||[[The Princess of La Manchaland Rodion]]
+|-
+|{{StatusEffect|Shimmering -Bloodfiend- (Ally)|b}}||- Max Stack: 50 <br> - As long as this effect exists, all {{StatusEffect|Bleed|d}} damage taken by the Shield HP is converted to {{StatusEffect|Bloodfeast|r}}. <br> - Gain Shield HP equal to the Stack at the moment of its application <br> - Expires at Turn End||[[The Manager of La Manchaland Don Quixote]]
+|-
+|{{StatusEffect|Dark Cloud Blade|b}}||Max Stack: 1 <br> Gain 1 {{Icons|Slash}}Slash Power <br> Inflict 1 {{StatusEffect|Bleed|d}} On Hit with {{Icons|Slash}}Slash Skills || [[Kurokumo Clan Captain Ishmael]] <br> [[Kurokumo Clan Wakashu Heathcliff]]
+|-
+|{{StatusEffect|Battle Ready|b}}||Max Value: 1 <br> {{StatusEffect|Bleed|d}} Potency and Count inflicted using this unit's Skill or Coin effects: +1 <br> Gain 1 {{StatusEffect|Slash Power Up|b}} and 3 {{StatusEffect|Slash DMG Up|b}} for the duration of this Encounter || [[Kurokumo Clan Captain Ishmael]] <br> [[Kurokumo Clan Wakashu Heathcliff]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Strider -Wu-|b}} || - Max Stack: 3 <br> - Turn End: gain 2 {{StatusEffect|Haste|b}} and (Stack x 2) {{StatusEffect|Aggro|r}} next turn <br> - Before Attack: inflict (Stack) {{StatusEffect|Tremor|d}} Potency against the main target (max 6 per turn) <br> - Lose 1 Stack at Turn End || [[List of Identities/World#hcorp|Heishou Pack - Wu Branch Identities]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Rupture Protection|b}}||Take -1 damage per Count from {{StatusEffect|Rupture|d}} effects for one turn. || [[Molar Boatworks Fixer Ishmael]] <br> [[Molar Boatworks Fixer Sinclair]] 
+|-
+|{{StatusEffect|Burgeoning of Horns -發角-|b}}||- Max Value: 3 <br> - This unit's Base Skills inflict +1 more of {{StatusEffect|Rupture|d}} and {{StatusEffect|Sinking|d}} Potency <br> - Turn End: Lose 1 Stack || [[List of Identities/World#hcorp|Heishou Pack - Wei Branch Identities]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Wild Hunt|b}}||- In the same turn this unit gained Wild Hunt for the first time, always have 1 remaining HP; "revive" (heal 50% HP and reset SP to 0) this unit at Turn End. <br> - If this unit is killed by an attack, gain 1 E.G.O resource for the least-owned E.G.O resource <br> - If this unit is killed by an attack, inflict 3 {{StatusEffect|Sinking|d}} against the last attacker <br> - Dies at the end of the same turn this unit was revived in || [[Wild Hunt Heathcliff]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Poise|b}}||On hit, gain a Potency-based chance to deal critical damage, reducing the Count by 1 if successful. At the end of the turn, reduce the Count by 1. Critical hits deal 1.2x damage.
+|- 
+|{{StatusEffect|Crit DMG Up|b}}||For this turn: Deal +10% damage on Critical Hit for every Stack||
+|-
+<!-- While the two Nebulizers technically fit the E.G.O-exclusive category better, their effects apply to the whole team. I judged that they're better over here. -->
+|{{StatusEffect|Nebulizer α|b}}||- Max Stack: 5 <br> - This effect persists throughout the Encounter <br> - Combat Start: on all allies, including this unit, apply 1 {{StatusEffect|Poise|b}} Potency and +1 {{StatusEffect|Poise|b}} Count||[[Thoracalgia Faust]] E.G.O
+|-
+|{{StatusEffect|Nebulizer β|b}}||- Max Stack: 5 <br> - This effect persists throughout the Encounter <br> - When activating {{Icons|Pride}}Pride A-Reson.: on Combat Start, apply 3 {{StatusEffect|Poise|b}} and +3 {{StatusEffect|Poise|b}} Count on self and (Stack) allies (prioritizes allies that gain or use {{StatusEffect|Poise|b}} or {{StatusEffect|Poise|b}} Count; among them, prioritize allies with the least {{StatusEffect|Poise|b}} Potency)||[[Thoracalgia {{Ryoshu}}]] E.G.O
+|-
+|{{StatusEffect|Swordplay of the Homeland|b}}||- When at 5+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 1 and Skill 2 gain Coin Power +(3/# of Coins, minimum 1) and deal +(30/# of Coins)% damage on Critical Hit <br> - When at 7+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 3 deals +(30/# of Coins)% more damage and deals +(50/# of Coins)% damage on Critical Hit || [[Blade Lineage Mentor Meursault]]
+|-
+|{{StatusEffect|Serpent Arm|b}}||- Max Stack: 3<br>- Turn End: gain 3 {{StatusEffect|Poise|b}} and +2 {{StatusEffect|Poise|b}} count next turn<br>- On Base Attack Skill use, if target has {{StatusEffect|Rupture|b}}, gain 5 {{StatusEffect|Poise|b}} <br> - Turn End: lose 1 Stack||[[List of Identities/World#heishousi|Heishou Pack - Si Branch Identities]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Charge|b}}||Resource used by certain skills for additional effects. Its Count can go up to 20. Count lowers by 1 at the end of each turn.
+|-
+|{{StatusEffect|Red Eyes|b}}||- Base Skill Coin effects inflict +1 more {{StatusEffect|Bleed|d}} <br> - Max Value: 20 <br> - Unique {{StatusEffect|Charge|b}} (fixed Potency) <br> - Resource used by certain Skills for additional effects <br> - Enhances the buff based on Value <br> · Stage 1 (1~7): {{StatusEffect|Red Eyes|b}} <br> · Stage 2 (8~15): {{StatusEffect|Red Eyes - Alert|b}} <br> · Stage 3 (16~20): {{StatusEffect|Red Eyes - Devouring|b}} <br> - The amount of additional {{StatusEffect|Bleed|d}} inflicted by the first line of this buff is equal to the buff enhancement Stage (max 3)||[[Lobotomy E.G.O::Red Eyes & Penitence {{Ryoshu}}]]
+|-
+|{{StatusEffect|Penitence|b}}||- Heal 2 SP On Hit with Base Skill Coins that gain Penitence <br> - Max Value: 20 <br> - Unique {{StatusEffect|Charge|b}} (fixed Potency) <br> - Turn Start: gain (Penitence)% of max HP as Shield <br> - Resource used by certain Skills for additional effects <br> - Enhances the buff based on Value <br> · Stage 1 (1~7): {{StatusEffect|Penitence|b}} <br> · Stage 2 (8~15): {{StatusEffect|Penitence - Periphery|b}} <br> · Stage 3 (16~20): {{StatusEffect|Penitence - Confession|b}} <br> - The amount of SP healed by the first line of this buff is based on the enhancement Stage (enhancement Stage x 2)||[[Lobotomy E.G.O::Red Eyes & Penitence {{Ryoshu}}]]
+|-
+|{{StatusEffect|Love-Hate|b}}||- Max Count: 20 <br> - Unique {{StatusEffect|Charge|b}} <br> - Resource used by certain Skills for additional effects. Its Count can go up to 20. Count lowers by 1 at the end of each turn. <br> (Interacts the same way as normal {{StatusEffect|Charge|b}} does to effects that raise or reduce {{StatusEffect|Charge|b}} Potency/Count)||[[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]]
+|-
+|{{StatusEffect|Deep Tears|b}}||- Unique {{StatusEffect|Charge|b}} (Potency Fixed) <br> - Resource used by certain Skills for additional effects <br> - Max Stack: 20||[[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Corpus Ingredient (Ally)|b}} || - Max Count: 20 <br> - Unique {{StatusEffect|Charge|b}} <br> - Interacts the same way as normal {{StatusEffect|Charge|b}} does to effects that raise or reduce {{StatusEffect|Charge|b}} Potency and Count <br> - Turn End: Lose 1 Count || [[The House of Spiders: The Ring Apprentice Faust]] <br> [[The House of Spiders: The Ring Nursefather Hong Lu]]
+|-
+|{{StatusEffect|Charge Barrier|b}}||- Gain (Charge Barrier # x 3) Shield. <br> - Lose 1 Charge Barrier after losing (Charge Barrier # x 3) Shield. <br> - (If the unit is a [[:Category:W Corp. Identities|W Corp.]] employee, ALL Charge Barrier effects activate at (Charge Barrier # x 5) instead of at (Charge Barrier # x 3)) <br> - Turn end: Gain a {{StatusEffect|Charge|b}} Count for each Charge Barrier #, and Charge Barrier and Shield gained from Charge Barrier expire completely next turn ||[[List of Identities/World#wcorp|World of W Corp. Identities]] <br> Charge E.G.O Gifts
+|-
+|{{StatusEffect|Load|b}}||- Max Value: 6 <br> - Attack Skills that consumed {{StatusEffect|Charge|b}} Count deal +2.5% more damage for every value on self (max 15%) <br> - If the affected unit is a [[:Category:W Corp. Identities|W Corp.]] employee, deal +5% more damage for every value instead (max 30%) <br> - Turn End: this effect expires ||[[W Corp. L3 Cleanup Captain Outis]] <br> [[Dimension Shredder Outis]] E.G.O <br> [[W Corp. L4 Cleanup Agent - CCA Heathcliff]]
+|-
+|{{StatusEffect|Magical Girl's Chant|b}}||- Max Stack: 2 <br> - When this unit gains this effect, gain 1 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Damage Up|b}} <br> - This unit's Attack Skills that gain or consume {{StatusEffect|Charge|b}} Count gain Final Power +1 and deal +10% damage <br> - Reduced by 1 at Turn End || [[In the Name of Love and Hate Don Quixote]] E.G.O
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keywordless Buffs'''</center>
+<!-- If it doesn't fit into any of the other categories, put it here. -->
+|-
+|{{StatusEffect|Borrowed Time|b}}||Turn End at 2+ Count: <br> - Gain (Borrowed Time Count - 1) {{StatusEffect|Haste|b}}, {{StatusEffect|Clash Power Up|b}}, and {{StatusEffect|Fragile|d}} next turn <br> - If this unit is set to gain more {{StatusEffect|Bind|d}} than {{StatusEffect|Haste|b}} next turn, the Borrowed Time effect expires at the next Turn Start, and this unit gets Staggered <br><br> Turn End: At 1 Count, gain 2(Borrowed Time Stack - 1) {{StatusEffect|Bind|d}} next turn <br> Turn End: Gain 1 Stack, lose 1 Count ||[[List of Identities/World#tcorp|T Corp. Identities]]
+|-
+|{{StatusEffect|Strider -Mao-|b}}||- Max Stack: 3<br>- Turn End: gain 5 {{StatusEffect|Haste|b}} next turn<br>- Reduced by 1 at Turn End||[[List of Identities/World#hcorp|Heishou Pack - Mao Branch Identities]]
+|-
+|{{StatusEffect|Grace of the Prescript|b}}|| - Offense Level +1 for every 3 Stacks <br> - Max Stack: 9 || [[The Index#Sinner Identities|The Index Identities]]
+|-
+|{{StatusEffect|Unlock|b}} || - Gain this effect when over certain {{StatusEffect|Grace of the Prescript|b}} Stack <br> - Effect stage increases based on {{StatusEffect|Grace of the Prescript|b}} Stack <br> - Max: Stage 3 || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Unlock - I|b}} || - Defense Level +1 <br> - Combat End: Heal 5 SP || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Unlock - II|b}} || - Defense Level +2 <br> - Combat End: Heal 10 SP || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Unlock - III|b}} || - Defense Level +3 <br> - Combat End: Heal 15 SP || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Commanding Cry|b}}|| - Gain 1 Clash Power and 2 Defense Level <br> - Expires at Turn End || [[Heishou Pack - Wu Branch Adept Yi Sang]]
+|-
+|{{StatusEffect|Desire for Acknowledgement Sated|b}} || - Deal +7.5% damage with Skills marked with the {{StatusEffect|Mark of the Prescript|r}} <br> - Deal +7.5% damage against {{StatusEffect|The Prescript's Target|r}}s || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|High Noon}} || - Min Speed +2 <br> - On Base Attack Skills Use: Gain Base Power +2 and deal +(45 / # of Coins)% damage <br> <br> - Apply the following effects to "Sunset Blade" <br> · On Final Coin Hit: If the target has 15+ {{StatusEffect|Burn}}, activate {{StatusEffect|Burn}} on target; then, reduce target's {{StatusEffect|Burn}} Count by 1 <br> <br> - Apply the following effects to "Blazing Strike" <br> · Deal +100% damage <br> · On Use : Convert all Coins to {{StatusEffect|Unbreakable Coin}}s <br> · On Hit against an enemy, activate {{StatusEffect|Burn}} on target; then, reduce target's {{StatusEffect|Burn}} Count by 1 <br> · On Use: At 3+ {{StatusEffect|Volatile Passion}}, consume up to 100 {{StatusEffect|Scorchfield}} <br> · Deal +1% damage for every {{StatusEffect|Scorchfield}} consumed (max 100%) <br><br> ''<span style="color:#a16a3b">"The request has been resolved ahead of schedule, and the weather conditions are optimal today for a team lunch. Shall we all proceed?"</span>'' || [[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Loneliness at High Noon}} || - Min Speed +2 <br> - On Base Attack Skills Use: Gain Base Power +3 and deal +(90 / # of Coins)% damage <br> <br> - Apply the following effects to "Sunset Blade" <br> · On Final Coin Hit: If the target has 15+ {{StatusEffect|Burn}}, activate {{StatusEffect|Burn}} on target; then, reduce target's {{StatusEffect|Burn}} Count by 1 <br> <br> - Apply the following effects to "Blazing Strike" <br> · Deal +150% damage <br> · On Use : Convert all Coins to {{StatusEffect|Unbreakable Coin}}s <br> · On Hit against an enemy, activate {{StatusEffect|Burn}} on target; then, reduce target's {{StatusEffect|Burn}} Count by 1 <br> · On Use consume up to 100 {{StatusEffect|Scorchfield}} and deal +1.5% damage for every {{StatusEffect|Scorchfield}} consumed (max 150%) <br> <br> - When this unit takes damage that brings its HP down to 0 this turn, this unit's HP cannot drop below 1 for the turn, and recovers from Stagger when Staggered due to damage (once per Encounter) <br><br> ''<span style="color:#a16a3b">"Do you understand what 'loneliness' means, Sinclair? Loneliness is being bathed in the light of the sun at high noon, only to realize that the ones you would have shared a luncheon with have departed you. That is how I would put into words the concept of 'loneliness'—for me, at least. I do hope, Sinclair, that you will never have cause to understand that concept."</span>'' || [[Dawn Office Fixer Faust]]
+|- 
+|{{StatusEffect|Gaze of Contempt|b}}||- Max Value: 7 <br> - Deal +7% more damage for every Gaze of Contempt <br> - Turn End: this effect expires <br> - Turn End: At 7 Gaze of Contempt value, convert it to {{StatusEffect|Contempt of the Gaze|b}} next turn instead of expiring || [[N Corp. E.G.O::Contempt, Awe Ryōshū]] <br> [[Contempt, Awe {{Ryoshu}}]] E.G.O
+|-
+|{{StatusEffect|Sword of the Homeland - Rending|b}}||Skill 1 gains Final Power by the effect's Count for this turn || [[Blade Lineage Mentor Meursault]] 
+|-
+|{{StatusEffect|Sword of the Homeland - Penetrating|b}}||Skill 2 gains Final Power by the effect's Count for this turn || [[Blade Lineage Mentor Meursault]]
+|-
+|{{StatusEffect|Erudition|b}}||- Max Value: 6 <br> - When {{StatusEffect|Discard|r}}ing a Skill, gain (Erudition x 1.5)% of this unit's max HP as Shield (once per turn) <br> - If this unit {{StatusEffect|Discard|r}}s a Skill at 2+ {{StatusEffect|Insight|r}}, gain 1 Clash Power (once per turn) <br> - Reduced by 1 when taking HP damage after getting hit by an enemy's Attack Skill <br> - Expires when Staggered || [[Dieci Assoc. South Section 4 Director Meursault]] 
+|-
+|{{StatusEffect|Hardblood Armor|b}}||- Max Stack: 5 <br> - If this unit isn't at max HP: after its Skill attack, heal 10% of HP damage dealt (once per turn; max 40 healing) <br> - Attack End: If this unit dealt HP damage, lose 1 Stack (once per turn) <br> · If {{Icons|Lust}}Lust Reson. was activated, halve the amount of HP healed, but do not lose any Hardblood Armor Stack || [[The Prince of La Manchaland Meursault]]
+|-
+|{{StatusEffect|Focused Performance|b}}||- Max Stack: 3 <br> - <[[:Category:La Manchaland Identities|La Manchaland]]> Identities only; includes Empowered versions <br> - Skill 1 and Skill 2 gain Final Power +1; deal +5% damage for every Stack (max 15%) <br> - Skill 3 gains Final Power +2; deals +10% damage for every Stack (max 30%) <br> - Lose 1 Stack when: <br> 1) Skill 3 Attack End <br> 2) If this unit does not have {{StatusEffect|Hardblood Armor|b}} at Turn Start || [[The Prince of La Manchaland Meursault]]
+|-
+|{{StatusEffect|Sword of the Homeland - The True Essence}} || - Base Attack Skills gain Final Power +(# of [[:Category:Blade Lineage Identities|Blade Lineage]] allies on the field / 3) (max 2, rounded down) <br> - If this unit is a Blade Lineage Salsu, Base Skills gain Final Power +1 and deal +(120 / # of Coins)% damage <br> - Turn End: Gain 1 {{StatusEffect|Haste}} next turn and this effect expires || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O; applied by {{StatusEffect|Resentful Scabbard}}
+|-
+|{{StatusEffect|Tarnished Blood|b}}||Max Stack: 5<br>- Turn End: take 20% HP damage per Stack (cannot be Staggered by this effect)<br>- Gain 1 Stack at Turn End<br>- Expires upon death or Retreat || [[The Lord of Hongyuan Hong Lu]] <br> [[Tears of the Tarnished Blood 汚血泣淚 Hong Lu]] E.G.O
+|-
+|{{StatusEffect|Unrelenting Storm|b}}||- Number of times this unit activated combo with The Lord of Hongyuan Hong Lu Identity <br> - Max Stack: 2 <br> - Turn Start: gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Defense Level Up|b}} for every Stack || [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Somatic Frisson-inspiring Melody|b}} || - Min & Max Speed +1 <br> - Base Attack Skills gain Clash Power +1 and deal +10% damage || [[The House of Spiders: The Ring Nursefather Hong Lu]]
+|-
+|{{StatusEffect|Assist -援-|b}}||- Max Stack: 1 <br> - If target has 5+ negative effects, Clash Power +1, deal +10% damage|| [[Family Hierarch Candidate Ishmael]]
+|-
+|{{StatusEffect|Scarlet Moth|b}} ||- Max Stack: 3 <br> - Turn End: Heal (Stack)% HP (minimum HP healed : 1) <br> - Turn End: Heal SP equal to Stack <br> - Turn End: Lose 1 Stack|| [[Into the Sunset Rodion]]
+|-
+|{{StatusEffect|I Got Praised! (Ishmael)|b}} || - Max Stack: 10 <br> - Reduced by 1 when this unit is hit by 2 Skills <br> - At 5+ Stack, Base Skills gain Final Power +1 <br> -  {{Icons|Blunt}}Blunt Skills deal +1% damage for every Stack (max 10%) || [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|The Middle - Grudge (Ishmael)|x}}{{StatusEffect|The Middle - Grudge (Outis)|b}} || - Max Stack: 15 <br> - If target has {{StatusEffect|Vengeance Mark|d}}, deal +20% damage || [[The House of Spiders: The Middle Apprentice Ishmael]] <br> [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Guardians of the Forest|b}} || - Before Attack, activate the following effects: <br> · Plus Coin Skills heal 4 SP (if already at max SP, gain 2 {{StatusEffect|Offense Level Up|b}} next turn) <br> · Minus Coin Skills lose 8 SP (this effect cannot reduce the unit's SP below -40) <br> · Lose this effect || [[Lobotomy E.G.O::Lamp Gregor]]
+|-
+|{{StatusEffect|Dawnherald}} || - Max Stack: 3 <br> - Base Skills that inflict {{StatusEffect|Burn}} Potency, Count, or 'Unique Burn' deal +10% damage <br> · If the said Skill is a {{Icons|Wrath}}Wrath Skill, deal +15% damage <br> - Base Skills that inflict {{StatusEffect|Burn}} Potency, Count, or 'Unique Burn', gain Clash Power +1 <br> · If this unit is a [[:Category:Dawn Office Identities|Dawn Office]] Identity, gain Base Power +1 instead <br> - Turn End: Lose 1 Stack <br><br> <span style="color:#a16a3b"><i>"Burn, burn, burn—y'see, Kid, fire's not the be-all, end-all solution to every problem you've got. When it comes to using heat-modulating weapons like these, the deciding factors often come down to </i>when<i> to spark the flame, and </i>how hot<i> you let it burn.<br>"Yeah, that's why I'm always chewing your ear off about how important it is to feel the 'moment' that comes with the territory of using heat-modulating weapons. But on the other hand… when that 'moment' tells you to burn it all down, don't hold back and just let it rip. … Hm? Oh, you want to know who's the best in the field?"<br>"Hmm, let's see… Well, the best of the best's got to be the Vermilion Cross, I'd wager."</i></span> || [[Dawn Office Rep Gregor]]
+|-
+|{{StatusEffect|Dawn Office}} || - Max Stack: 3 <br> - Gain 1 Offense Level for every Stack <br> - Turn Start: At 3 Stack, heal 5 SP <br> Turn Start: If all other allied Identities that have "Dawn Office" are killed, expires <br><br> ''<span style="color:#a16a3b">The Dawn Office of this Mirror World, unlike that of others, has yet to completely lose its fervor. One can reasonably conjecture that the two leading Fixers of this Office have sufficient competence to find work as Grade 1 of the vocation.<br><br>However, it must be stated that the Office and its Fixers' grades do not vary from those of other observed Mirror Worlds, as combat capability is hardly the sole criterion by which the Grades are assigned. Failure to meet the conditions stipulated by the contract clauses to the client's satisfaction, eschewal of high-risk contracts that contribute to the advancement of Fixer Grades—these are all conditions that limit one's mobility along the ladder of Fixer Grades.</span>'' || [[Dawn Office Rep Gregor]]
+|-
+|{{StatusEffect|From Dawnbreak to Sunset}} || - If this unit has 3+ Stagger Threshold, remove the first Stagger Threshold <br> - Turn End: If this unit is Staggered, recover from Stagger; if this unit is at Uptie 3 or higher, replace 1 of its Base Skills with Skill 3 (excluding forced Stagger; prioritize the Skill of lowest rank) <br> <br> - Turn Start: Heal 5 SP <br> - Passive "Unstable Shell of Ego" effects, Base Attack Skill effects, and {{StatusEffect|Volatile Passion}} effects cannot reduce this unit's SP below 25 <br> <br> - When in Volatile E.G.O::Waxen Pinion state, gain the following effects: <br> · Turn Start: Gain Shield equal to 15% of max HP <br> · When hit while this unit has Shield, inflict 1 {{StatusEffect|Burn}} against the attacker (2 times per turn) <br> · Activate {{StatusEffect|Scorchfield}} on this field <br><br> ''<span style="color:#a16a3b">"Ah… What a pleasant aroma. You're practically a Color Fixer when it comes to brewing ssanghwa-cha, you know that? I hereby anoint you Color Fixer "The Yellow Ssanghwa…"<br>"That's settled, then. I'll be tutoring you myself, so you'd better keep up. I see real potential in you, Kid—your ssanghwa-cha brewing skills have this instinctive grasp of the 'moment'… And being able to recognize that 'moment' is the key to just about everything."</span>'' || [[Dawn Office Rep Gregor]]
+|-
+|{{StatusEffect|Blazing Sunset}} || - If this unit has 3+ Stagger Threshold, remove the first Stagger Threshold <br> - Turn End: If this unit is Staggered, recover from Stagger; if this unit is at Uptie 3 or higher, replace 1 of its Base Skills with Skill 3 (excluding forced Stagger; prioritize the Skill of lowest rank) <br> <br> - Turn Start: Heal 8 SP <br> - Passive "Unstable Shell of Ego" effects, Base Attack Skill effects, and {{StatusEffect|Volatile Passion}} effects cannot reduce this unit's SP below 45 <br> <br> - Turn Start: enter the Volatile E.G.O::Waxen Pinion State, heal 50% HP, and heal SP to max (once per Encounter) <br> - Volatile E.G.O::Waxen Pinion State is maintained even when this unit has 0 or lower SP at Turn Start <br> <br> - When in Volatile E.G.O::Waxen Pinion state, gain the following effects: <br> · Turn Start: Gain Shield equal to 20% of max HP <br> · When hit while this unit has Shield, inflict 2 {{StatusEffect|Burn}} against the attacker (2 times per turn) <br> · Activate {{StatusEffect|Scorchfield}} on this field <br><br> ''<span style="color:#a16a3b">"Master, please… I still have so much to learn… You said it yourself…"<br>Dawn is a fleeting thing; it soon gives way to morning and fades into daylight, with a promise of sunset that will bring about the evening.</span>'' || [[Dawn Office Rep Gregor]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Tick-Tock?!}} [[Durante]]-exclusive Buffs'''</center>
+|-
+|{{StatusEffect|Gebura's Blade|b}} || - Convert all Skill Coins into {{StatusEffect|Unbreakable Coin|r}}s <br> - Deal +100% damage <br> - Plus Coin Skills gain Coin Power +1; Minus Coin Skills gain Final Power +1 <br> - For this turn, this unit cannot be Staggered from all sources of damage <br> - At less than 10 HP, heal to 10 HP <br> - For this turn, this unit's HP does not drop below 10 <br> - For this turn, every Coin Hit from Base Attack Skills and Counter Skills heals 10% of the damage dealt (max healing from each Skill: 100) <br> - Expires at Turn End || Unlocked after 9-50
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Identity- or E.G.O- exclusive Buffs'''</center>
+<!-- Buffs that are exclusive to a single Identity or E.G.O AND can only be self-applied. Sort by Sinner number and then by release date - oldest first. Exception: Unique forms of Poise and Charge. -->
+|- 
+|{{StatusEffect|Fell Bullet|b}}||Max Stack: 1<br>+3% damage on Critical Hit for every {{StatusEffect|Torn Memory|r}} (max 18%)<br>On Hit, inflict 1 {{StatusEffect|Bleed|d}} (3 per turn)<br>On Kill, gain 3 {{StatusEffect|Poise|b}} and +2 {{StatusEffect|Poise|b}} Count (2 times per turn)<br>Expires at Turn End||[[N Corp. E.G.O::Fell Bullet Yi Sang]]
+|-
+|{{StatusEffect|Linebreaker|b}}||- Max Stack: 5 <br> - Turn Start: gain (Stack x 10) Shield for this turn <br> - At max Stack, gain 2 Final Power <br> - When hit: if this unit took 100+ damage from a single Skill, gain {{StatusEffect|Protection|b}} after Skill End (2 times per turn; includes damage against Shield HP; does not count damage from Keywords)||[[Heishou Pack - Wu Branch Adept Yi Sang]]
+|-
+|{{StatusEffect|Wound-casing Mask|b}} || - Offense Level +2, Defense Level -2 <br> - Take -10% damage from Unopposed Attacks || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Sizzling Wound|b}} || - Offense Level +3, Defense Level -3 <br> - Take -25% damage from Unopposed Attacks <br> - Turn Start: Gain 1 {{StatusEffect|Burn|d}} and 1 {{StatusEffect|Bleed|d}} <br> - Deal +15% damage with Base Attacks Skill's {{StatusEffect|Unbreakable Coin|r}}s || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Indulgence in Prescripts|b}} || - Min & Max Speed +5 <br> - Apply the following effects to 'Furioso-Replica': <br> · On Hit, inflict +1 more {{StatusEffect|Sinking|d}} Potency and gain +1 more {{StatusEffect|Poise|b}} Potency <br> · On Hit, inflict +3 {{StatusEffect|Sinking|d}} Count (once per target) <br> · Deal +30% damage <br> - Expires at Turn End || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When hacking through the ribs with a hatchet... (Yi Sang)|b}} || - This coin deals {{Icons|Blunt}}Blunt damage <br> - On Hit without Cracking, gain 2 {{StatusEffect|Poise|b}} || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When penetrating the lungs with a stiletto... (Yi Sang)|b}} || - This coin deals {{Icons|Pierce}}Pierce damage <br> - On Hit without Cracking, inflict 2 {{StatusEffect|Sinking|d}} || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When cleaving through the shoulder and the skull with a bastard sword... (Yi Sang)|b}} || - This coin deals {{Icons|Slash}}Slash damage <br> - This Coin deals +5% damage <br> - On Hit without Cracking, gain 1 {{StatusEffect|Offense Level Up|b}} next turn (2 times per turn) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When punching 10 or more holes in the torso with a rapier... (Yi Sang)|b}} || - This coin deals {{Icons|Pierce}}Pierce damage <br> - This Coin deals +5% damage <br>- On Hit without Cracking, inflict 1 {{StatusEffect|Defense Level Down|d}} next turn (2 times per turn) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When caving in the back of the skull with a hammer... (Yi Sang)|b}} || - This coin deals {{Icons|Blunt}}Blunt damage <br> - This Coin deals +5% damage <br> - On Hit without Cracking, raise target's Stagger Threshold by 3 || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When rending the body with a great sword... (Yi Sang)|b}} || - This coin deals {{Icons|Slash}}Slash damage <br> - This Coin deals +15% damage <br> - On Hit without Cracking, inflict 1 {{StatusEffect|Slash Fragility|d}} until next turn (2 times per turn) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When boring a 20-inch hole with a lance... (Yi Sang)|b}} || - This coin deals {{Icons|Pierce}}Pierce damage <br> - This Coin deals +15% damage <br> - On Hit without Cracking, inflict 1 {{StatusEffect|Pierce Fragility|d}} until next turn (2 times per turn) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When ripping the flesh to ten thousand strips with a whip... (Yi Sang)|b}} ||  This coin deals {{Icons|Blunt}}Blunt damage <br> - This Coin deals +15% damage <br> - On Hit without Cracking, inflict 1 {{StatusEffect|Blunt Fragility|d}} until next turn (2 times per turn) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When lacerating through space itself with a scythe, like a certain someone... (Yi Sang)|b}} || - This coin deals {{Icons|Slash}}Slash damage <br> - This Coin deals +30% damage <br> - On Hit without Cracking, it hits a guaranteed Crit || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Dimensional Castaway}} || Max Stack: 3 <br> Before Getting Hit, gain Shield equal to (Stack)% HP (3 times per turn) || [[LCE E.G.O::Dimension Shredder Yi Sang]]
+|-
+|{{StatusEffect|Quadricolor Dimensions}} || - Max Stack: 4 <br> - Gain the following effects based on Stack: <br> · 1+ : Offense Level +1 <br> · 2+ : Defense Level +2 <br> · 3+ : Gain +1 more {{StatusEffect|Charge}} Count from this unit's Skills <br> · 4+ : This unit's Skills deal +({{StatusEffect|Charge}} Potency x 4)% damage (max 20%) <br> <br> - If this unit gains this effect past its max cap, this unit gains the surplus Stack next turn <br> - Turn End: Lose 1 Stack || [[LCE E.G.O::Dimension Shredder Yi Sang]]
+|-
+|{{StatusEffect|Hardened Shell-Barrier|b}}||- Turn Start: gain (Stack / 3) {{StatusEffect|Defense Level Up|b}} (max 3; rounded down) <br> - Immediately before taking a hit from an enemy, consume half of Hardened Shell-Barrier and gain {{StatusEffect|Protection|b}} equal to the Stack consumed (once per turn; rounded up) <br> - Turn End: lose 3 Stack <br> - Max Stack: 10 || [[Command : Meltdown Faust]] E.G.O
+|-
+|{{StatusEffect|Target Aim|b}}||- Max Stack: 4 <br> - Expires if this unit does not have {{StatusEffect|Ready to Loose|b}} || [[Shi Assoc. East Section 3 Faust]]
+|-
+|{{StatusEffect|Ready to Loose|b}}||- When this unit has this effect, activate the following effects: <br> &nbsp;· Converts the leftmost Base Attack Skill on the Dashboard to "Bow's Glimmer", then uses it at Combat Start <br> &nbsp;· This unit cannot be Staggered from taking damage, Tremor Burst, or raised Stagger Threshold <br> &nbsp;· Does not trigger Assist Attack while this unit has this buff <br> · Removed if an E.G.O Skill was equipped at Combat Start || [[Shi Assoc. East Section 3 Faust]]
+|-
+|{{StatusEffect|Liferender|b}}||- Offense Level +2 <br> - Final Power +1 <br> - Expires at Turn End || [[Shi Assoc. East Section 3 Faust]]
+|-
+|{{StatusEffect|Artwork - Fascia (Faust)|b}} || Apply the following effects to this unit's Base Attack Skills and Clashable Counter Skill based on {{StatusEffect|Corpus Ingredient|b}} Potency: <br> - 1+: Base Power +1 <br> - 2+: If the enemy has {{StatusEffect|Bleed|d}} or 'Unique Bleed', deal +10% damage <br> - 3+: Inflict +1 more {{StatusEffect|Bleed|d}} Potency and Count <br> - 4+: Base Power +1 || [[The House of Spiders: The Ring Apprentice Faust]]
+|-
+|{{StatusEffect|The Self Unbound - Flow State|b}} || - Min & Max Speed +2 <br> - Gain a new set of Base Skills <br> - Deal +20% damage with Base Attack Skills to enemies whose Speed is slower than this unit || [[The House of Spiders: The Ring Apprentice Faust]]
+|-
+|{{StatusEffect|Battle Instinct}} || - Max Stack: 3 <br> - Min & Max Speed +2 <br> - Base Skills inflict +1 {{StatusEffect|Burn}} Potency and {{StatusEffect|Burn}} Count on enemies <br> - Skill "Eject" deals +(Stack x 5)% damage <br> - Skills "Eject - High Noon" and "Dismemberment at High Noon" deal +(Stack x 10)% damage <br><br> ''<span style="color:#a16a3b">"To resume the subject at hand: aside from Singularities, there exists a means of overcoming the penalties incurred by using this type of weaponry. Namely, effort."<br><br>"This may go without saying, but it is recommended that you focus on honing your body and battle instinct whenever time permits—both during downtime and when handling requests."<br><br>"Granted, battle instinct, in most cases, can only be properly demonstrated in the heat of battle. One might refer to this process as a "warm up," although that term is perhaps <i>too</i> simple. In any case, a heightened natural battle instinct will help you offset the gear's structural and technical vulnerabilities. This is how you may raise the baseline of your performance threshold. Are you able to comprehend this explanation, Sinclair?"</span>''|| [[Dawn Office Fixer Faust]]
+|- 
+|{{StatusEffect|Hardblood (Ally)|b}}||- Max Stack: 10 <br> - Stage 1 Hardblood <br> - At 10+ Hardblood, converts to {{StatusEffect|Hardblood II (Ally)|b}}. <br> - At 20+ Hardblood, converts to {{StatusEffect|Hardblood III (Ally)|b}}. <br> - Reverts to the previous Stage when the Stack drops below the requirements. <br> - Hardblood does not drop below 1. <br> - Raise Min & Max Speed values by 1 for every 10 Hardblood <br> - At {{StatusEffect|Hardblood II (Ally)|b}}, gain 1 {{StatusEffect|Offense Level Up|b}} based on the Stack (1 / 5 Stack) <br> - At {{StatusEffect|Hardblood III (Ally)|b}}, gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Defense Level Up|b}} based on the Stack (1 / 5 Stack)||[[The Manager of La Manchaland Don Quixote]]
+|- 
+|{{StatusEffect|Here Comes Magical Girl!|b}}||- For this turn, this unit uses Plus Coin Attack Skills <br> - Base Attack Skills deal +3% damage for every {{StatusEffect|Love-Hate|b}} on self (max 15%) || [[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]]
+|-
+|{{StatusEffect|Magical Arcana|b}}||- Max Stack: 3 <br> - Base Attack Skills deal +(Stack x 5)% damage <br> - Turn End: At 3 Stack and with -25 or higher SP, change SP to -25 || [[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]]
+|-
+|{{StatusEffect|Faith Beyond Question|b}} || - Min & Max Speed +1 <br> - Offense Level +2, Defense Level +2 <br> - Gain 1 more {{StatusEffect|Poise|b}} Potency from Base Skills <br> - This unit's SP does not drop below -15 from SP loss effects on this unit's Base Attack Skills <br> - Max Stack: 1 || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]]
+|-
+|{{StatusEffect|Appetite|b}}||Increases the healing provided by the Passive [Rustle Up]. Spent when the Passive activates. || [[R.B. Chef de Cuisine {{Ryoshu}}]]
+|- 
+|{{StatusEffect|Deep Inhale|b}}||- Max Stack: 20 <br> - On Crit: at 20+ {{StatusEffect|Poise|b}} Potency and 5+ {{StatusEffect|Poise|b}} Count, consume ({{StatusEffect|Poise|b}} Potency on self / 5) {{StatusEffect|Poise|b}} Potency to deal +({{StatusEffect|Poise|b}} Potency consumed x 4)% more Damage on Critical Hit and lose 1 Stack||[[Thoracalgia {{Ryoshu}}]] E.G.O
+|-
+|{{StatusEffect|Protector's Stance|b}}||- Max Stack: 2 <br> - Take (Stack x 10)% less damage <br> - Turn Start: Gain Shield by {{StatusEffect|Poise|b}} on self (max 20) <br> - Turn End: Gain 3 {{StatusEffect|Poise|b}} and +1 {{StatusEffect|Poise|b}} Count; this unit's leftmost Skill Slot gains +5 {{StatusEffect|Aggro|r}} next turn <br> - Turn End: Lose 1 Stack || [[Drifting Blade of Hongyuan {{Ryoshu}}]]
+|-
+|{{StatusEffect|Petals|b}} || - Max Stack: 30 <br> - Offense Level +1 for every 10 Stack <br> - Can be gained up to 15 Stacks per turn || [[Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū]]
+|-
+|{{StatusEffect|Entangled Life -羅生-|b}}|| Max Stack: 999 <br> - Gain 1 Stack for every HP damage dealt by {{Ryoshu}}'s Skills <br> - Deal +1% damage with Base Skills for every 33 Stack (max 10%) <br><br> ''<span style="color:#a16a3b">'Twisted and entangled beyond measure, bound and woven into a cocoon. Thread. Life. World.'</span>'' || [[Blade of the House of Spiders Ryōshū]] <br> [[Great Trichiliocosm 三千大世界 Ryōshū]] E.G.O
+|-
+|{{StatusEffect|Entanglement|b}} || - Max Stack: 4 <br> - Skill and Passive effects can increase Min & Max Stack of this effect to 5 and 9, respectively <br><br> ''<span style="color:#a16a3b">The threads of fate are entwined by encounter, and by the length of time surrendered unto another. <br> The myriad moments wherein one's time and another's overlap, be they fair or foul, will bind their strings in pitiless entanglement. <br> The time that has already been shared cannot be undone.</span>'' || [[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|String Severance -絕緣-|b}} ||- Max Stack: 4 <br> - Gain 1 Stack for every The House of Spiders Nursefather ally death <br> - Gain a different unique effect based on which of [[:Category:The House of Spiders Identities|The House of Spiders]] ally was defeated <br> - Take -7.5% damage for every Stack <br><br> ''<span style="color:#a16a3b">And so, let it be cut and severed. Even if it strays from what it must be.</span>''|| [[Blade of the House of Spiders Ryōshū]]
+|- 
+|{{StatusEffect|Remembrance|b}}||- When at 5+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 1 and Skill 2 gain Coin Power +(3/# of Coins, minimum 1) and deal +(30/# of Coins)% damage on Critical Hit <br> - When at 7+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 3 deals +(30/# of Coins)% more damage and deals +(50/# of Coins)% damage on Critical Hit || [[Blade Lineage Mentor Meursault]]
+|- 
+|{{StatusEffect|Unrelenting Spirit -剛氣-|b}}||- Min & Max Speed +1 <br> - If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 2.5)% damage (max 20%) <br> - Inflict +1 more {{StatusEffect|Tremor|d}} Potency and {{StatusEffect|Tremor|d}} Count with this unit's Skills <br> - If this unit has spent 8+ {{StatusEffect|Tigermark Round|r}}s and {{StatusEffect|Savage Tigermark Round|r}}s: at Turn End, convert this buff to {{StatusEffect|Unrelenting Spirit - Shin -剛氣-心-|b}} next turn <br> - Max Stack: 1|| [[The Thumb East Capo IIII Meursault]]
+|-
+|{{StatusEffect|Overheat|b}}||- Loses this effect when this unit gains {{StatusEffect|Savage Tigermark Round|r}} <br> - Min & Max Speed +2 <br> - Base Attack Skills Lose (cumulative number of {{StatusEffect|Tigermark Round|r}}s & {{StatusEffect|Savage Tigermark Round|r}}s spent / 2) Clash Power (max 10); however, gain the following effects(cumulative): <br> &nbsp;· Cumulative Rounds spent: X <br> &nbsp;· 8+ Rounds spent: Gain 1 {{StatusEffect|Protection|b}} for every 10% missing HP on self at Turn Start (max 5) <br> &nbsp;· 14+ Rounds spent: On Clash Lose, {{StatusEffect|Unbreakable Coin|r}}s of this unit's Base Attack Skills deal +(75 + missing HP percentage on self)% damage (max 150%) <br> &nbsp;· 20+ Rounds spent: Deal +(HP percentage difference)% damage against targets with higher remaining HP percentage than this unit (max 50%; except E.G.O Skills)|| [[The Thumb East Capo IIII Meursault]]
+|- 
+|{{StatusEffect|Accumulated Past (E.G.O)|b}}|| - Max Stack: 12 <br> - Turn Start: gain 1 {{StatusEffect|Clash Power Up|b}} and 1 {{StatusEffect|Offense Level Up|b}} for every 3 Stack || [[Crushbound Past Meursault]] E.G.O
+|-
+|{{StatusEffect|Loyalty Pheromone|b}} || - Max Stack: 3 <br> - Gain the following effects next turn based on Stack at Turn End: <br> 1+ Stack: 1 {{StatusEffect|Protection|b}} <br> 2+ Stack: 1 {{StatusEffect|Haste|b}} <br> 3 Stack: 1 {{StatusEffect|Clash Power Up|b}} || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Le Fauvisme - Masque de Chien|b}} || - Deal +5% damage for every 3 {{StatusEffect|Mauled Color -Rouge-|x}}{{StatusEffect|Mauled Color -Bleu-|x}}Mauled Color on target (max 15%) <br> - Inflict +1 more {{StatusEffect|Bleed|d}} and {{StatusEffect|Sinking|d}} Potency with Base Skills <br> - Before hitting with a Base Skill, if target does not have {{StatusEffect|Bleed|d}}, inflict +2 {{StatusEffect|Bleed|d}} Count on target (once per turn) || [[The Ring Fauvist Student Meursault]]
+|-
+|{{StatusEffect|Imperfections Addressed|b}} || - Deal +10% damage <br> - On Reuse of a Coin in [[The Ring Fauvist Docent Rodion]]'s "Critique" Skill, heal 3 SP (once per turn) <br> - Turn Start: If [[The Ring Fauvist Docent Rodion]] does not have {{StatusEffect|Réflexion|r}}, this effect expires || [[The Ring Fauvist Student Meursault]]
+|-
+|{{StatusEffect|Drink to the Fallen}} || - Max Stack: 4 <br> - Turn Start: Gain 1 {{StatusEffect|Poise}} for every Stack <br> · [[Blade Lineage Mentor Meursault]] gains 2 {{StatusEffect|Poise}} for every Stack instead <br> - Base Skills deal +({{StatusEffect|Poise}} on self x 1.5)% damage on Critical Hit (max 15%) <br> - Base Skills that gain {{StatusEffect|Poise}} Potency or Count gain Clash Power +1 <br> - Turn End: Lose 1 Stack || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+|{{StatusEffect|Resentment}} || - Min & Max Speed +2 <br> - On Hit, heal HP by 10% of damage dealt using the Skill (can heal up to 50% of this unit's max HP per Skill) || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+|{{StatusEffect|Resentful Scabbard}} || - When an ally, including this unit, takes HP damage, gain {{StatusEffect|Growing Resentment}} equal to damage taken <br> - In Memoriam Passive now ignores conditionals and activates at max potential <br> - When activating {{Icons|Pride}}Pride Reson., apply {{StatusEffect|Sword of the Homeland - The True Essence}} on all Blade Lineage allies other than this unit <br> <br> - On Using "Yield My Flesh", until Skill End: <br> · This unit's HP does not drop below 10 (once per turn) <br> · Lose ({{StatusEffect|Poise}} on self / 2) Clash Power (rounded down) <br> - On Using "To Claim Their Bones", gain 4 {{StatusEffect|Poise}} || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+|{{StatusEffect|Growing Resentment (Meursault)}} || - Max Stack: 999 <br> - "To Claim Their Bones" gains (Stack / 100) Final Power (max 6; rounded down) <br> - On Hit using the final Coins of either "Yield My Flesh" or "To Claim Their Bones", deal +(Stack / 10)% damage; then, this effect expires || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O; applied by {{StatusEffect|Resentful Scabbard}}
+|-
+|{{StatusEffect|Flower-burying Wedge -埋花櫼-|b}}||Base Stack: 0<br>Max Stack: 3<br>- All Coins on this unit's leftmost Base Attack Skill on the Dashboard become Unbreakable Coins<br>- Turn Start: gain 2 {{StatusEffect|Offense Level Up|b}} and 2 {{StatusEffect|Defense Level Down|d}}<br>- Turn Start: at 3+ Stack, gain 1 {{StatusEffect|Tarnished Blood|b}} (once per Encounter)<br>- Turn End: gain 1 Stack<br>※ Cannot raise the effect's Stack by any other means than the ones above<br>- Expires upon defeat or Retreat<br><br>- When this unit takes damage that brings their HP down to 0: instead of letting this unit's HP drop below 1, or becoming Staggered or Defeated, use the 'Tears of the Tarnished Blood - The End' Skill at the very end of that turn. Remove the Flower-burying Wedge when the Skill ends.<br>When this unit takes damage that brings their HP down to 1 at Turn End, use 'Tears of the Tarnished Blood - The End' Skill based on this unit's Speed next turn || [[Tears of the Tarnished Blood 汚血泣淚 Hong Lu]] E.G.O
+|-
+|{{StatusEffect|Leash-holder of All Heishou|b}}||- Max Stack: 11 <br> - Gain the following effects based on Stack: <br> · For every 1 Stack, gain 1 Max Speed (max 5) and deal 1% more damage with Skills <br> · For every 2 Stack, gain 1 Min Speed (max 2) and 1 {{StatusEffect|Defense Level Up|b}} (max 5) <br> · For every 3 Stack, gain 1 {{StatusEffect|Offense Level Up|b}} (max 3) <br> · At 5+ Stack, gain 1 {{StatusEffect|Damage Up|b}} and apply 1 {{StatusEffect|Offense Level Up|b}} to all Heishou Pack Identities || [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Heishou Bolus Contamination -黑獸丸染-|b}} ||- Max Stack: 11 <br> - Empowers The Lord of Hongyuan Hong Lu based on which Heishou he activated combo with <br> - The Heishou Bolus Contamination effects can stack with each other: <br> · [[Heishou Pack - Mao Branch Adept Faust|Heishou - Mao Adept Faust]]: take -5% damage from Skills <br> · [[Heishou Pack - Mao Branch Ryōshū|Heishou - Mao {{Ryoshu}}]]: if this unit's Speed is faster than the target's, deal +5% damage <br> · [[Heishou Pack - Mao Branch Outis|Heishou - Mao Outis]]: inflict +1 {{StatusEffect|Rupture|d}} Count On Hit with Unopposed Attacks (once per turn) <br> · [[Heishou Pack - Si Branch Rodion|Heishou - Si Rodion]]: inflict 1 {{StatusEffect|Rupture|d}} On Critical Hit (3 times per turn) <br> · [[Heishou Pack - Si Branch Gregor|Heishou - Si Gregor]]: Gain +1 {{StatusEffect|Poise|b}} Count when dealing Rupture damage (once per turn) <br> · [[Heishou Pack - Wu Branch Adept Yi Sang|Heishou - Wu Adept Yi Sang]]: trigger {{StatusEffect|Tremor Burst|d}} once on Final Coin (once per turn) <br> · [[Heishou Pack - You Branch Adept Heathcliff|Heishou - You Adept Heathcliff]]: deal 5% of {{Icons|Gluttony}}Gluttony damage dealt as {{Icons|Wrath}}Wrath damage <br> · [[Heishou Pack - You Branch Sinclair|Heishou - You Sinclair]]: inflict 1 {{StatusEffect|Burn|d}} when inflicting {{StatusEffect|Rupture|d}} (3 times per turn) <br> · [[Heishou Pack - Wei Branch Don Quixote|Heishou - Wei Don Quixote]]: inflict 1 {{StatusEffect|Sinking|d}} when inflicting {{StatusEffect|Rupture|d}} (3 times per turn) <br>|| [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Life from Death -死中求活-|b}}||- Max Stack: 5 <br> - Turn Start: activate the following <br> · Gain 1 {{StatusEffect|Offense Level Up|b}} for every 1 Stack (max 5) <br> · Gain 1 {{StatusEffect|Damage Up|b}} for every 2 Stack (max 2) <br> · Gain 1 {{StatusEffect|Attack Power Up|b}} at 3+ Stack || [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Thunderer|b}}||- Turn Start: gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Defense Level Up|b}} <br> - Turn End: lose 1 Stack <br> - Max Stack: 5 || [[To Remain Oneself 宁作吾 Hong Lu]] E.G.O
+|-
+|{{StatusEffect|Higher Thunderer|b}}||- Turn Start: gain 2 {{StatusEffect|Offense Level Up|b}} and 2 {{StatusEffect|Defense Level Up|b}} <br> - Turn End: lose 1 Stack <br> - Max Stack: 5 || [[To Remain Oneself 宁作吾 Hong Lu]] E.G.O
+|-
+|{{StatusEffect|Artwork - Tibia (Hong Lu)|b}} || Apply the following effects to this unit's Base Attack Skills and Clashable Counter Skill based on {{StatusEffect|Corpus Ingredient|b}} Potency: <br> - 1+: Base Power +1 <br> - 2+: If the enemy has {{StatusEffect|Bleed|d}} or 'Unique Bleed', deal +10% damage <br> - 3+: Inflict +1 more {{StatusEffect|Bleed|d}} Potency and Count <br> - 4+: Base Power +1 <br> - 5+: Base Power +1 || [[The House of Spiders: The Ring Nursefather Hong Lu]]
+|-
+|{{StatusEffect|Prisoner Transport Arrangements (Hong Lu)}} || - Base Stack: 1 <br> - In a Clash against enemies that have {{StatusEffect|Trussed -Hong Lu-}}, gain Clash Power +1 <br> - On Hit against enemies that have {{StatusEffect|Trussed -Hong Lu-}}, inflict 1 {{StatusEffect|Bleed}} and gain 2 {{StatusEffect|Poise}} (2 Skills per turn) <br> - If there are no {{StatusEffect|Trussed -Hong Lu-}} targets, expire || [[S Corp. Ch'unokkun Hong Lu]]
+|- 
+|{{StatusEffect|Before the King|b}}||When this unit's attack with 1 Atk Weight hits, inflict 50% of the resulting Coin value on hit as (Affinity/Attack type of the Attack Skill used to hit) damage against 2 other attackable enemies with the least HP. || [[Binds Heathcliff]] E.G.O
+|-
+|{{StatusEffect|Before the King in Binds|b}}||When this unit's attack with 1 Atk Weight hits, inflict 100% of the resulting Coin value on hit as (Affinity/Attack type of the Attack Skill used to hit) damage against 2 other attackable enemies with the least HP. || [[Binds Heathcliff]] E.G.O
+|- 
+|{{StatusEffect|Dullahan|b}}||- Max Value: 3 <br> - Gain 3 Offense Level <br> - Lose 3 Defense Level <br> - Raises Min & Max Speed values by 1 <br> - Turn End: Gain 1 Dullahan next turn (At -25 SP or less, however, completely lose Dullahan) <br> - Turn End: If this unit has Dullahan, lose (15 - ({{StatusEffect|Coffin|b}}/2)) SP. (min 10) || [[Wild Hunt Heathcliff]]
+|-
+|{{StatusEffect|Coffin|b}}||- Max Value: 10 <br> - At Turn End: <br>&nbsp;- Gain 2 {{StatusEffect|Damage Up|b}} next turn for every 3 Value (max 6) <br>&nbsp;- Raise minimum Speed by 1 next turn for every 4 Value (max 2) <br>&nbsp;- Gain 1 {{StatusEffect|Clash Power Up|b}} next turn for every 5 Value (max 2) || [[Wild Hunt Heathcliff]]
+|-
+|{{StatusEffect|Tremor - Clockwinding|b}}||- Max Speed +2 <br> - Consume {{StatusEffect|Tremor|d}} Count on self to inflict 1 more {{StatusEffect|Tremor|d}} Potency or Count when inflicting them with this unit's Skill or Coin Effects <br> - When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> - Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count) || [[Asymmetrical Inertia Heathcliff]] E.G.O
+|- 
+|{{StatusEffect|Concentration-Sniper-|b}}||- Max Stack: 4 <br> - Turn End: gain 1 Stack || [[Full-Stop Office Fixer Heathcliff]]
+|- 
+|{{StatusEffect|Cumulus Wall|b}}||Max Stack: 1 <br> Defense Skill Final Power +1 <br> This effect expires at Turn End or Attack End of the following: 'Rules of the Backstreets' || [[Kurokumo Clan Wakashu Heathcliff]]
+|-
+|{{StatusEffect|Battleblood Instinct|b}}||- Max Stack: 20 <br> - For every Stack, deal +0.75% damage <br> - For every 10 Stack, gain 1 {{StatusEffect|Haste|b}} next turn || [[Heishou Pack - You Branch Adept Heathcliff]]
+|- 
+|{{StatusEffect|Book of Vengeance -Heathcliff-|b}}|| Max Stack: 30 <br> - Offense Level +1, Defense Level +1 for every 5 Stack||[[The Middle Big Brother Heathcliff]]
+|- 
+|{{StatusEffect|Vengeance Tattoo|b}}||- Max Stack: 20 <br> - Base Skills deal +1% damage for every Stack||[[The Middle Big Brother Heathcliff]]
+|-
+|{{StatusEffect|Maturing Textbook}} || - Base Skills deal +(10 + (Stack x 5))% damage <br> - Can gain up to 2 Stacks per turn <br> - Max Stack: 3 || [[The House of Spiders: The Thumb Apprentice Heathcliff]]
+|-
+|{{StatusEffect|Defensive Stance|b}}||- Max Value: 2<br>- This effect does not compound in Potency; stacking it only extends its duration. <br> - Reduced by 1 at Turn End <br> - When a unit gains this effect, gain the following effects next turn: <br> &nbsp;· Fix this unit's Speed to its minimum value <br> &nbsp;· Gain 5 {{StatusEffect|Defense Level Up|b}} <br> &nbsp;· Each of this unit's Slots gain +(10 / this unit's # of Slots) {{StatusEffect|Aggro|r}} <br> &nbsp;· When chaining Skills, this unit can draw enemies' attack toward this unit regardless of Speed (Focused Encounters only) <br> &nbsp;· Upon Clash Win, trigger {{StatusEffect|Tremor Burst|d}} <br> &nbsp;· Cannot be Staggered by damage||[[Zwei Assoc. West Section 3 Ishmael]]
+|- 
+|{{StatusEffect|Heated Gas Harpoon|b}}||For 1 turn, inflict 1 {{StatusEffect|Burn|d}} with Heads Hit || [[The Pequod Captain Ishmael]], Uptie II-III
+|-
+|{{StatusEffect|Overheated Gas Harpoon|b}}||For 1 turn, inflict 1 {{StatusEffect|Burn|d}} On Hit || [[The Pequod Captain Ishmael]], Uptie IV
+|-
+|{{StatusEffect|Bright -光-|b}}||- Potency: Base 0, Max 5 <br> - Count: Base 3, Max 3 <br><br>- Turn Start: gain 1 {{StatusEffect|Offense Level Up|b}} for every Potency <br>- Turn Start: lose 1 Count || [[Jeong's Office Rep Ishmael]]
+|-
+|{{StatusEffect|The Middle Styled Augmentation Tattoos|b}} || - Max Stack: 10 <br> - Final Power +1 for Base Skills for every 5 Stack (max 2) <br> - {{Icons|Envy}}Envy Skills and {{Icons|Blunt}}Blunt Skills deal +5% damage for every Stack (max 50%) || [[The House of Spiders: The Middle Apprentice Ishmael]]
+|-
+|{{StatusEffect|Thermal Blades|b}}|| - Max Stack: 2 <br> - if target hit by Base Skills has {{StatusEffect|Burn|d}}, heal 3 SP (2 times per turn ) <br> - Inflict {{StatusEffect|Burn|d}} when inflicting {{StatusEffect|Bleed|d}} with certain Skill Coins <br> - Turn End: Lose 1 Stack <br> ||[[The House of Spiders: The Middle Apprentice Ishmael]]
+|-
+|{{StatusEffect|Dokkaebi Arms}} || - Take -15% damage <br> - On Skill Use, gain 1 {{StatusEffect|Haste}} next turn (2 times per turn) <br> - Combat End: This effect expires, and gain +2 {{StatusEffect|Poise}} Count || [[LCD OSIR Team Ishmael]]
+|-
+|{{StatusEffect|Bearing of a Salsu}} || - Max Stack: 3 <br> - Gain Offense Level for every Stack <br> - On Attack Hit with {{Icons|Slash}}Slash Skills, gain 1 {{StatusEffect|Poise}} (2 times per turn) <br> - Lose 1 Stack when an allied [[:Category:Blade Lineage Identities|Blade Lineage]] Identity is defeated || [[LCD OSIR Team Ishmael]]
+|-
+|{{StatusEffect|Mook Workshop - Ye -銳- Type II Bladedraw / Thrust Force - Dokkaebi Fire}} || - Max Stack: 20 <br> - Can gain up to 10 Stacks per turn <br> - {{Icons|Slash}}Slash Base Attack Skills deal +1% damage for every Stack (max 10%) <br> - Defense Skills lose 1 Clash Power for every 2 Stack (max 5) <br> - Turn End: Gain 1 {{StatusEffect|Haste}} next turn for every 5 Stack (max 3) || [[LCD OSIR Team Ishmael]]
+|- 
+|{{StatusEffect|Blessing|b}}||- Turn Start: gain 1 {{StatusEffect|Protecting Sword|b}} for every 8 SP (max 5) <br> - When Clash ends, inflict 2 {{StatusEffect|Sinking|d}} (once per turn) <br> - When hit, inflict 2 {{StatusEffect|Sinking|d}} on the attacker (once per turn) <br> - For every 20 SP, inflict +1 more {{StatusEffect|Sinking|d}} Potency with above effects (max 2) <br> - Replace this unit's Base Skills with Plus Coin Skills || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Despair|b}} ||- Turn Start: gain 1 {{StatusEffect|Piercing Sword|b}} for every -8 SP (max 5) <br> - When Clash ends, inflict +1 {{StatusEffect|Sinking|d}} Count (once per turn) <br> - On Hit with the first Coin of a Base Attack Skill, inflict +1 {{StatusEffect|Sinking|d}} Count (once per turn) <br> - For every -20 SP, inflict +1 more {{StatusEffect|Sinking|d}} Count with above effects (max 2) <br> - Replace this unit's Base Skills with Minus Coin Skills || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Protecting Sword|b}}||- Turn Start: gain 1 {{StatusEffect|Defense Level Up|b}} for every Stack (max 5) <br> - Turn Start: +(Stack x 3) {{StatusEffect|Aggro|r}} to the leftmost Skill Slot on the Dashboard (max 15) <br> - Max Stack: 5 <br> - Expires at Turn End || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Piercing Sword|b}}||- Turn Start: gain 1 {{StatusEffect|Offense Level Up|b}} for every Stack (max 5) <br> - Turn Start: -(Stack x 0.15) {{StatusEffect|Aggro|r}} to this unit's Skill Slots on the Dashboard (max 0.75) <br> - Max Stack: 5 <br> - Expires at Turn End || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Tear-sharpened|b}}||- Turn Start: gain 5 {{StatusEffect|Deep Tears|b}} <br>  &nbsp;· At 3 Stack, gain additional 5 {{StatusEffect|Deep Tears|b}} <br> - Turn End: lose (Stack x 15) SP <br> - Base Attack Skills deal +(Stack x 10)% damage (max 30%) <br> - If this unit has {{StatusEffect|Blessing|b}}, gain {{StatusEffect|Clash Power Up|b}} by the effect's Stack at Turn Start <br> - If this unit has {{StatusEffect|Despair|b}}, gain {{StatusEffect|Pierce Power Up|b}} by the effect's Stack at Turn Start <br> - Max Stack: 3 || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Le Fauvisme - Masque de Loup|b}} || - Min & Max Speed +1 <br> - Inflict +1 more {{StatusEffect|Bleed|d}} and {{StatusEffect|Sinking|d}} Potency with Base Skills <br> - On Hit, if target has 3+ {{StatusEffect|Mauled Color -Bleu-|d}}, inflict +1 {{StatusEffect|Sinking|d}} Count (once per turn) <br> - On Hit, if target has 3+ {{StatusEffect|Mauled Color -Rouge-|d}}, inflict +1 {{StatusEffect|Bleed|d}} Count (once per turn) || [[The Ring Fauvist Docent Rodion]]
+|-
+|{{StatusEffect|L'Hommage|b}} || - Max Stack: 3 <br> - Turn Start: Randomly gain 1 {{StatusEffect|Offense Level Up|b}} or 1 {{StatusEffect|Defense Level Up|b}} for every Stack (max 3 times) <br> - Turn End: This effect expires || [[The Ring Fauvist Docent Rodion]]
+|-
+|{{StatusEffect|Eye of Precognition (Rodion)}} || - Max Stack: 30 <br> - Can lose up to 10 Stacks per turn || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+|{{StatusEffect|Eye of Precognition - Overheat (Rodion)}} || - Max Stack: 30 <br> - Offense Level +3, Defense Level -3 <br> - Turn Start: Gain 10 Stacks <br> - At 30 Stack, convert into {{StatusEffect|Eye of Precognition (Rodion)}} || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+|{{StatusEffect|Accelerating Future (Rodion)}} || - Max Stack: 5 <br> - Base Skills deal +3% damage for every Stack (max 15%) <br> - Base Skill Clash Power +1 for every 2 Stacks <br> - At 5 Stacks, Base Skill Coin Power +1 <br> - Skill End: This effect expires || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+|{{StatusEffect|Book of Vengeance -Sinclair-|b}}||- Max Stack: 30 <br> - Deal more damage equal to (Stack)% (max 30%) <br> - Gain the following effects next turn based on Stack: <br> &nbsp;· At 10+ Stack: gain 1 {{StatusEffect|Blunt DMG Up|b}} <br> &nbsp;· At 20+ Stack: Max Speed +1, gain 1 {{StatusEffect|Power Up|b}} <br> &nbsp;· At 30 Stack: gain 2 {{StatusEffect|Blunt DMG Up|b}}||[[The Middle Little Brother Sinclair]]
+|-
+|{{StatusEffect|Flower-burying Pin -埋花針-|b}}|| Max Stack: 20<br>- Gain 1 Stack at Turn End or when hit<br>- Gain 1 Offense Level per 5 Stack<br>- If the unit that has this effect dies, inflict {{Icons|Gluttony}}Gluttony damage equal to Stack and inflict 5 {{StatusEffect|Rupture|d}}<br>- Expires upon death or Retreat || [[Tears of the Tarnished Blood 汚血泣淚 Sinclair]] E.G.O
+|-
+|{{StatusEffect|Denial -不許-|b}}|| When this unit takes damage that brings their HP down to 0: this unit's HP does not drop below 1; recover from Stagger due to damage.<br>If the above effect activated, dies at Turn End.<br>Expires upon death, Retreat, or Turn End || [[Tears of the Tarnished Blood 汚血泣淚 Sinclair]] E.G.O
+|- 
+|{{StatusEffect|Moonlit Azure Blade|b}}||- Max Stack: 20 <br> - Turn Start: Gain 2 Shield for every Stack <br> - Deal +1% Damage on Critical Hit for every Stack || [[The House of Spiders: The Pinky Apprentice Sinclair]]
+|-
+|{{StatusEffect|Blood-tinged Scissorblades (Ally)|b}}||- Max Value: 10 <br> - Stage 1 Blood-tinged Scissorblades <br> - At 10+ Blood-tinged Scissorblades, converts to {{StatusEffect|Blood-tinged Scissorblades II (Ally)|b}}. <br> - At 20+ Blood-tinged Scissorblades, converts to {{StatusEffect|Blood-tinged Scissorblades III (Ally)|b}}. <br> - Reverts to previous stage when the Stack drops below the requirements. <br> - Blood-tinged Scissorblades does not drop below 1. <br> - At {{StatusEffect|Blood-tinged Scissorblades II (Ally)|b}}, gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Defense Level Down|d}} based on the Stack (1/5 Stack) <br> - At {{StatusEffect|Blood-tinged Scissorblades III (Ally)|b}}, gain 1 {{StatusEffect|Offense Level Up|b}} on the Stack (1/5 Stack)||[[The Barber of La Manchaland Outis]]
+|- 
+|{{StatusEffect|Violent Collections|b}}||- When this unit has {{StatusEffect|Haste|b}}, gain +1 more {{StatusEffect|Tremor|d}} Count from its Base Skills <br> - If this unit's Speed is faster than the target's, deal +(Speed difference x 3)% damage (max 15%) || [[T Corp. Class 3 VDCU Staff Outis]]
+|-
+|{{StatusEffect|The Udjat -Vanguard-|b}}|| - Max Stack: 2 <br> - Min & Max Speed +3 <br> - Combat Start: gain 1 {{StatusEffect|Protection|b}} <br> - Gain the following effects during the Combat Phase (once per Skill, 3 times per turn) <br> · When this unit is the main target of an Unopposed Attack Skill, halve the chance for the Skill's first Coin to flip Heads <br> · Clash Start: In the first Clash, halve the target's chance to flip Heads for all of its Coins <br> · For both of the above effects, if the target uses Minus Coins, halve their chance to flip Tails instead <br> - Turn End: Reduce 1 Stack || [[LCA Udjat Vanguard Team 3 Leader Outis]]
+|-
+|{{StatusEffect|The Middle - Vengeance Tattoo -Great Sister-|b}} || - Max Stack: 10 <br> - Final Power +1 for Base Skills for every 5 Stack (max 2) <br> - {{Icons|Envy}}Envy Skills and {{Icons|Blunt}}Blunt Skills deal +5% damage for every Stack (max 50%) || [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Ridiculous Grit (Outis)|b}} || - Fix any Attack Type Resistances that exceed Normal (1.0) to Normal (unless Staggered) <br> - Take -(30 + ({{StatusEffect|The Middle - Vengeance Tattoo -Great Sister-|b}} Stack x 4))% damage from Skills (max 50%; rounded down) <br> - On Clash Win, heal an additional (Clash count x 5) SP (max 15) <br> - Turn End: If this unit lost SP this turn due to its Skill effects, deal +10% damage next turn using Base Skills (once per turn) <br> - Turn End: Lose 1 Stack || [[The House of Spiders: The Middle Nursefather Outis]]
+|- 
+|{{StatusEffect|Check This Out, Kiddo! (Outis)|b}} || - Max Stack: 10 <br> - Reduced by 1 when this unit is hit by 2 Skills <br> - At 5+ Stack, Base Skills gain Final Power +1 <br> - {{Icons|Blunt}}Blunt Skills deal +1% damage for every Stack (max 10%) || [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Avenging My Family|b}} ||- {{Icons|Envy}}Envy Base Skills deal +20% damage <br> - Base Skills gain Final Power +1 || [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Unjust Enrichment|b}}||- Gained on Heads Hit against targets that have {{StatusEffect|Bleed|d}} (Max 4) <br> - When 'Bullets are Pricey' Passive activates, consume all Unjust Enrichment stack to deal bonus damage ||  [[Twinhook Pirates First Mate Gregor]]
+|-
+|{{StatusEffect|Man in Scabbard|b}}||- Max Stack: 40 <br> - For every (Stack / 8), gain {{StatusEffect|Aggro|r}} (max 5; rounded down; affects the leftmost Skill Slot on the Dashboard) <br> - For every (Stack / 20), gain {{StatusEffect|Protection|b}} (max 2; rounded down) <br> - Gain 10 Stacks at Turn End <br> ※ Can gain up to 20 per turn || [[Unbrilliant Glory Gregor]] E.G.O
+|-
+|{{StatusEffect|Lamp|b}} || - Max Stack: 8 <br> - Turn End: Gain 1 {{StatusEffect|Bind|d}} next turn for every 2 Stack (max 4) <br> - Turn End: At max Stack, if there are enemies on the field, consume all Stack to activate the following effects next turn: <br> · Gain +10 {{StatusEffect|Aggro|r}} to the leftmost Slot <br> · Inflict 3 {{StatusEffect|Dazzle|d}} to the enemy(Core) with the most current HP || [[Lobotomy E.G.O::Lamp Gregor]]
+|-
+|{{StatusEffect|High-voltage Exoskeleton|b}}|| - Gain (Stack x 5) Shield <br> - If this unit loses (Stack x 5) Shield, lose 1 {{StatusEffect|High-voltage Exoskeleton|b}} Stack <br> - Turn End: Gain {{StatusEffect|Charge|b}} Count equal to {{StatusEffect|High-voltage Exoskeleton|b}}; both {{StatusEffect|High-voltage Exoskeleton|b}} and Shield gained from its effect expire <br> - Max Stack: 20 ||[[LCE E.G.O::AEDD Gregor]]
+|-
+|{{StatusEffect|Self-charge (Gregor)|b}}|| - Final Power +2 <br> - Gain {{StatusEffect|Charge|b}} Count equal to Stack lost <br> - Lose Stack at: <br> · Attack End of Skills that hit this unit (lose 1 Stack) <br> · Attack End (lose 3 Stack) <br> · Turn End (lose 5 Stack) <br> - Max Stack: 20 <br> - This unit's HP cannot drop below 1 before this effect expires ||[[LCE E.G.O::AEDD Gregor]]
+|-
+|{{StatusEffect|Light of Daybreak}} || - Max Stack: 30 <br> - Can gain up to 20 Stack per turn <br> - Turn Start: Gain 1 {{StatusEffect|Burn}} for every 5 Stack; then, gain +1 {{StatusEffect|Burn}} Count for every 10 Stack <br> - On Hit using Base Attack Skill, gain (1 + ({{StatusEffect|Burn}} on target / 3)) Stack (max 3) <br> - At 10+ Stack, Base Skills inflict +1 more {{StatusEffect|Burn}} Potency on enemies <br> - At 20+ Stack, Base Skills inflict +1 more {{StatusEffect|Burn}} Count on enemies <br><br> ''<span style="color:#a16a3b">The first flare of dawn is not a fire that scorches, but one that casts its glow on people.</span>'' || [[Dawn Office Rep Gregor]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Shin (心)}} Shin (心) Variants'''</center>
+|-
+|{{StatusEffect|Shin (心) - Fate|b}} || - Min & Max Speed +1 <br> - Gain +1 more {{StatusEffect|Poise|b}} Potency and Count from Base Skills <br> If this unit's SP is higher than the target's, deal +1% damage for every 3 SP difference (max 15%; Non-SP Units are considered to be at 0 SP) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Shin (心) - Procuration|b}} || - Min & Max Speed +2 <br> - Offense Level +1, Defense Level +1 <br> - Gain 1 more {{StatusEffect|Poise|b}} Potency and {{StatusEffect|Poise|b}} Count from Base Skills <br> - Deal +(missing HP percentage / 2)% damage with Base Skills (max 40%) <br> - Max Stack: 1 || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]]
+|-
+|{{StatusEffect|Shin (心) - Dihui Star -地慧星-|b}} ||- Gain Min & Max Speed +2 <br> - Upon using a Base Attack Skill, gain 2 {{StatusEffect|Poise|b}} Potency and +1 {{StatusEffect|Poise|b}} Count <br> - This unit's Base Attack Skills deal +10% damage on Critical Hit <br> - Take -20% damage from Unopposed Attacks and Unbreakable Coins|| [[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|Unrelenting Spirit - Shin -剛氣-心-|b}}||- Min & Max Speed +3 <br> - If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 5)% damage (max 40%) <br> - Inflict +2 more {{StatusEffect|Tremor|d}} Potency and {{StatusEffect|Tremor|d}} Count with this unit's Skills <br> - Max Stack: 1|| [[The Thumb East Capo IIII Meursault]]
+|-
+|{{StatusEffect|Shin (心) - Disgrace}} || - Min & Max Speed +1 <br> - Base Skills inflict +1 more {{StatusEffect|Tremor}} and {{StatusEffect|Burn}} Potency and Count <br> - Deal +3% damage for every 3 {{StatusEffect|Poise}} Potency on self (max 15%) || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Mirror Dungeon-exclusive Buffs'''</center>
+<!-- These are buffs exclusively available in Mirror Dungeon. This usually means that they're only available via E.G.O Gifts. Sort by E.G.O Gift Keyword (if any) then Tier. -->
+|-
+|{{StatusEffect|Pheromone|b}} || - Gain +10 {{StatusEffect|Aggro|r}}<br>- When hit, inflict 3 {{StatusEffect|Burn|d}} on target || {{GiftTT|Royal Jelly Perfume|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Hardblood Cast|b}}||- Max Stack: 3<br>- When clashing against enemies with {{StatusEffect|Bleed|d}} or Unique Bleed, Clash Power +1<br>- When consuming {{StatusEffect|Bloodfeast|r}} with an Attack Skill, if there isn't enough {{StatusEffect|Bloodfeast|r}}, consume 1 HP for every 1 missing {{StatusEffect|Bloodfeast|r}} to generate it before consuming it (the damage from this effect does not Stagger or reduce this unit's HP below 1<br>- Reduced by 1 at Turn End ||{{GiftTT|Hardblood Glaive|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Spark of Inspiration|b}} || Deal +10% damage against targets with {{StatusEffect|Art Medium|d}} || {{GiftTT|Average Artwork|25|t}} E.G.O Gift<br>{{GiftTT|Exquisite Artwork|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Exquisite Aesthetics|b}} || - Plus Coin Skills gain Coin Power +1 <br> - Minus Coin Skills gain Base Power +(4 / # of Coins) <br> - Deal +30% damage with Skills || {{GiftTT|Exquisite Artwork|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Beauty of the Physique|b}} || - Against enemies that have 20+ {{StatusEffect|Bleed|d}}, Base Skills gain Coin Power +1 and deal +20% damage (calculated as the sum of {{StatusEffect|Bleed|d}} on all targets for Skills that have 2+ Atk Weight) <br> - Base Skills that consume 'Unique Charge' gain Coin Power +1 (excluding E.G.O Skills) <br> - Turn End: This effect expires || {{GiftTT|Artwork: Evolving Pulsation|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Charm of the Beastly|b}} || - Against enemies that have 20+ {{StatusEffect|Bleed|d}}, Base Skills gain Coin Power +1 and deal +20% damage (calculated as the sum of {{StatusEffect|Bleed|d}} on all targets for Skills that have 2+ Atk Weight) <br> - On Attack Start, if target has 15- SP or 20+ {{StatusEffect|Sinking|d}} Potency, gain 1 {{StatusEffect|Blunt Power Up|b}} next turn (once per turn) <br> - Turn End: This effect expires || {{GiftTT|Artwork: Taxidermied Ferity|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Tremor - Distribution|b}}||- Turn End: Gain ((sum of all allies' {{StatusEffect|Tremor|d}} Count) / (# of surviving allies)) {{StatusEffect|Offense Level Up|b}} next turn (max 5) <br> - When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> - Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count)|| {{GiftTT|Entanglement Override Sequencer|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Microprecision Time Acceleration|b}}||This unit gains base Min and Max Speed by Stack<br>Skills that inflict {{StatusEffect|Tremor|d}} Potency, Count, or trigger {{StatusEffect|Tremor Burst|d}}: gain Base Power +(Stack), deal +(Stack x 10)% damage against enemies, and when raising Stagger Thresholds via {{StatusEffect|Tremor Burst|d}}, increase the amount raised by (Stack x 10)% (including E.G.O Skills)<br>Reduced by 1 at Turn End<br>At 1 Stack, the Stack does not drop below 0, and is maintained through the Encounter.||{{GiftTT|Microprecision Time Accelerator|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Glimpse of Precognition|b}}||- Max Stack: 5 <br><br> - Clash Power +2 for every Stack <br> - For every 2 Stack: <br> - Plus Coin Skills gain Coin Power +1 <br> - Minus Coin Skills gain Final Power +2 <br> - Expires at Skill End||{{GiftTT|Imperfect Eye of Precognition|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Emergency Barrier Battery|b}}||- Max Stack: 7<br>- When Staggered, consume all Emergency Barrier Battery Stack and gain {{StatusEffect|Charge Barrier|b}} by the Stack consumed || {{GiftTT|W Corp. Standard Issue Cap|25|t}} E.G.O Gift<br>{{GiftTT|Cleanup Agent Gear Set C|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Near-light Superbattery|b}}|| - Max Stack: 100 <br> - When consuming {{StatusEffect|Charge|b}} Count, add the amount consumed to this buff's Stack <br> - Max {{StatusEffect|Charge|b}} Count Cap +10 <br> - Gain 1 {{StatusEffect|Charge|b}} Count when allies gain Charge Potency or Count <br> - When this unit consumes {{StatusEffect|Charge|b}} Count with its Skills, consume the same amount of {{StatusEffect|Charge|b}} Count 1 more time (when there isn't enough {{StatusEffect|Charge|b}} Count, consume as much as available) <br> - Deal +10% damage for every 10 Stack <br> - Enemies gain +0.1 Resistance against this unit's attacks for every 20 Stack (max +0.5 Resist; does not activate against Staggered enemies) <br> - When the Identity with this effect dies, the buff transfers to the ally who is second earliest to this unit in the Deployment order. The Stack carries over as well. || {{GiftTT|Charge-type Gloves|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Sword of the Homeland - Striking}} || - Max Stack: 1<br>- Plus Coin Power +1, deal +15% damage on Critical Hit<br>- Expires at Turn End || {{GiftTT|The Book of the Homeland Swordplay [本國劍譜]|25|t}}
+|-
+|{{StatusEffect|Desperado|b}} || - Max Stack: 2<br>- For every Stack, Base Attack Skill Clash Power +1, Base Power +1<br>- At 2 Stack, Base Attack Skill Plus Coin Power +1, Minus Coin Power -1<br>- Expires at Turn End || {{GiftTT|Desperado|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Trauma Shield|b}}|| - Reduce SP damage from enemies by 80%<br>- Reduce {{StatusEffect|Sinking|d}} damage taken by 80%<br>- Reduced by 1 at Turn End || {{GiftTT|Trauma Shield|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Blessing (E.G.O Gift)|b}}|| - Turn Start: gain 2 {{StatusEffect|Protection|b}}<br>- Adjust any Attack Type Resistances exceeding 1 to 1 (unless Staggered) || {{GiftTT|Ashen Constellation's Blessing|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Dhyāna|b}}||- Max Stack: 108<br>- Deal +1% more damage for every Stack||{{GiftTT|False Halo|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Firepower|b}} || - Max Stack: 10 <br> - Deal +10% damage for every Stack || {{GiftTT|Shatterbound Cannon|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Backup Candy|b}}||Turn End: at less than 60% HP...<br>Heal 30% HP, heal 15 SP, lose 1 Backup Candy, and 1 {{StatusEffect|Hunger (Kkomi)|b}}<br>At 0 Stack, apply 1 {{StatusEffect|Incandescent Indulgence|b}}, then expires ||{{GiftTT|Kkomi's Mini-Gift|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Hunger (Kkomi)|b}}||Max Stack: 3<br>Turn End: gain 2 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Damage Up|b}} next turn for every Stack<br>At max Stack(3), lose 5% HP at Turn End ||{{GiftTT|Kkomi's Mini-Gift|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Incandescent Indulgence|b}}||Gain 30% base HP for this Encounter<br>Turn Start: fully heal HP and SP (once per Encounter) ||{{GiftTT|Kkomi's Mini-Gift|25|t}} E.G.O Gift; <br> applied by {{StatusEffect|Backup Candy|b}}
+|-
+|}
+
+==Debuffs==
+Negative Status Effects (or Debuffs) provide negative effects to the receiver.
+
+====Damage Type DMG Down====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type DMG Down'''</center>
+|-
+|{{StatusEffect|Slash DMG Down|d}}||Deal 10% less damage with {{Icons|Slash}}Slash skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pierce DMG Down|d}}||Deal 10% less damage with {{Icons|Pierce}}Pierce skills per Count for one turn. (Max 10) 
+|-
+|{{StatusEffect|Blunt DMG Down|d}}||Deal 10% less damage with {{Icons|Blunt}}Blunt skills per Count for one turn. (Max 10)
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Affinity DMG Down'''</center>
+|-
+|{{StatusEffect|Wrath DMG Down|d}}||Deal 10% less damage with {{Icons|Wrath}}Wrath skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Lust DMG Down|d}}|| Deal 10% less damage with {{Icons|Lust}}Lust skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Sloth DMG Down|d}}||Deal 10% less damage with {{Icons|Sloth}}Sloth skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gluttony DMG Down|d}}||Deal 10% less damage with {{Icons|Gluttony}}Gluttony skills per Count for one turn. (Max 10) 
+|-
+|{{StatusEffect|Gloom DMG Down|d}}||Deal 10% less damage with {{Icons|Gloom}}Gloom skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pride DMG Down|d}}||Deal 10% less damage with {{Icons|Pride}}Pride skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Envy DMG Down|d}}|| Deal 10% less damage with {{Icons|Envy}}Envy skills per Count for one turn. (Max 10)
+|-
+|}
+
+====Damage Type Power Down====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type Power Down'''</center>
+|-
+|{{StatusEffect|Slash Power Down|d}}|| {{Icons|Slash}}Slash skills lose final Power by the effect's Count for one turn
+|-
+|{{StatusEffect|Pierce Power Down|d}}|| {{Icons|Pierce}}Pierce skills lose final Power by the effect's Count for one turn
+|-
+|{{StatusEffect|Blunt Power Down|d}}||{{Icons|Blunt}}Blunt skills lose final Power by the effect's Count for one turn.
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Affinity Power Down'''</center>
+|-
+|{{StatusEffect|Wrath Power Down|d}}||{{Icons|Wrath}}Wrath skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Lust Power Down|d}}||{{Icons|Lust}}Lust skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Sloth Power Down|d}}|| {{Icons|Sloth}}Sloth skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Gluttony Power Down|d}}||{{Icons|Gluttony}}Gluttony skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Gloom Power Down|d}}|| {{Icons|Gloom}}Gloom skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Pride Power Down|d}}||{{Icons|Pride}}Pride skills lose final Power by the effect's Count for one turn.
+|-
+|{{StatusEffect|Envy Power Down|d}}||{{Icons|Envy}}Envy skills lose final Power by the effect's Count for one turn.
+|}
+
+====Damage Type Fragility====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type Fragility'''</center>
+|-
+|{{StatusEffect|Slash Fragility|d}}||Take 10% more damage from {{Icons|Slash}}Slash skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pierce Fragility|d}}||Take 10% more damage from {{Icons|Pierce}}Pierce skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Blunt Fragility|d}}||Take 10% more damage from {{Icons|Blunt}}Blunt skills per Count for one turn. (Max 10)
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Affinity Fragility'''</center>
+|-
+|{{StatusEffect|Wrath Fragility|d}}||Take 10% more damage from {{Icons|Wrath}}Wrath skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Lust Fragility|d}}||Take 10% more damage from {{Icons|Lust}}Lust skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Sloth Fragility|d}}||Take 10% more damage from {{Icons|Sloth}}Sloth skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gluttony Fragility|d}}||Take 10% more damage from {{Icons|Gluttony}}Gluttony skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Gloom Fragility|d}}||Take 10% more damage from {{Icons|Gloom}}Gloom skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Pride Fragility|d}}||Take 10% more damage from {{Icons|Pride}}Pride skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Envy Fragility|d}}||Take 10% more damage from {{Icons|Envy}}Envy skills per Count for one turn. (Max 10)
+|-
+|}
+
+====Damage Resist Down====
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" |'''Description'''
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Damage Type Resist Down'''</center>
+|-
+|{{StatusEffect|Slash Resist Down|d}}||Increase {{Icons|Slash}}Slash Resistance based on Count <br> (0.1 per Count)
+|-
+|{{StatusEffect|Pierce Resist Down|d}}||Increase {{Icons|Pierce}}Pierce Resistance based on Count <br> (0.1 per Count)
+|-
+|{{StatusEffect|Blunt Resist Down|d}}||Increase {{Icons|Blunt}}Pierce Resistance based on Count <br> (0.1 per Count)
+|-
+! colspan="2" style="text-align:left; background:#660000" |<center>'''Sin Affinity Resist Down'''</center>
+|-
+|{{StatusEffect|Wrath Resist Down|d}}||Increase {{Icons|Wrath}}Wrath Resistance based on Count <br> (0.1 per Count)
+|-
+|{{StatusEffect|Gloom Resist Down|d}}||Increase {{Icons|Gloom}}Gloom Resistance based on Count <br> (0.1 per Count)
+|-
+|{{StatusEffect|Envy Resist Down|d}}||Increase {{Icons|Envy}}Envy Resistance based on Count <br> (0.1 per Count)
+|}
+
+====Other Debuffs====
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" width="20%" |'''Source (If Exclusive)'''
+|-
+|{{StatusEffect|Power Down|d}}||All skills lose Final Power by the effect's Potency for one turn. 
+|-
+|{{StatusEffect|Attack Power Down|d}}||Attack skills lose Final Power by the effect’s Potency for one turn.
+|-
+|{{StatusEffect|Defense Power Down|d}}|| Defense skills lose Final Power by the effect’s Potency for one turn.
+|-
+|{{StatusEffect|Clash Power Down|d}}||Lose Clash Power by the effect's Potency for one turn.
+|-
+|{{StatusEffect|Offense Level Down|d}}||Offense level decreases based on the effect's Potency for one turn.
+|-
+|{{StatusEffect|Defense Level Down|d}}||Defense Level decreases based on the effect's Potency for one turn.
+|-
+|{{StatusEffect|Damage Down|d}}||Deal 10% less damage with skills per Count for one turn. (Max 10)
+|-
+|{{StatusEffect|Bind|d}}||Speed decreases by the effect’s Potency for one turn.
+|-
+|{{StatusEffect|Fragile|d}}||Take 10% more damage from skills per Count for one turn. (Max 10) 
+|-
+|{{StatusEffect|Paralyze|d}}||Fix the Power of X Coin(s) to 0 for one turn.
+|-
+|{{StatusEffect|Plus Coin Drop|d}}||Reduce the Power of Plus Coins by the effect's Count for one turn.
+|-
+|{{StatusEffect|Minus Coin Boost|d}}||Raise the Power of Minus Coins by the effect's Count for one turn.
+|-
+|{{StatusEffect|HP Healing Down|d|}}||Decreases HP healing provided by Passive abilities, Skills, and Coin effects.
+|-
+|{{StatusEffect|Poison|d}}||At the end of the turn, take fixed damage by the Count, then halve the Count.
+|-
+|{{StatusEffect|Immobilized|d}}|| Does not act for this turn.
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keyword-Related Debuffs'''</center>
+<!-- These are debuffs that quote a keyword status effect (or mention Critical Hits, in the case of Poise effects). If a debuff would fall under one or more keyword, make a judgement call about which one is more relevant. -->
+|-
+|{{StatusEffect|Burn|d}}||At the end of the turn, take fixed damage by the effect’s Potency, then reduce its Count by 1.
+|-
+|{{StatusEffect|Dark Flame|d}}||- Unique {{StatusEffect|Burn|d}} <br> - Max Value: 7 <br> - Target loses Defense Level equal to the value of this effect <br> - Turn End: Deal (Value x {{StatusEffect|Burn|d}} on target) {{Icons|Pride}}Pride Affinity damage, then expires || [[Lobotomy E.G.O::Magic Bullet Outis]] <br> [[Magic Bullet Outis]] E.G.O
+|-
+|{{StatusEffect|Embers|d}}||- Max Potency: 3 <br> - Max Count: 6 <br> - If this unit has {{StatusEffect|Burn|d}}, lose 1 Embers Count when hit by a Skill that inflicts {{StatusEffect|Burn|d}} Potency, Count, or 'Unique Burn' (including E.G.O Skills) <br>  <br> - If this unit does not have {{StatusEffect|Burn|d}}, reset Embers Count to 6 when hit (independent of Skills that inflict Burn) <br>  <br> - At 0 Embers Count, activate the following effects: <br> · Activate {{StatusEffect|Burn|d}} on self once and lose 1 {{StatusEffect|Burn|d}} Count <br> · Lose 1 Embers Potency <br> · If this unit has 1+ remaining Embers Potency, reset Embers Count to 6 || [[Ardor Blossom Star Faust]] E.G.O
+|-
+|{{StatusEffect|Shattered World|d}} || - Max Stack: 1 <br> - Expires at Turn End <br> - Take x1.2 damage from {{StatusEffect|Burn|d}} (rounded down; except Unique {{StatusEffect|Burn|d}}) <br> - Take +10% damage from Yi Sang's {{Icons|Wrath}}Wrath and {{Icons|Gloom}}Gloom Base Attack Skills || [[Great Trichiliocosm 三千大世界 Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Spore|d}} || - Max Stack: 15 <br> - Turn End: Gain +1 {{StatusEffect|Burn|d}} Count for every 5 Stack <br> - Gain 1 {{StatusEffect|Bind|d}} next turn || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Resident Reg. Microchip|d}} || - Max Stack: 2 <br> - Take +10% damage from {{Icons|Wrath}}Wrath and {{Icons|Envy}}Envy Skills <br> - On Clash Lose, gain 1 {{StatusEffect|Burn|d}} (3 times per turn) <br> - Turn End: Lose 1 Stack || [[Move-in Reg. Heathcliff]] E.G.O <br> {{GiftTT|Pinpoint Logic Circuit|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Searing Birdcage|d}}||Max Stack: 5 <br> If this unit has {{StatusEffect|Burn|d}}, Wrath Resistance +0.1 for every Stack (cannot exceed 2.0 Wrath Resistance with this effect) <br> Turn End: gain {{StatusEffect|Bind|d}} equal to Stack next turn <br> Turn End: halve Stack (rounded down) <br> ※ Cannot gain additional Stacks of this effect while it is already active||[[Indicant's Trial Rodion]] E.G.O
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Bleed|d}}||When tossing an attack Coin, take fixed damage by the effect’s Potency. Then, reduce its Count by 1.
+|-
+|{{StatusEffect|Nails|d}}||Unique {{StatusEffect|Bleed|d}} <br> Turn Start: Apply 1 {{StatusEffect|Bleed|d}} to self, and increase {{StatusEffect|Bleed|d}} count by this effect's Count. <br> Turn End: halves Count (rounded down). || [[List of Identities/World#ncorpfanatics|N Corp. Fanatics Identities]] <br> [[Hex Nail]] E.G.Os
+|-
+|{{StatusEffect|Red Plum Blossom|d}}||- Unique {{StatusEffect|Bleed|d}} <br> - Max Value: 10 <br> - +10% chance for this unit to be Critically hit if this unit is the main target <br> - When struck by a Critical Hit, gain {{StatusEffect|Bleed|d}} equal to half of the value and take +(value x 3)% damage on Critical Hit <br> - Reduce value by 1 when hit || [[Blade Lineage Salsu Faust]]
+|-
+|{{StatusEffect|Needle|d}} || - Unique {{StatusEffect|Bleed|d}} <br> - When taking {{Icons|Envy}}Envy damage, gain +1 {{StatusEffect|Bleed|d}} Count and reduce this effect's Stack by 1 <br> - Turn End: Gain 1 {{StatusEffect|Bleed|d}} and reduce this effect's Stack by 1 || [[I'll Go fer Scissors. How 'Bout You?]] E.G.Os
+|-
+|{{StatusEffect|Touche Hardie|d}} || - Max Stack: 2 <br> - Take +10% HP and SP damage from {{StatusEffect|Bleed|d}} and {{StatusEffect|Sinking|d}} effects for every Stack (max 20%, rounded down) <br> - Turn End: Lose 1 Stack || [[The Ring Fauvist Docent Rodion]]
+|-
+|{{StatusEffect|Mauled Color -Rouge-|d}} || - Max Stack: 9 <br> - When hit, gain 1 {{StatusEffect|Bleed|d}} Potency for every 3 Stack (once per turn) <br> - Turn End: Gain 1 {{StatusEffect|Defense Level Down|d}} next turn for every 4 Stack (max 2) <br> - Turn End: Lose 1 Stack || [[The Ring#Sinner Identities|The Ring Fauvist Identities]]
+|-
+|{{StatusEffect|Trussed -Hong Lu-}} || - Base Stack: 3 <br> - Min & Max Speed -2 <br> - Take +10% Pride Damage <br> - Expires when the inflicter Retreats, is killed, or inflicts it on a different target. Replaced when Trussed by another unit. <br> - Lose 1 Stack if the inflicter did not hit this unit this turn || [[S Corp. Ch'unokkun Hong Lu]]
+|-
+|{{StatusEffect|Avulsion Wound}}|| - Max Stack: 3 <br> - Turn Start: Gain 2 {{StatusEffect|Bleed|d}} <br> - Turn End: Gain 1 {{StatusEffect|Bind|d}} next turn <br> - Turn End: Lose 1 Stack || [[S Corp. Ch'unokkun Hong Lu]]
+|-
+|{{StatusEffect|Lodged Arrow|d}}||- Max Stack: 4 <br> - Turn Start: gain {{StatusEffect|Bleed|d}} Potency by Stack <br> - Lose Defense Level by Stack <br> - Turn End: at 2+ Stack, gain 1 {{StatusEffect|Fragile|d}} next turn (once per turn) <br> - Expires on: Death, Retreat, buff removal/expiration. When it expires, apply {{StatusEffect|Arrow - Shi|r}} to Shi East Section 3 Faust by Stack || [[Shi Assoc. East Section 3 Faust]]
+|-
+|{{StatusEffect|Corpus Theater (Hong Lu)|d}} || - Base Stack: 3 <br> - When this unit gains {{StatusEffect|Bleed|d}} from enemy Attack Skills, randomly gain 1 of the following effects next turn and lose 1 Stack of this effect (once per Skill) <br> · 3 {{StatusEffect|Bleed|d}} Potency <br> · 1 {{StatusEffect|Bind|d}} <br> · 1 {{StatusEffect|Defense Power Down|d}} || [[The House of Spiders: The Ring Nursefather Hong Lu]]
+|-
+|{{StatusEffect|Sewing Target (Ally)|d}}||- Max Value: 1 <br> - Take +0.5% more damage for every {{StatusEffect|Bleed|d}} on self (max 10%) <br> - Turn End: reduced by 1||[[The Barber of La Manchaland Outis]]
+|-
+|{{StatusEffect|Polydipsic Rose|d}}||- Max Value: 5 <br> - Turn End: at 10+ {{StatusEffect|Bleed|d}} Potency, take {{Icons|Lust}}Lust damage equal to 1% of this unit's max HP. (max 30) <br> - Turn End: reduced by 1||[[Yearning-Mircalla Don Quixote]] E.G.O
+|-
+|{{StatusEffect|Rose Wedge|d}}||- Max Potency: 10 <br> - Max Count: 4 <br> - Gain 1 Potency every time this unit takes 10 {{StatusEffect|Bleed|d}} damage <br> - When gaining {{StatusEffect|Bleed|d}} or 'Unique Bleed' from getting hit, gain 2 {{StatusEffect|Bleed|d}} and inflict 1 {{StatusEffect|Bleed|d}} against the Attacker (5 times per turn) <br> · At 10 Potency, gain +1 {{StatusEffect|Bleed|d}} Count as well when triggering the above effect <br> - Turn End: lose 1 Count <br> - Combat End: at 10 Potency or 1 Count, this effect expires, and this unit takes (Potency x 10) {{Icons|Lust}}Lust damage. <br> - If the unit inflicted with this effect dies, or when this effect expires: increase {{StatusEffect|Bloodfeast|r}} by (Potency x 10), and deal (Potency x 2) {{Icons|Lust}}Lust damage against all of its allies (min 1)||[[Yearning-Mircalla Meursault]] E.G.O
+|-
+|{{StatusEffect|Maggots|d}}||At the end of the turn, take {{Icons|Gluttony}}Gluttony damage by the Count, increase {{StatusEffect|Bleed|d}} Count by 1, then reduce this effect’s Count by 1. ||[[Legerdemain Gregor]] E.G.O <br> {{GiftTT|Contained Maggots|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Palette Vibrante|d}} || - Max Stack: 4 <br> - Take +(Stack x 2.5)% damage from [[:Category:The Ring Identities|The Ring]]-faction Identities <br> · If the attacker is in both [[:Category:The Ring Identities|The Ring]] faction and [[:Category:School of Fauvism Identities|School of Fauvism]] faction, take +(Stack x 5)% damage instead <br> - Combat Start: Randomly gain 1 {{StatusEffect|Bleed|d}}, 1 {{StatusEffect|Sinking|d}}, 1 {{StatusEffect|Bleed|d}} Count, or 1 {{StatusEffect|Sinking|d}} Count (Stack) times <br> - Combat End: This effect expires. Halve {{StatusEffect|Mauled Color -Rouge-|d}} and {{StatusEffect|Mauled Color -Bleu-|d}} Stacks on this unit (rounded down) || [[The Ring Fauvist Docent Rodion]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Tremor|d}}||When attacked by skills that burst Tremor, raise the Stagger Threshold by the effect’s Potency. At the end of the turn, reduce the Count by 1.
+|-
+|{{StatusEffect|Tremor Burst|d}}||Raise target's Stagger Threshold by {{StatusEffect|Tremor|d}} Potency on target
+|-
+|{{StatusEffect|Tremor - Decay|d}}||Lose 1 Defense Level for every 4 {{StatusEffect|Tremor|d}} Potency on self <br> When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count) || [[Öufi Assoc. South Section 3 Heathcliff]] <br> [[Jeong's Office Rep Ishmael]]
+|-
+|{{StatusEffect|Tremor - Fracture|d}}||- When Staggered, and when the sum of {{StatusEffect|Tremor|d}} Potency and Count adds up to 20 or higher, raise Stagger Level by 1 <br> - Cannot exceed maximum Stagger Level with this effect <br><br> When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count) || [[Binds Outis]] E.G.O 
+|-
+|{{StatusEffect|Tremor - Reverb|d}}||- On {{StatusEffect|Tremor Burst|d}}, take {{Icons|Sloth}}Sloth damage equal to {{StatusEffect|Tremor|d}} Potency on self. <br> - When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> - Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count) || [[District 20 Yurodivy Hong Lu]] <br> [[Cavernous Wailing Hong Lu]] E.G.O 
+|-
+|{{StatusEffect|Tremor - Everlasting|d}}||- When hit by Skills or Coin effects that trigger {{StatusEffect|Tremor Burst|d}}, ({{StatusEffect|Tremor|d}} Potency on self)% chance to trigger an additional {{StatusEffect|Tremor Burst|d}}. (max 50%) <br> - When hit by Skills or Coin effects that trigger {{StatusEffect|Tremor Burst|d}}, ({{StatusEffect|Tremor|d}} Count on self)% chance to trigger an additional {{StatusEffect|Tremor Burst|d}}. (max 50%) <br> - When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> - Turn End:reduce the Count by 1 <br> (Interacts the same way as normal Tremor does to effects that raises or reduces Tremor Potency/Count) || [[Everlasting Faust]] E.G.O
+|-
+|{{StatusEffect|Tremor - Chain|d}}||- Lose 1 Clash Power for every 10 {{StatusEffect|Tremor|d}} Potency on self (max 3) <br> - When Hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise the Stagger Threshold by the effect's Potency <br> - Turn End:reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raises or reduces {{StatusEffect|Tremor|d}} Potency/Count) || [[T Corp. Class 3 Collection Staff Don Quixote]] <br> [[T Corp. Class 3 VDCU Staff Outis]]
+|-
+|{{StatusEffect|Tremor - Scorch|d}}||- On {{StatusEffect|Tremor Burst|d}}, take {{Icons|Wrath}}Wrath Damage equal to (sum of {{StatusEffect|Tremor|d}} Potency and {{StatusEffect|Burn|d}} Potency / 2), and lose 1 {{StatusEffect|Burn|d}} Count <br> - When hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise this unit's Stagger Threshold equal by the effect's Potency <br> - Turn End: reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raise or reduce {{StatusEffect|Tremor|d}} Potency/Count)|| [[The Thumb#Sinner Identities|The Thumb Identities]] <br> [[Dawn Office Rep Gregor]] <br> [[Dawn Office Fixer Faust]] 
+|-
+|{{StatusEffect|Tremor - Hemorrhage|d}}||- On {{StatusEffect|Tremor Burst|d}}, take {{Icons|Lust}}Lust Damage equal to (sum of {{StatusEffect|Tremor|d}} Potency and {{StatusEffect|Bleed|d}} Potency / 2), and lose 1 {{StatusEffect|Bleed|d}} Count <br> - When hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise this unit's Stagger Threshold by the effect's Potency <br> - Turn End: reduce the Count by 1 (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raise or reduce {{StatusEffect|Tremor|d}} Potency/Count) || [[N Corp. E.G.O::Contempt, Awe Ryōshū]] <br> [[Night Awls Capitano Gregor]]
+|-
+|{{StatusEffect|Tremor - Superposition|d}}||- Gained through {{StatusEffect|Amplitude Entanglement|r}} <br> - When triggering {{StatusEffect|Amplitude Conversion|r}}, add the effects of the resulting {{StatusEffect|Tremor|d}} type to the list of active {{StatusEffect|Tremor|d}} effects under {{StatusEffect|Tremor - Superposition|d}}.
+|-
+|{{StatusEffect|Time Moratorium|d}}||- Does not take any damage as long as this effect is active; store all damage received instead <br> - Combat End: If there is only 1 Count left of this effect, the effect triggers {{StatusEffect|Tremor Burst|d}} after dealing (100 + (Stack x 15))% of stored damage as {{Icons|Sloth}}Sloth damage <br> - Turn End: Gain 1 Stack and lose 1 Count <br> - The Time Moratorium will immediately expire after triggering the {{StatusEffect|Tremor Burst|d}} and the {{Icons|Sloth}}Sloth damage effect if another instance of Time Moratorium is inflicted on a unit that has Time Moratorium. || [[List of Identities/World#tcorp|World of T Corp. Identities]]
+|-
+|{{StatusEffect|Open Wound|d}}||- Max Stack: 2 <br> - Turn End: Gain 1 {{StatusEffect|Bind|d}} next turn <br> - Turn End: At 2 Stack, replace this effect with {{StatusEffect|Deep Wound|d}} next turn || [[Night Awls Capitano Gregor]]
+<!-- Open Wound is here as an exception, since it's necessary to get to Deep Wound and Fatal Wound which *are* keyword-related. -->
+|-
+|{{StatusEffect|Deep Wound|d}}||- Base Stack: 3 <br> - When {{StatusEffect|Tremor Burst|d}} is triggered on this unit, gain +1 {{StatusEffect|Bleed|d}} Count (2 times per turn) <br> - Cannot gain {{StatusEffect|Open Wound|d}} (in Focused Encounters, the Part) <br> - Turn End: Gain (Stack - 1) {{StatusEffect|Bind|d}} next turn <br> - Turn End: Reduce Stack by 1 || [[Night Awls Capitano Gregor]]; applied by {{StatusEffect|Open Wound|d}}
+|-
+|{{StatusEffect|Fatal Wound|d}}||- Base Stack: 3 <br> - When {{StatusEffect|Tremor Burst|d}} is triggered on this unit, gain +3 {{StatusEffect|Bleed|d}} Count (2 times per turn) <br> - Cannot gain {{StatusEffect|Open Wound|d}} (in Focused Encounters, the Part) <br> - Turn End: Gain {{StatusEffect|Bind|d}} equal to Stack next turn <br> - Turn End: Reduce Stack by 1 || [[Night Awls Capitano Gregor]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Rupture|d}}||When hit by an attack, take fixed damage by the effect’s Potency. Then, reduce its Count by 1.
+|-
+|{{StatusEffect|Dimensional Rift|d}}||At the end of the turn, gain {{StatusEffect|Rupture|d}} Count by this effect's amount. Then, remove this effect. || [[Dimension Shredder]] E.G.Os <br> [[W Corp. L3 Cleanup Agent Yi Sang]]
+|-
+|{{StatusEffect|Lasso|d}}||- Max Value: 3<br>- Turn End: gain {{StatusEffect|Rupture|d}} Potency by equal to this unit's current Speed value (max 5), and gain 1 {{StatusEffect|Bind|d}} next turn <br>- Turn End: reduced by 1 || [[Lasso]] E.G.Os
+|-
+|{{StatusEffect|Concussion|d}}||- Max Stack: 2 <br> - Multiply the amount of Stagger Threshold raised and {{StatusEffect|Rupture|d}} damage dealt against this unit by 1.2 (rounded down) <br> - Lose 1 Stack at Turn End|| [[Heishou Pack - Wu Branch Adept Yi Sang]]
+|-
+|{{StatusEffect|Mark of Decay|d}}||- Max Stack: 1 <br> - Take +10% damage from {{Icons|Gluttony}}Gluttony Affinity Skills <br> - Take +10% damage from {{Icons|Deathrite}}Deathrite <br> - Removed at Turn End||[[Heishou Pack - Mao Branch Adept Faust]]
+|-
+|{{StatusEffect|Twisted Curse Talisman|d}}|| - Max Stack: 10 <br> - Expires at Turn End <br> - At 10+ Stack, when taking 30+ damage from a Skill: gain +1 {{StatusEffect|Rupture|d}} Count; take {{Icons|Gluttony}}Gluttony damage equal to {{StatusEffect|Rupture|d}} Potency on self (once per turn) <br> - When this effect expires, gain (Stack / 4) {{StatusEffect|Attack Power Down|d}} next turn (max 2) <br> ※ Cannot gain additional Stacks of this effect while it is already active|| [[Red Sheet Don Quixote]] E.G.O
+|-
+|{{StatusEffect|Talisman|d}}||Max Stack: 6 <br> On Hit, consume 1 {{StatusEffect|Rupture|d}} Count on target to inflict (Stack / 2) {{StatusEffect|Rupture|d}} (inflicts at least 1 {{StatusEffect|Rupture|d}} if {{StatusEffect|Rupture|d}} Count was consumed; rounded down) <br> When hit, gain (Stack / 2) {{StatusEffect|Rupture|d}} and lose 1 Stack (gain at least 1; rounded down) <br> Turn End: at 6+ Stack, remove all Talisman on self and take fixed damage by Stack || [[Lobotomy E.G.O::Red Sheet Sinclair]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Sinking|d}}||When hit by an attack, take fixed SP damage by the effect’s Potency. <br> (Non-SP Units take {{Icons|Gloom}}Gloom damage instead.) <br> Then, reduce its Count by 1.
+|-
+|{{StatusEffect|Butterfly|d}}||- Unique {{StatusEffect|Sinking|d}} <br> - Base Value: 0, Max Value: 15 <br> - The Potency and the Count of this effect is called "The Living" and "The Departed", respectively. <br> - When hit, the attacker heals (The Living/4) SP. (min 1; rounded down) <br> - When hit, and if this unit's SP is at less than 0, take ({{StatusEffect|Sinking|d}} Potency/5) {{Icons|Gloom}}Gloom damage for every value of The Departed. (max Gloom damage 30; rounded down; deals half damage to targets that are Non-SP Units.) <br> - Turn End: Reset The Departed of this effect to 0; then, gain {{StatusEffect|Sinking|d}} equal to The Living and convert The Living into The Departed. <br> - No external effects can raise the amount of Butterfly inflicted. "Inflict additional {{StatusEffect|Sinking|d}}" effects inflict additional {{StatusEffect|Sinking|d}} instead of additional Butterfly. <br> - This effect expires when both The Living and The Departed reach 0.|| [[Lobotomy E.G.O::Solemn Lament Yi Sang]] <br> [[Solemn Lament Gregor]] E.G.O <br> [[Solemn Lament Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Sheut Fracture|d}}|| - Unique {{StatusEffect|Sinking|d}} <br> - Max Stack: 10 <br> - For every Stack, take +1% damage from {{Icons|Sloth}}Sloth and {{Icons|Gloom}}Gloom Skills <br> - At max Stack, gain 1 {{StatusEffect|Gloom Fragility|d}} (once per turn), take {{Icons|Gloom}}Gloom damage equal to {{StatusEffect|Sinking|d}} Potency on self (lose 1 {{StatusEffect|Sinking|d}} Count), then expires <br> - If the unit that has this effect dies, transfer half of its Stack to its ally that has the highest SP (rounded down) <br> - Turn Start: If there are no [[:Category:LCA Identities|LCA]] Identities on the field, expires || [[LCA Udjat Vanguard Team 3 Leader Outis]]
+|-
+|{{StatusEffect|Sinking Deluge|d}}|| Deal SP damage by ({{StatusEffect|Sinking|d}} Count * {{StatusEffect|Sinking|d}} Potency), then remove {{StatusEffect|Sinking|d}} <br> If target's SP is -45 or lower, the excess SP damage is dealt as {{Icons|Gloom}}Gloom-affinity HP damage (Non-SP Units take all of it as {{Icons|Gloom}}Gloom HP damage) || [[Effloresced E.G.O::Spicebush Yi Sang]]
+|-
+|{{StatusEffect|Mauled Color -Bleu-|d}} || - Max Stack: 9 <br> - When hit, gain 1 {{StatusEffect|Sinking|d}} Potency for every 3 Stack (once per turn) <br> - Turn End: At 5+ Stack, lose 5 SP <br> - Turn End: Lose 1 Stack || [[The Ring#Sinner Identities|The Ring Fauvist Identities]]
+|-
+|{{StatusEffect|Faint Aroma|d}} || - Max Stack: 30 <br> - Gain 1 Stack if this unit takes {{StatusEffect|Sinking|d}} damage <br> - Upon {{StatusEffect|Tremor Burst|d}}, apply 1~2 Faint Aroma on 3 other random allies (for Abnormalities, the Part) <br> - At max Stack, gain 2 {{StatusEffect|Tremor|d}} and trigger {{StatusEffect|Tremor Burst|d}} on self; then, take {{Icons|Gloom}}Gloom damage equal to {{StatusEffect|Sinking|d}} on self and lose all Faint Aroma. Cannot gain Faint Aroma for the rest of the turn. <br> - If this unit is killed, inflict (remaining Faint Aroma on this unit / 2) Faint Aroma randomly between this unit's allies (rounded down) || [[Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū]]
+|-
+|{{StatusEffect|The Uninvited|d}}||- Max Value: 2 <br> - Upon death, the last attacker heals 3 SP; then, a random ally without this effect gains 2 Stacks of this effect. <br> - Take +0.5% more damage for every {{StatusEffect|Sinking|d}} on self (max 10%; for Focused Encounters, count {{StatusEffect|Sinking|d}} on each Part separately) <br> - Turn End: reduced by 1 || [[Bygone Days Ishmael]] E.G.O
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Photoelectricity|d}}||Max Value: 3 <br> When this unit is hit, the Attacker gains {{StatusEffect|Charge|b}} Count equal to the value (once per Skill) <br> - If the Attacker has 5- {{StatusEffect|Charge|b}} Count, they gain +3 additional {{StatusEffect|Charge|b}} Count <br> Turn End: this effect expires || [[MultiCrack Office Fixer Heathcliff]] <br> [[LCE E.G.O::AEDD Gregor]]
+|-
+|{{StatusEffect|Spark Discharge|d}}||When hit, the attacker gains +1 {{StatusEffect|Charge|b}} Count; when hit with a {{Icons|Gloom}}Gloom attack, gain +1 {{StatusEffect|Rupture|d}} Count, then reduce Count by 1 || [[AEDD Gregor]] E.G.O
+|-
+|{{StatusEffect|Charged Sting|d}}|| For every Stack, take +4% Damage from Skills that gain or consume {{StatusEffect|Charge|b}} Count (including 'Unique Charge') (max 20%) <br> · For {{Icons|Envy}}Envy Skills, strengthen this effect and take +8% for every Stack instead instead (max 40%) <br> Max Stack: 5 <br> Lose 1 Stack at Attack End or Turn End after being hit by Skills that fulfill the effect-triggering conditions above (excluding Base Attack Skills that inflict {{StatusEffect|Charged Sting|d}}) || [[LCE E.G.O::AEDD Gregor]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Sanity}} Panic Type Changing Effects'''</center>
+|-
+|{{StatusEffect|Echoes of the Manor|d}}||- 50% chance to gain +1 {{StatusEffect|Sinking|d}} Count when gaining {{StatusEffect|Sinking|d}} Potency or Count from Skill or Coin effects <br> - SP Units: Change Panic Type to {{Icons|Echoes of the Manor Panic}}<span style="text-decoration:underline">Echoes of the Manor</span>. When this unit Panics, inflict Echoes of the Manor to 2 random other allies of this unit. <br> - Non-SP Units: -10% chance to flip Heads. <br> - Reduced by 1 at Turn End <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value. <br> ※ Apply the "Non-SP Units" conditional to certain enemies that have SP but can't change their Panic Types. || [[Wuthering Heights Chief Butler Outis]] <br> [[Wuthering Heights Butler Faust]] <br> [[Bygone Days Ishmael]] E.G.O
+|-
+|{{StatusEffect|Impending Ruin|d}}||- SP Units: change their Panic Type to "{{Icons|Ruin Panic}}<span style="text-decoration:underline">Ruin</span>". <br> ({{Icons|Ruin Panic}}<span style="text-decoration:underline">Ruin</span>: When this unit enters Low Morale state, gain 3 {{StatusEffect|Sinking|d}} at every Turn End and lose 1 Clash Power. When this unit Panics, gain 5 {{StatusEffect|Sinking|d}} and 3 {{StatusEffect|Sinking|d}} Count at every Turn End and lose 2 Clash Power) <br> - Non-SP Units: -10% chance to flip Heads <br> - Reduced by 1 at Turn End <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value. <br> ※ Apply the "Non-SP Units" conditional to certain enemies that have SP but can't change their Panic Types. || [[Wild Hunt Heathcliff]]
+|-
+|{{StatusEffect|Shattermark|d}}||- Take +10% damage from {{Icons|Gluttony}}Gluttony and {{Icons|Gloom}}Gloom Skills <br> - SP Units: change their Panic Type to "{{Icons|Shattermark Panic}}<span style="text-decoration:underline">Shattermark</span>" <br> - Non-SP Units: Clash Power -1 <br> - Tum End: Reduce 1 Stack <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value <br> - Apply the "Non-SP Units" conditional to certain enemies that have SP but can't change their Panic Types <br><br> ※ {{Icons|Shattermark Panic}}<span style="text-decoration:underline">Shattermark</span> Panic-type Effects <br> - Low Morale: Clash Power -1, Defense Level -2 on self <br> - Panic: Clash Power -2, Defense Level -3 on self || [[List of Identities/World#hcorp|Heishou Pack - Wei Branch Identities]]
+|-
+|{{StatusEffect|Blue Sand|d}}||- On Clash Lose, gain +1 {{StatusEffect|Sinking|d}} Count (3 times per turn) <br> - SP Units: change their Panic Type to "{{Icons|Blue Sand Panic}}<span style="text-decoration:underline">Blue Sand</span>" <br> - Non-SP Units: Min & Max Speed -1 <br> - Turn End: Reduce 1 Stack <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value <br> - Apply the "Non-SP Units" conditional to certain enemies that have SP but can't change their Panic Types <br> <br>  ※ {{Icons|Blue Sand Panic}}<span style="text-decoration:underline">Blue Sand</span> Panic Effects <br> - Low Morale: Clash Power -1, Min & Max Speed -1 <br> - Panic: Clash Power -2, Min & Max Speed -1 || [[LCA Udjat Vanguard Team 3 Leader Outis]]
+|-
+|{{StatusEffect|Dazzle|d}} || - For every 1 ({{StatusEffect|Sinking|d}} + {{StatusEffect|Burn|d}}), take +0.5% damage from Base Attack Skills (max 10%) <br> - SP Units: Change their Panic Type to "{{Icons|Dazzle Panic}}<span style="text-decoration:underline">Dazzle</span>" <br> - Non-SP Units: Defense Level -2 <br> - Turn End: Lose 1 Stack <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value <br> - Apply the "Non-SP Units" conditional to certain enemies that have SP but can't change their Panic Types <br><br> ※ "{{Icons|Dazzle Panic}}<span style="text-decoration:underline">Dazzle</span>" Panic-type effects: <br> - Low Morale: Turn End: Gain 1 {{StatusEffect|Bind|d}} and 2 {{StatusEffect|Offense Level Down|d}} next turn <br> - Panic: Turn End: Gain 1 {{StatusEffect|Bind|d}} and 4 {{StatusEffect|Offense Level Down|d}} next turn || [[Lobotomy E.G.O::Lamp Gregor]]
+|-
+|{{StatusEffect|Solitude|d}} || - Take +10% damage from {{Icons|Gloom}}Gloom Skills <br> - SP Units: Change their Panic Type to '{{Icons|Solitude Panic}}<span style="text-decoration:underline">Solitude</span>' <br> - Non-SP Units: Gain +2 {{StatusEffect|Sinking|d}} Count at Turn End <br><br> - Turn End: Lose 1 Stack <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value <br> - Apply the "Non-SP Units" conditional to certain enemies that have SP but cannot change their Panic Types <br><br> ※ {{Icons|Solitude Panic}}<span style="text-decoration:underline">Solitude</span> Panic Effect: <br> - Low Morale: Gain +2 {{StatusEffect|Sinking|d}} Count at Turn End <br> - Panic: Gain +3 {{StatusEffect|Sinking|d}} Count at Turn End || [[Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Deathrite}} Deathrite Variants'''</center>
+|-
+|{{StatusEffect|Deathrite -Haste-|d}}||- Base Stack: 3<br>- When getting {{StatusEffect|Rupture|d}} triggered by getting hit by an Attack Skill from a target with 10+ Speed, lose 1 Stack and gain +1 {{StatusEffect|Rupture|d}} Count<br>- At 0 Stack, take {{Icons|Gluttony}}Gluttony damage equal to {{StatusEffect|Rupture|d}} Potency on self; then, this effect expires<br>※ Cannot gain additional Stacks of this effect while it is already active||[[List of Identities/World#heishoumao|Heishou Pack - Mao Branch Identities]]
+|-
+|{{StatusEffect|Deathrite -Venom-|d}}||- Base Stack: 5<br>- Deathrite<br>- When getting {{StatusEffect|Rupture|d}} triggered by a Critical Hit from the target, lose 1 Stack <br> - When losing Stacks due to this effect, gain 1 {{StatusEffect|Offense Level Down|d}} or 1 {{StatusEffect|Defense Level Down|d}} (3 times per turn) <br> - When losing Stacks due to this effect, if the Stack drops to 0, take {{Icons|Gluttony}}Gluttony damage equal to {{StatusEffect|Rupture|d}} Potency on self <br>- ※ Cannot gain additional Stacks of this effect while it is already active||[[List of Identities/World#heishousi|Heishou Pack - Si Branch Identities]] 
+|-
+|{{StatusEffect|Deathrite -Fissure-|d}}||- Base Stack: 3 <br> - When getting {{StatusEffect|Rupture|d}} triggered while this unit has Deathrite, lose 1 Stack, and gain 1 {{StatusEffect|Bind|d}} next turn <br> &nbsp;· When this effect activates, if this unit is to gain 3 or more {{StatusEffect|Bind|d}} next turn, lose 2 Stacks instead of gaining {{StatusEffect|Bind|d}} <br> - At 0 Stack, take {{Icons|Gluttony}}Gluttony damage equal to {{StatusEffect|Rupture|d}} Potency on self <br> -※ Cannot gain additional Stacks of this effect while it is already active.||[[Heishou Pack - Mao Branch Adept Faust]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Identity- or E.G.O- exclusive Debuffs'''</center>
+<!-- Debuffs that are exclusive to a single Identity or E.G.O AND can only be self-applied. Sort by Sinner number and then by release date - oldest first. -->
+|-
+|{{StatusEffect|Fairy Lure|d}}||- Max Stack: 5 <br> - Turn Start: leftmost Slot on the Dashboard gains +10 {{StatusEffect|Aggro|r}} <br> - Take +50% more damage <br> - When hit, inflict 1 {{StatusEffect|Rupture|d}} against the attacker (3 times per target's Skill) <br> &nbsp;· At less than 50% HP, inflict 1 additional {{StatusEffect|Rupture|d}} <br> &nbsp;· If the target has 15+ {{StatusEffect|Rupture|d}}, this effect does not inflict {{StatusEffect|Rupture|d}} <br> - Reduced by 1 at Turn End||[[LCE E.G.O::Lantern Yi Sang]]
+|-
+|{{StatusEffect|Overheated Coffin}} || - Max Stack: 1 <br> - Turn End: <br> · Gain 3 {{StatusEffect|Burn}} next turn <br> · This effect expires <br> <br> ''<span style="color:#a16a3b">"Keep in mind, however, that convenience is always accompanied by a trade-off. A weapon of this structure comes with drawbacks that standard Stigma Workshop weapons would not possess—inevitable penalties that can only be mitigated by Singularities, the pinnacle of the myriad technological innovations of the City."<br><br>"It would do justice to properly acknowledge the extraordinary qualities of Singulari—ahem. That was tangential to the subject. Let us return to the subject, Sinclair."</span>'' || [[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Regressive Transformation - Reversed|d}}||- For this turn, this unit uses Minus Coin Attack Skills || [[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]]
+|-
+|{{StatusEffect|Hysteria|d}}||- Base Stack: 0 <br> - Max Stack: 3 <br> - At Turn End… <br> &nbsp;· At 0 or higher SP, lose 1 Stack <br> &nbsp;· At less than 0 SP, gain 1 Stack || [[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]]
+|-
+|{{StatusEffect|Only Ashes Remain|d}}|| - Cannot maintain {{StatusEffect|Red Eyes|b}} & {{StatusEffect|Penitence|b}} <br>- When gaining {{StatusEffect|Red Eyes|b}} with Base Skill effects, heal self and 1 ally with the lowest HP percentage by ({{StatusEffect|Red Eyes|b}} gained)% of this unit's max HP (2 times per turn) <br> - When gaining {{StatusEffect|Penitence|b}} with Base Skill effects, heal self and 1 ally with the least SP by (({{StatusEffect|Penitence|b}} gained)/2) SP (2 times per turn) <br> - Turn End: this effect expires || [[Lobotomy E.G.O::Red Eyes & Penitence {{Ryoshu}}]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keywordless Debuffs'''</center>
+<!-- If it doesn't fit into any of the other categories, put it here. -->
+|-
+|{{StatusEffect|Karmic Consequence|d}}||- Turn Start: <br> · Gain 1 {{StatusEffect|Defense Level Down|d}} for every 10 Stacks <br> · Gain 1 {{StatusEffect|Fragile|d}} for every 20 Stacks <br> - Max Stack: 100 || [[The Index#Sinner Identities|The Index Identities]]
+|-
+|{{StatusEffect|Curse|d}}||Turn End: next turn, randomly gain one of the following, then reduce this effect's Count by 1. <br> 1 {{StatusEffect|Attack Power Down|d}}/1 {{StatusEffect|Defense Power Down|d}}/2 {{StatusEffect|Offense Level Down|d}}/2 {{StatusEffect|Defense Level Down|d}} || [[Hex Nail]] E.G.Os <br> [[Bygone Days Gregor]] E.G.O <br> [[Bygone Days Ishmael]] E.G.O
+|-
+|{{StatusEffect|Weakness Analyzed|d}}||A random "Endure" or "Normal" attack type resistance is weakened [+0.2 to damage multiplier] for one turn. || [[List of Identities/World#seven|Seven Association Identities]]
+|-
+|{{StatusEffect|Declared Duel|d}}||- In a Clash between the unit that inflicted Declared Duel and the unit that has the status, the declarer has +1 Clash Power. On Hit, the declarer gains 1 Haste next turn. (4 times per turn)<br>- Expires when the unit inflicts Declared Duel on a different target. Replaced when another unit inflicts Declared Duel on the same target.|| [[List of Identities/World#cinqsouth|Cinq Association South Identities]]
+|-
+|{{StatusEffect|Focused Attack (Allies)|d}}||<Focused Encounters Only> <br> - The unit that inflicted this Focused Attack gains the following effects based on the target Slot's Focused Attack Stack. <br> &nbsp;·1x Stack: Gain Clash Power +1 <br> &nbsp;·2x Stack: Gain Base Power +1 <br> &nbsp;·3x Stack: Gain Base Power +1 and Coin Power +1 <br> - Expires if, for a turn, the unit who inflicted it fails to hit the Slot inflicted with their Focused Attack. <br> - Expires if the unit who inflicted Focused Attack inflicts it on a different Slot. <br> - Replaced if a different unit inflicts Focused Attack on a Slot already inflicted with Focused Attack. <br> - At the start of the next turn, if a Slot inflicted with Focused Attack is no longer present, rearrange all Focused Attacks inflicted against the Slots of that Part in the order of Deployment|| [[Cinq Assoc. West Section 3 Meursault]]
+|-
+|{{StatusEffect|Nerve Strike|d}}||- Max Stack: 3 <br> - The unit that inflicted this Nerve Strike gains the following effects based on the target's(or targeted Part's) Nerve Strike Stack. <br> &nbsp;· 1x Stack: Gain Clash Power +1 <br> &nbsp;· 2x Stack: Gain Base Power +1 <br> &nbsp;· 3x Stack: Gain Clash Power +1 and Base Power +1 <br> - Expires if the unit that inflicted it inflicts this effect against a different target(or a different Part) <br> - Replaced when another unit inflicts Nerve Strike|| [[Cinq Assoc. East Section 3 Don Quixote]]
+|-
+|{{StatusEffect|Vengeance Mark|d}}||Applies to the enemy that inflicted the most skill damage to allies. || [[The Middle#Sinner Identities|The Middle Identities]]
+|-
+|{{StatusEffect|Vendetta Mark|d}}||- Max Stack: 10 <br> - Consumed by certain Skills or Passives <br> - Take +2% damage from [[:Category:The Middle Identities|The Middle]] enemies for every Stack (max 20%) <br> - Turn End: The unit with the highest Stack of this effect gains 1 {{StatusEffect|Sibling Vengeance Mark|d}} next turn <br> (Counted separately from {{StatusEffect|Vengeance Mark|d}}; if more than a single unit has the highest Stack of this effect, this effect targets the one that has a higher HP percentage)||[[The Middle Little Brother Sinclair]] <br> [[The Middle Big Brother Heathcliff]]
+|-
+|{{StatusEffect|Sibling Vengeance Mark|d}}||- Max Stack: 1 <br> - Expires at Turn End <br> - Every Identity treats this unit as having their {{StatusEffect|Vengeance Mark|d}}|| {{StatusEffect|Vendetta Mark|d}}
+|-
+|{{StatusEffect|Book of Vengeance -The House of Spiders-|d}}||- Against units that have this effect, The House of Spiders: The Middle Nursefather Outis and [[The House of Spiders: The Middle Apprentice Ishmael]] heal 5 SP On Hit using a Skill (once per Skill, 2 times per turn) <br> - On Hit using a Skill against The House of Spiders: The Middle Nursefather Outis, gain 1 additional Stack of {{StatusEffect|The Middle - Grudge (Outis)|b}} (once per Skill, 2 times per turn for each Identity) <br> - On Hit using a Skill against [[The House of Spiders: The Middle Apprentice Ishmael]], gain 1 additional Stack of {{StatusEffect|The Middle - Grudge (Ishmael)|b}} (once per Skill, 2 times per turn for each Identity) <br> - Expires at Turn End||[[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Gaze|d}}||Affected unit takes more damage from {{Icons|Pierce}}Pierce and {{Icons|Blunt}}Blunt skills for one turn. The ally that defeats the marked unit heals sanity; if the ally is an 'N Corp. Fanatic', they also gain {{StatusEffect|Fanatic|b}} next turn. || [[The One Who Grips Faust]]
+|-
+|{{StatusEffect|Mark of Villainy|d}}||- Take +10% damage from Don Quixote <br> - Applies only to the first target to receive the effect in each turn || [[Lobotomy E.G.O::In the Name of Love and Hate Don Quixote]] <br> [[In the Name of Love and Hate Don Quixote]] E.G.O
+|-
+|{{StatusEffect|B.M.|d}}||Enhances Edgar Family Chief Butler Ryōshū Skills against targets with this effect <br> Turn End: reduce the Count by 1 || [[Edgar Family Chief Butler Ryōshū]]
+|-
+|{{StatusEffect|Contempt of the Gaze|d}}||- Gain 7 {{StatusEffect|Protection|b}} <br> - Gain 7 {{StatusEffect|Damage Down|d}} <br> - One of this unit's Slots gains +20 {{StatusEffect|Aggro|r}} <br> - Cannot gain {{StatusEffect|Gaze of Contempt|b}} as long as Contempt of the Gaze is active <br> - Turn End: this effect expires || [[N Corp. E.G.O::Contempt, Awe Ryōshū]] <br> [[Contempt, Awe {{Ryoshu}}]] E.G.O; <br> applied by {{StatusEffect|Gaze of Contempt|b}}
+|-
+|{{StatusEffect|Gaze (Ryoshu)|d}}||- Max Stack: 7 <br> - Take and deal +10% damage from and against Ryōshū for every 1 Stack of Gaze <br> - On death, transfers to this unit's ally (for Focused Encounters, a different Part) that has no {{StatusEffect|Contempt (Ryoshu)|d}} or Gaze, or has the least {{StatusEffect|Contempt (Ryoshu)|d}} or Gaze (this effect does not activate if this unit was killed during the Skill attack 'Cascading Gaze of Awe Underneath Contempt') <br> - Turn End: At 7 Stacks, convert this effect into {{StatusEffect|Contempt (Ryoshu)|d}} next turn || [[N Corp. E.G.O::Contempt, Awe Ryōshū]]
+|-
+|{{StatusEffect|Contempt (Ryoshu)|d}}||- Max Stack: 1 <br> - Take and deal -50% damage from and against Ryōshū <br> - Targets with Contempt cannot gain {{StatusEffect|Gaze (Ryoshu)|d}} <br> - On death, transfers to this unit's ally (for Focused Encounters, a different Part) that has no Contempt or {{StatusEffect|Gaze (Ryoshu)|d}}, or has the least Contempt or {{StatusEffect|Gaze (Ryoshu)|d}} (this effect does not activate if this unit was killed during the Skill attack 'Cascading Gaze of Awe Underneath Contempt') <br> - Turn End: Expires; then, this unit gains 7 {{StatusEffect|Gaze (Ryoshu)|d}} next turn || [[N Corp. E.G.O::Contempt, Awe Ryōshū]]; <br> applied by {{StatusEffect|Gaze (Ryoshu)|d}}
+|-
+|{{StatusEffect|Bladetrail -Afterimage-|d}} ||- Max Stack: 100 <br> - Take +1% damage from Slash Skills for every 10 Stack || [[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|Phantom Trace|d}} ||- Max Stack: 1 <br> - Take +5% damage from Blade of the House of Spiders Ryōshū's Base Attack Skills <br><br> ''<span style="color:#a16a3b">A phantom trace (殘影) is not simply a faint shade left in passing. It is the shadow of times past, cruelly drawn across bygone days.'' || [[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|La Mancha Parade|d}}||- Max Stack: 4 <br> - Take +10% damage from {{Icons|Lust}}Lust Skills <br> · If the target is a <[[:Category:La Manchaland Identities|La Manchaland]]> Identity, take +20% damage regardless of the Skill's Affinity <br> · At max Stack, deal -20% damage against <[[:Category:La Manchaland Identities|La Manchaland]]> Identities <br> - Lose 1 Stack either after this unit's Skill hits and ends or after the Skill that attacked this unit hits and ends || [[The Prince of La Manchaland Meursault]]
+|-
+|{{StatusEffect|Pink Ribbons|d}}|| Count increases by 1 whenever the affected unit tosses an attack skill Coin. At the end of the turn, inflict {{StatusEffect|Bind|d}} by the effect's Count, then remove the effect. || [[Roseate Desire Ishmael]] E.G.O
+|-
+|{{StatusEffect|Centipede Venom|d}}|| - Max Stack: 20 <br> - Turn End: Gain (Stack / 4) {{StatusEffect|Defense Level Down|d}} next turn (rounded down) <br> - Turn End: Take {{Icons|Gluttony}}Gluttony damage equal to Stack, and halve the Stack (rounded down) <br> Upon death, transfers to this unit's ally (for Focused Encounters, a different Part) that has none or the least Centipede Venom Stacks. || [[Hundred-Footed Death Maggot 蝍蛆殺 Ishmael]] E.G.O
+|-
+|{{StatusEffect|The Duel Escalates (Heathcliff)}} || - Affects The House of Spiders: The Thumb Apprentice Heathcliff's Skills and Passive effects <br> - Can gain up to 3 Stacks per turn <br> - Max Stack: 5 || [[The House of Spiders: The Thumb Apprentice Heathcliff]]
+|-
+|{{StatusEffect|Severed Tendon (Heathcliff)}} || - Base Power -1 <br> - Expires at Turn End <br> - Max Stack: 1 || [[The House of Spiders: The Thumb Apprentice Heathcliff]]
+|-
+|{{StatusEffect|Rhythm|d}} || - Max Stack: 5 <br> - Deal +2% damage for every Stack (max 10%) <br> - Offense Level +1 for every Stack (max 5) <br> - Defense Level -1 for every Stack (max -5) <br> - Turn End: This effect expires || [[Harmony Sinclair]] E.G.O
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Mirror Dungeon-exclusive Debuffs'''</center>
+<!-- These are debuffs exclusively available in Mirror Dungeon. This usually means that they're only available via E.G.O Gifts. -->
+|-
+|{{StatusEffect|Pheromone Mark|d}} || - For every 3 {{StatusEffect|Burn|d}} on self, take +1% damage when hit (max 20%)<br>- Expires at Turn End || {{GiftTT|Royal Jelly Perfume|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Art Medium|d}} || If this unit has {{StatusEffect|Bleed|d}} (in Focused Encounters, count {{StatusEffect|Bleed|d}} on each Part separately), take +10% damage from {{Icons|Lust}}Lust Skills || {{GiftTT|Average Artwork|25|t}} E.G.O Gift<br>{{GiftTT|Exquisite Artwork|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Gluttonous Thorn (貪食棘)|d}}||Max Stack: 9<br><br>Turn End: gain {{StatusEffect|Bleed|d}} Count equal to {{Icons|Lust}}Lust Reson., then lose 1 Gluttonous Thorn (貪食棘). (max {{StatusEffect|Bleed|d}} Count gain: 5)<br><br>While this unit has this effect, if it gains {{StatusEffect|Bleed|d}} Potency beyond 99, increase {{StatusEffect|Bloodfeast|r}} equal to the excess {{StatusEffect|Bleed|d}} Potency; then, gain {{StatusEffect|Defense Level Down|d}} next turn equal to {{StatusEffect|Bloodfeast|r}} increased (max {{StatusEffect|Defense Level Down|d}} gain: 5)||{{GiftTT|Coveting Thorn|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Pink Petals|d}} || - Max Stack: 30 <br>- For every Stack, take +1% damage when hit by {{Icons|Gloom}}Gloom Skills (max 15%) <br>- For every 10 Stack, gain +1 {{StatusEffect|Sinking|d}} Count when hit (2 times per turn)<br>- When {{StatusEffect|Tremor Burst|d}} is triggered on this unit, take (({{StatusEffect|Sinking|d}} Potency + Pink Petals) / 5) {{Icons|Gloom}}Gloom damage<br>- Turn End: Lose 1 Stack || {{GiftTT|Pink Petals|25|t}} E.G.O Gift <br> {{GiftTT|Pink Bouquet|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Reflux|d}}||- Max Stack: 3 <br> When hit, gain {{StatusEffect|Sinking|d}} Potency equal to Stack <br><br> Turn End: if this unit has -30 or less SP, activate the following effects (for Non-SP Units, activates at 60+ {{StatusEffect|Sinking|d}} Potency): <br> - Take ({{StatusEffect|Sinking|d}} Potency on self x Stack) {{Icons|Gloom}}Gloom damage <br> - Inflict 1 Reflux against 2 other targets with the least SP (for Abnormalities, Parts); then, deal ({{StatusEffect|Sinking|d}} Potency x Stack) {{Icons|Gloom}}Gloom damage to both targets, respectively <br> If the unit with Reflux dies, transfer its Reflux Stack to its ally with the highest Reflux Stack || {{GiftTT|Impending Wave|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Requested Target|d}}|| +0.2 Resistance to Attack Types with 1.5 or less Resistance. If the target with this effect is defeated, gain 1 E.G.O resource for all Affinities, and the unit that defeated the target heals 10 SP || {{GiftTT|Implicit Contract Renewal|25|t}} E.G.O Gift 
+|-
+|{{StatusEffect|Delicateness|d}} || - Max Stack: 10 <br> - Take +10% damage for every Stack || {{GiftTT|Shatterbound Cannon|25|t}} E.G.O Gift
+|}
+
+==Neutral Effects==
+Neutral Status Effects either have both positive and negative effects, or have no significant effect on the user. <br> Some Neutral Status Effects are used as expendable resources, with Skills being enhanced or cancelled due to the Value of these Effects.
+
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" width="20%" |'''Source (If Exclusive)'''
+|-
+|{{StatusEffect|Clashable Guard|r}}||- On Clash Win: raise the target's Stagger Threshold by this unit's final Clash Power. <br> - On Clash Lose: when hit, reduce the attacker's Final Skill Power by this unit's Final Power. <br> - On Clash Lose: does not gain Final Power from the following sources: Resonance and the Level disparity against the Attack Skill || -
+|-
+|{{StatusEffect|Unfocused Volley|r}}||- When this Skill flips Coins, each Coin flips against a random enemy among its targets<br>· The first Coin always targets the main target<br>· All 'On Hit' effects and all damage dealt by each Coin are inflicted only against the random target the Coin selected || -
+|-
+|{{StatusEffect|SP Heal Efficiency|r}}||Amount of SP healed due to the Identity's 'Base factors increasing Sanity(SP)' <br> (That is, +(Potency) to all SP healed by allies this turn (Potency may be a negative number)) || -
+|-
+|{{StatusEffect|SP Loss Efficiency|r}}||Amount of SP lost due to the Identity's 'Base factors decreasing Sanity(SP)' <br> (That is, +(Potency) to all SP lost by allies this turn (Potency may be a negative number)) || -
+|-
+|{{StatusEffect|Aggro|r}}||More likely to be targeted by enemies. || -
+|-
+|{{StatusEffect|Discard|r}}|| - Delete Skills that fit the condition and are selectable during the Chaining Phase on the Dashboard. (Defensive & E.G.O Skills do not count. Does not delete the Skill from the upcoming Skills list) <br> - Discarded Skills will not activate Skill effects or Coin effects other than effects from Discard, and will not give E.G.O resources. || [[List of Identities/World#dieci|Dieci Association]] Identities <br> [[List of Identities/World#molar|Molar Office]] Identities <br> [[Jeong's Office Rep Ishmael]] <br> [[Solemn Lament Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Fixed Panic|r}} || This unit's Panic Type does not change when inflicted with an effect that changes Panic Types. Instead, this unit is inflicted with an effect that is inflicted against targets without SP. || -
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>{{Icons|Coin}}'''Coin Variants'''</center>
+|-
+|{{StatusEffect|Unbreakable Coin|r}}||- This Coin does not break upon Clash Lose. <br> - If an Attack Skill has this Coin, attack with this Coin after getting hit. <br> - Upon Clash Lose, fix the Coin Power of the unbroken Coin to 1 || -
+|-
+|{{StatusEffect|Excision Coin|r}} || - This Coin can destroy {{StatusEffect|Unbreakable Coin|r}}s in a Clash. <br> - This Coin does not break upon Clash Lose. <br> - If an Attack Skill has this Coin, attack with the Coin after getting hit. <br> - On Clash Lose, fix the Coin Power of the unbroken Coin to 1 || -
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keyword-Related Effects'''</center>
+<!-- These are effects that quote a keyword status effect (or mention Critical Hits, in the case of Poise effects). If an effect would fall under one or more keyword, make a judgement call about which one is more relevant. -->
+|-
+|{{StatusEffect|Scorchfield}} || - Stores all {{StatusEffect|Burn}} damage dealt in this zone <br> - Resets when moving to a different zone <br> - This value is shared by all characters <br><br> ''<span style="color:#a16a3b">Heat turns air into a breeze, a gust, a firestorm, scorching the forest with abandon as men and beasts alike depart.</span>'' || [[Dawn Office Rep Gregor]]; activated by {{StatusEffect|From Dawnbreak to Sunset}}
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Bloodfeast|r}}||- Max Value: 999 <br> - Stores all {{StatusEffect|Bleed|d}} damage dealt in this zone <br> - Resets when moving to a different zone <br> - This value is shared by all characters<br>- Among allies, if there is a higher Kindred who also consumes Bloodfeast in the same turn, this unit cannot consume Bloodfeast until that ally consumes it first.||[[:Category:Identities with Bloodfeast|Bloodfiend Related]] Identities & E.G.O
+|-
+|{{StatusEffect|Total Bloodfeast Consumed|r}}||- Max Value: 999 <br> - Displays the total amount of {{StatusEffect|Bloodfeast|r}} consumed in this Encounter||[[:Category:Identities with Bloodfeast|Bloodfiend Related]] Identities & E.G.O
+|-
+|{{StatusEffect|Bloodfeast Consumed (shared)|r}}||Total {{StatusEffect|Bloodfeast|r}} consumed in this Encounter||[[Yearning-Mircalla Don Quixote]] E.G.O
+|-
+|{{StatusEffect|Dark Cloud|r}}||Max Stack: 1 <br> Converts all of this unit's Base Attack Skill Coins used this turn into {{StatusEffect|Unbreakable Coin|r}}s, prevents damage from Staggering this unit until Skill End, and inflict +1 more of {{StatusEffect|Bleed|d}} effects <br> On Clash Lose: gain Final Power +3 <br> Turn End: this effect expires || [[Kurokumo Clan Captain Ishmael]]; applied to allied [[:Category:Kurokumo Clan Identities|Kurokumo Clan Identities]]
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Amplitude Conversion|r}}||Converts {{StatusEffect|Tremor|d}} or already converted {{StatusEffect|Tremor|d}} on target to a different kind of {{StatusEffect|Tremor|d}} <br> Potency and Count values do not change over the conversion. || -
+|-
+|{{StatusEffect|Amplitude Entanglement|r}}||- Fuses the effects of the {{StatusEffect|Tremor|d}} type added by {{StatusEffect|Amplitude Entanglement|r}} and the {{StatusEffect|Tremor|d}}  type currently on the target together under {{StatusEffect|Tremor - Superposition|d}}. <br> - Potency and Count values do not change over Entanglement. <br> - When triggering {{StatusEffect|Amplitude Conversion|r}} on {{StatusEffect|Tremor - Superposition|d}}, it activates as {{StatusEffect|Amplitude Entanglement|r}} instead. <br> - Turn End: converted into base {{StatusEffect|Tremor|d}}. || -
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Blubberbubble|r}}||- This effect counts as a 'Shield Management' effect. <br> - Turn End: Reduce Count by 1 <br> - This unit does not lose Shield at Turn End as long as it has the Blubberbubble effect (unless depleted by damage or effect) <br> - If the Shield affected by Blubberbubble breaks due to taking damage, inflict 4 {{StatusEffect|Sinking|d}} Potency/Count against the attacker. (How much of that '4' value is Potency or Count is randomly determined) <br> - This unit can stack their Shield value by stacking this effect. However, as long as Blubberbubble is in effect, the Shield value cannot exceed 60% of this unit's Max HP. || [[Cavernous Wailing Sinclair]] E.G.O
+|- style="border-top: 3px solid #810000"
+|{{StatusEffect|Shallow Exhale|r}}||- Max Value: 1 <br> - At 20+ {{StatusEffect|Poise|b}} Potency, gain +1 {{StatusEffect|Poise|b}} Count as well whenever this unit gains {{StatusEffect|Poise|b}} Potency with Skill and Coin effects <br> - Expires at Turn End||[[Thoracalgia Faust]] E.G.O
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Ammo}} Ammo Variants'''</center>
+<!-- Variants of the Ammo effect. Also include Reload variants here.-->
+|-
+|{{StatusEffect|Ammo|r}}||Spent by certain skills. Some attacks cancel if lacking Ammo.
+|-
+|{{StatusEffect|The Living & The Departed|r}}||- Unique {{StatusEffect|Ammo|r}} <br> - The sum of Potency and Count maxes out at 20. <br> - Consumed for certain Skills. <br> - Whether The Living(Potency) or The Departed(Count) will be consumed for each shot is randomly determined <br> - Some attacks cancel if this unit runs out of ammo.|| [[Lobotomy E.G.O::Solemn Lament Yi Sang]] <br> [[Solemn Lament Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Bullet - Solitude|r}} || - Unique {{StatusEffect|Ammo|r}} <br> - Max Capacity: 6 <br> Spent by certain Skills <br><br> - This {{StatusEffect|Ammo|r}}'s count cannot be gained or lost due to external effects || [[Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū]]
+|-
+|{{StatusEffect|Tigermark Round|r}}||- Unique {{StatusEffect|Ammo|r}} <br> - At 8+ (cumulative sum of {{StatusEffect|Tigermark Round|r}}s and {{StatusEffect|Savage Tigermark Round|r}}s spent), gain {{StatusEffect|Unrelenting Spirit - Shin -剛氣-心-|b}} instead of {{StatusEffect|Unrelenting Spirit -剛氣-|b}} from this unit's Passive <br> &nbsp;· Cumulative Rounds spent: X <br> - Max Capacity: 12|| [[The Thumb East Capo IIII Meursault]]
+|-
+|{{StatusEffect|Savage Tigermark Round|r}}||- Unique {{StatusEffect|Ammo|r}} <br> - At 8+ (cumulative sum of {{StatusEffect|Tigermark Round|r}}s and {{StatusEffect|Savage Tigermark Round|r}}s spent), gain {{StatusEffect|Unrelenting Spirit - Shin -剛氣-心-|b}} instead of {{StatusEffect|Unrelenting Spirit -剛氣-|b}} from this unit's Passive <br> &nbsp;· Cumulative Rounds spent: X <br> - Actives the same way as Tigermark Round does <br> - Max Capacity: 8|| [[The Thumb East Capo IIII Meursault]]
+|-
+|{{StatusEffect|Spore Round -Base-|r}} || - Unique {{StatusEffect|Ammo|r}} <br> - Max Stack: 10 <br> - Spent when using certain Skills <br> - Some attacks cancel if lacking {{StatusEffect|Ammo|r}} <br> - When spent, inflict 2 {{StatusEffect|Spore|d}} on target On Hit || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Spore Round -Buckshot-|r}} || - Unique {{StatusEffect|Ammo|r}} <br> - Max Stack: 6 <br> - Spent when using certain Skills <br> - Some attacks cancel if lacking {{StatusEffect|Ammo|r}} <br> - When spent, inflict 3 {{StatusEffect|Spore|d}} on target On Hit || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Ammo - Atelier Logic|r}}||Unique {{StatusEffect|Ammo|r}} <br> Atelier Logic Workshop Special Ammo <br> - This {{StatusEffect|Ammo|r}}'s Count cannot be gained or lost due to external effects|| [[Full-Stop Office Fixer Heathcliff]]
+|-
+|{{StatusEffect|Scorch Propellant Ammo|r}}||- Unique {{StatusEffect|Ammo|r}} <br> - Max Stack : 15 <br> - Consumed when using certain Skills <br> - Counts as {{StatusEffect|Ammo|r}}|| [[The Thumb East Soldato II Sinclair]]
+|-
+|{{StatusEffect|LCA Fracture Round|r}}|| - Unique {{StatusEffect|Ammo|r}} <br> - Max Capacity: 16 <br> - Spent by certain Skills <br> - Some attacks cancel if lacking {{StatusEffect|Ammo|r}} || [[LCA Udjat Vanguard Team 3 Leader Outis]]
+|-
+|{{StatusEffect|Reload|r}}||Lose all currently owned {{StatusEffect|Ammo|r}}, and reload back to full || -
+|-
+|{{StatusEffect|Reload (Solemn Lament)|r}}||- Effect applied to {{StatusEffect|The Living & The Departed|r}}(Unique {{StatusEffect|Ammo|r}}) <br> - Consume (30 - (The Living + The Departed))/2 SP. (rounded down) <br> - Reset both The Living and The Departed values on self to 0, and gain the max value of their sum based on the probabilities listed in the Passive 'ISeeTheDyingButterfly.' <br> - On Reload, gain at least 1 of The Living and The Departed.|| [[Lobotomy E.G.O::Solemn Lament Yi Sang]] <br> [[Solemn Lament Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Reload -Germination-|r}} || - Effect applied to Spore Round (Unique Ammo) <br> - Consume ((16 - sum of Spore Round) / 2) SP(rounded down), reset both {{StatusEffect|Spore Round -Base-|r}} and {{StatusEffect|Spore Round -Buckshot-|r}} to 0 Stacks, and gain them up to max Stacks || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Assist Attack}} Assist Attack Variants'''</center>
+<!-- Variants of the Assist Attack effect. -->
+|-
+|{{StatusEffect|Assist Attack (Ishmael)|r}}||- If unit A applies this effect to unit B: Unit B follows up with an Unopposed Attack with its Skill 1 against the same enemy unit A attacked with its Skill. Activates at unit A's Attack End. <br> - The Skill used as an Assist Attack does not affect Unit B's upcoming Skills list. || [[The Pequod Captain Ishmael]]
+<!-- Ishmael gets priority here because her version named the category. -->
+|-
+|{{StatusEffect|Target Spotted|r}}||If unit A applied this effect to unit B: Unit B follows up with an Unopposed Attack with its Skill 2 against the same enemy unit A attacked with its Skill. Activates at Unit A's Attack End. <br> - The Skill used due to this effect does not affect Unit B's upcoming Skills list. || [[Full-Stop Office Rep Hong Lu]]
+|-
+|{{StatusEffect|Exalted Command|r}}||- If unit A applies this effect to unit B: Unit B follows up with an Unopposed Attack with its Base Skill 3 against the same enemy unit A attacked with its Skill. Activates at unit A's Attack End. (Does not activate as Empowered Skills) <br> - The Skill used as an Assist Attack does not affect Unit B's upcoming Skills list. <br> - Does not activate if affected ally's Skill 3 is not unlocked. || [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Your Will Guides My Blade.|r}}||- If unit A applies this effect to unit B: Unit B follows up with an Unopposed Attack with its Skill 1 against the same enemy unit A attacked with its Skill. Activates at unit A's Skill Attack End. <br> - The Skill used as an Assist Attack does not affect Unit B's upcoming Skills list. || [[The Lord of Hongyuan Hong Lu]]
+|-
+|{{StatusEffect|Melee Support|r}}||If unit A applied this effect to unit B: Unit B follows up with an Unopposed Attack with the 'Melee Support' Skill against the same enemy that attacked Unit A. Activates at Unit A's Attack End. <br> - The Skill used due to the 'Melee Support' effect does not affect Unit B's upcoming Skills list. || [[Full-Stop Office Fixer Heathcliff]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Assist Defense}} Assist Defense Variants'''</center>
+<!-- Variants of the Assist Defense effect. -->
+|-
+|{{StatusEffect|Assist Defense|r}}||- Max Stack: 3 <br> - When an ally is about to take an Unopposed Attack from an enemy, consume 1 Stack to redirect the enemy's targeting to self; then, use the unique Skill that activates for Assist Defense <br> - When there are multiple allies that have Assist Defense Stacks, the ally that has the highest Stack has the highest activation priority <br> - Does not activate for allies who equipped Defense Skills <br> - Expires at Turn End || -
+|-
+|{{StatusEffect|Lordsguard|r}}||- Unique {{StatusEffect|Assist Defense|r}} <br> - Max Stack: 1 <br> - When The Lord of Hongyuan Hong Lu is about to take an Unopposed Attack from an enemy, consume 1 Stack to redirect the enemy's targeting to self; then, copy and use The Lord of Hongyuan Hong Lu's 'Lordsguard' Skill <br> - When there are multiple allies that have {{StatusEffect|Assist Defense|r}} Stacks, the ally that has the highest Stack has the highest activation priority <br> - This effect counts as {{StatusEffect|Assist Defense|r}}, and is counted toward calculating {{StatusEffect|Assist Defense|r}} Stacks <br> - Expires at Turn End || [[The Lord of Hongyuan Hong Lu]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Battlefield Retreat}} Retreat Variants'''</center>
+|-
+|{{StatusEffect|Strategic R&R Mode|r}} <br> {{StatusEffect|Overwatch Assignment|r}} <br> {{StatusEffect|Battlefield Retreat|r}}||- Turn End: Recover from Stagger and Retreat from the Encounter (excluding forced Staggers; does not count as death) <br> · In Chain Battles, give this unit's Slots to a Substituted unit and move to the rearmost place in the Backup units' Deployment order (escape from the Encounter entirely if there are no other Backup Units remaining to swap places with next turn. When returning to battle, return in the order they retreated in) <br> · When returning to battle, return with the same amount of HP and SP this unit had when it retreated, and eliminate all effects on self save for a select few (if this unit had less than 0 SP when retreating, reset SP to 0 instead) || [[List of Identities/World#devyat|Devyat' Association]] Identities{{cite|1=Uses {{StatusEffect|Strategic R&R Mode|r}}.}} <br> [[Full-Stop Office Fixer Heathcliff]]{{cite|1=Uses {{StatusEffect|Overwatch Assignment|r}}.}} <br> [[Family Hierarch Candidate Ishmael]]{{cite|1=Uses {{StatusEffect|Battlefield Retreat|r}}.}}
+<!-- They get individual entries once they actually do different things. -->
+|-
+|{{StatusEffect|Escape Apparatus}} || - When this unit takes damage that brings its HP to 10, this unit's HP does not drop below 10 for the turn <br> - Turn End after the above effect activates: Recover from Stagger and Retreat from the Encounter (excluding forced Staggers; does not count as death; in Encounters where Retreat is disabled, the Retreat effect does not activate and expires at Turn End) <br> - In Chain Battles, give this unit's Slots to a Substituted unit and move to the rearmost place in the Backup units' Deployment order (escape from the Encounter entirely if there are no other Backup Units remaining to swap places with next turn. When returning to battle, return in the order they retreated in) <br> · When returning to battle, return with the same amount of HP and SP this unit had when it retreated, and eliminate all effects on self save for a select few (if this unit had less than 0 SP when retreating, reset SP to 0 instead) <br><br> ''<span style="color:#a16a3b">'… Live.'</span>'' || [[Dawn Office Rep Gregor]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''{{Icons|Prescript}} Prescript Variants'''</center>
+<!-- Variants of the Prescript effect. Listen, there's going to be more than four of them. Let me cook. -->
+|-
+|{{StatusEffect|Prescript|r}}|| - Receive 'Prescript: [Paper Slip]' under specific conditions <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proselyte:【Paper Slip】Faust]]
+|-
+|{{StatusEffect|Prescript: -Paper Slip- I|r}}|| Use a Skill marked with {{StatusEffect|Mark of the Prescript|r}} or hit a target with a marked Skill. <br><br> - Turn Start: At 0~2 {{StatusEffect|Grace of the Prescript|b}}, gain this effect <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript|r}} is limited to 3 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proselyte:【Paper Slip】Faust]]
+|-
+|{{StatusEffect|Prescript: -Paper Slip- II|r}}|| Hit a target with a Skill marked with {{StatusEffect|Mark of the Prescript|r}}. <br><br> - Turn Start: At 3~5 {{StatusEffect|Grace of the Prescript|b}}, gain this effect <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript|r}} is limited to 6 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proselyte:【Paper Slip】Faust]]
+|-
+|{{StatusEffect|Prescript: -Paper Slip- III|r}}|| Hit a target with E.G.O Awakening Skill or 'Skill 3' marked with {{StatusEffect|Mark of the Prescript|r}}. <br><br> - Turn Start: At 6~8 {{StatusEffect|Grace of the Prescript|b}}, gain this effect <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript|r}} is limited to 9 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proselyte:【Paper Slip】Faust]]
+|-
+|{{StatusEffect|Prescript: -Paper Slip- IV|r}}|| Eliminate all enemies before the next {{StatusEffect|Prescript|r}} arrives. <br><br> - Turn Start: At 9 {{StatusEffect|Grace of the Prescript|b}}, gain this effect <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proselyte:【Paper Slip】Faust]]
+|-
+|{{StatusEffect|Prescript (Device)|r}} || - Receive 'Prescript: [Device]' under specific conditions <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Prescript: -Device- I|r}} || Use a Skill marked with {{StatusEffect|Mark of the Prescript|r}} or hit a target with a marked Skill. <br><br> - Turn Start: Gain this effect when this unit has no {{StatusEffect|Unlock|b}} <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript (Device)|r}} is limited to 3 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Prescript: -Device- II|r}} || Hit a target with a Skill marked with {{StatusEffect|Mark of the Prescript|r}}. <br><br> - Turn Start: Gain this effect when this unit has {{StatusEffect|Unlock - I|b}} <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript (Device)|r}} is limited to 6 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Prescript: -Device- III|r}} || Hit a target with E.G.O Awakening Skill, or, in Effloresced E.G.O::Procuration state, 'Skill 3' marked with {{StatusEffect|Mark of the Prescript|r}}. <br><br> - Turn Start: Gain this effect when this unit has {{StatusEffect|Unlock - II|b}} <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript (Device)|r}} is limited to 9 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]]
+|-
+|{{StatusEffect|Prescript: -Device- III (Yi Sang)|r}} || Gain {{StatusEffect|Procuration -Hermes-|r}}. Repeat this Prescript until {{StatusEffect|Procuration -Hermes-|r}} reaches 9 Stacks. <br><br> - Turn Start: Gain this effect when this unit has {{StatusEffect|Unlock - II|b}} <br> - Maximum stackable {{StatusEffect|Grace of the Prescript|b}} with this {{StatusEffect|Prescript (Device)|r}} is limited to 9 <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Prescript: -Device- IV|r}} || Eliminate all enemies before the next {{StatusEffect|Prescript (Device)|r}} arrives. <br><br> - Turn Start: Gain this effect when this unit has {{StatusEffect|Unlock - III|b}} <br><br> ''<span style="color:#a16a3b">The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive.</span>'' || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]] <br> [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Keywordless Effects'''</center>
+<!-- If it doesn't fit into any of the other categories, put it here. -->
+|-
+|{{StatusEffect|Insight|r}}||The rank of the last Skill {{StatusEffect|Discard|r}}ed by the unit with this effect (Base Value:1) || [[List of Identities/World#dieci|Dieci Association Identities]]
+|-
+|{{StatusEffect|Courier Trunk|r}}||- Base Value: 0 <br> - Turn Start: gain 3 Stack <br> - Stack does not expire upon Retreat; it is stored instead <br> - At 10+ Stack: raise Min & Max Speed values by 1 <br> - At 20+ Stack: Gain 1 {{StatusEffect|Clash Power Up|b}} and 1 Damage Type DMG Up <br> &nbsp;· ({{StatusEffect|Courier Trunk - Rodion|r}}: {{StatusEffect|Slash DMG Up|b}}) <br> &nbsp;· ({{StatusEffect|Courier Trunk - Sinclair|r}}: {{StatusEffect|Blunt DMG Up|b}}) <br> - At 30+ Stack: <br> · On Skill Use, take (Stack/3)% HP damage and (Stack/3) SP damage <br> · On Turn End, take (Stack/2)% HP damage and (Stack/2) SP damage <br> (applies before Retreat) || [[List of Identities/World#devyat|Devyat' Association Identities]]
+|-
+|{{StatusEffect|Mark of the Prescript|r}}|| - Apply Mark of the Prescript to a Base Attack Skill on this unit's Dashboard || [[The Index#Sinner Identities|The Index Identities]]
+|-
+|{{StatusEffect|The Prescript's Target|r}}|| - Take +10% damage from [[:Category:The Index Identities|The Index]] units <br> - This effect is applied to a single target every turn regardless of the number of [[:Category:The Index Identities|The Index]] units deployed || [[The Index#Sinner Identities|The Index Identities]]
+|-
+|{{StatusEffect|Torn Memory|r}}||- Max Value: 7 <br> - Used for certain Skills || [[Fell Bullet Heathcliff]] E.G.O <br> [[Fell Bullet Yi Sang]] E.G.O<br>[[N Corp. E.G.O::Fell Bullet Yi Sang]]
+|-
+|{{StatusEffect|K Corp Ampule|r}}||Turn Start: At less than 4 Count, heal by (Count * 5)% of Max HP <br> At 4+ Count, this unit dies || [[K Corp. Class 3 Excision Staff Hong Lu]]
+|-
+|{{StatusEffect|Game Target (Rodion)}} || - Take +15% damage from Base Skills used by The House of Spiders: The Thumb Nursefather Rodion || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Identity- or E.G.O- exclusive Effects'''</center>
+<!-- Effects that are exclusive to a single Identity or E.G.O AND can only be self-applied. Sort by Sinner number and then by release date - oldest first. -->
+|-
+|{{StatusEffect|Blazing|r}} || - Min & Max Speed +1<br>- This turn's first-used Base Attack Skill gains Final Power +2<br>- Take 2% HP damage On Hit with the affected Skill (max 10%; this damage does not Stagger or reduce this unit's HP below 1)<br>- Expires at Turn End|| [[4th Match Flame Yi Sang]]
+|-
+|{{StatusEffect|Procuration -Hermes-|r}} || - Turn Start: at 9 Stack, a powerful Skill becomes available <br> - Can be gained up to ({{StatusEffect|Unlock|b}} stage + 2) Stack per turn <br> Max Stack: 9 <br> · At below {{StatusEffect|Unlock - II|b}}, this effect's maximum stack is limited to 8 || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Tianjiu Star's Blade|r}}||- Max Stack: 20 <br> - At 10+ Stack: at Turn End, gain 1 {{StatusEffect|Haste|b}} next turn <br> - Used for certain Skills|| [[Heishou Pack - Mao Branch Adept Faust]]
+|-
+|{{StatusEffect|Arrow - Shi|r}}||- Min Capacity: 0 <br> - Max Capacity: 4 <br> - Arrows spent by certain Skills || [[Shi Assoc. East Section 3 Faust]]
+|-
+|{{StatusEffect|Iron Maiden|r}} || - Gain +4 {{StatusEffect|Aggro|r}} to the leftmost Slot <br> - Turn Start: Gain 1 {{StatusEffect|Protection|b}}, 5 {{StatusEffect|Defense Level Up|b}}, and Shield HP equal to 5% of this unit's current HP <br> - When hit by the last Coin of an attacker, deal {{Icons|Pierce}}Pierce damage equal to 20% of the said Coin's damage and inflict +2 {{StatusEffect|Bleed|d}} Count (max once per Skill, 3 times per turn. Max damage per turn: 60) || [[The House of Spiders: The Ring Apprentice Faust]]
+|-
+|{{StatusEffect|Fire Butterfly Coffin}} || - Max Stack: 30 <br> - Can gain up to 20 Stacks per turn <br> - On Base Skill Hit: Gain 2 Stacks <br> - Turn End: At 20+ Stacks, gain {{StatusEffect|Burn}} next turn equal to half of surplus Stacks past 20 (rounded down) <br> · At 30 Stacks, Gain 5 {{StatusEffect|Burn}} and +2 {{StatusEffect|Burn}} Count instead <br> <br> ''<span style="color:#a16a3b">"Heated to a smoldering temperature within the coffin are butterflies, the kaleidoscope spilling forth to melt and tear the target apart.<br><br>"This type of weapon is still too premature for you to wield, Sinclair, but it is advisable that you familiarize yourself with its properties."<br><br>"The array of blades within the coffin affords considerable convenience in circumstances where time constraints prove solitary handling of requests impossible, or in combat against multiple adversaries."</span>'' || [[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Responsibility|r}}||- Max Value: 1 <br> - Clash Power +1 <br> - Deal +20% more damage <br> - Take +20% more damage||[[The Manager of La Manchaland Don Quixote]]
+|-
+|{{StatusEffect|Dihui Star's Blade|r}}||- Max Stack: 70 <br> - Total sum of {{StatusEffect|Bladetrail -Afterimage-|d}} Stacks inflicted by this unit <br> - Can gain up to 25 Stack per turn <br><br> ''<span style="color:#a16a3b">Etch a mark into the earth. Such is the purpose this blade was made to serve. <br> Into this sword was poured the light of a star, so that something may be left behind in this land.</span>''||[[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|Surgery|r}}|| Die when Count reaches 5.<br>Reduce Max HP by 20% (per Count).<br>Deal +20% (per Count) damage.<br>At the start of the turn, gain {{StatusEffect|Haste|b}} by the effect's Count. || [[Screwloose Wallop Meursault]] E.G.O
+|-
+|{{StatusEffect|Final Augment|r}}|| Turn Start: Gain 3 {{StatusEffect|Attack Power Up|b}}, {{StatusEffect|Defense Power Up|b}}, and {{StatusEffect|Haste|b}}; die when count reaches zero.|| [[Screwloose Wallop Meursault]] E.G.O
+|-
+|{{StatusEffect|Hornet -Rifle-|r}}|| Current Mode: Hornet [Rifle] || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Hornet -Shotgun-|r}}|| Current Mode: Hornet [Shotgun] <br><br> ''<span style="color:#a16a3b">Instead of deferring the definition to its rifle-form, gaze into the core essence of "Hornet." <br> epoché </span>''|| [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Viewing the Tableau (Hong Lu)|r}} || - If [[The House of Spiders: The Ring Apprentice Faust]] is on the field, gain 2 {{StatusEffect|Protection|b}} at Turn Start <br> - Turn End: Lose 2 Stack || [[The House of Spiders: The Ring Nursefather Hong Lu]]
+|-
+|{{StatusEffect|Overcharge|r}}||- Max Value: 1 <br> - Become Immobilized <br> - Take 10 + ({{StatusEffect|Charge|b}} Potency x 5)% less damage (max 25%) <br> - Turn Start: Gain {{StatusEffect|Charge Barrier|b}} based on {{StatusEffect|Charge|b}} Potency on self (max 5) <br> - Turn End: Gain +10 {{StatusEffect|Charge|b}} Count and 2 {{StatusEffect|Attack Power Up|b}} next turn, and lose this effect <br> - Gain {{StatusEffect|Aggro|r}} to this unit's leftmost Slot based on {{StatusEffect|Charge|b}} Potency on self (max 5) <br> - When hit, gain +1 {{StatusEffect|Charge|b}} Count and 1 {{StatusEffect|Load|b}} next turn (max 5 per turn) <br> - If this unit is in Panic or E.G.O Corrosion at Turn Start, or if this unit is Staggered, lose this effect || [[W Corp. L4 Cleanup Agent - CCA Heathcliff]]
+|-
+|{{StatusEffect|Ready -待-|r}}||- Max Stack: 3 <br> - Number of turns this unit spent in Retreat or as a Backup unit|| [[Family Hierarch Candidate Ishmael]]
+|-
+|{{StatusEffect|Launcher -始-|r}}||- Max Stack: 6 <br> - Number of turns this unit spent active in the Encounter <br> - Expires upon Retreat <br> - Gain 1 Stack at Turn End|| [[Family Hierarch Candidate Ishmael]]
+|-
+|{{StatusEffect|Hand - Pine Crane Suit|r}}||- Skill 1 Base Power +2 <br> When this unit equips and uses a {{Icons|Wrath}}Wrath Base Attack Skill or E.G.O Skill on its leftmost Skill Slot, activate the "forming a Hand" effects on the "Koi-Koi" Passive || [[Jeong's Office Rep Ishmael]]
+|-
+|{{StatusEffect|Hand - Susuki Grass Suit|r}}||- Skill 2 Base Power +1 <br> When this unit equips and uses a {{Icons|Sloth}}Sloth Base Attack Skill or E.G.O Skill on its leftmost Skill Slot, activate the "forming a Hand" effects on the "Koi-Koi" Passive || [[Jeong's Office Rep Ishmael]]
+|-
+|{{StatusEffect|Hand - Blue Sakura Suit|r}}||- Skill 3 Base Power +1 <br> When this unit equips and uses a {{Icons|Gloom}}Gloom Base Attack Skill or E.G.O Skill on its leftmost Skill Slot, activate the "forming a Hand" effects on the "Koi-Koi" Passive || [[Jeong's Office Rep Ishmael]]
+|-
+|{{StatusEffect|Réflexion|r}} || - Max Stack: 2 <br> - Cannot use "Critique" during the turn this unit has this effect <br> - Turn Start: Heal 5 SP <br> - Turn End: Lose 1 Stack <br> - When this effect expires, gain {{StatusEffect|L'Hommage|b}} next turn equal to the number of [[:Category:The Ring Student Identities|The Ring Student]] Identities on the field || [[The Ring Fauvist Docent Rodion]]
+|-
+|{{StatusEffect|Volatile Passion|r}}||- On Hit, inflict 1 {{StatusEffect|Burn|d}} <br> - If the main target has {{StatusEffect|Burn|d}}, Final Power +1 <br>- When hit, if this unit had a Defense Skill chained at Combat Start, inflict 1 {{StatusEffect|Burn|d}} per hit against the attacker for the turn<br>- Turn End: lose (# of turns spent in Volatile E.G.O state x 5) SP. (Max SP Loss: 40) || [[Dawn Office Fixer Sinclair]]
+|-
+|{{StatusEffect|Magic Bullet|r}}||- Max: 7 <br> - Value changes depending on certain Skill effects. <br> - The higher the value, the higher the Base Power and Coin Power of Skill 3 || [[Lobotomy E.G.O::Magic Bullet Outis]] <br> [[Magic Bullet Outis]] E.G.O
+<!-- Technically an exception, but c'mon. They might as well be the same thing.-->
+|-
+|{{StatusEffect|Rising Fever|r}}||- Lose 1 Stack when meeting one of the following conditions: <br> · Using the "Stamp of Vengeance" Skill (including activation via Counter) <br> · At Turn End after activating 6+ {{Icons|Envy}}Envy A-Reson. <br> - At 0 Stack, use the "Time to Unpack!" Skill || [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Sealed Sword (Outis)|r}}||- Turn End: Gain 2 {{StatusEffect|Haste}} next turn <br> - {{Icons|Blunt}}Blunt Base Skills deal +2% damage for every 4 {{StatusEffect|Bleed|d}} on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ {{StatusEffect|Bleed|d}}, deal (10% of the Coin's final damage) {{Icons|Blunt}}Blunt damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|First Seal Removed (Outis)|r}}||- Turn End: Gain 1 {{StatusEffect|Haste}} next turn <br> - {{Icons|Blunt}}Blunt Base Skills deal +2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Blunt}}Blunt damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Second Seal Removed (Outis)|r}}||- Turn End: Gain 1 {{StatusEffect|Haste}} next turn <br> - {{Icons|Blunt}}Blunt Base Skills deal 2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Slash}}Slash damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Lævateinn (Outis)|r}}||- Turn Start: Inflict 3 {{StatusEffect|Burn|d}} on all units on the field <br> - Replace this unit's Base Skills with Lævateinn-exclusive Skills corresponding to each Skill's rank <br> - {{Icons|Blunt}}Blunt Base Skills deal +2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Pierce}}Pierce damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Bloodied Hand (Ally)|r}}||- Max Value: 10 <br> - Stage 1 Bloodied Hand <br> - At 10+ Bloodied Hand, converts to {{StatusEffect|Bloodied Hand II (Ally)|r}}. <br> - At 20+ Bloodied Hand, converts to {{StatusEffect|Bloodied Hand III (Ally)|r}}. <br> - Reverts to previous Stage when the Stack drops below the requirements. <br> - At {{StatusEffect|Bloodied Hand II (Ally)|r}}, gain 1 {{StatusEffect|Offense Level Up|b}} based on the Stack (1/10 Stack) <br> - At {{StatusEffect|Bloodied Hand III (Ally)|r}}, gain 1 {{StatusEffect|Offense Level Up|b}} based on the Stack (1/10 Stack), and additionally inflict 1 {{StatusEffect|Rupture|d}} and 1 {{StatusEffect|Bleed|d}} On Hit with Base Skills||[[The Priest of La Manchaland Gregor]]
+|-
+|{{StatusEffect|Ailing Heart (Ally)|r}}||- Max Value: 10 <br> - Turn End: gain 1 Stack <br> - Turn Start: gain 1 {{StatusEffect|Defense Level Up|b}} for every 3 Stack <br> - At 50%- HP, gain 1 Defense Level for every 3 Stack <br> - At 40%- HP, On Hit with Base Skills, heal (Stack x 5)% of damage dealt On Hit as HP (min 1; rounded down; heal up to 30 HP per Skill)||[[The Priest of La Manchaland Gregor]]
+|-
+|{{StatusEffect|District 12 Fuel|r}}||Max Stack: 100 <br> Consumed by certain Skills. <br> At 50- Stack, become {{StatusEffect|Overheated Fuel|r}}|| [[Firefist Office Survivor Gregor]]
+|-
+|{{StatusEffect|Overheated Fuel|r}}||Max Stack: 100 <br> Consuming {{StatusEffect|District 12 Fuel|r}} in Overheated Fuel State consumes Overheated Fuel instead <br> Consuming Overheated Fuel also counts as consuming {{StatusEffect|District 12 Fuel|r}} <br> At over 50 Stack, become {{StatusEffect|District 12 Fuel|r}}||[[Firefist Office Survivor Gregor]]
+|-
+! colspan="3" style="text-align:left; background:#660000" |<center>'''Mirror Dungeon-exclusive Effects'''</center>
+<!-- These are effects exclusively available in Mirror Dungeon. This usually means that they're only available via E.G.O Gifts. -->
+|-
+|{{StatusEffect|Hyped-up|r}} || - Max Stack: 3<br>- For every Stack, deal +5% damage with {{Icons|Wrath}}Wrath and {{Icons|Lust}}Lust Skills<br>- When hit, raise this unit's Stagger Threshold by (5 x Stack)<br>- Expires at Turn End || {{GiftTT|Walking Bass|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Curio|r}} || When certain conditions are fulfilled, replace this effect with '{{StatusEffect|Art Medium|d}}' || {{GiftTT|Average Artwork|25|t}} E.G.O Gift<br>{{GiftTT|Exquisite Artwork|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Self Resonance Circuitry|r}}|| Total sum of {{StatusEffect|Charge|b}} Count currently owned by all allies <br><br> Cumulative {{StatusEffect|Charge|b}} Count consumed by allies: X <br><br> On Hit with a Skill: deal +(sum of {{StatusEffect|Charge|b}} Count on all allies / 3)% damage <br> All allies gain 1 {{StatusEffect|Offense Level Up|b}} for every 100 cumulative {{StatusEffect|Charge|b}} Count consumed by allies (max 30) || {{GiftTT|T-5 Perpetual Motion Machine|25|t}} E.G.O Gift
+|}
+
+==Trivia==
+* ''Limbus Company'' uses two different sets of descriptions for status effects: one for when it is viewed in the descriptions of Skills and Passives, and one for when it is inflicted onto and listed under a unit.
+** While most status effects only possess minor discrepancies between these two, some can have significant differences, such as {{StatusEffect|Weak-resist DMG Boost}}, which lists the damage increase as "10% per Count" on the first and "1% per Count" on the latter. The status effect itself functions based on the "1% per Count" basis.
+*** This discrepancy likely caused confusion among the developers of the game as well, as the [[Peccatulum Irae Class 2]] only gained 1 {{StatusEffect|Weak-resist DMG Boost}} from its Skills, likely due to the assumption that this would result in a 10% damage increase when it is only 1% in reality. This was likely caused by the fact that {{StatusEffect|Weak-resist DMG Boost}} did not appear as part of any Skill or Passive description, thus never requiring the first set.
+
+==Notes==
+<references/>
+
+==Navigation==
+{{StatPages}}
+{{ListNavbox}}
+
+[[Category:Lists]]
+[[Category:Status Effect Pages]]

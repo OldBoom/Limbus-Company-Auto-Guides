@@ -1,0 +1,733 @@
+{{MEinfobox|name=Battles|cg=Battle Result.png}}''Limbus Company'' is a turn-based RPG which features '''battles''' as its primary form of gameplay. Players are tasked with forming a team of twelve "units" known as [[Identities]], equipped with special, costly skills known as [[E.G.O]].
+
+Attacks are pitted against the enemy through the use of the clashing mechanic, where the winner earns the right to attack. Many other factors are consistently at play, including [[Status Effects|status effects]], Speed, [[Sin Resonance]], E.G.O Resource management, and available Skills, resulting in a customizable experience depending on the player's choice of team.
+
+== General Combat Mechanics ==
+The gameplay is centered around assembling a small team from the available 12 [[Sinners]] ('''{{Icons|Icon=yisang}} Yi Sang''', '''{{Icons|Icon=faust}} Faust''', '''{{Icons|Icon=donquixote}} Don Quixote''', '''{{Icons|Icon=ryoshu}} Ryōshū''', '''{{Icons|Icon=meursault}} Meursault''', '''{{Icons|Icon=honglu}} Hong Lu''', '''{{Icons|Icon=heathcliff}} Heathcliff''', '''{{Icons|Icon=ishmael}} Ishmael''', '''{{Icons|Icon=rodion}} Rodion''', '''{{Icons|Icon=sinclair}} Sinclair''', '''{{Icons|Icon=outis}} Outis''', and '''{{Icons|Icon=gregor}} Gregor''') and entering Combat Encounters with a selection of different enemies. Sinners and enemies will take turns selecting Skills to attack or "Clash" with each other over several turns. Combat ends when one side's units have been completely defeated or the battle's win or fail conditions have been met. If 100+ Turns have passed ("Overclocked"), the combat encounter will always result in defeat when it ends.
+<gallery>
+Victory Battle Result.png|Graphic displayed upon victory.
+Defeat Battle Result.png|Graphic displayed upon defeat.
+</gallery>
+
+=== Stats ===
+All units will have varying values of the following stats: '''Level''', '''{{Icons|HP}}Health''', '''{{Icons|SPEED}}Speed''', '''{{Icons|SkillAttack}}Offense/{{Icons|SkillDefense}}Defense Levels''' and '''Resistances'''. Though only some units may have '''Stagger Thresholds''' and '''{{Icons|Sanity}}Sanity'''.
+
+==== Deployment Order ====
+A stat unique to Sinners and the [[Peccatulum|Peccatula Invidiae]], the '''Deployment Order''' affects how other game mechanics prioritize these units. For the Sinners, the Deployment Order goes up to 12 in Chain Battles, or the maximum amount of deployable Sinners otherwise.
+
+At the start of the second Turn, the Sinner with the lowest Deployment Order will be granted an additional Skill Slot, this is then repeated for subsequent Sinners until the number of Skill Slots match the maximum amount of deployable Sinners, or for non-Focused Encounters, when the amount reaches 12. As the Peccatula Invidiae are only found in groups of 12 and only on Focused Encounters, this mechanic does not apply to them.
+
+Deployment Orders also act as tiebreakers for Skill effects and Passives: When 2 or more units fit the condition of a Skill effect or Passive (such as "1 ally with the fastest Speed"), the units with the lowest Deployment Order will be prioritized over the others.
+
+Lastly, the Deployment Order also affects the targeting of certain E.G.O Gifts, which are shown in the deployment menu.
+
+Deployment Order is fixed for an encounter. When a Sinner who would receive (or already has received) an effect based on being early in the Deployment Order leaves the battlefield, that effect will either be lost or move to the next Sinner in the Deployment Order instead. More details can be found in the sections regarding Sinner Death and Battlefield Retreat below.
+
+==== Level ====
+A unit's '''Level''' is a number shown on their information page. Levels do not directly affect units in combat, instead, they affect the maximum Health and Offense/Defense Levels of a unit and its Skills.
+
+The maximum Level of Identities starts at 40, and is raised by 5 for every Canto unlocked after [[Canto V: The Evil Defining|Canto V]].
+
+The Levels of enemies generally start low but will rise with the progression of the Canto or Intervallo, up to the current maximum Level of the last unlocked Canto. There are some exceptions such as [[Bloodfiends|Bloodfiend]] enemies, who have much higher Levels than the Sinners, but are instead given status effects or Passives that decrease their Offense and Defense Levels. The current Level of enemies the player must face are typically listed next to the Node as "Difficulty".
+
+The current highest Level for the Sinners in the main story is '''{{MaxLevel}}''', though this can be raised up to Level {{#expr:{{MaxLevel}}+46}} within Mirror Dungeons.
+<!--Formula
+* 15 (Favor of the Nebulae++)
+* 9 (Interstellar Travel)
+* 10 (Piece of Relationship++)
+* 3 (Long Battle Floor Themes)
+* 3 (The King in Binds Event)
+* 2 (Portrait of a Certain Day Event)
+* 2 (Dimensional Orbit Stabilizer Event)
+* 2 (Clockwork-Time-Roly-Poly Event)
+-->
+
+==== {{Icons|HP}}Health ====
+[[File:Tutorial HP.png|500px|class=responsive-image|center]]
+<small><center>Viewing a unit's current and maximum HP (top-right box).</center></small>
+
+Health (or HP) is the red bar and correlated number under a unit's sprite or near their portrait in the Dashboard. Health determines how much damage a unit can take before they are defeated in combat. The objective of most Combat Encounters is to reduce all of the enemies' Health to 0. If the Health of all Sinners is reduced to 0, the Encounter is lost.
+
+The Health of a unit can be calculated according to the following formula:<br>
+<big><math>HP = Base+(Mult \times Level)</math></big><br>
+Where <big><math>HP</math></big> is the resulting HP, <big><math>Base</math></big> is the unit's base Health value, <big><math>Mult</math></big> is the Health multiplier unique to each unit, and <big><math>Level</math></big> is the unit's Level.
+
+===== Shield =====
+Shield is indicated by a blue health bar added to the unit's red health bar.
+
+The Shield HP of a unit takes damage the same way their normal HP would: damage dealt to Shield HP is affected by the unit's physical and Sin Resistances and other damage modifiers. However, when taking damage, Shield HP is always prioritized over regular HP. Additionally, any leftover Shield HP that remained until the end of a Turn will disappear at the start of the following Turn.
+
+Shields are typically generated by Guard Skills, but can also be generated through certain Skill effects or Passives, such as those of certain [[:Category:Dieci Association Identities|Dieci Association Identities]], as well as status effects such as {{StatusEffect|Charge Barrier|b}}.
+
+==== {{Icons|Sanity}}[[Sanity]] ====
+[[File:Tutorial Sanity.png|500px|class=responsive-image|center]]
+<small><center>Viewing a unit's current SP.</center></small>
+
+Sanity is a main factor that can determine the outcome of Clashes. Sanity Points (SP) are represented as a number that can be seen right next to the unit's health bar, contained within an 'orb'. Sanity is determined through several interactions that occur in and out of combat, and has a valid mathematic interval of <math>[-45, 45]</math>.
+
+Sanity modifies the likelihood of flipping Heads on Coins, using the following formula:<br>
+<big><math>H=50+(SP)</math></big><br>
+Where <math>H</math> is the chance of flipping Heads (in %), and <math>SP</math> is the unit's Sanity Points (ranging between <math>[-45, 45]</math>).<br>
+(For example: a unit with 27 SP would have a '''50+(27)=77%''' chance to flip Heads, while a unit with -33 SP would have a '''50+(-33)=17%''' chance to flip Heads.)
+
+In most Story Encounters (outside of Dungeons and Refraction Railways), all units start with 0 SP. The most common way to increase SP is by winning Clashes or defeating enemies, and the most common ways to decrease SP is by using E.G.O, losing allies, and other status effects such as {{StatusEffect|Sinking|d}}. (See a unit's "'''{{Icons|Unique Sanity Factors}}Factors Affecting Sanity'''" section for more details.)
+
+Reaching -30 SP or lower has a chance of causing '''<font color="#1fdfed">"Low Morale"</font>''' on units with Sanity, activating the ''Low Morale'' effects listed in their [[Sanity#List of Panic Types|Panic Type]]. However, reaching -45 SP will cause the unit to '''<font color="#1fdfed">"Panic"</font>''', activating the ''Panic'' effects instead. <br>
+Please note that all Low Morale and Panic effects only activate on the earliest {{SkillCon|Turn Start}}.
+
+For Sinners, reaching -45 SP during combat fixes their SP to -45 until the next {{SkillCon|Turn Start}}. At the next {{SkillCon|Turn Start}}, if a Sinner is at -45 SP and has an E.G.O with a Corrosion type Skill (essentially any non-personal E.G.O), they are forced into {{StatusEffect|E.G.O Corrosion|r}}, during which they will go out of control and use E.G.O Corrosion Skills indiscriminately or Panic and take no action. When the {{StatusEffect|E.G.O Corrosion|r}} or Panic expires, the Sinner resets their SP to 0 the following {{SkillCon|Turn Start}}.
+* Most enemy units do not have this restriction and can rise above -45 SP at any time.
+* While Sinners can reset their SP to 0 after a Turn of Panic/Corrosion by default, enemy units will remain stuck at -45 SP unless they have the "Panic Recovery" Passive or any other similar Passive.
+
+Units without Sanity—which are typically [[Abnormalities]] or non-sapient monsters—cannot gain the advantages and disadvantages of Sanity, as their SP is effectively 0, causing them to have a 50% chance to toss Heads at all times (unless modified by certain status effects or Passives, such as {{StatusEffect|Echoes of the Manor|d}}).<br>
+When inflicted with {{StatusEffect|Sinking|d}}—a status effect that reduces SP per hit—an enemy with fixed SP will take direct {{Icons|Gloom}}Gloom damage instead. Additionally, units without Sanity may be treated as units with 0 SP for certain Passives or E.G.O Gifts.
+
+==== {{Icons|SPEED}}Speed & Targeting ====
+[[File:Tutorial Speed.png|500px|class=responsive-image|center]]
+<small><center>Viewing a unit's Speed (top) and Speed range (bottom).</center></small>
+
+Speed is a random number assigned to a unit chosen from a given range each {{SkillCon|Turn Start}}. All units have their own Speed ranges, and duplicates of the same unit will typically have the same Speed range. The higher the value, the faster the unit is for that Turn. On both the battlefield and the Dashboard, Sinners are sorted by their Speed values, the fastest being on the leftmost end and the slowest being on the rightmost end. When Sinners receive the same Speed, the order of their Priority Number is used to determine the Speed order as well. For a Sinner with higher Speed than an enemy; Their Attack Skills or Clashable Defense Skills can force the enemy's Skill into a Clash (unless either Skill is {{SkillCon|Unclashable}}), while targeting a Defense Skill with another Defense Skill will cause an "Offset".
+* In Regular Encounters, units with high Speed prioritize attacking units with low Speed.
+* In Focused Encounters, the player can freely choose what Slot to target with what Skill, similar to Project Moon's previous game, ''[[lor:Stats#Speed|Library of Ruina]]''. Additionally, the Sinner originally targeted by a Slot can force said Slot to target them back regardless of either unit's Speed.
+
+==== Resistances ====
+{{For|further details on general damage calculation|Damage Formula}}
+[[File:Type and Affinity.png|thumb|Types and Affinities.]]
+Resistances are multipliers factored on top of incoming damage, determining the final amount of damage a unit takes from certain sources (typically Attack Skills). All characters have Resistance multipliers to both physical damage types ('''{{Icons|Slash}}Slash''', '''{{Icons|Pierce}}Pierce''' and '''{{Icons|Blunt}}Blunt''') and Sin Affinities ('''{{Icons|Wrath}}Wrath''', '''{{Icons|Lust}}Lust''', '''{{Icons|Sloth}}Sloth''', '''{{Icons|Gluttony}}Gluttony''', '''{{Icons|Gloom}}Gloom''', '''{{Icons|Pride}}Pride''' and '''{{Icons|Envy}}Envy'''). Every Attack and Counter Skill possesses a physical damage type and Sin Affinity that can affect the total damage dealt to the enemy depending on their Resistances.
+
+The list of Resistance values and their corresponding 'words' are as follows:
+{| class="wikitable"
+|+ Resistance
+|-
+! Name !! Value (Mathematical intervals)
+|-style="color:red"
+| Fatal || <math>(x1.5, x2]</math>
+|-style="color:#db7c77"
+| Weak || <math>(x1, x1.5]</math>
+|-style="color:#edcda4"
+| Normal || <math>[x1]</math>
+|-style="color:#cccccc"
+| Endure || <math>[x0.75, x1)</math>
+|-style="color:#808080"
+| Ineffective (Ineff.) || <math>(x0, x0.75)</math>
+|-style="color:#808080"
+| Immune || <math>[x0]</math>
+|}
+
+Resistances are applied as <math>+((Value-1)\times100)%</math> damage to the Skill if the <math>Value</math> is 1 or higher, or as <math>+(\frac{Value-1}{2}\times100)%</math> damage if the <math>Value</math> is less than 1. The damage modifier is rounded down.
+
+For example: A unit with <font color="#808080"><math>[x0.75]</math></font> Wrath Resistance and <font color="#db7c77"><math>[x1.5]</math></font> Slash Resistance would take <math>((1.5-1)+\frac{0.75-1}{2})\times100</math>='''+37%''' damage from a Skill that is both.
+
+Resistances cannot go above <font color="red"><math>[x2]</math></font> without the use of Stagger Levels, and cannot go below <font color="#808080"><math>[x0]</math></font> under any circumstances.
+
+Effects that modify Resistances will always do so plainly: "Increase Sloth Resistance by 0.7" will result in <font color="#808080"><math>[x0.5]</math></font>⇒<font color="#db7c77"><math>[x1.2]</math></font>, while "Sloth Resistance -0.5" will result in <font color="#808080"><math>[x0.6]</math></font>⇒<font color="#808080"><math>[x0.1]</math></font>.
+
+For Sinners and [[Peccatula#Invidiae|Peccatula Invidiae]], they gain Sin Affinity Resistances based on the most recently used E.G.O. If no E.G.O has been used since the start of the Encounter, their Resistances are that of their currently equipped [[:Category:ZAYIN Level E.G.O|ZAYIN E.G.O]].
+
+==== {{Icons|StaggerAction}}Stagger ====
+<gallery>
+Tutorial StaggerBars.png|Viewing Stagger Thresholds.
+Tutorial StaggerLevels.png|The 3 Stagger levels.
+Tutorial StaggerFatal.png|Resistances change when Staggered.
+</gallery>
+
+Stagger is a mechanic that punishes suboptimal Skill selection, Clashing or unit targeting. '''Stagger Thresholds''' are represented by small lines on health bars of allies and enemies alike, and can have their numerical value viewed in the unit's information menu.
+
+Stagger Thresholds are internally stored as percentage values, and thus will always scale with the unit's Level (and consequently, their max HP).
+
+A unit can become Staggered by one of the following conditions:
+* Taking enough damage that a Stagger Threshold is surpassed (excluding damage from certain sources, such as {{StatusEffect|Bleed|d}}).
+* Having their Stagger Threshold raised above their current HP (typically via {{StatusEffect|Tremor Burst|d}}).
+* Being hit while their current HP is below an untriggered Stagger Threshold, even if the attack deals 0 damage.
+When units become Staggered, they will be unable to use their Skills for the current and subsequent Turn of combat. Additionally, a Staggered unit will have all their physical Resistances changed to <font color="red">Fatal [x2]</font> during the Turn.
+
+If multiple Stagger Thresholds are surpassed within the same Turn they are first Staggered, the unit's '''Stagger Level''' will rise, causing them to become increasingly vulnerable to damage.
+{| class="wikitable"
+|+ Stagger Damage Bonus
+|-
+! Stagger Level !! Resistance
+|- style="color:#e9be2c"
+| Stagger || x2
+|- style="color:#e62c2d"
+| Stagger+ || x2.5
+|- style="color:#33bea6"
+| Stagger++ || x3
+|}
+
+The stagger level cannot exceed '''Stagger++''', even if a fourth Stagger Threshold is surpassed.
+
+Additionally, Stagger Thresholds can be lowered via various effects, although they cannot be lowered below 0.
+
+Stagger Thresholds can also be negative values. When this is the case, the Threshold cannot cause the unit to Stagger or raise the Stagger Level as long as its value is below 0, but can still be raised and lowered by various methods, such as {{StatusEffect|Tremor Burst|d}}.
+
+By default, Sinners can have anywhere from 1 to 3 Stagger Thresholds, depending on the equipped Identity. Enemies can have varying amounts of Stagger Thresholds or none at all.
+
+==== {{Icons|SkillAttack}}Offense Levels and {{Icons|SkillDefense}}Defense Levels ====
+Offense and Defense Levels are stats every unit possesses that scale with their Level and affect the Clash Power and damage of Skills. Every unit possesses a base Offense/Defense Level equal to their Level. The Offense Level is applied to all of the unit's Skills as well as E.G.O. Each Attack Skill may also possess an Offense Level modifier specific for that Skill that either increases or decreases the overall Offense Level. Similarly, every unit also possesses a Defense Level equal to their current Level and the unit's {{Icons|Defense}}Defense Level modifier, while each of their Defense Skills possess their own {{Icons|SkillDefense}}Defense Level modifiers separate from the unit's. Offense/Defense Levels cannot go below 1.
+
+The formula for Offense/Defense Levels is: <big><math>Level=Unit+(Modifier)</math></big><br>
+Where <math>Level</math> is the resulting Level, <math>Unit</math> is the Unit's original Level, and <math>Modifier</math> is the modifier number unique to every Skill, unit or Part (can be positive, negative or 0).
+
+Offense and Defense Levels affect combat in two ways:
+
+:1. In a Clash between two Skills, the Skill with higher Offense/Defense Level usually gains additional Clash Power. However, in a Clash between an Attack and non-Clashable Defense Skill, only the Defense Skill can gain power and gains Final Power instead of Clash Power.<br>
+:The Skill with higher Level gains '''1 Power per 3 Level difference, rounded down''' (4 Level -> +1 Power).
+
+:2. When dealing damage with Attack Skills, the difference between the attacker's Offense Level and the defender's Defense Level additionally modifies the damage dealt on top of Resistances, following this formula:<br>
+:<big><math>M = \frac{Off - Def}{|Off - Def| + 25} \times 100</math></big><br>
+:Where <big><math>M</math></big> is the damage modifier (in %), <big><math>Off</math></big> is the Attack Skill's '''{{Icons|SkillAttack}}Offense Level''' and <big><math>Def</math></big> is the defender's Defense Level. (If the defender is using a Defense Skill, use that Skill's '''{{Icons|SkillDefense}}Defense Level'''. Otherwise, use their body's—or in Focused Encounters, the targeted Part's—'''{{Icons|Defense}}Defense Level'''.)
+
+==== Trait Keywords ====
+{{For|a list of all Trait Keywords used by Identities|:Category:Identities by Trait Keyword{{!}}Identities by Trait Keyword}}
+{{For|a list of all Trait Keywords used by Assist Units|:Category:Assist Units by Trait Keyword{{!}}Assist Units by Trait Keyword}}
+{{For|a list of all Trait Keywords used by enemies|:Category:Enemies by Trait Keyword{{!}}Enemies by Trait Keyword}}
+'''Trait Keywords''' list the factions a unit is part of, typically along with the type of the faction as well. They are partially listed above the name of the unit, and the full list can be viewed by clicking or tapping on the magnifying glass icon.
+
+Like Levels, Trait Keywords have no effect in combat on their own, but instead affect how Skills and Passives interact with the unit. For example, a Skill may deal more damage or a Passive may grant additional buffs when used on a unit with a given Trait Keyword.
+
+While '''Factions''' are always listed as a Trait Keyword, not every Trait Keyword is a Faction. For example, more generic Trait Keywords such as {{Keyword|Fixer}} or {{Keyword|Syndicate}} will not activate [[The Middle Little Brother Meursault]]'s Support Passive, while more specific ones such as {{Keyword|Dawn Office}} or {{Keyword|The Thumb}} will.
+
+When a Trait Keyword is crossed out (such as {{Keyword|Jia Family|strike}}), the unit will not count as part of that faction.
+
+When a normal Trait Keyword and a crossed-out one are both part of the same unit, the normal Trait Keyword will always take precedence.
+
+=== Skills ===
+Every unit—both ally and enemy—has a set of '''Skills''' and '''Passives''' that they can use during combat. Every Sinner Identity currently has at least 3 Attack Skills and 1 Defense Skill that can be used during their Turn. Additionally, they each have a Combat Passive and a [[Support Passives|Support Passive]] which can be independently activated depending on whether they are in combat or out of combat, respectively.
+Each Sinner is given at least 3 Attack Skills with varying degrees of power. All Identities can immediately utilize their Skill 1 and Skill 2, but their Skill 3 is unlocked after the Identity is Uptied to Tier 3 or higher.
+In combat, Sinners pull Skills out of a 'Skill Deck' which contains a certain number of each Skill and will only refresh after all Skills have been used. The Skill's amount typically changes inversely with its Skill Rank (i.e. 3 copies of Skill 1, and 1 copy of Skill 3).
+
+==== Skill Properties ====
+[[File:Tutorial SkillView.png|600px|class=responsive-image|center]]
+<small><center>Viewing a Skill's information.</center></small>
+
+Every Skill has the same properties as below:
+* '''Base Power''' is the Skill's starting Power value.
+* '''Coin Power''' is the amount of Power that will be changed for every Coin that lands on Heads, it can be positive or negative. The Power of a Skill after Coins are flipped is called the '''Final Power'''. See below for more information.
+* '''Coin Amount''' is the amount of Coins of that Skill, every Skill has at least 1 Coin. See below for more information.
+* '''Attack Type''' is the physical damage type of that Skill, this affects how much damage it deals against certain targets. It can be one of the following: '''{{Icons|Slash}}Slash''', '''{{Icons|Pierce}}Pierce''' and '''{{Icons|Blunt}}Blunt'''.
+* '''Sin Affinity''' is the Sin Affinity of that Skill, this affects what Affinity of E.G.O Resource that Skill generates when used, how it interacts with [[Resonance|Sin Resonance]], and the damage it deals according to the target's Sin Resistances. It can be one of the following: '''{{Icons|Wrath}}Wrath''', '''{{Icons|Lust}}Lust''', '''{{Icons|Sloth}}Sloth''', '''{{Icons|Gluttony}}Gluttony''', '''{{Icons|Gloom}}Gloom''', '''{{Icons|Pride}}Pride''' and '''{{Icons|Envy}}Envy'''.
+** Notably, some Skills (usually Defense Skills) lack a Sin Affinity entirely, such Skills will instead use the brown color and have no Affinity decorations.
+* '''Offense/Defense Level''' is the modifier unique to every Skill, it can be a negative number, a positive number or zero.
+* '''[[Attack Weight]]''' is the maximum amount of Slots a single Skill can target. Some enemies may have more than 1 Slot Weight, forcing Skills to use up more Attack Weight per Slot. For example:<br>A Skill with 5 Atk Weight can target 5 Slots if each Slot has 1 Slot Weight. (5⇒1|1|1|1|1)<br>But the same Skill can only target 3 Slots if each Slot has 2 Weight, as 2 of the Skill's Atk Weight would be used on Slot #1 and #2. (5⇒2|2|1)<br>Some Skills can gain conditional Attack Weight during combat, which prioritizes low-health and untargeted Slots.
+* '''Skill Amount''' dictates how often a Skill will be available. Skills of enemy units do not have this property.
+
+==== {{Icons|Coin}}Coins ====
+Each Skill in the game has "Coins" that are tossed to achieve different effects. Coins, depending on whether they land on Heads or Tails, can positively or negatively affect the Final Power and damage dealt by the Skill being used. The probability of hitting Heads is affected by the unit's Sanity. Skills and the significance of Coins/Coin Power are expanded on in the Battle Information section.
+
+===== {{Icons|Unbreakable Coin}}Unbreakable Coins =====
+''<sub>{{For|a list of all Identities with Unbreakable Coins|:Category:Identities with Unbreakable Coin{{!}}Identities with Unbreakable Coins}}</sub>''
+First introduced in [[Season 4: Clear All Cathy]] with the release of [[Zwei Assoc. West Section 3 Ishmael]], {{StatusEffect|Unbreakable Coin|r}}s—indicated via their special red color in the game—are a unique variant of Coins that are not destroyed after losing the Clash with them, they become "Cracked" instead. Cracked Unbreakable Coins of a Skill will trigger after losing a Clash (in a similar manner to Counter Skills), but with their Coin Power fixed to 1 (+1 for Plus Coin Skills, -1 for Minus Coin Skills). However, if the user of the Skill becomes Staggered, these Coins will be cancelled.
+
+Notably, the fixation of Coin Power for Cracked Unbreakable Coins are applied before any Coin Power modifications, meaning that Skill effects such as "If the target has X+ {{StatusEffect|Rupture|d}}, Coin Power +Y" can still increase a Cracked Unbreakable Coin's Power, while status effects such as {{StatusEffect|Plus Coin Drop|d}} or {{StatusEffect|Paralyze|d}} can reduce their Power to 0 as well.
+
+===== {{Icons|Excision Coin}}Excision Coins =====
+First introduced in [[Season 7: Kumo no ito • oti on akA]], {{StatusEffect|Excision Coin|r}}s—indicated via their green color in the game—are another unique variant of the Coins. They behave identically to {{StatusEffect|Unbreakable Coin|r}}s, except that they completely break opposing {{StatusEffect|Unbreakable Coin|r}}s in a Clash.
+
+==== Attack Skills ====
+Attack Skills are a unit's main method of dealing damage. They have specific Physical Types and Sin Affinities, which affect the damage they deal against their target. {{SkillCon|On Use}}, an Attack Skill will generate 1 E.G.O Resource of a corresponding Affinity. (i.e. A {{Icons|Pride}}Pride Attack Skill will generate 1 {{Icons|Pride}}Pride E.G.O Resource)
+
+By default, an Attack Skill will always deal a minimum of 1 damage per Coin, even if the Attack Skill displays having rolled a 0.
+
+==== [[E.G.O/Gameplay|E.G.O Skills]] ====
+E.G.O Skills are a special '''Attack Skills''' that are able to be utilized by the Sinners when equipped and are equipped completely independently from the Sinner's Identity. These Skills are much stronger than regular Attack Skills, but cost '''{{Icons|Sanity}}Sanity''' and '''E.G.O Resources''' to use. The SP deduction occurs immediately after the Clashing {{Icons|Unique Sanity Factors}}Sanity factors take effect, and before any Coins are tossed.
+
+There are 2 types of E.G.O Skills:
+* '''Awakening''' Skills are the most commonly used type. They cost varying amounts of resources depending on their Risk Level but are generally beneficial to your Sinners.
+* '''Corrosion''' Skills can be more powerful than Awakening Skills, but will cost more Sanity and may have certain downsides to using them. Additionally, most Corrosion Skills are {{SkillCon|Indiscriminate}} by default, meaning they can target both allies and enemies alike. 
+
+When a generated E.G.O Skill is not used on the same Turn it was created, it will always take up the bottom Skill of its original Slot on the Dashboard and cannot be canceled until it is used. It can still be replaced by Defense Skills, but canceling said Defense Skills or using them will still return the E.G.O Skill.
+
+If a Sinner is affected by {{StatusEffect|E.G.O Corrosion|r}}, the top and bottom Slots for a generated Corrosion E.G.O Skill may have different targets.
+
+===== Overclocking =====
+Any E.G.O with Corrosion Skills can be Overclocked, allowing you to use their Corrosion Skills without the risk of attacking other allies. This comes with having to use 50% more Sanity (specifically the SP cost listed on the Corrosion Skill) and E.G.O Resources than if you were to use a regular Awakening Skill.<br>
+These costs are rounded up, i.e. an E.G.O that costs 3 {{Icons|Sloth}}Sloth E.G.O Resources and 25 {{Icons|Sanity}}SP will instead cost (<math>3\times1.5=4.5</math>)⇒'''5''' {{Icons|Sloth}}Sloth E.G.O Resources and (<math>25\times1.5=37.5</math>)⇒'''38''' {{Icons|Sanity}}SP when Overclocked.<br>
+'''Overclocking only removes the {{SkillCon|Indiscriminate}} effect''', other conditions such as "Targets the fastest unit" or "Targets randomly" will still activate, although they will no longer consider allies as a valid target or sub-target.
+
+==== Defense Skills ====
+Defense Skills can be produced by pressing on a unit's portrait on the Skill Dashboard, and can be undone before the Combat Phase begins by pressing on the unit's portrait again. Defense Skills can be created without limit and fully replace the bottom Skill if used.
+
+{{SkillCon|On Use}}, a Defense Skill will generate 1 E.G.O Resource of its Sin Affinity and can be a part of Sin Resonance, though most Guard and Evade Skills possess no Sin Affinity before Uptying that Identity to Tier 4, and thus can do neither; while Counter Skills possess Sin Affinities regardless of Uptie Tier. Most Defense Skills gain Defense Level from Sin Resonance, while Counters gain Offense Level.
+
+Defending against an enemy's empty Skill Slot will not generate E.G.O Resources nor trigger the Skill's {{SkillCon|On Use}} effects.
+
+"Clashing" any Defense Skill with an opponent's Defense Skill causes an "'''Offset'''" which cancels the use of both Skills, unless the affected Skill is a Counter Skill or a Clashable Defense Skill.
+
+There are three (five when counting Clashable variants) different types of Defense Skills: '''{{Icons|Guard}}Guard''', '''{{Icons|Evade}}Evade''' and '''{{Icons|Counter}}Counter'''.
+
+===== {{Icons|Guard}}Guard =====
+[[File:Guard.gif|400px|class=responsive-image|center]]
+''<sub>{{For|a list of all Identities with Guard Skills|:Category:Identities with Guard Skills{{!}}Identities with Guard Skills}}</sub>''
+Guard Skills activate when the unit with the selected Skill uses it during a Turn before being attacked by an incoming Attack Skill. When activated, the Guard Skill rolls its Coins, adding/subtracting the Coin power to/from the Base Power depending on the Coin's value and the result of the Coin toss. Then, an amount of Shield HP equal to the Final Power of the Guard Skill is added to the defender's HP for the duration of the Turn.
+
+====== Clashable Guard/Power Guard ======
+[[File:PowerGuard.gif|400px|class=responsive-image|center]]
+''<sub>{{For|a list of all Identities with Clashable Guards|:Category:Identities with Clashable Guard{{!}}Identities with Clashable Guards}}</sub>''
+Clashable Guard Skills are able to Clash against Attack Skills. Unlike regular Guards (and more similarily to Counters), they are used reactively against the first incoming One-Sided Attack that target the unit and Clash against said Skills.
+
+If they win a Clash against an opposing Skill, the target's Stagger Threshold will be increased by the value of the Clashable Guard Skill's Final Clash Power.
+If they lose a Clash against a Skill, the attacker's Final Skill Power will be reduced by the Final Power of the Clashable Guard, reducing incoming damage from the Skill that won the Clash.
+
+Just like regular Guard Skills, their Final Power is affected by Status Effects such as Defense Power Up/Down and the difference between the defender's Defense Level and the attacker's Offense Level: For every 3 Defense Level above the attacker's Offense Level, the Skill gains +1 Final Power.
+
+===== {{Icons|Evade}}Evade =====
+[[File:Evade.gif|400px|class=responsive-image|center]]
+''<sub>{{For|a list of all Identities with Evade Skills|:Category:Identities with Evade Skills{{!}}Identities with Evade Skills}}</sub>''
+Evade Skills activate when the unit with the selected Skill uses it during a Turn before being attacked by an incoming Attack Skill. While active, an Evade Skill allows a unit to dodge attacks that are of equal or lesser Power than the incoming Skill's Final Power. 
+
+The Evade Skill's Coin is flipped each time an Opposing Skill tosses its Coin. When a unit activates their Evade Skill, that Skill remains active for the duration of the Turn. Evading an attack causes the defending unit to completely negate the incoming hit and receive no damage. However, if an Evade Skill's Final Power is less than the opposing Skill's current Power and fails the Evade, the defending unit takes the full damage and the Evade Skill is lost.
+
+If an Evade Skill manages to evade all Coins of any opposing Skill, it will be reused for any other incoming Skills. Evade Skills are considered as used and activate {{SkillCon|On Use}} effects even if the Skill fails evading the first incoming Coin. However, even if the unit evades different attacks, it only counts as being used once for the purposes of {{SkillCon|On Use}} effects. ({{SkillCon|On Evade}} effects are activated at each Coin evaded, regardless if it's during different attacks or a single multi-Coin attack).
+
+===== {{Icons|Counter}}Counter =====
+[[File:Counter2.gif|400px|class=responsive-image|center]]
+''<sub>{{For|a list of all Identities with Counter Skills|:Category:Identities with Counter Skills{{!}}Identities with Counter Skills}}</sub>''
+Counter Skills activate when the unit who selected the Skill is attacked by an incoming Attack Skill during the same Turn. A unit using the selected Counter Skill immediately launches a one-sided counterattack against any enemy who attacks them with the selected Counter Skill, regardless of which enemy the Counter Skill had targeted prior. Cracked {{StatusEffect|Unbreakable Coin|r}}s take priority over Counters: if a unit can deploy them while having a Counter in the queue, the Counter is not used and remains available.
+
+When a unit possesses several Skill Slots, selecting the Counter Skill multiple times on the Skill Dashboard increases the number of times that unit can engage in a counterattack. Staggered units (even if they possessed a Counter Skill on the Dashboard prior to being Staggered) cannot use Counter Skills.
+All Counter Skills possess a physical damage type and a Sin Affinity, both affecting the damage dealt to the enemy. They may also possess more than one Coin.
+
+====== Clashable Counter/Power Counter ======
+[[File:PowerCounter.gif|400px|class=responsive-image|center]]
+''<sub>{{For|a list of all Identities with Clashable Counters|:Category:Identities with Clashable Counter{{!}}Identities with Clashable Counters}}</sub>''
+Clashable Counters are a special kind of Counter Skills that have the ability to engage in Clashes against enemy Attack Skills and activate before being attacked by an incoming one-sided Skill.
+
+If they win a Clash against an incoming Skill, the Counter Skill is used against the attacker. 
+If they lose a Clash against a Skill, the opposing Skill is used against the defender. Winning or losing a Clash with or against Clashable Counter affects Sanity in the same way as with Offensive Skills, increasing or decreasing Sanity based on that units Base factors for gaining/losing Sanity. 
+
+Like regular Counter Skills, Clashable Counters possess at least one Coin, a physical damage type and Sin Affinity. They will not be used if no incoming enemy Skill engages in an Clash with it. Due to this, they are unable to engage in one-sided attacks like Attack Skills would.
+
+==== Skill Tags ====
+Skills activate their conditional effects under certain conditions, which include:
+{|class="wikitable mw-collapsible mw-collapsed"
+!colspan="2"|Skill Tags
+|-
+!Tag!!Description
+|-
+!colspan="2" align="center"|Before/After Combat Phase
+|-
+|{{SkillCon|Turn Start}}||Activates at the start of the Turn, before the Chaining Phase.
+|-
+|{{SkillCon|Combat Start}}||Activates at the start of the Combat Phase, before any Skills have been used. This effect activates regardless of if the Skill it is tied to will be used in the Turn or not.
+|-
+|{{SkillCon|Turn End}}||Activates at the end of the Combat Phase, after all Skills have been used. This effect activates regardless of if the Skill the effect is tied to had been used in the Turn or not.
+|-
+!colspan="2" align="center"|During Combat Phase
+|-
+|{{SkillCon|Before Use}}||Activates immediately before a Skill is used. Typically used to replace one Skill with another.
+|-
+|{{SkillCon|On Use}}||Activates on an Attack Skill as soon as it engages in a Clash or is about to attack one or more targets. On Defense Skills, it activates as soon as an incoming attack triggers the activation of the Defense Skill. Does not activate if the Skill does not end up being used.
+|-
+|{{SkillCon|Clash Start}}||Activates at the start of the Clash. Does not activate if the Skill did not engage in a Clash.
+|-
+|{{SkillCon|Clash Win}}||Activates when the Skill destroys all of the opposing Skill's Coins in a Clash, therefore winning the Clash.
+|-
+|{{SkillCon|Clash Lose}}||Activates when the Skill loses all of its Coins in a Clash—for {{StatusEffect|Unbreakable Coin|r}}s or {{StatusEffect|Excision Coin|r}}s, when they all "Crack"—therefore losing the Clash.
+|-
+!colspan="2" align="center"|During Skill Usage
+|-
+|{{SkillCon|Before Getting Hit}}||Exclusive to Counter Skills. Activates before the Attack Skill that would activate the Counter Skill is used.
+|-
+|{{SkillCon|Before Attack}}||Activates only once before an Attack Skill is about to attack one or more targets.
+|-
+|{{SkillCon|On Unopposed Attack}}||Activates in the same manner as {{SkillCon|Before Attack}}, but requires the Skill to never have engaged in any Clashes (including against Clashable Defense Skills).
+|-
+|{{SkillCon|On Kill}}||Activates when any Coin of the Skill defeats a target.
+|-
+|{{SkillCon|Attack End}}||Activates only once after an Attack Skill has used all of its Coins.
+|-
+!colspan="2" align="center"|During Coin Usage
+|-
+|{{SkillCon|Coin Start}}||Activates immediately before the Coin this effect is tied to would be tossed.
+|-
+|{{SkillCon|On Hit}}||Activates when the Coin this effect is tied to lands a hit on a target.
+|-
+|{{SkillCon|Heads Hit}}||Activates when the Coin this effect is tied to lands a Heads hit on a target.
+|-
+|{{SkillCon|Tails Hit}}||Activates when the Coin this effect is tied to lands a Tails hit on a target.
+|-
+|{{SkillCon|Hit after Clash Win}}||Activates when, after winning a Clash, the Coin this effect is tied to lands a hit on a target. If the Skill did not win a Clash, this effect does not activate.
+|-
+|{{SkillCon|Hit after Clash Lose}}||Unique to {{StatusEffect|Unbreakable Coin|r}}s and {{StatusEffect|Excision Coin|r}}s. Activates when, after losing a Clash, the Coin this effect is tied to lands a hit on a target. If the Skill did not lose a Clash, this effect does not activate.
+|-
+|{{SkillCon|On Hit without Cracking}}||Unique to {{StatusEffect|Unbreakable Coin|r}}s and {{StatusEffect|Excision Coin|r}}s. Activates when the Coin this effect is tied to lands a hit on a target without having been "Cracked" via losing a Clash.
+|-
+|{{SkillCon|On Crit}}||Activates only when the Coin this effect is tied to lands a Critical Hit on a target, which is typically achieved with {{StatusEffect|Poise|b}}.
+|-
+|{{SkillCon|On Crit - Heads Hit}}||Activates when the Coin this effect is tied to lands a Critical Hit on a target, and the Coin landed on Heads.
+|-
+|{{SkillCon|On Crit - Tails Hit}}||Activates when the Coin this effect is tied to lands a Critical Hit on a target, and the Coin landed on Tails.
+|-
+|{{SkillCon|On Kill}}||Activates upon successfully defeating a target.
+|-
+|{{SkillCon|On Crit Kill}}||Activates upon successfully defeating a target using a Critical Hit.
+|-
+|{{SkillCon|On Crit Kill Against Enemy}}||Activates upon successfully defeating an enemy using a Critical Hit. Does not activate upon defeating allies.
+|-
+|{{SkillCon|Current Coin Attack End}}||Activates after the Coin has been used.
+|-
+|{{SkillCon|Heads Attack End}}||Activates like {{SkillCon|Heads Hit}} but with the same timing as {{SkillCon|Attack End}}. Exclusive to single-Coin Skills.
+|-
+|{{SkillCon|Tails Attack End}}||Activates like {{SkillCon|Tails Hit}} but with the same timing as {{SkillCon|Attack End}}. Exclusive to single-Coin Skills.
+|-
+|{{SkillCon|On Evade}}||Exclusive to Evade Skills. This effect activates each time the Evade Skill successfully evades a Coin from an incoming attack.
+|-
+|{{SkillCon|Reuse - ■■■}}||A prefix that may be applied to other already existing conditionals (e.g. {{SkillCon|Reuse - On Hit}}) that causes them to only activate on Reused Coins.
+|-
+|{{SkillCon|Ally ■■■}}|| A prefix that may be applied to other already existing conditionals (e.g. {{SkillCon|On Ally Kill}}) that causes the conditional only to trigger against allies.
+|-
+|{{SkillCon|Constant}}||Identical to not having a "tag", but is exclusive to Coins.
+|-
+!colspan="2" align="center"|'''Miscellaneous'''
+|-
+|{{SkillCon|Clashable Counter}}||Indicates that the Skill is a Clashable Counter Skill.
+|-
+|{{SkillCon|Target Fixed}}||Indicates that the Skill's main target and sub-targets cannot be changed.
+|-
+|{{SkillCon|Indiscriminate}}||Indicates that the Skill can choose any unit—including allies—as a main target or sub-target.
+|-
+|{{SkillCon|Unclashable}}||Indicates that the Skill cannot be Clashed with, but can still activate non-Clashable Defense Skills.
+|-
+|{{SkillCon|Failed ■■■}} <br> {{SkillCon|■■■ Fail ■■■}}||A prefix that may be applied to other already existing conditionals (e.g. {{SkillCon|Failed Kill}}, {{SkillCon|On Crit Kill Fail Against Enemy}}) that activate when these conditionals would normally fail to activate.
+|}
+For 'During Coin Usage' tags revolving around hitting or defeating targets: If the Skill has 2+ targets, the tag activates once for each target hit or defeated and stacks indefinitely.
+
+Effects without any of these "tags" labeled with them can activate or deactivate dynamically throughout the Skill's usage, or simply indicate certain characteristics of the Skill (such as targeting behavior).
+
+=== Passives ===
+Passives are some of the most important parts of an Identity's kit, as they can greatly benefit or ruin depending on their effects and activation requirements. There are two types of Passives, '''Combat''' and '''Support''', and all Identities possess at least one of both types. An Identity's Combat Passive is used while the Identity is deployed in combat, usually only affecting themselves (unless stated otherwise). An Identity's Support Passive is used while the Identity is not deployed in combat, but is equipped on the team. These Passives usually only affect one deployed ally unit in battle that meets certain criteria, such as having the most or least sanity or health (unless stated otherwise). If two or more units in combat meet the same criteria, the unit selected first on the pre-battle screen has priority for the Passive's effect. 
+
+Both Combat Passives and [[Support Passives]] conditionally activate depending on owned Sin resources or Sin Resonance on combat start for the turn. 
+Passives that activate via Sin Resonance require a certain Sin Resonance (whether general or Absolute Resonance) of a specific Sin Affinity to be achieved on that Turn.
+Passives that activate via Sin Resonances require a certain amount of one Sin type's Sin Resource in possession in order to activate.
+
+=== Durante (Sapling of Light)===
+Unlocked after Canto 6-44, this allows [[Dante]] to activate a Golden Bough ability. Each ability is associated with one of the [[lc:Sephirah|Sephirah]]/[[lor:Patron Librarians|Patron Librarians]], bearing the respective symbol from ''Library of Ruina''.
+
+Abilities can be initially be used once a day, and more abilities get unlocked as you progress through Inferno. After unlocking Morositas in 8-30, the player can use two abilities per day, but cannot use the same one twice. Losing or restarting a fight after using one or more abilities refunds the use of those abilities.
+
+{|class="mw-collapsible" width="100%" style="border-spacing: 2px; border: 2px solid black; clear:both; font-size:100%;" 
+!colspan="5" style="background:#810000; border-radius:3.25px;" align="center"|<div style="margin-left:35px;color:#FFFFFF;">''Durante Abilities''</div>
+|-style="background:#810000;" align="center"
+!Icon||Name||Sephirah||Effect||Unlock Requirement
+|-
+|align="center"|[[File:Durante Hokma Pigritia.png|95px|class=responsive-image]]
+|'''Pigritia'''
+|Hokma
+|Halves the current Speed of all enemies. (Rounded down)
+|Unlocked after 6-44
+|-
+|align="center"|[[File:Durante Binah Superbia.png|95px|class=responsive-image]]
+|'''Superbia'''
+|Binah
+|Slot in a single E.G.O Skill without consuming any E.G.O Resources.
+|Unlocked after 7-36
+|-
+|align="center"|[[File:Durante Chesed Morositas.png|95px|class=responsive-image]]
+|'''Morositas'''
+|Chesed
+|Set all units' Offense and Defense Levels to the average of all units' values for the next 3 turns. (Rounded down) <ref>Applies an additional 3 Offense Level and 6 Defense Level increase to the Sinners via {{StatusEffect|Chesed's Mercy|r}}.</ref>
+|Unlocked after 8-30
+|-
+|align="center"|[[File:Durante Gebura Ira.png|95px|class=responsive-image]]
+|'''Ira'''
+|Gebura
+|Select a single unit to strengthen its stats.<ref>Specifically, Ira applies the {{StatusEffect|Gebura's Blade|b}} buff to the selected unit.</ref>
+|Unlocked after 9-50
+|}
+
+==== Unstable Durante ====
+These abilities can only be used at specific points in the story and are not selectable otherwise.
+{|class="mw-collapsible" width="100%" style="border-spacing: 2px; border: 2px solid black; clear:both; font-size:100%;" 
+!colspan="5" style="background:#810000; border-radius:3.25px;" align="center"|<div style="margin-left:35px;color:#FFFFFF;">''DURANTE''</div>
+|-style="background:#810000;" align="center"
+!Icon||Name||Effect||Chapters
+|-
+|align="center"|[[File:Durante Unstable Malkuth.png|95px|class=responsive-image]]
+|'''M@!L%#TH'''
+|Though somewhat unstable, the manager can remotely command and communicate with every sinner.
+|9-33, 9-50, 9.5-3, 9.5-6, 9.5-7, 9.5-9, 9.5-19
+|}
+
+=== Backups (Chain Battles) ===
+First introduced in [[Line 4: Masquerade]] onwards, most Encounters will allow you to have other Sinners as backup to replace the Sinners that have either died or Retreated from the battle (through Skills and Passives based on Identity) with an upstart of 10 SP (increased based on how far they are set as Substitutes). Backup Sinners will also start with same number of Skill Slots that the replaced Sinner had prior. If the battle has "Backup" at the top, the Encounter is a Chain Battle Encounter.
+
+In Chain Battles, a unit will use its Combat Passives while in the battle, while units that have died or Retreated from battle will use its Support Passives instead. Backup Sinners will enter the battlefield in the order of the numbers next to their Support Passives.
+
+This applies to both normal and Focused Encounters as below.
+
+=== Sinner Death ===
+
+Sinners that die in battle for any reason will be removed from the encounter and can no longer be the target for any Skills or Passives. Any Skill or effect targeting dead Sinners will either be canceled or move to another target (if applicable). In the case of Chain Battles, a Backup Sinner may enter the battlefield as a Substitute. If no Backup Sinners were selected at the start of the battle, losing a Sinner via death will permanently remove all of the Sinner's Skill Slots and prevent the remaining Sinners from acquiring them. This means that if a Sinner with 2 Skill Slots dies, the maximum number of Skill Slots will become 10 (instead of 12). If any Backups were selected at the start of the battle, even if none are left, the remaining Sinners can still reacquire the lost Skill Slots.
+
+<span>In most cases, a Sinner dying will remove the effects of any E.G.O Gifts that applied based on Deployment Order. However, it is possible for some Gifts to be "inherited" by the next Sinner in order, such as {{GiftTT|Charge-type Gloves|25|t}} when applying {{StatusEffect|Near-light Superbattery|b}}.</span>
+
+=== Battlefield Retreat ===
+
+Some Identities, such as those from the [[Devyat' Association]], may have the ability to execute a {{StatusEffect|Battlefield Retreat|r}}. During battles with no remaining Backup units, a Sinner that has retreated will escape the battle entirely, as if one fewer unit had been deployed at the start. This can be preferable to death, as the Sinner's Skill Slots will not be lost. Additionally, if multiple allies escape simultaneously and there are not enough remaining Backup units to replace them, the excess Sinners will also escape entirely. Sinners that are about to trigger a Retreat by using a Skill will have a flashing <font style="font-family:Mikodacs; color:#810000; letter-spacing:0.75px">!Retreat!</font> indicator above said Skill.
+
+When retreating, Sinners will maintain the same Deployment Order they had at the start of the battle, in addition to gaining a Return Order number and entering the queue for Backup Sinners. Usually, this means that all Backup units must enter the battlefield before any units can Return, but some Identities such as [[Family Hierarch Candidate Ishmael]] can manipulate the Backup queue directly to gain Return priority. Other Identities such as [[The Lord of Hongyuan Hong Lu]] can also place Retreating Sinners earlier in the Return Order (but not the Backup queue as a whole).
+
+<span>Since Deployment Order is maintained, even while Retreating, this means that Returning units will immediately regain priority for effects and trigger Deployment-based E.G.O gifts as before. For example, a Sinner can gain extra Skill Slots, Retreat to give those slots to a Backup Sinner, then Return and immediately gain another Slot due to being the earliest in the Deployment Order again. Retreating is also treated differently from Sinner death when checking Deployment Order, as even {{GiftTT|Charge-type Gloves|25|t}} will remain tied to a Retreating Sinner.</span>
+
+Some Encounters where a specific Sinner is required may block that Sinner from Retreating. If all Sinners Retreat from the battlefield, such that no Backups can enter, the battle will immediately end in Defeat.
+
+== Battle Information ==
+[[File:Battte start.png|frameless|center|700x700px|class=responsive-image]]
+<small><center>The UI seen during an Encounter.</center></small>
+[[File:InBattleClashing.png|center|class=responsive-image]]
+In battles, before the Combat Phase commences, the menu atop the screen displays a Clash preview. Alongside the previously mentioned Skill details, superior Attack and Defense Levels are highlighted in yellow.
+
+Additionally, the Skill's damage modifier is displayed in the top center as a percentage, dictating how much stronger or weaker the attack's damage will be depending on various factors such as Resistance and level disparity.
+
+[[File:DamagePredictionExample.png|center|class=responsive-image]]
+During one-sided attacks, the Clash prediction turns into a damage prediction, showing the minimum and maximum damage the attack will deal.
+
+[[File:Clash phase.png|frameless|center|700x700px|class=responsive-image]]
+Each attack has two phases: a Clash phase and a 'one-sided' attack phase.
+
+Clashes occur when two units attack each other with a Skill. When a unit Clashes with another, both units toss all of their Skill's Coins; this determines the Skill's power in a Clash. The unit whose Skill has the lowest Clash power loses one Skill Coin, and if the unit still has any Skill Coins left, the two units Clash again. Once one unit has lost all its Skill Coins, the victor becomes the attacker in the one-sided phase, attacking with its remaining Skill Coins.
+
+[[File:One side phase.png|frameless|center|700x700px|class=responsive-image]]
+After each Turn, depending on the order of the Sinners the player had selected at the pre-battle screen, the first Sinner will receive another Skill Slot, followed by the next Sinner, and so on. Once all ally units have received a second Skill Slot, the process will begin at the first selected once again, giving them an additional Skill Slot. A maximum of 12 Skill Slots can be on the Dashboard during General Encounters. Likewise, enemies' Skill Slots will also increase each Turn.
+
+=== Focused Encounters ===
+<gallery type="slideshow" class="center">
+Battle min detail.png|Click-and-Drag Skills in a Focused Encounter.
+Abno parts.png|Parts of a Focused Encounter unit.
+Abno_choice.png|Choice Events.
+Ego_gift_aftercombat.jpeg|An E.G.O Gift given by the end of an Abnormality Encounter with [[So That No One Will Cry|STNOWC]].
+</gallery>
+'''Focused Encounters''' are mechanically different from General Encounters. Enemies featured within Focused Encounters are commonly Abnormalities or notable adversaries within the game's story. Said enemies tend to have several Skill Slots and may or may not be accompanied by lesser, more common enemies found in General Encounters. Unlike General Encounters, which do not allow the player to direct each Sinner's attacks manually and are instead dictated by the Dashboard Chain, Focused Encounters allow for the player's discretion in which Skill Slot to Clash with. Often, a maximum of six Sinners can be selected for a battle. Unlike General Encounters, the Sinners will not gain additional Skill Slots during subsequent turns if the maximum number of units were deployed. If fewer units than the maximum were deployed, then the Sinners will gain one Skill Slot in order of their selection on the pre-battle screen until the number of Skill Slots hits the maximum number originally outlined—e.g., if 5 units were deployed in a battle with a maximum of six 6, then only the first selected unit in the pre-battle screen will gain an additional Skill Slot.
+
+==== Parts ====
+All enemy units in Focused Encounters possess a minimum of 1 Core and 1 Part. When a unit's Part takes HP damage, its Core also takes an equal amount of damage. Most status effects are also applied only to the targeted Part rather than the Core, while the few status effects that ''are'' applied to the Core will affect all of its Parts (such as {{StatusEffect|Echoes of the Manor|d}}). Each Part can have different Skills, Resistances and Passives, all of which can be viewed in detail by opening the unit's information while in battle and clicking on the corresponding UI of a specific Part.
+
+Notably, the status effect UI below an enemy in a Focused Encounter will display the total sum of every Part's status effects, meaning that an enemy with 3 Parts and 99 {{StatusEffect|Burn|d}} on each Part will have its UI display 297 {{StatusEffect|Burn|d}} instead, despite the fact that {{StatusEffect|Burn|d}} Potency cannot go above 99.
+
+Within an enemy containing multiple Parts, due to the nature of a Counter Skill it will not activate unless you directly hit the Part the Counter Skill is used by.
+
+===== Part Destruction =====
+A breakable Part is considered "broken" if its HP is reduced to 0, Parts can have three different types of destruction:
+* '''Destructible''' Parts, when broken, have all of their physical Resistances changed to <font color="red">Fatal [2x]</font>. However, destroyed Parts are still capable of using Skills after their destruction.
+* '''Severable''' Parts, when broken, are considered completely removed from the unit, making the Part untargetable and unusable. The Part's Skill Slot will be shown as shattered and darkened, and it cannot be targeted by any Skills.
+* '''Indestructible & Unseverable''' Parts—as the name suggests—are immune to the effects listed above and cannot be "broken". If such a Part reaches 0 HP, it will recover all HP on the next turn.
+
+Certain enemies are also capable of recovering their Parts. This typically occurs naturally after a certain number of turns have passed. The number of turns before a Part recovers is shown on the UI.
+
+==== [[Check Events]] ====
+Within certain Focused Encounters, there will be '''Check Events''' in which a '''Sin Affinity Skill check''' is proposed toward the player. Within these Check Events, the player must select a Sinner that would ideally pass the requisite number, the result of which is dictated by the Coin flips of a Skill from their kit that corresponds with the Sin Affinity check. As the check's result relies on Coin flips, a Sinner's SP will greatly influence the outcome. Depending on the result, the check is deemed either a ''success'' or a ''failure''. The consequences of both success and failure vary across the Check Events for each Abnormality, and the consequences of success are not always without fault. Both success and failure may apply a negative or positive effect to the enemy or the player's units. Although the Check Events vary across all different Abnormalities, the Check Events for a particular Abnormality will always be the same and have the same results.
+
+In the story and the Mirror Dungeons, the additional difficulty of a Focused Encounter may reward the player with an '''E.G.O Gift'''. All E.G.O Gifts may have positive or negative effects on Sinners or enemy units and can be beneficial when used alongside a team capable of utilizing them.
+
+=== Battle Hints === 
+First introduced in the [[Hatred and Despair]] Encounters, most high-difficulty battles—typically ones against the bosses of a Canto or Intervallo—allow players to use hints to ascertain which enemy Skills or Passives they should be wary of. These hints come in 3 levels, denoting the possible strength or the importance of that Skill or Passive in regards to the unit's gimmick.
+<div style="background-color:#000; padding:4px; border-radius:4px">
+'''Skill Hints:'''
+<tabber>
+Level 1=
+{{Skill
+|hint=1
+|sin=Lust
+|slevel=1
+|name=Example Skill 1
+|type=Slash
+|icon=Cunning Stab Tingtanger
+|spower=5
+|cpower=+ 5
+|coin=1
+|atkmod=+0
+|atkweight=1
+|se={{SkillCon|On Use}} Base Power +2 for every 4 {{StatusEffect|Bleed|d}} on the target (max 4) <br>
+{{SkillCon|Clash Lose}} {{SkillHint|Remove 2 {{StatusEffect|Curse|d}} Count on target }}
+|ce1={{StatusEffect|Unbreakable Coin|r}} <br> {{SkillCon|On Hit}} Inflict 2 {{StatusEffect|Bleed|d}} and 2 {{StatusEffect|Power Down|d}}
+}}
+|-|Level 2=
+{{Skill
+|hint=2
+|sin=Envy
+|slevel=2
+|name=Example Skill 2
+|type=Blunt
+|icon=Let's Sweep the Stakes Niko
+|spower=3
+|cpower=+2
+|coin=3
+|atkmod=+0
+|atkweight=1
+|se={{SkillCon|Unclashable}}<br>{{SkillCon|Attack End}} {{SkillHint|Heal 10% of HP lost previous turn}}<br>{{SkillCon|Turn End}} {{SkillHint|Inflict Half {{StatusEffect|Curse|d}} (Rounded down) this skill inflicted to the target on self}}
+|ce1={{SkillCon|Tails Hit}} Inflict 3 {{StatusEffect|Curse|d}} and 2 {{StatusEffect|Bleed|d}} Count<br> {{SkillCon|Heads Hit}} Inflict 1 {{StatusEffect|Curse|d}} and 2 {{StatusEffect|Bleed|d}} Potency
+|ce2={{SkillCon|Tails Hit}} Inflict 3 {{StatusEffect|Curse|d}} and 3 {{StatusEffect|Bleed|d}} Count<br> {{SkillCon|Heads Hit}} Inflict 1 {{StatusEffect|Curse|d}} and 2 {{StatusEffect|Bleed|d}} Potency
+|ce3={{SkillCon|Tails Hit}} Inflict 3 {{StatusEffect|Curse|d}} and 5 {{StatusEffect|Bleed|d}} Count<br> {{SkillCon|Heads Hit}} Inflict 1 {{StatusEffect|Curse|d}} and 5 {{StatusEffect|Bleed|d}} Potency
+}}
+|-|Level 3=
+{{Skill
+|hint=3
+|sin=Wrath
+|slevel=3
+|name=Example Skill 3
+|type=Pierce
+|icon=You Are Cleansed of Sin Guido
+|spower=7
+|cpower=+ 5
+|coin=3
+|atkmod=+0
+|atkweight=3
+|se={{SkillHint|Targets the enemy that has the most {{StatusEffect|Curse}}}}
+<br>{{SkillCon|Before Attack}} {{SkillHint|If no{{StatusEffect|Curse|d}} Count on self; Cancel this Skill.}}<br>{{SkillCon|On Use}} Coin Power +1 for every negative effect on main target (max 3) <br> {{SkillCon|On Use}} For every 2{{StatusEffect|Curse|d}} Count on self, gain Atk Weight +1 (max 3) <br> {{SkillCon|Clash Lose}} <br>-Deal -50% damage <br> -Damage dealt by this Skill cannot Stagger the target 
+|ce1={{StatusEffect|Unbreakable Coin|r}}  <br> {{SkillCon|On Hit}} Inflict 3 {{StatusEffect|Nails|d}} Count<br>{{SkillCon|On Hit}} Inflict 2 {{StatusEffect|Pinning Nail|d}} Stack <br>{{SkillCon|Hit after Clash Win]}} Inflict 1{{StatusEffect|Curse|d}} Count
+|ce2={{StatusEffect|Unbreakable Coin|r}}  <br> {{SkillCon|On Hit}} Inflict 6 {{StatusEffect|Nails|d}} Count <br>{{SkillCon|On Hit}} Inflict 4 {{StatusEffect|Pinning Nail|d}} Stack <br>{{SkillCon|Hit after Clash Win]}} Inflict 2 {{StatusEffect|Curse|d}} Count
+|ce3={{StatusEffect|Unbreakable Coin|r}} <br> {{SkillCon|Hit after Clash Win}}Deal Envy damage equal to ({{StatusEffect|Curse}} Count of all units)% of this Coin's final damage (max 300%)<br> {{SkillCon|Hit after Clash Lose}}Deal Envy damage equal to ({{StatusEffect|Curse}} Count of all units)% of this Coin's final damage (max 100%)
+}}
+</tabber>
+<br>
+'''Passive Hints:'''
+<tabber>
+Level 1=
+{{Passive|hint=1|Example Passive|Encounter Start: reset this unit's SP to -15 <br>
+Deal +50% damage against Staggered enemies}}
+|-|Level 2=
+{{Passive|hint=2|Example Passive|{{SkillHint|Turn Start: If no{{StatusEffect|Curse|d}} Count on self, add Example Skill 2 to skill rotation}}<br>If at 50% HP or less, double{{StatusEffect|Curse|d}} effects on self.<br> If at 25% HP or less, double{{StatusEffect|Curse|d}} Count inflicted by this units skills.}}
+|-|Level 3=
+{{Passive|hint=3|Example Passive|{{SkillHint|Encounter Start: Inflict 10{{StatusEffect|Curse|d}} on self}}<br> Take -30% less damage from {{StatusEffect|Burn|d}},{{StatusEffect|Tremor|d}},{{StatusEffect|Rupture|d}},{{StatusEffect|Sinking|d}}<br>Take -50% less damage from {{StatusEffect|Bleed|d}}<br>This unit instead of gaining the negative effects of{{StatusEffect|Curse|d}},{{SkillHint| gets the positive versions of its debuffs}}}}
+</tabber>
+</div>
+<br>
+Assist Unit's Skills and Passives were also given hints, these are marked in shades of green rather than the usual colors.
+
+<div style="background-color:#000; padding:4px; border-radius:4px">
+'''Skill Hints:'''
+<tabber>
+Level 1 =
+{{Skill|level=75
+|allyhint=1
+|slevel=1
+|sin=Gloom
+|name=Example Assist Unit Skill
+|type=Guard
+|icon=I'll Block Them and Keep You Safe Ezra
+|spower=20
+|cpower=+ 2
+|ubcoin=1
+|defmod=+3
+|atkweight=1
+|se={{StatusEffect|Clashable Guard|r}} <br> {{SkillCon|Combat Start}} {{SkillHint|Gain 1 {{StatusEffect|Assist Defense|r}}}} <br> {{SkillCon|Clash Win}} Inflict 2 {{StatusEffect|Tremor|d}} and +2 {{StatusEffect|Tremor|d}} Count on target
+|ce1={{StatusEffect|Unbreakable Coin|r}}
+}}
+|-|Level 2 =
+{{Skill
+|allyhint=2
+|slevel=2
+|sin=Pride
+|name=Example Assist Unit Skill
+|type=Slash
+|icon=To Claim Their Bones Aeng-du
+|spower=5
+|cpower=+ 4
+|coin=2
+|atkmod=+3
+|atkmod2=+4
+|atkweight=1
+|se={{SkillCon|Unclashable}} <br> This Skill does not trigger Defense Skills <br> Deal +0.5% damage for every 1% missing HP on self (max 25%) <br> Deal +10% damage on Critical Hit for every {{StatusEffect|Haste}} on self (max 50%) <br> {{SkillCon|On Use}} Base Power +1 for every 4 ({{StatusEffect|Poise}} on self + {{StatusEffect|Bleed}} on target) (max 4)
+|ce1={{SkillCon|On Hit}} Gain 3 {{StatusEffect|Poise}}
+|ce2={{SkillCon|On Hit}} Inflict 1 {{StatusEffect|Bleed}} <br> {{SkillCon|On Hit}} Inflict 2 {{StatusEffect|Paralyze}} next turn
+}}
+|-|Level 3 =
+{{Skill
+|allyhint=3
+|slevel=1
+|sin=Wrath
+|name=Example Assist Unit Skill
+|type=Guard
+|icon=Looks Like I'll Have to Use This Power Magical Girl
+|spower=15
+|cpower=+ 7
+|coin=1
+|defmod=+0
+|atkweight=1
+|se={{SkillCon|Combat Start}} Gain 1 {{StatusEffect|Chanting - Arcana Slave|b}} <br> {{SkillCon|Combat Start}} Gain 50 Shield <br> {{SkillCon|Combat Start}} Gain 20 {{StatusEffect|Aggro|r}} next turn
+}}
+</tabber>
+<br>
+'''Passive Hints'''
+<tabber>
+Level 1=
+{{Passive|Example Assist Unit Passive|allyhint=1|Turn End: Inflict 3 {{StatusEffect|Bind|d}} next turn against enemies with 50% or more HP <br> {{SkillHint|Enemies that are about to use Attack Skills against this unit gain 1 {{StatusEffect|Attack Power Down|d}}}}}}
+|-|Level 2=
+{{Passive|Example Assist Unit Passive|allyhint=2|Combat Start: If Wrath Reson. was activated, <br> - Inflict (Wrath Reson. x 2){{StatusEffect|Burn|d}} Count on all enemies (max 8) <br> - Apply 1{{StatusEffect|Wrath Power Up|b}} and 3{{StatusEffect|Scarlet Moth|b}} Stacks on all Sinners and Assist Units excluding this unit <br>
+<br>Turn Start: Heal ({{StatusEffect|Burn|d}} Potency on self / 4) HP for all allies, excluding this unit  }}
+|-|Level 3=
+{{Passive|Example Assist Unit Passive|allyhint=3|Turn End: at 15+ {{StatusEffect|Poise|b}} Potency, halve {{StatusEffect|Poise|b}} Potency and gain the following effects: <br>- All allies, including this unit, heal 10 HP <br>- All allies, including this unit, heal 3 SP <br>- Halve all removable negative effects from all allies, including this unit}}
+</tabber>
+</div>
+
+===Battle Tips===
+Introduced in [[Canto IX: The Unsevering]], certain important Encounters will grant the player tips on how to deal with their enemies in the case that they lose. The tips may vary depending on the phase the player lost on as well.
+
+For each enemy's battle tips, see their respective pages.
+
+== Dungeons ==
+=== [[Story Dungeons]] ===
+[[File:Story Dungeon.png|left|362x362px|class=responsive-image]]
+A '''Story Dungeon''' is a rogue-like battle and exploration type of gameplay that explores a certain part of the derelict structure, an abandoned L Corp. section, a normally unassuming area of the outskirts or a formed and focused fathoms, either through a Golden Bough, or found at the most unexpected places. These are typically available as the very last node in most Cantos, with a few exceptions.
+
+In Story Dungeons, you move step-by-step by moving in "rooms", each containing events in them. These events will either be a General Encounter, an Abnormality Encounter or "Special Options". With every battle you face, the Sinners' Sanity, Health, and the number of Sinners '''will not be restored''' after you finish a battle. They will remain as they are, from where you've left off. Some part of the Special Options will unlock hidden passageways depending on the choices selected from the Option.
+
+Some dungeons contains more than one layer of the map. Once that layer is cleared, you can continued on to another layer with a different map.
+
+At the end of the dungeon lies a boss fight, often ones that are tougher than the previous known bosses. At times it may end up containing the Golden Bough, which is the main target for Story Dungeons. Other times, it could be other objectives within the dungeon.
+
+[[File:Resting point.png|right|338x338px|class=responsive-image]]
+
+==== Checkpoints ====
+There are designated '''Checkpoints''', where you can '''reset''' your Sinners (Basically '''healing''' any lost Health, '''rewinding''' time for dead Sinners, and '''returning''' their SP back to 0), and '''save''' your progress. Here, you can also change the sinner's identities based on what you had before entering the dungeon. Certain E.G.O Gifts will also affect the levels, upties of identities, and threadspins of E.G.O, regardless of what you have swapped or what support you picked to replace.
+
+If you lose a battle, you are allowed to retry using the '''remaining Identities'''. However, if you've lost all of your Identities, you will go back to your previous checkpoint, or the place where you've started.
+
+=== [[Mirror Dungeon|Mirror Dungeons]] ===
+[[File:Mirror Dungeon.png|right|338x338px|class=responsive-image]]
+'''Mirror Dungeons''' are similar to Story Dungeons, with it's rogue-like settings. Despite this, there's a few differences.
+* You can enter the dungeon ''for free''. However, reward claiming requires 5 {{Icons|Enkephalin Module}}Enkephalin Modules.
+* All Sinners can be brought into the dungeon, choosing one Identity, as well as an E.G.O for each grade. Their maximum level (for hard mode) and grade from Uptie/Threadspin will be carried over.
+* You will be given a choice of a variety of E.G.O Gifts that could potentially help the Sinners. E.G.O Gifts are important due to their effects to help keep pace with the Mounting Trials.
+* Depending on how many Floors you have cleared and the type of Mirror Dungeon, you'll gain EXP for the [[Battle Pass]]. You get 3 Weekly Bonuses which grant more Battle Pass XP and Lunacy; one can he used per run in normal mode, while any amount can be used in hard mode.
+
+There are more key differences in Mirror Dungeon compared to Story Dungeons during the progress:
+* Unlike Story Dungeons, each type of Mirror Dungeon is randomly generated per Floor, based on the Theme Pack chosen prior to the start of the Floor.
+* Every battle has a chance of allowing you to earn Cost based on the type of Encounter. You may also have a chance of obtaining an E.G.O Gift as well.
+* Certain nodes allows you to spend Cost obtained from events and battle Encounters, such as replacing Skills, buying E.G.O Gifts, or changing a Sinner's Identities and/or E.G.O, up to 3 Sinners purchases per Shop.
+* Events (marked with "?") will generate a random event instead of ones tied to the story, sometimes granting E.G.O Gifts if the right choice is selected (occasionally requiring Skill Checks; may also come with minor downsides), or starting an Abnormality Encounter.
+** Basing on theme packs chosen for that dungeon, you may also typically obtain event E.G.O Gifts from that theme.
+* Every Season, the features of the Mirror Dungeons typically update, requiring managers to adapt and strategize.
+
+==== Fathoms of the Ego ====
+The Fathoms of the Ego act as a mixture between Story Dungeon and Mirror Dungeon, being a space formed from the depths of an individual's mind rather than a literal location. While the actual concept is frequently featured in the main story Cantos (the [[Reminisced League of Nine]], for example, being Yi Sang's Fathoms of the Ego), these tend to be defined more by their inclusion '''at the end of certain of Intervallos''' in terms of gameplay. Fathoms of the Ego Dungeons require Enkephalin Modules to enter.
+
+Fathoms of the Ego behave similar to the Mirror Dungeon, but contain only one floor, and primarily feature story-exclusive E.G.O Gifts and enemy units.
+
+== Trivia ==
+<ul><li>The UI displayed upon entering certain Encounters, which are usually ones at the very end of a Canto, states:
+<div style="background-color:black; text-align:center; padding:2px"><span style="font-family:Mikodacs; font-size:20px; letter-spacing:1px; color:#950407">'''Proelium Fatale'''</span><br><span style="color:gold"><small>'''LASCIATE OGNI SPERANZA, VOI CH'ENTRATE'''</small></span></div>
+which roughly translates to:
+<div style="background-color:black; text-align:center; padding:2px"><span style="font-family:Mikodacs; font-size:20px; letter-spacing:1px; color:#950407">'''Mortal Battle'''</span><br><span style="color:gold"><small>'''ALL HOPE ABANDON YE WHO ENTER HERE'''</small></span></div></li><!--This is how Project Moon translated it, as seen in the Limbus Company Promotional Video-->
+* The subtitle is taken from [[wikipedia:Dante Alighieri|Dante Alighieri]]'s poem ''[[wikipedia:Inferno (Dante)|Inferno]]'', where it appears as an inscription above the gate leading into hell.</ul>
+* The combat tips shown during loading screens have not been revised since their initial addition to the game on February 27th, 2023. This has rendered various tips outright false due to changes made to the game's mechanics over time.
+
+== See Also ==
+* [[Status Effects]]
+* [[Sin Resonance]]
+* [[Sanity]]
+* [[Damage Formula]]
+* [[Support Passives]]
+* [[Attack Weight]]
+* [[E.G.O/Gameplay|E.G.O]]
+* [[Check Events]]
+* [[Mirror Dungeons]]
+
+== References ==
+<references />
+
+== Navigation ==
+{{StatPages}}
+{{MainNavbox}}
+[[Category:Gameplay]]

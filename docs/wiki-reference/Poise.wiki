@@ -1,0 +1,231 @@
+{{MEinfobox
+|name=Poise
+|cg=Poise.png}}
+{{StatusEffect|Poise|b}} is a Status Effect that is gained through Skills and gives attacks a chance to deal a Critical Hit, increasing damage dealt by 20%. The chance for a Critical Hit is dependent on {{StatusEffect|Poise|b}} Potency (Crit chance = (Potency * 5)%), while {{StatusEffect|Poise|b}} Count decreases by 1 on a Critical Hit (identical timing as On Hit) and by 1 at Turn End. 
+
+{{StatusEffect|Poise|b}} is linked to the {{Icons|Pride}}Pride Sin Affinity.
+
+==Strengths & Weaknesses==
+{{StatusEffect|Poise|b}} is a finicky buff effect. Increasing Potency effectively increases the rate at which Poise is spent, meaning that it is very difficult to have both high Poise Potency and high Poise Count without E.G.O Gifts. While some Identities only gain {{StatusEffect|Poise|b}} Count and convert it into Potency with their third Skill, most Identities gain more Potency than Count. This can result in Poise expiring before an attack can Crit. Because {{StatusEffect|Poise|b}} Identities are generally unable to share Poise among teammates, they can be placed on any team. There exists a small handful of E.G.O that share Poise between teammates, which are typically the core of a Poise team: Identities that are capable of providing {{StatusEffect|Poise|b}} support to allies through their own kits are quite rare and typically come with caveats (such as only applying to Identities of a specific faction).
+
+If an Identity gains 20 or more {{StatusEffect|Poise|b}} Potency, their critical hit chance is fixed at 100%. This means additional Poise potency becomes essentially useless unless it is consumed by certain passives or E.G.O. Gifts.
+
+Due to {{StatusEffect|Poise|b}} being consumed '''per coin''' if the hit was successful, a lack of {{StatusEffect|Poise|b}} Count makes it hard to build up Potency and land constant Critical Hits with skills that have many coins. This can result in an Identity's Poise stack resetting, preventing high values of Poise potency from being gained. To avoid this, certain Identities gain a set amount of {{StatusEffect|Poise|b}} when using certain skills, allowing at least that skill to have critical hits.
+
+{{StatusEffect|Poise|b}} is particularly strong in Mirror Dungeons or Encounters where Identities can get multiple Skill Slots, and generally suffers in [[Refraction Railway]] or in boss fights due to the inability to build Poise quickly and deal high damage in these game modes compared to other Status Effects. This is largely due to the crit multiplier being low (+20%) and team Poise generation dependent on a few key Identities and E.G.O. {{StatusEffect|Poise|b}} is the most effective when capitalizing against damage type weaknesses due to Poise damage being multiplicative rather than fixed. A {{StatusEffect|Poise|b}} team is also often a {{Icons|Pride}}'''Pride [[Resonance]] Team''' due to {{Icons|Pride}}Pride skills being very common among Poise Identities.
+
+{{StatusEffect|Poise|b}} Identities often need Uptie IV to increase their Poise Count generation. Without it, some Identities are barely able to benefit from their Poise outside of Mirror Dungeons.
+
+==Status Effects==
+===Core Effects===
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" |'''Source (If Exclusive)'''
+|-
+|{{StatusEffect|Poise|b}}||On hit, gain a Potency-based chance to deal critical damage, reducing the Count by 1 if successful. At the end of the turn, reduce the Count by 1. Critical hits deal 1.2x damage. <br> - Maximum value of 99 Potency and Count.
+|}
+
+===Related Effects===
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" |'''Source'''
+|-
+! colspan="3" style="background:#660000" |'''Effects that Interact with Poise'''
+|-
+|{{StatusEffect|Deep Inhale|b}}||- Max Stack: 20 <br> - On Crit: at 20+ {{StatusEffect|Poise|b}} Potency and 5+ {{StatusEffect|Poise|b}} Count, consume ({{StatusEffect|Poise|b}} Potency on self / 5) {{StatusEffect|Poise|b}} Potency to deal +({{StatusEffect|Poise|b}} Potency consumed x 4)% more Damage on Critical Hit and lose 1 Stack||[[Thoracalgia {{Ryoshu}}]] E.G.O
+|-
+|{{StatusEffect|Shallow Exhale|r}}||- Max Value: 1 <br> - At 20+ {{StatusEffect|Poise|b}} Potency, gain +1 {{StatusEffect|Poise|b}} Count as well whenever this unit gains {{StatusEffect|Poise|b}} Potency with Skill and Coin effects <br> - Expires at Turn End||[[Thoracalgia Faust]] E.G.O
+|-
+|{{StatusEffect|Nebulizer α|b}}||- Max Stack: 5 <br> - This effect persists throughout the Encounter <br> - Combat Start: on all allies, including this unit, apply 1 {{StatusEffect|Poise|b}} Potency and +1 {{StatusEffect|Poise|b}} Count||[[Thoracalgia Faust]] E.G.O
+|-
+|{{StatusEffect|Nebulizer β|b}}||- Max Stack: 5 <br> - This effect persists throughout the Encounter <br> - When activating Pride A-Reson.: on Combat Start, apply 3 {{StatusEffect|Poise|b}} and +3 {{StatusEffect|Poise|b}} Count on self and (Stack) allies (prioritizes allies that gain or use {{StatusEffect|Poise|b}} or {{StatusEffect|Poise|b}} Count; among them, prioritize allies with the least {{StatusEffect|Poise|b}} Potency)||[[Thoracalgia {{Ryoshu}}]] E.G.O
+|-
+|{{StatusEffect|Drink to the Fallen}} || - Max Stack: 4 <br> - Turn Start: Gain 1 {{StatusEffect|Poise}} for every Stack <br> · [[Blade Lineage Mentor Meursault]] gains 2 {{StatusEffect|Poise}} for every Stack instead <br> - Base Skills deal +({{StatusEffect|Poise}} on self x 1.5)% damage on Critical Hit (max 15%) <br> - Base Skills that gain {{StatusEffect|Poise}} Potency or Count gain Clash Power +1 <br> - Turn End: Lose 1 Stack || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+|{{StatusEffect|Resentful Scabbard}} || - When an ally, including this unit, takes HP damage, gain {{StatusEffect|Growing Resentment}} equal to damage taken <br> - In Memoriam Passive now ignores conditionals and activates at max potential <br> - When activating {{Icons|Pride}}Pride Reson., apply {{StatusEffect|Sword of the Homeland - The True Essence}} on all Blade Lineage allies other than this unit <br> <br> - On Using "Yield My Flesh", until Skill End: <br> · This unit's HP does not drop below 10 (once per turn) <br> · Lose ({{StatusEffect|Poise}} on self / 2) Clash Power (rounded down) <br> - On Using "To Claim Their Bones", gain 4 {{StatusEffect|Poise}} || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+! colspan="3" style="background:#660000" |'''Identity Buffs and Passives'''
+|-
+|{{StatusEffect|Swordplay of the Homeland|b}}|| - When at 5+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 1 and Skill 2 gain Coin Power +(3/# of Coins, minimum 1) and deal +(30/# of Coins)% damage on Critical Hit <br> - When at 7+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 3 deals +(30/# of Coins)% more damage and deals +(50/# of Coins)% damage on Critical Hit || [[Blade Lineage Mentor Meursault]]
+|-
+|{{StatusEffect|Remembrance|b}}||- When at 5+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 1 and Skill 2 gain Coin Power +(3/# of Coins, minimum 1) and deal +(30/# of Coins)% damage on Critical Hit <br> - When at 7+ {{StatusEffect|Poise|b}}, upon Skill use, Skill 3 deals +(30/# of Coins)% more damage and deals +(50/# of Coins)% damage on Critical Hit || [[Blade Lineage Mentor Meursault]] 
+|-
+|{{StatusEffect|Serpent Arm|b}}||- Max Stack: 3<br>- Turn End: gain 3 {{StatusEffect|Poise|b}} and +2 {{StatusEffect|Poise|b}} count next turn<br>- On Base Attack Skill use, if target has {{StatusEffect|Rupture|b}}, gain 5 {{StatusEffect|Poise|b}} <br> - Turn End: lose 1 Stack||[[List of Identities/World#heishousi|Heishou Pack - Si Branch Identities]]
+|-
+|{{StatusEffect|Fell Bullet|b}}||Max Stack: 1<br>+3% damage on Critical Hit for every {{StatusEffect|Torn Memory|r}} (max 18%)<br>On Hit, inflict 1 {{StatusEffect|Bleed|d}} (3 per turn)<br>On Kill, gain 3 {{StatusEffect|Poise|b}} and +2 {{StatusEffect|Poise|b}} Count (2 times per turn)<br>Expires at Turn End||[[N Corp. E.G.O::Fell Bullet Yi Sang]]
+|-
+|{{StatusEffect|Protector's Stance|b}}||- Max Stack: 2 <br> - Take (Stack x 10)% less damage <br> - Turn Start: Gain Shield by {{StatusEffect|Poise|b}} on self (max 20) <br> - Turn End: Gain 3 {{StatusEffect|Poise|b}} and +1 {{StatusEffect|Poise|b}} Count; this unit's leftmost Skill Slot gains +5 {{StatusEffect|Aggro|r}} next turn <br> - Turn End: Lose 1 Stack || [[Drifting Blade of Hongyuan {{Ryoshu}}]]
+|-
+|{{StatusEffect|Shin (心) - Procuration|b}} || - Min & Max Speed +2 <br> - Offense Level +1, Defense Level +1 <br> - Gain 1 more {{StatusEffect|Poise|b}} Potency and {{StatusEffect|Poise|b}} Count from Base Skills <br> - Deal +(missing HP percentage / 2)% damage with Base Skills (max 40%) <br> - Max Stack: 1 || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]]
+|-
+|{{StatusEffect|Faith Beyond Question|b}} || - Min & Max Speed +1 <br> - Offense Level +2, Defense Level +2 <br> - Gain 1 more {{StatusEffect|Poise|b}} Potency from Base Skills <br> - This unit's SP does not drop below -15 from SP loss effects on this unit's Base Attack Skills <br> - Max Stack: 1 || [[The Index Proxy - Effloresced E.G.O::Procuration Don Quixote]]
+|-
+|{{StatusEffect|Shin (心) - Fate|b}} || - Min & Max Speed +1 <br> - Gain +1 more {{StatusEffect|Poise|b}} Potency and Count from Base Skills <br> If this unit's SP is higher than the target's, deal +1% damage for every 3 SP difference (max 15%; units without SP are considered to be at 0 SP) || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|When hacking through the ribs with a hatchet... (Yi Sang)|b}} || - This coin deals {{Icons|Blunt}}Blunt damage <br> - On Hit without Cracking, gain 2 {{StatusEffect|Poise|b}} || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Indulgence in Prescripts|b}} || - Min & Max Speed +5 <br> - Apply the following effects to 'Furioso-Replica': <br> · On Hit, inflict +1 more {{StatusEffect|Sinking|d}} Potency and gain +1 more {{StatusEffect|Poise|b}} Potency <br> · On Hit, inflict +3 {{StatusEffect|Sinking|d}} Count (once per target) <br> · Deal +30% damage <br> - Expires at Turn End || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Shin (心) - Dihui Star -地慧星-|b}}|| - Gain Min & Max Speed +2 <br> - Upon using a Base Attack Skill, gain 2 {{StatusEffect|Poise|b}} Potency and +1 {{StatusEffect|Poise|b}} Count <br> - This unit's Base Attack Skills deal +10% damage on Critical Hit <br> - Take -20% damage from Unopposed Attacks and {{StatusEffect|Unbreakable Coin|r}}s || [[Blade of the House of Spiders Ryōshū]]
+|-
+|{{StatusEffect|Bearing of a Salsu}} || - Max Stack: 3 <br> - Gain Offense Level for every Stack <br> - On Attack Hit with {{Icons|Slash}}Slash Skills, gain 1 {{StatusEffect|Poise}} (2 times per turn) <br> - Lose 1 Stack when an allied [[:Category:Blade Lineage Identities|Blade Lineage]] Identity is defeated || [[LCD OSIR Team Ishmael]]
+|-
+|{{StatusEffect|Dokkaebi Arms}} || - Take -15% damage <br> - On Skill Use, gain 1 {{StatusEffect|Haste}} next turn (2 times per turn) <br> - Combat End: This effect expires, and gain +2 {{StatusEffect|Poise}} Count || [[LCD OSIR Team Ishmael]]
+|-
+|{{StatusEffect|Prisoner Transport Arrangements (Hong Lu)}} || - Base Stack: 1 <br> - In a Clash against enemies that have {{StatusEffect|Trussed -Hong Lu-}}, gain Clash Power +1 <br> - On Hit against enemies that have {{StatusEffect|Trussed -Hong Lu-}}, inflict 1 {{StatusEffect|Bleed}} and gain 2 {{StatusEffect|Poise}} (2 Skills per turn) <br> - If there are no {{StatusEffect|Trussed -Hong Lu-}} targets, expire || [[S Corp. Ch'unokkun Hong Lu]]
+|-
+|{{StatusEffect|Shin (心) - Disgrace|b}}|| - Min & Max Speed +1 <br> - Base Skills inflict +1 more {{StatusEffect|Tremor|d}} and {{StatusEffect|Burn|d}} Potency and Count <br> - Deal +3% damage for every {{StatusEffect|Poise|b}} on self (max 15%) || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+|}
+
+===Critical Hit Effects===
+The following effects interact with Critical Hits, but do not directly interact with Poise. 
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" |'''Source'''
+|-
+! colspan="3" style="background:#660000" |'''Effects that Interact with Critical Hits'''
+|-
+|{{StatusEffect|Red Plum Blossom|d}}||- Unique {{StatusEffect|Bleed|d}} <br> - Max Value: 10 <br> - +10% chance for this unit to be Critically hit if this unit is the main target <br> '''- When struck by a Critical Hit, gain {{StatusEffect|Bleed|d}} equal to half of the value and take +(value x 3)% damage on Critical Hit''' <br> - Reduce value by 1 when hit || [[Blade Lineage Salsu Faust]]
+|-
+|{{StatusEffect|Deathrite -Venom-|d}}||- Base Stack: 5<br>- Deathrite<br>- '''When getting {{StatusEffect|Rupture|d}} triggered by a Critical Hit from the target, lose 1 Stack''' <br> - When losing Stacks due to this effect, gain 1 {{StatusEffect|Offense Level Down|d}} or 1 {{StatusEffect|Defense Level Down|d}} (3 times per turn) <br> - When losing Stacks due to this effect, if the Stack drops to 0, take {{Icons|Gluttony}}Gluttony damage equal to {{StatusEffect|Rupture|d}} Potency on self <br>- ※ Cannot gain additional Stacks of this effect while it is already active||[[List of Identities/World#heishousi|Heishou Pack - Si Branch Identities]]
+|-  
+|{{StatusEffect|Crit DMG Up|b}}||For this turn: Deal +10% damage on Critical Hit for every Stack||
+|-
+|{{StatusEffect|Drink to the Fallen}} || - Max Stack: 4 <br> - Turn Start: Gain 1 {{StatusEffect|Poise}} for every Stack <br> · [[Blade Lineage Mentor Meursault]] gains 2 {{StatusEffect|Poise}} for every Stack instead <br>''' - Base Skills deal +({{StatusEffect|Poise}} on self x 1.5)% damage on Critical Hit (max 15%)''' <br> - Base Skills that gain {{StatusEffect|Poise}} Potency or Count gain Clash Power +1 <br> - Turn End: Lose 1 Stack || [[Shadow-vested Bladesinger 着影揮刀 Meursault]] E.G.O
+|-
+! colspan="3" style="background:#660000" |'''Identity Buffs and Passives'''
+|- 
+|{{StatusEffect|Unjust Enrichment|b}}||- Gained on Heads Hit against target with {{StatusEffect|Bleed|d}} (Max 4) <br> - '''When 'Bullets are Pricey' Passive activates, consume all Unjust Enrichment stack to deal bonus damage''' ||  [[Twinhook Pirates First Mate Gregor]]
+|-
+|{{StatusEffect|Moonlit Azure Blade|b}}||- Max Stack: 20 <br> - Turn Start: Gain 2 Shield for every Stack <br> '''- Deal +1% Damage on Critical Hit for every Stack''' || [[The House of Spiders: The Pinky Apprentice Sinclair]]
+|-
+||{{StatusEffect|Fell Bullet|b}}||Max Stack: 1<br>'''+3% damage on Critical Hit for every {{StatusEffect|Torn Memory|r}} (max 18%)'''<br>On Hit, inflict 1 {{StatusEffect|Bleed|d}} (3 per turn)<br>On Kill, gain 3 {{StatusEffect|Poise|b}} and +2 {{StatusEffect|Poise|b}} Count (2 times per turn)<br>Expires at Turn End||[[N Corp. E.G.O::Fell Bullet Yi Sang]]
+|-
+|{{StatusEffect|When lacerating through space itself with a scythe, like a certain someone... (Yi Sang)|b}} || - This coin deals {{Icons|Slash}}Slash damage <br> - This Coin deals +30% damage <br> - '''On Hit without Cracking, it hits a guaranteed Crit''' || [[The House of Spiders: The Index Nursefather Yi Sang]]
+|-
+|{{StatusEffect|Shin (心) - Dihui Star -地慧星-|b}}|| - Gain Min & Max Speed +2 <br> - Upon using a Base Attack Skill, gain 2 {{StatusEffect|Poise|b}} Potency and +1 {{StatusEffect|Poise|b}} Count <br> '''- This unit's Base Attack Skills deal +10% damage on Critical Hit''' <br> - Take -20% damage from Unopposed Attacks and {{StatusEffect|Unbreakable Coin|r}}s || [[Blade of the House of Spiders Ryōshū]]
+|-
+|}
+
+==Identities & E.G.O==
+{{StatusNavbox|Poise}}
+
+==E.G.O Gifts ==
+===Fusion E.G.O Gifts===
+<span>{{GiftTT|Pendant of Nostalgia|25|t}} + {{GiftTT|Recollection of a Certain Day|25|t}}</span>
+{{EgoGift|Reminiscence|tc=1}}
+
+
+<span>{{GiftTT|Ornamental Horseshoe|25|t}} + {{GiftTT|Four-leaf Clover|25|t}} + {{GiftTT|Reminiscence|25|t}}</span>
+{{EgoGift|Lucky Pouch|tc=1}}
+
+
+<span>{{GiftTT|Devil's Share|25|t}} + {{GiftTT|Angel's Cut|25|t}} + {{GiftTT|Endorphin Kit|25|t}}</span>
+{{EgoGift|Cask Spirits|tc=1}}
+
+
+<span>{{GiftTT|Nebulizer|25|t}} + {{GiftTT|Harpoon Prosthetic Leg|25|t}} (''''The Evil Defining'''<nowiki>'</nowiki> Theme Pack Exclusive)</span>
+{{EgoGift|Guiding Gas Lamp|tc=1}}
+
+
+===='''Crawling Abyss''' Theme Pack Exclusive====
+<span>{{GiftTT|Town-protecting Harpoon|25|t}} + {{GiftTT|Cetacean Heart|25|t}}</span>
+{{EgoGift|The End of all Evil|tc=1}}
+
+
+===='''Yield My Flesh to Claim Their Bones'''/'''Yield My Flesh to Claim Their Bones BokGak''' Theme Pack Exclusive====
+<span>{{GiftTT|Rusted Hilt (MD)|25|t|filename=Rusted Hilt}} + {{GiftTT|Broken Blade|25|t}}</span>
+{{EgoGift|Unbending (MD)|tc=1}}
+
+
+<span>{{GiftTT|Worn Hilt|25|t}} + {{GiftTT|Broken Blade|25|t}}</span>
+{{EgoGift|Cultivation|tc=1}}
+
+
+===='''Miracle in District 20'''/'''Miracle in District 20 BokGak''' Theme Pack Exclusive====
+<span>{{GiftTT|Pom-pom Hat|25|t}} + {{GiftTT|Huge Gift Sack|25|t}} + {{GiftTT|Sad Plushie|25|t}}</span>
+{{EgoGift|Jolly Plushie|tc=1}}
+
+===Regular E.G.O Gifts===
+{| class="lcbtable2 sortable mw-collapsible" style="width:100%; margin:auto;text-align:center" cellpadding="3"
+! Gift
+! Tier
+! Base Effect
+! +
+! ++
+|-
+{{EgoGift/Enhance|Pendant of Nostalgia}}
+|-
+{{EgoGift/Enhance|Ornamental Horseshoe}}
+|-
+{{EgoGift/Enhance|Devil's Share}}
+|-
+{{EgoGift/Enhance|Emerald Elytra}}
+|-
+{{EgoGift/Enhance|Old Wooden Doll}}
+|-
+{{EgoGift/Enhance|Recollection of a Certain Day}}
+|-
+{{EgoGift/Enhance|Cigarette Holder}}
+|-
+{{EgoGift/Enhance|Angel's Cut}}
+|-
+{{EgoGift/Enhance|Stone Tomb}}
+|-
+{{EgoGift/Enhance|Nebulizer}}
+|-
+{{EgoGift/Enhance|Four-leaf Clover}}
+|-
+{{EgoGift/Enhance|Endorphin Kit}}
+|-
+{{EgoGift/Enhance|Finifugality}}
+|-
+{{EgoGift/Enhance|Clear Mirror, Calm Water}}
+|-
+{{EgoGift/Enhance|Fragment of Conceit}}
+|-
+{{EgoGift/Enhance|The Abandoned Oracle}}
+|-
+{{EgoGift/Enhance|Harpoon Prosthetic Leg}}
+|-
+{{EgoGift/Enhance|Pom-pom Hat}}
+|-
+{{EgoGift/Enhance|Huge Gift Sack}}
+|-
+{{EgoGift/Enhance|Broken Blade}}
+|-
+{{EgoGift/Enhance|Ragged Bamboo Hat (MD)}}
+|-
+{{EgoGift/Enhance|Cetacean Heart}}
+|-
+{{EgoGift/Enhance|La Manchaland All-day Pass (MD)}}
+|-
+{{EgoGift/Enhance|Gear Shrapnel}}
+|-
+{{EgoGift/Enhance|CQC Manual}}
+|-
+{{EgoGift/Enhance|Darkflame Smoking Pipe}}
+|-
+{{EgoGift/Enhance|Sorrowful Exhale}}
+|-
+{{EgoGift/Enhance|Flower in the Mirror (MD)}}
+|-
+{{EgoGift/Enhance|Moon in the Water (MD)}}
+|-
+{{EgoGift/Enhance|Someone's Azure Blade}}
+|-
+{{EgoGift/Enhance|Providence of the Prescript}}
+|-
+{{EgoGift/Enhance|Unadorned Sword-guard}}
+|-
+{{EgoGift/Enhance|Ohra Bond}}
+|-
+|}
+
+==Navigation==
+{{StatPages}}
+[[Category:Status Effect Pages]]

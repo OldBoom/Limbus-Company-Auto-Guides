@@ -1,0 +1,518 @@
+{{MEinfobox
+|name=Sanity
+|cg=Sanity.png}}'''Sanity''' is a core part of the gameplay of ''[[Limbus Company (game)|Limbus Company]]''. Sanity Points (SP) are represented as a number that can be seen right next to the unit's health bar. Sanity is determined through several interactions that occur in and out of combat, and has a valid range of [-45, 45].
+
+==Gameplay==
+The formula for calculating the chance of flipping Heads on Coins according to SP is as follows:<br>
+<big><math>H=50+(SP)</math></big><br>
+Where <math>H</math> is the chance of flipping Heads (in %), and <math>SP</math> is the unit's Sanity Points (must be in the range of <math>[-45,45]</math>)<br>
+(For example: a unit with 27 SP would have a '''50+(27)=77%''' chance to flip Heads, while a unit with -33 SP would have a '''50+(-33)=17%''' chance to flip Heads.)
+
+The most common way to increase SP is by winning Clashes or defeating enemies, and the most common ways to decrease SP is by using E.G.O, losing allies, and other status effects such as {{StatusEffect|Sinking|d}}. (See a unit's "'''{{Icons|Unique_Sanity_Factors}}Factors Affecting Sanity'''" section for more details.)
+
+Reaching -30 SP or lower has a chance of causing "Low Morale" on units with Sanity, activating the ''Low Morale'' effects listed in their Panic Type. However, reaching -45 SP will cause the unit to "Panic", activating the ''Panic'' effects instead. (For Sinners, Panicking causes them to not act for that Turn.)<br>
+Please note that all Low Morale and Panic effects only activate on the earliest {{SkillCon|Turn Start}}.
+
+==Corrosion==
+On {{SkillCon|Turn Start}}, if a Sinner is at -45 SP and has an E.G.O with a Corrosion type Skill (essentially any non-personal E.G.O), they are forced into {{StatusEffect|E.G.O Corrosion|r}}, during which they will go out of control and use E.G.O Corrosion Skills indiscriminately.
+* Additionally, if a Sinner's SP reach -45 or lower, it will be fixed at -45 until the next {{SkillCon|Turn Start}}, effectively forcing them to either Panic or Corrode. While enemy units do not have this restriction and can rise above -45 SP at any time.
+* While Sinners can reset their SP to 0 after a Turn of Panic/Corrosion by default, enemy units will remain stuck at -45 SP unless they have the "Panic Recovery" Passive or any other SP-resetting Passive.
+
+==List of Panic Types==
+<div style="margin:0 auto;overflow:scroll;width:auto;max-width:100%;scrollbar-width:none">
+{| class="lcbtable2 red-border red-border sortable mw-collapsible mw-collapsed" style="width:100%; margin:auto;text-align:center" cellpadding="3"
+!Panic Type
+!Low Morale Effects
+!Panic Effects
+!Source
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Panic</span>
+| -
+|Does not act for this turn.
+|[[List of Identities|Sinners]]<br>[[:Category:Enemies with Panic Panic|Peccatulum Invidiae Enemies]]
+|-
+|[[File:Love & Hate Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Love & Hate</span>
+| -
+|Does not act for this turn.
+|{{IDIcon|Lobotomy E.G.O::In the Name of Love and Hate Don Quixote|3}}
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Overwhelmed</span>
+|Turn Start: Gain 2 {{StatusEffect|Attack Power Down|d}}.
+|Does not act for this turn.
+|{{EnBox|1287}}<br>[[:Category:Enemies with Overwhelmed Panic|Overwhelmed Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Atrophied</span>
+|Turn Start: Gain 2 {{StatusEffect|Attack Power Down|d}}.
+|Turn Start: Gain 4 {{StatusEffect|Attack Power Down|d}}.
+|{{EnBox|91004}} {{EnBox|91012}}<br>[[:Category:Enemies with Atrophied Panic|Atrophied Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Agitated</span>
+|Turn Start: Gain 1 {{StatusEffect|Damage Up|b}} and 2 {{StatusEffect|Fragile|d}}.
+|Turn Start: Gain 2 {{StatusEffect|Damage Up|b}} and 5 {{StatusEffect|Fragile|d}}.
+|{{EnBox|8050}} {{EnBox|8113}}  {{EnBox|90105}} {{EnBox|91005}} {{EnBox|91008}} {{EnBox|91009}} {{EnBox|91013}} {{EnBox|91015}} {{EnBox|91020}}<br>[[:Category:Enemies with Agitated Panic|Agitated Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Wandering</span>
+|Turn Start: Deal 2 SP damage to allies.
+|Turn End: Deal 5 SP damage to allies. Flees from battle after 3 turns have passed.
+|[[:Category:Enemies with Wandering Panic|Lobotomy E.G.O::Sloshing Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Suicidal</span>
+|When at low morale for the first time, become unable to act.
+|Cannot act for 3 turns. Unit dies at turn start.<br>All its allies lose 10 SP.
+|[[:Category:Enemies with Suicidal Panic|Lobotomy E.G.O::Red Sheet Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Maddened</span>
+|When at low morale for the first time, targets units indiscriminately.
+|Targets indiscriminately<br>Clash Power +1, and gain 2 {{StatusEffect|Damage Up|b}}.
+|[[:Category:Enemies with Maddened Panic|Various Lobotomy E.G.O Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Unstable</span>
+|Turn Start: Gain 2 {{StatusEffect|Attack Power Up|b}} and 3 {{StatusEffect|Bind|d}}.
+|Turn Start: Become staggered.
+|{{EnBox|8043}} {{EnBox|8044}}<br>[[:Category:Enemies with Unstable Panic|Refracted T Corp. Collector Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Dejection</span>
+|Gain 1 {{StatusEffect|Fragile|d}}; In a clash, if any Coin lands tails, Clash Power -1 for the clash.
+|Gain 3 {{StatusEffect|Fragile|d}}; In a clash, if any Coin lands tails, Clash Power -3 for the clash.
+|[[:Category:Enemies with Dejection Panic|Revived, Reawakened, and Imagined Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Impurity</span>
+|Gain 1 {{StatusEffect|Fragile|d}}. Target loses 2 SP if this unit loses the clash.
+|Gain 1 {{StatusEffect|Fragile|d}}. Target loses 5 SP if this unit loses the clash.
+|{{EnBox|8105}} {{EnBox|8106}}<br>[[:Category:Enemies with Impurity Panic|Pallidified Thing Enemies]]
+|-
+|[[File:Vengeance Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Vengeance</span>
+|Gain 1 {{StatusEffect|Attack Power Up|b}} and 3 {{StatusEffect|Defense Level Down|d}}. Gain {{StatusEffect|Damage Up|b}} based on the amount of damage taken last turn (1 {{StatusEffect|Damage Up|b}} for every 3% of Max HP lost).
+|Gain 2 {{StatusEffect|Attack Power Up|b}} and 6 {{StatusEffect|Defense Level Down|d}}. Gain {{StatusEffect|Damage Up|b}} based on the amount of damage taken last turn (1 {{StatusEffect|Damage Up|b}} for every 3% of Max HP lost).
+|{{EnBox|8099}}
+|-
+|[[File:Pallid Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Pallid Panic</span>
+|{{StatusEffect|SP Loss Efficiency|r}} +2.
+|Every Turn End: Gain 2 {{StatusEffect|Bind|d}}.<br>Every Coin this unit flips lands on tails.
+|{{EnBox|8112}} {{EnBox|8104}}<br>[[:Category:Enemies with Pallid Panic Panic|Pequod Town Enemies]]
+|-
+|[[File:Sanity.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Resentment</span>
+|Turn Start: gain 2 {{StatusEffect|Damage Up|b}} and 3 {{StatusEffect|Defense Level Down|d}}.
+|Turn Start: gain 1 {{StatusEffect|Attack Power Up|b}} and 5 {{StatusEffect|Defense Level Down|d}}.
+|{{EnBox|8154}} {{EnBox|8277}}<br>[[:Category:Enemies with Resentment Panic|Blade Lineage Enemies]]
+|-
+|[[File:Splitting Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Splitting</span>
+|Lose 2 HP on self with every Clash. Gain 1 {{StatusEffect|Offense Level Up|b}} at Turn Start.
+|Lose 3 HP on self with every Clash. Gain 2 {{StatusEffect|Offense Level Up|b}} at Turn Start.
+|[[:Category:Enemies with Splitting Panic|Dead Rabbits Enemies]]
+|-
+|[[File:Organization Compulsion Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Organization Compulsion</span>
+|Lose 5 SP on Clash Lose. Gain 1 {{StatusEffect|Haste|b}} next turn when hit. (max 2)
+|Gain 2 {{StatusEffect|Fragile|d}}. Gain 2 {{StatusEffect|Haste|b}} next turn when hit. (max 3)
+|[[:Category:Enemies with Organization Compulsion Panic|Edgar Family Butler Enemies]]
+|-
+|[[File:Echoes of the Manor Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Echoes of the Manor</span>
+|Clash Power -1 on self. Deal +10% more damage on Heads Hit.
+|Clash Power -2 on self. Gain 1 {{StatusEffect|Damage Up|b}}.
+|{{EnBox|91014}}<br>[[:Category:Enemies with Echoes of the Manor Panic|Wuthering Heights Butler Enemies]]<br>
+[[:Category:Identities with Echoes of the Manor|Wuthering Heights Butler Identities]]<br>
+[[Bygone Days Ishmael]]
+|-
+|[[File:Misshapen Painting Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Misshapen Painting</span>
+|Gain 1 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Fragile|d}}.
+|Gain 1 {{StatusEffect|Plus Coin Boost|b}} and 3 {{StatusEffect|Fragile|d}}.
+|[[:Category:Enemies with Misshapen Painting Panic|Researcher of the Ring Enemies]]
+|-
+|[[File:Hatred Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Hatred</span>
+| - Clash Win: Gain 1 {{StatusEffect|Offense Level Up|b}} next turn. (max 3 per turn)<br>Clash Lose: Gain 1 {{StatusEffect|Defense Level Up|b}}. (max 3 per turn)
+| - Clash Win: Gain 1 {{StatusEffect|Offense Level Up|b}} this turn and next turn. (max 3 per turn)<br>Clash Lose: Gain 1 {{StatusEffect|Defense Level Up|b}}. (max 3 per turn)<br>Turn End: Gain 2 {{StatusEffect|Haste|b}} next turn.
+|{{EnBox|8165}} {{EnBox|8171}}<br>[[:Category:Enemies with Hatred Panic|Wild Hunt Enemies]]
+|-
+|[[File:Revenge Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Revenge</span>
+| - Gain 3 {{StatusEffect|Defense Level Down|d}} and 3 {{StatusEffect|Damage Up|b}}.
+| - Gain 6 {{StatusEffect|Defense Level Down|d}} and 5 {{StatusEffect|Damage Up|b}}.
+|{{EnBox|8164}} {{EnBox|8172}} {{EnBox|8174}} {{EnBox|8204}} 
+|-
+|[[File:Ruin Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Ruin</span>
+|Gain 3 {{StatusEffect|Sinking|d}} at every Turn End; Clash Power -1.
+|Gain 5 {{StatusEffect|Sinking|d}} and +3 {{StatusEffect|Sinking|d}} Count at every Turn End; Clash Power -2.
+|{{IDIcon|Wild Hunt Heathcliff|3}}
+|-
+|[[File:Broken Unity Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Broken Unity</span>
+|Gain 1 {{StatusEffect|Fragile|d}}. Gain +1 {{StatusEffect|Tremor|d}} Count when hit. (3 times max)
+|Gain 2 {{StatusEffect|Fragile|d}}. Gain +2 {{StatusEffect|Tremor|d}} Count when hit. (3 times max)
+|[[:Category:Enemies with Broken Unity Panic|Yurodivy Enemies]]
+|-
+|[[File:Bloodthirst Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Bloodthirst</span>
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}} and {{StatusEffect|Damage Up|b}}.
+|Turn Start: Gain 2 {{StatusEffect|Fragile|d}} and {{StatusEffect|Damage Up|b}}.
+|{{EnBox|8350}} {{EnBox|91018}}<br>[[:Category:Enemies with Bloodthirst Panic|Bloodfiend Enemies]]
+|-
+|[[File:Duel Specialist Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Duel Specialist</span>
+| - Turn Start: Gain 2 {{StatusEffect|Offense Level Up|b}}. On Clash Lose, gain 1 {{StatusEffect|Defense Level Down|d}} (max 3 per turn). Min. Speed -1.
+| - Turn Start: Gain 4 {{StatusEffect|Offense Level Up|b}}. On Clash Lose, gain 2 {{StatusEffect|Defense Level Down|d}} (max 6 per turn). Min. Speed -1.
+|{{EnBox|8371}}
+|-
+|[[File:Hunger Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Hunger</span>
+| - Turn Start: gain 1 {{StatusEffect|Bind|d}} and 3 {{StatusEffect|Attack Power Up|b}}. Turn End: take 5 SP damage.
+| - Turn Start: gain 2 {{StatusEffect|Bind|d}} and 4 {{StatusEffect|Attack Power Up|b}}.
+|{{EnBox|8372}}
+|-
+|[[File:Thorns Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Thorns</span>
+|Clash Win: gain 1 {{StatusEffect|Damage Up|b}}.
+|Clash Win: gain 1 {{StatusEffect|Damage Up|b}}.<br>Turn End: gain 2 {{StatusEffect|Clash Power Up|b}} next turn.
+|{{EnBox|400001}}
+|-
+|[[File:Bridle of Nihility Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Bridle of Nihility</span>
+|Turn Start: gain 1 {{StatusEffect|Attack Power Up|b}} and 3 {{StatusEffect|Defense Level Down|d}}. Take 5 SP damage at Turn End.
+|Turn Start: gain 2 {{StatusEffect|Attack Power Up|b}} and 6 {{StatusEffect|Defense Level Down|d}}. Heal 10 SP at Turn End.
+|{{EnBox|8381}} 
+|-
+|[[File:Guilt Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Guilt</span>
+|Turn End: gain 1 {{StatusEffect|Fragile|d}} and {{StatusEffect|SP Heal Efficiency Down|d}} next turn.
+|Turn End: gain 2 {{StatusEffect|Fragile|d}} and {{StatusEffect|SP Heal Efficiency Down|d}} next turn.
+|{{EnBox|8378}}
+|-
+|[[File:Resanguination Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Resanguination</span>
+|If the target does not have {{StatusEffect|Bleed|d}}, Clash Power -1; On Hit, heal HP equal to {{StatusEffect|Bleed|d}} Potency on the target.
+|If the target has {{StatusEffect|Bleed|d}}, Clash Power +2; if the target does not have {{StatusEffect|Bleed|d}}, Clash Power -2; On Hit, heal HP equal to {{StatusEffect|Bleed|d}} Potency on the target.
+|[[:Category:Enemies with Resanguination Panic|Four-hundred Roses Corrosion Enemies]]
+|-
+|[[File:Reawakening Joy Of Carnage Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Reawakening Joy Of Carnage</span>
+|Every Turn Start: gain 2 {{StatusEffect|Offense Level Up|b}}; +2 {{StatusEffect|SP Heal Efficiency|r}}.
+|Turn Start: gain 6 {{StatusEffect|Defense Level Up|b}}, and gain 3 {{StatusEffect|Offense Level Up|b}} next turn.
+|{{EnBox|8380}}
+|-
+|[[File:Burden of Responsibility Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Burden of Responsibility</span>
+| - Gain 2 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Fragile|d}}; raise Max Speed value by 2<br>- Heal +30% more HP when healing<br>- Turn End: if the {{StatusEffect|Returning Bloodlust|b}} is lower than its value at Turn Start, gain 2 {{StatusEffect|Offense Level Up|b}} and {{StatusEffect|Defense Level Down|d}} next turn
+| - Gain 2 {{StatusEffect|Attack Power Up|b}} and raise Max Speed value by 2<br>- Heal +50% more HP when healing<br>- Turn End: if the {{StatusEffect|Returning Bloodlust|b}} is lower than its value at Turn Start, gain 3 {{StatusEffect|Offense Level Up|b}} and 5 {{StatusEffect|Defense Level Down|d}} next turn
+|{{EnBox|8410}}
+|-
+|[[File:The Church Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>The Church</span>
+|Gain 1 additional {{StatusEffect|Smoke|d}} or {{StatusEffect|Smoke|d}} Count when gaining them.<br>Turn Start: gain 3 {{StatusEffect|Fragile|d}}, 2 {{StatusEffect|Damage Up|b}}, and 1 {{StatusEffect|Defense Power Up|b}}
+|Gain 2 additional {{StatusEffect|Smoke|d}} or {{StatusEffect|Smoke|d}} Count when gaining them.<br>Turn Start: gain 3 {{StatusEffect|Fragile|d}}, 4 {{StatusEffect|Damage Up|b}}, and 2 {{StatusEffect|Defense Power Up|b}}
+|[[:Category:Enemies with The Church Panic|The Church of Gears Enemies]]
+|-
+|[[File:Anguish Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Anguish</span>
+|Turn Start: gain 1 {{StatusEffect|Fragile|d}} and 2 {{StatusEffect|SP Heal Efficiency Down|d}}
+|Turn Start: gain 2 {{StatusEffect|Fragile|d}} and 3 {{StatusEffect|SP Heal Efficiency Down|d}}
+|{{EnBox|1082}}
+|-
+|[[File:Deception Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Deception</span>
+|If this unit's Speed is faster than the target or when using an Unopposed Attack, deal +10% more damage against the target
+|If this unit's Speed is faster than the target or when using an Unopposed Attack, deal +20% more damage against the target; if this unit's Speed is faster than the target's, take -20% less damage
+|{{EnBox|1126}}<br>[[:Category:Enemies with Deception Panic|Heishou Pack - Mao Branch Enemies]]
+|-
+|[[File:Night in the Backstreets Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Night in the Backstreets</span>
+|Turn Start: gain 1 {{StatusEffect|Attack Power Up|b}}, 1 {{StatusEffect|HP Healing Boost|b}}, and 1 {{StatusEffect|Fragile|d}}
+|Turn Start: gain 2 {{StatusEffect|Attack Power Up|b}}, 2 {{StatusEffect|HP Healing Boost|b}}, and 1 {{StatusEffect|Fragile|d}}
+|[[:Category:Enemies with Night in the Backstreets Panic|Sweeper Enemies]]
+|-
+|[[File:Podao Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Podao</span>
+|Take +10% damage from Unopposed Attacks; deal +30% damage with Counterattacks
+|Take +20% damage from Unopposed Attacks; deal +50% damage with Counterattacks
+|{{EnBox|1134}}<br>[[:Category:Enemies with Podao Panic|Podao Assailant Enemies]]
+|-
+|[[File:Charge Circuitry Countercurrent Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Charge Circuitry Countercurrent</span>
+|When Clashing against targets with {{StatusEffect|Rupture|d}}, gain +3 {{StatusEffect|Charge|b}} and 1 {{StatusEffect|Fragile|d}} (2 times per turn)
+|When Clashing against targets with {{StatusEffect|Rupture|d}}, gain +5 {{StatusEffect|Charge|b}}, 1 {{StatusEffect|Damage Up|b}}, and 2 {{StatusEffect|Fragile|d}} (2 times per turn)
+|{{EnBox|1167}} {{EnBox|1160}}<br>[[:Category:Enemies with Charge Circuitry Countercurrent Panic|Shi Family Mercenary Enemies]]
+|-
+|[[File:Eldtree Mutation Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Eldtree Mutation</span>
+|Gain 1 {{StatusEffect|Damage Up|b}}, 1 {{StatusEffect|Fragile|d}}, and 1 {{StatusEffect|Rupture Fragility|d}}
+|Gain 2 {{StatusEffect|Damage Up|b}}, 2 {{StatusEffect|Fragile|d}}, and 2 {{StatusEffect|Rupture Fragility|d}}
+|[[:Category:Enemies with Eldtree Mutation Panic|Failure Enemies]]
+|-
+|[[File:Angst Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Angst</span>
+|Clash Power +2 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 2 {{StatusEffect|Damage Up|b}} and 1 {{StatusEffect|Fragile|d}}
+|Clash Power +3 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 3 {{StatusEffect|Damage Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|{{EnBox|1159}}
+|-
+|[[File:Heart of Evil Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Heart of Evil</span>
+|Clash Power +2 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 2 {{StatusEffect|Damage Up|b}} and 1 {{StatusEffect|Fragile|d}}
+|Clash Power +3 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 3 {{StatusEffect|Damage Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|[[:Category:Enemies with Heart of Evil Panic|Wicked Deathrite Monk Enemies]]
+|-
+|[[File:Heart of Oppressive Evil Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Heart of Oppressive Evil</span>
+|Clash Power +2 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 3 {{StatusEffect|Damage Up|b}} and 1 {{StatusEffect|Fragile|d}}
+|Clash Power +3 against targets with {{StatusEffect|Omen Talisman|d}}<br>Turn Start: gain 4 {{StatusEffect|Damage Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|[[:Category:Enemies with Heart of Oppressive Evil Panic|Evil-possessed Deathrite Monk Enemies]]
+|-
+|[[File:Charge Order Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Charge Order</span>
+|Turn Start: gain 1 {{StatusEffect|Fragile|d}} and apply 1 {{StatusEffect|Damage Up|b}} to all allies
+|Turn Start: gain 2 {{StatusEffect|Fragile|d}} and apply 2 {{StatusEffect|Damage Up|b}} to all allies
+|{{EnBox|1157}}
+|-
+|[[File:Double-edged Feather Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Double-edged Feather</span>
+|Turn Start: gain 1 {{StatusEffect|Fragile|d}} and 1 {{StatusEffect|HP Healing Boost|b}}. On Hit, inflict 1 {{StatusEffect|Rupture|d}} and {{StatusEffect|Bleed|d}}
+|Turn Start: gain 2 {{StatusEffect|Fragile|d}} and 2 {{StatusEffect|HP Healing Boost|b}}. On Hit, inflict 1 {{StatusEffect|Rupture|d}} and {{StatusEffect|Bleed|d}}
+|{{EnBox|1158}}
+|-
+|[[File:Jia Qiu Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Jia Qiu</span>
+|Deal +10% damage against targets that aren't Hong Lu
+|Deal +20% damage against targets that aren't Hong Lu
+|{{EnBox|1137}}
+|-
+|[[File:Le Regole Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Le Regole</span>
+|If this unit inflicted 2+ {{StatusEffect|Tremor|d}} last turn, gain 1 {{StatusEffect|Sloth DMG Up|b}}<br>If this unit inflicted 2+ {{StatusEffect|Burn|d}} last turn, gain 1 {{StatusEffect|Wrath DMG Up|b}}<br>If this unit failed to inflict anything, gain 2 {{StatusEffect|Defense Level Down|d}}
+|If this unit inflicted 2+ {{StatusEffect|Tremor|d}} last turn, gain 2 {{StatusEffect|Sloth DMG Up|b}}<br>If this unit inflicted 2+ {{StatusEffect|Burn|d}} last turn, gain 2 {{StatusEffect|Wrath DMG Up|b}}<br>If this unit failed to inflict anything, gain 3 {{StatusEffect|Defense Level Down|d}}
+|[[:Category:Enemies with Le Regole Panic|The Thumb Enemies]]
+|-
+|[[File:Beastly Instinct Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Beastly Instinct</span>
+|Deals +(HP percentage difference/2)% damage to targets with higher HP percentages than this unit's (max 10%)<br>Turn Start: gain 1 {{StatusEffect|Attack Power Up|b}}, 1 {{StatusEffect|Damage Up|b}}, and 1 {{StatusEffect|Fragile|d}}
+|Deals +(HP percentage difference)% damage to targets with higher HP percentages than this unit's (max 25%)<br>Turn Start: gain 1 {{StatusEffect|Plus Coin Boost|b}}, 2 {{StatusEffect|Damage Up|b}}, and 2 {{StatusEffect|Fragile|d}}
+|{{EnBox|1145}}
+|-
+|[[File:Flesh Scoop Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Flesh Scoop</span>
+|Turn Start: gain 5 {{StatusEffect|Bleed|d}} and 1 {{StatusEffect|Attack Power Up|b}}
+|Turn Start: gain 10 {{StatusEffect|Bleed|d}} and 2 {{StatusEffect|Attack Power Up|b}}
+|[[:Category:Enemies with Flesh Scoop Panic|N Corp. E.G.O::Sticking Enemies]]
+|-
+|[[File:Heart Toward the New Era Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Heart Toward the New Era</span>
+|On Hit, consume 3 SP on self to inflict 2 {{StatusEffect|Sinking|d}}
+|On Hit, inflict 3 {{StatusEffect|Sinking|d}} and gain 1 {{StatusEffect|Sinking|d}}
+|{{EnBox|1136}}
+|-
+|[[File:Soft Goldcasted Heart Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Soft Goldcasted Heart</span>
+|Turn Start: gain 1 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Fragile|d}}
+|Turn Start: gain 2 {{StatusEffect|Attack Power Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|{{EnBox|1135}}
+|-
+|[[File:Inherited Will of Hongyuan Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Inherited Will of Hongyuan</span>
+|All parts gain 2 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Bind|d}}<br>- When the Body Part loses a Clash against Hong Lu: the Body Part gains 1 {{StatusEffect|Damage Up|b}}and 1 {{StatusEffect|Fragile|d}} next turn (once per turn)
+|All parts gain 2 {{StatusEffect|Attack Power Up|b}} and 2 {{StatusEffect|Bind|d}}<br>- When the Body Part loses a Clash against Hong Lu: the Body Part gains 2 {{StatusEffect|Damage Up|b}}and 2 {{StatusEffect|Fragile|d}} next turn (once per turn)
+|{{EnBox|1146}}
+|-
+|[[File:Infinitely Bequeathing Will of Hongyuan Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Infinitely Bequeathing Will of Hongyuan</span>
+|Gain 2 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Bind|d}}<br>Units generated by this unit gain 3 {{StatusEffect|Defense Level Down|d}}<br>Deal +20% damage. If the Palanquin Part's HP drops to 0, deal -10% damage instead
+|Gain 2 {{StatusEffect|Attack Power Up|b}} and 2 {{StatusEffect|Bind|d}}<br>Units generated by this unit gain 6 {{StatusEffect|Defense Level Down|d}}<br>Deal +30% damage. If the Palanquin Part's HP drops to 0, deal -15% damage instead
+|{{EnBox|1152}}
+|-
+|[[File:Shadow Arm Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Shadow Arm</span>
+|Clash Power -1; take -10% damage
+|Clash Power -2; take -20% damage
+|[[:Category:Enemies with Shadow Arm Panic|Heishou Pack - Si Branch Enemies]]
+|-
+|[[File:Unbridled Steed Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Unbridled Steed</span>
+|Turn Start: gain 2 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Fragile|d}}
+|Turn Start: gain 1 max Speed, gain 2 {{StatusEffect|Offense Level Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|{{EnBox|1247}}
+|-
+|[[File:Night Drifter of the Drunken Palm Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Night Drifter of the Drunken Palm</span>
+|Take +10% damage from Jia Xichun; deal +30% damage with Counterattacks
+|Final Power +1; take +20% damage from Jia Xichun; deal +50% damage with Counterattacks
+|{{EnBox|1272}}
+|-
+|[[File:Shattermark Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Shattermark</span>
+|Clash Power -1; Defense Level -2
+|Clash Power -2; Defense Level -3
+|{{IDIcon|Heishou Pack - Wei Branch Don Quixote|3}}
+|-
+|[[File:Textbook Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Textbook</span>
+|Clash Power +1 when Clashing against targets with {{StatusEffect|The Duel Escalates|d}}<br>Clash Lose: Gain 1 {{StatusEffect|Fragile|d}} next turn (once per turn)
+|Clash Power +2 when Clashing against targets with {{StatusEffect|The Duel Escalates|d}}<br>Clash Lose: Gain 2 {{StatusEffect|Fragile|d}} next turn (once per turn)
+|{{EnBox|1306}}
+|-
+|[[File:Ragged Breath Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Ragged Breath</span>
+|Turn Start: Lose 3 {{StatusEffect|Poise|b}} Potency
+|Turn Start: Lose 5 {{StatusEffect|Poise|b}} Potency
+|{{EnBox|1318}}
+|-
+|[[File:Iron Maiden Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Iron Maiden</span>
+|Turn Start: gain 1 {{StatusEffect|Offense Level Down|d}} and 1 {{StatusEffect|Defense Level Up|b}}
+|Turn Start: gain 2 {{StatusEffect|Offense Level Down|d}} and 2 {{StatusEffect|Defense Level Up|b}}
+|{{EnBox|1319}}
+|-
+|[[File:Blue Sand Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Blue Sand</span>
+|Clash Power -1, Min & Max Speed -1
+|Clash Power -2, Min & Max Speed -1
+|{{IDIcon|LCA Udjat Vanguard Team 3 Leader Outis|3}}
+|- 
+|[[File:Prescript Incompliance Risk Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Prescript Incompliance Risk</span>
+|Deal +20% damage to {{StatusEffect|The Prescript's Target - The Index|r}}<br>Take +10% damage from those who are not {{StatusEffect|The Prescript's Target - The Index|r}}
+|Deal +30% damage to {{StatusEffect|The Prescript's Target - The Index|r}}<br>Take +20% damage from those who are not {{StatusEffect|The Prescript's Target - The Index|r}}
+|{{EnBox|1325}}<br>[[:Category:Enemies with Prescript Incompliance Risk Panic|The Index Proselytes]]
+|- 
+|[[File:Vexation Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Vexation</span>
+|Gain 1 {{StatusEffect|Pierce Power Up|b}} and 1 {{StatusEffect|SP Heal Efficiency Down|d}}
+|Gain 2 {{StatusEffect|Pierce Power Up|b}}, 1 {{StatusEffect|Pierce DMG Up|b}}, and 2 {{StatusEffect|SP Heal Efficiency Down|d}}
+|{{EnBox|400006}}
+|-
+|[[File:Affection and Resentment Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Affection and Resentment</span>
+|Deal +10% damage to and take +10% damage from Ryōshū
+|Deal +20% damage to and take +10% damage from Ryōshū
+|{{EnBox|1322}} {{EnBox|1324}}
+|-
+|[[File:Wave of Somnolence Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Wave of Somnolence</span>
+|Gain 1 fewer {{StatusEffect|Lamp|r}} from Skills
+|Does not act for this turn
+|{{EnBox|400008}}
+|-
+|[[File:Degraded Corrosion Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Degraded Corrosion</span>
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}}
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}} and 5 {{StatusEffect|Burn|d}}
+|{{EnBox|400007}}
+|-
+|[[File:Outmoded Art Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Outmoded Art</span>
+|Turn Start: Gain 1 {{StatusEffect|Offense Level Up|b}}
+|Turn Start: Gain 2 {{StatusEffect|Offense Level Up|b}}
+|{{EnBox|1331}} {{EnBox|1336}}
+|-
+|[[File:Body Broken Beyond Repair Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Body Broken Beyond Repair</span>
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}} and apply 2 {{StatusEffect|Defense Power Up|b}} to Ezra and Vespa
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}} and use 'Steady the Breath'
+|{{EnBox|400010}}
+|-
+|[[File:Insecurity - Mask Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Insecurity: Mask</span>
+|Base Attack Power -1, Defense Level +2
+|Base Attack Power -1, Defense Level +3
+|{{EnBox|400011}}
+|-
+|[[File:Fervor Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Fervor</span>
+|Turn Start: Gain 2 {{StatusEffect|Defense Level Down|d}}; gain 1 {{StatusEffect|Damage Up|b}} for every 30 HP damage taken last turn (max 5)
+|Turn Start: Gain 1 {{StatusEffect|Attack Power Up|b}} and 3 {{StatusEffect|Defense Level Down|d}}; gain 1 {{StatusEffect|Damage Up|b}} for every 25 HP damage taken last turn (max 5)
+|{{EnBox|1328}}
+|-
+|[[File:Mad Rampage Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Mad Rampage</span>
+|Turn Start: Gain 2 {{StatusEffect|Attack Power Up|b}} and 4 {{StatusEffect|Defense Level Down|d}}; gain 1 {{StatusEffect|Damage Up|b}} for every 30 HP damage taken last turn (max 5)
+|Turn Start: Gain 3 {{StatusEffect|Attack Power Up|b}} and 5 {{StatusEffect|Defense Level Down|d}}; gain 1 {{StatusEffect|Damage Up|b}} for every 25 HP damage taken last turn (max 5)
+|{{EnBox|1327}}
+|-
+|[[File:Shame of the Family Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Shame of the Family</span>
+|Turn Start: Gain 1 {{StatusEffect|Slash DMG Up|b}}, 1 {{StatusEffect|Clash Power Up|b}}, and 1 {{StatusEffect|Fragile|d}}<br>Cannot gain Mang when using Skills
+|Turn Start: Gain 2 {{StatusEffect|Slash DMG Up|b}}, 2 {{StatusEffect|Clash Power Up|b}}, and 2 {{StatusEffect|Fragile|d}}<br>Cannot gain Mang when using Skills
+|{{EnBox|1314}}
+|-
+|[[File:Of the Second Smoke War Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Of the Second Smoke War</span>
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}}<br>{{StatusEffect|SP Heal Efficiency|r}} +2
+|Turn Start: Gain 2 {{StatusEffect|Fragile|d}} and 2 {{StatusEffect|Clash Power Up|b}}
+|{{EnBox|400013}}
+|-
+|[[File:"K-kill... kill me..." Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>"K-kill... kill me..."</span>
+|Turn Start: Gain 8 {{StatusEffect|Clash Power Down|d}} and 5 {{StatusEffect|Power Down|d}}
+|Turn Start: Gain 10 {{StatusEffect|Clash Power Down|d}} and 5 {{StatusEffect|Power Down|d}}
+|{{EnBox|1339}}
+|-
+|[[File:Alaya Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Alaya</span>
+| -
+| -
+|{{EnBox|400015}}
+|-
+|[[File:Imitation of a Father Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Imitation of a Father</span>
+| - Turn Start: Gain 5 {{StatusEffect|Burn|d}} and 5 {{StatusEffect|Bleed|d}}<br>- Take +10% damage from Sinner {{Ryoshu}}
+| - Turn Start: Gain 5 {{StatusEffect|Burn|d}}, +3 {{StatusEffect|Burn|d}} Count, 5 {{StatusEffect|Bleed|d}}, and +3 {{StatusEffect|Bleed|d}} Count<br>- Take +20% damage from Sinner {{Ryoshu}}
+|{{EnBox|1347}}
+|-
+|[[File:Dazzle Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Dazzle</span>
+|Turn End: Gain 1 {{StatusEffect|Bind|d}} and 2 {{StatusEffect|Offense Level Down|d}} next turn
+|Turn End: Gain 1 {{StatusEffect|Bind|d}} and 4 {{StatusEffect|Offense Level Down|d}} next turn
+|{{IDIcon|Lobotomy E.G.O::Lamp Gregor|3}}
+|-
+|[[File:Solitude Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Solitude</span>
+|Turn End: Gain +2 {{StatusEffect|Sinking|d}} Count
+|Turn End: Gain +3 {{StatusEffect|Sinking|d}} Count
+|{{IDIcon|Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū|3}}
+|-
+|[[File:Faltering Inspiration Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Faltering Inspiration</span>
+| - If the target this unit attacks has <span style="color:#ff0000>Mauled Color</span>, deal +10% damage<br>- Gain 1 {{StatusEffect|Fragile|d}}
+| - If the target this unit attacks has <span style="color:#ff0000>Mauled Color</span>, deal +20% damage<br>- Gain 2 {{StatusEffect|Fragile|d}}
+|[[:Category:Enemies with Faltering Inspiration Panic|Fauvist Students of the Ring]]
+|-
+|[[File:Coloriage Impulsif Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Coloriage Impulsif</span>
+| - Deal +2.5% damage for every <span style="color:#ff0000>type of negative effect</span> on target this unit attacks (max 15%)<br>- Gain 1 {{StatusEffect|Fragile|d}}
+| - Deal +5% damage for every <span style="color:#ff0000>type of negative effect</span> on target this unit attacks (max 30%)<br>- Gain 2 {{StatusEffect|Fragile|d}}
+|{{EnBox|1422}}
+|-
+|[[File:Resentment (Aeng-du) Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Resentment</span>
+| - Turn Start: Gain 1 {{StatusEffect|Attack Power Up}} and 1 {{StatusEffect|Defense Power Down}}<br>- Turn End: Gain 2 {{StatusEffect|Haste}} next turn
+| - Turn Start: Gain 2 {{StatusEffect|Attack Power Up}} and 2 {{StatusEffect|Defense Power Down}}<br>- Turn End: Gain 2 {{StatusEffect|Haste}} next turn
+|{{EnBox|400038}}
+|-
+|[[File:Jumbled Memories Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Jumbled Memories</span>
+|Turn Start: Gain 1~3 {{StatusEffect|Offense Level Up}} and 1~3 {{StatusEffect|Defense Level Down}}
+|Turn Start: Gain 1~5 {{StatusEffect|Offense Level Up}} and 1~5 {{StatusEffect|Defense Level Down}}
+|[[:Category:Enemies with Jumbled Memories Panic|Ch'unokkun Enemies]]
+|-
+|[[File:Intelligence Obsession Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Intelligence Obsession</span>
+| - In a Clash against targets that have {{StatusEffect|Intelligence Gathering}}, Base Power +1 and deal +10% damage<br>- Turn Start: Gain 1 {{StatusEffect|Fragile}}
+| - In a Clash against targets that have {{StatusEffect|Intelligence Gathering}}, Base Power +1 and deal +20% damage<br>- Turn Start: Gain 2 {{StatusEffect|Fragile}}
+|[[:Category:Enemies with Intelligence Obsession Panic|N Corp. Class 2 Staff Enemies]]
+|-
+|[[File:Developed Memories Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Developed Memories</span>
+|Gain 1 {{StatusEffect|Fragile}}, deal +10% damage, and deal +15% damage on Critical Hit
+|Gain 2 {{StatusEffect|Fragile}}, deal +10% damage, and deal +30% damage on Critical Hit, and {{SkillHint|double the effects inflicted by the Coins of the "Bow of the Homeland [Sal] - Arrowloose" Skill}}
+|{{EnBox|1450}} {{EnBox|1451}}
+|-
+|[[File:Deep-rooted Regret Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Deep-rooted Regret</span>
+|Turn Start: Gain 2 {{StatusEffect|Damage Down}} and heal 40 HP
+|Turn Start: Gain 3 {{StatusEffect|Damage Down}} and heal 60 HP
+|{{EnBox|400040}}
+|}</div>
+
+===Removed Panic Types===
+<div style="margin:0 auto;overflow:scroll;width:auto;max-width:100%;scrollbar-width:none">
+{| class="lcbtable2 red-border red-border sortable mw-collapsible mw-collapsed" style="width:100%; margin:auto;text-align:center" cellpadding="3"
+!Panic Type
+!Low Morale Effects
+!Panic Effects
+!Source
+|-
+|[[File:Call of the Bloodkin Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Call of the Bloodkin</span>
+|Turn End: consume 3% HP to apply 1 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Fragile|d}} to all allies
+|Turn End: consume 5% HP and gain 1 {{StatusEffect|Fragile|d}} to apply 1 {{StatusEffect|Attack Power Up|b}} and 1 {{StatusEffect|Fragile|d}} to all allies
+|{{EnBox|1300}}
+|-
+|[[File:Hive Mind Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Hive Mind</span>
+|All Resistances change to 'Normal'
+|All Resistance change to 'Normal'<br>Double the amount of {{StatusEffect|Burn|d}}, {{StatusEffect|Bleed|d}}, {{StatusEffect|Tremor|d}}, and {{StatusEffect|Rupture|d}} Potency gained due to Skill effects
+|{{EnBox|1302}}
+|-
+|[[File:Heart of Compassion Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Heart of Compassion</span>
+|<nowiki>-</nowiki> Deal +({{StatusEffect|Nervous Impairment|d}} on target / 2)% damage (max 15%)<br>- Turn Start: gain 1 {{StatusEffect|Damage Up|b}} and 2 {{StatusEffect|Fragile|d}}
+|<nowiki>-</nowiki> Deal +({{StatusEffect|Nervous Impairment|d}} on target)% damage (max 30%)<br>- Turn Start: gain 2 {{StatusEffect|Damage Up|b}} and 3 {{StatusEffect|Fragile|d}}
+|{{EnBox|1303}}
+|-
+|[[File:Yummers Panic.png|100x100px|frameless|link=]]<br><span style="color:#96B6DA>Yummers</span>
+|Turn Start: Gain 1 {{StatusEffect|Fragile|d}}
+|Turn Start: Gain 2 {{StatusEffect|Fragile|d}}
+|[[:Category:Enemies with Yummers Panic|A Midspring Night's Dream 3 Bongies]]
+|}</div>
+
+[[Category:Gameplay]]
+
+==Identities and E.G.O==
+{{StatusNavbox|unique Sanity mechanics}}
+{{StatusNavbox|SP Healing}}
+{{StatusNavbox|SP Loss}}
+{{StatusNavbox|SP Damage}}
+{{StatusNavbox|SP Heal Efficiency|noid=true}}
+{{StatusNavbox|SP Loss Efficiency|noid=true}}
+
+==Trivia==
+<ul>
+<li>Prior to the June 1st, 2023 update, the default base factors affecting Sanity were the following:
+{|class="mw-collapsible mw-collapsed" style="border: 2px solid #810000; border-radius: 7.5px"
+!style="background: #810000; border-radius: 3.25px;"|Factors affecting Sanity
+|-
+|style="color:#80c9ff"|
+* After winning a Clash, increases based on the Clash count <br> (Base Value is 10, raised by 25% per Clash count after 1)
+* If the level of the defeated enemy was higher than the unit's, increase based on the level difference <br> (Base Value is 10, raised by 10 per level)
+* If the level of the enemy defeated by an ally was higher than the unit's, increase based on the level difference <br> (Base Value is 5, raised by 5 per level)
+|-
+|style="color:#fe4b48"|
+* After losing a Clash, decreases based on the Clash count <br> (Base Value is 10, raised by 25% per Clash count after 1)
+* If the level of the defeated ally was higher than the unit's, decrease based on the level difference <br> (Base Value is 10, raised by 10 per level)
+|}</li>
+<li>During the June 1st, 2023 update, the default base factors affecting Sanity were the following:
+{|class="mw-collapsible mw-collapsed" style="border: 2px solid #810000; border-radius: 7.5px"
+!style="background: #810000; border-radius: 3.25px;"|Factors affecting Sanity
+|-
+|style="color:#80c9ff"|
+* After winning a Clash, increases based on the Clash count <br> (Base Value is 5, raised by 20% per Clash count after 1)
+* If the level of the defeated enemy was higher than the unit's, increase based on the level difference <br> (Base Value is 5, raised by 5 per level)
+* If the level of the enemy defeated by an ally was higher than the unit's, increase based on the level difference <br> (Base Value is 2, raised by 2 per level)
+|-
+|style="color:#fe4b48"|
+* After losing a Clash, decreases based on the Clash count <br> (Base Value is 5, raised by 10% per Clash count after 1)
+* If the level of the defeated ally was higher than the unit's, decrease based on the level difference <br> (Base Value is 5, raised by 5 per level)
+|}
+<li><li>This change was altered again on the same day into the current version of the base factors affecting Sanity.</li></li></li>
+</ul>
+
+==Navigation==
+{{StatPages}}

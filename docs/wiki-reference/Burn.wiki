@@ -1,0 +1,204 @@
+{{MEinfobox
+|name=Burn
+|cg=Burn.png}}
+{{StatusEffect|Burn|d}} is a status effect that deals bonus fixed damage to the afflicted unit. At the end of a turn, the unit with {{StatusEffect|Burn|d}} will take fixed damage equal to Burn Potency, and the Burn Count will be reduced by 1.
+
+{{StatusEffect|Burn|d}} is linked to the {{Icons|Wrath}} Wrath Sin Affinity.
+
+==Strengths & Weaknesses==
+While {{StatusEffect|Burn|d}} is an easy Status Effect to use, as it is easy to stack and doesn't require micromanaging, it has a low damage cap due to Burn Potency having a max value of 99. This means that any given part can only take an additional 99 damage per turn, which many enemies with large HP bars can shrug off. {{StatusEffect|Dark Flame|d}} deals bonus {{Icons|Pride}}Pride damage in relation to {{StatusEffect|Burn|d}} Potency, allowing for a much higher single-turn damage cap, but this is restricted to [[Lobotomy E.G.O::Magic Bullet Outis]] and [[Magic Bullet Outis]] (both [[Walpurgis Night|Walpurgisnacht]] collectables), and even then Burn is still generally unable to deal as much damage as other fixed damage Status Effects (such as {{StatusEffect|Rupture|x}}[[Rupture]]) outside of [[Mirror Dungeon]]s.
+
+To work around its low damage output, certain Identities can consume {{StatusEffect|Burn|d}} Count on targets to inflict varying amounts of {{Icons|Wrath}}Wrath damage, or even activate {{StatusEffect|Burn|d}} on targets by themselves using their skills without having to wait for the turn to end. 
+
+<span>Inside the Mirror Dungeons, {{StatusEffect|Burn|d}} itself can reach a maximum output of '''180 damage per turn''', using E.G.O Gifts such as {{GiftTT|Searing Brass|25|t}} and {{GiftTT|Burning Fate|25|t}} (which raise its maximum Potency cap), and using status effects such as [[Great Trichiliocosm 三千大世界 Yi Sang]]'s {{StatusEffect|Shattered World|d}}, which multiply the damage dealt per turn.</span>
+
+If the previous conditionals are fulfilled, {{StatusEffect|Dark Flame|d}} can reach an output of '''1050''' damage at Turn End without considering targets' Sin Resistances.
+
+{{StatusEffect|Burn|d}} is most effective against enemies with small HP bars and Abnormalities with many parts. Burn damage, like all types of fixed damage, ignores damage reduction from buffs (like {{StatusEffect|Protection|b}}), level scaling, and enemy resistances or weaknesses. All Identities that focus on Burn infliction have at least 1 {{Icons|Wrath}}Wrath skill.
+
+Burn is least effective against enemies with high HP and Abnormalities with one or two body parts.
+
+==Status Effects==
+===Core Effects===
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" |'''Source (If Exclusive)'''
+|-
+|{{StatusEffect|Burn|d}}||At the end of the turn, take fixed damage by the effect’s Potency, then reduce its Count by 1. <br> - Maximum value of 99 potency and count.
+|-
+|{{StatusEffect|Dark Flame|d}}||- Unique {{StatusEffect|Burn|d}} <br> - Max Value: 7 <br> - Target loses Defense Level equal to the value of this effect <br> - Turn End: Deal (Value x {{StatusEffect|Burn|d}} on target) {{Icons|Pride}}Pride Affinity damage, then expires || [[Lobotomy E.G.O::Magic Bullet Outis]] <br> [[Magic Bullet Outis]] E.G.O
+|}
+
+===Related Effects===
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" |'''Source (If Exclusive)'''
+|-
+! colspan="3" style="background:#660000" |'''Effects that Interact with Burn'''
+|-
+|{{StatusEffect|Searing Birdcage|d}}||Max Stack: 5 <br> If this unit has {{StatusEffect|Burn|d}}, Wrath Resistance +0.1 for every Stack (cannot exceed 2.0 Wrath Resistance with this effect) <br> Turn End: gain {{StatusEffect|Bind|d}} equal to Stack next turn <br> Turn End: halve Stack (rounded down) <br> ※ Cannot gain additional Stacks of this effect while it is already active||[[Indicant's Trial Rodion]] E.G.O
+|-
+|{{StatusEffect|Tremor - Scorch|d}}||- On {{StatusEffect|Tremor Burst|d}}, take {{Icons|Wrath}}Wrath Damage equal to (sum of {{StatusEffect|Tremor|d}} Potency and {{StatusEffect|Burn|d}} Potency / 2), and lose 1 {{StatusEffect|Burn|d}} Count <br> - When hit by Skills that trigger {{StatusEffect|Tremor Burst|d}}, raise this unit's Stagger Threshold equal by the effect's Potency <br> - Turn End: reduce the Count by 1 <br> (Interacts the same way as normal {{StatusEffect|Tremor|d}} does to effects that raise or reduce {{StatusEffect|Tremor|d}} Potency/Count)|| [[The Thumb East Capo IIII Meursault]] <br> [[The Thumb East Soldato II Sinclair]]<br> [[The House of Spiders: The Thumb Nursefather Rodion]]<br> [[The House of Spiders: The Thumb Apprentice Heathcliff]]<br> [[Dawn Office Rep Gregor]]<br> [[Dawn Office Fixer Faust]]<br> [[The_Thumb#Eastern_Branch|The Thumb East]] Enemies
+|-
+|{{StatusEffect|Resident Reg. Microchip|d}} || - Max Stack: 2 <br> - Take +10% damage from {{Icons|Wrath}}Wrath and {{Icons|Envy}}Envy Skills <br> - On Clash Lose, gain 1 {{StatusEffect|Burn|d}} (3 times per turn) <br> - Turn End: Lose 1 Stack || [[Move-in Reg. Heathcliff]] E.G.O
+|-
+|{{StatusEffect|Shattered World|d}} || - Max Stack: 1 <br> - Expires at Turn End <br> - Take x1.2 damage from {{StatusEffect|Burn|d}} (rounded down; except Unique {{StatusEffect|Burn|d}}) <br> - Take +10% damage from Yi Sang's {{Icons|Wrath}}Wrath and {{Icons|Gloom}}Gloom Base Attack Skills || [[Great Trichiliocosm 三千大世界 Yi Sang]] E.G.O
+|-
+|{{StatusEffect|Dazzle|d}}||- For every 1 ({{StatusEffect|Sinking|d}} + {{StatusEffect|Burn|d}}), take +0.5% damage from Base Attack Skills (max 10%) <br> - Units with SP: Change their Panic Type to "Dazzle" <br> - Units without SP: Defense Level -2 <br> - Turn End: Lose 1 Stack <br> - This effect is not cumulative; inflicting it will replace the current value with the inflicted value <br> - Apply the "Units without SP" conditional to certain enemies that have SP but can't change their Panic Types <br><br> ※ Dazzle Panic-type effects: <br> - Low Morale: Turn End: Gain 1 {{StatusEffect|Bind|d}} and 2 {{StatusEffect|Offense Level Down|d}} next turn <br> - Panic: Turn End: Gain 1 {{StatusEffect|Bind|d}} and 4 {{StatusEffect|Offense Level Down|d}} next turn || [[Lobotomy E.G.O::Lamp Gregor]]
+|-
+|{{StatusEffect|Spore|d}} || - Max Stack: 15 <br> - Turn End: Gain +1 {{StatusEffect|Burn|d}} Count for every 5 Stack <br> - Gain 1 {{StatusEffect|Bind|d}} next turn || [[Lobotomy E.G.O::Hornet【Alteration】Meursault]]
+|-
+|{{StatusEffect|Embers|d}}|| - Max Potency: 3 <br> - Max Count: 6 <br> - If this unit has {{StatusEffect|Burn|d}}, lose 1 {{StatusEffect|Embers|d}} Count when hit by a Skill that inflicts {{StatusEffect|Burn|d}} Potency, Count or 'Unique Burn' (including E.G.O Skills) <br><br> - If this unit does not have {{StatusEffect|Burn|d}}, reset {{StatusEffect|Embers|d}} Count to 6 when hit (independent of Skills that inflict {{StatusEffect|Burn|d}}) <br><br> - At 0 {{StatusEffect|Embers|d}} Count, activate the following effects: <br>  · Activate {{StatusEffect|Burn|d}} on self once and lose 1 {{StatusEffect|Burn|d}} <br> · Lose 1 {{StatusEffect|Embers|d}} Potency <br> · If this unit has 1+ remaining {{StatusEffect|Embers}} Potency, reset {{StatusEffect|Embers|d}} Count to 6 || [[Ardor Blossom Star Faust]] E.G.O
+|-
+|{{StatusEffect|Scorchfield|r}}|| - Stores all {{StatusEffect|Burn|d}} damage dealt in this zone<br> - Resets when moving to a different zone<br> - This value is shared by all characters || [[Dawn Office Fixer Sinclair]] (when [[Dawn Office Fixer Faust]] and [[Dawn Office Rep Gregor]] are on field)
+|-
+! colspan="3" style="background:#660000" |'''Identity Buffs and Passives'''
+|-
+|{{StatusEffect|Volatile Passion|r}}||- On Hit, inflict 1 {{StatusEffect|Burn|d}} <br> - If the main target has {{StatusEffect|Burn|d}}, Final Power + 1 <br>- When hit, if this unit had a Defense Skill chained at Combat Start, inflict 1 {{StatusEffect|Burn|d}} per hit against the attacker for the turn<br>- Turn End: lose (# of turns spent in Volate E.G.O state x 5) SP. (Max SP Loss : 40) || [[Dawn Office Fixer Sinclair]]
+|-
+|{{StatusEffect|Heated Gas Harpoon|b}}||For 1 turn, inflict 1 {{StatusEffect|Burn|d}} with Heads Hit || [[The Pequod Captain Ishmael]], Uptie II-III
+|-
+|{{StatusEffect|Overheated Gas Harpoon|b}}||For 1 turn, inflict 1 {{StatusEffect|Burn|d}} On Hit || [[The Pequod Captain Ishmael]], Uptie IV
+|-
+|{{StatusEffect|The Third Magic Bullet|b}}||- Deal 20% more damage <br> - Before Attack: gain +2 Atk Weight <br> - On Hit, inflict 2 {{StatusEffect|Power Down|d}} and 10 {{StatusEffect|Burn|d}} || [[Magic Bullet Outis]] E.G.O
+|-
+|{{StatusEffect|The Fifth Magic Bullet|b}}||- Deal 30% more damage <br> - Before Attack: gain +4 Atk Weight <br> - On Hit, inflict 10 {{StatusEffect|Burn|d}}; then, inflict 4 {{StatusEffect|Offense Level Down|d}} and 4 {{StatusEffect|Defense Level Down|d}}  || [[Magic Bullet Outis]] E.G.O
+|-
+|{{StatusEffect|The Sixth Magic Bullet|b}}||- Before Attack: gain +6 Atk Weight <br> - On Hit, raise the target's Stagger Threshold by damage dealt (max 30) <br> - Reuse this coin for every 7 {{StatusEffect|Burn|d}} on the main target (2 times max) <br> - Plus Coin Skill Base Power -16 <br> - Minus Coin Skill Base Power -22 <br> - Plus Coin Power -8 <br> - Minus Coin Power -12  || [[Magic Bullet Outis]] E.G.O
+|-
+|{{StatusEffect|Bloodflame -血炎-|b}}|| - Max Stack: 3 <br> - This unit inflicts +1 more {{StatusEffect|Burn|d}} and {{StatusEffect|Rupture|d}} potency with its Base Skills <br> - While this unit has this effect, heal 3 SP upon Staggering or killing an enemy (3 times per turn) <br> · If this unit's SP is at max when the above effect activates, gain 1 {{StatusEffect|Offense Level Up|b}} and 1 {{StatusEffect|Haste|b}} next turn <br> - Lose 1 Stack at Turn End || [[List of Identities/World#hcorp|Heishou Pack - You Branch Identities]]
+|-
+|{{StatusEffect|Thermal Blades|b}}|| - Max Stack: 2 <br> - If target hit by Base Skills has {{StatusEffect|Burn|d}}, heal 3 SP (2 times per turn) <br> - Inflict {{StatusEffect|Burn|d}} when inflicting {{StatusEffect|Bleed|d}} with certain Skill Coins <br> - Turn End: Lose 1 Stack || [[The House of Spiders: The Middle Apprentice Ishmael]]
+|-
+|{{StatusEffect|First Seal Removed (Outis)|r}}||- Turn End: Gain 1 {{StatusEffect|Haste}} next turn <br> - {{Icons|Blunt}}Blunt Base Skills deal +2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Blunt}}Blunt damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Second Seal Removed (Outis)|r}}||- Turn End: Gain 1 {{StatusEffect|Haste}} next turn <br> - {{Icons|Blunt}}Blunt Base Skills deal 2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Slash}}Slash damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Lævateinn (Outis)|r}}||- Turn Start: Inflict 3 {{StatusEffect|Burn|d}} on all units on the field <br> - Replace this unit's Base Skills with Lævateinn-exclusive Skills corresponding to each Skill's rank <br> - {{Icons|Blunt}}Blunt Base Skills deal +2% damage for every 4 ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}) on target (max 10%) <br> - On final Coin Hit using Base Skills, if target has 20+ ({{StatusEffect|Burn|d}} + {{StatusEffect|Bleed|d}}), deal (10% of the Coin's final damage) {{Icons|Pierce}}Pierce damage (rounded down)|| [[The House of Spiders: The Middle Nursefather Outis]]
+|-
+|{{StatusEffect|Shin (心) - Disgrace|b}}|| - Min & Max Speed +1 <br> - Base Skills inflict +1 more {{StatusEffect|Tremor|d}} and {{StatusEffect|Burn|d}} Potency and Count <br> - Deal +3% damage for every {{StatusEffect|Poise|b}} on self (max 15%) || [[The House of Spiders: The Thumb Nursefather Rodion]]
+|-
+|{{StatusEffect|Fire Butterfly Coffin|r}} || - Max Stack: 30<br> - Can gain up to 20 Stacks per turn<br> - On Base Skill Hit: Gain 2 Stacks<br> - Turn End: At 20+ Stacks, gain {{StatusEffect|Burn|d}} next turn equal to half of surplus Stacks past 20 (rounded down)<br> • At 30 Stacks, gain {{StatusEffect|Burn|d}} and {{StatusEffect|Burn|d}} Count instead||[[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Overheated Coffin|d}}|| - Max Stack: 1<br> - Turn End:<br>• Gain 3 {{StatusEffect|Burn|d}} next turn<br>• This effect expires||[[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Battle Instinct|b}}|| - Max Stack: 3<br> - Min & Max Speed +2<br> - Base Skills inflict +1 {{StatusEffect|Burn|d}} Potency and {{StatusEffect|Burn|d}} Count on enemies<br> - Skill 'Eject' deals +(Stack x 5)% damage<br> - Skills "Eject - High Noon" and "Dismemberment at High Noon" deal +(Stack x 10%) damage||[[Dawn Office Fixer Faust]]
+|-
+|{{StatusEffect|Light of Daybreak|b}}|| - Max Stack: 30<br> - Can gain up to 20 Stack per turn<br> - Turn Start: Gain 1 {{StatusEffect|Burn|d}} for every 5 Stack; then, gain +1 {{StatusEffect|Burn|d}} Count for every 10 Stack<br> - On Hit using a Base Attack Skill, gain (1 + {{StatusEffect|Burn|d}} on target/3) Stack (max 3)<br> - At 10+ Stack, Base Skills inflict +1 more {{StatusEffect|Burn|d}} Potency<br> - At 20+ Stack, Base Skills inflict +1 more {{StatusEffect|Burn|d}} Count||[[Dawn Office Rep Gregor]]
+|-
+|{{StatusEffect|Dawnherald|b}}|| - Max Stack: 3<br> - Base Skills that inflict {{StatusEffect|Burn|d}} Potency, Burn, or 'Unique Burn' deal +10% damage<br> - If the said Skill is a Wrath Skill, deal +15% damage instead<br><br> - Base Skills that inflict {{StatusEffect|Burn|d}} Potency, Count or 'Unique Burn' gain Clash Power +1<br> - If this unit is a [[:Category:Dawn Office Identities|Dawn Office]] Identity, gain Base Power +1 instead<br> - Turn End: Lose 1 Stack||[[Dawn Office Rep Gregor]]
+|-
+|{{StatusEffect|High Noon|b}}|| - Min Speed +2<br> - On Base Attack Skill Use: Gain Base Power +2 and deal (45/# of Coins)% more damage<br><br> - Apply the following effects to "Sunset Blade"<br>- On Final Coin Hit: If target has 15+ {{StatusEffect|Burn|d}}, activate {{StatusEffect|Burn|d}} on target; then, reduce target's {{StatusEffect|Burn|d}} Count by 1<br><br> - Apply the following effects to "Blazing Strike"<br> - Deal +100% damage<br> - On Use: Convert all Coins into {{StatusEffect|Unbreakable Coin|r}}s<br> - On Hit against an enemy, activate {{StatusEffect|Burn|d}} on target; then, reduce target's {{StatusEffect|Burn|d}} Count by 1<br> - On Use: At 3+ {{StatusEffect|Volatile Passion|b}}, consume up to 100 {{StatusEffect|Scorchfield|r}}<br> - Deal +1% damage for every {{StatusEffect|Scorchfield|r}} consumed||[[Dawn Office Fixer Sinclair]] (if [[Dawn Office Fixer Faust]] is alive on the field)
+|-
+|{{StatusEffect|Loneliness at High Noon|b}}|| - Min Speed +2<br> - On Base Attack Skill Use: Gain Base Power +3 and deal (90/# of Coins)% more damage<br><br> - Apply the following effects to "Sunset Blade"<br>- On Final Coin Hit: If target has 15+ {{StatusEffect|Burn|d}}, activate {{StatusEffect|Burn|d}} on target; then, reduce target's {{StatusEffect|Burn|d}} Count by 1<br><br> - Apply the following effects to "Blazing Strike"<br> - Deal +150% damage<br> - On Use: Convert all Coins into {{StatusEffect|Unbreakable Coin|r}}s<br> - On Hit against an enemy, activate {{StatusEffect|Burn|d}} on target; then, reduce target's {{StatusEffect|Burn|d}} Count by 1<br> - On Use: At 3+ {{StatusEffect|Volatile Passion|b}}, consume up to 100 {{StatusEffect|Scorchfield|r}} and deal +1.5% damage for every {{StatusEffect|Scorchfield|r}} consumed (max 150%)<br><br> - When this unit takes damage that brings its HP down to 0, this unit's HP cannot drop below 1 for the turn, and recovers from Stagger when Staggered due to damage (once per Encounter)||[[Dawn Office Fixer Sinclair]] (if [[Dawn Office Fixer Faust]] has been defeated)
+|-
+|{{StatusEffect|From Dawnbreak to Sunset|b}}|| - If this unit has 3+ Stagger thresholds, remove the first Stagger Threshold<br> - Turn End: If this unit is Staggered, recover from Stagger; if this unit is at Uptie 3 or higher, replace 1 of its Base Skills with Skill 3 (excluding forced Staggers; once per Encounter; prioritizes the Skill of the lowest Rank)<br><br> - Turn End: Heal 5 SP<br> - Passive "Unstable Shell of Ego" effects, Base Attack Skill effects, and {{StatusEffect|Volatile Passion|b}} effects cannot reduce this unit's SP below 25<br><br> - When in Volatile E.G.O::Waxen Pinion state, gain the following effects:<br> - Turn Start: Gain Shield equal to 15% max HP<br> - When hit while this unit has Shield, inflict 1 {{StatusEffect|Burn|d}} against the Attacker (2 times per turn)<br> - Activate {{StatusEffect|Scorchfield|r}} on this field||[[Dawn Office Fixer Sinclair]] (if [[Dawn Office Rep Gregor]] is alive on the field)
+|-
+|{{StatusEffect|Blazing Sunset|b}}|| - If this unit has 3+ Stagger thresholds, remove the first Stagger Threshold<br> - Turn End: If this unit is Staggered, recover from Stagger; if this unit is at Uptie 3 or higher, replace 1 of its Base Skills with Skill 3 (excluding forced Staggers; once per Encounter; prioritizes the Skill of the lowest Rank)<br><br> - Turn End: Heal 8 SP<br> - Passive "Unstable Shell of Ego" effects, Base Attack Skill effects, and {{StatusEffect|Volatile Passion|b}} effects cannot reduce this unit's SP below 45<br><br> - Turn Start: enter the Volatile E.G.O::Waxen Pinion State, heal 50% HP and heal SP to max (once per encounter)<br> - Volatile E.G.O::Waxen Pinion State is maintained even when this unit has 0 or lower SP at Turn Start<br><br>- When in Volatile E.G.O::Waxen Pinion state, gain the following effects:<br> - Turn Start: Gain Shield equal to 20% max HP<br> - When hit while this unit has Shield, inflict 2 {{StatusEffect|Burn|d}} against the Attacker (2 times per turn)<br> - Activate {{StatusEffect|Scorchfield|r}} on this field||[[Dawn Office Fixer Sinclair]] (if [[Dawn Office Rep Gregor]] has been defeated)
+|-
+! colspan="3" style="background:#660000" |'''Mirror Dungeon-exclusive Effects'''
+|-
+|{{StatusEffect|Pheromone|b}} || - Gain +10 {{StatusEffect|Aggro|r}}<br>- When hit, inflict 3 {{StatusEffect|Burn|d}} on target || {{GiftTT|Royal Jelly Perfume|25|t}} E.G.O Gift
+|-
+|{{StatusEffect|Pheromone Mark|d}} || - For every 3 {{StatusEffect|Burn|d}} on self, take +1% damage when hit (max 20%)<br>- Expires at Turn End || {{GiftTT|Royal Jelly Perfume|25|t}} E.G.O Gift
+|-
+|}
+
+==Identities & E.G.O==
+{{StatusNavbox|Burn}}
+{{StatusNavbox|Dark Flame}}
+
+==E.G.O Gifts ==
+===Fusion E.G.O Gifts===
+<span>{{GiftTT|Melted Paraffin|25|t}} + {{GiftTT|Decamillennial Stewpot|25|t}}</span>
+{{EgoGift|Secret Cookbook|tc=1}}
+
+
+<span>{{GiftTT|Ashes to Ashes|25|t}} + {{GiftTT|Dust to Dust|25|t}} + {{GiftTT|Secret Cookbook|25|t}}</span>
+{{EgoGift|Soothe the Dead|tc=1}}
+
+
+<span>{{GiftTT|Burning Intellect|25|t}} + {{GiftTT|Decamillennial Hearthflame|25|t}} + {{GiftTT|Charred Disk|25|t}}</span>
+{{EgoGift|Purloined Flame|tc=1}}
+
+
+<span>{{GiftTT|Polarization|25|t}} + {{GiftTT|Lowest Star|25|t}} + {{GiftTT|Red Necktie|25|t}} (''''Textbook'''<nowiki>'</nowiki> Theme Pack exclusive)</span>
+{{EgoGift|Uniform - Liu Assoc.|tc=1}}
+===Regular E.G.O Gifts===
+{| class="lcbtable2 sortable mw-collapsible" style="width:100%; size=50%; margin:auto;text-align:center" cellpadding="3"
+! Gift
+! Tier
+! Base Effect
+! +
+! ++
+|-
+{{EgoGift/Enhance|Burning Intellect}}
+|-
+{{EgoGift/Enhance|Polarization}}
+|-
+{{EgoGift/Enhance|Melted Paraffin}}
+|-
+{{EgoGift/Enhance|Ashes to Ashes}}
+|-
+{{EgoGift/Enhance|Decamillennial Stewpot}}
+|-
+{{EgoGift/Enhance|Decamillennial Hearthflame}}
+|-
+{{EgoGift/Enhance|Pain of Stifled Rage}}
+|-
+{{EgoGift/Enhance|Pinpoint Logic Circuit}}
+|-
+{{EgoGift/Enhance|Hellterfly’s Dream}}
+|-
+{{EgoGift/Enhance|Fiery Down}}
+|-
+{{EgoGift/Enhance|Ardent Flower}}
+|-
+{{EgoGift/Enhance|Charred Disk}}
+|-
+{{EgoGift/Enhance|Secret Cookbook}}
+|-
+{{EgoGift/Enhance|Dust to Dust}}
+|-
+{{EgoGift/Enhance|Glimpse of Flames}}
+|-
+{{EgoGift/Enhance|Fragment of Hellfire}}
+|-
+{{EgoGift/Enhance|Imperfect Eye of Precognition}}
+|-
+{{EgoGift/Enhance|Hot ‘n Juicy Drumstick (MD)}}
+|-
+{{EgoGift/Enhance|Unhatched Embers}}
+|-
+{{EgoGift/Enhance|Combustion Gloves}}
+|-
+{{EgoGift/Enhance|Re-ignition Plug}}
+|-
+{{EgoGift/Enhance|Embers}}
+|-
+{{EgoGift/Enhance|Bloodflame Sword}}
+|-
+{{EgoGift/Enhance|Thermal Weapon}}
+|-
+{{EgoGift/Enhance|Searing Hammer}}
+|-
+{{EgoGift/Enhance|Red Necktie}}
+|-
+{{EgoGift/Enhance|Royal Jelly Perfume}}
+|-
+{{EgoGift/Enhance|Walking Bass}}
+|-
+{{EgoGift/Enhance|Trial Extraction : A.B.S}}
+|-
+{{EgoGift/Enhance|Searing Brass}}
+|-
+{{EgoGift/Enhance|Burning Fate}}
+|-
+{{EgoGift/Enhance|Wing-shaped Waxen Candle}}
+|}
+
+==Navigation==
+{{StatPages}}
+[[Category:Status Effect Pages]]

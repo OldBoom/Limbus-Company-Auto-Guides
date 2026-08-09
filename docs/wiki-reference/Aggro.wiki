@@ -1,0 +1,89 @@
+{{MEinfobox
+|name=Aggro
+|cg=Aggro.png}}
+{{StatusEffect|Aggro|r}} is a neutral effect that increases the chance of an Identity's skill slot being targeted by an enemy attack in focused encounters. 
+
+==Summary==
+{{StatusEffect|Aggro|r}} is an effect that is used by various units (such as Identities) to manipulate the probability of enemy Skills (which do not have properties such as {{SkillCon|Target Fixed}} and/or certain "Prioritizes targets with..." conditions) that target one of said affected Skill Slots. It is most common for Aggro to be used by Identities which are intended to fulfill the role of a tank. Aggro only influences gameplay in Focused Encounters, due to the fact that non-Focused Encounters do not allow for manual control over Skill targeting.
+
+
+Aggro functions by changing the relative targeting weight (not to be confused with [[Slot weight|Slot Weight]]) of a unit's affected Skill Slots in respect to enemy Skills: as an example, on a group of units with 6 Skill Slots, any given Skill Slot of that group has a 1/6 chance of being the primary target of an enemy Skill; if something changes a Skill Slot's Aggro value to be above or below its default (in the case of Sinners this value is 500, which would be shown in-game as 5.00<ref>When under the effect of {{StatusEffect|Piercing Sword|b}}, a Sinner's visual Aggro value can range from 4.85 to as low as 4.25; thus, their default value is 5 (500 internally).</ref>; it is otherwise a value of 100, or 1.00 in game<ref>The decompiled function of SinManager.TargetManager.GetTargetSinActionModels_Using() specifies a partPoolUnit (_AGGRO_CORRECTION) value of 100, in the case of a target having more than 0 parts.</ref>), that Skill Slot's chance of being targeted by an enemy Skill linearly scales by its Aggro value. 
+
+
+While in-game Aggro values can be reduced below a unit's default value (such as via the effect of {{StatusEffect|Piercing Sword|b}}), this is a simplification on the game's part for readability; internal Aggro values range from a minimum of 1 (shown in-game as 0.01) to around the game's signed 32-bit integer limit of ~2.147 billion (in-game: ~21.4 million).
+
+
+Enemy Skills with [[Attack Weight]] and/or the {{StatusEffect|Unfocused Volley|r}} property only have '''their primary (solid-line: ⟶) target''' affected by Aggro; secondary (dashed-line: ⤑) targeting is unaffected. Outside of the Sinners, Aggro is used exclusively by the [[Peccatula#Invidiae|Peccatulum Invidiae]], although this has no effect on gameplay as the player can manually adjust targets.
+
+
+{{StatusEffect|Aggro|r}} has other uses besides targeting manipulation: it can focus attacks upon units which are resistant to the damage type it is being targeted by, or allow for more attacks to be Evaded than what would otherwise be possible; it can enable unopposed attacks that would otherwise be impossible from units due to their Speed ranges; et cetera. Aggro's use can be more effective on smaller teams and/or against units with high amounts of Skill Slots.
+
+==Status Effects==
+===Core Effects===
+{| class="mw-collapsible article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" | '''Source (if Exclusive)'''
+|-
+|{{StatusEffect|Aggro|r}}||More likely to be targeted by enemies in focused encounters.
+|}
+
+===Related Effects===
+{| class="mw-collapsible mw-collapsed article-table nohover" style="width:100%; border:2px solid #810000;"
+! style="background:#810000;" width="20%" |'''Name'''
+! style="background:#810000;" | '''Description'''
+! style="background:#810000;" | '''Source (if Exclusive)'''
+|-
+! colspan="3" style="background:#660000" |'''Effects that Interact with Aggro'''
+|-
+|{{StatusEffect|Defensive Stance|b}}||- Max Value: 2<br>- This effect does not compound in Potency; stacking it only extends its duration. <br> - Reduced by 1 at Turn End <br> - When a unit gains this effect, gain the following effects next turn: <br> &nbsp;· Fix this unit's Speed to its minimum value <br> &nbsp;· Gain 5 {{StatusEffect|Defense Level Up|b}} <br> &nbsp;· Each of this unit's Slots gain +(10 / this unit's # of Slots) {{StatusEffect|Aggro|r}} <br> &nbsp;· When chaining Skills, this unit can draw enemies' attack toward this unit regardless of Speed (Focused Encounters only) <br> &nbsp;· Upon Clash Win, trigger {{StatusEffect|Tremor Burst|d}} <br> &nbsp;· Cannot be Staggered by damage||[[Zwei Assoc. West Section 3 Ishmael]]
+|-
+|{{StatusEffect|Fairy Lure|d}}||- Max Stack: 5 <br> - Turn Start: leftmost Slot on the Dashboard gains +10 {{StatusEffect|Aggro|r}} <br> - Take +50% more damage <br> - When hit, inflict 1 {{StatusEffect|Rupture|d}} against the attacker (3 times per target's Skill) <br> &nbsp;· At less than 50% HP, inflict 1 additional {{StatusEffect|Rupture|d}} <br> &nbsp;· If the target has 15+ {{StatusEffect|Rupture|d}}, this effect does not inflict {{StatusEffect|Rupture|d}} <br> - Reduced by 1 at Turn End||[[LCE E.G.O::Lantern Yi Sang]]
+|-
+|{{StatusEffect|Protecting Sword|b}}||- Turn Start: gain 1 {{StatusEffect|Defense Level Up|b}} for every Stack (max 5) <br> - Turn Start: +(Stack x 3) {{StatusEffect|Aggro|r}} to the leftmost Skill Slot on the Dashboard (max 15) <br> - Max Stack: 5 <br> - Expires at Turn End || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Piercing Sword|b}}||- Turn Start: gain 1 {{StatusEffect|Offense Level Up|b}} for every Stack (max 5) <br> - Turn Start: -(Stack x 0.15) {{StatusEffect|Aggro|r}} to this unit's Skill Slots on the Dashboard (max 0.75) <br> - Max Stack: 5 <br> - Expires at Turn End || [[Lobotomy E.G.O::The Sword Sharpened with Tears Rodion]]
+|-
+|{{StatusEffect|Contempt of the Gaze|b}}||- Gain 7 {{StatusEffect|Protection|b}} <br> - Gain 7 {{StatusEffect|Damage Down|d}} <br> - One of this unit's Slots gains +20 {{StatusEffect|Aggro|r}} <br> - Cannot gain {{StatusEffect|Gaze of Contempt|b}} as long as Contempt of the Gaze is active <br> - Turn End: this effect expires || [[Contempt, Awe Ryōshū]] E.G.O
+|-
+|{{StatusEffect|Protector's Stance|b}}||- Max Stack: 2 <br> - Take (Stack x 10)% less damage <br> - Turn Start: Gain Shield by {{StatusEffect|Poise|b}} on self (max 20) <br> - Turn End: Gain 3 {{StatusEffect|Poise|b}} and +1 {{StatusEffect|Poise|b}} Count; this unit's leftmost Skill Slot gains +5 {{StatusEffect|Aggro|r}} next turn <br> - Turn End: Lose 1 Stack || [[Drifting Blade of Hongyuan {{Ryoshu}}]]
+|-
+|{{StatusEffect|Strider -Wu-|b}} || - Max Stack: 3 <br> - Turn End: gain 2 {{StatusEffect|Haste|b}} and (Stack x 2) {{StatusEffect|Aggro|r}} next turn <br> - Before Attack: inflict (Stack) {{StatusEffect|Tremor|d}} Potency against the main target (max 6 per turn) <br> - Lose 1 Stack at Turn End || [[List of Identities/World#hcorp|Heishou Pack - Wu Branch Identities]]
+|-
+|{{StatusEffect|Man in Scabbard|b}}||- Max Stack: 40 <br> - For every (Stack / 8), gain {{StatusEffect|Aggro|r}} (max 5; rounded down; affects the leftmost Skill Slot on the Dashboard) <br> - For every (Stack / 20), gain {{StatusEffect|Protection|b}} (max 2; rounded down) <br> - Gain 10 Stacks at Turn End <br> ※ Can gain up to 20 per turn || [[Unbrilliant Glory Gregor]] E.G.O
+|-
+|{{StatusEffect|Lamp|b}} || - Max Stack: 8 <br> - Turn End: Gain 1 {{StatusEffect|Bind|d}} next turn for every 2 Stack (max 4) <br> - Turn End: At max Stack, if there are enemies on the field, consume all Stack to activate the following effects next turn: <br> · Gain +10 {{StatusEffect|Aggro|r}} to the leftmost Slot <br> · Inflict 3 {{StatusEffect|Dazzle|d}} to the enemy(Core) with the most current HP || [[Lobotomy E.G.O::Lamp Gregor]]
+|-
+|{{StatusEffect|Overcharge|r}}||- Max Value: 1 <br> - Become Immobilized <br> - Take 10 + ({{StatusEffect|Charge|b}} Potency x 5)% less damage (max 25%) <br> - Turn Start: Gain {{StatusEffect|Charge Barrier|b}} based on {{StatusEffect|Charge|b}} Potency on self (max 5) <br> - Turn End: Gain +10 {{StatusEffect|Charge|b}} Count and 2 {{StatusEffect|Attack Power Up|b}} next turn, and lose this effect <br> - Gain {{StatusEffect|Aggro|r}} to this unit's leftmost Slot based on {{StatusEffect|Charge|b}} Potency on self (max 5) <br> - When hit, gain +1 {{StatusEffect|Charge|b}} Count and 1 {{StatusEffect|Load|b}} next turn (max 5 per turn) <br> - If this unit is in Panic or E.G.O Corrosion at Turn Start, of if this unit is Staggered, lose this effect || [[W Corp. L4 Cleanup Agent - CCA Heathcliff]]
+|-
+|{{StatusEffect|Iron Maiden|r}} || - Gain +4 {{StatusEffect|Aggro|r}} to the leftmost Slot <br> - Turn Start: Gain 1 {{StatusEffect|Protection|b}}, 5 {{StatusEffect|Defense Level Up|b}}, and Shield HP equal to 5% of this unit's current HP <br> - When hit by the last Coin of an attacker, deal {{Icons|Pierce}}Pierce damage equal to 20% of the said Coin's damage and inflict +2 {{StatusEffect|Bleed|d}} Count (max once per Skill, 3 times per turn. Max damage per turn: 60) || [[The House of Spiders: The Ring Apprentice Faust]]
+|-
+! colspan="3" style="background:#660000" |'''Mirror Dungeon-exclusive Effects'''
+|-
+|{{StatusEffect|Pheromone|b}} || - Gain +10 {{StatusEffect|Aggro|r}}<br>- When hit, inflict 3 {{StatusEffect|Burn|d}} on target || {{GiftTT|Royal Jelly Perfume|25|t}} E.G.O Gift
+|-
+|}
+
+==Identities & E.G.O==
+{{StatusNavbox|Aggro}}
+
+==E.G.O Gifts==
+===Regular E.G.O Gifts===
+{| class="lcbtable2 sortable mw-collapsible" style="width:100%; size=50%; margin:auto;text-align:center" cellpadding="3"
+! Gift
+! Tier
+! Base Effect
+! +
+! ++
+|-
+{{EgoGift/Enhance|Royal Jelly Perfume}}
+|-
+{{EgoGift/Enhance|Trial Extraction : Lantern}}
+|}
+
+==Footnotes==
+<references />
+
+==Navigation==
+{{StatPages}}
+[[Category:Status Effect Pages]]
