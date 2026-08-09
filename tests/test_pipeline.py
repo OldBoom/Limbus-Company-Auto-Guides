@@ -958,10 +958,13 @@ def test_tremor_archetype_unique_subtype_blurb():
     gp = build_gameplan(identity)
     arch = gp.get("tremor_archetype")
     assert arch is not None
-    assert "Scorch" in arch["setup_summary"]
-    tips_blob = " ".join(arch["tips"])
-    assert "Tremor — Scorch" in tips_blob
-    assert "Wrath" in tips_blob
+    # The primary subtype's blurb is the summary itself, so the detail lives there
+    # rather than being repeated as a tip.
+    summary = arch["setup_summary"]
+    assert "Tremor — Scorch" in summary
+    assert "Wrath" in summary
+    assert "Burn Potency" in summary
+    assert not any("Tremor — Scorch" in tip for tip in arch["tips"])
 
 
 def test_thumb_capo_core_idea_describes_damage_kit():
@@ -1082,8 +1085,13 @@ def test_tremor_unique_subtype_bold_in_core_idea():
         identity["mechanic_profile"] = build_mechanic_profile(identity)
         gp = build_gameplan(identity)
         core = _build_core_idea(identity["name"], gp)
-        assert f"**Tremor — {subtype}** control" in core
+        # The subtype must be named, and the line must say what that subtype actually
+        # does — "**Tremor — Reverb** control." named it without explaining it.
+        assert f"**Tremor — {subtype}**" in core
         assert f"**Tremor** control (Tremor — {subtype})" not in core
+        assert f"**Tremor — {subtype}** control." not in core
+        # Every subtype keeps base Tremor's Burst behaviour; the summary says so.
+        assert "Stagger Threshold" in core
 
 
 def test_archetype_tips_skip_basic_mechanic_primers():

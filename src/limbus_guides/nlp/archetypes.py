@@ -51,42 +51,80 @@ def _payoff_skill_name(skills: list[dict]) -> str:
     return s3["name"] if s3 else "S3"
 
 
-# Unique Tremor subtype blurbs (docs/status-effects.md) — kit-specific, not generic primers.
+# What plain Tremor does. Tremor.wiki: "When attacked by skills that Burst Tremor, raise
+# the Stagger Threshold by the effect's Potency. At the end of the turn, reduce the Count
+# by 1." Stacks are inert until something Bursts them, which is the part players need.
+_TREMOR_BASE_SUMMARY = (
+    "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the "
+    "target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, "
+    "so build Potency and Burst inside the same window."
+)
+
+# One blurb per Tremor subtype, each taken from the Core Effects table on Tremor.wiki.
+# Every subtype also keeps base Tremor's behaviour (Burst raises the Stagger Threshold,
+# Count decays at Turn End); these lines describe only what the subtype adds.
 _UNIQUE_TREMOR_BLURBS: dict[str, str] = {
     "Decay": (
-        # Not a Burst effect: the Defense Level drain applies continuously while the
-        # target's Tremor is converted.
-        "**Tremor — Decay** — while converted, the target continuously loses "
-        "**Defense Level** (1 per 4 Tremor Potency); no Burst needed."
+        # "Lose 1 Defense Level for every 4 Tremor Potency on self" — continuous, no Burst.
+        "**Tremor — Decay** — the afflicted unit loses **1 Defense Level per 4 Tremor "
+        "Potency** it carries, continuously and without needing a Burst."
     ),
     "Fracture": (
-        # Tremor.wiki: "When Staggered, and when the sum of Tremor Potency and Count
-        # adds up to 20 or higher, raise Stagger Level by 1 / Cannot exceed maximum".
+        # "When Staggered, and when the sum of Tremor Potency and Count adds up to 20 or
+        # higher, raise Stagger Level by 1 / Cannot exceed maximum Stagger Level".
         "**Tremor — Fracture** — **once the target is Staggered**, a combined Tremor "
-        "Potency + Count of **20+** raises its **Stagger Level** by 1 (cannot exceed the "
-        "maximum). Until it Staggers, this behaves as normal Tremor."
+        "Potency + Count of **20+** raises its **Stagger Level** by 1 (never past the "
+        "maximum). Until it Staggers this is just normal Tremor."
     ),
     "Reverb": (
-        "**Tremor — Reverb** — Burst deals **Sloth** damage equal to Tremor Potency."
+        # "On Tremor Burst, take Sloth damage equal to Tremor Potency on self."
+        "**Tremor — Reverb** — on Tremor Burst the target also takes **Sloth** damage "
+        "equal to its Tremor Potency, so Potency is worth more than Count here."
     ),
     "Everlasting": (
-        "**Tremor — Everlasting** — Burst can proc **additional Bursts** "
-        "(Potency/Count % chance, each capped at 50%)."
+        # "1% per Tremor Potency and 1% per Tremor Count, calculated separately (= up to
+        # 2 bonus Tremor Bursts), with a cap of 50% chance for both possible bonuses."
+        "**Tremor — Everlasting** — each Tremor Burst can chain **extra Bursts**: "
+        "**1% per Tremor Potency** and **1% per Count**, rolled separately (up to two "
+        "extra), each capped at **50%**. This one wants Count as well as Potency."
     ),
     "Chain": (
-        "**Tremor — Chain** — enemy loses **Clash Power** at high Tremor Potency on target."
+        # "Lose 1 Clash Power for every 10 Tremor Potency on self (max 3)."
+        "**Tremor — Chain** — the afflicted unit loses **1 Clash Power per 10 Tremor "
+        "Potency** (max **3**), so it is a clash-denial tool rather than a damage one."
     ),
     "Scorch": (
-        "**Tremor — Scorch** — Burst deals **Wrath** damage from Tremor and Burn Potency; "
-        "consumes **Burn Count**."
+        # "take Wrath damage by the sum of Burn and Tremor Potency divided by 2 on Tremor
+        # Burst" — needs both statuses high, unlike Reverb.
+        "**Tremor — Scorch** — on Tremor Burst the target takes **Wrath** damage equal to "
+        "**(Burn Potency + Tremor Potency) / 2**, so it needs a Burn stacker alongside it."
     ),
     "Hemorrhage": (
-        "**Tremor — Hemorrhage** — Burst deals **Lust** damage from Tremor and Bleed Potency; "
-        "consumes **Bleed Count**."
+        # "take Lust Damage equal to (sum of Tremor Potency and Bleed Potency / 2), and
+        # lose 1 Bleed Count".
+        "**Tremor — Hemorrhage** — on Tremor Burst the target takes **Lust** damage equal "
+        "to **(Tremor Potency + Bleed Potency) / 2** and loses 1 Bleed Count, so it pairs "
+        "with Bleed rather than replacing it."
     ),
     "Superposition": (
-        "**Tremor — Superposition** — stacks multiple Tremor types via "
-        "**Amplitude Entanglement**."
+        # "Gained through Amplitude Entanglement / When triggering Amplitude Conversion,
+        # add the effects of the resulting Tremor type to the list of active Tremor effects".
+        "**Tremor — Superposition** — gained from **Amplitude Entanglement**; further "
+        "Amplitude Conversions **add** the new subtype's effects on top of the active ones "
+        "instead of replacing them."
+    ),
+    "Distribution": (
+        # "Turn End: Gain ((sum of all allies' Tremor Count) / (# of surviving allies))
+        # Offense Level Up next turn (max 5)."
+        "**Tremor — Distribution** — at Turn End the team gains **Offense Level Up** equal "
+        "to the allies' total Tremor Count divided by surviving allies (max **5**), so it "
+        "rewards spreading Tremor wide rather than stacking one target."
+    ),
+    "Clockwinding": (
+        # "Max Speed +2 / Consume Tremor Count on self to inflict 1 more Tremor Potency or
+        # Count when inflicting them with this unit's Skill or Coin Effects."
+        "**Tremor — Clockwinding** — grants **Max Speed +2** and spends the carrier's own "
+        "Tremor Count to inflict 1 extra Tremor Potency or Count on each application."
     ),
 }
 
@@ -577,7 +615,9 @@ def find_tremor_archetype(
         return None
 
     tips: list[str] = []
-    for subtype in unique[:2]:
+    # The first subtype's blurb becomes the setup summary below, so only extra
+    # subtypes (an Amplitude-Entangled kit can carry more than one) go in tips.
+    for subtype in unique[1:3]:
         blurb = describe_unique_tremor(subtype)
         if blurb:
             tips.append(blurb)
@@ -589,10 +629,20 @@ def find_tremor_archetype(
         tips.append("**Burst** when you're ready to break the stagger target.")
 
     if unique:
+        # Lead with what the subtype actually does rather than "**Tremor — X** control.",
+        # which named the subtype without saying anything about it. Every subtype keeps
+        # base Tremor's Burst behaviour, so mention that once alongside it.
         label = format_unique_tremor_label(unique[0])
-        setup_summary = f"**{label}** control."
+        blurb = describe_unique_tremor(unique[0])
+        if blurb:
+            setup_summary = (
+                f"{blurb} Like all Tremor, a **Tremor Burst** also raises the target's "
+                f"**Stagger Threshold** by its Potency."
+            )
+        else:
+            setup_summary = f"**{label}** control."
     else:
-        setup_summary = "**Tremor** control — stack for early stagger breaks."
+        setup_summary = _TREMOR_BASE_SUMMARY
 
     arch = _build_archetype(
         kind="tremor_stacker",

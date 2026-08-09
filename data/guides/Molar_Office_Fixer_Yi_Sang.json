@@ -89,15 +89,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Molar Office Fixer Yi Sang is a Damage Dealer / Status Specialist — **Tremor** control — stack for early stagger breaks.",
+  "core_idea": "Molar Office Fixer Yi Sang is a Damage Dealer / Status Specialist — **Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
   "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Plan which skills to Discard before the payoff turn.\n\n**S1 — Stay Calm** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If this Skill is Discarded, gain +4 Tremor Count | [On Use] Gain +2 Tremor Count.\n\n**S2 — Gamble** (BP 4, CP +12, 1 coin): rolls — low 4, high 16 (Average).\n- If this Skill is Discarded, gain +4 Tremor Count ; [On Use] Discard 1 Skill of the lowest rank in all of this unit's Skill Slots\n- If this Skill is Discarded, gain +4 Tremor Count; [On Use] Discard 1 Skill of the lowest rank in all of this unit's Skill Slots\n- Peak output requires both conditions: Inflict +2 Tremor Count | [On Hit] At 5+ Tremor Count, trigger Tremor Burst.\n\n**S3 — Grinding the Molars** (BP 4, CP +3, 3 coins): rolls — low 4, high 13 (Low).\n- Discard 1 Skill of the lowest rank in all of this unit's Skill Slots; [On Use] Consume 10 Tremor Count on self to gain Coin Power +2\n- Inflict 2 Defense Level Down; If the Skill consumed Tremor Count, trigger Tremor Burst\n\nCombat passive — **In Times Like These...**: Upon triggering Tremor Burst on an enemy, inflict 1 Defense Level Down for every 4 Stagger Threshold raised (max 5 Defense Level Down per….\n\nCombat passive — **Cleaning Up the Mess**: 1 ally that has the lowest max HP: For every 4 Stagger Threshold raised by triggering Tremor Burst on an enemy, inflict 1 Defense Level D….",
   "team_suggestions": [
-    "**Tremor** control — stack for early stagger breaks.",
+    "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
     "- **LCCB Assistant Manager Ishmael**: 'Eye for Weakness' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
     "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Tremor** control — stack for early stagger breaks.",
+  "team_suggestion_intro": "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "District_20_Yurodivy_Ryōshū",
