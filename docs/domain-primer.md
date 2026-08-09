@@ -82,6 +82,21 @@ A skill with `x3` and one coin-effect row flips **1 coin** and deals its result 
 
 Attack skills are built from one or more **coins** (numbered 1, 2, 3…). Each coin can have effects tagged with triggers such as `[On Hit]`, `[Heads Hit]`, or `[Clash Win]`. Coins may inflict status effects, heal, or modify stats.
 
+#### Sin Resonance
+
+Source: [limbuscompany.wiki.gg/wiki/Sin_Resonance](https://limbuscompany.wiki.gg/wiki/Sin_Resonance)
+
+Resonance comes from the **Sin affinities of the Skills you select on the Dashboard for a
+turn** — it has nothing to do with how many allies share a trait.
+
+- **Resonance** (`Reson.`) — 2 or more Skills of the same Affinity selected on the Dashboard.
+- **Absolute Resonance** (`A-Reson.`) — 3 or more Skills of the same Affinity selected
+  **consecutively**. Separate chains are counted separately rather than summed, so two chains
+  of 3 do not add up to 6.
+
+Kits that key off Resonance therefore want an affinity-heavy team and a deliberate selection
+order, not a particular roster of traits.
+
 #### Coin flip probability and Sanity
 
 The probability of flipping **Heads** depends on Sanity Points (SP):

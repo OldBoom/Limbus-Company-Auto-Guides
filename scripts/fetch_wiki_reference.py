@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch the wiki's mechanic pages into docs/wiki-reference/.
+"""Fetch the wiki's mechanic pages into docs/_wiki-reference/ (gitignored).
 
 These pages define what a mechanic *does*. They are the ground truth for any claim a
 generated guide makes about game rules.
@@ -25,7 +25,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from limbus_guides.ingestion.wiki_parser import fetch_wikitext  # noqa: E402
 
-OUT_DIR = ROOT / "docs" / "wiki-reference"
+# Gitignored: these pages are ~500KB of raw wikitext and duplicate
+# docs/status-effects.md for everything except the few gaps noted in its header.
+OUT_DIR = ROOT / "docs" / "_wiki-reference"
 
 # Wiki page title -> what it is authoritative for. Redirect targets are used directly
 # ("Haste" redirects to "Haste & Bind").

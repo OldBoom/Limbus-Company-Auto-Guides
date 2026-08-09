@@ -2,6 +2,18 @@
 
 Source: [limbuscompany.wiki.gg/wiki/Status_Effects](https://limbuscompany.wiki.gg/wiki/Status_Effects)
 
+**This file is the ground truth for what a status effect does.** Check it before writing any
+sentence in `src/limbus_guides/nlp/` that names a mechanic.
+
+`docs/parsed-ids/*.md` is not a substitute: it is per-identity skill text, and answers only
+*which identities have mechanic X*, never *what X does*. Reading mechanics out of skill text has
+produced real bugs — "Nails is a Tremor mechanic" (it is a source of Bleed, see the row below)
+and "Paralyze leaves the target unable to clash back" (it fixes Coin Power to 0; the unit still
+clashes). Both answers were already in this file at the time.
+
+Refresh the underlying wiki pages with `python scripts/fetch_wiki_reference.py` if you need more
+detail than the tables here carry.
+
 ---
 
 ## Value Modes
@@ -284,6 +296,9 @@ Identity-specific variants of core keywords. Each functions as its parent keywor
 | Effect | Description | Source |
 |--------|-------------|--------|
 | Nails | Turn Start: apply 1 Bleed, increase Bleed Count by this effect's Count. Turn End: halve Count | N Corp. Fanatics |
+| Amplitude Conversion | Converts Tremor (or already-converted Tremor) on the target into a different Tremor type. Potency and Count are unchanged by the conversion | Tremor kits |
+| Amplitude Entanglement | Fuses the Tremor type it adds with the type already on the target, under Tremor — Superposition | Tremor kits |
+| Tremor — Superposition | Gained via Amplitude Entanglement. On Amplitude Conversion, adds the resulting Tremor type's effects to the active list rather than replacing them | Tremor kits |
 | Red Plum Blossom | Max 10. +10% crit chance against this unit. On Critical Hit, gain Bleed and take +(value x 3)% crit damage | Blade Lineage Salsu Faust |
 | Needle | When taking Envy damage, +1 Bleed Count. Turn End: gain 1 Bleed. Lose 1 Stack per trigger | Scissors Outis E.G.O |
 | Lodged Arrow | Max 4. Turn Start: gain Bleed Potency by Stack, lose Defense Level by Stack | Shi East Section 3 Faust |

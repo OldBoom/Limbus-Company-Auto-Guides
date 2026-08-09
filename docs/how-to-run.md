@@ -174,7 +174,7 @@ Pass multiple URLs as separate arguments. Use `--update-config` to append slugs 
 | `scripts/run_pipeline.py` | All parsed markdown → identities + guides + manifest |
 | `python -m limbus_guides.pipeline.run` | Same as run_pipeline (requires `pip install -e .`) |
 | `scripts/audit_wiki_parsing.py` | Compare stored parses vs live wiki |
-| `scripts/fetch_wiki_reference.py` | Refresh `docs/wiki-reference/` — authoritative mechanic pages |
+| `scripts/fetch_wiki_reference.py` | Fetch authoritative wiki mechanic pages (gitignored scratch) when `status-effects.md` lacks detail |
 | `scripts/fetch_identity_portraits.py` | Download identity portraits from wiki |
 | `streamlit run src/limbus_guides/dashboard/app.py` | Interactive guide browser (use venv Python) |
 

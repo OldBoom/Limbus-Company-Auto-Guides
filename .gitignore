@@ -49,3 +49,6 @@ models/
 
 # Local presentation prep (not for repo)
 docs/presentation-script.md
+
+# Fetched wiki reference pages (regenerate: scripts/fetch_wiki_reference.py)
+docs/_wiki-reference/

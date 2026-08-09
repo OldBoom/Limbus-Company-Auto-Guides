@@ -204,8 +204,10 @@ def derive_status_summary(status: str, blob: str, gates: list[int]) -> str | Non
 # Resonance
 #
 # Resonance counts skills of the same Sin affinity queued in a single turn;
-# Absolute Resonance ("A-Reson.") requires the whole queue to share one Sin. It is
-# a property of what you slot each turn, NOT of how many allies share a trait.
+# Per the wiki's Sin Resonance page: Resonance is 2+ Skills of the same Affinity
+# selected on the Dashboard; Absolute Resonance ("A-Reson.") is 3+ of the same
+# Affinity selected CONSECUTIVELY, and separate chains count separately rather than
+# summing. It is a property of what you slot each turn, NOT of ally traits.
 # ---------------------------------------------------------------------------
 
 _SINS = ("Wrath", "Lust", "Sloth", "Gluttony", "Gloom", "Pride", "Envy")
@@ -369,8 +371,8 @@ def find_resonance_archetype(
         summary += " Offense Level also scales with the highest Resonance that turn."
 
     tips: list[str] = [
-        f"Build an **{sin}**-heavy lineup: Resonance counts same-Sin skills queued in a "
-        f"turn, and **Absolute** Resonance needs every queued skill to share the Sin.",
+        f"Build an **{sin}**-heavy lineup: Resonance needs **2+** {sin} skills on the "
+        f"Dashboard, and **Absolute** Resonance needs **3+** selected consecutively.",
     ]
     if abs_gates and counter_name:
         tips.append(
