@@ -770,6 +770,17 @@ def select_core_opening(name: str, role_str: str, gp: dict) -> tuple[str, str, l
     return "generic_fallback", opening, extras
 
 
+def _append_once(parts: list[str], sentence: str | None) -> None:
+    """Add a sentence unless the core idea already says it.
+
+    The opening branch and the trailing sections draw on the same archetypes, so an
+    identity picked for, say, its SP-regeneration could have that sentence emitted
+    twice verbatim.
+    """
+    if sentence and sentence not in " ".join(parts):
+        parts.append(sentence)
+
+
 def _build_core_idea(name: str, gp: dict) -> str:
     from limbus_guides.domain.context import infer_roles
 
@@ -812,15 +823,22 @@ def _build_core_idea(name: str, gp: dict) -> str:
         if setup and passive not in blob and setup not in blob:
             parts.append(setup)
 
-    if gp.get("sp_regenerator_archetype"):
-        setup = gp["sp_regenerator_archetype"].get("setup_summary")
-        if setup:
-            parts.append(setup)
-
-    if gp.get("hp_regenerator_archetype"):
-        setup = gp["hp_regenerator_archetype"].get("setup_summary")
-        if setup:
-            parts.append(setup)
+    # A kit that does both used to get two near-identical sentences back to back:
+    # "**SP regenerator** — restores ally **SP** through passives and key skills."
+    # "**HP regenerator** — tops up ally **HP** through passives and skills."
+    # And when the opening branch had already picked the regenerator archetype, the
+    # same sentence was appended verbatim a second time.
+    sp_regen = gp.get("sp_regenerator_archetype")
+    hp_regen = gp.get("hp_regenerator_archetype")
+    if sp_regen and hp_regen:
+        _append_once(
+            parts,
+            "**SP and HP regenerator** — sustains allies on both bars through its "
+            "passives and key skills.",
+        )
+    else:
+        for regen in (sp_regen, hp_regen):
+            _append_once(parts, (regen or {}).get("setup_summary"))
 
     if gp.get("retreating_archetype"):
         retreat_arch = gp["retreating_archetype"]

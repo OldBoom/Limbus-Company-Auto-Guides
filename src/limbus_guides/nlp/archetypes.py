@@ -223,7 +223,6 @@ _STATUS_TICK: dict[str, str] = {
     "Rupture": "Rupture ticks when the afflicted unit is hit",
     "Sinking": "Sinking drains SP when the afflicted unit is hit",
     "Burn": "Burn ticks at the end of every turn regardless of what either side does",
-    "Poise": "Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage",
     "Charge": "Charge Count is spent to power skills and decays by 1 each Turn End",
 }
 
@@ -686,9 +685,13 @@ def find_tremor_archetype(
         if blurb:
             setup_summary = blurb
             if has_burst:
-                # Only worth adding for a kit that can actually Burst.
+                # Only worth adding for a kit that can actually Burst, and phrased to
+                # avoid saying "Tremor Burst" twice when the blurb already did.
                 setup_summary += (
-                    " Like all Tremor, its **Tremor Burst** also raises the target's "
+                    " That Burst also raises the target's **Stagger Threshold** by "
+                    "its Tremor Potency, as every Tremor type does."
+                    if "Tremor Burst" in setup_summary
+                    else " Like all Tremor, its **Tremor Burst** raises the target's "
                     "**Stagger Threshold** by its Potency."
                 )
             elif unique[0] in _BURST_DEPENDENT_SUBTYPES:
@@ -1115,9 +1118,11 @@ def find_poise_archetype(
     return _build_archetype(
         kind="poise_stacker",
         status="Poise",
+        # One sentence: the old pairing said "spend on crits" and then "rolls a crit".
         setup_summary=(
-            "**Poise** fighter — stack on self, then spend on crits and scaling."
-            + _status_tick_note("Poise")
+            "**Poise** fighter — stack it on yourself; on hit each stack rolls a "
+            "Potency-based chance to crit for **1.2x** damage, and Count drops by 1 "
+            "on a successful crit and again at Turn End."
         ),
         tips=tips,
         payoff_skill=payoff,

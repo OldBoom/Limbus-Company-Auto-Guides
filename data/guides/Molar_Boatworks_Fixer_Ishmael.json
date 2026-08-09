@@ -70,7 +70,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
       "score": 0.9,
       "source": "rule",
       "faction_match": false
@@ -98,7 +98,7 @@
     "**Tremor** applicator — it stacks Tremor on the target rather than cashing it in itself, and Count drops by 1 each Turn End.",
     "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
     "- **District 20 Yurodivy Ryōshū**: 'N.O.' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
-    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills."
+    "- **Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū**: 'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills."
   ],
   "team_suggestion_intro": "**Tremor** applicator — it stacks Tremor on the target rather than cashing it in itself, and Count drops by 1 each Turn End.",
   "team_suggestion_picks": [
@@ -117,7 +117,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Faint_Aroma_&_Solitude_Ryōshū",
       "teammate_name": "Lobotomy E.G.O::Faint Aroma & Solitude Ryōshū",
-      "reason": "'Spring's Genesis' inflicts Sinking via the support passive — helps reach 6+ Sinking thresholds on key skills.",
+      "reason": "'Spring's Genesis' inflicts Tremor via the support passive — helps reach 5+ Tremor thresholds on key skills.",
       "source": "rule"
     }
   ],

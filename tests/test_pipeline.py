@@ -911,8 +911,12 @@ def test_hp_regenerator_archetype_priest_gregor():
     assert sp_arch["tips"][0] in overview or sp_arch["tips"][0].replace("**", "") in overview.replace("**", "")
 
     core = _build_core_idea(identity["name"], gp)
-    assert hp_arch["setup_summary"] in core
-    assert sp_arch["setup_summary"] in core
+    # A kit that does both gets one merged sentence — the separate summaries were
+    # near-identical ("restores ally SP ... " / "tops up ally HP ...") and read as
+    # the same sentence twice.
+    assert "**SP and HP regenerator**" in core
+    assert hp_arch["setup_summary"] not in core
+    assert sp_arch["setup_summary"] not in core
 
 
 def test_sp_regenerator_skips_self_only_heal():

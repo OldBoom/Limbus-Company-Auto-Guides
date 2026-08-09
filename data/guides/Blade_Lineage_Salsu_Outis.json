@@ -81,15 +81,15 @@
       "faction_match": false
     }
   ],
-  "core_idea": "Blade Lineage Salsu Outis is a Damage Dealer — **Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage.",
+  "core_idea": "Blade Lineage Salsu Outis is a Damage Dealer — **Poise** fighter — stack it on yourself; on hit each stack rolls a Potency-based chance to crit for **1.2x** damage, and Count drops by 1 on a successful crit and again at Turn End.",
   "playstyle_guide": "- Build **Poise Count** and **Potency** for crits and Coin Power scaling before **Decisive Dive** — **S1 — Draw of the Sword** adds **+4 Poise** per **Heads Hit** coin; **S2 — Acupuncture** adds **+2 Poise Count** on **Clash Win**.\n\n**S1 — Draw of the Sword** (BP 4, CP +6, 1 coin): rolls — low 4, high 10 (Extremely Low / Low stacked).\n- Needs 5+ Poise to activate — prioritise building stacks before using.\n\n**S2 — Acupuncture** (BP 5, CP +4, 2 coins): rolls — low 5, high 13 (Low).\n- Gain 2 Slash DMG Up next turn\n\n**S3 — Decisive Dive** (BP 6, CP +4, 2 coins): rolls — low 6, high 14 (Slightly Low).\n- If target’s HP is below 50%, Final Power +2\n- Raise first Stagger Threshold by 20% of damage dealt\n\nCombat passive — **Levelheaded**: Deal +20% damage to targets below 25% HP.\n\nCombat passive — **Double Tap**: 1 ally with the most SP deals +30% damage to enemies below 25% HP.",
   "team_suggestions": [
-    "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage. Same-faction teammates provide additional passive synergy where available.",
+    "**Poise** fighter — stack it on yourself; on hit each stack rolls a Potency-based chance to crit for **1.2x** damage, and Count drops by 1 on a successful crit and again at Turn End. Same-faction teammates provide additional passive synergy where available.",
     "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills.",
     "- **Blade of the House of Spiders Ryōshū**: 'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — helps reach 5+ Poise thresholds on key skills."
   ],
-  "team_suggestion_intro": "**Poise** fighter — stack on self, then spend on crits and scaling. Poise is a self-buff: on hit it rolls a Potency-based crit for 1.2x damage. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_intro": "**Poise** fighter — stack it on yourself; on hit each stack rolls a Potency-based chance to crit for **1.2x** damage, and Count drops by 1 on a successful crit and again at Turn End. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Mentor_Meursault",
