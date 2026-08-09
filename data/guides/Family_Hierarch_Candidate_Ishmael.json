@@ -70,7 +70,7 @@
     {
       "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
       "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -79,7 +79,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Outis",
       "teammate_name": "Heishou Pack - Mao Branch Outis",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -88,7 +88,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
       "teammate_name": "Heishou Pack - Mao Branch Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -97,7 +97,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Si_Branch_Gregor",
       "teammate_name": "Heishou Pack - Si Branch Gregor",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -106,7 +106,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Si_Branch_Rodion",
       "teammate_name": "Heishou Pack - Si Branch Rodion",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -117,28 +117,28 @@
   "playstyle_guide": "- **Lingering Resolve ['''餘桓''']** watches the **#1 deployed ally** — arrange the dashboard so the intended carry is first in line.\n- Chain Battles only — each Sinner equips **one identity**; queue backup **Sinners** in deployment order. This passive procs on **death**, not Stagger.\n- Skills check **4+ Rupture** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Crimson Spring** — **S1 — Crimson Strike** adds **+3 Poise** on **Clash Win**; **S2 — Crimson Phoenix** adds **Poise** equal to Rupture on target on **On Hit**.\n- **Crimson Spring** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- Build Launcher — 始 — Count — spend via S3 once you hit 3+.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Rupture (max +2).\n- Hold S3 for when At 3+ Launcher — 始 — is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Crimson Strike** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Coin Power** scales with **Rupture** (+1 per 3, max +2) — build stacks first.\n\n*↳ Alternate S1 — Crimson Strike - Launcher ['''始''']* (BP 2, CP +2): rolls — low 2, high 6 (Extremely Low).\n  - Gain 5 Poise and +2 Poise Count\n  - At 3+ Ready — 待 —, Coin Power +2\n  - Consume all Ready — 待 — on self to gain +(Ready — 待 — on self x 2) Atk Weight (max 5)\n\n**S2 — Crimson Phoenix** (BP 2, CP +3, x4): rolls — low 2, high 14 (Slightly Low).\n- Delay until 4+ Rupture on target — that is when the damage condition activates.\n- Inflict +1 Rupture Count; [On Crit] Inflict 1 Defense Level Down next turn\n- Gain Poise equal to Rupture on target (max 5); [Heads Hit] Gain Poise Count equal to Rupture Count on target (max 3)\n- Deal +(20 + Poise on self + Rupture on target)% damage on Critical Hit (max 50%); [On Crit Kill Against Enemy] Gain 3 Offense Level Up next turn (once per turn)\n\n**S3 — Crimson Spring** (BP 8, CP +14, x1): rolls — low 8, high 22 (Extremely High / Slightly High stacked).\n- **Coin Power** scales with **(Rupture + Rupture Count)** (+1 per 7, max +5) — build stacks first.\n- converts coins to Unbreakable under condition\n- C1 refunds +2 Poise Count\n\nCombat passive — **Launching Maneuver ['''始動''']**: Upon Retreat: apply 1 Offense Level Up next turn to allies in their Deployment order.\n  - Number of affected allies <nowiki>=</nowiki> Launcher — 始 — Stack on self.\n  - If the affected ally is a \"Jia Family\" unit, apply 2 Offense Level Up next turn instead.\n\nCombat passive — **Rupture-breathing Resolve ['''破吸自桓''']**: When killing the target with this unit's Attack Skills, gain Poise equal to Rupture on target (3 per 1 enemy.\n  - once per turn).\n  - If this unit gained 3 Poise with the above effect, gain Poise Count equal to Rupture Count on target (2 per 1 enemy.\n\nDefense skill — **Evade: Adept Evasion**: [Combat Start] At 3+ Launcher — 始 —, perform a Battlefield Retreat at Turn End.\n  - Upon Retreat, move to the frontmost place in the Backup units' Deployment order (Returns first before the other Backup units Substitute in).\n  - [On Use] Gain +1 Poise Count (2 times per turn).\n  - [On Evade] Gain 2 Poise (2 times per turn).",
   "team_suggestions": [
     "**Rupture** stacker — payoff coins check **4+ Rupture**, so build the count before committing them. Same-faction teammates provide additional passive synergy where available.",
-    "- **Drifting Blade of Hongyuan Ryōshū**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Heishou Pack - Mao Branch Outis**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Heishou Pack - Mao Branch Ryōshū**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **Drifting Blade of Hongyuan Ryōshū**: Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Heishou Pack - Mao Branch Outis**: Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Heishou Pack - Mao Branch Ryōshū**: Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "**Rupture** stacker — payoff coins check **4+ Rupture**, so build the count before committing them. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
       "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Outis",
       "teammate_name": "Heishou Pack - Mao Branch Outis",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
       "teammate_name": "Heishou Pack - Mao Branch Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

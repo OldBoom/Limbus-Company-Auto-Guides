@@ -1151,8 +1151,10 @@ def find_paralyze_archetype(
         kind="paralyze_control",
         status="Paralyze",
         setup_summary=(
-            "**Paralyze** control — inflict Paralyze to shut down enemy coin Power, "
-            "then follow with high-impact coins while they cannot clash back."
+            # Paralyze fixes the Power of N coins to 0 for one turn (docs/status-effects.md).
+            # The unit still acts and still clashes — with dead coins.
+            "**Paralyze** control — zeroes the Power of the enemy's coins for a turn, "
+            "so clashes into it are heavily favoured."
         ),
         tips=[
             "Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.",

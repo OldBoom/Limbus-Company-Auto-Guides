@@ -75,7 +75,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Don_Quixote",
       "teammate_name": "Blade Lineage Salsu Don Quixote",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -84,7 +84,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Faust",
       "teammate_name": "Blade Lineage Salsu Faust",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -93,7 +93,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Outis",
       "teammate_name": "Blade Lineage Salsu Outis",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -102,7 +102,7 @@
     {
       "teammate_slug": "Blade_Lineage_Salsu_Yi_Sang",
       "teammate_name": "Blade Lineage Salsu Yi Sang",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -111,7 +111,7 @@
     {
       "teammate_slug": "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
       "teammate_name": "LCA Udjat Vanguard Team 3 Leader Outis",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -122,28 +122,28 @@
   "playstyle_guide": "- **Cut Down What Must Be Felled** amplifies the **fastest Speed ally** — field a high-Speed damage dealer as teammate.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Lucent Rippling Flame** — **S2 — Acupuncture** adds **+3 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin; **S1 — Rending Arts** adds **+2 Poise Count** at **On Use** and **+2 Poise** per **On Hit** coin.\n- **Lucent Rippling Flame** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- Use **Haste** on attack turns — **Guard** covers defense; this is not an Evade rotation.\n- Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- Build Mook Workshop — Ye — 銳 — Type II Bladedraw / Thrust Force — Dokkaebi Fire Count — spend via S3 once you hit 10+.\n- Reach scaling conditions before committing S3: Clash Power +1 per 5 Bleed (max +2).\n- Hold S3 for when At 10+ Mook Workshop — Ye — 銳 — Type II Bladedraw / Thrust Force — Dokkaebi Fire is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Rending Arts** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- **Clash Power** scales with **Bleed** (+1 per 5, max +2) — build stacks first.\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n\n**S2 — Acupuncture** (BP 3, CP +4, x3): rolls — low 3, high 15 (Slightly Low).\n- **Clash Power** scales with **Bleed** (+1 per 5, max +2) — build stacks first.\n- Delay until 5+ Poise on target — that is when the damage condition activates.\n- Inflict +1 Bleed Count; [On Crit] Gain 2 Haste next turn (once per turn)\n\n*↳ Alternate S2 — To Claim Their Bones* (BP 5, CP +4): rolls — low 5, high 13 (Low).\n\n**S3 — Lucent Rippling Flame** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- Peak output requires both conditions: Deal +1.5% damage on Critical Hit for every Poise on self (max 30%) | [On Use] Final Power +1 for every 2 Haste on self (max 2).\n- converts coins to Unbreakable under condition\n- C1 refunds +3 Poise Count\n\n*↳ Alternate S3 — Even the Balance - Lucent Rippling Flame* (BP 5, CP +3): rolls — low 5, high 17 (Average).\n\nCombat passive — **Demonfire Spinecleaver**: On Base Attack Skill End, if this unit has 15+ Mook Workshop — Ye — 銳 — Type II Bladedraw / Thrust Force — Dokkaebi Fire, activate \"Even….\n  - On Defense Skill Clash Lose, if this unit has 3+ Haste, this unit cannot be Staggered from taking damage until Defense Skill End, and act….\n\nDefense skill — **Guard: I'll Light the Path Forward**: Clashable Guard.\n  - [Combat Start] Gain 1 Assist Defense (once per turn).\n  - [On Use] Gain 2 Haste next turn (once per turn).\n  - [On Use] Gain +2 Poise Count (once per turn).",
   "team_suggestions": [
     "Trait-dependent kit — [Limbus Company] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **Blade Lineage Salsu Don Quixote**: Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Blade Lineage Salsu Faust**: Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Blade Lineage Salsu Outis**: Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **Blade Lineage Salsu Don Quixote**: Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Blade Lineage Salsu Faust**: Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Blade Lineage Salsu Outis**: Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Limbus Company] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Blade_Lineage_Salsu_Don_Quixote",
       "teammate_name": "Blade Lineage Salsu Don Quixote",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Faust",
       "teammate_name": "Blade Lineage Salsu Faust",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Blade_Lineage_Salsu_Outis",
       "teammate_name": "Blade Lineage Salsu Outis",
-      "reason": "Shares [Blade Lineage] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Blade Lineage] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

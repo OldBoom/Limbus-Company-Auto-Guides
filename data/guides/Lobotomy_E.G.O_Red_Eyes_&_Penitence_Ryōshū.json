@@ -66,7 +66,7 @@
     {
       "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
       "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -75,7 +75,7 @@
     {
       "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
       "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -84,7 +84,7 @@
     {
       "teammate_slug": "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
       "teammate_name": "LCE E.G.O::Dimension Shredder Yi Sang",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -93,7 +93,7 @@
     {
       "teammate_slug": "LCE_E.G.O_Lantern_Yi_Sang",
       "teammate_name": "LCE E.G.O::Lantern Yi Sang",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -102,7 +102,7 @@
     {
       "teammate_slug": "Lobotomy_E.G.O_Hornet【Alteration】Meursault",
       "teammate_name": "Lobotomy E.G.O::Hornet【Alteration】 Meursault",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -110,31 +110,31 @@
     }
   ],
   "core_idea": "Lobotomy E.G.O::Red Eyes & Penitence Ryōshū is a Support — **Bleed** stacker — payoff coins check **6+ Bleed**, so build the count before committing them. Support passive (**Eat and Sleep**) applies at **Combat Start** — set deployment with the intended ally before turn one. **SP regenerator** — restores ally **SP** through passives and key skills. **HP regenerator** — tops up ally **HP** through passives and skills.",
-  "playstyle_guide": "- **Eat and Sleep** fires at **Combat Start** — confirm roster and slot order pre-fight so the right ally receives the buff.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **lowest-SP allies**.\n- **HP sustain** triggers at **On Hit** — restores **lowest-HP allies**.\n- Heals flow when allies land hits — attackers need to connect for the passive to proc.\n- Build Penitence Count — spend via S1 once you hit 7+.\n\n**S1 — Both of You, Shut Up** (BP 4, CP +4, x2): rolls — low 4, high 12 (High / Extremely High stacked).\n- Needs 7+ Red Eyes to activate — prioritise building stacks before using.\n\n**S2 — S.H. / S.F.** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Peak output requires both conditions: If the sum of Red Eyes and Penitence is 15 or higher, Coin Power +1 | If target has 6+ Bleed, Coin Power +1.\n\n**S3 — Skullbuster** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- costs 15 SP on use — manage SP above 0 to stay in Blessing state\n- Gain 2 Penitence\n\n*↳ Alternate S3 — Serious Skullbuster* (BP 5, CP +4): rolls — low 5, high 17 (Average).\n  - Consume all Red Eyes and Penitence on self\n  - Scales Coin Power with Red stacks — apply liberally before committing (cap +4).\n  - Scales Base Power with Penitence stacks — apply liberally before committing (cap +4).\n  - Lose 15 SP and gain Only Ashes Remain next turn\n  - Inflict Bleed equal to (Red Eyes consumed - 15) on target (max 5)\n\nCombat passive — **E.G.O Assimilation**: When gaining Charge Count, gain Red Eyes or Penitence instead.\n  - Red Eyes and Penitence are unaffected by Charge Potency.\n\nCombat passive — **Spiderhead/Skullface**: When hitting an enemy with a Coin that gains Red Eyes:.\n  - Deal +(Red Eyes/2)% damage.\n  - If this unit's Speed is faster than the target's by 3 or more, deal an additional +(Red Eyes/2)% more damage.",
+  "playstyle_guide": "- **Eat and Sleep** fires at **Combat Start** — confirm roster and slot order pre-fight so the right ally receives the buff.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- **SP sustain** fires at **On Hit** — restores **lowest-SP allies**.\n- **HP sustain** triggers at **On Hit** — restores **lowest-HP allies**.\n- Heals flow when allies land hits — attackers need to connect for the passive to proc.\n- Build Penitence Count — spend via S1 once you hit 7+.\n\n**S1 — Both of You, Shut Up** (BP 4, CP +4, x2): rolls — low 4, high 12 (High / Extremely High stacked).\n- Needs 7+ Red Eyes to activate — prioritise building stacks before using.\n\n**S2 — S.H. / S.F.** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- Peak output requires both conditions: If the sum of Red Eyes and Penitence is 15 or higher, Coin Power +1 | If target has 6+ Bleed, Coin Power +1.\n\n**S3 — Skullbuster** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n- costs 15 SP on use — budget it against the Heads rate you need later\n- Gain 2 Penitence\n\n*↳ Alternate S3 — Serious Skullbuster* (BP 5, CP +4): rolls — low 5, high 17 (Average).\n  - Consume all Red Eyes and Penitence on self\n  - Scales Coin Power with Red stacks — apply liberally before committing (cap +4).\n  - Scales Base Power with Penitence stacks — apply liberally before committing (cap +4).\n  - Lose 15 SP and gain Only Ashes Remain next turn\n  - Inflict Bleed equal to (Red Eyes consumed - 15) on target (max 5)\n\nCombat passive — **E.G.O Assimilation**: When gaining Charge Count, gain Red Eyes or Penitence instead.\n  - Red Eyes and Penitence are unaffected by Charge Potency.\n\nCombat passive — **Spiderhead/Skullface**: When hitting an enemy with a Coin that gains Red Eyes:.\n  - Deal +(Red Eyes/2)% damage.\n  - If this unit's Speed is faster than the target's by 3 or more, deal an additional +(Red Eyes/2)% more damage.",
   "team_suggestions": [
     "Trait-dependent kit — [Lobotomy Corp. Headquarters] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **LCE E.G.O::AEDD Gregor**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **LCE E.G.O::Ardor Blossom Star Faust**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **LCE E.G.O::Dimension Shredder Yi Sang**: Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **LCE E.G.O::AEDD Gregor**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **LCE E.G.O::Ardor Blossom Star Faust**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **LCE E.G.O::Dimension Shredder Yi Sang**: Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Lobotomy Corp. Headquarters] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "LCE_E.G.O_AEDD_Gregor",
       "teammate_name": "LCE E.G.O::AEDD Gregor",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
       "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
       "teammate_name": "LCE E.G.O::Dimension Shredder Yi Sang",
-      "reason": "Shares [E.G.O Gear] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [E.G.O Gear] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

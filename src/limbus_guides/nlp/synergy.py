@@ -420,9 +420,11 @@ def find_synergy_teammates(
                 base_score = 0.95
             else:
                 shared = sorted(overlap)[0]
+                # Resonance is the Sin affinity of the skills queued in a turn, not a
+                # count of same-trait allies — shared traits unlock alternates, nothing more.
                 reason = (
-                    f"Shares [{shared}] trait — presence raises Resonance, "
-                    f"scaling Resonance-dependent skills and unlocking alternate skill variants."
+                    f"Shares [{shared}] trait — unlocks this identity's "
+                    f"trait-conditional passives and alternate skill variants."
                 )
                 base_score = 0.93
             suggestions.append(

@@ -45,7 +45,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
       "teammate_name": "Liu Assoc. South Section 4 Ishmael",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -54,7 +54,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ryōshū",
       "teammate_name": "Liu Assoc. South Section 4 Ryōshū",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -63,7 +63,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
       "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -72,7 +72,7 @@
     {
       "teammate_slug": "Liu_Assoc._South_Section_6_Gregor",
       "teammate_name": "Liu Assoc. South Section 6 Gregor",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -83,28 +83,28 @@
   "playstyle_guide": "- **Burning Passion** triggers **On Hit** — allies need to attack for the passive to apply.\n- Skills check **6+ Burn** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: Coin Power +1 per 3 Burn (max +2).\n\n**S1 — Flaming Fists** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low / Extremely High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 3, max +2) — build stacks first.\n\n**S2 — Fiery Knifehand-Combust** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / High stacked).\n- Scales Coin Power with Burn stacks — apply liberally before committing (cap +2).\n- **Coin Power** scales with **Burn** (+1 per 6, max +2) — build stacks first.\n- Peak output requires both conditions: Inflict +1 Burn Count | [On Hit] If target has 6+ Burn Count, apply 3 Burn to 2 targets that have no Burn or have the least Burn Count.\n\n**S3 — Pinpoint Blitz** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Average stacked).\n- Peak output requires both conditions: If target has 6+ Burn, Coin Power +1 | If target has 6+ Burn and Burn Count, deal +30% damage.\n\nCombat passive — **Passionate Cheer**: 1 ally with the least SP deals +5% Pierce damage for every 6 Burn Potency on target On Hit (Max 15%).",
   "team_suggestions": [
     "Trait-dependent kit — [Liu Association] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **Liu Assoc. South Section 4 Ishmael**: Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Liu Assoc. South Section 4 Ryōshū**: Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Liu Assoc. South Section 5 Hong Lu**: Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **Liu Assoc. South Section 4 Ishmael**: Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Liu Assoc. South Section 4 Ryōshū**: Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Liu Assoc. South Section 5 Hong Lu**: Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Liu Association] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ishmael",
       "teammate_name": "Liu Assoc. South Section 4 Ishmael",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Liu_Assoc._South_Section_4_Ryōshū",
       "teammate_name": "Liu Assoc. South Section 4 Ryōshū",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Liu_Assoc._South_Section_5_Hong_Lu",
       "teammate_name": "Liu Assoc. South Section 5 Hong Lu",
-      "reason": "Shares [Liu Association] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Liu Association] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

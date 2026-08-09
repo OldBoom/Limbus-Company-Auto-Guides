@@ -41,7 +41,7 @@
     {
       "teammate_slug": "MultiCrack_Office_Fixer_Heathcliff",
       "teammate_name": "MultiCrack Office Fixer Heathcliff",
-      "reason": "Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -50,7 +50,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
-      "reason": "Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -85,8 +85,8 @@
   "playstyle_guide": "**S1 — 40Y-3 Activation** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Consume 5 Charge Count to gain Coin Power +2\n- Gain +3 Charge Count\n\n**S2 — Charge Countercurrent** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average).\n- At 5~9 Charge Count, consume 2(10 - current Charge Count)% HP to raise Charge Count to 10; [On Use] Consume 10 Charge Count to gain Coin Power +2\n- At 3+ Reson. including this Skill, consume all Charge Count on self and deal +(Charge + 3)% damage for every Charge Count consumed by this Skill (max 120%)\n\n**S3 — 40Y-3 Charge** (BP 4, CP +3, x4): rolls — low 4, high 16 (Slightly Low / Average stacked).\n- Coin Power +1 for every Charge (max 4)\n- Gain +(Charge + 4) Charge Count (max 7)\n- At 3+ Charge, deal +4% damage for every Charge (max 20%)\n\nCombat passive — **Electrocurrent Dismantling**: Gain 1 Charge every time this unit consumes 10 cumulative Charge Count in this Encounter.\n  - At 2+ Charge, deal +(Charge x 3)% damage (max 15%).\n  - If the target is at less than 50% HP, deal +(Charge x 5)% more damage (max 25%).\n\nCombat passive — **Auxiliary Dismantling Current**: When 1 ally that has the lowest Charge Count kills an enemy, the ally gains +3 Charge Count (once per turn, prioritizes allies that consu….",
   "team_suggestions": [
     "Trait-dependent kit — [MultiCrack Office] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
-    "- **MultiCrack Office Fixer Heathcliff**: Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **The House of Spiders: The Ring Nursefather Hong Lu**: Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+    "- **MultiCrack Office Fixer Heathcliff**: Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **The House of Spiders: The Ring Nursefather Hong Lu**: Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
     "- **Lobotomy E.G.O::In the Name of Love and Hate Don Quixote**: 'Magical Power Charging Support' inflicts Charge via the support passive — helps reach 3+ Charge thresholds on key skills."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [MultiCrack Office] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available.",
@@ -94,13 +94,13 @@
     {
       "teammate_slug": "MultiCrack_Office_Fixer_Heathcliff",
       "teammate_name": "MultiCrack Office Fixer Heathcliff",
-      "reason": "Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
       "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
-      "reason": "Shares [Mechanical Amalgam] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Mechanical Amalgam] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {

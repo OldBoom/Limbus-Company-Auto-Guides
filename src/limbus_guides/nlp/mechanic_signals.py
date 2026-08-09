@@ -71,12 +71,16 @@ MECHANIC_SIGNALS: list[MechanicSignal] = [
     MechanicSignal(
         re.compile(r"Amplitude Conversion", re.I),
         "tremor-convert",
-        "triggers Amplitude Conversion into Tremor — Scorch",
+        # The subtype is per-identity — Öufi Assoc. South Section 3 Heathcliff converts
+        # into Tremor — Decay, not Scorch — so the pattern must not name one.
+        "triggers Amplitude Conversion, converting the target's Tremor to this kit's subtype",
     ),
     MechanicSignal(
         re.compile(r"\[On Use\].*Lose\s+(\d+)\s+SP", re.I),
         "sp-cost",
-        "costs {n} SP on use — manage SP above 0 to stay in Blessing state",
+        # Blessing belongs to one identity (Sword Sharpened with Tears Rodion); this
+        # trigger is generic SP loss, so the advice must stay generic too.
+        "costs {n} SP on use — budget it against the Heads rate you need later",
     ),
 ]
 

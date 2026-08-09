@@ -82,7 +82,7 @@
     {
       "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
       "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -91,7 +91,7 @@
     {
       "teammate_slug": "Family_Hierarch_Candidate_Ishmael",
       "teammate_name": "Family Hierarch Candidate Ishmael",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -100,7 +100,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Outis",
       "teammate_name": "Heishou Pack - Mao Branch Outis",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -109,7 +109,7 @@
     {
       "teammate_slug": "Heishou_Pack_-_Mao_Branch_Ryōshū",
       "teammate_name": "Heishou Pack - Mao Branch Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -121,8 +121,8 @@
   "team_suggestions": [
     "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
     "- **The Lord of Hongyuan Hong Lu**: **The Lord of Hongyuan Hong Lu** is the core Heishou Pack enabler — his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, stack **Life from Death**, and amplify **Heishou Bolus Contamination** for the whole faction.",
-    "- **Drifting Blade of Hongyuan Ryōshū**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **Family Hierarch Candidate Ishmael**: Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **Drifting Blade of Hongyuan Ryōshū**: Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Family Hierarch Candidate Ishmael**: Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "**Heishou Pack** composition — anchor the team with **The Lord of Hongyuan Hong Lu**; his passives heal allies that **Substitute in** or **Return to the battlefield**, command free Unopposed Attacks, and stack **Life from Death** and **Heishou Bolus Contamination** for the faction. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -135,13 +135,13 @@
     {
       "teammate_slug": "Drifting_Blade_of_Hongyuan_Ryōshū",
       "teammate_name": "Drifting Blade of Hongyuan Ryōshū",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "Family_Hierarch_Candidate_Ishmael",
       "teammate_name": "Family Hierarch Candidate Ishmael",
-      "reason": "Shares [H Corp.] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [H Corp.] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

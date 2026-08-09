@@ -49,7 +49,7 @@
     {
       "teammate_slug": "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
       "teammate_name": "LCA Udjat Vanguard Team 3 Leader Outis",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -58,7 +58,7 @@
     {
       "teammate_slug": "LCB_Sinner_Don_Quixote",
       "teammate_name": "LCB Sinner Don Quixote",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -67,7 +67,7 @@
     {
       "teammate_slug": "LCB_Sinner_Gregor",
       "teammate_name": "LCB Sinner Gregor",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -76,7 +76,7 @@
     {
       "teammate_slug": "LCB_Sinner_Heathcliff",
       "teammate_name": "LCB Sinner Heathcliff",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -85,7 +85,7 @@
     {
       "teammate_slug": "LCB_Sinner_Hong_Lu",
       "teammate_name": "LCB Sinner Hong Lu",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -96,28 +96,28 @@
   "playstyle_guide": "- **Residual Heat** triggers **On Hit** — allies need to attack for the passive to apply.\n- Skills check **10+ Burn** — favour those coins when stacked.\n- Reach scaling conditions before committing S3: +10% damage per 10 Burn (max +20%).\n- Hold S3 for when At 30+ Burn is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Ignition** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Delay until 10+ Burn on target — that is when the damage condition activates.\n\n**S2 — E.G.O - A.B.S. Activation** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Deal +10% damage for every 10 Burn on self (max 20%) ; [On Use] Gain +4 Burn Count ; [On Use] Coin Power +1 for every 4 (Burn on self + Burn on target) (max 2)\n- Up to **+20% damage** (+10% per **10 Burn**) — stack the resource before committing.\n- converts coins to Unbreakable under condition\n- Deal +10% damage for every 10 Burn on self (max 20%); [On Use] Gain +4 Burn Count; [On Use] Coin Power +1 for every 4 (Burn on self + Burn on target) (max 2)\n\n**S3 — Drawn by Flame** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average).\n\n*↳ Alternate S3 — A.B.S Max Attunement 【Degraded Corrosion】* (BP 5, CP +4): rolls — low 5, high 17 (Average / Slightly High stacked).\n  - Unbreakable Coin\n\nCombat passive — **Fireproof**: Cannot be Staggered or fall below 1 HP due to Burn damage.\n\nCombat passive — **Flame Moth**: Combat Start: At 80%+ missing HP, and at less than 30 Burn, gain up to 30 Burn (once per Encounter).\n  - Turn End: Gain 1 Offense Level Up next turn for every 6 Burn on self (max 5).\n  - On death, activate the following:.\n\nDefense skill — **Evade: Resonating by Raising A.B.S Attunement.**: [On Use] At 10+ Burn, Coin Power +3.\n  - [On Use] Lose 5 Burn (once per turn).\n  - [On Evade] Lose 5 Burn (once per turn).",
   "team_suggestions": [
     "**Burn** stacker — damage and clash scale with Burn on target. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
-    "- **LCA Udjat Vanguard Team 3 Leader Outis**: Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **LCB Sinner Don Quixote**: Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **LCB Sinner Gregor**: Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **LCA Udjat Vanguard Team 3 Leader Outis**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **LCB Sinner Don Quixote**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **LCB Sinner Gregor**: Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "**Burn** stacker — damage and clash scale with Burn on target. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "LCA_Udjat_Vanguard_Team_3_Leader_Outis",
       "teammate_name": "LCA Udjat Vanguard Team 3 Leader Outis",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "LCB_Sinner_Don_Quixote",
       "teammate_name": "LCB Sinner Don Quixote",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "LCB_Sinner_Gregor",
       "teammate_name": "LCB Sinner Gregor",
-      "reason": "Shares [Limbus Company] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [Limbus Company] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],

@@ -976,9 +976,24 @@ def find_defense_archetype(
             payoff = " or ".join(skills_fired)
             kind = "counter_skill"
             defense_name = block["name"]
+            # Read the actual gate rather than assuming 6+. Middle Little Brother
+            # Sinclair fires his Counter at 4+, and this printed 6+ for him. The Sin
+            # is taken from anywhere in the block because the gate clause itself is
+            # often written "At 4+ sum of A-Reson." with the Sin named earlier.
             cond = ""
-            if "Envy A-Reson" in block["text"]:
-                cond = " at 6+ Envy Resonance"
+            thr_m = re.search(
+                r"At\s+(\d+)\+\s+(?:(?:sum of|highest)\s+)*(?:\w+\s+)?A-Reson\.",
+                block["text"],
+                re.I,
+            )
+            if thr_m:
+                sin_m = re.search(
+                    r"\b(Wrath|Lust|Sloth|Gluttony|Gloom|Pride|Envy)\s+A-Reson\.",
+                    block["text"],
+                    re.I,
+                )
+                sin = f"{sin_m.group(1).title()} " if sin_m else ""
+                cond = f" at {thr_m.group(1)}+ {sin}Absolute Resonance"
             tips.append(
                 f"At Combat Start{cond}, **{defense_name}** can fire **{payoff}** "
                 f"as a Counter instead of a normal defensive clash — the defense slot "
@@ -1988,9 +2003,10 @@ def find_support_archetype(
             f"Support passive (**{passive_name}**) scales with **Resonance** — "
             f"field matching-trait allies to reach threshold before buffs fully apply."
         )
+        # Resonance counts same-Sin skills queued in a turn; traits do not raise it.
         tips.append(
             f"**{passive_name}** keys off **Resonance** — "
-            f"add trait-matching teammates to raise Reson. before relying on the passive."
+            f"queue same-Sin skills across the team on the turn you need it."
         )
     else:
         setup_summary = (

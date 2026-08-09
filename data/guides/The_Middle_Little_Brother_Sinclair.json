@@ -63,7 +63,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
       "teammate_name": "The House of Spiders: The Middle Apprentice Ishmael",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -72,7 +72,7 @@
     {
       "teammate_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
       "teammate_name": "The House of Spiders: The Middle Nursefather Outis",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -81,7 +81,7 @@
     {
       "teammate_slug": "The_Middle_Big_Brother_Heathcliff",
       "teammate_name": "The Middle Big Brother Heathcliff",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -90,7 +90,7 @@
     {
       "teammate_slug": "The_Middle_Little_Brother_Meursault",
       "teammate_name": "The Middle Little Brother Meursault",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -99,7 +99,7 @@
     {
       "teammate_slug": "The_Middle_Little_Sister_Don_Quixote",
       "teammate_name": "The Middle Little Sister Don Quixote",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "score": 0.93,
       "source": "rule",
       "faction_match": true,
@@ -107,31 +107,31 @@
     }
   ],
   "core_idea": "The Middle Little Brother Sinclair is a Tank / Status Specialist — **Envy Resonance** kit — queue Envy-affinity skills across the team; at **4+ Envy Absolute Resonance** a Combat Start Counter (**Payback with Interest**) fires for free, upgrading to **Write 'em all down** at **6+**. Offense Level also scales with the highest Resonance that turn. Scaling conditions: Coin Power +1 per 6 Bleed (max +2). Survives by pulling hits with **Aggro** and absorbing them with **Shield** and **Defense Level Up**.",
-  "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- Front-load **+5 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- At Combat Start at 6+ Envy Resonance, **Counter: Warmup in the East** can fire **Payback with Interest** as a Counter instead of a normal defensive clash — the defense slot is your burst tool, not just protection.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Bleed (max +2).\n\n**S1 — Is it You?!** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If target has 6+ Bleed, Coin Power +1 | [On Use] Gain +5 Aggro to this Skill Slot next turn.\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Payback with Interest** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Peak output requires both conditions: If target has 6+ Bleed, Coin Power +1 | [On Use] Gain +5 Aggro to this Skill Slot next turn.\n- draws enemy aggro — intended to absorb hits\n- At 4+ Reson. that includes this Skill, deal +15% damage\n\n**S3 — Write 'em all down** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Deal +1% damage for every 1 Book of Vengeance — Sinclair — (max 30%) ; Coin Power +1 for every 6 Bleed on target (max 2) ; [Combat Start] This Skill gains (highest Reson. / 2) Offense Level (max 3, rounded down) ; - If the said Reson. includes an A-Reson., double the Offense Level gained from the above effect\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- Deal +2.5% damage for every Reson. that includes this Skill (max 15%); Deal +7.5% damage for every 10 Book of Vengeance — Sinclair — (max 22.5%)\n\nCombat passive — **The Middle Never Forgets**: When hit by an enemy, inflict 5 Vendetta Mark against the attacker(or Part) (once per turn).\n  - When another ally is hit by an enemy, inflict 2 Vendetta Mark against the attacker(or Part) (once per turn per Identity).\n  - If the said ally is from , inflict 3 additional Vendetta Mark.\n\nCombat passive — **We've Got Your Back**: Combat Start: 1 ally with the least current HP percentage gains 2 Defense Level Up.\n  - If the said ally is from , also gain 2 Offense Level Up.\n\nDefense skill — **Counter: Warmup in the East**: [Combat Start] Skill behavior changes based on the sum of Envy A-Reson.:.\n  - At 4+ sum of A-Reson., use 'Payback with Interest' as Counter.\n  - At 6+ sum of A-Reson., use 'Write 'em all down' as Counter.\n  - (Activates from the leftmost Skill Slot. Activates 2 times per turn).",
+  "playstyle_guide": "- Skills check **6+ Bleed** — favour those coins when stacked.\n- Front-load **+5 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with Guard or Assist Defense so passives trigger under pressure.\n- At Combat Start at 4+ Envy Absolute Resonance, **Counter: Warmup in the East** can fire **Payback with Interest** as a Counter instead of a normal defensive clash — the defense slot is your burst tool, not just protection.\n- Reach scaling conditions before committing S3: Coin Power +1 per 6 Bleed (max +2).\n\n**S1 — Is it You?!** (BP 3, CP +4, x2): rolls — low 3, high 11 (Slightly Low).\n- Peak output requires both conditions: If target has 6+ Bleed, Coin Power +1 | [On Use] Gain +5 Aggro to this Skill Slot next turn.\n- draws enemy aggro — intended to absorb hits\n\n**S2 — Payback with Interest** (BP 4, CP +4, x3): rolls — low 4, high 16 (Average / Slightly High stacked).\n- Peak output requires both conditions: If target has 6+ Bleed, Coin Power +1 | [On Use] Gain +5 Aggro to this Skill Slot next turn.\n- draws enemy aggro — intended to absorb hits\n- At 4+ Reson. that includes this Skill, deal +15% damage\n\n**S3 — Write 'em all down** (BP 5, CP +4, x3): rolls — low 5, high 17 (Average / High stacked).\n- Deal +1% damage for every 1 Book of Vengeance — Sinclair — (max 30%) ; Coin Power +1 for every 6 Bleed on target (max 2) ; [Combat Start] This Skill gains (highest Reson. / 2) Offense Level (max 3, rounded down) ; - If the said Reson. includes an A-Reson., double the Offense Level gained from the above effect\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- Deal +2.5% damage for every Reson. that includes this Skill (max 15%); Deal +7.5% damage for every 10 Book of Vengeance — Sinclair — (max 22.5%)\n\nCombat passive — **The Middle Never Forgets**: When hit by an enemy, inflict 5 Vendetta Mark against the attacker(or Part) (once per turn).\n  - When another ally is hit by an enemy, inflict 2 Vendetta Mark against the attacker(or Part) (once per turn per Identity).\n  - If the said ally is from , inflict 3 additional Vendetta Mark.\n\nCombat passive — **We've Got Your Back**: Combat Start: 1 ally with the least current HP percentage gains 2 Defense Level Up.\n  - If the said ally is from , also gain 2 Offense Level Up.\n\nDefense skill — **Counter: Warmup in the East**: [Combat Start] Skill behavior changes based on the sum of Envy A-Reson.:.\n  - At 4+ sum of A-Reson., use 'Payback with Interest' as Counter.\n  - At 6+ sum of A-Reson., use 'Write 'em all down' as Counter.\n  - (Activates from the leftmost Skill Slot. Activates 2 times per turn).",
   "team_suggestions": [
     "Trait-dependent kit — [The Middle] allies unlock its alternate skills. Resonance-scaling identity — pick teammates with **Envy** skills so you can queue a same-Sin turn and keep Envy Resonance high. Same-faction teammates provide additional passive synergy where available.",
-    "- **The House of Spiders: The Middle Apprentice Ishmael**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **The House of Spiders: The Middle Nursefather Outis**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
-    "- **The Middle Big Brother Heathcliff**: Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants."
+    "- **The House of Spiders: The Middle Apprentice Ishmael**: Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **The House of Spiders: The Middle Nursefather Outis**: Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **The Middle Big Brother Heathcliff**: Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [The Middle] allies unlock its alternate skills. Resonance-scaling identity — pick teammates with **Envy** skills so you can queue a same-Sin turn and keep Envy Resonance high. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
     {
       "teammate_slug": "The_House_of_Spiders_The_Middle_Apprentice_Ishmael",
       "teammate_name": "The House of Spiders: The Middle Apprentice Ishmael",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "The_House_of_Spiders_The_Middle_Nursefather_Outis",
       "teammate_name": "The House of Spiders: The Middle Nursefather Outis",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     },
     {
       "teammate_slug": "The_Middle_Big_Brother_Heathcliff",
       "teammate_name": "The Middle Big Brother Heathcliff",
-      "reason": "Shares [The Middle] trait — presence raises Resonance, scaling Resonance-dependent skills and unlocking alternate skill variants.",
+      "reason": "Shares [The Middle] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
       "source": "rule"
     }
   ],
