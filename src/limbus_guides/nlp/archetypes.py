@@ -64,9 +64,8 @@ _TREMOR_BASE_SUMMARY = (
     "so build Potency and Burst inside the same window."
 )
 _TREMOR_BASE_SUMMARY_NO_BURST = (
-    "**Tremor** applicator — it stacks Tremor but has no **Tremor Burst** of its own, and "
-    "Tremor does nothing until something Bursts it. Pair it with a teammate that can, and "
-    "note Count drops by 1 each Turn End."
+    "**Tremor** applicator — it stacks Tremor on the target rather than cashing it in "
+    "itself, and Count drops by 1 each Turn End."
 )
 
 # One blurb per Tremor subtype, each taken from the Core Effects table on Tremor.wiki.
@@ -656,6 +655,8 @@ def find_tremor_archetype(
     if signals < 2:
         return None
 
+    has_burst = bool(re.search(r"Tremor Burst", blob, re.I))
+
     tips: list[str] = []
     # The first subtype's blurb becomes the setup summary below, so only extra
     # subtypes (an Amplitude-Entangled kit can carry more than one) go in tips.
@@ -667,10 +668,15 @@ def find_tremor_archetype(
         tips.append(
             "**Time Moratorium** — time the stored-damage pop with your Tremor stacks."
         )
-    elif re.search(r"Tremor Burst", blob, re.I) and not tips:
+    elif has_burst and not tips:
         tips.append("**Burst** when you're ready to break the stagger target.")
-
-    has_burst = bool(re.search(r"Tremor Burst", blob, re.I))
+    elif not has_burst:
+        # Kept out of the core idea deliberately: this is a team-building note, not
+        # part of what the identity itself does.
+        tips.append(
+            "Tremor stacks sit inert until something Bursts them, and this kit has no "
+            "**Tremor Burst** — bring a teammate who does."
+        )
 
     if unique:
         # Lead with what the subtype actually does rather than "**Tremor — X** control.",
@@ -686,9 +692,10 @@ def find_tremor_archetype(
                     "**Stagger Threshold** by its Potency."
                 )
             elif unique[0] in _BURST_DEPENDENT_SUBTYPES:
-                setup_summary += (
-                    " This kit has no **Tremor Burst** of its own, so a teammate has to "
-                    "supply one before that payoff happens."
+                # Team advice — surfaced as a tip below rather than in the hook.
+                tips.append(
+                    f"**{label}** only pays out on a Tremor Burst and this kit has none "
+                    f"— a teammate has to supply it."
                 )
         else:
             setup_summary = f"**{label}** control."
