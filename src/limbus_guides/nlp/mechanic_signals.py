@@ -46,7 +46,9 @@ MECHANIC_SIGNALS: list[MechanicSignal] = [
             re.I,
         ),
         "status-threshold",
-        "Delay until {n}+ {status} on target — that is when the damage condition activates.",
+        # Poise sits on your own unit (Poise.wiki) and is never applied to an enemy, so
+        # this must not assert which side carries the threshold.
+        "Wait for {n}+ {status} before this damage condition activates.",
     ),
     MechanicSignal(
         re.compile(r"double.*crit chance", re.I),

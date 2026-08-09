@@ -83,7 +83,7 @@
     }
   ],
   "core_idea": "Kurokumo Clan Wakashu Hong Lu is a Status Specialist — **Bleed** focus.",
-  "playstyle_guide": "- Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.\n\n**S1 — Cleave** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Cloud Cutter** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low).\n- If target has less than 4 Bleed Count, use Coin 1 and 2 an additional time\n\n**S3 — Cloudburst** (BP 7, CP +2, x3): rolls — low 7, high 13 (Low).\n\nCombat passive — **Syndicate Payback**: 1 ally with the fastest Speed inflicts +1 Bleed.",
+  "playstyle_guide": "- Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.\n\n**S1 — Cleave** (BP 4, CP +7, 1 coin): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Cloud Cutter** (BP 5, CP +4, 2 coins): rolls — low 5, high 13 (Low).\n- If target has less than 4 Bleed Count, use Coin 1 and 2 an additional time\n\n**S3 — Cloudburst** (BP 7, CP +2, 3 coins): rolls — low 7, high 13 (Low).\n\nCombat passive — **Syndicate Payback**: 1 ally with the fastest Speed inflicts +1 Bleed.",
   "team_suggestions": [
     "**Bleed** focus. Same-faction teammates provide additional passive synergy where available.",
     "- **Kurokumo Clan Captain Ishmael**: This identity's 'Hēiyúndào' inflicts Bleed — Kurokumo Clan Captain Ishmael scales off Bleed.",

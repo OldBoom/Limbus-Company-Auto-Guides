@@ -175,6 +175,16 @@ _CLASH_WIN_POISE = re.compile(r"clash win.*gain.*Poise", re.IGNORECASE)
 # ---------------------------------------------------------------------------
 
 
+def _charge_resource(matched: str) -> str:
+    """"Charge Potency" or "Charge Count" as the skill wrote it.
+
+    Charge.wiki: "Most Charge users only use Charge Count, while some also gain Charge
+    Potency by spending Charge Count". Flattening both to "Charge" turned a Potency gate
+    into what read as a Count gate, and the advice then said to "build stacks".
+    """
+    return "Charge Potency" if re.search(r"Charge\s+Potency", matched, re.I) else "Charge Count"
+
+
 def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
     """Parse one skill's text block into a structured dict."""
     lines = block_text.splitlines()
@@ -343,9 +353,13 @@ def _parse_skill_block(skill_num: int, name: str, block_text: str) -> dict:
             f"Consume {m.group(1)} Charge Count for +{m.group(2)} Coin Power"
         )
     for m in _AT_CHARGE_CP.finditer(all_eff):
-        damage_scales.append(f"At {m.group(1)}+ Charge, Coin Power +{m.group(2)}")
+        damage_scales.append(
+            f"At {m.group(1)}+ {_charge_resource(m.group(0))}, Coin Power +{m.group(2)}"
+        )
     for m in _AT_CHARGE_CLASH.finditer(all_eff):
-        damage_scales.append(f"At {m.group(1)}+ Charge, Clash Power +{m.group(2)}")
+        damage_scales.append(
+            f"At {m.group(1)}+ {_charge_resource(m.group(0))}, Clash Power +{m.group(2)}"
+        )
     cm = _CLASH_FROM_POTENCY.search(all_eff)
     if cm:
         damage_scales.append(f"Clash Power = Charge Potency (max +{cm.group(1)})")
@@ -742,9 +756,10 @@ _TRAIT_COND_RE = re.compile(r"<>")
 def detect_resonance_dependency(text: str) -> bool:
     """True when kit text scales off Resonance.
 
-    Resonance counts skills sharing a Sin affinity among those queued in a turn
-    (Absolute Resonance = the whole queue matches). It is not a same-trait ally
-    count, which is what this docstring used to claim.
+    Per Sin_Resonance.wiki: Resonance is 2+ Skills of the same Affinity selected on
+    the Dashboard; Absolute Resonance is 3+ of the same Affinity selected
+    consecutively, with separate chains counted separately rather than summed. It is
+    not a same-trait ally count.
     """
     return bool(_RESONANCE_RE.search(text))
 
@@ -1079,9 +1094,8 @@ def find_defense_archetype(
             kind = "power_counter"
             defense_name = block["name"]
             tips.append(
-                f"**{defense_name}** prevents Stagger during the clash and scales "
-                f"damage with Poise and missing HP — commit it as a payoff skill, not "
-                f"passive protection."
+                f"**{defense_name}** is a damage Counter, not passive protection — "
+                f"commit it as a payoff skill rather than holding it to soak a hit."
             )
             break
 
@@ -2005,7 +2019,7 @@ def find_support_archetype(
         kind = "resonance_ally"
         setup_summary = (
             f"Support passive (**{passive_name}**) scales with **Resonance** — "
-            f"field matching-trait allies to reach threshold before buffs fully apply."
+            f"queue same-Sin skills on the turn you want the buff at full strength."
         )
         # Resonance counts same-Sin skills queued in a turn; traits do not raise it.
         tips.append(

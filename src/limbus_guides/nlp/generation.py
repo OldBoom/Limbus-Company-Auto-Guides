@@ -15,7 +15,7 @@ from limbus_guides.nlp.mechanic_signals import (
 )
 from limbus_guides.nlp.skill_parser import build_gameplan
 from limbus_guides.nlp.skill_rolls import RollNormalizer, compute_coin_count, format_skill_rolls
-from limbus_guides.nlp.synergy import GENERIC_TRAITS
+from limbus_guides.nlp.synergy import GENERIC_TRAITS, SELF_GAINED_STATUSES
 
 # ---------------------------------------------------------------------------
 # Advice transformer — converts descriptive tooltip text to player instructions
@@ -196,8 +196,11 @@ def _describe_skill(
     if cp:
         stat_parts.append(f"CP {cp}")
     if aw is not None:
+        # Battles.wiki: "Attack Weight is the maximum amount of Slots a single Skill
+        # can target" — the wiki and our own stat tables write that as xN. This value
+        # is the coin count, so label it rather than reusing the Atk Weight notation.
         coin_n = compute_coin_count(skill)
-        stat_parts.append(f"x{coin_n}")
+        stat_parts.append(f"{coin_n} coin" + ("s" if coin_n != 1 else ""))
     if crit:
         stat_parts.append(f"+{crit}% on crit")
     stat_str = f"({', '.join(stat_parts)})" if stat_parts else ""
@@ -1306,8 +1309,12 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         and not trait_kit
     ):
         pieces.append(
-            "La Manchaland Bloodfeast tank — slot alongside other La Manchaland identities "
-            "to feed the shared pool while absorbing aggro for Hardblood spenders."
+            # Bleed.wiki: Bloodfeast "stores all Bleed damage taken by all units in the
+            # zone" and is the resource Bloodfiends consume. Hardblood is one identity's
+            # ally buff (The Manager of La Manchaland Don Quixote), not a team resource.
+            "La Manchaland Bloodfeast partner — every Bleed hit taken on the field feeds "
+            "the shared **Bloodfeast** pool that allied Bloodfiends spend to power their "
+            "own skills."
         )
     elif trait_kit:
         shared = meaningful_traits[0]
@@ -1387,6 +1394,14 @@ def _team_intro(gp: dict, synergies: list[dict]) -> str:
         pieces.append(
             f"Benefits when teammates apply {key_status} — "
             f"he checks {key_status} thresholds more than he stacks it himself."
+        )
+    elif key_status in SELF_GAINED_STATUSES:
+        # Charge.wiki: "Charge Identities do not need a 'Charge team' to function at
+        # full capacity. A high level Charge Identity can be placed on any team."
+        # These statuses are gained on self, so allies cannot apply or extend them.
+        pieces.append(
+            f"Builds its own **{key_status}**, so it does not need a {key_status} team — "
+            f"slot it wherever the damage is needed."
         )
     elif key_status:
         pieces.append(

@@ -60,8 +60,11 @@ _UNIQUE_TREMOR_BLURBS: dict[str, str] = {
         "**Defense Level** (1 per 4 Tremor Potency); no Burst needed."
     ),
     "Fracture": (
-        "**Tremor — Fracture** — at **20+** combined Tremor Potency and Count, "
-        "raises enemy **Stagger Level**."
+        # Tremor.wiki: "When Staggered, and when the sum of Tremor Potency and Count
+        # adds up to 20 or higher, raise Stagger Level by 1 / Cannot exceed maximum".
+        "**Tremor — Fracture** — **once the target is Staggered**, a combined Tremor "
+        "Potency + Count of **20+** raises its **Stagger Level** by 1 (cannot exceed the "
+        "maximum). Until it Staggers, this behaves as normal Tremor."
     ),
     "Reverb": (
         "**Tremor — Reverb** — Burst deals **Sloth** damage equal to Tremor Potency."
@@ -1157,10 +1160,12 @@ def find_paralyze_archetype(
         kind="paralyze_control",
         status="Paralyze",
         setup_summary=(
-            # Paralyze fixes the Power of N coins to 0 for one turn (docs/status-effects.md).
-            # The unit still acts and still clashes — with dead coins.
-            "**Paralyze** control — zeroes the Power of the enemy's coins for a turn, "
-            "so clashes into it are heavily favoured."
+            # Paralyze.wiki: "fixes the value of Coins to 0 (effectively fixing Tails
+            # chance to 100%) ... One Stack of Paralyze is spent for each Coin, and
+            # Paralyze can be spent in Clashes and Coin tosses."
+            "**Paralyze** control — each Stack forces one enemy Coin to Tails, and "
+            "Stacks are spent in clashes as well as on the attack, so bring enough to "
+            "cover the coins you actually want dead."
         ),
         tips=[
             "Land Paralyze immediately before the enemy's high-value skill or your moment of weakness.",

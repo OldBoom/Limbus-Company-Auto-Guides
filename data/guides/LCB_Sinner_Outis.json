@@ -44,7 +44,7 @@
     }
   ],
   "core_idea": "LCB Sinner Outis is a Damage Dealer — **Rupture** focus.",
-  "playstyle_guide": "**S1 — Pulled Blade** (BP 3, CP +2, x3): rolls — low 3, high 9 (Extremely Low).\n\n**S2 — Backslash** (BP 5, CP +4, x2): rolls — low 5, high 13 (Low / Slightly High stacked).\n- If user’s speed is faster than target’s, +20% Damage\n\n**S3 — Piercing Thrust** (BP 7, CP +14, x1): rolls — low 7, high 21 (High / Slightly High stacked).\n- If target’s HP is above 50%, deal +20% damage\n\nCombat passive — **Executor**: If target’s SP is below 0, deal +10% damage.\n\nCombat passive — **Military Mindset**: 1 ally with the most HP deals +30% damage to enemies below 0 SP.",
+  "playstyle_guide": "**S1 — Pulled Blade** (BP 3, CP +2, 3 coins): rolls — low 3, high 9 (Extremely Low).\n\n**S2 — Backslash** (BP 5, CP +4, 2 coins): rolls — low 5, high 13 (Low / Slightly High stacked).\n- If user’s speed is faster than target’s, +20% Damage\n\n**S3 — Piercing Thrust** (BP 7, CP +14, 1 coin): rolls — low 7, high 21 (High / Slightly High stacked).\n- If target’s HP is above 50%, deal +20% damage\n\nCombat passive — **Executor**: If target’s SP is below 0, deal +10% damage.\n\nCombat passive — **Military Mindset**: 1 ally with the most HP deals +30% damage to enemies below 0 SP.",
   "team_suggestions": [
     "**Rupture** focus.",
     "- **Heishou Pack - Mao Branch Adept Faust**: 'Blinkblade' inflicts Rupture via the support passive — scales off Rupture count/potency on the target."

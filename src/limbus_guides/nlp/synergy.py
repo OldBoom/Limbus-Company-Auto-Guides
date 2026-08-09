@@ -14,6 +14,7 @@ from limbus_guides.nlp.mechanic_signals import (
 # Re-exported for callers that historically imported them from this module.
 __all__ = [
     "GENERIC_TRAITS",
+    "SELF_GAINED_STATUSES",
     "extract_unique_tremor_types",
     "find_synergy_teammates",
     "format_unique_tremor_label",
@@ -226,7 +227,7 @@ def _scales_off(text: str) -> set[str]:
 # so without this the reason text said things like "'Swordplay of the Homeland' inflicts
 # Poise ... on the target" — Poise and Charge sit on your own unit, and nobody inflicts
 # them on an enemy. This affected roughly 48 identities.
-_SELF_GAINED_STATUSES = frozenset({"Poise", "Charge", "Haste", "Protection", "Shield"})
+SELF_GAINED_STATUSES = frozenset({"Poise", "Charge", "Haste", "Protection", "Shield"})
 
 
 def _build_rule_reason(
@@ -238,7 +239,7 @@ def _build_rule_reason(
     """
     Build a human-readable synergy reason that explains the actual mechanic link.
     """
-    grants_to_self = inflicted_effect in _SELF_GAINED_STATUSES
+    grants_to_self = inflicted_effect in SELF_GAINED_STATUSES
     verb = "grants" if grants_to_self else "inflicts"
 
     # Threshold checks (e.g. 7+ Bleed) vs per-stack scaling

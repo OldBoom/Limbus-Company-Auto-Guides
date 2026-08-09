@@ -48,7 +48,7 @@
   },
   "synergies": [],
   "core_idea": "LCB Sinner Ishmael is a Status Specialist — **Fragile** setup — apply Fragile or typed Fragility debuffs so the team deals amplified skill damage on the following turn.",
-  "playstyle_guide": "- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n\n**S1 — Loggerhead** (BP 4, CP +7, x1): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Slide** (BP 6, CP +9, x1): rolls — low 6, high 15 (Slightly Low).\n\n**S3 — Shield Bash** (BP 8, CP +12, x1): rolls — low 8, high 20 (High).\n\nCombat passive — **Last-ditch Struggle**: At less than 25% HP, gain +1 clash Power in a clash.\n\nCombat passive — **Determination to Survive**: 1 ally with the least HP and less than 50% of Max HP gains +1 Clash Power in a clash.",
+  "playstyle_guide": "- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n\n**S1 — Loggerhead** (BP 4, CP +7, 1 coin): rolls — low 4, high 11 (Slightly Low).\n\n**S2 — Slide** (BP 6, CP +9, 1 coin): rolls — low 6, high 15 (Slightly Low).\n\n**S3 — Shield Bash** (BP 8, CP +12, 1 coin): rolls — low 8, high 20 (High).\n\nCombat passive — **Last-ditch Struggle**: At less than 25% HP, gain +1 clash Power in a clash.\n\nCombat passive — **Determination to Survive**: 1 ally with the least HP and less than 50% of Max HP gains +1 Clash Power in a clash.",
   "team_suggestions": [
     "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
     "- Pair with identities whose support passives inflict statuses this kit stacks or scales off."
