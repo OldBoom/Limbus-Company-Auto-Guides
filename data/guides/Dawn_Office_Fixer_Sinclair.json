@@ -66,6 +66,14 @@
       "trait_match": true
     },
     {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+      "teammate_name": "Cinq Assoc. East Section 3 Hong Lu",
+      "reason": "'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
       "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
       "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
@@ -88,14 +96,6 @@
       "score": 0.9,
       "source": "rule",
       "faction_match": false
-    },
-    {
-      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
-      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
-      "reason": "This identity's 'Flaring Brand' inflicts Burn — Cinq Assoc. East Section 3 Don Quixote scales off Burn.",
-      "score": 0.85,
-      "source": "rule",
-      "faction_match": false
     }
   ],
   "core_idea": "Dawn Office Fixer Sinclair is a Damage Dealer / Status Specialist / Support — **Wrath Resonance** kit — queue Wrath-affinity skills across the team; **4+ Wrath Absolute Resonance** unlocks the kit's strongest effects. Scaling conditions: Coin Power +1 per 7 Burn (max +2).",
@@ -103,8 +103,8 @@
   "team_suggestions": [
     "Trait-dependent kit — [Dawn Office] allies unlock its alternate skills. Resonance-scaling identity — pick teammates with **Wrath** skills so you can queue a same-Sin turn and keep Wrath Resonance high. Same-faction teammates provide additional passive synergy where available.",
     "- **Dawn Office Rep Gregor**: Shares [Dawn Office] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
-    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
-    "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills."
+    "- **Cinq Assoc. East Section 3 Hong Lu**: 'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills."
   ],
   "team_suggestion_intro": "Trait-dependent kit — [Dawn Office] allies unlock its alternate skills. Resonance-scaling identity — pick teammates with **Wrath** skills so you can queue a same-Sin turn and keep Wrath Resonance high. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -115,15 +115,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
-      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+      "teammate_name": "Cinq Assoc. East Section 3 Hong Lu",
+      "reason": "'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
       "source": "rule"
     },
     {
-      "teammate_slug": "Liu_Assoc._South_Section_3_Yi_Sang",
-      "teammate_name": "Liu Assoc. South Section 3 Yi Sang",
-      "reason": "'Liu Defensive Square' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
+      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
+      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
+      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 4+ Burn thresholds on key skills.",
       "source": "rule"
     }
   ],

@@ -1,6 +1,6 @@
 # State of the Art — NLP Tools for Game-Wiki Guide Generation
 
-Survey and evaluation of NLP techniques and tools applicable to the Limbus Company Auto Guides pipeline. Each section provides a short narrative, a comparison table, and a verdict.
+Survey and evaluation of NLP techniques and tools applicable to the Limbus Company character's kit assistance tool pipeline. Each section provides a short narrative, a comparison table, and a verdict.
 
 **Evaluation data:** PoC used 3 parsed identity examples in `docs/parsed-ids/` — Ring Apprentice Faust (complex, multi-state, Bleed + Corpus Ingredient), Blade Lineage Salsu Yi Sang (simple, Poise-focused), and Ring Pointillist Student Yi Sang (Bleed + multi-status randomizer). **Production pipeline:** 50 identities across all 12 sinners with full guides and evaluation references (`data/evaluation/references/`).
 

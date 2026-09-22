@@ -1,4 +1,4 @@
-# Limbus Company Auto Guides — User Test (≈10–15 min)
+# Limbus Company character's kit assistance tool — User Test (≈10–15 min)
 
 Hand this to participants or copy into Google Docs / Forms. Aligns with D8 in [`evaluation.md`](evaluation.md).
 

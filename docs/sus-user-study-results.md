@@ -1,6 +1,6 @@
 # SUS User Study — Results (7 participants)
 
-Results from the D8 usability study for the Limbus Company Auto Guides dashboard.  
+Results from the D8 usability study for the Limbus Company character's kit assistance tool dashboard.  
 Handout template: [`sus-test-template.md`](sus-test-template.md).
 
 **Dashboard tested:** [limbus-company-nlp-guides.streamlit.app](https://limbus-company-nlp-guides.streamlit.app/)

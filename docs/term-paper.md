@@ -1,8 +1,8 @@
-# Limbus Company Auto Guides — Term Paper
+# Limbus Company character's kit assistance tool — Term Paper
 
 **Student:** Danil Shavarin  
 **Course:** Natural Language Processing (NLP)  
-**Project:** Limbus Company Auto Guides  
+**Project:** Limbus Company character's kit assistance tool  
 **Date:** July 2026  
 
 **Live demo:** https://limbus-company-nlp-guides.streamlit.app  
@@ -583,7 +583,7 @@ Section 8 summarises outcomes and planned next steps.
 
 ### 8.1 Summary
 
-This project built **Limbus Company Auto Guides** — an end-to-end NLP system that turns fan wiki data into short, structured identity guides. The pipeline fetches wikitext from wiki.gg, parses skills and passives into JSON, tags game mechanics, scores teammate synergy, and writes three sections per identity: Core Idea, Playstyle, and Team suggestions. A Streamlit dashboard lets players browse by character and identity.
+This project built **Limbus Company character's kit assistance tool** — an end-to-end NLP system that turns fan wiki data into short, structured identity guides. The pipeline fetches wikitext from wiki.gg, parses skills and passives into JSON, tags game mechanics, scores teammate synergy, and writes three sections per identity: Core Idea, Playstyle, and Team suggestions. A Streamlit dashboard lets players browse by character and identity.
 
 The course SMART goal asked for at least 20 identities and a working demo by July 2026. The delivered prototype covers **51 identities** (all 12 sinners), passes **84 automated tests**, and runs publicly at [limbus-company-nlp-guides.streamlit.app](https://limbus-company-nlp-guides.streamlit.app).
 

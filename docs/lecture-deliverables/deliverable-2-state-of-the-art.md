@@ -69,7 +69,7 @@ Across the projects above, a recurring architecture appears:
 
 ### 3.2 Which parts can be reused for this project?
 
-Reusable patterns for Limbus Company Auto Guides:
+Reusable patterns for Limbus Company character's kit assistance tool:
 
 - **RAG scaffolding**: chunking + embedding + top-k retrieval → prompt (from RAG chatbots).
 - **Researcher→Actor pattern**: extract verified facts first, then generate prose strictly from those facts (minimizes hallucination).

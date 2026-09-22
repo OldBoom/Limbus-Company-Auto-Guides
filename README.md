@@ -1,4 +1,4 @@
-# Limbus Company Auto Guides
+# Limbus Company character's kit assistance tool
 
 An NLP pipeline that scrapes [Limbus Company wiki.gg](https://limbus-company.wiki.gg) identity data and generates playable guide content — core concept summaries, playstyle guides, and team composition suggestions — displayed on a Streamlit dashboard.
 

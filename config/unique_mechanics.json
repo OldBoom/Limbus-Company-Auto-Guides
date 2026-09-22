@@ -55,6 +55,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Armure Éveillée",
+      "source_slugs": [
+        "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Artwork — Tibia (Hong Lu)",
       "source_slugs": [
         "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu"
@@ -183,6 +190,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Changing Room (Ishmael)",
+      "source_slugs": [
+        "Haute_Couture_Boutique_du_Rouge_Ishmael"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Charge Barrier",
       "source_slugs": [
         "LCE_E.G.O_Dimension_Shredder_Yi_Sang",
@@ -206,7 +220,8 @@
         "Lobotomy_E.G.O_Lamp_Gregor",
         "The_House_of_Spiders_The_Pinky_Apprentice_Sinclair",
         "The_House_of_Spiders_The_Thumb_Apprentice_Heathcliff",
-        "Zwei_Assoc._West_Section_3_Sinclair"
+        "Zwei_Assoc._West_Section_3_Sinclair",
+        "Haute_Couture_Boutique_du_Rouge_Ishmael"
       ],
       "discovered_at": "2026-08-07"
     },
@@ -341,6 +356,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Duality",
+      "source_slugs": [
+        "Haute_Couture_Alteration_Shop_Rodion"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Echoes of the Manor",
       "source_slugs": [
         "Wuthering_Heights_Butler_Faust",
@@ -460,6 +482,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Full Makeover",
+      "source_slugs": [
+        "Haute_Couture_Boutique_du_Rouge_Ishmael"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Gaze",
       "source_slugs": [
         "The_One_Who_Grips_Faust"
@@ -543,6 +572,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Inertia of Drifting",
+      "source_slugs": [
+        "Haute_Couture_Alteration_Shop_Rodion"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "K Corp Ampule",
       "source_slugs": [
         "K_Corp._Class_3_Excision_Staff_Hong_Lu"
@@ -585,6 +621,13 @@
         "LCA_Udjat_Vanguard_Team_3_Leader_Outis"
       ],
       "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Le Noir Gabardine Overcoat",
+      "source_slugs": [
+        "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū"
+      ],
+      "discovered_at": "2026-09-23"
     },
     {
       "name": "Light of Daybreak",
@@ -636,6 +679,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Mark of Shearing",
+      "source_slugs": [
+        "Haute_Couture_Alteration_Shop_Rodion"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Mark of the Prescript",
       "source_slugs": [
         "The_House_of_Spiders_The_Index_Nursefather_Yi_Sang",
@@ -678,6 +728,20 @@
         "The_House_of_Spiders_The_Pinky_Apprentice_Sinclair"
       ],
       "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Nerve Strike",
+      "source_slugs": [
+        "Cinq_Assoc._East_Section_3_Hong_Lu"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
+      "name": "Nerve Strike — Hong Lu",
+      "source_slugs": [
+        "Cinq_Assoc._East_Section_3_Hong_Lu"
+      ],
+      "discovered_at": "2026-09-23"
     },
     {
       "name": "Only Ashes Remain",
@@ -796,6 +860,13 @@
       "discovered_at": "2026-08-07"
     },
     {
+      "name": "Preservation",
+      "source_slugs": [
+        "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū"
+      ],
+      "discovered_at": "2026-09-23"
+    },
+    {
       "name": "Prisoner Transport Arrangements (Hong Lu)",
       "source_slugs": [
         "S_Corp._Ch'unokkun_Hong_Lu"
@@ -815,6 +886,13 @@
         "Drifting_Blade_of_Hongyuan_Ryōshū"
       ],
       "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Pulsation",
+      "source_slugs": [
+        "Haute_Couture_Boutique_du_Rouge_Ishmael"
+      ],
+      "discovered_at": "2026-09-23"
     },
     {
       "name": "Quadricolor Dimensions",
@@ -887,6 +965,13 @@
         "Molar_Boatworks_Fixer_Sinclair"
       ],
       "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Second is Welcome — snipping",
+      "source_slugs": [
+        "Haute_Couture_Alteration_Shop_Rodion"
+      ],
+      "discovered_at": "2026-09-23"
     },
     {
       "name": "Serpent Arm",
@@ -1093,7 +1178,9 @@
         "The_House_of_Spiders_The_Thumb_Nursefather_Rodion",
         "The_Middle_Big_Brother_Heathcliff",
         "Zwei_Assoc._South_Section_6_Sinclair",
-        "Zwei_Assoc._West_Section_3_Sinclair"
+        "Zwei_Assoc._West_Section_3_Sinclair",
+        "Haute_Couture_Alteration_Shop_Rodion",
+        "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū"
       ],
       "discovered_at": "2026-08-07"
     },
@@ -1202,6 +1289,13 @@
         "Dawn_Office_Fixer_Sinclair"
       ],
       "discovered_at": "2026-08-07"
+    },
+    {
+      "name": "Witnessed — Eastern Cinq",
+      "source_slugs": [
+        "Cinq_Assoc._East_Section_3_Hong_Lu"
+      ],
+      "discovered_at": "2026-09-23"
     }
   ]
 }

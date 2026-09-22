@@ -1,0 +1,141 @@
+{
+  "identity_slug": "Haute_Couture_Boutique_du_Rouge_Ishmael",
+  "identity_name": "Haute Couture::Boutique du Rouge Ishmael",
+  "sinner": "Ishmael",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Pulsation",
+      "Changing Room (Ishmael)",
+      "Bleed"
+    ],
+    "secondary_mechanics": [
+      "Coin Power",
+      "Full Makeover",
+      "Base Power",
+      "Shield",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Bleed": 10,
+      "Shield": 3
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 10,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Final Power": 2
+    },
+    "unique_mechanics": {
+      "Pulsation": 27,
+      "Full Makeover": 11,
+      "Changing Room (Ishmael)": 14,
+      "Clashable Guard": 8,
+      "Unbreakable Coin": 1,
+      "Lust Fragility": 8
+    },
+    "triggers": {
+      "On Use": 10,
+      "On Hit": 11,
+      "Combat Start": 4
+    },
+    "all_mechanics": {
+      "Bleed": 10,
+      "Shield": 3,
+      "Base Power": 5,
+      "Coin Power": 10,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Final Power": 2,
+      "Pulsation": 26,
+      "Full Makeover": 10,
+      "Changing Room (Ishmael)": 11,
+      "Clashable Guard": 1,
+      "Unbreakable Coin": 1
+    },
+    "identity_slug": "Haute_Couture_Boutique_du_Rouge_Ishmael",
+    "key_status_effects": [
+      "Pulsation",
+      "Full Makeover",
+      "Lust Fragility",
+      "Changing Room (Ishmael)",
+      "Aggro",
+      "Clashable Guard"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Haute_Couture_Alteration_Shop_Rodion",
+      "teammate_name": "Haute Couture::Alteration Shop Rodion",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū",
+      "teammate_name": "Haute Couture::Le Noir Footwear Hall Ryōshū",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "N_Corp._E.G.O_Contempt,_Awe_Ryōshū",
+      "teammate_name": "N Corp. E.G.O::Contempt, Awe Ryōshū",
+      "reason": "'It flows and cries' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "The_House_of_Spiders_The_Ring_Nursefather_Hong_Lu",
+      "teammate_name": "The House of Spiders: The Ring Nursefather Hong Lu",
+      "reason": "'Please, Do Stop Running and Be Seated' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Haute Couture::Boutique du Rouge Ishmael is a Tank / Support — **Bleed** stacker — payoff coins check **6+ Bleed**, so build the count before committing them. Bleed ticks when the afflicted unit tosses an attack Coin. Scaling conditions: Clash Power +1 per 3 Bleed (max +2); Coin Power +1 per 6 Bleed (max +2). Survives by pulling hits with **Aggro** and absorbing them with **Shield**, backed by a lethal-damage nullify and self-healing. Support passive (**[Actrice Haute Couture du Rouge] - Robes**) applies when allies **land hits**.",
+  "playstyle_guide": "- **[Actrice Haute Couture du Rouge] - Robes** triggers **On Hit** — allies need to attack for the passive to apply.\n- Skills check **6+ Bleed** — favour those coins when stacked.\n- Front-load **+10 Aggro** on the slot you want enemies to target.\n- Pair high-Aggro turns with this kit's own defensive tools so its under-pressure passives actually trigger.\n- Apply Fragile or typed Fragility on the setup turn; coordinate team burst on the next turn.\n- **Counter: Of Course… There was Meaning to this World After All** grants 2 **Changing Room** automatically at Combat Start — you already have it on turn one; no defense turn required.\n- Build Pulsation Count with S1, S2 — spend via S1 once you hit 2+ (consumes up to 15).\n- Reach scaling conditions before committing S3: Clash Power +1 per 3 Bleed (max +2).\n- S3 carries Unbreakable Coin — commit it when the clash strongly favors you.\n\n**S1 — Ahh… You Can't Hear It, Can You?** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low / Slightly High stacked).\n- Needs 2+ Pulsation to activate — prioritise building stacks before using.\n- **Clash Power** scales with **Bleed** (+1 per 3, max +2) — build stacks first.\n- Gain +3 Pulsation Count\n\n**S2 — Indeed, the Silence of the Voice Did Not Signify Its Absence!** (BP 4, CP +6, 1 coin): rolls — low 4, high 10 (Extremely Low / Low stacked).\n- Scales Final Power with Pulsation stacks — apply liberally before committing (cap +2).\n- Gain +4 Pulsation Count; [On Hit] Inflict +2 Bleed Count\n\n**S3 — Scrape It Out, Rip It Off, and Nail It Down!** (BP 5, CP +3, 2 coins): rolls — low 5, high 11 (Extremely Low / High stacked).\n- Deal +10% damage for every Pulsation on self (max 50%) ; [Combat Start] At lower than 50% HP, or if this unit has Full Makeover, convert all Coins on this Skill to Unbreakable Coins ; [On Use] At fewer than 15 Pulsation Count, consume 3(15 - current Pulsation Count)% HP to raise Pulsation Count to 15 ; [On Use] Consume 15 Pulsation Count to gain Coin Power +3 ; [On Use] Coin Power +1 for every 6 Bleed on target (max 2) ; [Before Attack] If this unit has Full Makeover, deal +40% damage ; - If this unit does not have Full Makeover, consume 20% HP on self to activate the above effect\n- **Coin Power** scales with **Bleed** (+1 per 6, max +2) — build stacks first.\n- Up to **+50% damage** (+10% per **Pulsation**) — stack the resource before committing.\n- converts coins to Unbreakable under condition\n\nCombat passive — **Into the Changing Room…**: Gain 1 Pulsation for every 10 cumulative Pulsation Count this unit consumes in this Encounter.\n  - HP consumption effects from this unit's Base Skills do not Stagger or reduce this unit's HP below 1.\n  - (At 1 HP, Base Skill effects that consume HP will be activated for free).\n\nCombat passive — **Cradle of Change**: req3=2 Owned On Base Skill Use, at fewer than 10 Pulsation Count, Clash Power +2.\n  - If this unit is in Full Makeover state, heal 8% HP On Hit using Base Skills (5 times per turn) flavor=While some might call this a \"chang….\n  - She melts and tears herself apart, metamorphosing… Until, when the time is right, she will shatter the shells and emerge into the world o….\n\nDefense skill — **Counter: Of Course… There was Meaning to this World After All**: [Clashable Counter].\n  - [Combat Start] At 10% or lower HP, gain 2 Changing Room (Ishmael) and enter Changing Room (Ishmael) (once per Encounter).\n  - [Combat Start] If this unit does not have Full Makeover, consume 20% HP on self and gain +10 Aggro to this Skill Slot next turn (once per turn).\n  - [On Use] Final Power +1 for every 2 Pulsation Potency (max 2).",
+  "team_suggestions": [
+    "Trait-dependent kit — [Sisyphe] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Haute Couture::Alteration Shop Rodion**: Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Haute Couture::Le Noir Footwear Hall Ryōshū**: Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Kurokumo Clan Wakashu Hong Lu**: 'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills."
+  ],
+  "team_suggestion_intro": "Trait-dependent kit — [Sisyphe] allies unlock its alternate skills. Resonance-scaling identity — its output rises when the turn's queued skills share a Sin affinity, so favour teammates that can match its Sins. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Haute_Couture_Alteration_Shop_Rodion",
+      "teammate_name": "Haute Couture::Alteration Shop Rodion",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū",
+      "teammate_name": "Haute Couture::Le Noir Footwear Hall Ryōshū",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Kurokumo_Clan_Wakashu_Hong_Lu",
+      "teammate_name": "Kurokumo Clan Wakashu Hong Lu",
+      "reason": "'Hēiyúndào' inflicts Bleed via the support passive — helps reach 6+ Bleed thresholds on key skills.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

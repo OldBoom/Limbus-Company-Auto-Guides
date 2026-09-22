@@ -556,8 +556,36 @@ def _rarity_label(body: str) -> str:
         return raw
 
 
+# Wiki IDPage sometimes stores sinner as a template (e.g. {{Ryoshu}} → Ryōshū).
+_SINNER_TEMPLATE_MAP = {
+    "Yi Sang": "Yi Sang",
+    "Faust": "Faust",
+    "Don Quixote": "Don Quixote",
+    "Ryoshu": "Ryōshū",
+    "Ryōshū": "Ryōshū",
+    "Meursault": "Meursault",
+    "Hong Lu": "Hong Lu",
+    "Heathcliff": "Heathcliff",
+    "Ishmael": "Ishmael",
+    "Rodion": "Rodion",
+    "Sinclair": "Sinclair",
+    "Outis": "Outis",
+    "Gregor": "Gregor",
+}
+
+
+def _resolve_sinner_name(raw: str) -> str:
+    """Expand ``{{Ryoshu}}``-style wiki templates to the canonical sinner name."""
+    text = (raw or "").strip()
+    m = re.fullmatch(r"\{\{\s*([^}|]+?)\s*\}\}", text)
+    if m:
+        text = m.group(1).strip()
+    return _SINNER_TEMPLATE_MAP.get(text, text)
+
+
 def _full_title(prefix: str, sinner: str) -> str:
     prefix = prefix.strip()
+    sinner = _resolve_sinner_name(sinner)
     if sinner and sinner not in prefix:
         return f"{prefix} {sinner}"
     return prefix
@@ -633,7 +661,7 @@ def _render_defense(skill: dict) -> list[str]:
 def render_markdown(page_title: str, wt: str) -> str:
     body = _extract_idpage(wt)
     prefix = _line_value(body, "prefix") or page_title.replace("_", " ")
-    sinner = _line_value(body, "sinner") or ""
+    sinner = _resolve_sinner_name(_line_value(body, "sinner") or "")
     quote = _line_value(body, "quote") or ""
     title = _full_title(prefix, sinner)
     hp = _display_hp(_line_value(body, "hp") or "66", _line_value(body, "hpgrowth") or "2")

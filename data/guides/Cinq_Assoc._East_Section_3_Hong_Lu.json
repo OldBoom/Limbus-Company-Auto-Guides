@@ -1,0 +1,140 @@
+{
+  "identity_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+  "identity_name": "Cinq Assoc. East Section 3 Hong Lu",
+  "sinner": "Hong Lu",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Burn",
+      "Poise",
+      "Coin Power"
+    ],
+    "secondary_mechanics": [
+      "Nerve Strike — Hong Lu",
+      "Base Power",
+      "Atk Weight",
+      "Clash Power",
+      "Defense Level Down"
+    ],
+    "status_effects": {
+      "Poise": 12,
+      "Burn": 18,
+      "Haste": 1,
+      "Unique Burn": 1,
+      "Bind": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 4,
+      "Coin Power": 10,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Final Power": 1,
+      "Defense Level Down": 2
+    },
+    "unique_mechanics": {
+      "Nerve Strike — Hong Lu": 11,
+      "Witnessed — Eastern Cinq": 8,
+      "Nerve Strike": 13
+    },
+    "triggers": {
+      "On Use": 5,
+      "On Hit": 10,
+      "Clash Win": 2,
+      "Combat Start": 1
+    },
+    "all_mechanics": {
+      "Poise": 12,
+      "Burn": 18,
+      "Haste": 1,
+      "Unique Burn": 1,
+      "Bind": 1,
+      "Base Power": 4,
+      "Coin Power": 10,
+      "Atk Weight": 3,
+      "Clash Power": 2,
+      "Final Power": 1,
+      "Defense Level Down": 2,
+      "Nerve Strike — Hong Lu": 10,
+      "Witnessed — Eastern Cinq": 1,
+      "Nerve Strike": 1
+    },
+    "identity_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+    "key_status_effects": [
+      "Nerve Strike — Hong Lu",
+      "Witnessed — Eastern Cinq",
+      "Nerve Strike"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "This identity's 'I'll Melt Open the Way Out' inflicts Burn — Cinq Assoc. East Section 3 Don Quixote scales off Burn.",
+      "score": 0.9199999999999999,
+      "source": "rule",
+      "faction_match": true
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Blade_of_the_House_of_Spiders_Ryōshū",
+      "teammate_name": "Blade of the House of Spiders Ryōshū",
+      "reason": "'The Master's Tutelage [<b>師事</b>]' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
+      "teammate_name": "Dawn Office Fixer Sinclair",
+      "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 5+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Cinq Assoc. East Section 3 Hong Lu is a Damage Dealer / Status Specialist / Support — **Poise** fighter — stack it on yourself; on hit each stack rolls a Potency-based chance to crit for **1.2x** damage, and Count drops by 1 on a successful crit and again at Turn End. Support passive (**I'll Melt Open the Way Out**) buffs your **fastest Speed ally** — pair with a high-Speed attacker.",
+  "playstyle_guide": "- **I'll Melt Open the Way Out** amplifies the **fastest Speed ally** — field a high-Speed damage dealer as teammate.\n- Skills check **5+ Burn** — favour those coins when stacked.\n- Build **Poise Count** and **Potency** for crits and Coin Power scaling before committing **Take the Hit to the Last Blow, Please?** — **S1 — Fa Jin** adds **+3 Poise Count** at **On Use**; **S2 — Virescent Flame Palm** adds **+3 Poise** on **Clash Win** and **+2 Poise Count** per **On Hit** coin.\n- **Take the Hit to the Last Blow, Please?** is your highest-damage skill — use the setup skills above first, then commit it once stacks are up.\n- **Haste** raises Speed for next turn — several bonuses here require being faster than the target.\n- Hold S3 for when At 6+ (Poise on self + Burn on target) is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — Fa Jin** (BP 6, CP +7, 1 coin): rolls — low 6, high 13 (Extremely High).\n- If this unit's Speed is faster than the target's by 2 or more, Coin Power +1 ; [On Use] Clash Power +1 for every 6 (Poise on self + Burn on target) (max 2) ; [On Use] If target does not have Nerve Strike — Hong Lu, Clash Power +1 ; [On Use] Gain +3 Poise Count\n- Peak output requires both conditions: Inflict 1 Burn | [On Hit] If target has 3+ Nerve Strike — Hong Lu, Reuse this Coin (once per Skill).\n\n**S2 — Virescent Flame Palm** (BP 6, CP +5, 1 coin): rolls — low 6, high 11 (Extremely Low).\n- Peak output requires both conditions: If this unit's Speed is faster than the target's, gain Coin Power based on Speed difference (Coin Power +1 for every 2 Speed difference | max 2).\n- Gain +2 Poise Count; [On Hit] Inflict 2 Burn\n\n**S3 — Take the Hit to the Last Blow, Please?** (BP 5, CP +4, 2 coins): rolls — low 5, high 13 (Low / Slightly Low stacked).\n- Peak output requires both conditions: If this unit's Speed is faster than the target's by 2 or more, Coin Power +1 | [On Use] At 6+ (Poise on self + Burn on target), Coin Power +1.\n- Deal +(Poise on self + Burn on target)% damage on Critical Hit (max 20%); [On Hit] Inflict +1 Burn Count; [On Crit] Inflict 2 Defense Level Down (2 times per turn); [On Hit] If target has Nerve Strike — Hong Lu, Reuse this Coin (once per Skill); [Reuse - On Hit] Deal Wrath damage equal to (Burn on target x 2)% of this Coin's final damage (max 40%)\n\nCombat passive — **A Duel Witnessed**: Upon entering the Encounter for the first time, gain Witnessed — Eastern Cinq equal to the number of \"\" Identities set as Backup or Suppo….\n  - Against the target a Base Attack Skill hit last, inflict 1 Nerve Strike — Hong Lu next turn (once per turn.\n  - in Focused Encounters, the Part).\n\nCombat passive — **Virescent Pyrojade**: On Clash Win, if target has Nerve Strike, inflict 1 Nerve Strike — Hong Lu (once per turn).\n  - Turn End: Gain 1 Haste next turn for every 3 Poise Potency on self (max 2).\n  - Deal +(Burn Potency on target)% damage on Critical Hit (max 15%).\n\nDefense skill — **Counter: Light as a Tuft of Cloud**: If this unit's Speed is faster than the attacker's by 2 or more, Coin Power +1.\n  - [Combat Start] Gain +3 Poise Count (once per turn).",
+  "team_suggestions": [
+    "**Burn** stacker — damage and clash scale with Burn on target. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+    "- **Cinq Assoc. East Section 3 Don Quixote**: This identity's 'I'll Melt Open the Way Out' inflicts Burn — Cinq Assoc. East Section 3 Don Quixote scales off Burn.",
+    "- **Blade Lineage Mentor Meursault**: 'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+    "- **Blade Lineage Salsu Sinclair**: 'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit."
+  ],
+  "team_suggestion_intro": "**Burn** stacker — damage and clash scale with Burn on target. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available. The support passive also benefits teammates directly — consider this identity even in compositions where it is not the primary damage dealer.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Don_Quixote",
+      "teammate_name": "Cinq Assoc. East Section 3 Don Quixote",
+      "reason": "This identity's 'I'll Melt Open the Way Out' inflicts Burn — Cinq Assoc. East Section 3 Don Quixote scales off Burn.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Mentor_Meursault",
+      "teammate_name": "Blade Lineage Mentor Meursault",
+      "reason": "'Swordplay of the Homeland' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Blade_Lineage_Salsu_Sinclair",
+      "teammate_name": "Blade Lineage Salsu Sinclair",
+      "reason": "'Slayer' grants Poise via the support passive — scales off Poise count/potency on your own unit.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

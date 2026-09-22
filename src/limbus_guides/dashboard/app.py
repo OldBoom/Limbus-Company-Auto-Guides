@@ -290,7 +290,7 @@ def _render_methodology(guide: dict) -> None:
 
 
 def _render_landing() -> None:
-    st.title("Limbus Company Auto Guides")
+    st.title("Limbus Company character's kit assistance tool")
     st.caption("Wiki-grounded identity guides — core idea, playstyle, team suggestions")
 
     _, center, _ = st.columns([1, 2, 1])
@@ -640,7 +640,7 @@ def _render_guide(
 
 
 def main() -> None:
-    st.set_page_config(page_title="Limbus Company Auto Guides", layout="wide")
+    st.set_page_config(page_title="Limbus Company character's kit assistance tool", layout="wide")
     _init_session_state()
 
     config = _load_config()

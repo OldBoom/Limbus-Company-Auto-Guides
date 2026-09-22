@@ -1,0 +1,134 @@
+{
+  "identity_slug": "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū",
+  "identity_name": "Haute Couture::Le Noir Footwear Hall Ryōshū",
+  "sinner": "Ryōshū",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Preservation",
+      "Tremor",
+      "Armure Éveillée"
+    ],
+    "secondary_mechanics": [
+      "Le Noir Gabardine Overcoat",
+      "Tremor Burst",
+      "Coin Power",
+      "Base Power",
+      "Atk Weight"
+    ],
+    "status_effects": {
+      "Shield": 3,
+      "Tremor": 15,
+      "Charge": 1,
+      "Unique Charge": 1
+    },
+    "stat_modifiers": {
+      "Base Power": 5,
+      "Coin Power": 6,
+      "Atk Weight": 4,
+      "Clash Power": 2,
+      "Final Power": 4
+    },
+    "unique_mechanics": {
+      "Preservation": 29,
+      "Le Noir Gabardine Overcoat": 10,
+      "Armure Éveillée": 14,
+      "Tremor Burst": 10,
+      "Unbreakable Coin": 1
+    },
+    "triggers": {
+      "Combat Start": 3,
+      "On Use": 12,
+      "On Hit": 16
+    },
+    "all_mechanics": {
+      "Shield": 3,
+      "Tremor": 15,
+      "Charge": 1,
+      "Unique Charge": 1,
+      "Base Power": 5,
+      "Coin Power": 6,
+      "Atk Weight": 4,
+      "Clash Power": 2,
+      "Final Power": 4,
+      "Preservation": 28,
+      "Le Noir Gabardine Overcoat": 9,
+      "Armure Éveillée": 13,
+      "Tremor Burst": 9,
+      "Unbreakable Coin": 1
+    },
+    "identity_slug": "Haute_Couture_Le_Noir_Footwear_Hall_Ryōshū",
+    "key_status_effects": [
+      "Preservation",
+      "Le Noir Gabardine Overcoat",
+      "Armure Éveillée",
+      "Tremor Burst"
+    ]
+  },
+  "synergies": [
+    {
+      "teammate_slug": "Haute_Couture_Alteration_Shop_Rodion",
+      "teammate_name": "Haute Couture::Alteration Shop Rodion",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Haute_Couture_Boutique_du_Rouge_Ishmael",
+      "teammate_name": "Haute Couture::Boutique du Rouge Ishmael",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "score": 0.93,
+      "source": "rule",
+      "faction_match": true,
+      "trait_match": true
+    },
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
+      "teammate_slug": "LCCB_Assistant_Manager_Ishmael",
+      "teammate_name": "LCCB Assistant Manager Ishmael",
+      "reason": "'Eye for Weakness' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    }
+  ],
+  "core_idea": "Haute Couture::Le Noir Footwear Hall Ryōshū is a Damage Dealer / Status Specialist — **Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window.",
+  "playstyle_guide": "- **Burst** when you're ready to break the stagger target.\n- Build Preservation Count with S3 — spend via S1, S2, S3 once you hit 3+ (consumes up to 20).\n- Hold S3 for when At 10+ Preservation Count is met — that condition is what unlocks its full damage ceiling.\n\n**S1 — You, Revolting Thing.** (BP 3, CP +4, 2 coins): rolls — low 3, high 11 (Slightly Low).\n- Gain +4 Preservation Count\n\n**S2 — Come and Try It On** (BP 4, CP +4, 3 coins): rolls — low 4, high 16 (Average).\n- Gain +(Preservation Potency + 3) Preservation Count (max 6)\n- Inflict 2 Tremor and +1 Tremor Count\n- Peak output requires both conditions: At 3+ Preservation Potency, trigger Tremor Burst | then, reduce target's Tremor Count by 1.\n\n**S3 — Triple Stamped Stitching** (BP 5, CP +4, 3 coins): rolls — low 5, high 17 (Average).\n- Gain +3 Preservation Count\n- Inflict 2 Tremor and +2 Tremor Count\n\n*↳ Alternate S3 — Single Kick - Couture Multiple* (BP 4, CP +4): rolls — low 4, high 20 (High).\n  - Consume up to 20 Preservation Count to deal +(Preservation Count consumed)% damage (max 20%)\n  - Gain +5 Preservation Count\n  - Consume up to 60 Armure Éveillée to apply the following:\n  - Scales Final Power with Armure stacks — apply liberally before committing (cap +2).\n  - Deal +(Armure Éveillée consumed / 3)% damage (max 20%)\n\nCombat passive — **Le Noir: Gabardine Fabric**: Upon entering the field, gain 25 Le Noir Gabardine Overcoat.\n  - Turn Start:.\n  - Gain Shield equal to ((Le Noir Gabardine Overcoat + Armure Éveillée) / 5)% of this unit's max HP.\n\nCombat passive — **Feedback**: req3=2 Owned When triggering Tremor Burst on the enemy, increase the Stagger Threshold raise by +15%.\n  - At 12+ Preservation Count, consume 1 Preservation Count when triggering Tremor Burst to increase the Stagger Threshold raise by +30% inst….\n  - When hit, if this unit has Shield, inflict 2 Tremor Potency on the attacker (2 times per turn per enemy) flavor=The Noirs believe they ca….\n\nDefense skill — **Counter: Tch. Stupid Customer. You're Wrinkling the Merchandise!**: [Clashable Counter].\n  - [Combat Start].\n  - At 60+ Le Noir Gabardine Overcoat, convert the said effect into Armure Éveillée next turn.\n  - At fewer than 60 Armure Éveillée, convert the said effect into Le Noir Gabardine Overcoat next turn.",
+  "team_suggestions": [
+    "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Same-faction teammates provide additional passive synergy where available.",
+    "- **Haute Couture::Alteration Shop Rodion**: Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Haute Couture::Boutique du Rouge Ishmael**: Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+    "- **Dawn Office Rep Gregor**: 'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target."
+  ],
+  "team_suggestion_intro": "**Tremor** control — stacks do nothing on their own; a **Tremor Burst** raises the target's **Stagger Threshold** by its Tremor Potency. Count drops by 1 each Turn End, so build Potency and Burst inside the same window. Same-faction teammates provide additional passive synergy where available.",
+  "team_suggestion_picks": [
+    {
+      "teammate_slug": "Haute_Couture_Alteration_Shop_Rodion",
+      "teammate_name": "Haute Couture::Alteration Shop Rodion",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Haute_Couture_Boutique_du_Rouge_Ishmael",
+      "teammate_name": "Haute Couture::Boutique du Rouge Ishmael",
+      "reason": "Shares [Sisyphe] trait — unlocks this identity's trait-conditional passives and alternate skill variants.",
+      "source": "rule"
+    },
+    {
+      "teammate_slug": "Dawn_Office_Rep_Gregor",
+      "teammate_name": "Dawn Office Rep Gregor",
+      "reason": "'Stigma Workshop Prosthesis' inflicts Tremor via the support passive — scales off Tremor count/potency on the target.",
+      "source": "rule"
+    }
+  ],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

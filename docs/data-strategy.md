@@ -1,6 +1,6 @@
 # Data Strategy (D5)
 
-This document covers data source, lineage, pre-processing pipeline, and exploratory data analysis for the Limbus Company Auto Guides NLP project.
+This document covers data source, lineage, pre-processing pipeline, and exploratory data analysis for the Limbus Company character's kit assistance tool NLP project.
 
 ---
 

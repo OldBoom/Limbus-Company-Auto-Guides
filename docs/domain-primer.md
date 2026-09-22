@@ -1,6 +1,6 @@
 # Limbus Company — Domain Primer
 
-A high-level gameplay reference for the **Limbus Company Auto Guides** NLP project. This document explains *what the game is* and *how identity kits work*, so you can interpret wiki data, write evaluation references, and understand generated guides.
+A high-level gameplay reference for the **Limbus Company character's kit assistance tool** NLP project. This document explains *what the game is* and *how identity kits work*, so you can interpret wiki data, write evaluation references, and understand generated guides.
 
 **Related docs:**
 

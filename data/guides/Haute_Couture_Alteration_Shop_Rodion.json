@@ -1,0 +1,57 @@
+{
+  "identity_slug": "Haute_Couture_Alteration_Shop_Rodion",
+  "identity_name": "Haute Couture::Alteration Shop Rodion",
+  "sinner": "Rodion",
+  "mechanic_profile": {
+    "primary_mechanics": [
+      "Inertia of Drifting",
+      "Shield",
+      "Final Power"
+    ],
+    "secondary_mechanics": [
+      "Second is Welcome — snipping",
+      "Mark of Shearing"
+    ],
+    "status_effects": {
+      "Shield": 1
+    },
+    "stat_modifiers": {
+      "Final Power": 1
+    },
+    "unique_mechanics": {
+      "Inertia of Drifting": 8,
+      "Second is Welcome — snipping": 8,
+      "Mark of Shearing": 8,
+      "Duality": 8,
+      "Tremor Burst": 8
+    },
+    "triggers": {},
+    "all_mechanics": {
+      "Shield": 1,
+      "Final Power": 1,
+      "Inertia of Drifting": 4,
+      "Second is Welcome — snipping": 1,
+      "Mark of Shearing": 1
+    },
+    "identity_slug": "Haute_Couture_Alteration_Shop_Rodion",
+    "key_status_effects": [
+      "Duality",
+      "Second is Welcome — snipping",
+      "Attack Power Up",
+      "Inertia of Drifting",
+      "Mark of Shearing",
+      "Tremor Burst"
+    ]
+  },
+  "synergies": [],
+  "core_idea": "Haute Couture::Alteration Shop Rodion is a Damage Dealer applying sustained Inertia of Drifting, Shield pressure with consistent skill stats.",
+  "playstyle_guide": "Combat passive — **Inertia of Drifting**: Gain Inertia of Drifting Potency for every X cumulative Inertia of Drifting Count this unit consumes in this Encounter.\n  - At Attack End of another ally that has Second is Welcome — snipping, activate \"Patterning\" against the said ally's target.\n  - [Before Use] If the said target has X+ Mark of Shearing, activate as \"Cutout\" instead.\n\nCombat passive — **Snipping in the Alteration Shop are Blossom Scissors**: Turn End: Gain Shield next turn equal to Inertia of Drifting Count.\n  - Gain Final Power based on Inertia of Drifting Potency.",
+  "team_suggestions": [
+    "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+    "- Pair with identities whose support passives inflict statuses this kit stacks or scales off."
+  ],
+  "team_suggestion_intro": "Flexible pick; slotting alongside identities whose support passives provide relevant statuses or SP recovery maximises uptime.",
+  "team_suggestion_picks": [],
+  "generator": "template_smart",
+  "domain_context": "docs/domain-primer.md"
+}

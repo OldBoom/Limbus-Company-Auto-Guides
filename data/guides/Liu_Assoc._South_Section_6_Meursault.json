@@ -43,6 +43,14 @@
       "faction_match": true
     },
     {
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+      "teammate_name": "Cinq Assoc. East Section 3 Hong Lu",
+      "reason": "'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "score": 0.9,
+      "source": "rule",
+      "faction_match": false
+    },
+    {
       "teammate_slug": "Dawn_Office_Fixer_Sinclair",
       "teammate_name": "Dawn Office Fixer Sinclair",
       "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
@@ -72,8 +80,8 @@
   "team_suggestions": [
     "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available.",
     "- **Liu Assoc. South Section 3 Yi Sang**: 'Liu Defensive Square' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
-    "- **Dawn Office Fixer Sinclair**: 'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
-    "- **LCE E.G.O::Ardor Blossom Star Faust**: 'Residual Heat' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
+    "- **Cinq Assoc. East Section 3 Hong Lu**: 'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+    "- **Dawn Office Fixer Sinclair**: 'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills."
   ],
   "team_suggestion_intro": "**Burn** applicator. Burn ticks at the end of every turn regardless of what either side does. Same-faction teammates provide additional passive synergy where available.",
   "team_suggestion_picks": [
@@ -84,15 +92,15 @@
       "source": "rule"
     },
     {
-      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
-      "teammate_name": "Dawn Office Fixer Sinclair",
-      "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "teammate_slug": "Cinq_Assoc._East_Section_3_Hong_Lu",
+      "teammate_name": "Cinq Assoc. East Section 3 Hong Lu",
+      "reason": "'I'll Melt Open the Way Out' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
       "source": "rule"
     },
     {
-      "teammate_slug": "LCE_E.G.O_Ardor_Blossom_Star_Faust",
-      "teammate_name": "LCE E.G.O::Ardor Blossom Star Faust",
-      "reason": "'Residual Heat' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
+      "teammate_slug": "Dawn_Office_Fixer_Sinclair",
+      "teammate_name": "Dawn Office Fixer Sinclair",
+      "reason": "'Flaring Brand' inflicts Burn via the support passive — helps reach 6+ Burn thresholds on key skills.",
       "source": "rule"
     }
   ],
