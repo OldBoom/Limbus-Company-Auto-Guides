@@ -58,8 +58,26 @@ _SELF_RESOURCE_STAT_LINE = re.compile(
 )
 
 
+def _strip_unbreakable_clauses(text: str) -> tuple[str, bool]:
+    """Remove Unbreakable-Coin clauses; return (remainder, had_unbreakable)."""
+    had = False
+    kept: list[str] = []
+    for seg in re.split(r"\s*;\s*", text):
+        if re.search(r"Unbreakable|convert\w* (?:all )?Coins? to Unbreakable", seg, re.I):
+            had = True
+            continue
+        if seg.strip():
+            kept.append(seg.strip())
+    return "; ".join(kept), had
+
+
 def _advise_line(text: str) -> str | None:
     """Reframe a descriptive mechanic line as a player instruction. Returns None to skip the line."""
+    # Unbreakable Coin is flagged once in overview tips — drop clauses here.
+    text, _had_unbreakable = _strip_unbreakable_clauses(text)
+    if not text:
+        return None
+
     # Pure flat damage bonus — already in rolls, skip
     if _DAMAGE_FLAT.match(text):
         return None
@@ -437,7 +455,7 @@ def _ammo_dual_status_core_parts(name: str, role_str: str, gp: dict) -> tuple[st
     if re.search(r"gain Damage Up equal to the amount spent", combat, re.I):
         details.append("Gains **Damage Up** next turn from ammo spent.")
     if re.search(r"convert the Coins to Unbreakable", skill_text, re.I):
-        details.append("S3 turns **Unbreakable** at **3+** ammo.")
+        details.append("Has Unbreakable Coin.")
 
     support_arch = gp.get("support_archetype") or {}
     if (
@@ -1102,8 +1120,13 @@ def _build_overview_tips(gp: dict) -> str:
             f"Hold S3 for when {s3['conditions'][0]} is met — "
             f"that condition is what unlocks its full damage ceiling."
         )
-    elif s3 and s3.get("has_unbreakable"):
-        tips.append("S3 carries Unbreakable Coin — commit it when the clash strongly favors you.")
+    has_unbreakable = any(s.get("has_unbreakable") for s in skills)
+    if not has_unbreakable:
+        um = gp.get("unique_mechanics") or {}
+        all_m = gp.get("all_mechanics") or {}
+        has_unbreakable = "Unbreakable Coin" in um or "Unbreakable Coin" in all_m
+    if has_unbreakable:
+        tips.append("Has Unbreakable Coin.")
 
     return "\n".join(f"- {t}" for t in tips)
 

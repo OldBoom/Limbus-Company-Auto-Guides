@@ -60,6 +60,16 @@ def has_unique_activation(skill: dict) -> bool:
 
 def _shorten(text: str, limit: int = 140) -> str:
     clean = clean_effect_text(text).replace(" / ", "; ")
+    # Drop Unbreakable clauses — overview tip flags presence separately.
+    parts = [
+        p.strip()
+        for p in re.split(r"\s*;\s*", clean)
+        if p.strip()
+        and not re.search(r"Unbreakable|convert\w* (?:all )?Coins? to Unbreakable", p, re.I)
+    ]
+    clean = "; ".join(parts)
+    if not clean:
+        return ""
     if len(clean) <= limit:
         return clean
     return clean[: limit - 1].rstrip() + "…"
@@ -78,8 +88,13 @@ def _summarize_activation_segment(segment: str) -> str:
         if "Clash Power" in effects:
             bits.append("Clash Power boost")
         if "Unbreakable" in effects:
-            bits.append("Unbreakable final coin")
+            bits.append("Unbreakable Coin")
+        # Unbreakable alone — overview tip flags it; skip condition spend advice.
+        if bits == ["Unbreakable Coin"]:
+            return ""
         effect_str = " + ".join(bits) if bits else _shorten(effects, 80)
+        if not effect_str:
+            return ""
         return (
             f"At {consume.group(1)}+ {consume.group(2).strip()}, "
             f"spend {consume.group(3)} for {effect_str}"
@@ -132,7 +147,7 @@ def describe_unique_activation(skill: dict, max_notes: int = 2) -> list[str]:
                 continue
             if _UNIQUE_TEXT_MARKERS.search(segment) or "[On Kill]" in segment:
                 short = _shorten(_summarize_activation_segment(segment))
-                if short not in notes:
+                if short and short not in notes:
                     notes.append(short)
 
     for bonus in skill.get("skill_bonuses", []):
@@ -143,7 +158,7 @@ def describe_unique_activation(skill: dict, max_notes: int = 2) -> list[str]:
                 r"consume|At \d+\+.*Count", segment, re.I
             ):
                 short = _shorten(_summarize_activation_segment(segment))
-                if short not in notes:
+                if short and short not in notes:
                     notes.append(short)
 
     if skill.get("atk_weight") == 0 and not notes:

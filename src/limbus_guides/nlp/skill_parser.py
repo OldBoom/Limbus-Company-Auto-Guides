@@ -1407,10 +1407,7 @@ def find_charge_archetype(
     um = _UNBREAKABLE_POTENCY.search(combined)
     if um:
         signals += 1
-        tips.append(
-            f"At **{um.group(1)}+ Charge Potency** (or below 50% HP), **{s3_name}** "
-            f"converts all coins to **Unbreakable**."
-        )
+        # Presence only — overview tip covers Unbreakable Coin; no spend advice here.
 
     pm = _POTENCY_DAMAGE_PCT.search(combined)
     if pm:

@@ -63,7 +63,7 @@ MECHANIC_SIGNALS: list[MechanicSignal] = [
     MechanicSignal(
         re.compile(r"convert.*Unbreakable|Unbreakable Coin", re.I),
         "unbreakable",
-        "converts coins to Unbreakable under condition",
+        "",  # flagged once in overview tips; no per-skill advice
     ),
     MechanicSignal(
         re.compile(r"\+\d+\s+Aggro", re.I),
@@ -159,6 +159,10 @@ def extract_notable_effects(skill: dict, max_results: int = 4) -> list[str]:
             m = signal.pattern.search(chunk)
             if m:
                 advice = _render_advice(signal.advice, m)
+                if not advice.strip():
+                    seen_labels.add(signal.label)
+                    matched_any = True
+                    continue
                 if advice not in seen_text:
                     hits.append(advice)
                     seen_text.add(advice)
