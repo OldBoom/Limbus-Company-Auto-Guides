@@ -421,8 +421,9 @@ def _render_dashboard_styles() -> None:
         [data-testid="stHorizontalBlock"] {
             row-gap: 0.75rem;
         }
-        /* Compact pick buttons under portraits */
-        [data-testid="stColumn"] .stButton > button,
+        /* Compact pick buttons under portraits (six-column identity / sinner grids) */
+        [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"]:nth-child(6))
+        > [data-testid="stColumn"] .stButton > button,
         [data-testid="stVerticalBlockBorderWrapper"] .stButton > button {
             width: 100% !important;
             font-size: 0.72rem !important;
@@ -430,6 +431,15 @@ def _render_dashboard_styles() -> None:
             white-space: normal !important;
             line-height: 1.2 !important;
             min-height: 0 !important;
+        }
+        /* Guide-page back-nav buttons (keyed widgets) */
+        div[class*="st-key-lc_nav_"] button {
+            width: 100% !important;
+            font-size: 1.05rem !important;
+            padding: 0.65rem 1.15rem !important;
+            line-height: 1.3 !important;
+            min-height: 2.75rem !important;
+            font-weight: 600 !important;
         }
         /* Inline teammate links in Team Suggestions */
         a.lc-inline-link {
@@ -607,14 +617,24 @@ def _render_guide(
 ) -> None:
     profile = guide.get("mechanic_profile", {})
 
-    nav_cols = st.columns([1, 1, 4])
-    with nav_cols[0]:
-        if st.button("← Change character"):
-            _go_to_sinner_grid()
-    with nav_cols[1]:
-        if st.button("← Other identities"):
-            _set_stage(STAGE_IDENTITY)
-            st.rerun()
+    nav_wrap, _ = st.columns([4, 8])
+    with nav_wrap:
+        nav_cols = st.columns(2, gap="small")
+        with nav_cols[0]:
+            if st.button(
+                "← Change character",
+                key="lc_nav_change_character",
+                use_container_width=True,
+            ):
+                _go_to_sinner_grid()
+        with nav_cols[1]:
+            if st.button(
+                "← Other identities",
+                key="lc_nav_other_identities",
+                use_container_width=True,
+            ):
+                _set_stage(STAGE_IDENTITY)
+                st.rerun()
 
     header_cols = st.columns([2, 5])
     with header_cols[0]:
