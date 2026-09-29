@@ -80,12 +80,33 @@ def parse_identity_markdown(md_text: str, slug: str) -> dict:
     }
 
 
+# In-game sinner order (1–12). Used by the dashboard grid and config rebuild.
+SINNER_ORDER = [
+    "Yi Sang",
+    "Faust",
+    "Don Quixote",
+    "Ryōshū",
+    "Meursault",
+    "Hong Lu",
+    "Heathcliff",
+    "Ishmael",
+    "Rodion",
+    "Sinclair",
+    "Outis",
+    "Gregor",
+]
+
+
+def sinner_sort_key(name: str) -> tuple[int, int | str]:
+    """Sort key for canonical Limbus sinner order; unknowns go last A–Z."""
+    try:
+        return (0, SINNER_ORDER.index(name))
+    except ValueError:
+        return (1, name)
+
+
 def _infer_sinner(title: str) -> str:
-    sinners = [
-        "Yi Sang", "Faust", "Don Quixote", "Ryōshū", "Meursault", "Hong Lu",
-        "Heathcliff", "Ishmael", "Rodion", "Sinclair", "Outis", "Gregor",
-    ]
-    for s in sinners:
+    for s in SINNER_ORDER:
         if s in title or s.replace("ō", "o") in title:
             return s
     return "Unknown"

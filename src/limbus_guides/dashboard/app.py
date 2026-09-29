@@ -76,7 +76,12 @@ STAGE_GUIDE = "guide"
 def _load_config() -> dict:
     path = CONFIG_DIR / "sinners.json"
     if path.exists():
-        return load_json_config(path)
+        config = load_json_config(path)
+        from limbus_guides.ingestion.markdown_loader import sinner_sort_key
+
+        sinners = config.get("sinners", [])
+        config["sinners"] = sorted(sinners, key=lambda s: sinner_sort_key(s.get("name", "")))
+        return config
     return {"sinners": []}
 
 

@@ -32,7 +32,7 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 from limbus_guides.config_io import load_json_config
-from limbus_guides.ingestion.markdown_loader import _infer_sinner
+from limbus_guides.ingestion.markdown_loader import _infer_sinner, sinner_sort_key
 from limbus_guides.ingestion.wiki_parser import (
     fetch_and_save,
     fetch_identity_roster,
@@ -100,14 +100,17 @@ def rebuild_sinners_config() -> dict[str, list[str]]:
                 "name": name,
                 "identities": sorted(slugs),
             }
-            for name, slugs in sorted(by_sinner.items())
+            for name, slugs in sorted(by_sinner.items(), key=lambda kv: sinner_sort_key(kv[0]))
             if name != "Unknown"
         ],
     }
     config_path.write_text(
         json.dumps(config, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
-    return {name: sorted(slugs) for name, slugs in by_sinner.items()}
+    return {
+        name: sorted(slugs)
+        for name, slugs in sorted(by_sinner.items(), key=lambda kv: sinner_sort_key(kv[0]))
+    }
 
 
 def main() -> int:
@@ -127,7 +130,7 @@ def main() -> int:
     if args.rebuild_config:
         by_sinner = rebuild_sinners_config()
         total = sum(len(v) for v in by_sinner.values())
-        for name, slugs in sorted(by_sinner.items()):
+        for name, slugs in by_sinner.items():
             print(f"  {len(slugs):3d}  {name}")
         print(f"Rebuilt config/sinners.json — {total} identities across {len(by_sinner)} sinners")
         return 0
