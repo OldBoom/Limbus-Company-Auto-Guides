@@ -77,7 +77,7 @@ def _load_config() -> dict:
     path = CONFIG_DIR / "sinners.json"
     if path.exists():
         config = load_json_config(path)
-        from limbus_guides.ingestion.markdown_loader import sinner_sort_key
+        from limbus_guides.roster import sinner_sort_key
 
         sinners = config.get("sinners", [])
         config["sinners"] = sorted(sinners, key=lambda s: sinner_sort_key(s.get("name", "")))

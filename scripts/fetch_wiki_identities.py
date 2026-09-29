@@ -32,13 +32,14 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 from limbus_guides.config_io import load_json_config
-from limbus_guides.ingestion.markdown_loader import _infer_sinner, sinner_sort_key
+from limbus_guides.ingestion.markdown_loader import _infer_sinner
 from limbus_guides.ingestion.wiki_parser import (
     fetch_and_save,
     fetch_identity_roster,
     wiki_title_to_stem,
 )
 from limbus_guides.paths import CONFIG_DIR, PARSED_IDS_DIR
+from limbus_guides.roster import sinner_sort_key
 
 # Hand-curated parses — do not overwrite unless --force
 PROTECTED_STEMS = {
